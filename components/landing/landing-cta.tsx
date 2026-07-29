@@ -34,7 +34,9 @@ export function LandingCta() {
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
               </Link>
             </div>
-            <p className="mt-5 text-[13px] text-[#9CA3AF]">No credit card required · 14-day free trial</p>
+            <p className="mt-5 text-[13px] text-[#9CA3AF]">
+              No card. You&apos;ll get a verification email to finish setting up.
+            </p>
           </div>
         </div>
       </Reveal>

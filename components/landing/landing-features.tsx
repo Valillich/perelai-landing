@@ -1,7 +1,7 @@
 "use client"
 
 import { Reveal } from "./reveal"
-import { Wallet, Link2, HeartHandshake, TrendingUp, Inbox } from "lucide-react"
+import { Wallet, Link2, HeartHandshake, Inbox } from "lucide-react"
 
 export function LandingFeatures() {
   return (
@@ -27,8 +27,8 @@ export function LandingFeatures() {
                 </span>
                 <h3 className="mt-6 text-[24px] font-semibold tracking-tight text-[#0F1724]">One-Swipe Finances</h3>
                 <p className="mt-3 max-w-md text-[16px] leading-relaxed text-[#4B5563]">
-                  Every booking automatically becomes revenue. Triage your inbox with a single swipe and watch your net
-                  profit update in real time — no manual bookkeeping, ever.
+                  One list of what still needs your decision — it stays there until you resolve it, not until you read
+                  it. Revenue, costs and what&apos;s still outstanding — without a spreadsheet.
                 </p>
               </div>
 
@@ -58,6 +58,7 @@ export function LandingFeatures() {
                     </div>
                   ))}
                 </div>
+                <p className="mt-3 text-center text-[12px] font-medium text-[#9CA3AF]">Example data</p>
               </div>
             </article>
           </Reveal>
@@ -87,10 +88,6 @@ export function LandingFeatures() {
                 Automated reminders bring clients back, while lifetime-value tracking shows you exactly who your best
                 regulars are.
               </p>
-              <div className="mt-6 flex items-center gap-2 text-[13px] font-medium text-[#1b8a4a]">
-                <TrendingUp className="h-4 w-4" />
-                +38% repeat bookings on average
-              </div>
             </article>
           </Reveal>
         </div>

@@ -3,9 +3,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Perelai — Booking & personal CFO for service pros",
+  title: "Perelai — Clients, Bookings & Cash Flow for Independent Professionals",
   description:
-    "The frictionless booking engine and personal CFO for premium service professionals. Stop renting your clients. Own your business.",
+    "Your clients, bookings and cash flow — finally in one place. Booking + client + money software for independent service professionals.",
 }
 
 export default function RootLayout({

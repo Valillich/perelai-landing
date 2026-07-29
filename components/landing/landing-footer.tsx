@@ -25,14 +25,14 @@ export function LandingFooter() {
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-1">
-            <Link href="/landing" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#7d5bff] to-[#5a3bff] shadow-[0_4px_12px_rgba(106,76,255,0.32)]">
                 <Sparkles className="h-4 w-4 text-white" />
               </span>
               <span className="text-[17px] font-semibold tracking-tight text-[#0F1724]">Perelai</span>
             </Link>
             <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-[#4B5563]">
-              The personal CFO and booking engine for independent service professionals.
+              Booking + client + money software for independent service professionals.
             </p>
           </div>
 
