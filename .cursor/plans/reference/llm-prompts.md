@@ -35,8 +35,6 @@ smaller models conflicting workflows.
 
 > Load the **`product-marketing`** and **`copy-editing`** skills.
 >
-> **Task A — safety net.** `git init` the repo, write a `.gitignore` covering `node_modules`,
-> `.next`, `.pnpm-store`, `.env*.local`, `.DS_Store`, and commit the untouched baseline as
 > `LP0: baseline before landing relaunch`.
 >
 > **Task B — env.** Create `.env.example` (committed) and `.env.local` (ignored) with
