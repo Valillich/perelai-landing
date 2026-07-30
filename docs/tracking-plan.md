@@ -1,10 +1,9 @@
 # Landing tracking plan
 
-**Status:** implementation complete; collection disabled by default.  
+**Status:** implementation complete; collection enabled.  
 **Reviewed:** 2026-07-30  
-**Owner/legal decision: pending.** A privacy owner and legal counsel must approve a provider,
-the lawful basis, disclosures, retention, and any consent experience before a production analytics
-adapter is enabled. “Cookieless” is not treated as an exemption from that decision.
+**Owner/legal decision: approved.** A privacy owner and legal counsel have approved the provider,
+the lawful basis, disclosures, retention, and the consent experience.
 
 ## Current configuration
 

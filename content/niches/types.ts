@@ -1,6 +1,6 @@
 import type { PublishedLocale } from "@/i18n/locales"
 
-export type MockKind = "colorist-workspace"
+export type MockKind = "colorist-workspace" | "lash-workspace"
 
 export interface NicheResearchSource {
   sourceUrl: string

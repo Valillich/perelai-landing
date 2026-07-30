@@ -31,10 +31,14 @@ export function NicheRouter() {
               >
                 <div>
                   <h3 className="text-[18px] font-semibold text-foreground transition-colors group-hover:text-brand-600">
-                    {t("nicheRouter.coloristsLabel")}
+                    {page.niche === "lash-artist"
+                      ? t("nicheRouter.lashArtistsLabel")
+                      : t("nicheRouter.coloristsLabel")}
                   </h3>
                   <p className="mt-1 text-[14px] text-muted-foreground">
-                    {t("nicheRouter.coloristsDescription")}
+                    {page.niche === "lash-artist"
+                      ? t("nicheRouter.lashArtistsDescription")
+                      : t("nicheRouter.coloristsDescription")}
                   </p>
                 </div>
                 <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand-600" />

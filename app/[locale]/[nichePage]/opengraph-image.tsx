@@ -44,7 +44,7 @@ export default async function OpenGraphImage({ params }: Props) {
 
   const primaryVisit = dataset.visits[0]
   const featureLines = [
-    `${primaryVisit.timeLabel} ${primaryVisit.serviceName} — ${primaryVisit.clientName}`,
+    `${primaryVisit.timeLabel} ${primaryVisit.serviceName} - ${primaryVisit.clientName}`,
     `${dataset.labels["inbox.title"]}: ${dataset.inboxCount}`,
     `${dataset.labels["chart_labels.revenue"]}: ${formatCurrency(dataset.kpis.revenue, dataset.market)}`,
     dataset.exampleCaption,

@@ -62,13 +62,13 @@ export const NICHE_PAGES: NichePage[] = [
     aliases: ["/for-hair-colorists", "/for-colorists"],
   },
 
-  // Wave 1b — present, disabled
+  // Wave 1b — enabled after the LP11.1 evidence gate
   {
     path: "/for-lash-artists",
     niche: "lash-artist",
     templateId: "brow_lash_artist",
     wave: "1b",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-nail-artists",

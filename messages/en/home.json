@@ -21,7 +21,14 @@
     "how": "See how it works",
     "micro": "You'll get a verification email to finish setting up.",
     "imageAlt": "Perelai workspace showing the operational Inbox, upcoming visits, and finance overview — example data",
-    "imageCaption": "Example data"
+    "imageCaption": "Example data",
+    "showcase": {
+      "ariaLabel": "Perelai app preview",
+      "calendarTab": "Calendar",
+      "financeTab": "Money",
+      "paid": "Paid",
+      "pending": "Unpaid"
+    }
   },
   "problem": {
     "title": "You already know this day",
@@ -74,7 +81,9 @@
     "title": "Find your trade",
     "body": "Pages built for how you actually work.",
     "coloristsLabel": "For independent colorists",
-    "coloristsDescription": "Booking, clients and cash flow for colorists who work on their own terms."
+    "coloristsDescription": "Booking, clients and cash flow for colorists who work on their own terms.",
+    "lashArtistsLabel": "For independent lash artists",
+    "lashArtistsDescription": "Booking, client work and money visibility for lash artists who work on their own terms."
   },
   "faq": {
     "title": "Questions",
@@ -102,6 +111,7 @@
     "product": "Product",
     "company": "Legal",
     "forColorists": "For independent colorists",
+    "forLashArtists": "For independent lash artists",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

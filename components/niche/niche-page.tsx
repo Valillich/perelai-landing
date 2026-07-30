@@ -22,7 +22,7 @@ interface NichePageProps {
   content: NichePageContent
 }
 
-function ColoristMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page">) {
+function NicheMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page">) {
   const dataset = buildMockDataset(
     page.templateId,
     locale,
@@ -97,7 +97,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
                 {content.cta.label}
               </CtaButton>
             </div>
-            <ColoristMockSuite locale={locale} page={page} />
+            <NicheMockSuite locale={locale} page={page} />
           </div>
         </div>
       </section>
@@ -169,7 +169,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
               </thead>
               <tbody>
                 {content.terminology.map((row) => (
-                  <tr key={row.perelaiWord} className="border-t border-border align-top">
+                  <tr key={row.theirWord} className="border-t border-border align-top">
                     <td className="px-5 py-4 text-[15px] leading-relaxed text-foreground">{row.theirWord}</td>
                     <td className="px-5 py-4 text-[15px] font-semibold leading-relaxed text-brand-600">{row.perelaiWord}</td>
                     <td className="px-5 py-4 text-[15px] leading-relaxed text-muted-foreground">{row.why}</td>
@@ -190,7 +190,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
             {content.labels.mocksBody}
           </p>
           <div className="mt-10">
-            <ColoristMockSuite locale={locale} page={page} />
+            <NicheMockSuite locale={locale} page={page} />
           </div>
         </div>
       </section>

@@ -21,7 +21,14 @@
     "how": "Zobacz, jak to działa",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
     "imageAlt": "Przestrzeń pracy Perelai z operacyjną skrzynką, nadchodzącymi wizytami i przeglądem finansów — przykładowe dane",
-    "imageCaption": "Przykładowe dane"
+    "imageCaption": "Przykładowe dane",
+    "showcase": {
+      "ariaLabel": "Podgląd aplikacji Perelai",
+      "calendarTab": "Kalendarz",
+      "financeTab": "Pieniądze",
+      "paid": "Opłacone",
+      "pending": "Nieopłacone"
+    }
   },
   "problem": {
     "title": "Znasz już ten dzień",
@@ -74,7 +81,9 @@
     "title": "Znajdź swoją branżę",
     "body": "Strony dostosowane do tego, jak naprawdę pracujesz.",
     "coloristsLabel": "Dla niezależnych kolorystów",
-    "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach."
+    "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach.",
+    "lashArtistsLabel": "Dla niezależnych stylistek rzęs",
+    "lashArtistsDescription": "Rezerwacje, praca z klientkami i widoczność pieniędzy dla stylistek rzęs pracujących na własnych zasadach."
   },
   "faq": {
     "title": "Pytania",
@@ -102,6 +111,7 @@
     "product": "Produkt",
     "company": "Prawne",
     "forColorists": "Dla niezależnych kolorystów",
+    "forLashArtists": "Dla niezależnych stylistek rzęs",
     "rights": "Wszelkie prawa zastrzeżone.",
     "privacy": "Polityka prywatności",
     "terms": "Warunki korzystania"

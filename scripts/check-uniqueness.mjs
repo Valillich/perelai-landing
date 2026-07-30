@@ -4,6 +4,9 @@ import { fileURLToPath } from "node:url"
 import { content as enColorist } from "../content/niches/premium-colorist/en.ts"
 import { content as plColorist } from "../content/niches/premium-colorist/pl.ts"
 import { content as ukColorist } from "../content/niches/premium-colorist/uk.ts"
+import { content as enLashArtist } from "../content/niches/lash-artist/en.ts"
+import { content as plLashArtist } from "../content/niches/lash-artist/pl.ts"
+import { content as ukLashArtist } from "../content/niches/lash-artist/uk.ts"
 import { buildMockDataset } from "../lib/mock-data.ts"
 import { getEnabledNichePages } from "../config/niche-pages.ts"
 
@@ -28,7 +31,15 @@ export function tokenize(value) {
 }
 
 function visibleNicheCopy(content, templateId, locale) {
-  const { meta: _meta, research: _research, ...visibleCopy } = content
+  // LP7.3 explicitly permits the shared “What Perelai is not” and final CTA
+  // to repeat. The checker measures the niche-specific rendered body instead.
+  const {
+    meta: _meta,
+    research: _research,
+    whatItIsNot: _whatItIsNot,
+    cta: _cta,
+    ...visibleCopy
+  } = content
   let mockData = {}
   try {
     mockData = buildMockDataset(templateId, locale)
@@ -53,6 +64,7 @@ export function checkUniquenessForPages(nichePageList, locales = ["en", "uk", "p
 
   const contentMap = {
     "premium-colorist": { en: enColorist, uk: ukColorist, pl: plColorist },
+    "lash-artist": { en: enLashArtist, uk: ukLashArtist, pl: plLashArtist },
   }
 
   for (const locale of locales) {

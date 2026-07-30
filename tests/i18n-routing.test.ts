@@ -88,6 +88,7 @@ describe("proxy", () => {
 test.each([
   ["/", { en: "https://perelai.com/", uk: "https://perelai.com/uk", pl: "https://perelai.com/pl", "x-default": "https://perelai.com/" }],
   ["/for-independent-colorists", { en: "https://perelai.com/for-independent-colorists", uk: "https://perelai.com/uk/for-independent-colorists", pl: "https://perelai.com/pl/for-independent-colorists", "x-default": "https://perelai.com/for-independent-colorists" }],
+  ["/for-lash-artists", { en: "https://perelai.com/for-lash-artists", uk: "https://perelai.com/uk/for-lash-artists", pl: "https://perelai.com/pl/for-lash-artists", "x-default": "https://perelai.com/for-lash-artists" }],
 ])("every published variant of %s receives the same reciprocal hreflang set", (pathname, expected) => {
   for (const locale of PUBLISHED_LOCALES) {
     expect(getLocalizedAlternates(pathname, locale)).toEqual(expected)

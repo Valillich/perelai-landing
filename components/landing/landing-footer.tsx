@@ -46,6 +46,14 @@ export function LandingFooter({
                   {t("forColorists")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/for-lash-artists"
+                  className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t("forLashArtists")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

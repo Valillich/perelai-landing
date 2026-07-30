@@ -5,6 +5,9 @@ import { LEGAL_DRAFTS } from "@/content/legal"
 import { content as nicheEn } from "@/content/niches/premium-colorist/en"
 import { content as nichePl } from "@/content/niches/premium-colorist/pl"
 import { content as nicheUk } from "@/content/niches/premium-colorist/uk"
+import { content as lashEn } from "@/content/niches/lash-artist/en"
+import { content as lashPl } from "@/content/niches/lash-artist/pl"
+import { content as lashUk } from "@/content/niches/lash-artist/uk"
 import homeEn from "@/messages/en/home.json"
 import homePl from "@/messages/pl/home.json"
 import homeUk from "@/messages/uk/home.json"
@@ -15,9 +18,9 @@ import { buildPricingMarkdown, buildLlmsTxt } from "@/lib/machine-readable"
 import { SEO_DESCRIPTION_MAX, SEO_TITLE_MAX } from "@/lib/seo"
 
 const PAGE_META_BY_LOCALE = {
-  en: [homeEn.meta, pricingEn.meta, nicheEn.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
-  uk: [homeUk.meta, pricingUk.meta, nicheUk.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
-  pl: [homePl.meta, pricingPl.meta, nichePl.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
+  en: [homeEn.meta, pricingEn.meta, nicheEn.meta, lashEn.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
+  uk: [homeUk.meta, pricingUk.meta, nicheUk.meta, lashUk.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
+  pl: [homePl.meta, pricingPl.meta, nichePl.meta, lashPl.meta, LEGAL_DRAFTS.terms, LEGAL_DRAFTS.privacy],
 }
 
 const PAGE_TITLES_BY_LOCALE = {
@@ -40,6 +43,9 @@ describe("sitemap", () => {
       "https://perelai.com/for-independent-colorists",
       "https://perelai.com/uk/for-independent-colorists",
       "https://perelai.com/pl/for-independent-colorists",
+      "https://perelai.com/for-lash-artists",
+      "https://perelai.com/uk/for-lash-artists",
+      "https://perelai.com/pl/for-lash-artists",
       "https://perelai.com/terms",
       "https://perelai.com/uk/terms",
       "https://perelai.com/pl/terms",

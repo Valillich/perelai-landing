@@ -1,12 +1,15 @@
-import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { CtaButton } from "@/components/cta-button"
+import { HeroShowcase } from "@/components/homepage/hero-showcase"
 import { Reveal } from "@/components/landing/reveal"
+import { buildHeroDataset } from "@/lib/hero-mock"
+import { localePrimaryMarket } from "@/lib/market"
 import type { PublishedLocale } from "@/i18n/locales"
 
 export function Hero({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("home")
+  const dataset = buildHeroDataset(locale, localePrimaryMarket(locale))
 
   return (
     <section className="overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-24">
@@ -57,7 +60,7 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
             </Reveal>
           </div>
 
-          {/* Screenshot */}
+          {/* Product preview */}
           <div className="relative lg:col-span-5">
             <Reveal delay={0.2}>
               <div
@@ -65,23 +68,20 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
                 className="pointer-events-none absolute -inset-4 -z-10 rounded-[40px] opacity-60 blur-[80px]"
                 style={{
                   background:
-                    "linear-gradient(135deg, rgba(106,76,255,0.3), rgba(167,139,250,0.15))",
+                    "linear-gradient(135deg, rgba(var(--brand-600-rgb),0.3), rgba(var(--brand-500-rgb),0.15))",
                 }}
               />
-              <figure className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-2 shadow-[0_24px_60px_-20px_rgba(106,76,255,0.3)] backdrop-blur-xl">
-                <Image
-                  src="/landing/hero-dashboard.png"
-                  alt={t("hero.imageAlt")}
-                  width={1024}
-                  height={768}
-                  sizes="(max-width: 1024px) 100vw, 480px"
-                  priority
-                  className="h-auto w-full rounded-[16px]"
-                />
-                <figcaption className="mt-2 pb-1 text-center text-[12px] font-medium text-subtle-text">
-                  {t("hero.imageCaption")}
-                </figcaption>
-              </figure>
+              <HeroShowcase
+                dataset={dataset}
+                labels={{
+                  ariaLabel: t("hero.showcase.ariaLabel"),
+                  calendarTab: t("hero.showcase.calendarTab"),
+                  financeTab: t("hero.showcase.financeTab"),
+                  paid: t("hero.showcase.paid"),
+                  pending: t("hero.showcase.pending"),
+                  caption: t("hero.imageCaption"),
+                }}
+              />
             </Reveal>
           </div>
         </div>

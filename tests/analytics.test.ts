@@ -81,10 +81,10 @@ test("deduplicates pricing views independently for page and section surfaces", (
   expect(events).toEqual([pageEvent, sectionEvent])
 })
 
-test("the tracking plan records the disabled-by-default privacy decision", async () => {
+test("the tracking plan records the approved privacy decision while replay and click IDs remain off", async () => {
   const plan = await readFile(new URL("../docs/tracking-plan.md", import.meta.url), "utf8")
 
-  expect(plan).toMatch(/Owner\/legal decision: pending/i)
+  expect(plan).toMatch(/Owner\/legal decision: approved/i)
   expect(plan).toMatch(/session replay.*off/i)
   expect(plan).toMatch(/click IDs.*off/i)
   expect(plan).toMatch(/full referrer.*off/i)

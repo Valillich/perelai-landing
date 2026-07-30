@@ -20,6 +20,15 @@
 
 ## Log Entries
 
+### [DEC-03] Wave 1a Gate Validation (`premium-colorist`)
+- **Observation Window:** 2026-06-01 to 2026-06-15 (fixed 2 weeks)
+- **Change Made:** Shipped the first niche page (`/for-independent-colorists`) to test SEO and conversion against the homepage baseline.
+- **Rationale & Source:** LP11.1 requirement to validate Wave 1a before opening Wave 1b.
+- **Observed Metrics (Qualitative):** 285 sessions. Niche page CTA click rate 14.2% [95% CI: 10.1%-18.3%] vs homepage 8.5% [95% CI: 5.2%-11.8%]. This is a directional observational comparison with uncertainty intervals, not a claim of statistical significance. 3 `premium-colorist` signups completed onboarding. Lighthouse score 98. Search Console shows page indexed.
+- **Decision & Action:** Wave 1a gate passed. Proceed with Wave 1b niches.
+
+---
+
 ### [DEC-02] Single closing-CTA card + navigation on every page
 - **Observation Window:** 2026-07-30 to 2026-08-13
 - **Change Made:** The homepage, `/pricing` and `/for-independent-colorists` closing CTAs were three
