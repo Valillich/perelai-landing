@@ -1,14 +1,16 @@
-"use client"
-
-import Link from "next/link"
 import { Reveal } from "./reveal"
 import { ArrowRight } from "lucide-react"
+import { useTranslations } from "next-intl"
+import { CtaButton } from "@/components/cta-button"
+import type { PublishedLocale } from "@/i18n/locales"
 
-export function LandingCta() {
+export function LandingCta({ locale }: { locale: PublishedLocale }) {
+  const t = useTranslations("home.closing")
+
   return (
-    <section id="pricing" className="px-4 py-20 sm:px-6 sm:py-28">
+    <section className="px-4 py-20 sm:px-6 sm:py-28">
       <Reveal className="mx-auto max-w-5xl">
-        <div className="relative overflow-hidden rounded-[32px] border border-[#F1F3F5] bg-white px-6 py-16 text-center shadow-[0_20px_60px_-20px_rgba(106,76,255,0.3)] sm:px-12 sm:py-20">
+        <div className="relative overflow-hidden rounded-[32px] border border-border bg-card px-6 py-16 text-center shadow-[0_20px_60px_-20px_rgba(106,76,255,0.3)] sm:px-12 sm:py-20">
           {/* Glow */}
           <div
             aria-hidden
@@ -19,23 +21,26 @@ export function LandingCta() {
             }}
           />
           <div className="relative">
-            <h2 className="mx-auto max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-[#0F1724] sm:text-[46px]">
-              Ready to take control of your revenue?
+            <h2 className="mx-auto max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[46px]">
+              {t("title")}
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-pretty text-[17px] leading-relaxed text-[#4B5563]">
-              Join the service professionals who own their clients, their bookings, and their bottom line.
+            <p className="mx-auto mt-4 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+              {t("body")}
             </p>
             <div className="mt-9 flex justify-center">
-              <Link
-                href="/"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#7d5bff] to-[#5a3bff] px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.36)] transition-transform hover:scale-[1.03] active:scale-95"
+              <CtaButton
+                destination="signup"
+                landingPath="/"
+                locale={locale}
+                location="closing_signup"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.36)] transition-transform hover:scale-[1.03] active:scale-95"
               >
-                Get Started Now
+                {t("cta")}
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
-              </Link>
+              </CtaButton>
             </div>
-            <p className="mt-5 text-[13px] text-[#9CA3AF]">
-              No card. You&apos;ll get a verification email to finish setting up.
+            <p className="mt-5 text-[13px] text-subtle-text">
+              {t("note")}
             </p>
           </div>
         </div>

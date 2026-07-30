@@ -1,10 +1,13 @@
-"use client"
-
-import Link from "next/link"
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowRight, Play, Sparkles } from "lucide-react"
+import { useTranslations } from "next-intl"
+import { CtaButton } from "@/components/cta-button"
+import type { PublishedLocale } from "@/i18n/locales"
 
-export function LandingHero() {
+export function LandingHero({ locale }: { locale: PublishedLocale }) {
+  const t = useTranslations("home.hero")
+
   return (
     <section className="relative overflow-hidden px-4 pt-16 sm:px-6 sm:pt-24">
       {/* Soft ambient glow */}
@@ -23,10 +26,10 @@ export function LandingHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#F1F3F5] bg-white/70 px-3.5 py-1.5 text-[13px] font-medium text-[#4B5563] shadow-[0_4px_12px_rgba(16,24,40,0.04)] backdrop-blur-xl"
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3.5 py-1.5 text-[13px] font-medium text-muted-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)] backdrop-blur-xl"
         >
-          <Sparkles className="h-3.5 w-3.5 text-[#6A4CFF]" />
-          Next-generation booking &amp; finance
+          <Sparkles className="h-3.5 w-3.5 text-brand-600" />
+          {t("badge")}
         </motion.div>
 
         {/* Headline */}
@@ -34,11 +37,11 @@ export function LandingHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mt-6 text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-[#0F1724] sm:text-[58px]"
+          className="mt-6 text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]"
         >
-          Stop renting your clients.{" "}
-          <span className="bg-gradient-to-br from-[#7d5bff] to-[#5a3bff] bg-clip-text text-transparent">
-            Own your business.
+          {t("title")}{" "}
+          <span className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">
+            {t("accent")}
           </span>
         </motion.h1>
 
@@ -47,9 +50,9 @@ export function LandingHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.16, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="mx-auto mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-[#4B5563] sm:text-[19px]"
+          className="mx-auto mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]"
         >
-          Your clients, bookings and cash flow — finally in one place.
+          {t("body")}
         </motion.p>
 
         {/* CTAs */}
@@ -59,19 +62,22 @@ export function LandingHero() {
           transition={{ duration: 0.6, delay: 0.24, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          <Link
-            href="/"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[#7d5bff] to-[#5a3bff] px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.03] active:scale-95 sm:w-auto"
+          <CtaButton
+            destination="signup"
+            landingPath="/"
+            locale={locale}
+            location="hero_signup"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.03] active:scale-95 sm:w-auto"
           >
-            Create your free workspace
+            {t("signup")}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+          </CtaButton>
           <a
             href="#how"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#F1F3F5] bg-white/70 px-6 py-3.5 text-[15px] font-semibold text-[#0F1724] shadow-[0_4px_12px_rgba(16,24,40,0.04)] backdrop-blur-xl transition-colors hover:bg-white sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card/70 px-6 py-3.5 text-[15px] font-semibold text-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)] backdrop-blur-xl transition-colors hover:bg-card sm:w-auto"
           >
-            <Play className="h-4 w-4 text-[#6A4CFF]" />
-            See how it works
+            <Play className="h-4 w-4 text-brand-600" />
+            {t("how")}
           </a>
         </motion.div>
       </div>
@@ -91,11 +97,15 @@ export function LandingHero() {
             background: "linear-gradient(135deg, rgba(106,76,255,0.35), rgba(236,72,153,0.18))",
           }}
         />
-        <div className="overflow-hidden rounded-[28px] border border-white/60 bg-white/40 p-2 shadow-[0_30px_80px_-20px_rgba(106,76,255,0.35)] backdrop-blur-xl sm:p-3">
-          <img
+        <div className="overflow-hidden rounded-[28px] border border-border bg-card/40 p-2 shadow-[0_30px_80px_-20px_rgba(106,76,255,0.35)] backdrop-blur-xl sm:p-3">
+          <Image
             src="/landing/hero-dashboard.png"
-            alt="Perelai dashboard showing net profit, upcoming bookings, and revenue charts"
-            className="w-full rounded-[20px]"
+            alt={t("imageAlt")}
+            width={1024}
+            height={1024}
+            sizes="(max-width: 768px) 100vw, 896px"
+            priority
+            className="w-full h-auto rounded-[20px]"
           />
         </div>
       </motion.div>

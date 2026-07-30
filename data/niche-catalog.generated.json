@@ -1,0 +1,1605 @@
+{
+  "sourceCommit": "08a4b7a56a5f12812aa45bd0005f77015469d229",
+  "generatedAt": "2026-07-30T13:24:10+02:00",
+  "supportedLocales": [
+    "en",
+    "uk",
+    "pl",
+    "ru",
+    "es",
+    "fr",
+    "de"
+  ],
+  "markets": [
+    {
+      "countryCode": "US",
+      "currency": "USD",
+      "localeHint": "en-US",
+      "name": "United States"
+    },
+    {
+      "countryCode": "UA",
+      "currency": "UAH",
+      "localeHint": "uk-UA",
+      "name": "Ukraine"
+    },
+    {
+      "countryCode": "PL",
+      "currency": "PLN",
+      "localeHint": "pl-PL",
+      "name": "Poland"
+    },
+    {
+      "countryCode": "GB",
+      "currency": "GBP",
+      "localeHint": "en-GB",
+      "name": "United Kingdom"
+    },
+    {
+      "countryCode": "CA",
+      "currency": "CAD",
+      "localeHint": "en-CA",
+      "name": "Canada"
+    },
+    {
+      "countryCode": "AU",
+      "currency": "AUD",
+      "localeHint": "en-AU",
+      "name": "Australia"
+    },
+    {
+      "countryCode": "DE",
+      "currency": "EUR",
+      "localeHint": "de-DE",
+      "name": "Germany"
+    },
+    {
+      "countryCode": "FR",
+      "currency": "EUR",
+      "localeHint": "fr-FR",
+      "name": "France"
+    },
+    {
+      "countryCode": "ES",
+      "currency": "EUR",
+      "localeHint": "es-ES",
+      "name": "Spain"
+    },
+    {
+      "countryCode": "EU",
+      "currency": "EUR",
+      "localeHint": "en-IE",
+      "name": "Eurozone (other)"
+    }
+  ],
+  "groups": [
+    {
+      "id": "beauty",
+      "labelKey": "templates.group.beauty.label",
+      "label": "Beauty & Wellness"
+    },
+    {
+      "id": "freelance",
+      "labelKey": "templates.group.freelance.label",
+      "label": "Freelance"
+    },
+    {
+      "id": "pro",
+      "labelKey": "templates.group.pro.label",
+      "label": "Professional Services"
+    },
+    {
+      "id": "edu",
+      "labelKey": "templates.group.edu.label",
+      "label": "Education & Coaching"
+    },
+    {
+      "id": "rent",
+      "labelKey": "templates.group.rent.label",
+      "label": "Rentals & Spaces"
+    },
+    {
+      "id": "personal",
+      "labelKey": "templates.group.personal.label",
+      "label": "Personal Finance"
+    }
+  ],
+  "templates": [
+    {
+      "id": "independent_colorist",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 1,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "premium-colorist",
+        "independent-colorist",
+        "hair-colorist"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "ic1",
+          "nameKey": "templates.independent_colorist.services.ic1"
+        },
+        {
+          "id": "ic2",
+          "nameKey": "templates.independent_colorist.services.ic2"
+        },
+        {
+          "id": "ic3",
+          "nameKey": "templates.independent_colorist.services.ic3"
+        },
+        {
+          "id": "ic4",
+          "nameKey": "templates.independent_colorist.services.ic4"
+        },
+        {
+          "id": "ic5",
+          "nameKey": "templates.independent_colorist.services.ic5"
+        },
+        {
+          "id": "ic6",
+          "nameKey": "templates.independent_colorist.services.ic6"
+        }
+      ],
+      "addons": [
+        {
+          "id": "ic_add_bond",
+          "nameKey": "templates.independent_colorist.addons.ic_add_bond"
+        },
+        {
+          "id": "ic_add_longhair",
+          "nameKey": "templates.independent_colorist.addons.ic_add_longhair"
+        },
+        {
+          "id": "ic_add_style",
+          "nameKey": "templates.independent_colorist.addons.ic_add_style"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ice1",
+          "nameKey": "templates.independent_colorist.expenses.ice1"
+        },
+        {
+          "id": "ice2",
+          "nameKey": "templates.independent_colorist.expenses.ice2"
+        }
+      ]
+    },
+    {
+      "id": "aesthetic_clinic",
+      "groupId": "beauty",
+      "terminologyProfile": "aesthetic",
+      "marketingPriority": 2,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "medical-aesthetics",
+        "aesthetic-clinic",
+        "medspa"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": true
+      },
+      "services": [
+        {
+          "id": "ac1",
+          "nameKey": "templates.aesthetic_clinic.services.ac1"
+        },
+        {
+          "id": "ac2",
+          "nameKey": "templates.aesthetic_clinic.services.ac2"
+        },
+        {
+          "id": "ac3",
+          "nameKey": "templates.aesthetic_clinic.services.ac3"
+        },
+        {
+          "id": "ac4",
+          "nameKey": "templates.aesthetic_clinic.services.ac4"
+        },
+        {
+          "id": "ac5",
+          "nameKey": "templates.aesthetic_clinic.services.ac5"
+        },
+        {
+          "id": "ac6",
+          "nameKey": "templates.aesthetic_clinic.services.ac6"
+        }
+      ],
+      "addons": [
+        {
+          "id": "ac_add_consult",
+          "nameKey": "templates.aesthetic_clinic.addons.ac_add_consult"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ace1",
+          "nameKey": "templates.aesthetic_clinic.expenses.ace1"
+        },
+        {
+          "id": "ace2",
+          "nameKey": "templates.aesthetic_clinic.expenses.ace2"
+        },
+        {
+          "id": "ace3",
+          "nameKey": "templates.aesthetic_clinic.expenses.ace3"
+        }
+      ]
+    },
+    {
+      "id": "salon",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 3,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "hair-salon",
+        "salon"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "s1",
+          "nameKey": "templates.salon.services.s1"
+        },
+        {
+          "id": "s2",
+          "nameKey": "templates.salon.services.s2"
+        },
+        {
+          "id": "s3",
+          "nameKey": "templates.salon.services.s3"
+        },
+        {
+          "id": "s4",
+          "nameKey": "templates.salon.services.s4"
+        },
+        {
+          "id": "s5",
+          "nameKey": "templates.salon.services.s5"
+        }
+      ],
+      "addons": [
+        {
+          "id": "add_blow",
+          "nameKey": "templates.salon.addons.add_blow"
+        },
+        {
+          "id": "add_olaplex",
+          "nameKey": "templates.salon.addons.add_olaplex"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "se1",
+          "nameKey": "templates.salon.expenses.se1"
+        },
+        {
+          "id": "se2",
+          "nameKey": "templates.salon.expenses.se2"
+        }
+      ]
+    },
+    {
+      "id": "brow_lash_artist",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 4,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "brow-artist",
+        "lash-artist",
+        "brow-lash"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "bl1",
+          "nameKey": "templates.brow_lash_artist.services.bl1"
+        },
+        {
+          "id": "bl2",
+          "nameKey": "templates.brow_lash_artist.services.bl2"
+        },
+        {
+          "id": "bl3",
+          "nameKey": "templates.brow_lash_artist.services.bl3"
+        },
+        {
+          "id": "bl4",
+          "nameKey": "templates.brow_lash_artist.services.bl4"
+        },
+        {
+          "id": "bl5",
+          "nameKey": "templates.brow_lash_artist.services.bl5"
+        },
+        {
+          "id": "bl6",
+          "nameKey": "templates.brow_lash_artist.services.bl6"
+        }
+      ],
+      "addons": [
+        {
+          "id": "bl_add_tint",
+          "nameKey": "templates.brow_lash_artist.addons.bl_add_tint"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ble1",
+          "nameKey": "templates.brow_lash_artist.expenses.ble1"
+        }
+      ]
+    },
+    {
+      "id": "nail_salon",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 5,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "nail-salon",
+        "nail-studio",
+        "nails"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "n1",
+          "nameKey": "templates.nail_salon.services.n1"
+        },
+        {
+          "id": "n2",
+          "nameKey": "templates.nail_salon.services.n2"
+        },
+        {
+          "id": "n3",
+          "nameKey": "templates.nail_salon.services.n3"
+        },
+        {
+          "id": "n4",
+          "nameKey": "templates.nail_salon.services.n4"
+        }
+      ],
+      "addons": [
+        {
+          "id": "n_add_art",
+          "nameKey": "templates.nail_salon.addons.n_add_art"
+        },
+        {
+          "id": "n_add_para",
+          "nameKey": "templates.nail_salon.addons.n_add_para"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ne1",
+          "nameKey": "templates.nail_salon.expenses.ne1"
+        }
+      ]
+    },
+    {
+      "id": "massage",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 6,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "massage",
+        "massage-therapist"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "m1",
+          "nameKey": "templates.massage.services.m1"
+        },
+        {
+          "id": "m2",
+          "nameKey": "templates.massage.services.m2"
+        },
+        {
+          "id": "m3",
+          "nameKey": "templates.massage.services.m3"
+        }
+      ],
+      "addons": [
+        {
+          "id": "m_add_hot",
+          "nameKey": "templates.massage.addons.m_add_hot"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "me1",
+          "nameKey": "templates.massage.expenses.me1"
+        }
+      ]
+    },
+    {
+      "id": "barber",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 9,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "barber",
+        "barbershop"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "b1",
+          "nameKey": "templates.barber.services.b1"
+        },
+        {
+          "id": "b2",
+          "nameKey": "templates.barber.services.b2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "add_beard",
+          "nameKey": "templates.barber.addons.add_beard"
+        },
+        {
+          "id": "add_mask",
+          "nameKey": "templates.barber.addons.add_mask"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "be1",
+          "nameKey": "templates.barber.expenses.be1"
+        }
+      ]
+    },
+    {
+      "id": "advanced_skincare",
+      "groupId": "beauty",
+      "terminologyProfile": "aesthetic",
+      "marketingPriority": 10,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "esthetician",
+        "advanced-skincare",
+        "skincare"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": true
+      },
+      "services": [
+        {
+          "id": "as1",
+          "nameKey": "templates.advanced_skincare.services.as1"
+        },
+        {
+          "id": "as2",
+          "nameKey": "templates.advanced_skincare.services.as2"
+        },
+        {
+          "id": "as3",
+          "nameKey": "templates.advanced_skincare.services.as3"
+        },
+        {
+          "id": "as4",
+          "nameKey": "templates.advanced_skincare.services.as4"
+        },
+        {
+          "id": "as5",
+          "nameKey": "templates.advanced_skincare.services.as5"
+        }
+      ],
+      "addons": [
+        {
+          "id": "as_add_mask",
+          "nameKey": "templates.advanced_skincare.addons.as_add_mask"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ase1",
+          "nameKey": "templates.advanced_skincare.expenses.ase1"
+        },
+        {
+          "id": "ase2",
+          "nameKey": "templates.advanced_skincare.expenses.ase2"
+        }
+      ]
+    },
+    {
+      "id": "spa",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 20,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "spa",
+        "day-spa"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "sp1",
+          "nameKey": "templates.spa.services.sp1"
+        },
+        {
+          "id": "sp2",
+          "nameKey": "templates.spa.services.sp2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "sp_add_sauna",
+          "nameKey": "templates.spa.addons.sp_add_sauna"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "spe1",
+          "nameKey": "templates.spa.expenses.spe1"
+        }
+      ]
+    },
+    {
+      "id": "makeup_artist",
+      "groupId": "beauty",
+      "terminologyProfile": "beauty",
+      "marketingPriority": 21,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "makeup-artist",
+        "mua"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "ma1",
+          "nameKey": "templates.makeup_artist.services.ma1"
+        },
+        {
+          "id": "ma2",
+          "nameKey": "templates.makeup_artist.services.ma2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "ma_add_trial",
+          "nameKey": "templates.makeup_artist.addons.ma_add_trial"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "mae1",
+          "nameKey": "templates.makeup_artist.expenses.mae1"
+        }
+      ]
+    },
+    {
+      "id": "tutor",
+      "groupId": "edu",
+      "terminologyProfile": "edu",
+      "marketingPriority": 7,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "private-tutor",
+        "tutor",
+        "tutoring"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "t1",
+          "nameKey": "templates.tutor.services.t1"
+        },
+        {
+          "id": "t2",
+          "nameKey": "templates.tutor.services.t2"
+        },
+        {
+          "id": "t3",
+          "nameKey": "templates.tutor.services.t3"
+        },
+        {
+          "id": "t4",
+          "nameKey": "templates.tutor.services.t4"
+        },
+        {
+          "id": "t5",
+          "nameKey": "templates.tutor.services.t5"
+        }
+      ],
+      "addons": [],
+      "expenses": []
+    },
+    {
+      "id": "coach",
+      "groupId": "edu",
+      "terminologyProfile": "coaching",
+      "marketingPriority": 8,
+      "visibility": "FEATURED",
+      "nicheSlugs": [
+        "business-coach",
+        "life-coach",
+        "coach",
+        "coaching"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "co1",
+          "nameKey": "templates.coach.services.co1"
+        },
+        {
+          "id": "co2",
+          "nameKey": "templates.coach.services.co2"
+        },
+        {
+          "id": "co3",
+          "nameKey": "templates.coach.services.co3"
+        },
+        {
+          "id": "co4",
+          "nameKey": "templates.coach.services.co4"
+        }
+      ],
+      "addons": [
+        {
+          "id": "co_add_resources",
+          "nameKey": "templates.coach.addons.co_add_resources"
+        }
+      ],
+      "expenses": []
+    },
+    {
+      "id": "personal_trainer",
+      "groupId": "edu",
+      "terminologyProfile": "fitness",
+      "marketingPriority": 11,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "personal-trainer",
+        "fitness-coach",
+        "personal-training"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "pt1",
+          "nameKey": "templates.personal_trainer.services.pt1"
+        },
+        {
+          "id": "pt2",
+          "nameKey": "templates.personal_trainer.services.pt2"
+        },
+        {
+          "id": "pt3",
+          "nameKey": "templates.personal_trainer.services.pt3"
+        },
+        {
+          "id": "pt4",
+          "nameKey": "templates.personal_trainer.services.pt4"
+        }
+      ],
+      "addons": [
+        {
+          "id": "pt_add_plan",
+          "nameKey": "templates.personal_trainer.addons.pt_add_plan"
+        }
+      ],
+      "expenses": []
+    },
+    {
+      "id": "music_teacher",
+      "groupId": "edu",
+      "terminologyProfile": "edu",
+      "marketingPriority": 12,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "music-teacher",
+        "music-lessons"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "mt1",
+          "nameKey": "templates.music_teacher.services.mt1"
+        },
+        {
+          "id": "mt2",
+          "nameKey": "templates.music_teacher.services.mt2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "mt_add_materials",
+          "nameKey": "templates.music_teacher.addons.mt_add_materials"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "mte1",
+          "nameKey": "templates.music_teacher.expenses.mte1"
+        }
+      ]
+    },
+    {
+      "id": "yoga_instructor",
+      "groupId": "edu",
+      "terminologyProfile": "fitness",
+      "marketingPriority": 13,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "yoga",
+        "yoga-instructor"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "y1",
+          "nameKey": "templates.yoga_instructor.services.y1"
+        },
+        {
+          "id": "y2",
+          "nameKey": "templates.yoga_instructor.services.y2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "y_add_mat",
+          "nameKey": "templates.yoga_instructor.addons.y_add_mat"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ye1",
+          "nameKey": "templates.yoga_instructor.expenses.ye1"
+        }
+      ]
+    },
+    {
+      "id": "language_school",
+      "groupId": "edu",
+      "terminologyProfile": "edu",
+      "marketingPriority": 14,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "language-school",
+        "language-lessons"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": true,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "ls1",
+          "nameKey": "templates.language_school.services.ls1"
+        },
+        {
+          "id": "ls2",
+          "nameKey": "templates.language_school.services.ls2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "ls_add_materials",
+          "nameKey": "templates.language_school.addons.ls_add_materials"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "lse1",
+          "nameKey": "templates.language_school.expenses.lse1"
+        }
+      ]
+    },
+    {
+      "id": "career_coach",
+      "groupId": "edu",
+      "terminologyProfile": "coaching",
+      "marketingPriority": 15,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "career-coach",
+        "career-coaching"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "cc1",
+          "nameKey": "templates.career_coach.services.cc1"
+        },
+        {
+          "id": "cc2",
+          "nameKey": "templates.career_coach.services.cc2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "cc_add_cover",
+          "nameKey": "templates.career_coach.addons.cc_add_cover"
+        }
+      ],
+      "expenses": []
+    },
+    {
+      "id": "course_creator",
+      "groupId": "edu",
+      "terminologyProfile": "edu",
+      "marketingPriority": 16,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "course-creator",
+        "online-course"
+      ],
+      "bookingConfig": {
+        "mode": "ORDER",
+        "enabled": false,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "oc1",
+          "nameKey": "templates.course_creator.services.oc1"
+        },
+        {
+          "id": "oc2",
+          "nameKey": "templates.course_creator.services.oc2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "oc_add_cert",
+          "nameKey": "templates.course_creator.addons.oc_add_cert"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "oce1",
+          "nameKey": "templates.course_creator.expenses.oce1"
+        }
+      ]
+    },
+    {
+      "id": "freelance_designer",
+      "groupId": "freelance",
+      "terminologyProfile": "freelance",
+      "marketingPriority": 30,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "freelance-designer",
+        "graphic-designer"
+      ],
+      "bookingConfig": {
+        "mode": "REQUEST",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "fd1",
+          "nameKey": "templates.freelance_designer.services.fd1"
+        },
+        {
+          "id": "fd2",
+          "nameKey": "templates.freelance_designer.services.fd2"
+        },
+        {
+          "id": "fd3",
+          "nameKey": "templates.freelance_designer.services.fd3"
+        }
+      ],
+      "addons": [
+        {
+          "id": "fd_add_rush",
+          "nameKey": "templates.freelance_designer.addons.fd_add_rush"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "fde1",
+          "nameKey": "templates.freelance_designer.expenses.fde1"
+        }
+      ]
+    },
+    {
+      "id": "content_creator",
+      "groupId": "freelance",
+      "terminologyProfile": "freelance",
+      "marketingPriority": 31,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "content-creator",
+        "content"
+      ],
+      "bookingConfig": {
+        "mode": "ORDER",
+        "enabled": false,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "fc1",
+          "nameKey": "templates.content_creator.services.fc1"
+        },
+        {
+          "id": "fc2",
+          "nameKey": "templates.content_creator.services.fc2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "fc_add_revisions",
+          "nameKey": "templates.content_creator.addons.fc_add_revisions"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "fce1",
+          "nameKey": "templates.content_creator.expenses.fce1"
+        }
+      ]
+    },
+    {
+      "id": "consulting",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 40,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "consulting",
+        "legal"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "c1",
+          "nameKey": "templates.consulting.services.c1"
+        },
+        {
+          "id": "c2",
+          "nameKey": "templates.consulting.services.c2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "c_urgent",
+          "nameKey": "templates.consulting.addons.c_urgent"
+        }
+      ],
+      "expenses": []
+    },
+    {
+      "id": "accounting",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 41,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "accountant",
+        "accounting"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "acct1",
+          "nameKey": "templates.accounting.services.acct1"
+        },
+        {
+          "id": "acct2",
+          "nameKey": "templates.accounting.services.acct2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "acct_add_audit",
+          "nameKey": "templates.accounting.addons.acct_add_audit"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "accte1",
+          "nameKey": "templates.accounting.expenses.accte1"
+        }
+      ]
+    },
+    {
+      "id": "photographer",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 42,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "photographer",
+        "photography"
+      ],
+      "bookingConfig": {
+        "mode": "APPOINTMENT",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "p1",
+          "nameKey": "templates.photographer.services.p1"
+        },
+        {
+          "id": "p2",
+          "nameKey": "templates.photographer.services.p2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "p_add_prints",
+          "nameKey": "templates.photographer.addons.p_add_prints"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "pe1",
+          "nameKey": "templates.photographer.expenses.pe1"
+        }
+      ]
+    },
+    {
+      "id": "handyman",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 43,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "handyman",
+        "trades",
+        "home-services"
+      ],
+      "bookingConfig": {
+        "mode": "REQUEST",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "h1",
+          "nameKey": "templates.handyman.services.h1"
+        },
+        {
+          "id": "h2",
+          "nameKey": "templates.handyman.services.h2"
+        },
+        {
+          "id": "h3",
+          "nameKey": "templates.handyman.services.h3"
+        }
+      ],
+      "addons": [
+        {
+          "id": "h_add_material",
+          "nameKey": "templates.handyman.addons.h_add_material"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "he1",
+          "nameKey": "templates.handyman.expenses.he1"
+        }
+      ]
+    },
+    {
+      "id": "marketing_agency",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 44,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "marketing-agency",
+        "marketing"
+      ],
+      "bookingConfig": {
+        "mode": "REQUEST",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "mkt1",
+          "nameKey": "templates.marketing_agency.services.mkt1"
+        },
+        {
+          "id": "mkt2",
+          "nameKey": "templates.marketing_agency.services.mkt2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "mkt_add_reporting",
+          "nameKey": "templates.marketing_agency.addons.mkt_add_reporting"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "mkte1",
+          "nameKey": "templates.marketing_agency.expenses.mkte1"
+        }
+      ]
+    },
+    {
+      "id": "it_services",
+      "groupId": "pro",
+      "terminologyProfile": "pro",
+      "marketingPriority": 45,
+      "visibility": "ACTIVE",
+      "nicheSlugs": [
+        "it-services",
+        "software-dev",
+        "developer"
+      ],
+      "bookingConfig": {
+        "mode": "REQUEST",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "it1",
+          "nameKey": "templates.it_services.services.it1"
+        },
+        {
+          "id": "it2",
+          "nameKey": "templates.it_services.services.it2"
+        },
+        {
+          "id": "it3",
+          "nameKey": "templates.it_services.services.it3"
+        }
+      ],
+      "addons": [
+        {
+          "id": "it_add_sla",
+          "nameKey": "templates.it_services.addons.it_add_sla"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ite1",
+          "nameKey": "templates.it_services.expenses.ite1"
+        }
+      ]
+    },
+    {
+      "id": "coworking",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 60,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "coworking",
+        "studio-rental"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "r1",
+          "nameKey": "templates.coworking.services.r1"
+        },
+        {
+          "id": "r2",
+          "nameKey": "templates.coworking.services.r2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "r_print",
+          "nameKey": "templates.coworking.addons.r_print"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "re1",
+          "nameKey": "templates.coworking.expenses.re1"
+        }
+      ]
+    },
+    {
+      "id": "car_rental",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 61,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "car-rental"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "cr1",
+          "nameKey": "templates.car_rental.services.cr1"
+        },
+        {
+          "id": "cr2",
+          "nameKey": "templates.car_rental.services.cr2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "cr_add_gps",
+          "nameKey": "templates.car_rental.addons.cr_add_gps"
+        },
+        {
+          "id": "cr_add_child",
+          "nameKey": "templates.car_rental.addons.cr_add_child"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "cre1",
+          "nameKey": "templates.car_rental.expenses.cre1"
+        }
+      ]
+    },
+    {
+      "id": "equipment_rental",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 62,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "equipment-rental"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "er1",
+          "nameKey": "templates.equipment_rental.services.er1"
+        },
+        {
+          "id": "er2",
+          "nameKey": "templates.equipment_rental.services.er2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "er_add_delivery",
+          "nameKey": "templates.equipment_rental.addons.er_add_delivery"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ere1",
+          "nameKey": "templates.equipment_rental.expenses.ere1"
+        }
+      ]
+    },
+    {
+      "id": "event_venue",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 63,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "event-venue",
+        "venue"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "ev1",
+          "nameKey": "templates.event_venue.services.ev1"
+        },
+        {
+          "id": "ev2",
+          "nameKey": "templates.event_venue.services.ev2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "ev_add_catering",
+          "nameKey": "templates.event_venue.addons.ev_add_catering"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "eve1",
+          "nameKey": "templates.event_venue.expenses.eve1"
+        }
+      ]
+    },
+    {
+      "id": "short_term_rental",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 64,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "short-term-rental",
+        "airbnb",
+        "holiday-rental"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": true,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "st1",
+          "nameKey": "templates.short_term_rental.services.st1"
+        }
+      ],
+      "addons": [
+        {
+          "id": "st_add_clean",
+          "nameKey": "templates.short_term_rental.addons.st_add_clean"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "ste1",
+          "nameKey": "templates.short_term_rental.expenses.ste1"
+        }
+      ]
+    },
+    {
+      "id": "storage_unit",
+      "groupId": "rent",
+      "terminologyProfile": "rental",
+      "marketingPriority": 65,
+      "visibility": "BETA",
+      "nicheSlugs": [
+        "storage",
+        "storage-unit"
+      ],
+      "bookingConfig": {
+        "mode": "RENTAL",
+        "enabled": true,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "su1",
+          "nameKey": "templates.storage_unit.services.su1"
+        },
+        {
+          "id": "su2",
+          "nameKey": "templates.storage_unit.services.su2"
+        }
+      ],
+      "addons": [
+        {
+          "id": "su_add_lock",
+          "nameKey": "templates.storage_unit.addons.su_add_lock"
+        }
+      ],
+      "expenses": [
+        {
+          "id": "sue1",
+          "nameKey": "templates.storage_unit.expenses.sue1"
+        }
+      ]
+    },
+    {
+      "id": "personal_budget",
+      "groupId": "personal",
+      "terminologyProfile": "personal",
+      "marketingPriority": 90,
+      "visibility": "HIDDEN",
+      "nicheSlugs": [],
+      "bookingConfig": {
+        "mode": "ORDER",
+        "enabled": false,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "pb1",
+          "nameKey": "templates.personal_budget.services.pb1"
+        },
+        {
+          "id": "pb2",
+          "nameKey": "templates.personal_budget.services.pb2"
+        }
+      ],
+      "addons": [],
+      "expenses": [
+        {
+          "id": "pbe1",
+          "nameKey": "templates.personal_budget.expenses.pbe1"
+        },
+        {
+          "id": "pbe2",
+          "nameKey": "templates.personal_budget.expenses.pbe2"
+        }
+      ]
+    },
+    {
+      "id": "family_budget",
+      "groupId": "personal",
+      "terminologyProfile": "personal",
+      "marketingPriority": 91,
+      "visibility": "HIDDEN",
+      "nicheSlugs": [],
+      "bookingConfig": {
+        "mode": "ORDER",
+        "enabled": false,
+        "requiresStaff": false,
+        "allowAddons": false,
+        "regulated": false
+      },
+      "services": [
+        {
+          "id": "fb1",
+          "nameKey": "templates.family_budget.services.fb1"
+        },
+        {
+          "id": "fb2",
+          "nameKey": "templates.family_budget.services.fb2"
+        }
+      ],
+      "addons": [],
+      "expenses": [
+        {
+          "id": "fbe1",
+          "nameKey": "templates.family_budget.expenses.fbe1"
+        },
+        {
+          "id": "fbe2",
+          "nameKey": "templates.family_budget.expenses.fbe2"
+        }
+      ]
+    }
+  ]
+}

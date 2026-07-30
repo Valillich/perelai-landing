@@ -1,0 +1,249 @@
+import { CtaButton } from "@/components/cta-button"
+import { LandingFooter } from "@/components/landing/landing-footer"
+import { LandingHeader } from "@/components/landing/landing-header"
+import {
+  MockCalendarMonth,
+  MockFinanceKpis,
+  MockInboxTriage,
+} from "@/components/mock"
+import type { NichePageContent } from "@/content/niches/types"
+import type { NichePage } from "@/config/niche-pages"
+import type { PublishedLocale } from "@/i18n/locales"
+import { buildMockDataset } from "@/lib/mock-data"
+import { localePrimaryMarket } from "@/lib/market"
+
+interface NichePageProps {
+  locale: PublishedLocale
+  page: NichePage
+  content: NichePageContent
+}
+
+function ColoristMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page">) {
+  const dataset = buildMockDataset(
+    page.templateId,
+    locale,
+    localePrimaryMarket(locale),
+    "2026-07-15T12:00:00.000Z",
+  )
+
+  return (
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <MockCalendarMonth dataset={dataset} />
+      <MockInboxTriage dataset={dataset} />
+      <div className="sm:col-span-2">
+        <MockFinanceKpis dataset={dataset} />
+      </div>
+    </div>
+  )
+}
+
+export function NichePage({ locale, page, content }: NichePageProps) {
+  const canonicalPath = page.path
+
+  return (
+    <main className="min-h-screen bg-background text-foreground">
+      <LandingHeader
+        locale={locale}
+        canonicalPath={canonicalPath}
+        niche={page.niche}
+        showNavigation={false}
+      />
+
+      <section className="px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div>
+            <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
+            <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]">
+              {content.hero.h1}
+            </h1>
+            <p className="mt-5 max-w-xl text-pretty text-[18px] leading-relaxed text-muted-foreground">
+              {content.hero.subhead}
+            </p>
+            <CtaButton
+              destination="signup"
+              niche={page.niche}
+              landingPath={canonicalPath}
+              locale={locale}
+              location="niche_hero"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.28)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {content.cta.label}
+            </CtaButton>
+          </div>
+          <ColoristMockSuite locale={locale} page={page} />
+        </div>
+      </section>
+
+      <section id="features" className="border-y border-border bg-card-subtle px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+            {content.pains[0]?.title}
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_0.8fr]">
+            {content.pains.map((pain, index) => (
+              <article
+                key={pain.title}
+                className={
+                  index === 0
+                    ? "rounded-[20px] border border-brand-600/20 bg-card p-6 shadow-[0_8px_24px_rgba(16,24,40,0.05)] md:row-span-2"
+                    : "rounded-[20px] border border-border bg-background p-6"
+                }
+              >
+                {index === 0 ? null : (
+                  <h3 className="text-[20px] font-semibold tracking-tight text-foreground">{pain.title}</h3>
+                )}
+                <p className={index === 0 ? "text-[20px] leading-relaxed text-foreground" : "mt-3 text-[16px] leading-relaxed text-muted-foreground"}>
+                  {pain.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how" className="px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-2xl">
+            <h2 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+              {content.dayInLife.title}
+            </h2>
+            <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">{content.dayInLife.body}</p>
+          </div>
+          <ol className="mt-12 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2">
+            {content.dayInLife.steps.map((step, index) => (
+              <li key={step.title} className="grid grid-cols-[auto_1fr] gap-4">
+                <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-brand-600/10 text-[13px] font-semibold text-brand-600">
+                  {index + 1}
+                </span>
+                <div>
+                  <h3 className="text-[20px] font-semibold tracking-tight text-foreground">{step.title}</h3>
+                  <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground">{step.body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="bg-card-subtle px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+            {content.labels.terminologyTitle}
+          </h2>
+          <div className="mt-10 overflow-x-auto rounded-[20px] border border-border bg-card">
+            <table className="w-full min-w-[680px] text-left">
+              <thead className="bg-card-subtle text-[13px] font-semibold text-muted-foreground">
+                <tr>
+                  <th className="px-5 py-4">{content.labels.inYourChair}</th>
+                  <th className="px-5 py-4">{content.labels.inPerelai}</th>
+                  <th className="px-5 py-4">{content.labels.whyItMatters}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {content.terminology.map((row) => (
+                  <tr key={row.perelaiWord} className="border-t border-border align-top">
+                    <td className="px-5 py-4 text-[15px] leading-relaxed text-foreground">{row.theirWord}</td>
+                    <td className="px-5 py-4 text-[15px] font-semibold leading-relaxed text-brand-600">{row.perelaiWord}</td>
+                    <td className="px-5 py-4 text-[15px] leading-relaxed text-muted-foreground">{row.why}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+            {content.labels.mocksTitle}
+          </h2>
+          <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
+            {content.labels.mocksBody}
+          </p>
+          <div className="mt-10">
+            <ColoristMockSuite locale={locale} page={page} />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-border bg-card-subtle px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+          <div>
+            <h2 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+              {content.setup.title}
+            </h2>
+            <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">{content.setup.body}</p>
+          </div>
+          <div className="space-y-8">
+            {content.setup.steps.map((step) => (
+              <div key={step.title}>
+                <h3 className="text-[20px] font-semibold tracking-tight text-foreground">{step.title}</h3>
+                <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground">{step.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <h2 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+              {content.whatItIsNot.title}
+            </h2>
+            <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">{content.whatItIsNot.body}</p>
+          </div>
+          <div className="grid gap-4">
+            {content.whatItIsNot.items.map((item) => (
+              <article key={item.title} className="rounded-[20px] border border-border bg-card p-6">
+                <h3 className="text-[19px] font-semibold tracking-tight text-foreground">{item.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-card-subtle px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+            {content.labels.faqTitle}
+          </h2>
+          <div className="mt-8 space-y-3">
+            {content.faq.map((item) => (
+              <details key={item.q} className="rounded-[16px] border border-border bg-card px-5 py-4">
+                <summary className="cursor-pointer list-none pr-8 text-[17px] font-semibold text-foreground marker:content-none">
+                  {item.q}
+                </summary>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-20 sm:px-6 sm:py-28">
+        <div className="mx-auto max-w-5xl rounded-[24px] border border-border bg-card px-6 py-14 text-center shadow-[0_16px_48px_-26px_rgba(106,76,255,0.32)] sm:px-12 sm:py-20">
+          <h2 className="mx-auto max-w-3xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[46px]">
+            {content.cta.title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">{content.cta.body}</p>
+          <CtaButton
+            destination="signup"
+            niche={page.niche}
+            landingPath={canonicalPath}
+            locale={locale}
+            location="niche_final_cta"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            {content.cta.label}
+          </CtaButton>
+          <p className="mt-5 text-[13px] text-subtle-text">{content.cta.microcopy}</p>
+        </div>
+      </section>
+
+      <LandingFooter locale={locale} canonicalPath={canonicalPath} />
+    </main>
+  )
+}

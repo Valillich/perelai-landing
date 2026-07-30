@@ -1,0 +1,6 @@
+{
+  "cta": { "signup": "Get Started Now", "login": "Log in" },
+  "languageLabel": "Language",
+  "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
+  "terms": { "visit": "Visit", "order": "Order", "package": "Packages", "instalment": "Plans" }
+}

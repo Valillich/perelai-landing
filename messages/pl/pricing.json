@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Cennik — Perelai",
+    "description": "Informacje o funkcjach Perelai i dostępie do przestrzeni pracy."
+  },
+  "hero": {
+    "title": "Co otrzymujesz dzisiaj",
+    "body": "Perelai zapewnia zarządzanie rezerwacjami, klientami i przepływami pieniężnymi. Oto co jest dostępne w przestrzeni pracy."
+  },
+  "capabilities": {
+    "title": "Aktualne możliwości",
+    "inbox": "Operacyjna skrzynka — jedna lista spraw wymagających Twojej decyzji, czekająca aż je rozwiążesz",
+    "calendar": "Kalendarz pokazujący rodzaj pracy, którą wykonujesz",
+    "booking": "Publiczny link do rezerwacji — klienci wybierają usługę i termin bezpośrednio na Twojej stronie",
+    "clients": "Profile klientów z historią wizyt, notatkami i płatnościami",
+    "payments": "Rejestrowanie płatności i ich przypisanie do wizyt i zamówień",
+    "finance": "Przychody, koszty i otwarte pozycje — bez arkusza",
+    "orders": "Zamówienia z harmonogramem płatności i śledzeniem rat",
+    "packages": "Pakiety przedpłaconych punktów, które są odliczane przy użyciu",
+    "onboarding": "Konfiguracja dopasowana do branży z 32 szablonami i edytowalną listą usług",
+    "googleCalendar": "Dwukierunkowa synchronizacja z Kalendarzem Google",
+    "contactImport": "Import kontaktów z telefonu przez vCard",
+    "languages": "Dostępny w języku angielskim, ukraińskim i polskim",
+    "mobile": "Zaprojektowany na telefon, wygodny na komputerze",
+    "themes": "Jasny i ciemny motyw"
+  },
+  "noCharge": {
+    "title": "Rezerwacja i przestrzeń pracy",
+    "commission": "Bezpośredni link do rezerwacji",
+    "commissionDetail": "Twój link do rezerwacji należy do Ciebie. Klienci rezerwują bezpośrednio przez Twój link.",
+    "card": "Rejestracja",
+    "cardDetail": "Potwierdź e-mail, aby dokończyć konfigurację przestrzeni pracy."
+  },
+  "future": {
+    "title": "Co się stanie, gdy pojawi się system płatności",
+    "body": "Ceny zostaną ogłoszone przed uruchomieniem systemu płatności."
+  },
+  "regionHint": "Wyświetlono w USD. Twój rynek: {country} ({currency}).",
+  "faq": {
+    "title": "Pytania o cennik i płatności",
+    "q1": "Kiedy zacznie się naliczanie opłat?",
+    "a1": "Obecnie w aplikacji nie ma systemu płatności. Ceny i warunki zostaną ogłoszone z wyprzedzeniem przed uruchomieniem płatności.",
+    "q2": "Co się stanie, gdy zostaną ogłoszone warunki płatności?",
+    "a2": "Warunki zostaną ogłoszone z wyprzedzeniem, aby dać czas na zapoznanie się z nimi, zanim cokolwiek się zmieni.",
+    "q3": "Jak działa rezerwacja klientów?",
+    "a3": "Twój link należy do Ciebie. Klienci wybierają usługę i termin bezpośrednio na Twojej stronie."
+  },
+  "cta": {
+    "title": "Twoi klienci, rezerwacje i przepływy pieniężne — w jednym miejscu",
+    "body": "Konfiguracja w jeden wieczór.",
+    "button": "Utwórz przestrzeń pracy",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+  }
+}

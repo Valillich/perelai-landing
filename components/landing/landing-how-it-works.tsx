@@ -1,41 +1,22 @@
-"use client"
-
+import Image from "next/image"
 import { Reveal } from "./reveal"
 import { CalendarX2, LineChart } from "lucide-react"
-
-const steps = [
-  {
-    eyebrow: "Before",
-    title: "From a messy calendar that drains you",
-    body: "Double-bookings, scattered notes, and no idea what you actually earned. Legacy CRMs make you work for them.",
-    image: "/landing/messy-calendar.png",
-    alt: "A cluttered legacy calendar with overlapping appointments",
-    icon: CalendarX2,
-    iconBg: "bg-[#FEE2E2]",
-    iconColor: "text-[#C53030]",
-    reverse: false,
-  },
-  {
-    eyebrow: "After",
-    title: "To one clear number: your Net Profit",
-    body: "Perelai connects every booking to your finances automatically, so you always know exactly where your business stands — at a glance.",
-    image: "/landing/clear-profit.png",
-    alt: "A clean dashboard highlighting net profit with an upward trend",
-    icon: LineChart,
-    iconBg: "bg-[#6A4CFF]/10",
-    iconColor: "text-[#6A4CFF]",
-    reverse: true,
-  },
-]
+import { useTranslations } from "next-intl"
 
 export function LandingHowItWorks() {
+  const t = useTranslations("home.how")
+  const steps = [
+    { eyebrow: t("before"), title: t("beforeTitle"), body: t("beforeBody"), image: "/landing/messy-calendar.png", alt: t("beforeAlt"), icon: CalendarX2, iconBg: "bg-badge-danger-bg", iconColor: "text-badge-danger-text", reverse: false },
+    { eyebrow: t("after"), title: t("afterTitle"), body: t("afterBody"), image: "/landing/clear-profit.png", alt: t("afterAlt"), icon: LineChart, iconBg: "bg-brand-600/10", iconColor: "text-brand-600", reverse: true },
+  ]
+
   return (
     <section id="how" className="px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-[13px] font-semibold uppercase tracking-wide text-[#6A4CFF]">How it works</p>
-          <h2 className="mt-3 text-balance text-[32px] font-bold leading-tight tracking-tight text-[#0F1724] sm:text-[42px]">
-            Trade the chaos for clarity
+          <p className="text-[13px] font-semibold uppercase tracking-wide text-brand-600">{t("eyebrow")}</p>
+          <h2 className="mt-3 text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
+            {t("title")}
           </h2>
         </Reveal>
 
@@ -52,13 +33,13 @@ export function LandingHowItWorks() {
                   <span className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${step.iconBg}`}>
                     <Icon className={`h-6 w-6 ${step.iconColor}`} />
                   </span>
-                  <p className="mt-5 text-[13px] font-semibold uppercase tracking-wide text-[#6A4CFF]">
+                  <p className="mt-5 text-[13px] font-semibold uppercase tracking-wide text-brand-600">
                     {step.eyebrow}
                   </p>
-                  <h3 className="mt-2 text-balance text-[26px] font-semibold leading-snug tracking-tight text-[#0F1724] sm:text-[32px]">
+                  <h3 className="mt-2 text-balance text-[26px] font-semibold leading-snug tracking-tight text-foreground sm:text-[32px]">
                     {step.title}
                   </h3>
-                  <p className="mt-4 max-w-md text-pretty text-[17px] leading-relaxed text-[#4B5563]">{step.body}</p>
+                  <p className="mt-4 max-w-md text-pretty text-[17px] leading-relaxed text-muted-foreground">{step.body}</p>
                 </Reveal>
 
                 {/* Image */}
@@ -73,8 +54,15 @@ export function LandingHowItWorks() {
                           : "linear-gradient(135deg, rgba(148,163,184,0.25), rgba(148,163,184,0.1))",
                       }}
                     />
-                    <div className="overflow-hidden rounded-[24px] border border-white/60 bg-white/40 p-2 shadow-[0_24px_60px_-20px_rgba(16,24,40,0.25)] backdrop-blur-xl">
-                      <img src={step.image || "/placeholder.svg"} alt={step.alt} className="w-full rounded-[16px]" />
+                    <div className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-2 shadow-[0_24px_60px_-20px_rgba(16,24,40,0.25)] backdrop-blur-xl">
+                      <Image
+                        src={step.image}
+                        alt={step.alt}
+                        width={1024}
+                        height={1024}
+                        sizes="(max-width: 768px) 100vw, 576px"
+                        className="w-full h-auto rounded-[16px]"
+                      />
                     </div>
                   </div>
                 </Reveal>

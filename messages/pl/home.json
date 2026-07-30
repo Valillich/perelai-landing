@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai — klienci, rezerwacje i przepływy pieniężne w jednym miejscu",
+    "description": "Oprogramowanie do rezerwacji, obsługi klientów i finansów dla niezależnych specjalistów. Jedna lista spraw do załatwienia, jedna pewna liczba, jeden link do bio."
+  },
+  "nav": {
+    "features": "Funkcje",
+    "how": "Jak to działa",
+    "pricing": "Cennik",
+    "login": "Zaloguj się",
+    "start": "Utwórz przestrzeń pracy"
+  },
+  "hero": {
+    "title": "Twoi klienci, rezerwacje i przepływy pieniężne",
+    "accent": "— wreszcie w jednym miejscu.",
+    "body": "Przestań odtwarzać swój tydzień z wiadomości, notatek i pamięci. Jedna lista spraw do załatwienia, jedna pewna liczba, jeden link do bio.",
+    "signup": "Utwórz przestrzeń pracy",
+    "how": "Zobacz, jak to działa",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
+    "imageAlt": "Przestrzeń pracy Perelai z operacyjną skrzynką, nadchodzącymi wizytami i przeglądem finansów — przykładowe dane",
+    "imageCaption": "Przykładowe dane"
+  },
+  "problem": {
+    "title": "Znasz już ten dzień",
+    "pain1Title": "Rezerwacje w wiadomościach",
+    "pain1Body": "Klienci piszą o 23:00. Robisz zrzut ekranu, obiecujesz sprawdzić kalendarz jutro i zapominasz do rana.",
+    "pain2Title": "Notatki w trzech miejscach",
+    "pain2Body": "Jaka formuła farby była użyta ostatnio? Jest w notatce, wiadomości albo na odwrocie paragonu — gdzieś tam.",
+    "pain3Title": "Pieniądze odtwarzane na koniec miesiąca",
+    "pain3Body": "\"Ile właściwie zarobiłam w tym tygodniu?\" Składasz to z przelewów, gotówki i klientki, która obiecała zapłacić następnym razem."
+  },
+  "inbox": {
+    "title": "Skrzynka, która czeka, aż zajmiesz się sprawą",
+    "body": "Powiadomienie mówi, że coś się stało. Skrzynka trzyma sprawę, dopóki jej nie rozwiążesz. Niepotwierdzone rezerwacje, nieopłacone wizyty, klienci do przypomnienia — jedna lista decyzji.",
+    "caption": "Przykładowe dane",
+    "detail": "Jedna lista spraw do załatwienia — zostaje, aż je rozwiążesz, a nie tylko przeczytasz."
+  },
+  "booking": {
+    "title": "Jeden link do bio",
+    "body": "Udostępnij jeden link. Klienci wybierają usługę, osobę i termin. Umieść go w bio, wyślij w wiadomości, wydrukuj na wizytówce — jest Twój.",
+    "detail": "Twój link do rezerwacji należy do Ciebie. Klienci rezerwują bezpośrednio przez Twój link."
+  },
+  "money": {
+    "title": "Pieniądze, które się zgadzają",
+    "body": "Wykonana praca i otrzymane pieniądze są śledzone oddzielnie — dzięki temu liczba jest prawdziwa. Zakończona wizyta to nie przychód, dopóki ktoś nie zapłaci. Perelai ich nie myli.",
+    "caption": "Przykładowe dane",
+    "detail": "Przychody, koszty i otwarte pozycje — bez arkusza."
+  },
+  "setup": {
+    "eyebrow": "Jak to działa",
+    "title": "Konfiguracja w jeden wieczór",
+    "body": "Bez migracji w weekend. Wybierz branżę, zaimportuj klientów, udostępnij link.",
+    "step1Title": "Wybierz branżę",
+    "step1Body": "32 typy firm z edytowalną listą usług. Odpowiednie szablony zawierają również dodatki i powiązane koszty.",
+    "step2Title": "Przenieś swoich klientów",
+    "step2Body": "Zaimportuj kontakty z telefonu przez vCard. Połącz Kalendarz Google i zachowaj synchronizację.",
+    "step3Title": "Udostępnij link do rezerwacji",
+    "step3Body": "Jeden link w bio. Klienci rezerwują bezpośrednio przez Twój link."
+  },
+  "not": {
+    "title": "Czym Perelai nie jest",
+    "body": "Jeśli potrzebujesz którejś z tych rzeczy, nie jesteśmy właściwym wyborem — i wolimy to powiedzieć wprost.",
+    "item1Title": "To nie jest program księgowy",
+    "item1Body": "Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe.",
+    "item2Title": "To nie jest marketplace",
+    "item2Body": "Twój link należy do Ciebie. Klienci rezerwują bezpośrednio bez pośredników.",
+    "item3Title": "To nie jest system dokumentacji medycznej",
+    "item3Body": "Brak historii leczenia, diagnoz czy zarządzania kartami pacjentów."
+  },
+  "nicheRouter": {
+    "title": "Znajdź swoją branżę",
+    "body": "Strony dostosowane do tego, jak naprawdę pracujesz.",
+    "coloristsLabel": "Dla niezależnych kolorystów",
+    "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach."
+  },
+  "faq": {
+    "title": "Pytania",
+    "q1": "Jak klienci rezerwują u mnie wizyty?",
+    "a1": "Udostępnij swój link. Klienci wybierają usługę i termin bezpośrednio na Twojej stronie.",
+    "q2": "Co dzieje się zaraz po rejestracji?",
+    "a2": "Potwierdzasz e-mail, a potem przechodzisz krótką konfigurację: branża, usługi, zespół (jeśli masz) i opcjonalny import.",
+    "q3": "Czy moje usługi będą już w systemie?",
+    "a3": "Tak — każdy typ firmy zaczyna się od edytowalnej listy usług lub produktów. Szablony zawierają też dodatki i koszty.",
+    "q4": "Czy mogę przenieść klientów i kalendarz?",
+    "a4": "Tak: kontakty z telefonu (vCard) i dwukierunkowa synchronizacja z Kalendarzem Google.",
+    "q5": "Czy mogę zarządzać wieloma usługami?",
+    "a5": "Tak. Każdy szablon zawiera wybór usług oraz opcje dodatków.",
+    "q6": "Czy to jest oprogramowanie księgowe?",
+    "a6": "Nie. Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe."
+  },
+  "closing": {
+    "title": "Twoi klienci, rezerwacje i przepływy pieniężne — w jednym miejscu",
+    "body": "Konfiguracja w jeden wieczór.",
+    "cta": "Utwórz przestrzeń pracy",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+  },
+  "footer": {
+    "description": "Oprogramowanie do rezerwacji, klientów i finansów dla niezależnych specjalistów.",
+    "product": "Produkt",
+    "company": "Prawne",
+    "forColorists": "Dla niezależnych kolorystów",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki korzystania"
+  }
+}

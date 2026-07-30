@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai — Clients, Bookings & Cash Flow in One Place",
+    "description": "Booking, client and money software for independent service professionals. One list of unresolved work, one number you can trust, one link for your bio."
+  },
+  "nav": {
+    "features": "Features",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "start": "Create workspace"
+  },
+  "hero": {
+    "title": "Your clients, bookings and cash flow",
+    "accent": "— finally in one place.",
+    "body": "Stop reconstructing your week from DMs, notes apps and memory. One list of what still needs doing, one number you can trust, one link for your bio.",
+    "signup": "Create workspace",
+    "how": "See how it works",
+    "micro": "You'll get a verification email to finish setting up.",
+    "imageAlt": "Perelai workspace showing the operational Inbox, upcoming visits, and finance overview — example data",
+    "imageCaption": "Example data"
+  },
+  "problem": {
+    "title": "You already know this day",
+    "pain1Title": "Bookings in your DMs",
+    "pain1Body": "Clients message at 11 pm. You screenshot the request, promise to check your calendar tomorrow, and forget by morning.",
+    "pain2Title": "Notes in three places",
+    "pain2Body": "What colour formula did she use last time? It is in a note, or a text, or the back of a receipt — somewhere.",
+    "pain3Title": "Money reconstructed at month end",
+    "pain3Body": "\"What did I actually earn this week?\" You piece it together from Venmo, cash, and a client who said she would pay next time."
+  },
+  "inbox": {
+    "title": "The Inbox that stays until you deal with it",
+    "body": "A notification tells you something happened. The Inbox keeps it until you deal with it. Unconfirmed bookings, unpaid visits, clients due for a follow-up — one list of what still needs your decision.",
+    "caption": "Example data",
+    "detail": "One list of what still needs your decision — it stays there until you resolve it, not until you read it."
+  },
+  "booking": {
+    "title": "One link for your bio",
+    "body": "Share one link. Clients pick a service, a person and a time. Put it in your bio, send it in a DM, print it on a card — it is yours.",
+    "detail": "Your booking link is yours. Clients book directly on your link."
+  },
+  "money": {
+    "title": "Money that adds up",
+    "body": "Completed work and received money are tracked separately — so the number is real. A completed visit is not revenue until someone actually pays. Perelai does not blur the two.",
+    "caption": "Example data",
+    "detail": "Revenue, costs and what's still outstanding — without a spreadsheet."
+  },
+  "setup": {
+    "eyebrow": "How it works",
+    "title": "Set up in an evening",
+    "body": "No weekend migration. Pick your trade, import your clients, share your link.",
+    "step1Title": "Pick your trade",
+    "step1Body": "32 selectable business types, each with an editable service list. Relevant templates also include add-ons and linked costs.",
+    "step2Title": "Bring your clients across",
+    "step2Body": "Import contacts from your phone with vCard. Connect your Google Calendar and keep both sides in step.",
+    "step3Title": "Share your booking link",
+    "step3Body": "One link in your bio. Clients book directly on your own link."
+  },
+  "not": {
+    "title": "What Perelai is not",
+    "body": "If you need any of these, we are not the right fit — and we would rather say so.",
+    "item1Title": "Not accounting software",
+    "item1Body": "Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice.",
+    "item2Title": "Not a marketplace",
+    "item2Body": "Your booking link is yours. Clients book directly without a marketplace intermediary.",
+    "item3Title": "Not a medical record system",
+    "item3Body": "No clinical records, no diagnosis tracking, no patient treatment management."
+  },
+  "nicheRouter": {
+    "title": "Find your trade",
+    "body": "Pages built for how you actually work.",
+    "coloristsLabel": "For independent colorists",
+    "coloristsDescription": "Booking, clients and cash flow for colorists who work on their own terms."
+  },
+  "faq": {
+    "title": "Questions",
+    "q1": "How do clients book with me?",
+    "a1": "Share your direct booking link. Clients choose a service and time directly on your page.",
+    "q2": "What happens right after I sign up?",
+    "a2": "You confirm your email, then a short setup: your trade, your services, your team if you have one, and optional imports.",
+    "q3": "Will my services already be there?",
+    "a3": "Yes — each selectable business type starts with an editable service or item list. Relevant templates also include add-ons and linked costs.",
+    "q4": "Can I bring my clients and calendar across?",
+    "a4": "Yes: contacts from your phone (vCard) and two-way Google Calendar sync.",
+    "q5": "Can I manage multiple services and add-ons?",
+    "a5": "Yes. Each template includes selectable services and relevant add-on options.",
+    "q6": "Is this accounting software?",
+    "a6": "No. Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice."
+  },
+  "closing": {
+    "title": "Your clients, bookings and cash flow — in one place",
+    "body": "Set up in an evening.",
+    "cta": "Create workspace",
+    "micro": "You'll get a verification email to finish setting up."
+  },
+  "footer": {
+    "description": "Booking, client and money software for independent service professionals.",
+    "product": "Product",
+    "company": "Legal",
+    "forColorists": "For independent colorists",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

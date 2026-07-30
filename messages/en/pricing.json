@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Pricing — Perelai",
+    "description": "Information about Perelai features and workspace access."
+  },
+  "hero": {
+    "title": "What you get today",
+    "body": "Perelai provides booking, client, and cash flow management. Here is what is available in the workspace."
+  },
+  "capabilities": {
+    "title": "Current capabilities",
+    "inbox": "Operational Inbox — one list of what still needs your decision, kept until resolved",
+    "calendar": "Calendar that shows the kind of work you actually do",
+    "booking": "Public booking link — your clients choose a service and time directly on your page",
+    "clients": "Client profiles with visit history, notes and payment records",
+    "payments": "Payment recording and allocation against visits and orders",
+    "finance": "Revenue, costs and outstanding balances without a spreadsheet",
+    "orders": "Orders with agreed payment schedules and instalment tracking",
+    "packages": "Packages of prepaid credits that draw down as you use them",
+    "onboarding": "Niche-aware onboarding with 32 selectable business types and editable service lists",
+    "googleCalendar": "Two-way Google Calendar sync",
+    "contactImport": "Contact import from your phone via vCard",
+    "languages": "Available in English, Ukrainian and Polish",
+    "mobile": "Mobile-first, comfortable on desktop",
+    "themes": "Light and dark themes"
+  },
+  "noCharge": {
+    "title": "Booking & Workspace",
+    "commission": "Direct booking link",
+    "commissionDetail": "Your booking link is yours. Clients book directly on your link.",
+    "card": "Registration",
+    "cardDetail": "Confirm your email to finish setting up your workspace."
+  },
+  "future": {
+    "title": "What happens when billing arrives",
+    "body": "Pricing will be announced before any billing system ships."
+  },
+  "regionHint": "Shown in USD. Your market: {country} ({currency}).",
+  "faq": {
+    "title": "Questions about pricing and billing",
+    "q1": "When does billing start?",
+    "a1": "There is no billing system in the app today. Pricing and terms will be announced in advance before any billing ships.",
+    "q2": "What happens when billing terms are announced?",
+    "a2": "Pricing terms will be announced in advance so you will have time to review before anything changes.",
+    "q3": "How does client booking work?",
+    "a3": "Your booking link is yours. Clients select a service and time directly on your page."
+  },
+  "cta": {
+    "title": "Your clients, bookings and cash flow — in one place",
+    "body": "Set up in an evening.",
+    "button": "Create workspace",
+    "micro": "You'll get a verification email to finish setting up."
+  }
+}
