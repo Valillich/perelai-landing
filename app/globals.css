@@ -136,12 +136,12 @@ html {
     ),
     radial-gradient(
       ellipse 80% 90% at 0% 50%,
-      rgba(var(--brand-700-rgb), 0.3) 0%,
+      rgba(var(--brand-700-rgb), 0.298) 0%,
       transparent 55%
     ),
     radial-gradient(
       ellipse 80% 90% at 100% 50%,
-      rgba(var(--brand-700-rgb), 0.3) 0%,
+      rgba(var(--brand-700-rgb), 0.302) 0%,
       transparent 55%
     ),
     radial-gradient(
@@ -170,10 +170,10 @@ html {
 .mock-glass-frame::before {
   content: "";
   position: absolute;
-  inset: -10px -12px;
+  inset: -12px -16px;
   z-index: 0;
   pointer-events: none;
-  border-radius: 22px;
+  border-radius: 24px;
   padding: 1.5px;
   background-image: var(--mock-glass-conic);
   filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));

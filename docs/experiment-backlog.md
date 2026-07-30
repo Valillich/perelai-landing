@@ -1,97 +1,44 @@
-# Experiment Backlog & Hypothesis Scoring
+# Experiment Backlog (LP12)
 
-**Last Updated:** 2026-07-30  
-**Phase:** LP12 (Experimentation Readiness)  
-**Status:** Pre-volume phase — A/B tests NOT active.
+This backlog contains hypotheses for A/B testing once sufficient traffic volume is reached.
 
----
+## Experiment Design Standards
 
-## 1. Qualitative Tooling & Privacy Status
+*   **Primary Metric:** `signup_started` (Clicking the main CTA).
+*   **Guardrail Metric:** The app's `onboarding_completed` rate for the specific niche (using the cross-domain join in `apps/api/src/scripts/onboarding-report.ts`). A landing change that lifts clicks but sends worse-fit users who abandon onboarding is a **failed experiment**.
+*   **Sample Size Assumptions:**
+    *   Alpha: 0.05 (95% confidence)
+    *   Power: 0.80
+    *   Baseline Conversion Rate (assumed): 2.0%
+    *   Minimum Detectable Effect (MDE): 20% relative (i.e., detecting a lift from 2.0% to 2.4%)
+    *   **Required Sample:** ~25,000 sessions per variation (~50,000 total sessions per test).
 
-| Tool | Status | Reason & Blocker |
-|---|---|---|
-| Session Recordings | **OFF / BLOCKED** | Requires explicit owner & legal approval of privacy policy, consent banner, and data processor DPA under LP10 privacy decision in `docs/tracking-plan.md`. |
-| Scroll Maps & Heatmaps | **OFF / BLOCKED** | Same as above. No DOM capture or third-party tracking scripts loaded. |
-| Qualitative Observations | **ACTIVE** | Direct user interviews, support emails (`hello@perelai.com`), and onboarding report funnel analysis. |
-
----
-
-## 2. Statistical Sample Size Methodology
-
-Do not use universal thresholds (e.g. "1,000 sessions"). Sample sizes are calculated using the two-tailed proportion test formula:
-
-$$n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot [p_1(1-p_1) + p_2(1-p_2)]}{(p_2 - p_1)^2}$$
-
-- Significance level: $\alpha = 0.05$ ($Z_{\alpha/2} = 1.96$)
-- Statistical power: $1 - \beta = 0.80$ ($Z_{\beta} = 0.84$)
-- Baseline conversion rate: $p_1$ (visitor $\rightarrow$ `signup_started`)
-- Target conversion rate: $p_2 = p_1 \cdot (1 + \text{MDE})$
+## Qualitative Data (Blocker)
+Session recordings and scroll maps are **OFF**. The LP10 privacy decision enforced `persistence: 'memory'` (no cookies), which precludes the use of consent banners and cross-session tracking required by the PostHog replay SDK. These features remain blocked until a new legal/privacy decision allows them.
 
 ---
 
-## 3. ICE-Scored Hypothesis Backlog
+## 1. Hero Headline Framing
+**ICE Score:** 24 (Impact: 9, Confidence: 7, Ease: 8)
+**Hypothesis:** If we change the hero headline from pain-led ("Stop losing time on admin") to outcome-led ("Focus on your craft, we handle the rest"), then `signup_started` will increase, because outcome-led framing resonates better with beauty professionals who value creativity over administration.
+**Sample required:** 50,000 sessions.
 
-| Rank | Test ID | Hypothesis Name | Impact (1-10) | Confidence (1-10) | Ease (1-10) | ICE Score |
-|---|---|---|---|---|---|---|
-| **1** | **H3** | **Inbox Differentiator Placement** | 9 | 8 | 8 | **576** |
-| **2** | **H1** | **Hero Headline Framing** | 8 | 7 | 9 | **504** |
-| **3** | **H4** | **Terminology Table Placement** | 7 | 7 | 9 | **441** |
-| **4** | **H5** | **Pricing Information Access** | 8 | 6 | 8 | **384** |
-| **5** | **H2** | **Primary CTA Wording** | 6 | 5 | 10 | **300** |
+## 2. CTA Copy
+**ICE Score:** 24 (Impact: 8, Confidence: 6, Ease: 10)
+**Hypothesis:** If we change the primary CTA from "Join the Founding Beta" to "Create your free workspace", then `signup_started` will increase, because "free workspace" communicates immediate tangible value and lowers the perceived barrier to entry compared to "Beta" which sounds unfinished.
+**Sample required:** 50,000 sessions.
 
----
+## 3. Indicative Pricing Placement
+**ICE Score:** 21 (Impact: 7, Confidence: 6, Ease: 8)
+**Hypothesis:** If we show indicative pricing directly on the niche page rather than linking out to `/pricing`, then `signup_started` will increase, because users will not have to break their reading flow to verify affordability.
+**Sample required:** 50,000 sessions.
 
-## 4. Hypothesis Specifications
+## 4. Differentiator Positioning (Inbox)
+**ICE Score:** 18 (Impact: 6, Confidence: 5, Ease: 7)
+**Hypothesis:** If we move the Inbox differentiator section above the booking-link section, then `signup_started` will increase, because client communication (Inbox) is a more acute pain point for this specific niche than scheduling.
+**Sample required:** 50,000 sessions.
 
-### H3: Inbox Differentiator Placement (Rank #1 — Run First)
-- **If:** We place the Operational Inbox section (`#features`) directly above the booking link section on the homepage,
-- **Then:** `signup_started` conversion rate will increase by 25% relative (from 4.0% to 5.0%),
-- **Because:** The Operational Inbox ("keeps it until you deal with it") is Perelai's core data-model differentiator that competitors cannot copy without changing their architecture.
-- **Primary Metric:** `signup_started`
-- **Guardrail Metric:** `onboarding_completed` rate for `premium-colorist` (from `onboarding-report.ts`)
-- **Required Sample Size:** ~12,200 visitors per variant (Total: **24,400 visitors**).
-- **Traffic Threshold:** Homepage only (~800 visitors/day over 30 days).
-
----
-
-### H1: Hero Headline Framing (Rank #2)
-- **If:** We change the hero headline from outcome-led (*"Your clients, bookings and cash flow — finally in one place"*) to pain-led (*"Stop reconstructing your week from DMs, notes apps and memory"*),
-- **Then:** `signup_started` conversion rate will increase by 20% relative (from 4.0% to 4.8%),
-- **Because:** Customer research verbatims (sources 1, 2, 10 in `docs/icp-research-homepage.md`) confirm that "answering DMs at 11pm" and "reconstructing weeks from memory" are the most acute daily frustration.
-- **Primary Metric:** `signup_started`
-- **Guardrail Metric:** `onboarding_completed` rate for `premium-colorist`
-- **Required Sample Size:** ~19,200 visitors per variant (Total: **38,400 visitors**).
-- **Traffic Threshold:** Homepage (~1,300 visitors/day over 30 days).
-
----
-
-### H4: Terminology Table Placement (Rank #3)
-- **If:** We move the Niche Terminology Translation Table on niche pages to sit directly above the FAQ section,
-- **Then:** `signup_started` conversion rate on niche pages will increase by 20% relative (from 3.0% to 3.6%),
-- **Because:** The terminology table proves immediate trade understanding ("Formula history" vs "Notes"), capturing high-intent visitors before FAQ scroll.
-- **Primary Metric:** `signup_started`
-- **Guardrail Metric:** `onboarding_completed` rate for `premium-colorist`
-- **Required Sample Size:** ~25,800 visitors per variant (Total: **51,600 visitors**).
-- **Traffic Threshold:** High-traffic niche pages (`/for-independent-colorists`) during active acquisition campaigns.
-
----
-
-### H5: Pricing Information Access (Rank #4)
-- **If:** We render an approved pricing capability summary directly on the niche landing page instead of requiring a click to `/pricing`,
-- **Then:** `signup_started` conversion rate will increase by 30% relative (from 3.0% to 3.9%),
-- **Because:** Reducing navigation friction for price-curious visitors prevents bounce.
-- **Primary Metric:** `signup_started`
-- **Guardrail Metric:** `onboarding_completed` rate for `premium-colorist`
-- **Required Sample Size:** ~11,400 visitors per variant (Total: **22,800 visitors**).
-- **Traffic Threshold:** Niche landing pages with dedicated campaign traffic.
-
----
-
-### H2: Primary CTA Wording (Rank #5)
-- **If:** We change the primary CTA copy from "Create workspace" to "Join the Founding Beta",
-- **Then:** `signup_started` conversion rate will increase by 15% relative (from 4.0% to 4.6%),
-- **Because:** Solo operators respond to early-stage co-creation framing over generic utility creation.
-- **Primary Metric:** `signup_started`
-- **Guardrail Metric:** `onboarding_completed` rate for `premium-colorist`
-- **Required Sample Size:** ~34,500 visitors per variant (Total: **69,000 visitors**).
-- **Traffic Threshold:** Homepage (~2,300 visitors/day over 30 days).
+## 5. Terminology Table Placement
+**ICE Score:** 16 (Impact: 5, Confidence: 4, Ease: 7)
+**Hypothesis:** If we move the Terminology table above the FAQ rather than below it, then `signup_started` will increase, because proving we understand their specific industry vocabulary early builds trust before they reach the generic FAQs.
+**Sample required:** 50,000 sessions.

@@ -1,4 +1,11 @@
-# Pre-Volume Decision Log
+# Architecture & Strategy Decision Log
+
+## Pre-Volume Iteration Policy (LP12)
+Before the site has sufficient traffic to reach statistical significance (e.g., 50,000 sessions for a 20% MDE), we use **Pre-Volume Copy Iterations**. 
+* **Rule:** A fixed 2-week observation window per change. 
+* **Labeling:** Results are explicitly documented here as a **decision log** and *never* presented as a statistical result. They provide directional, qualitative signals.
+
+---
 
 **Purpose:** Document sequential copy and layout iterations during the pre-volume phase.  
 **Rule:** Every entry represents a qualitative product decision based on a fixed 2-week observation window. It is **explicitly NOT a statistically significant result**.

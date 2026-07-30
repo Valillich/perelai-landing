@@ -64,7 +64,7 @@ describe("mock components", () => {
       expect(() => {
         renderToStaticMarkup(createElement(MockInboxTriage, { dataset }))
         renderToStaticMarkup(createElement(MockCalendarMonth, { dataset: screenDataset }))
-        renderToStaticMarkup(createElement(MockFinanceKpis, { dataset }))
+        renderToStaticMarkup(createElement(MockFinanceKpis, { dataset: screenDataset }))
         renderToStaticMarkup(
           createElement(MockVisitCard, { visit: dataset.visits[0], locale }),
         )
@@ -77,9 +77,9 @@ describe("mock components", () => {
   })
 
   it("keeps the localized example-data caption inside the mock frame", () => {
-    const dataset = buildMockDataset("independent_colorist", "en", "US", REFERENCE)
+    const dataset = buildAppScreenDataset("independent_colorist", "en", "US", REFERENCE)
     const html = renderToStaticMarkup(createElement(MockFinanceKpis, { dataset }))
     expect(html).toMatch(/<figcaption[^>]*>Example data<\/figcaption>/)
-    expect(html).toContain(dataset.labels["chart_labels.revenue"])
+    expect(html).toContain(dataset.base.labels["chart_labels.revenue"])
   })
 })

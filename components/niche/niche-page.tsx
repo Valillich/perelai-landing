@@ -30,14 +30,13 @@ function NicheMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page"
   // rather than the two-week strip the shared niche dataset carries.
   const screenDataset = buildAppScreenDataset(page.templateId, locale, market)
 
-  // Stacked, not two-up: seven day columns and three KPI tiles both need the
-  // full suite width. Half of a narrow suite squeezed day cells to ~20px and
-  // truncated the KPI labels.
+  // Calendar slightly wider than inbox: seven day columns need the room;
+  // inbox cards read fine in a narrower column. Below `lg` everything stacks.
   return (
-    <div className="grid grid-cols-1 gap-4">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.15fr_0.85fr]">
       <MockCalendarMonth dataset={screenDataset} />
       <MockInboxTriage dataset={dataset} />
-      <MockFinanceKpis dataset={dataset} />
+      <MockFinanceKpis dataset={screenDataset} className="lg:col-span-2" />
     </div>
   )
 }
@@ -78,7 +77,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
             </ol>
           </nav>
 
-          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6">
             <div>
               <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
               <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]">
@@ -178,20 +177,6 @@ export function NichePage({ locale, page, content }: NichePageProps) {
                 ))}
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-4 py-20 sm:px-6 sm:py-28">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
-            {content.labels.mocksTitle}
-          </h2>
-          <p className="mt-4 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
-            {content.labels.mocksBody}
-          </p>
-          <div className="mt-10">
-            <NicheMockSuite locale={locale} page={page} />
           </div>
         </div>
       </section>

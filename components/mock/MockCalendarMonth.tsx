@@ -22,7 +22,7 @@ export function MockCalendarMonth({ dataset, className }: MockCalendarMonthProps
     >
       {/* Capped and centred: the suite gives this a full row, which on the wide
           mocks section would otherwise stretch day cells to ~150px each. */}
-      <div className="mx-auto w-full max-w-[560px]">
+      <div className="mx-auto w-full max-w-[360px]">
         <div className="mb-1 flex items-center justify-between gap-2">
           <h3 className="mock-calendar-title">
             <span className="mock-calendar-month capitalize">{dataset.monthLabel}</span>

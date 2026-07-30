@@ -97,6 +97,10 @@ export function buildAppScreenDataset(
   const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate()
   const rows = Math.ceil((leading + daysInMonth) / 7)
 
+  // The selected day's cell must add up to the visits rendered beneath it —
+  // a reader who checks will otherwise see three visits under an empty day.
+  const selectedDayTotal = base.visits.reduce((sum, visit) => sum + visit.amount, 0)
+
   const calendarCells: AppScreenCalendarCell[] = []
   for (let index = 0; index < rows * 7; index++) {
     const cellDate = new Date(Date.UTC(year, month, index - leading + 1))
@@ -124,15 +128,20 @@ export function buildAppScreenDataset(
     // Days ahead of "today" are booked but not yet earned — they carry the
     // unconfirmed-count pill instead of a total, exactly as the app renders them.
     const isFuture = day > todayDay
+    const isToday = day === todayDay
     const isBusy = isWeekend ? roll > 6 : roll > 2
 
     calendarCells.push({
       key,
       day,
       inCurrentMonth: true,
-      isToday: day === todayDay,
-      isSelected: day === todayDay,
-      total: isBusy && !isFuture ? seeded(`${templateId}:total:${key}`, 60, 340) : null,
+      isToday,
+      isSelected: isToday,
+      total: isToday
+        ? selectedDayTotal
+        : isBusy && !isFuture
+          ? seeded(`${templateId}:total:${key}`, 60, 340)
+          : null,
       attentionCount: isBusy && isFuture ? 1 + (roll % 3) : null,
       hasUnread: isFuture && roll === 9,
     })
@@ -143,13 +152,18 @@ export function buildAppScreenDataset(
     timeZone: "UTC",
   }).format(instant)
 
-  // Monday..Sunday short names, sourced from a known Monday.
+  // Monday..Sunday, sourced from a known Monday. Two letters, matching the
+  // app's `format(date, 'EEEEEE')` — Intl has no two-letter weekday width, and
+  // the three-letter "short" form does not fit a ~26px day column.
   const weekdayFormatter = new Intl.DateTimeFormat(locale, {
     weekday: "short",
     timeZone: "UTC",
   })
   const weekdayLabels = Array.from({ length: 7 }, (_, index) =>
-    weekdayFormatter.format(new Date(Date.UTC(2026, 5, 29 + index))),
+    weekdayFormatter
+      .format(new Date(Date.UTC(2026, 5, 29 + index)))
+      .replace(/\.$/, "")
+      .slice(0, 2),
   )
 
   const selectedDayLabel = new Intl.DateTimeFormat(locale, {

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/landing/reveal";
 import { MockFinanceKpis } from "@/components/mock/MockFinanceKpis";
-import { buildMockDataset } from "@/lib/mock-data";
+import { buildAppScreenDataset } from "@/lib/app-screen-mock";
 import { localePrimaryMarket } from "@/lib/market";
 import type { PublishedLocale } from "@/i18n/locales";
 
@@ -11,11 +11,10 @@ interface MoneyProps {
 
 export function Money({ locale }: MoneyProps) {
   const t = useTranslations("home");
-  const dataset = buildMockDataset(
+  const dataset = buildAppScreenDataset(
     "independent_colorist",
     locale,
-    localePrimaryMarket(locale),
-    "2026-07-15T12:00:00.000Z"
+    localePrimaryMarket(locale)
   );
 
   return (
