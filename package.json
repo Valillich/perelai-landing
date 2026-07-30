@@ -19,6 +19,7 @@
     "lucide-react": "^0.454.0",
     "next": "16.2.0",
     "next-intl": "^4.13.4",
+    "posthog-js": "^1.409.0",
     "react": "^19",
     "react-dom": "^19"
   },

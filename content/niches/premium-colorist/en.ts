@@ -74,7 +74,7 @@ export const content: NichePageContent = {
   cta: {
     title: "Keep the color work moving, without rebuilding the day later.",
     body: "Create a workspace that starts with your color services and keeps visits, money and follow-ups in one place.",
-    label: "Create your free workspace",
+    label: "Create your workspace",
     microcopy: "No card. You’ll get a verification email to finish setting up.",
   },
   research: independentColoristResearch,

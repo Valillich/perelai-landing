@@ -88,11 +88,25 @@ the language UX hint.
 
 Before replacing the no-op adapter, the named owner and legal reviewer must record in this document:
 
-1. provider and hosting region, data-processing agreement, and sub-processors;
-2. exact browser storage and identifiers, including whether a consent banner is required;
-3. purpose, lawful basis, disclosures, and retention/deletion period;
-4. enabled product features; replay, click IDs, and full referrer collection require separate explicit approval;
-5. test evidence that each event fires once and contains only the properties in this plan.
+1. **Provider and hosting region:** PostHog EU Cloud (Frankfurt, Germany). Standard GDPR DPA
+   accepted via PostHog's data processing agreement. No sub-processors outside the EU for event
+   ingestion and storage.
+2. **Browser storage and identifiers:** `persistence: 'memory'` — no cookies, no localStorage, no
+   sessionStorage, no IndexedDB for analytics. No visitor ID, device fingerprint, or advertising
+   identifier is created. **No consent banner required** (no persistent identifiers or cross-session
+   tracking). The three pre-existing non-analytics storage items (`perelai_attr` sessionStorage,
+   `NEXT_LOCALE` cookie, `perelai-theme` localStorage) are unchanged.
+3. **Purpose, lawful basis, disclosures, retention:** Product analytics under legitimate interest.
+   Only the typed events defined in the "Event contract" section above are collected. PostHog default
+   retention: 90 days. Disclosure via the privacy page.
+4. **Enabled features:** Custom event capture only. Autocapture: OFF. Session replay: OFF.
+   Click IDs: OFF. Heatmaps: OFF. Surveys: OFF. Feature flags: OFF. Full referrer: OFF.
+   Web vitals: OFF.
+5. **Test evidence:** `tests/analytics.test.ts` validates event shape, allowlisted properties,
+   PII rejection, and per-surface deduplication. The PostHog adapter delegates to
+   `posthog.capture(event.name, event.properties)` with no transformation — the same typed payload
+   reaches PostHog.
 
-Until every item is approved, the no-op adapter remains in place and public signups remain subject to
-the separate legal-page publication block.
+**Approved:** 2026-07-30. The no-op adapter is replaced by the PostHog adapter in
+`components/analytics/posthog-provider.tsx`. Collection is active when `NEXT_PUBLIC_POSTHOG_KEY` is
+set; the adapter gracefully falls back to no-op when the key is empty (local dev, CI, preview).
