@@ -6,6 +6,7 @@ import { MockFinanceKpis } from "@/components/mock/MockFinanceKpis"
 import { MockInboxTriage } from "@/components/mock/MockInboxTriage"
 import { MockVisitCard } from "@/components/mock/MockVisitCard"
 import { APP_LOCALES } from "@/i18n/locales"
+import { buildAppScreenDataset } from "@/lib/app-screen-mock"
 import {
   buildMockDataset,
   buildTrustSentence,
@@ -53,10 +54,16 @@ describe("mock components", () => {
   it("renders all four mocks in every app locale without throwing", () => {
     for (const locale of APP_LOCALES) {
       const dataset = buildMockDataset("independent_colorist", locale, "US", REFERENCE)
+      const screenDataset = buildAppScreenDataset(
+        "independent_colorist",
+        locale,
+        "US",
+        REFERENCE,
+      )
 
       expect(() => {
         renderToStaticMarkup(createElement(MockInboxTriage, { dataset }))
-        renderToStaticMarkup(createElement(MockCalendarMonth, { dataset }))
+        renderToStaticMarkup(createElement(MockCalendarMonth, { dataset: screenDataset }))
         renderToStaticMarkup(createElement(MockFinanceKpis, { dataset }))
         renderToStaticMarkup(
           createElement(MockVisitCard, { visit: dataset.visits[0], locale }),

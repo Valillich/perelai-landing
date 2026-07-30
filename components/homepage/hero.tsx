@@ -3,13 +3,17 @@ import { useTranslations } from "next-intl"
 import { CtaButton } from "@/components/cta-button"
 import { HeroShowcase } from "@/components/homepage/hero-showcase"
 import { Reveal } from "@/components/landing/reveal"
-import { buildHeroDataset } from "@/lib/hero-mock"
+import { buildAppScreenDataset } from "@/lib/app-screen-mock"
 import { localePrimaryMarket } from "@/lib/market"
 import type { PublishedLocale } from "@/i18n/locales"
 
 export function Hero({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("home")
-  const dataset = buildHeroDataset(locale, localePrimaryMarket(locale))
+  const dataset = buildAppScreenDataset(
+    "independent_colorist",
+    locale,
+    localePrimaryMarket(locale),
+  )
 
   return (
     <section className="overflow-hidden pb-20 pt-16 sm:pb-28 sm:pt-24">

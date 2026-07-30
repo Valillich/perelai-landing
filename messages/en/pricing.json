@@ -7,6 +7,11 @@
     "title": "What you get today",
     "body": "Perelai provides booking, client, and cash flow management. Here is what is available in the workspace."
   },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai is currently in beta",
+    "body": "Core workflows are ready, while selected integrations and details are still being refined."
+  },
   "capabilities": {
     "title": "Current capabilities",
     "inbox": "Operational Inbox — one list of what still needs your decision, kept until resolved",

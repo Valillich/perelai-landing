@@ -1,10 +1,11 @@
 import { ChevronLeft, ChevronRight, Clock } from "lucide-react"
+import { MockCalendarGrid } from "@/components/mock/MockCalendarGrid"
 import { RegionCurrency } from "@/components/mock/region-currency"
 import { cn } from "@/lib/cn"
-import { formatDayTotal, type HeroDataset } from "@/lib/hero-mock"
+import type { AppScreenDataset } from "@/lib/app-screen-mock"
 
 interface MockCalendarScreenProps {
-  dataset: HeroDataset
+  dataset: AppScreenDataset
   /** Status pill copy — the app renders localized transaction statuses here. */
   paidLabel: string
   pendingLabel: string
@@ -12,10 +13,10 @@ interface MockCalendarScreenProps {
 }
 
 /**
- * Replica of the in-app Calendar screen: month header, glass-framed month grid
- * with day totals, and the selected day's activity list. Presentational only —
- * every surface class is the landing port of the app's v2 design system, so it
- * follows the `.dark` class the theme toggle sets.
+ * Replica of the in-app Calendar screen: month header, the shared month grid,
+ * and the selected day's activity list. Presentational only — every surface
+ * class is the landing port of the app's v2 design system, so it follows the
+ * `.dark` class the theme toggle sets.
  */
 export function MockCalendarScreen({
   dataset,
@@ -45,66 +46,7 @@ export function MockCalendarScreen({
         </div>
       </div>
 
-      {/* Month grid on the frosted glass board */}
-      <div className="mock-glass-shell px-1 py-3">
-        <div className="mock-glass-frame">
-          <div className="mock-card-elevated">
-            <div className="grid grid-cols-7 gap-1 pb-1">
-              {dataset.weekdayLabels.map((label, index) => (
-                <div
-                  key={`${label}-${index}`}
-                  className={cn(
-                    "truncate py-1 text-center text-[11px] font-medium",
-                    index >= 5 ? "text-muted-foreground/50" : "text-muted-foreground",
-                  )}
-                >
-                  {label}
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-7 gap-1">
-              {dataset.calendarCells.map((cell) => (
-                <div
-                  key={cell.key}
-                  className={cn(
-                    "relative flex h-[44px] flex-col items-center justify-center overflow-hidden rounded-xl",
-                    cell.isSelected &&
-                      "border border-[rgba(16,24,40,0.06)] bg-[rgba(var(--brand-600-rgb),0.08)] dark:border-white/10",
-                  )}
-                >
-                  <span
-                    className={cn(
-                      "mock-money text-[13px] leading-none",
-                      cell.inCurrentMonth ? "text-foreground" : "text-muted-foreground/60",
-                      cell.isToday ? "font-bold text-rose-500" : "font-normal",
-                    )}
-                  >
-                    {cell.day}
-                  </span>
-
-                  <span className="mt-1 flex h-[15px] w-full items-center justify-center">
-                    {cell.total != null ? (
-                      <span className="mock-money text-[10.5px] font-semibold leading-none text-success">
-                        {formatDayTotal(cell.total)}
-                      </span>
-                    ) : cell.attentionCount != null ? (
-                      <span className="relative flex items-center justify-center">
-                        <span className="mock-money flex h-[17px] min-w-[17px] items-center justify-center rounded-full bg-[rgba(var(--brand-600-rgb),0.12)] px-1 text-[10px] font-bold leading-none text-brand-600">
-                          {cell.attentionCount}
-                        </span>
-                        {cell.hasUnread ? (
-                          <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full border-[1.5px] border-card bg-amber-500" />
-                        ) : null}
-                      </span>
-                    ) : null}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <MockCalendarGrid dataset={dataset} />
 
       {/* Selected day activity list */}
       <div className="mt-4 flex items-center justify-between gap-2 px-0.5">

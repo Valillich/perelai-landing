@@ -1,21 +1,18 @@
-import { RegionCurrency } from "@/components/mock/region-currency"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { MockCalendarGrid } from "@/components/mock/MockCalendarGrid"
 import { cn } from "@/lib/cn"
-import type { MockDataset } from "@/lib/mock-data"
+import type { AppScreenDataset } from "@/lib/app-screen-mock"
 
 interface MockCalendarMonthProps {
-  dataset: MockDataset
+  dataset: AppScreenDataset
   className?: string
 }
 
-/** Mode-aware calendar month strip (F2) — two week rows, day totals. */
+/**
+ * Niche-page calendar mock (F2): the real Calendar screen's month header and
+ * grid, without the selected-day activity list the hero showcase carries.
+ */
 export function MockCalendarMonth({ dataset, className }: MockCalendarMonthProps) {
-  const weekdayLabels = Array.from({ length: 7 }, (_, index) => {
-    const date = new Date(Date.UTC(2026, 6, 5 + index))
-    return new Intl.DateTimeFormat(dataset.locale, { weekday: "narrow", timeZone: "UTC" }).format(
-      date,
-    )
-  })
-
   return (
     <figure
       className={cn(
@@ -23,53 +20,31 @@ export function MockCalendarMonth({ dataset, className }: MockCalendarMonthProps
         className,
       )}
     >
-      <div className="mb-3 flex items-center justify-between gap-2">
-        <p className="text-[14px] font-semibold text-foreground">{dataset.calendarMonthLabel}</p>
-        <p className="text-[12px] text-muted-foreground">{dataset.labels["month"]}</p>
+      {/* Capped and centred: the suite gives this a full row, which on the wide
+          mocks section would otherwise stretch day cells to ~150px each. */}
+      <div className="mx-auto w-full max-w-[560px]">
+        <div className="mb-1 flex items-center justify-between gap-2">
+          <h3 className="mock-calendar-title">
+            <span className="mock-calendar-month capitalize">{dataset.monthLabel}</span>
+            <span className="mock-calendar-year">{dataset.yearLabel}</span>
+          </h3>
+          <div className="flex gap-2">
+            {[ChevronLeft, ChevronRight].map((Icon, index) => (
+              <span
+                key={index}
+                className="flex h-8 w-8 items-center justify-center rounded-xl border border-border bg-card text-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)]"
+              >
+                <Icon className="h-4 w-4" />
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <MockCalendarGrid dataset={dataset} />
       </div>
 
-      <div aria-hidden="true">
-        <div className="grid grid-cols-7 gap-1 text-center text-[11px] text-muted-foreground">
-          {weekdayLabels.map((label, index) => (
-            <span key={`${label}-${index}`}>{label}</span>
-          ))}
-        </div>
-        <div className="mt-1 grid grid-cols-7 gap-1">
-          {dataset.calendarDays.map((cell, index) => (
-            <div
-              key={`day-${index}`}
-              className={cn(
-                "flex min-h-[52px] flex-col items-center justify-center rounded-lg border border-border px-0.5 py-1",
-                cell.inMonth ? "bg-card-subtle" : "bg-transparent opacity-40",
-                cell.busy && "ring-1 ring-brand-600/30",
-              )}
-            >
-              {cell.inMonth ? (
-                <>
-                  <span className="text-[12px] font-medium text-foreground">{cell.day}</span>
-                  {cell.total != null ? (
-                    <RegionCurrency
-                      amount={cell.total}
-                      locale={dataset.locale}
-                      className="max-w-full truncate text-[10px] font-semibold text-success"
-                    />
-                  ) : (
-                    <span className="text-[10px] text-subtle-text">·</span>
-                  )}
-                </>
-              ) : null}
-            </div>
-          ))}
-        </div>
-        {dataset.calendarDays.some((cell) => cell.busy) ? (
-          <p className="mt-2 text-[11px] text-muted-foreground">
-            {dataset.labels["coworker.busy_block_title"]}
-          </p>
-        ) : null}
-      </div>
-
-      <figcaption className="mt-3 text-center text-[12px] font-medium text-subtle-text">
-        {dataset.exampleCaption}
+      <figcaption className="mt-4 text-center text-[12px] font-medium text-subtle-text">
+        {dataset.base.exampleCaption}
       </figcaption>
     </figure>
   )

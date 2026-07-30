@@ -3,15 +3,16 @@ import { ArrowRight } from "lucide-react"
 import { Reveal } from "@/components/landing/reveal"
 import { Link } from "@/i18n/navigation"
 import { getEnabledNichePages } from "@/config/niche-pages"
+import { labelledNichePages } from "@/lib/niche-labels"
 
 export function NicheRouter() {
   const t = useTranslations("home")
-  const nichePages = getEnabledNichePages()
+  const nichePages = labelledNichePages(getEnabledNichePages())
 
   if (nichePages.length === 0) return null
 
   return (
-    <section className="px-4 py-20 sm:px-6 sm:py-28">
+    <section id="niches" className="px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
           <h2 className="text-[32px] font-bold tracking-tight text-foreground sm:text-[42px]">
@@ -23,7 +24,7 @@ export function NicheRouter() {
         </Reveal>
 
         <div className="mx-auto grid max-w-3xl grid-cols-1 gap-4">
-          {nichePages.map((page) => (
+          {nichePages.map(({ page, keys }) => (
             <Reveal key={page.path}>
               <Link
                 href={page.path as "/for-independent-colorists"}
@@ -31,14 +32,10 @@ export function NicheRouter() {
               >
                 <div>
                   <h3 className="text-[18px] font-semibold text-foreground transition-colors group-hover:text-brand-600">
-                    {page.niche === "lash-artist"
-                      ? t("nicheRouter.lashArtistsLabel")
-                      : t("nicheRouter.coloristsLabel")}
+                    {t(keys.label)}
                   </h3>
                   <p className="mt-1 text-[14px] text-muted-foreground">
-                    {page.niche === "lash-artist"
-                      ? t("nicheRouter.lashArtistsDescription")
-                      : t("nicheRouter.coloristsDescription")}
+                    {t(keys.description)}
                   </p>
                 </div>
                 <ArrowRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand-600" />

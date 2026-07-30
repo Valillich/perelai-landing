@@ -3,17 +3,18 @@ import { buildMockDataset, type MockDataset } from "@/lib/mock-data"
 import { localePrimaryMarket, type SupportedMarket } from "@/lib/market"
 
 /**
- * Hero-only mock data. Kept out of lib/mock-data.ts because verify-niches
- * scans that file for MOCK_UI_KEYS — nothing here needs generated app strings.
+ * Mock data for the app-screen replicas (hero showcase, niche calendar).
+ * Kept out of lib/mock-data.ts because verify-niches scans that file for
+ * MOCK_UI_KEYS — nothing here needs generated app strings.
  *
  * Everything is derived from a fixed reference instant, never Date.now(), so
- * the statically generated hero HTML stays byte-identical between builds.
+ * the statically generated HTML stays byte-identical between builds.
  */
 
 /** Same instant the niche mocks pin to. */
-export const HERO_REFERENCE = "2026-07-15T12:00:00.000Z"
+export const APP_SCREEN_REFERENCE = "2026-07-15T12:00:00.000Z"
 
-export interface HeroCalendarCell {
+export interface AppScreenCalendarCell {
   /** ISO date key — also the React key. */
   key: string
   day: number
@@ -28,33 +29,33 @@ export interface HeroCalendarCell {
   hasUnread: boolean
 }
 
-export interface HeroTrendPoint {
+export interface AppScreenTrendPoint {
   label: string
   profit: number
 }
 
-export interface HeroFeedItem {
+export interface AppScreenFeedItem {
   title: string
   dateLabel: string
   amount: number
   direction: "income" | "expense"
 }
 
-export interface HeroDataset {
+export interface AppScreenDataset {
   locale: AppLocale
   market: SupportedMarket
   base: MockDataset
   /** Mon-first grid covering the visible month, 7 columns. */
-  calendarCells: HeroCalendarCell[]
+  calendarCells: AppScreenCalendarCell[]
   monthLabel: string
   yearLabel: string
   weekdayLabels: string[]
   selectedDayLabel: string
   selectedDayCount: number
-  trend: HeroTrendPoint[]
+  trend: AppScreenTrendPoint[]
   kpis: { revenue: number; cost: number; profit: number }
   /** Finance feed rows shown under the dashboard. */
-  feed: HeroFeedItem[]
+  feed: AppScreenFeedItem[]
 }
 
 function hashSeed(input: string): number {
@@ -75,17 +76,18 @@ function mondayFirstIndex(date: Date): number {
   return (date.getUTCDay() + 6) % 7
 }
 
-export function buildHeroDataset(
+export function buildAppScreenDataset(
+  templateId: string,
   locale: AppLocale,
   market: SupportedMarket = localePrimaryMarket(locale),
-  referenceInstant: string | Date = HERO_REFERENCE,
-): HeroDataset {
+  referenceInstant: string | Date = APP_SCREEN_REFERENCE,
+): AppScreenDataset {
   const instant = new Date(referenceInstant)
   if (Number.isNaN(instant.getTime())) {
     throw new Error(`Invalid referenceInstant: ${String(referenceInstant)}`)
   }
 
-  const base = buildMockDataset("independent_colorist", locale, market, instant)
+  const base = buildMockDataset(templateId, locale, market, instant)
 
   const year = instant.getUTCFullYear()
   const month = instant.getUTCMonth()
@@ -95,7 +97,7 @@ export function buildHeroDataset(
   const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate()
   const rows = Math.ceil((leading + daysInMonth) / 7)
 
-  const calendarCells: HeroCalendarCell[] = []
+  const calendarCells: AppScreenCalendarCell[] = []
   for (let index = 0; index < rows * 7; index++) {
     const cellDate = new Date(Date.UTC(year, month, index - leading + 1))
     const day = cellDate.getUTCDate()
@@ -116,7 +118,8 @@ export function buildHeroDataset(
       continue
     }
 
-    const roll = hashSeed(`hero:day:${key}`) % 10
+    // Salted with the template so two niche pages never show the same month.
+    const roll = hashSeed(`${templateId}:day:${key}`) % 10
     const isWeekend = mondayFirstIndex(cellDate) >= 5
     // Days ahead of "today" are booked but not yet earned — they carry the
     // unconfirmed-count pill instead of a total, exactly as the app renders them.
@@ -129,7 +132,7 @@ export function buildHeroDataset(
       inCurrentMonth: true,
       isToday: day === todayDay,
       isSelected: day === todayDay,
-      total: isBusy && !isFuture ? seeded(`hero:total:${key}`, 60, 340) : null,
+      total: isBusy && !isFuture ? seeded(`${templateId}:total:${key}`, 60, 340) : null,
       attentionCount: isBusy && isFuture ? 1 + (roll % 3) : null,
       hasUnread: isFuture && roll === 9,
     })
@@ -160,11 +163,11 @@ export function buildHeroDataset(
     day: "numeric",
     timeZone: "UTC",
   })
-  const trend: HeroTrendPoint[] = [1, 6, 11, 16, 21, 26, 31]
+  const trend: AppScreenTrendPoint[] = [1, 6, 11, 16, 21, 26, 31]
     .filter((day) => day <= daysInMonth)
     .map((day) => ({
       label: trendFormatter.format(new Date(Date.UTC(year, month, day))),
-      profit: seeded(`hero:trend:${month}:${day}`, 420, 900),
+      profit: seeded(`${templateId}:trend:${month}:${day}`, 420, 900),
     }))
 
   const revenue = calendarCells.reduce((sum, cell) => sum + (cell.total ?? 0), 0)
@@ -178,23 +181,26 @@ export function buildHeroDataset(
   const feedDateLabel = (day: number, time: string) =>
     `${feedDateFormatter.format(new Date(Date.UTC(year, month, day)))} · ${time}`
 
-  const feed: HeroFeedItem[] = [
+  // Modulo indexing: a handful of templates ship a single service.
+  const serviceAt = (index: number) => base.services[index % base.services.length].name
+
+  const feed: AppScreenFeedItem[] = [
     {
-      title: base.services[0].name,
+      title: serviceAt(0),
       dateLabel: feedDateLabel(todayDay, "14:30"),
-      amount: seeded(`hero:feed:0`, 90, 120),
+      amount: seeded(`${templateId}:feed:0`, 90, 120),
       direction: "income",
     },
     {
-      title: base.expenses[0]?.name ?? base.services[1].name,
+      title: base.expenses[0]?.name ?? serviceAt(1),
       dateLabel: feedDateLabel(todayDay, "11:05"),
-      amount: seeded(`hero:feed:1`, 30, 60),
+      amount: seeded(`${templateId}:feed:1`, 30, 60),
       direction: "expense",
     },
     {
-      title: base.services[1].name,
+      title: serviceAt(1),
       dateLabel: feedDateLabel(todayDay - 1, "17:45"),
-      amount: seeded(`hero:feed:2`, 70, 140),
+      amount: seeded(`${templateId}:feed:2`, 70, 140),
       direction: "income",
     },
   ]

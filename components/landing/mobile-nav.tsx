@@ -11,6 +11,12 @@ export interface MobileNavItem {
   current?: boolean
 }
 
+export interface MobileNavGroup {
+  /** Section heading — not a link, since the desktop equivalent is a dropdown. */
+  label: string
+  items: MobileNavItem[]
+}
+
 /**
  * The below-`md` disclosure for the header nav. `<details>` keeps it usable
  * with no JavaScript; the client boundary exists only so the panel can close
@@ -22,11 +28,14 @@ export function MobileNav({
   triggerLabel,
   navLabel,
   items,
+  group,
   children,
 }: {
   triggerLabel: string
   navLabel: string
   items: MobileNavItem[]
+  /** Rendered as an indented section — the below-`md` form of a header dropdown. */
+  group?: MobileNavGroup
   children?: ReactNode
 }) {
   const detailsRef = useRef<HTMLDetailsElement>(null)
@@ -38,7 +47,7 @@ export function MobileNav({
   return (
     <details
       ref={detailsRef}
-      className="group relative shrink-0 md:hidden"
+      className="group relative shrink-0 lg:hidden"
       onKeyDown={(event) => {
         if (event.key !== "Escape" || !detailsRef.current?.open) return
 
@@ -73,6 +82,30 @@ export function MobileNav({
               {item.label}
             </a>
           ))}
+
+          {group && group.items.length > 0 ? (
+            <div className="mt-1 border-t border-border pt-2">
+              <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wide text-subtle-text">
+                {group.label}
+              </p>
+              {group.items.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  aria-current={item.current ? "page" : undefined}
+                  onClick={close}
+                  className={cn(
+                    "block rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors",
+                    item.current
+                      ? "bg-brand-600/10 text-brand-600"
+                      : "text-muted-foreground hover:bg-card-subtle hover:text-foreground",
+                  )}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          ) : null}
         </nav>
 
         {children ? (

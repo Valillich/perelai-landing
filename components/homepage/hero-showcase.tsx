@@ -5,10 +5,10 @@ import { useCallback, useEffect, useState } from "react"
 import { MockCalendarScreen } from "@/components/mock/MockCalendarScreen"
 import { MockFinanceScreen } from "@/components/mock/MockFinanceScreen"
 import { cn } from "@/lib/cn"
-import type { HeroDataset } from "@/lib/hero-mock"
+import type { AppScreenDataset } from "@/lib/app-screen-mock"
 
 interface HeroShowcaseProps {
-  dataset: HeroDataset
+  dataset: AppScreenDataset
   labels: {
     ariaLabel: string
     calendarTab: string

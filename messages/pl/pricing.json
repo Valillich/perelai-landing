@@ -7,6 +7,11 @@
     "title": "Co otrzymujesz dzisiaj",
     "body": "Perelai zapewnia zarządzanie rezerwacjami, klientami i przepływami pieniężnymi. Oto co jest dostępne w przestrzeni pracy."
   },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai jest obecnie w wersji beta",
+    "body": "Kluczowe procesy są gotowe, ale niektóre integracje i szczegóły są nadal dopracowywane."
+  },
   "capabilities": {
     "title": "Aktualne możliwości",
     "inbox": "Operacyjna skrzynka — jedna lista spraw wymagających Twojej decyzji, czekająca aż je rozwiążesz",

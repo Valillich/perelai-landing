@@ -3,10 +3,13 @@ import { useTranslations } from "next-intl"
 import { CtaButton } from "@/components/cta-button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { MobileNav, type MobileNavItem } from "@/components/landing/mobile-nav"
+import { NicheMenu, type NicheMenuItem } from "@/components/landing/niche-menu"
+import { getEnabledNichePages } from "@/config/niche-pages"
 import { Link } from "@/i18n/navigation"
 import { localizePath } from "@/i18n/paths"
 import type { PublishedLocale } from "@/i18n/locales"
 import { cn } from "@/lib/cn"
+import { labelledNichePages } from "@/lib/niche-labels"
 import { ThemeToggle } from "../theme-toggle"
 
 const navLinkClass = "relative text-[14px] font-medium transition-colors"
@@ -27,6 +30,7 @@ export function LandingHeader({
   sectionAnchors?: boolean
 }) {
   const t = useTranslations("home.nav")
+  const tNiche = useTranslations("home")
 
   // Pages without those sections still need reachable nav, so their anchors
   // resolve against the homepage in the reader's own locale.
@@ -42,6 +46,16 @@ export function LandingHeader({
     { href: sectionHref("how"), label: t("how") },
     { href: localizePath(locale, "/pricing"), label: t("pricing"), current: isPricing },
   ]
+
+  const nicheItems: NicheMenuItem[] = labelledNichePages(getEnabledNichePages()).map(
+    ({ page, keys }) => ({
+      href: localizePath(locale, page.path),
+      label: tNiche(keys.label),
+      description: tNiche(keys.description),
+      current: canonicalPath === page.path,
+    }),
+  )
+  const nicheMenuLabel = tNiche("nicheRouter.title")
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -59,8 +73,12 @@ export function LandingHeader({
             <span className="text-[17px] font-semibold tracking-tight text-foreground">Perelai</span>
           </Link>
 
-          {/* Nav links */}
-          <nav aria-label={t("primaryLabel")} className="hidden items-center gap-8 md:flex">
+          {/* Nav links. The niche menu leads: self-identification is the first
+              decision a visitor makes, and it is what the niche pages sell. */}
+          <nav aria-label={t("primaryLabel")} className="hidden items-center gap-6 lg:flex">
+            {nicheItems.length > 0 ? (
+              <NicheMenu triggerLabel={nicheMenuLabel} items={nicheItems} />
+            ) : null}
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -75,9 +93,9 @@ export function LandingHeader({
 
           {/* Actions */}
           <div className="flex items-center gap-2">
-            {/* The header pill has no spare width below `md`, so these two move
+            {/* The header pill has no spare width below `lg`, so these two move
                 into the menu panel rather than being dropped. */}
-            <div className="hidden items-center gap-2 md:flex">
+            <div className="hidden items-center gap-2 lg:flex">
               <ThemeToggle />
               <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />
             </div>
@@ -102,6 +120,11 @@ export function LandingHeader({
               triggerLabel={t("menuLabel")}
               navLabel={t("primaryLabel")}
               items={navItems}
+              group={
+                nicheItems.length > 0
+                  ? { label: nicheMenuLabel, items: nicheItems }
+                  : undefined
+              }
             >
               <ThemeToggle />
               <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} variant="inline" />

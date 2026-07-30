@@ -11,10 +11,13 @@ import {
   PricingSectionViewTracker,
 } from "@/components/analytics/page-view-tracker"
 import { Check } from "lucide-react"
+import { ProductStageBadge } from "@/components/product-stage-badge"
+import { isProductStageEnabled } from "@/lib/product-stage"
 import type { PublishedLocale } from "@/i18n/locales"
 
 export function PricingPage({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("pricing")
+  const showProductStage = isProductStageEnabled()
 
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col">
@@ -26,6 +29,11 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
         <section className="px-4 pt-20 pb-16 sm:px-6 sm:pt-28 sm:pb-20">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
+              {showProductStage ? (
+                <div className="mb-5 flex justify-center">
+                  <ProductStageBadge label={t("beta.badge")} />
+                </div>
+              ) : null}
               <h1 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[46px]">
                 {t("hero.title")}
               </h1>
@@ -36,6 +44,26 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                 <RegionCurrencyHint locale={locale} />
               </div>
             </Reveal>
+
+            {/* Why there are no prices on a pricing page. The stage claim mirrors
+                the in-app beta notice; the billing sentence is the approved
+                `future.body` copy. commercial-policy.md keeps beta duration,
+                price locks and "free today" unapproved — none appear here. */}
+            {showProductStage ? (
+              <Reveal delay={0.1}>
+                <div className="mx-auto mt-10 max-w-xl rounded-2xl border border-violet-200 bg-violet-50 px-5 py-4 text-left dark:border-violet-400/20 dark:bg-violet-500/10">
+                  <p className="text-[15px] font-semibold text-violet-900 dark:text-violet-100">
+                    {t("beta.title")}
+                  </p>
+                  <p className="mt-1 text-[14px] leading-relaxed text-violet-800 dark:text-violet-200">
+                    {t("beta.body")}
+                  </p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-violet-800 dark:text-violet-200">
+                    {t("future.body")}
+                  </p>
+                </div>
+              </Reveal>
+            ) : null}
           </div>
         </section>
 

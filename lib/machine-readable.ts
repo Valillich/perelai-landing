@@ -79,6 +79,7 @@ export function buildPricingMarkdown(): string {
     "",
     "## Current status",
     bulletList([
+      `${pricingEn.beta.title}. ${pricingEn.beta.body}`,
       "Billing system: not live.",
       `${pricingEn.noCharge.commission}: ${pricingEn.noCharge.commissionDetail}`,
       `${pricingEn.noCharge.card}: ${pricingEn.noCharge.cardDetail}`,

@@ -11,6 +11,7 @@ import type { NichePageContent } from "@/content/niches/types"
 import type { NichePage } from "@/config/niche-pages"
 import type { PublishedLocale } from "@/i18n/locales"
 import { Link } from "@/i18n/navigation"
+import { buildAppScreenDataset } from "@/lib/app-screen-mock"
 import { buildMockDataset } from "@/lib/mock-data"
 import { localePrimaryMarket } from "@/lib/market"
 import { PageViewTracker } from "@/components/analytics/page-view-tracker"
@@ -23,20 +24,20 @@ interface NichePageProps {
 }
 
 function NicheMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page">) {
-  const dataset = buildMockDataset(
-    page.templateId,
-    locale,
-    localePrimaryMarket(locale),
-    "2026-07-15T12:00:00.000Z",
-  )
+  const market = localePrimaryMarket(locale)
+  const dataset = buildMockDataset(page.templateId, locale, market, "2026-07-15T12:00:00.000Z")
+  // The calendar mock renders the real app grid, which needs a full month
+  // rather than the two-week strip the shared niche dataset carries.
+  const screenDataset = buildAppScreenDataset(page.templateId, locale, market)
 
+  // Stacked, not two-up: seven day columns and three KPI tiles both need the
+  // full suite width. Half of a narrow suite squeezed day cells to ~20px and
+  // truncated the KPI labels.
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      <MockCalendarMonth dataset={dataset} />
+    <div className="grid grid-cols-1 gap-4">
+      <MockCalendarMonth dataset={screenDataset} />
       <MockInboxTriage dataset={dataset} />
-      <div className="sm:col-span-2">
-        <MockFinanceKpis dataset={dataset} />
-      </div>
+      <MockFinanceKpis dataset={dataset} />
     </div>
   )
 }

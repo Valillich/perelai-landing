@@ -1,10 +1,10 @@
 import { ArrowDownLeft, ArrowUpRight, Check, ChevronLeft, ChevronRight } from "lucide-react"
 import { RegionCurrency } from "@/components/mock/region-currency"
 import { cn } from "@/lib/cn"
-import { formatDayTotal, type HeroDataset } from "@/lib/hero-mock"
+import { formatDayTotal, type AppScreenDataset } from "@/lib/app-screen-mock"
 
 interface MockFinanceScreenProps {
-  dataset: HeroDataset
+  dataset: AppScreenDataset
   className?: string
 }
 
