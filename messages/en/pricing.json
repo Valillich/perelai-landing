@@ -35,7 +35,7 @@
     "title": "What happens when billing arrives",
     "body": "Pricing will be announced before any billing system ships."
   },
-  "regionHint": "Shown in USD. Your market: {country} ({currency}).",
+  "regionHint": "Your market: {country} ({currency}). Example figures elsewhere on the site use it.",
   "faq": {
     "title": "Questions about pricing and billing",
     "q1": "When does billing start?",

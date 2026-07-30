@@ -10,12 +10,14 @@ import { Not } from "./not"
 import { NicheRouter } from "./niche-router"
 import { Faq } from "./faq"
 import { FinalCta } from "./final-cta"
+import { PageViewTracker } from "@/components/analytics/page-view-tracker"
 import type { PublishedLocale } from "@/i18n/locales"
 
 export function Homepage({ locale }: { locale: PublishedLocale }) {
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col">
-      <LandingHeader locale={locale} />
+      <PageViewTracker landingPath="/" locale={locale} pageType="home" />
+      <LandingHeader locale={locale} sectionAnchors />
       <div className="flex-1">
         <Hero locale={locale} />
         <Problem />

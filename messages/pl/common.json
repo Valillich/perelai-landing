@@ -1,5 +1,5 @@
 {
-  "cta": { "signup": "Zacznij teraz", "login": "Zaloguj się" },
+  "cta": { "signup": "Utwórz przestrzeń pracy", "login": "Zaloguj się" },
   "languageLabel": "Język",
   "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
   "terms": { "visit": "Wizyta", "order": "Zamówienie", "package": "Karnety", "instalment": "Plany" }

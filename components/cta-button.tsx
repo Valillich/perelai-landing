@@ -2,7 +2,12 @@
 
 import type { ComponentPropsWithoutRef, ReactNode } from "react"
 import { useTranslations } from "next-intl"
-import { analytics } from "@/lib/analytics"
+import {
+  analytics,
+  buildLandingCtaClickedEvent,
+  buildSignupStartedEvent,
+  type CtaPosition,
+} from "@/lib/analytics"
 import { useAttribution } from "@/lib/attribution"
 import { buildAppLoginUrl, buildAppSignupUrl } from "@/lib/urls"
 
@@ -15,7 +20,8 @@ export interface CtaButtonProps
   niche?: string
   landingPath?: string
   locale?: string
-  location: string
+  /** A fixed page position, never visitor-provided text. */
+  location: CtaPosition
   children?: ReactNode
 }
 
@@ -47,17 +53,22 @@ export function CtaButton({
       {...anchorProps}
       href={href}
       onClick={(event) => {
-        analytics.track({
-          name: "landing_cta_clicked",
-          properties: {
-            location,
-            destination,
-            campaign: attribution.campaign,
-            ...(niche ? { niche } : {}),
-            ...(landingPath ? { landingPath } : {}),
-          },
-        })
         onClick?.(event)
+        if (event.defaultPrevented) return
+
+        analytics.track(
+          buildLandingCtaClickedEvent({
+            href,
+            ctaPosition: location,
+            ctaText: destination === "signup" ? "create_workspace" : "log_in",
+            destination,
+          }),
+        )
+
+        if (destination === "signup") {
+          const signupStarted = buildSignupStartedEvent(href)
+          if (signupStarted) analytics.track(signupStarted)
+        }
       }}
     >
       {children ?? t(`cta.${destination}`)}

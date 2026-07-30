@@ -2,9 +2,8 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { PricingPage } from "@/components/pricing/pricing-page"
-import { env } from "@/lib/env"
 import { isPublishedLocale, PUBLISHED_LOCALES } from "@/i18n/locales"
-import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
+import { buildLocalizedPageMetadata } from "@/lib/seo"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -19,14 +18,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isPublishedLocale(locale)) return {}
 
   const t = await getTranslations({ locale, namespace: "pricing.meta" })
-  const canonical = new URL(localizePath(locale, "/pricing"), env.NEXT_PUBLIC_LANDING_URL).toString()
-
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/pricing",
     title: t("title"),
     description: t("description"),
-    alternates: { canonical, languages: getLocalizedAlternates("/pricing", locale) },
-    openGraph: { title: t("title"), description: t("description") },
-  }
+  })
 }
 
 export default async function PricingPageRoute({ params }: PageProps) {

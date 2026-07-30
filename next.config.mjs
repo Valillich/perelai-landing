@@ -2,6 +2,7 @@ import createNextIntlPlugin from "next-intl/plugin"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: false,
   async redirects() {
     const aliases = ["for-hair-colorists", "for-colorists"]
     const prefixes = ["", "/uk", "/pl"]

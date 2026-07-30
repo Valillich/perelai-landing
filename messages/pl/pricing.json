@@ -35,7 +35,7 @@
     "title": "Co się stanie, gdy pojawi się system płatności",
     "body": "Ceny zostaną ogłoszone przed uruchomieniem systemu płatności."
   },
-  "regionHint": "Wyświetlono w USD. Twój rynek: {country} ({currency}).",
+  "regionHint": "Twój rynek: {country} ({currency}). Przykładowe kwoty w serwisie używają tej waluty.",
   "faq": {
     "title": "Pytania o cennik i płatności",
     "q1": "Kiedy zacznie się naliczanie opłat?",

@@ -2,7 +2,8 @@
 
 import { useEffect } from "react"
 import { useSearchParams } from "next/navigation"
-import { analytics } from "@/lib/analytics"
+import { useTranslations } from "next-intl"
+import { analytics, trackAnalyticsEventOnce } from "@/lib/analytics"
 import type { LegalPageName } from "@/content/legal"
 import { env } from "@/lib/env"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -20,17 +21,13 @@ export interface LegalReturnInput {
   landingPath?: string | null
 }
 
+/** Localized button copy, resolved by the caller that sits inside the provider. */
+export type LegalReturnLabels = Record<LegalReturnFrom, string>
+
 interface LegalReturnDestination {
   from: LegalReturnFrom
   destination: LegalReturnFrom
   href: string
-  label: string
-}
-
-const RETURN_LABELS: Record<LegalReturnFrom, string> = {
-  login: "Back to log in",
-  register: "Back to sign up",
-  forgot: "Back to password reset",
 }
 
 function validFrom(value: unknown): LegalReturnFrom | undefined {
@@ -59,15 +56,18 @@ export function buildLegalReturnDestination(
         ? buildAppLoginUrl()
         : new URL("/forgot-password", env.NEXT_PUBLIC_APP_URL).toString()
 
-  return { from, destination: from, href, label: RETURN_LABELS[from] }
+  return { from, destination: from, href }
 }
 
 /** Renders a safe return link from already-parsed legal query fields. */
-export function ReturnToApp(input: LegalReturnInput) {
+export function ReturnToApp({
+  labels,
+  ...input
+}: LegalReturnInput & { labels: LegalReturnLabels }) {
   const destination = buildLegalReturnDestination(input)
 
   useEffect(() => {
-    analytics.track({
+    trackAnalyticsEventOnce(`legal_viewed:${input.page}:${input.locale}:${destination?.from ?? ""}`, {
       name: "legal_viewed",
       properties: {
         page: input.page,
@@ -91,7 +91,7 @@ export function ReturnToApp(input: LegalReturnInput) {
       className="inline-flex items-center gap-2 text-[15px] font-semibold text-brand-600 transition-colors hover:text-brand-700"
     >
       <span aria-hidden="true">←</span>
-      {destination.label}
+      {labels[destination.from]}
     </a>
   )
 }
@@ -102,11 +102,13 @@ export function LegalReturnToApp({
   locale,
 }: Pick<LegalReturnInput, "page" | "locale">) {
   const searchParams = useSearchParams()
+  const t = useTranslations("legal.returnTo")
 
   return (
     <ReturnToApp
       page={page}
       locale={locale}
+      labels={{ login: t("login"), register: t("register"), forgot: t("forgot") }}
       from={searchParams.get("from")}
       niche={searchParams.get("niche")}
       source={searchParams.get("utm_source")}

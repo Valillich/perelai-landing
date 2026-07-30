@@ -1,5 +1,5 @@
 {
-  "cta": { "signup": "Почати зараз", "login": "Увійти" },
+  "cta": { "signup": "Створити робочий простір", "login": "Увійти" },
   "languageLabel": "Мова",
   "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
   "terms": { "visit": "Візит", "order": "Замовлення", "package": "Пакети", "instalment": "Плани" }

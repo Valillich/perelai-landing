@@ -1,8 +1,16 @@
+import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
+import { JsonLd } from "@/components/seo/json-ld"
 import { isPublishedLocale, PUBLISHED_LOCALES } from "@/i18n/locales"
+import { env } from "@/lib/env"
+import {
+  getOrganizationJsonLd,
+  getWebSiteJsonLd,
+  toJsonLdDocument,
+} from "@/lib/structured-data"
 import "../globals.css"
 
 const themeInlineScript = `(function() {
@@ -19,6 +27,10 @@ export function generateStaticParams() {
 
 export const dynamicParams = false
 
+export const metadata: Metadata = {
+  metadataBase: new URL(env.NEXT_PUBLIC_LANDING_URL),
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -32,12 +44,18 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale)
 
+  const baseSchema = toJsonLdDocument([
+    getOrganizationJsonLd(),
+    getWebSiteJsonLd(locale),
+  ])
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInlineScript }} />
       </head>
       <body>
+        <JsonLd data={baseSchema} />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

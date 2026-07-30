@@ -3,8 +3,28 @@ import {
   detectMarket,
   formatCurrency,
   localePrimaryMarket,
+  MARKET_STORAGE_KEY,
+  resolveMarketOverride,
   SUPPORTED_MARKETS,
+  type MarketStorage,
 } from "../lib/region"
+
+function memoryStorage(initial: Record<string, string> = {}): MarketStorage & {
+  values: Record<string, string>
+} {
+  const values = { ...initial }
+
+  return {
+    values,
+    getItem: (key) => values[key] ?? null,
+    setItem: (key, value) => {
+      values[key] = value
+    },
+    removeItem: (key) => {
+      delete values[key]
+    },
+  }
+}
 
 describe("localePrimaryMarket", () => {
   test("maps locales to their primary markets", () => {
@@ -43,6 +63,47 @@ describe("detectMarket precedence", () => {
     expect(detectMarket("uk", { timezone: "Unknown/Timezone", language: "uk" })).toBe("UA")
     expect(detectMarket("pl", { timezone: "Unknown/Timezone", language: "pl" })).toBe("PL")
     expect(detectMarket("de", { timezone: "Unknown/Timezone", language: "de" })).toBe("DE")
+  })
+})
+
+describe("explicit market override", () => {
+  test("outranks every detection signal", () => {
+    expect(detectMarket("en", { timezone: "Europe/Warsaw", override: "UA" })).toBe("UA")
+    expect(detectMarket("pl", { timezone: "Europe/Warsaw", language: "pl-PL", override: "GB" })).toBe(
+      "GB",
+    )
+  })
+
+  test("ignores an unsupported or empty override and keeps detecting", () => {
+    expect(detectMarket("en", { timezone: "Europe/Warsaw", override: "ZZ" })).toBe("PL")
+    expect(detectMarket("en", { timezone: "Europe/Warsaw", override: null })).toBe("PL")
+  })
+
+  test("?market= pins a market and persists it for later pages", () => {
+    const storage = memoryStorage()
+
+    expect(resolveMarketOverride({ search: "?market=pl", storage })).toBe("PL")
+    expect(storage.values[MARKET_STORAGE_KEY]).toBe("PL")
+    expect(resolveMarketOverride({ search: "", storage })).toBe("PL")
+  })
+
+  test("?market=auto clears the stored pin", () => {
+    const storage = memoryStorage({ [MARKET_STORAGE_KEY]: "PL" })
+
+    expect(resolveMarketOverride({ search: "?market=auto", storage })).toBeUndefined()
+    expect(storage.values[MARKET_STORAGE_KEY]).toBeUndefined()
+  })
+
+  test("an unsupported ?market= value neither pins nor clears an existing choice", () => {
+    const storage = memoryStorage({ [MARKET_STORAGE_KEY]: "PL" })
+
+    expect(resolveMarketOverride({ search: "?market=atlantis", storage })).toBe("PL")
+    expect(storage.values[MARKET_STORAGE_KEY]).toBe("PL")
+  })
+
+  test("returns nothing when no override was requested or stored", () => {
+    expect(resolveMarketOverride({ search: "?utm_source=x", storage: memoryStorage() })).toBeUndefined()
+    expect(resolveMarketOverride()).toBeUndefined()
   })
 })
 

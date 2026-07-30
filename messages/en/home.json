@@ -8,7 +8,10 @@
     "how": "How it works",
     "pricing": "Pricing",
     "login": "Log in",
-    "start": "Create workspace"
+    "start": "Create workspace",
+    "start_short": "Create workspace",
+    "primaryLabel": "Primary",
+    "menuLabel": "Open menu"
   },
   "hero": {
     "title": "Your clients, bookings and cash flow",

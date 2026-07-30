@@ -30,6 +30,7 @@ export const RESERVED_SLUGS = [
   "sitemap.xml",
   "robots.txt",
   "llms.txt",
+  "pricing.md",
   "en",
   "uk",
   "pl",

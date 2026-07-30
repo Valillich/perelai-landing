@@ -53,7 +53,7 @@ describe("proxy", () => {
     expect(response.cookies.get("NEXT_LOCALE")?.maxAge).toBe(60 * 60 * 24 * 365)
   })
 
-  test.each(["en", "uk", "pl"])("does not redirect a path that already has the explicit %s locale prefix", (locale) => {
+  test.each(["uk", "pl"])("does not redirect a path that already has the explicit %s locale prefix", (locale) => {
     const response = proxy(
       new NextRequest(`https://perelai.com/${locale}/for-independent-colorists`, {
         headers: { "accept-language": "pl-PL,pl;q=0.9" },
@@ -63,6 +63,17 @@ describe("proxy", () => {
     expect(response.status).toBe(200)
     expect(response.headers.get("location")).toBeNull()
     expect(response.headers.get("x-middleware-override-headers")).toContain("x-next-intl-locale")
+  })
+
+  test.each([
+    ["/en", "https://perelai.com/"],
+    ["/en/for-independent-colorists", "https://perelai.com/for-independent-colorists"],
+    ["/en/pricing?utm_source=newsletter", "https://perelai.com/pricing?utm_source=newsletter"],
+  ])("permanently redirects the duplicate English prefix %s", (pathname, expected) => {
+    const response = proxy(new NextRequest(`https://perelai.com${pathname}`))
+
+    expect(response.status).toBe(308)
+    expect(response.headers.get("location")).toBe(expected)
   })
 
   test("passes an explicit unpublished locale through to the route, never to English", () => {

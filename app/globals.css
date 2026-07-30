@@ -99,4 +99,7 @@
 
 html {
   scroll-behavior: smooth;
+  /* The header is sticky (12px margin + ~58px pill), so an anchor target would
+     otherwise come to rest underneath it. */
+  scroll-padding-top: 6rem;
 }

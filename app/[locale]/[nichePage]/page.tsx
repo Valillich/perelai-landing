@@ -2,11 +2,17 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { setRequestLocale } from "next-intl/server"
 import { NichePage } from "@/components/niche/niche-page"
+import { JsonLd } from "@/components/seo/json-ld"
 import { getNicheContent } from "@/content/niches"
 import { getEnabledNichePageBySlug, getNicheStaticParams } from "@/config/niche-pages"
 import { isPublishedLocale } from "@/i18n/locales"
-import { env } from "@/lib/env"
-import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
+import { localizePath } from "@/i18n/paths"
+import { buildLocalizedPageMetadata, toAbsoluteLandingUrl } from "@/lib/seo"
+import {
+  getBreadcrumbListJsonLd,
+  getSoftwareApplicationJsonLd,
+  toJsonLdDocument,
+} from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string; nichePage: string }> }
 
@@ -24,14 +30,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!page) return {}
 
   const content = getNicheContent(page, locale)
-  const canonical = new URL(localizePath(locale, page.path), env.NEXT_PUBLIC_LANDING_URL).toString()
-
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: page.path,
     title: content.meta.title,
     description: content.meta.description,
-    alternates: { canonical, languages: getLocalizedAlternates(page.path, locale) },
-    openGraph: { title: content.meta.title, description: content.meta.description },
-  }
+  })
 }
 
 export default async function NicheLandingPage({ params }: PageProps) {
@@ -41,6 +45,34 @@ export default async function NicheLandingPage({ params }: PageProps) {
   const page = getEnabledNichePageBySlug(nichePage)
   if (!page) notFound()
 
+  const content = getNicheContent(page, locale)
+  const pageUrl = toAbsoluteLandingUrl(localizePath(locale, page.path))
+  const schema = toJsonLdDocument([
+    getSoftwareApplicationJsonLd({
+      locale,
+      url: pageUrl,
+      description: content.meta.description,
+      featureList: content.terminology.slice(0, 3).map(
+        (row) => `${row.perelaiWord}: ${row.why}`,
+      ),
+    }),
+    getBreadcrumbListJsonLd([
+      {
+        name: "Perelai",
+        url: toAbsoluteLandingUrl(localizePath(locale, "/")),
+      },
+      {
+        name: content.hero.eyebrow,
+        url: pageUrl,
+      },
+    ]),
+  ])
+
   setRequestLocale(locale)
-  return <NichePage locale={locale} page={page} content={getNicheContent(page, locale)} />
+  return (
+    <>
+      <NichePage locale={locale} page={page} content={content} />
+      <JsonLd data={schema} />
+    </>
+  )
 }

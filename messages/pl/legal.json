@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Projekt dokumentu prawnego Founding Beta",
+  "lastUpdated": "Ostatnia aktualizacja: {date}",
+  "draftTitle": "Projekt.",
+  "draftBody": "Ta strona jest finalizowana, gdy Perelai działa w Founding Beta. Bieżąca wersja obowiązuje od {date}; przed każdą istotną zmianą wyślemy wiadomość do zarejestrowanych użytkowników.",
+  "questions": "Pytania:",
+  "bindingNotice": "Wersją prawnie wiążącą jest wersja angielska. Ostateczny, datowany tekst zatwierdzony przez właściciela i prawnika musi zastąpić ten projekt deweloperski i stagingowy przed otwarciem publicznej rejestracji.",
+  "englishOnlyNotice": "Ten projekt jest dostępny wyłącznie po angielsku. Ostateczny tekst zostanie opublikowany we wszystkich obsługiwanych językach.",
+  "backHome": "Wróć do Perelai",
+  "returnTo": {
+    "login": "Wróć do logowania",
+    "register": "Wróć do rejestracji",
+    "forgot": "Wróć do resetowania hasła"
+  }
+}

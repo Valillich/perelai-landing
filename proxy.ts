@@ -24,12 +24,22 @@ function continueWithLocale(request: NextRequest, locale: PublishedLocale) {
  */
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+
   const pathLocale = explicitLocale(pathname)
 
   if (pathLocale) {
     if (!isPublishedLocale(pathLocale)) {
       // Let the static route reject an unpublished locale with a real 404.
       return NextResponse.next()
+    }
+
+    // `as-needed` prefixing puts English on the unprefixed path, so /en/* is a
+    // duplicate of a URL that already exists. Serving both would give every
+    // English page a second address whose canonical points somewhere else.
+    if (pathLocale === routing.defaultLocale) {
+      const url = request.nextUrl.clone()
+      url.pathname = pathname.slice(pathLocale.length + 1) || "/"
+      return NextResponse.redirect(url, 308)
     }
 
     return continueWithLocale(request, pathLocale)

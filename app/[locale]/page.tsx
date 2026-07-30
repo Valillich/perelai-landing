@@ -2,9 +2,14 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { Homepage } from "@/components/homepage/homepage"
-import { env } from "@/lib/env"
+import { JsonLd } from "@/components/seo/json-ld"
 import { isPublishedLocale } from "@/i18n/locales"
-import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
+import { localizePath } from "@/i18n/paths"
+import { buildLocalizedPageMetadata, toAbsoluteLandingUrl } from "@/lib/seo"
+import {
+  getSoftwareApplicationJsonLd,
+  toJsonLdDocument,
+} from "@/lib/structured-data"
 
 type PageProps = { params: Promise<{ locale: string }> }
 
@@ -13,13 +18,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isPublishedLocale(locale)) return {}
 
   const t = await getTranslations({ locale, namespace: "home.meta" })
-  const canonical = new URL(localizePath(locale, "/"), env.NEXT_PUBLIC_LANDING_URL).toString()
-
-  return {
+  return buildLocalizedPageMetadata({
+    locale,
+    pathname: "/",
     title: t("title"),
     description: t("description"),
-    alternates: { canonical, languages: getLocalizedAlternates("/", locale) },
-  }
+  })
 }
 
 export default async function HomePage({ params }: PageProps) {
@@ -27,5 +31,22 @@ export default async function HomePage({ params }: PageProps) {
   if (!isPublishedLocale(locale)) notFound()
 
   setRequestLocale(locale)
-  return <Homepage locale={locale} />
+
+  const t = await getTranslations({ locale, namespace: "home" })
+  const pageUrl = toAbsoluteLandingUrl(localizePath(locale, "/"))
+  const schema = toJsonLdDocument([
+    getSoftwareApplicationJsonLd({
+      locale,
+      url: pageUrl,
+      description: t("meta.description"),
+      featureList: [t("inbox.detail"), t("booking.detail"), t("money.detail")],
+    }),
+  ])
+
+  return (
+    <>
+      <Homepage locale={locale} />
+      <JsonLd data={schema} />
+    </>
+  )
 }

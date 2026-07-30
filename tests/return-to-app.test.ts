@@ -22,10 +22,16 @@ afterEach(() => {
   vi.unstubAllEnvs()
 })
 
+const labels = {
+  login: "Back to log in",
+  register: "Back to sign up",
+  forgot: "Back to password reset",
+}
+
 test("an external from value renders no return button and has no return destination", async () => {
   const { ReturnToApp, buildLegalReturnDestination } = await loadReturnToApp()
   const input = { from: "https://evil.example", page: "terms" as const, locale: "en" as const }
-  const html = renderToStaticMarkup(createElement(ReturnToApp, input))
+  const html = renderToStaticMarkup(createElement(ReturnToApp, { ...input, labels }))
 
   expect(buildLegalReturnDestination(input)).toBeUndefined()
   expect(html).not.toContain("href=")
@@ -40,7 +46,7 @@ test("a register return drops an unresolvable niche before rendering its URL", a
     page: "privacy" as const,
     locale: "uk" as const,
   }
-  const html = renderToStaticMarkup(createElement(ReturnToApp, input))
+  const html = renderToStaticMarkup(createElement(ReturnToApp, { ...input, labels }))
   const destination = buildLegalReturnDestination(input)
   const renderedHref = html.match(/href="([^"]+)"/)?.[1].replaceAll("&amp;", "&")
 

@@ -1,4 +1,5 @@
 import { CtaButton } from "@/components/cta-button"
+import { CtaCard } from "@/components/cta-card"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { LandingHeader } from "@/components/landing/landing-header"
 import {
@@ -9,8 +10,11 @@ import {
 import type { NichePageContent } from "@/content/niches/types"
 import type { NichePage } from "@/config/niche-pages"
 import type { PublishedLocale } from "@/i18n/locales"
+import { Link } from "@/i18n/navigation"
 import { buildMockDataset } from "@/lib/mock-data"
 import { localePrimaryMarket } from "@/lib/market"
+import { PageViewTracker } from "@/components/analytics/page-view-tracker"
+import { NicheFaq } from "./niche-faq"
 
 interface NichePageProps {
   locale: PublishedLocale
@@ -42,35 +46,59 @@ export function NichePage({ locale, page, content }: NichePageProps) {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <PageViewTracker
+        landingPath={canonicalPath}
+        locale={locale}
+        pageType="niche"
+        niche={page.niche}
+        templateId={page.templateId}
+        wave={page.wave}
+      />
       <LandingHeader
         locale={locale}
         canonicalPath={canonicalPath}
         niche={page.niche}
-        showNavigation={false}
+        sectionAnchors
       />
 
       <section className="px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div>
-            <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
-            <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]">
-              {content.hero.h1}
-            </h1>
-            <p className="mt-5 max-w-xl text-pretty text-[18px] leading-relaxed text-muted-foreground">
-              {content.hero.subhead}
-            </p>
-            <CtaButton
-              destination="signup"
-              niche={page.niche}
-              landingPath={canonicalPath}
-              locale={locale}
-              location="niche_hero"
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.28)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-            >
-              {content.cta.label}
-            </CtaButton>
+        <div className="mx-auto max-w-6xl">
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex flex-wrap items-center gap-2 text-[13px] text-muted-foreground">
+              <li>
+                <Link href="/" className="transition-colors hover:text-foreground">
+                  Perelai
+                </Link>
+              </li>
+              <li aria-hidden>/</li>
+              <li aria-current="page" className="font-medium text-foreground">
+                {content.hero.eyebrow}
+              </li>
+            </ol>
+          </nav>
+
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div>
+              <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
+              <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]">
+                {content.hero.h1}
+              </h1>
+              <p className="mt-5 max-w-xl text-pretty text-[18px] leading-relaxed text-muted-foreground">
+                {content.hero.subhead}
+              </p>
+              <CtaButton
+                destination="signup"
+                niche={page.niche}
+                landingPath={canonicalPath}
+                locale={locale}
+                location="niche_hero"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.28)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                {content.cta.label}
+              </CtaButton>
+            </div>
+            <ColoristMockSuite locale={locale} page={page} />
           </div>
-          <ColoristMockSuite locale={locale} page={page} />
         </div>
       </section>
 
@@ -207,40 +235,21 @@ export function NichePage({ locale, page, content }: NichePageProps) {
 
       <section className="bg-card-subtle px-4 py-20 sm:px-6 sm:py-28">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
-            {content.labels.faqTitle}
-          </h2>
-          <div className="mt-8 space-y-3">
-            {content.faq.map((item) => (
-              <details key={item.q} className="rounded-[16px] border border-border bg-card px-5 py-4">
-                <summary className="cursor-pointer list-none pr-8 text-[17px] font-semibold text-foreground marker:content-none">
-                  {item.q}
-                </summary>
-                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{item.a}</p>
-              </details>
-            ))}
-          </div>
+          <NicheFaq title={content.labels.faqTitle} items={content.faq} />
         </div>
       </section>
 
       <section className="px-4 py-20 sm:px-6 sm:py-28">
-        <div className="mx-auto max-w-5xl rounded-[24px] border border-border bg-card px-6 py-14 text-center shadow-[0_16px_48px_-26px_rgba(106,76,255,0.32)] sm:px-12 sm:py-20">
-          <h2 className="mx-auto max-w-3xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[46px]">
-            {content.cta.title}
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">{content.cta.body}</p>
-          <CtaButton
-            destination="signup"
-            niche={page.niche}
-            landingPath={canonicalPath}
-            locale={locale}
-            location="niche_final_cta"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-          >
-            {content.cta.label}
-          </CtaButton>
-          <p className="mt-5 text-[13px] text-subtle-text">{content.cta.microcopy}</p>
-        </div>
+        <CtaCard
+          locale={locale}
+          landingPath={canonicalPath}
+          niche={page.niche}
+          location="niche_final_cta"
+          title={content.cta.title}
+          body={content.cta.body}
+          buttonLabel={content.cta.label}
+          microcopy={content.cta.microcopy}
+        />
       </section>
 
       <LandingFooter locale={locale} canonicalPath={canonicalPath} />

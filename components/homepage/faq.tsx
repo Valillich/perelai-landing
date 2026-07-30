@@ -1,5 +1,8 @@
+"use client"
+
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/landing/reveal"
+import { analytics } from "@/lib/analytics"
 
 export function Faq() {
   const t = useTranslations("home.faq")
@@ -26,6 +29,13 @@ export function Faq() {
               key={index}
               className="group border border-border rounded-lg bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden"
               open={index === 0}
+              onToggle={(event) => {
+                if (!event.currentTarget.open) return
+                analytics.track({
+                  name: "faq_opened",
+                  properties: { question_id: `home_faq_${index + 1}`, page_type: "home" },
+                })
+              }}
             >
               <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-foreground hover:bg-secondary/50 transition-colors">
                 {faq.q}

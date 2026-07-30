@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react"
 import { Globe2 } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { analytics } from "@/lib/analytics"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
+import { cn } from "@/lib/cn"
 
 const ONE_YEAR_SECONDS = 60 * 60 * 24 * 365
 
@@ -15,12 +17,18 @@ function unprefixedPath(pathname: string): string {
     : pathname || "/"
 }
 
+/**
+ * `dropdown` is the header pill; `inline` is a flat row for places that are
+ * already inside an open disclosure, where a nested one would be awkward.
+ */
 export function LanguageSwitcher({
   locale,
   canonicalPath,
+  variant = "dropdown",
 }: {
   locale: PublishedLocale
   canonicalPath: string
+  variant?: "dropdown" | "inline"
 }) {
   const t = useTranslations("common")
   const [current, setCurrent] = useState({ pathname: canonicalPath, search: "" })
@@ -28,6 +36,45 @@ export function LanguageSwitcher({
   useEffect(() => {
     setCurrent({ pathname: unprefixedPath(window.location.pathname), search: window.location.search })
   }, [])
+
+  const hrefFor = (target: PublishedLocale) =>
+    `${localizePath(target, current.pathname)}${current.search}`
+
+  const selectLocale = (target: PublishedLocale) => {
+    document.cookie = `NEXT_LOCALE=${target}; Path=/; Max-Age=${ONE_YEAR_SECONDS}; SameSite=Lax`
+    if (target !== locale) {
+      analytics.track({
+        name: "language_switched",
+        properties: { from_locale: locale, to_locale: target },
+      })
+    }
+  }
+
+  if (variant === "inline") {
+    return (
+      <div className="flex items-center gap-1" role="group" aria-label={t("languageLabel")}>
+        {PUBLISHED_LOCALES.map((target) => (
+          <a
+            key={target}
+            href={hrefFor(target)}
+            hrefLang={target}
+            lang={target}
+            aria-current={target === locale ? "true" : undefined}
+            onClick={() => selectLocale(target)}
+            className={cn(
+              "rounded-lg px-2 py-1 text-[12px] font-bold tracking-wider transition-colors",
+              target === locale
+                ? "bg-brand-600/10 text-brand-600"
+                : "text-subtle-text hover:bg-card-subtle hover:text-foreground",
+            )}
+          >
+            {target.toUpperCase()}
+            <span className="sr-only"> {t(`languages.${target}`)}</span>
+          </a>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <details className="group relative">
@@ -42,12 +89,10 @@ export function LanguageSwitcher({
         {PUBLISHED_LOCALES.map((target) => (
           <a
             key={target}
-            href={`${localizePath(target, current.pathname)}${current.search}`}
+            href={hrefFor(target)}
             hrefLang={target}
             lang={target}
-            onClick={() => {
-              document.cookie = `NEXT_LOCALE=${target}; Path=/; Max-Age=${ONE_YEAR_SECONDS}; SameSite=Lax`
-            }}
+            onClick={() => selectLocale(target)}
             className="flex items-center justify-between rounded-xl px-3 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-card-subtle hover:text-foreground"
           >
             <span>{t(`languages.${target}`)}</span>

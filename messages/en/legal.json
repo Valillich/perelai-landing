@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Founding Beta legal draft",
+  "lastUpdated": "Last updated: {date}",
+  "draftTitle": "Draft.",
+  "draftBody": "This page is being finalised while Perelai is in Founding Beta. The current version is effective from {date}; we will email registered users before any material change.",
+  "questions": "Questions:",
+  "bindingNotice": "The English version is the legally binding one. Final, dated owner and legal-approved text must replace this development and staging draft before public signup traffic is enabled.",
+  "englishOnlyNotice": "This draft is available in English only. The final text will be published in every supported language.",
+  "backHome": "Back to Perelai",
+  "returnTo": {
+    "login": "Back to log in",
+    "register": "Back to sign up",
+    "forgot": "Back to password reset"
+  }
+}

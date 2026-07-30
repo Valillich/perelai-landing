@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import {
-  detectMarket,
+  detectBrowserMarket,
   formatCurrency,
   localePrimaryMarket,
   type SupportedMarket,
@@ -21,18 +21,13 @@ interface RegionCurrencyProps {
  * after mount so SSG HTML stays region-identical (LP5 / LP5b).
  */
 export function RegionCurrency({ amount, locale, className, format }: RegionCurrencyProps) {
-  const primary = localePrimaryMarket(locale)
-  const render = (market: SupportedMarket) => {
-    const formatted = formatCurrency(amount, market)
-    return format ? format(formatted, market) : formatted
-  }
-
-  const [text, setText] = useState(() => render(primary))
+  const [market, setMarket] = useState<SupportedMarket>(() => localePrimaryMarket(locale))
 
   useEffect(() => {
-    const detected = detectMarket(locale)
-    setText(render(detected))
-  }, [amount, locale])
+    setMarket(detectBrowserMarket(locale))
+  }, [locale])
 
-  return <span className={className}>{text}</span>
+  const formatted = formatCurrency(amount, market)
+
+  return <span className={className}>{format ? format(formatted, market) : formatted}</span>
 }

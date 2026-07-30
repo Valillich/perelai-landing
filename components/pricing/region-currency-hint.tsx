@@ -4,15 +4,15 @@ import { useTranslations } from "next-intl"
 import { useMarket } from "@/lib/region"
 
 /**
- * Shows "Shown in USD. Your market: PL (PLN)." when the detected market
- * uses a currency other than USD. Never invents a local price.
+ * Names the detected market and its currency. No price is published on this
+ * page, so the hint must not imply one exists in any currency.
  */
 export function RegionCurrencyHint({ locale }: { locale?: string }) {
   const t = useTranslations("pricing")
   const { info, isHydrated } = useMarket(locale)
 
-  // USD is the only published price currency. Show a hint only
-  // when the user's detected market uses something else.
+  // USD is the reference currency the example figures fall back to, so the
+  // hint only adds information for a visitor outside that market.
   if (!isHydrated || info.currency === "USD") return null
 
   return (

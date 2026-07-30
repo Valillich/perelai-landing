@@ -11,8 +11,21 @@ export interface LegalDraftContent {
   sections: LegalSection[]
 }
 
-export const LEGAL_DRAFT_EFFECTIVE_DATE = "July 30, 2026"
+/** ISO so the rendered date can follow the page locale rather than English. */
+export const LEGAL_DRAFT_EFFECTIVE_DATE = "2026-07-30"
 export const LEGAL_CONTACT_EMAIL = "legal@perelai.com"
+
+export function formatLegalDate(isoDate: string, locale: string): string {
+  const parsed = new Date(`${isoDate}T00:00:00Z`)
+  if (Number.isNaN(parsed.getTime())) return isoDate
+
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(parsed)
+}
 
 /**
  * English is intentionally served at every published locale path until legal
