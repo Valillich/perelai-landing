@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Founding Beta - Rechtlicher Entwurf",
+  "lastUpdated": "Zuletzt aktualisiert: {date}",
+  "draftTitle": "Entwurf.",
+  "draftBody": "Diese Seite wird fertiggestellt, während Perelai in der Founding Beta ist. Die aktuelle Version ist gültig ab {date}; wir werden registrierte Nutzer vor wesentlichen Änderungen per E-Mail informieren.",
+  "questions": "Fragen:",
+  "bindingNotice": "Die englische Version ist rechtlich bindend. Der endgültige, von den Inhabern und der Rechtsabteilung genehmigte Text muss diesen Entwurf ersetzen, bevor die öffentliche Registrierung aktiviert wird.",
+  "englishOnlyNotice": "Dieser Entwurf ist nur auf Englisch verfügbar. Der endgültige Text wird in allen unterstützten Sprachen veröffentlicht.",
+  "backHome": "Zurück zu Perelai",
+  "returnTo": {
+    "login": "Zurück zur Anmeldung",
+    "register": "Zurück zur Registrierung",
+    "forgot": "Zurück zum Zurücksetzen des Passworts"
+  }
+}

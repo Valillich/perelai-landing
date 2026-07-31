@@ -10,6 +10,12 @@ const OG_LOCALE_BY_LOCALE: Record<PublishedLocale, string> = {
   en: "en_US",
   uk: "uk_UA",
   pl: "pl_PL",
+  ru: "ru_RU",
+  es: "es_ES",
+  fr: "fr_FR",
+  de: "de_DE",
+  pt: "pt_PT",
+  tr: "tr_TR",
 }
 
 function assertMetadataLength(

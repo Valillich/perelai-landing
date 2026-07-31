@@ -21,7 +21,7 @@ const APP_REPO = path.resolve(ROOT, process.env.PERELAI_APP_REPO ?? "../beauty-f
 const OUT_CATALOG = path.join(ROOT, "data/niche-catalog.generated.json")
 const OUT_STRINGS = path.join(ROOT, "data/app-ui-strings.generated.json")
 
-const LOCALES = ["en", "uk", "pl", "ru", "es", "fr", "de"]
+const LOCALES = ["en", "uk", "pl", "ru", "es", "fr", "de", "pt", "tr"]
 const PROFILE_NS = {
   beauty: "beauty",
   aesthetic: "beauty",

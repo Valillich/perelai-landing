@@ -1,0 +1,23 @@
+{
+  "cta": {
+    "signup": "Crea uno spazio di lavoro",
+    "login": "Accedi"
+  },
+  "languageLabel": "Lingua",
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "de": "Deutsch",
+    "es": "Español",
+    "fr": "Français",
+    "ru": "Русский",
+    "it": "Italiano"
+  },
+  "terms": {
+    "visit": "Visita",
+    "order": "Ordine",
+    "package": "Pacchetti",
+    "instalment": "Piani"
+  }
+}

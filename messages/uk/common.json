@@ -1,6 +1,24 @@
 {
-  "cta": { "signup": "Створити робочий простір", "login": "Увійти" },
+  "cta": {
+    "signup": "Створити робочий простір",
+    "login": "Увійти"
+  },
   "languageLabel": "Мова",
-  "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
-  "terms": { "visit": "Візит", "order": "Замовлення", "package": "Пакети", "instalment": "Плани" }
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Візит",
+    "order": "Замовлення",
+    "package": "Пакети",
+    "instalment": "Плани"
+  }
 }

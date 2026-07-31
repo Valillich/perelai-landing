@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Bozza legale — Founding Beta",
+  "lastUpdated": "Ultimo aggiornamento: {date}",
+  "draftTitle": "Bozza.",
+  "draftBody": "Questa pagina è in fase di completamento durante la Founding Beta di Perelai. La versione attuale è valida dal {date}; informeremo gli utenti registrati via e-mail prima di qualsiasi modifica sostanziale.",
+  "questions": "Domande:",
+  "bindingNotice": "La versione in lingua inglese è l'unica legalmente vincolante. Il testo finale approvato dai proprietari e dall'ufficio legale sostituirà questa bozza prima dell'attivazione delle registrazioni pubbliche.",
+  "englishOnlyNotice": "Questa bozza è disponibile solo in inglese. Il testo finale sarà pubblicato in tutte le lingue supportate.",
+  "backHome": "Torna a Perelai",
+  "returnTo": {
+    "login": "Torna all'accesso",
+    "register": "Torna alla registrazione",
+    "forgot": "Torna al recupero password"
+  }
+}

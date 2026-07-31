@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Borrador legal de la Founding Beta",
+  "lastUpdated": "Última actualización: {date}",
+  "draftTitle": "Borrador.",
+  "draftBody": "Esta página se está finalizando mientras Perelai se encuentra en fase Founding Beta. La versión actual entra en vigor el {date}; enviaremos un correo a los usuarios registrados antes de cualquier cambio importante.",
+  "questions": "Preguntas:",
+  "bindingNotice": "La versión en inglés es la legalmente vinculante. El texto final, aprobado por los propietarios y el departamento legal, debe sustituir este borrador antes de habilitar el registro público.",
+  "englishOnlyNotice": "Este borrador solo está disponible en inglés. El texto final se publicará en todos los idiomas soportados.",
+  "backHome": "Volver a Perelai",
+  "returnTo": {
+    "login": "Volver a Iniciar sesión",
+    "register": "Volver a Registrarse",
+    "forgot": "Volver a Restablecer contraseña"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Fiyatlandırma — Perelai",
+    "description": "Perelai özellikleri ve çalışma alanı erişimi hakkında bilgiler."
+  },
+  "hero": {
+    "title": "Bugün elde ettikleriniz",
+    "body": "Perelai; randevu, müşteri ve nakit akışı yönetimi sunar. İşte çalışma alanınıza dahil olanlar."
+  },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai şu anda Beta aşamasındadır",
+    "body": "Temel iş akışları hazır, ancak bazı ayrıntılar ve entegrasyonlar geliştirilmeye devam ediyor."
+  },
+  "capabilities": {
+    "title": "Mevcut Özellikler",
+    "inbox": "Operasyonel Gelen Kutusu — bekleyen kararlarınız için siz çözene kadar duran bir liste",
+    "calendar": "Yaptığınız işin gerçek yapısını yansıtan bir takvim",
+    "booking": "Kamuya açık randevu bağlantısı — müşterileriniz doğrudan sayfanızdan hizmet ve saat seçer",
+    "clients": "Ziyaret geçmişi, notlar ve ödeme takibi içeren müşteri profilleri",
+    "payments": "Ziyaretlere ve siparişlere ödeme kaydetme ve eşleme",
+    "finance": "Tablolara ihtiyaç duymadan gelirler, giderler ve kalan bakiyeler",
+    "orders": "Anlaşmalı ödeme planları ve vade takibi içeren siparişler",
+    "packages": "Kullanıldıkça düşen ön ödemeli bakiye paketleri",
+    "onboarding": "32 iş şablonu ve özelleştirilebilir hizmet listeleriyle nişinize uyarlanmış kurulum",
+    "googleCalendar": "Google Takvim ile çift yönlü senkronizasyon",
+    "contactImport": "vCard ile telefonunuzdan kişi içe aktarma",
+    "languages": "İngilizce, Ukraynaca, Lehçe, Almanca, İspanyolca, Fransızca, Rusça, İtalyanca, Portekizce ve Türkçe dillerinde mevcut",
+    "mobile": "Mobil için tasarlandı, bilgisayarda rahat",
+    "themes": "Açık ve karanlık modlar"
+  },
+  "noCharge": {
+    "title": "Randevular ve Çalışma Alanı",
+    "commission": "Doğrudan randevu bağlantısı",
+    "commissionDetail": "Randevu bağlantınız size aittir. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır.",
+    "card": "Kayıt Ol",
+    "cardDetail": "Çalışma alanınızın kurulumunu tamamlamak için e-postanızı doğrulayın."
+  },
+  "future": {
+    "title": "Ücretlendirme başladığında ne olacak?",
+    "body": "Herhangi bir ödeme sistemi devreye girmeden önce fiyatlar duyurulacaktır."
+  },
+  "regionHint": "Pazarınız: {country} ({currency}). Bu sayfadaki örnek rakamlar bunu kullanır.",
+  "faq": {
+    "title": "Fiyatlandırma ve faturalandırma hakkında sorular",
+    "q1": "Ücret almaya ne zaman başlayacaksınız?",
+    "a1": "Şu an itibarıyla uygulamada aktif bir ödeme sistemi yoktur. Herhangi bir tahsilat yapılmadan önce fiyatlar ve koşullar önceden duyurulacaktır.",
+    "q2": "Fiyatlandırma koşulları duyurulduğunda ne olacak?",
+    "a2": "Fiyatlandırma koşulları, herhangi bir değişiklik yapılmadan önce incelemeniz için zamanında duyurulacaktır.",
+    "q3": "Müşteri randevuları nasıl çalışır?",
+    "a3": "Randevu bağlantınız size aittir. Müşteriler doğrudan sayfanızdan hizmet ve saat seçer."
+  },
+  "cta": {
+    "title": "Müşterileriniz, randevularınız ve nakit akışınız — tek bir yerde",
+    "body": "Bir öğleden sonra kurun.",
+    "button": "Çalışma alanı oluştur",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+  }
+}

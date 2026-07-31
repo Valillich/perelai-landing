@@ -1,6 +1,24 @@
 {
-  "cta": { "signup": "Create workspace", "login": "Log in" },
+  "cta": {
+    "signup": "Create workspace",
+    "login": "Log in"
+  },
   "languageLabel": "Language",
-  "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
-  "terms": { "visit": "Visit", "order": "Order", "package": "Packages", "instalment": "Plans" }
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Visit",
+    "order": "Order",
+    "package": "Packages",
+    "instalment": "Plans"
+  }
 }

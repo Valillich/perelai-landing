@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Preise — Perelai",
+    "description": "Informationen zu Perelai-Funktionen und Zugang zum Arbeitsbereich."
+  },
+  "hero": {
+    "title": "Was Sie heute erhalten",
+    "body": "Perelai bietet Buchungs-, Kunden- und Cashflow-Verwaltung. Hier ist, was im Arbeitsbereich verfügbar ist."
+  },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai befindet sich derzeit in der Beta",
+    "body": "Kernabläufe sind bereit, während ausgewählte Integrationen und Details noch verfeinert werden."
+  },
+  "capabilities": {
+    "title": "Aktuelle Funktionen",
+    "inbox": "Operativer Posteingang — eine Liste für offene Entscheidungen, die bleibt, bis sie erledigt sind",
+    "calendar": "Ein Kalender, der die Art von Arbeit zeigt, die Sie tatsächlich erledigen",
+    "booking": "Öffentlicher Buchungslink — Ihre Kunden wählen eine Leistung und eine Zeit direkt auf Ihrer Seite",
+    "clients": "Kundenprofile mit Terminverlauf, Notizen und Zahlungsbelegen",
+    "payments": "Zahlungserfassung und -zuordnung zu Terminen und Bestellungen",
+    "finance": "Einnahmen, Kosten und ausstehende Beträge ohne Tabellenkalkulation",
+    "orders": "Bestellungen mit vereinbarten Zahlungsplänen und Ratenverfolgung",
+    "packages": "Pakete mit im Voraus bezahlten Guthaben, die bei Nutzung abgebucht werden",
+    "onboarding": "Nischenspezifisches Onboarding mit 32 wählbaren Geschäftstypen und bearbeitbaren Leistungslisten",
+    "googleCalendar": "Zwei-Wege-Synchronisierung mit Google Kalender",
+    "contactImport": "Kontaktimport von Ihrem Telefon via vCard",
+    "languages": "Verfügbar auf Englisch, Ukrainisch, Polnisch und Deutsch",
+    "mobile": "Mobile-First, komfortabel auf dem Desktop",
+    "themes": "Helle und dunkle Designs"
+  },
+  "noCharge": {
+    "title": "Buchung & Arbeitsbereich",
+    "commission": "Direkter Buchungslink",
+    "commissionDetail": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt über Ihren Link.",
+    "card": "Registrierung",
+    "cardDetail": "Bestätigen Sie Ihre E-Mail, um die Einrichtung Ihres Arbeitsbereichs abzuschließen."
+  },
+  "future": {
+    "title": "Was passiert, wenn die Abrechnung kommt",
+    "body": "Die Preise werden bekannt gegeben, bevor ein Abrechnungssystem eingeführt wird."
+  },
+  "regionHint": "Ihr Markt: {country} ({currency}). Beispielzahlen auf der Seite verwenden diese.",
+  "faq": {
+    "title": "Fragen zu Preisen und Abrechnung",
+    "q1": "Wann beginnt die Abrechnung?",
+    "a1": "Es gibt heute kein Abrechnungssystem in der App. Preise und Bedingungen werden im Voraus bekannt gegeben, bevor eine Abrechnung erfolgt.",
+    "q2": "Was passiert, wenn die Abrechnungsbedingungen bekannt gegeben werden?",
+    "a2": "Preiskonditionen werden im Voraus mitgeteilt, sodass Sie Zeit haben, diese zu prüfen, bevor sich etwas ändert.",
+    "q3": "Wie funktioniert die Kundenbuchung?",
+    "a3": "Ihr Buchungslink gehört Ihnen. Kunden wählen eine Leistung und eine Zeit direkt auf Ihrer Seite."
+  },
+  "cta": {
+    "title": "Ihre Kunden, Buchungen und Einnahmen — an einem Ort",
+    "body": "An einem Abend eingerichtet.",
+    "button": "Arbeitsbereich erstellen",
+    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
+  }
+}

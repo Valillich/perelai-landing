@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Clienti, prenotazioni e flusso di cassa in un unico posto",
+    "description": "Software di prenotazione, gestione clienti e finanze per professionisti indipendenti. Un elenco chiaro delle decisioni in sospeso, un numero di cui fidarti, un unico link per la tua bio."
+  },
+  "nav": {
+    "features": "Funzionalità",
+    "how": "Come funziona",
+    "pricing": "Prezzi",
+    "login": "Accedi",
+    "start": "Crea spazio di lavoro",
+    "start_short": "Crea spazio",
+    "primaryLabel": "Navigazione principale",
+    "menuLabel": "Apri menu"
+  },
+  "hero": {
+    "title": "I tuoi clienti, le tue prenotazioni e il tuo flusso di cassa",
+    "accent": "— finalmente in un unico posto.",
+    "body": "Smettila di ricostruire la tua settimana tra messaggi Instagram, appunti e memoria. Un elenco di cose da fare, un numero di cui fidarti, un solo link per la tua bio.",
+    "signup": "Crea uno spazio di lavoro",
+    "how": "Vedi come funziona",
+    "micro": "Riceverai un'email di verifica per completare l'impostazione.",
+    "imageAlt": "Spazio di lavoro Perelai con In Arrivo Operativi, prossime visite e riepilogo finanziario — dati di esempio",
+    "imageCaption": "Dati di esempio",
+    "showcase": {
+      "ariaLabel": "Anteprima dell'app Perelai",
+      "calendarTab": "Calendario",
+      "financeTab": "Finanze",
+      "paid": "Pagato",
+      "pending": "Non pagato"
+    }
+  },
+  "problem": {
+    "title": "Conosci già questa giornata",
+    "pain1Title": "Prenotazioni nei messaggi privati",
+    "pain1Body": "I clienti scrivono alle 23:00. Fai uno screenshot, prometti di guardare l'agenda domani e te ne dimentichi al mattino.",
+    "pain2Title": "Note sparse ovunque",
+    "pain2Body": "Che formula di colore hai usato l'ultima volta? È in una nota, in una chat o sul retro di uno scontrino — da qualche parte.",
+    "pain3Title": "Soldi ricostruiti a fine mese",
+    "pain3Body": "«Quanto ho guadagnato davvero questa settimana?» Lo vai ricostruendo tra bonifici, contanti e clienti che hanno detto che pagheranno la prossima volta."
+  },
+  "inbox": {
+    "title": "In Arrivo che non scompare finché non te ne occupi",
+    "body": "Una notifica ti avvisa di un evento. In Arrivo Operativi lo conserva finché non lo risolvi. Prenotazioni non confermate, visite non pagate, clienti da ricontattare — un elenco per ciò che richiede ancora la tua decisione.",
+    "caption": "Dati di esempio",
+    "detail": "Un elenco di ciò che richiede la tua attenzione — rimane lì finché non lo risolvi, non solo finché lo leggi."
+  },
+  "booking": {
+    "title": "Un solo link per la tua bio",
+    "body": "Condividi un unico link. I clienti scelgono un servizio, uno specialista e un orario. Mettilo nella tua bio, invialo in chat, stampalo su un biglietto da visita — è tuo.",
+    "detail": "Il tuo link di prenotazione è solo tuo. I clienti prenotano direttamente dal tuo link."
+  },
+  "money": {
+    "title": "Conti che tornano",
+    "body": "Il lavoro svolto e il denaro incassato sono registrati separatamente — ecco perché il numero è reale. Una visita completata non è un incasso finché qualcuno non la paga davvero. Perelai non confonde le due cose.",
+    "caption": "Dati di esempio",
+    "detail": "Entrate, costi e saldi in sospeso — senza fogli di calcolo."
+  },
+  "setup": {
+    "eyebrow": "Come funziona",
+    "title": "Configuralo in un pomeriggio",
+    "body": "Nessuna migrazione complessa nel fine settimana. Scegli il tuo mestiere, importa i tuoi clienti e condividi il tuo link.",
+    "step1Title": "Scegli il tuo settore",
+    "step1Body": "32 modelli aziendali, ciascuno con un elenco di servizi modificabile. I modelli pertinenti includono anche opzioni e spese collegate.",
+    "step2Title": "Porta i tuoi clienti",
+    "step2Body": "Importa i contatti dal telefono tramite vCard. Collega il tuo Google Calendar e mantieni le due piattaforme sincronizzate.",
+    "step3Title": "Condividi il tuo link di prenotazione",
+    "step3Body": "Un link per la tua bio. I clienti prenotano direttamente dal tuo link."
+  },
+  "not": {
+    "title": "Cosa Perelai NON è",
+    "body": "Se cerchi una di queste cose, non facciamo al caso tuo — e preferiamo dirtelo con chiarezza.",
+    "item1Title": "Non è un software di contabilità",
+    "item1Body": "Perelai registra ciò che è prenotato, completato e pagato per darti visibilità sul tuo flusso di cassa. Non fa contabilità, dichiarazioni dei redditi né consulenza finanziaria.",
+    "item2Title": "Non è un marketplace",
+    "item2Body": "Il tuo link di prenotazione è tuo. I clienti prenotano direttamente con te, senza intermediari.",
+    "item3Title": "Non è un sistema per cartelle cliniche",
+    "item3Body": "Non offre cartelle cliniche, tracciamento di diagnosi né gestione di pazienti."
+  },
+  "nicheRouter": {
+    "title": "Trova il tuo mestiere",
+    "body": "Pagine pensate per come lavori davvero.",
+    "coloristsLabel": "Per coloristi indipendenti",
+    "coloristsDescription": "Prenotazioni, clienti e flusso di cassa per coloristi che lavorano secondo le proprie regole.",
+    "lashArtistsLabel": "Per lash artist indipendenti",
+    "lashArtistsDescription": "Visibilità su prenotazioni, clienti e incassi per le artiste delle ciglia che fissano i propri ritmi."
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": "Come prenotano i clienti con me?",
+    "a1": "Condividi il tuo link di prenotazione diretto. I clienti scelgono un servizio e un orario direttamente sulla tua pagina.",
+    "q2": "Cosa succede subito dopo la registrazione?",
+    "a2": "Confermi la tua email e poi completi una rapida configurazione: il tuo settore, i tuoi servizi, il tuo team (se ne hai uno) e le importazioni opzionali.",
+    "q3": "I miei servizi saranno già preimpostati?",
+    "a3": "Sì — ogni modello aziendale parte con un elenco di servizi modificabile. I modelli pertinenti includono anche opzioni e spese collegate.",
+    "q4": "Posso importare i miei clienti e il mio calendario?",
+    "a4": "Sì: puoi importare i contatti dal tuo telefono (vCard) e impostare la sincronizzazione bidirezionale con Google Calendar.",
+    "q5": "Posso gestire servizi diversi e opzioni aggiuntive?",
+    "a5": "Sì. Ogni modello include opzioni personalizzabili adatte ai tuoi servizi.",
+    "q6": "Si tratta di un software di contabilità?",
+    "a6": "No. Perelai registra ciò che è prenotato, svolto e pagato per mostrarti il flusso di cassa. Non gestisce la contabilità fiscale né la dichiarazione dei redditi."
+  },
+  "closing": {
+    "title": "I tuoi clienti, le tue prenotazioni e il tuo flusso di cassa — in un unico posto",
+    "body": "Configuralo in un pomeriggio.",
+    "cta": "Crea uno spazio di lavoro",
+    "micro": "Riceverai un'email di verifica per completare l'impostazione."
+  },
+  "footer": {
+    "description": "Software di prenotazione, gestione clienti e finanze per professionisti indipendenti.",
+    "product": "Prodotto",
+    "company": "Note legali",
+    "forColorists": "Per coloristi indipendenti",
+    "forLashArtists": "Per lash artist indipendenti",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio"
+  }
+}

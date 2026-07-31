@@ -77,10 +77,10 @@ export function NichePage({ locale, page, content }: NichePageProps) {
             </ol>
           </nav>
 
-          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-6">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-4">
             <div>
               <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
-              <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[58px]">
+              <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[48px]">
                 {content.hero.h1}
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-[18px] leading-relaxed text-muted-foreground">
@@ -107,22 +107,14 @@ export function NichePage({ locale, page, content }: NichePageProps) {
           <h2 className="max-w-2xl text-balance text-[32px] font-bold leading-tight tracking-tight text-foreground sm:text-[42px]">
             {content.pains[0]?.title}
           </h2>
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_0.8fr]">
-            {content.pains.map((pain, index) => (
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {content.pains.map((pain) => (
               <article
                 key={pain.title}
-                className={
-                  index === 0
-                    ? "rounded-[20px] border border-brand-600/20 bg-card p-6 shadow-[0_8px_24px_rgba(16,24,40,0.05)] md:row-span-2"
-                    : "rounded-[20px] border border-border bg-background p-6"
-                }
+                className="rounded-[20px] border border-border bg-background p-6"
               >
-                {index === 0 ? null : (
-                  <h3 className="text-[20px] font-semibold tracking-tight text-foreground">{pain.title}</h3>
-                )}
-                <p className={index === 0 ? "text-[20px] leading-relaxed text-foreground" : "mt-3 text-[16px] leading-relaxed text-muted-foreground"}>
-                  {pain.body}
-                </p>
+                <h3 className="text-[20px] font-semibold tracking-tight text-foreground">{pain.title}</h3>
+                <p className="mt-3 text-[16px] leading-relaxed text-muted-foreground">{pain.body}</p>
               </article>
             ))}
           </div>

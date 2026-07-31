@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Clientes, Reservas y Flujo de Caja",
+    "description": "Software de reservas, clientes y finanzas para profesionales independientes. Todo lo que necesitas para tu negocio en un solo lugar."
+  },
+  "nav": {
+    "features": "Funciones",
+    "how": "Cómo funciona",
+    "pricing": "Precios",
+    "login": "Iniciar sesión",
+    "start": "Crear espacio de trabajo",
+    "start_short": "Crear espacio",
+    "primaryLabel": "Navegación principal",
+    "menuLabel": "Abrir menú"
+  },
+  "hero": {
+    "title": "Tus clientes, reservas y flujo de caja",
+    "accent": "— por fin en un solo lugar.",
+    "body": "Deja de intentar reconstruir tu semana a base de DMs, notas y memoria. Una lista de lo que queda por hacer, un número en el que puedes confiar, un único enlace para tu bio.",
+    "signup": "Crear espacio de trabajo",
+    "how": "Ver cómo funciona",
+    "micro": "Recibirás un correo de verificación para terminar de configurarlo.",
+    "imageAlt": "Espacio de trabajo de Perelai con la Bandeja Operativa, próximas visitas y resumen financiero — datos de ejemplo",
+    "imageCaption": "Datos de ejemplo",
+    "showcase": {
+      "ariaLabel": "Vista previa de la app Perelai",
+      "calendarTab": "Calendario",
+      "financeTab": "Finanzas",
+      "paid": "Pagado",
+      "pending": "Sin pagar"
+    }
+  },
+  "problem": {
+    "title": "Ya conoces este día",
+    "pain1Title": "Reservas por DM",
+    "pain1Body": "Los clientes escriben a las 11 de la noche. Haces una captura, prometes mirar tu calendario mañana y se te olvida por la mañana.",
+    "pain2Title": "Notas en tres sitios distintos",
+    "pain2Body": "¿Qué fórmula de color usaste la última vez? Está en una nota, o en un mensaje, o en el reverso de un ticket — en algún lado.",
+    "pain3Title": "Dinero reconstruido a fin de mes",
+    "pain3Body": "\"¿Cuánto he ganado realmente esta semana?\" Lo vas deduciendo entre transferencias, efectivo y clientes que dijeron que pagarían la próxima vez."
+  },
+  "inbox": {
+    "title": "La Bandeja que no se va hasta que te ocupes de ello",
+    "body": "Una notificación te dice que algo pasó. La Bandeja Operativa lo guarda hasta que lo resuelves. Reservas sin confirmar, visitas sin pagar, clientes a los que hacer seguimiento — una lista para lo que todavía requiere tu decisión.",
+    "caption": "Datos de ejemplo",
+    "detail": "Una lista de lo que necesita tu atención — se queda ahí hasta que lo resuelvas, no solo hasta que lo leas."
+  },
+  "booking": {
+    "title": "Un enlace para tu bio",
+    "body": "Comparte un único enlace. Los clientes eligen un servicio, una persona y una hora. Ponlo en tu bio, envíalo por DM, imprímelo en una tarjeta — es tuyo.",
+    "detail": "Tu enlace de reserva es tuyo. Los clientes reservan directamente a través de tu enlace."
+  },
+  "money": {
+    "title": "Dinero que cuadra",
+    "body": "El trabajo completado y el dinero recibido se registran por separado — por eso el número es real. Una visita completada no es un ingreso hasta que alguien realmente la paga. Perelai no mezcla las dos cosas.",
+    "caption": "Datos de ejemplo",
+    "detail": "Ingresos, costes y saldos pendientes — sin hojas de cálculo."
+  },
+  "setup": {
+    "eyebrow": "Cómo funciona",
+    "title": "Configúralo en una tarde",
+    "body": "Sin migraciones de fin de semana. Elige tu oficio, importa tus clientes y comparte tu enlace.",
+    "step1Title": "Elige tu oficio",
+    "step1Body": "32 tipos de negocio, cada uno con una lista de servicios que puedes editar. Las plantillas relevantes incluyen además complementos y gastos asociados.",
+    "step2Title": "Tráete a tus clientes",
+    "step2Body": "Importa contactos desde tu teléfono vía vCard. Conecta tu Google Calendar y mantén ambas plataformas sincronizadas.",
+    "step3Title": "Comparte tu enlace de reserva",
+    "step3Body": "Un enlace para tu bio. Los clientes reservan directamente a través de tu propio enlace."
+  },
+  "not": {
+    "title": "Lo que Perelai no es",
+    "body": "Si necesitas algo de esto, no somos para ti — y preferimos decírtelo.",
+    "item1Title": "No es software de contabilidad",
+    "item1Body": "Perelai registra lo reservado, completado y pagado para que veas tu flujo de caja. No hace contabilidad, impuestos, ni es asesoría financiera.",
+    "item2Title": "No es un marketplace",
+    "item2Body": "Tu enlace de reserva es tuyo. Los clientes reservan directamente, sin un marketplace de intermediario.",
+    "item3Title": "No es un sistema médico",
+    "item3Body": "No ofrece historiales clínicos, seguimiento de diagnósticos ni gestión de tratamientos médicos."
+  },
+  "nicheRouter": {
+    "title": "Encuentra tu oficio",
+    "body": "Páginas diseñadas para cómo trabajas realmente.",
+    "coloristsLabel": "Para coloristas independientes",
+    "coloristsDescription": "Reservas, clientes y flujo de caja para coloristas que trabajan bajo sus propias reglas.",
+    "lashArtistsLabel": "Para lash artists independientes",
+    "lashArtistsDescription": "Visibilidad sobre reservas, clientes y dinero para artistas de pestañas que marcan sus propias reglas."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": "¿Cómo reservan los clientes conmigo?",
+    "a1": "Comparte tu enlace directo de reservas. Los clientes eligen un servicio y una hora directamente en tu página.",
+    "q2": "¿Qué pasa justo después de registrarme?",
+    "a2": "Confirmas tu correo y luego haces una breve configuración: tu oficio, tus servicios, tu equipo (si tienes) e importaciones opcionales.",
+    "q3": "¿Estarán mis servicios ya incluidos?",
+    "a3": "Sí — cada tipo de negocio empieza con una lista de servicios o artículos editable. Las plantillas relevantes también incluyen complementos y gastos asociados.",
+    "q4": "¿Puedo traerme a mis clientes y mi calendario?",
+    "a4": "Sí: puedes importar contactos de tu teléfono (vCard) y hacer una sincronización bidireccional con Google Calendar.",
+    "q5": "¿Puedo gestionar diferentes servicios y complementos?",
+    "a5": "Sí. Cada plantilla incluye opciones personalizables tanto de servicios como de complementos relevantes.",
+    "q6": "¿Esto es un software de contabilidad?",
+    "a6": "No. Perelai registra lo reservado, completado y pagado para que veas tu flujo de caja. No hace contabilidad, impuestos ni es asesoría financiera."
+  },
+  "closing": {
+    "title": "Tus clientes, reservas y flujo de caja — en un solo lugar",
+    "body": "Configúralo en una tarde.",
+    "cta": "Crear espacio de trabajo",
+    "micro": "Recibirás un correo de verificación para terminar de configurarlo."
+  },
+  "footer": {
+    "description": "Software de reservas, clientes y finanzas para profesionales de servicios independientes.",
+    "product": "Producto",
+    "company": "Legal",
+    "forColorists": "Para coloristas independientes",
+    "forLashArtists": "Para lash artists independientes",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos del Servicio"
+  }
+}

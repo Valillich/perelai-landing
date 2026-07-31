@@ -1,6 +1,24 @@
 {
-  "cta": { "signup": "Utwórz przestrzeń pracy", "login": "Zaloguj się" },
+  "cta": {
+    "signup": "Utwórz przestrzeń pracy",
+    "login": "Zaloguj się"
+  },
   "languageLabel": "Język",
-  "languages": { "en": "English", "uk": "Українська", "pl": "Polski" },
-  "terms": { "visit": "Wizyta", "order": "Zamówienie", "package": "Karnety", "instalment": "Plany" }
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Wizyta",
+    "order": "Zamówienie",
+    "package": "Karnety",
+    "instalment": "Plany"
+  }
 }

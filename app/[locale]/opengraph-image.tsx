@@ -1,18 +1,10 @@
 import { notFound } from "next/navigation"
-import enHome from "@/messages/en/home.json"
-import plHome from "@/messages/pl/home.json"
-import ukHome from "@/messages/uk/home.json"
 import { isPublishedLocale } from "@/i18n/locales"
 import {
   generateOgImageMetadata,
   renderOgCardImage,
 } from "@/lib/og-image"
-
-const homeByLocale = {
-  en: enHome,
-  uk: ukHome,
-  pl: plHome,
-}
+import { messagesByLocale } from "@/i18n/messages"
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -20,7 +12,7 @@ type Props = {
 
 export async function generateImageMetadata({ params }: Props) {
   const { locale } = await params
-  const home = isPublishedLocale(locale) ? homeByLocale[locale] : homeByLocale.en
+  const home = isPublishedLocale(locale) ? messagesByLocale[locale].home : messagesByLocale.en.home
 
   return generateOgImageMetadata(home.hero.imageAlt)
 }
@@ -29,7 +21,7 @@ export default async function OpenGraphImage({ params }: Props) {
   const { locale } = await params
   if (!isPublishedLocale(locale)) notFound()
 
-  const home = homeByLocale[locale]
+  const home = messagesByLocale[locale].home
 
   return renderOgCardImage({
     eyebrow: "Perelai",

@@ -13,7 +13,7 @@ import { proxy } from "../proxy"
 describe("the locale contract", () => {
   test("matches the generated app locale contract while publishing only complete locales", () => {
     expect(APP_LOCALES).toEqual(catalog.supportedLocales)
-    expect(PUBLISHED_LOCALES).toEqual(["en", "uk", "pl"])
+    expect(PUBLISHED_LOCALES).toEqual(["en", "uk", "pl", "ru", "es", "fr", "de", "pt", "tr"])
   })
 
   test("uses unprefixed English and prefixed published translations", () => {
@@ -35,7 +35,7 @@ describe("locale negotiation", () => {
 
   test("matches only the language subtag and never negotiates an unpublished locale", () => {
     expect(negotiatePublishedLocale({ acceptLanguage: "pl-PL,uk;q=0.8" })).toBe("pl")
-    expect(negotiatePublishedLocale({ acceptLanguage: "de-DE,de;q=0.9" })).toBe("en")
+    expect(negotiatePublishedLocale({ acceptLanguage: "zh-CN,zh;q=0.9" })).toBe("en")
   })
 })
 
@@ -86,9 +86,9 @@ describe("proxy", () => {
 })
 
 test.each([
-  ["/", { en: "https://perelai.com/", uk: "https://perelai.com/uk", pl: "https://perelai.com/pl", "x-default": "https://perelai.com/" }],
-  ["/for-independent-colorists", { en: "https://perelai.com/for-independent-colorists", uk: "https://perelai.com/uk/for-independent-colorists", pl: "https://perelai.com/pl/for-independent-colorists", "x-default": "https://perelai.com/for-independent-colorists" }],
-  ["/for-lash-artists", { en: "https://perelai.com/for-lash-artists", uk: "https://perelai.com/uk/for-lash-artists", pl: "https://perelai.com/pl/for-lash-artists", "x-default": "https://perelai.com/for-lash-artists" }],
+  ["/", { en: "https://perelai.com/", uk: "https://perelai.com/uk", pl: "https://perelai.com/pl", ru: "https://perelai.com/ru", es: "https://perelai.com/es", fr: "https://perelai.com/fr", de: "https://perelai.com/de", pt: "https://perelai.com/pt", tr: "https://perelai.com/tr", "x-default": "https://perelai.com/" }],
+  ["/for-independent-colorists", { en: "https://perelai.com/for-independent-colorists", uk: "https://perelai.com/uk/for-independent-colorists", pl: "https://perelai.com/pl/for-independent-colorists", ru: "https://perelai.com/ru/for-independent-colorists", es: "https://perelai.com/es/for-independent-colorists", fr: "https://perelai.com/fr/for-independent-colorists", de: "https://perelai.com/de/for-independent-colorists", pt: "https://perelai.com/pt/for-independent-colorists", tr: "https://perelai.com/tr/for-independent-colorists", "x-default": "https://perelai.com/for-independent-colorists" }],
+  ["/for-lash-artists", { en: "https://perelai.com/for-lash-artists", uk: "https://perelai.com/uk/for-lash-artists", pl: "https://perelai.com/pl/for-lash-artists", ru: "https://perelai.com/ru/for-lash-artists", es: "https://perelai.com/es/for-lash-artists", fr: "https://perelai.com/fr/for-lash-artists", de: "https://perelai.com/de/for-lash-artists", pt: "https://perelai.com/pt/for-lash-artists", tr: "https://perelai.com/tr/for-lash-artists", "x-default": "https://perelai.com/for-lash-artists" }],
 ])("every published variant of %s receives the same reciprocal hreflang set", (pathname, expected) => {
   for (const locale of PUBLISHED_LOCALES) {
     expect(getLocalizedAlternates(pathname, locale)).toEqual(expected)

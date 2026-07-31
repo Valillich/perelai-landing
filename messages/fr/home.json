@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Clients, réservations et trésorerie",
+    "description": "Logiciel de réservation et finances pour professionnels indépendants. Une liste de tâches claires, un chiffre fiable, un lien unique pour votre bio."
+  },
+  "nav": {
+    "features": "Fonctionnalités",
+    "how": "Comment ça marche",
+    "pricing": "Tarifs",
+    "login": "Se connecter",
+    "start": "Créer un espace de travail",
+    "start_short": "Créer un espace",
+    "primaryLabel": "Navigation principale",
+    "menuLabel": "Ouvrir le menu"
+  },
+  "hero": {
+    "title": "Vos clients, vos réservations et votre trésorerie",
+    "accent": "— enfin réunis au même endroit.",
+    "body": "Cessez de reconstituer votre semaine entre les DMs, les notes éparses et votre mémoire. Une liste de ce qu'il reste à faire, un chiffre fiable, un lien unique dans votre bio.",
+    "signup": "Créer un espace de travail",
+    "how": "Voir comment ça marche",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser l'installation.",
+    "imageAlt": "Espace de travail Perelai montrant la boîte de réception opérationnelle, les prochaines visites et le résumé financier — données d'exemple",
+    "imageCaption": "Données d'exemple",
+    "showcase": {
+      "ariaLabel": "Aperçu de l'application Perelai",
+      "calendarTab": "Calendrier",
+      "financeTab": "Finances",
+      "paid": "Payé",
+      "pending": "Non payé"
+    }
+  },
+  "problem": {
+    "title": "Vous connaissez déjà cette journée",
+    "pain1Title": "Réservations par DM",
+    "pain1Body": "Les clients écrivent à 23h. Vous faites une capture d'écran, promettez de vérifier votre agenda demain, et vous l'oubliez au réveil.",
+    "pain2Title": "Des notes éparpillées partout",
+    "pain2Body": "Quelle formule de couleur avez-vous utilisée la dernière fois ? C'est dans une note, un message ou au dos d'un ticket — quelque part.",
+    "pain3Title": "L'argent reconstitué en fin de mois",
+    "pain3Body": "« Combien ai-je vraiment gagné cette semaine ? » Vous le devinez entre les virements, les espèces et les clients qui ont dit qu'ils paieraient la prochaine fois."
+  },
+  "inbox": {
+    "title": "La boîte de réception qui reste jusqu'à ce que vous agissiez",
+    "body": "Une notification vous informe d'un événement. La boîte de réception opérationnelle le conserve jusqu'à ce que vous le résolviez. Réservations non confirmées, visites impayées, suivis clients — une liste dédiée à ce qui demande votre décision.",
+    "caption": "Données d'exemple",
+    "detail": "Une liste de ce qui requiert votre attention — elle reste là jusqu'à résolution, pas seulement jusqu'à lecture."
+  },
+  "booking": {
+    "title": "Un lien unique pour votre bio",
+    "body": "Partagez un lien unique. Les clients choisissent une prestation, un membre de l'équipe et un créneau. Mettez-le dans votre bio, envoyez-le par DM, imprimez-le sur une carte — c'est le vôtre.",
+    "detail": "Votre lien de réservation vous appartient. Les clients réservent directement via votre propre lien."
+  },
+  "money": {
+    "title": "Des chiffres qui tombent juste",
+    "body": "Le travail effectué et l'argent encaissé sont enregistrés séparément — c'est pourquoi le chiffre est réel. Une visite terminée n'est pas un revenu tant que quelqu'un ne l'a pas réellement payée. Perelai ne mélange pas les deux.",
+    "caption": "Données d'exemple",
+    "detail": "Revenus, coûts et soldes restants — sans aucun tableur."
+  },
+  "setup": {
+    "eyebrow": "Comment ça marche",
+    "title": "Configurez-le en un après-midi",
+    "body": "Pas de migration compliquée le week-end. Choisissez votre métier, importez vos clients et partagez votre lien.",
+    "step1Title": "Choisissez votre métier",
+    "step1Body": "32 modèles de métier, chacun avec une liste de prestations modifiable. Les modèles pertinents incluent également les options et dépenses associées.",
+    "step2Title": "Importez vos clients",
+    "step2Body": "Importez vos contacts depuis votre téléphone via vCard. Connectez votre Google Agenda et gardez les deux plateformes synchronisées.",
+    "step3Title": "Partagez votre lien de réservation",
+    "step3Body": "Un lien unique pour votre bio. Les clients réservent directement via votre propre lien."
+  },
+  "not": {
+    "title": "Ce que Perelai n'est pas",
+    "body": "Si vous cherchez l'un de ces éléments, nous ne sommes pas faits pour vous — et nous préférons vous le dire en toute transparence.",
+    "item1Title": "Pas un logiciel de comptabilité",
+    "item1Body": "Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait pas de comptabilité, de déclarations fiscales ni de conseil financier.",
+    "item2Title": "Pas une plateforme de mise en relation",
+    "item2Body": "Votre lien de réservation vous appartient. Les clients réservent directement avec vous, sans intermédiaire.",
+    "item3Title": "Pas un système de dossier médical",
+    "item3Body": "Il n'offre pas de dossiers cliniques, de suivi de diagnostic ni de gestion de patients."
+  },
+  "nicheRouter": {
+    "title": "Trouvez votre métier",
+    "body": "Des pages pensées pour votre manière réelle de travailler.",
+    "coloristsLabel": "Pour les coloristes indépendants",
+    "coloristsDescription": "Réservations, gestion client et trésorerie pour les coloristes qui travaillent selon leurs propres règles.",
+    "lashArtistsLabel": "Pour les lash artists indépendants",
+    "lashArtistsDescription": "Visibilité sur les réservations, les clients et l'argent pour les spécialistes du regard qui fixent leurs propres règles."
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "q1": "Comment les clients réservent-ils avec moi ?",
+    "a1": "Partagez votre lien direct de réservation. Les clients choisissent une prestation et un horaire directement sur votre page.",
+    "q2": "Que se passe-t-il juste après mon inscription ?",
+    "a2": "Vous confirmez votre e-mail puis effectuez une configuration rapide : votre métier, vos prestations, votre équipe (si vous en avez) et des importations optionnelles.",
+    "q3": "Mes prestations seront-elles déjà préremplies ?",
+    "a3": "Oui — chaque modèle de métier démarre avec une liste de prestations ou d'articles modifiables. Les modèles pertinents incluent aussi des options et des dépenses associées.",
+    "q4": "Puis-je importer mes clients et mon agenda ?",
+    "a4": "Oui : vous pouvez importer les contacts de votre téléphone (vCard) et effectuer une synchronisation bidirectionnelle avec Google Agenda.",
+    "q5": "Puis-je gérer différentes prestations et options ?",
+    "a5": "Oui. Chaque modèle comprend des options personnalisables adaptées à vos prestations.",
+    "q6": "S'agit-il d'un logiciel de comptabilité ?",
+    "a6": "Non. Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait ni comptabilité, ni déclaration fiscale, ni conseil financier."
+  },
+  "closing": {
+    "title": "Vos clients, vos réservations et votre trésorerie — en un seul endroit",
+    "body": "Configurez-le en un après-midi.",
+    "cta": "Créer un espace de travail",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser l'installation."
+  },
+  "footer": {
+    "description": "Logiciel de réservation, gestion client et finances pour professionnels indépendants.",
+    "product": "Produit",
+    "company": "Mentions légales",
+    "forColorists": "Pour coloristes indépendants",
+    "forLashArtists": "Pour lash artists indépendants",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}

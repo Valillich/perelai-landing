@@ -127,7 +127,7 @@ export function LandingHeader({
               }
             >
               <ThemeToggle />
-              <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} variant="inline" />
+              <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />
             </MobileNav>
           </div>
         </div>

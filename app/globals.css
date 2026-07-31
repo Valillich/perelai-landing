@@ -135,13 +135,13 @@ html {
       transparent 50%
     ),
     radial-gradient(
-      ellipse 80% 90% at 0% 50%,
+      ellipse 80% 90% at 36% 50%,
       rgba(var(--brand-700-rgb), 0.298) 0%,
       transparent 55%
     ),
     radial-gradient(
-      ellipse 80% 90% at 100% 50%,
-      rgba(var(--brand-700-rgb), 0.302) 0%,
+      ellipse 80% 90% at 60% 50%,
+      rgba(var(--brand-700-rgb), 0.302) 30%,
       transparent 55%
     ),
     radial-gradient(

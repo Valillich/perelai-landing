@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Clientes, Agendamentos e Fluxo de Caixa",
+    "description": "Software de agendamento e finanças para profissionais independentes. Uma lista clara de pendências, um número confiável, um link para a sua bio."
+  },
+  "nav": {
+    "features": "Recursos",
+    "how": "Como funciona",
+    "pricing": "Preços",
+    "login": "Entrar",
+    "start": "Criar espaço de trabalho",
+    "start_short": "Criar espaço",
+    "primaryLabel": "Navegação principal",
+    "menuLabel": "Abrir menu"
+  },
+  "hero": {
+    "title": "Seus clientes, agendamentos e fluxo de caixa",
+    "accent": "— finalmente em um só lugar.",
+    "body": "Chega de tentar reconstruir sua semana entre mensagens diretas, anotações e memória. Uma lista com o que falta fazer, um número em que você pode confiar, um único link para a sua bio.",
+    "signup": "Criar espaço de trabalho",
+    "how": "Ver como funciona",
+    "micro": "Você receberá um e-mail de confirmação para concluir a instalação.",
+    "imageAlt": "Espaço de trabalho do Perelai mostrando a Entrada Operacional, próximas visitas e resumo financeiro — dados de exemplo",
+    "imageCaption": "Dados de exemplo",
+    "showcase": {
+      "ariaLabel": "Prévia do aplicativo Perelai",
+      "calendarTab": "Agenda",
+      "financeTab": "Finanças",
+      "paid": "Pago",
+      "pending": "Pendente"
+    }
+  },
+  "problem": {
+    "title": "Você já conhece esse dia",
+    "pain1Title": "Agendamentos pelo Instagram ou WhatsApp",
+    "pain1Body": "Os clientes mandam mensagem às 23h. Você tira print, promete olhar a agenda amanhã e esquece no dia seguinte.",
+    "pain2Title": "Anotações espalhadas em todo lugar",
+    "pain2Body": "Qual fórmula de cor você usou da última vez? Está em um bloco de notas, em uma conversa ou no verso de um comprovante — em algum lugar.",
+    "pain3Title": "Dinheiro reconstruído no fim do mês",
+    "pain3Body": "«Quanto eu realmente ganhei esta semana?» Você tenta adivinhar somando PIX, dinheiro e clientes que disseram que pagariam na próxima."
+  },
+  "inbox": {
+    "title": "A caixa de entrada que não some até você resolver",
+    "body": "Uma notificação avisa que algo aconteceu. A Entrada Operacional guarda essa pendência até você resolvê-la. Agendamentos não confirmados, visitas não pagas, clientes para retornar — uma lista focada no que exige sua decisão.",
+    "caption": "Dados de exemplo",
+    "detail": "Uma lista do que precisa da sua atenção — fica lá até você resolver, não apenas até você ler."
+  },
+  "booking": {
+    "title": "Um único link para a sua bio",
+    "body": "Compartilhe um link exclusivo. Os clientes escolhem um serviço, o profissional e o horário. Coloque na bio, envie no WhatsApp, imprima no cartão — é seu.",
+    "detail": "Seu link de agendamento é seu. Os clientes agendam diretamente pelo seu próprio link."
+  },
+  "money": {
+    "title": "Contas que fecham de verdade",
+    "body": "O trabalho realizado e o dinheiro recebido são registrados separadamente — por isso o número é real. Uma visita concluída não é receita até que alguém realmente pague. O Perelai não mistura as duas coisas.",
+    "caption": "Dados de exemplo",
+    "detail": "Receitas, custos e saldos pendentes — sem precisar de planilhas."
+  },
+  "setup": {
+    "eyebrow": "Como funciona",
+    "title": "Configure em uma tarde",
+    "body": "Sem migrações complicadas no fim de semana. Escolha sua profissão, importe seus clientes e compartilhe seu link.",
+    "step1Title": "Escolha sua profissão",
+    "step1Body": "32 modelos de negócio, cada um com uma lista de serviços personalizável. Os modelos relevantes incluem também adicionais e despesas vinculadas.",
+    "step2Title": "Traga seus clientes",
+    "step2Body": "Importe contatos do celular via vCard. Conecte seu Google Agenda e mantenha as duas plataformas sincronizadas.",
+    "step3Title": "Compartilhe seu link de agendamento",
+    "step3Body": "Um link exclusivo para sua bio. Os clientes agendam diretamente pela sua página."
+  },
+  "not": {
+    "title": "O que o Perelai NÃO é",
+    "body": "Se você precisa de algo desta lista, não somos o sistema ideal — e preferimos ser transparentes sobre isso.",
+    "item1Title": "Não é um software de contabilidade",
+    "item1Body": "O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, declaração de impostos nem consultoria financeira.",
+    "item2Title": "Não é um marketplace",
+    "item2Body": "Seu link de agendamento é seu. Os clientes agendam diretamente com você, sem intermediários ou comissões.",
+    "item3Title": "Não é um sistema de prontuário médico",
+    "item3Body": "Não oferece prontuários clínicos, acompanhamento de diagnósticos ou gestão de pacientes."
+  },
+  "nicheRouter": {
+    "title": "Encontre sua profissão",
+    "body": "Páginas pensadas exatamente para a sua rotina de trabalho.",
+    "coloristsLabel": "Para coloristas independentes",
+    "coloristsDescription": "Agendamentos, clientes e fluxo de caixa para coloristas que trabalham no próprio ritmo.",
+    "lashArtistsLabel": "Para lash artists independentes",
+    "lashArtistsDescription": "Clareza em agendamentos, clientes e receita para profissionais de cílios que definem suas próprias regras."
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "q1": "Como os clientes agendam comigo?",
+    "a1": "Compartilhe seu link direto de agendamento. Os clientes escolhem o serviço e o horário diretamente na sua página.",
+    "q2": "O que acontece logo após o cadastro?",
+    "a2": "Você confirma seu e-mail e faz uma configuração rápida: sua profissão, seus serviços, sua equipe (se houver) e importações opcionais.",
+    "q3": "Meus serviços já virão pré-cadastrados?",
+    "a3": "Sim — cada modelo de negócio começa com uma lista de serviços editável. Os modelos relevantes incluem também adicionais e custos vinculados.",
+    "q4": "Posso importar meus clientes e minha agenda?",
+    "a4": "Sim: você pode importar os contatos do seu celular (vCard) e configurar a sincronização bidirecional com o Google Agenda.",
+    "q5": "Posso gerenciar diferentes serviços e adicionais?",
+    "a5": "Sim. Cada modelo inclui opções personalizáveis de serviços e adicionais relevantes.",
+    "q6": "Este é um software de contabilidade?",
+    "a6": "Não. O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, impostos ou gestão tributária."
+  },
+  "closing": {
+    "title": "Seus clientes, agendamentos e fluxo de caixa — em um só lugar",
+    "body": "Configure em uma tarde.",
+    "cta": "Criar espaço de trabalho",
+    "micro": "Você receberá um e-mail de confirmação para concluir a instalação."
+  },
+  "footer": {
+    "description": "Software de agendamento, gestão de clientes e finanças para profissionais independentes.",
+    "product": "Produto",
+    "company": "Informações legais",
+    "forColorists": "Para coloristas independentes",
+    "forLashArtists": "Para lash artists independentes",
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  }
+}

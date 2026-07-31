@@ -1,0 +1,24 @@
+{
+  "cta": {
+    "signup": "Создать рабочее пространство",
+    "login": "Войти"
+  },
+  "languageLabel": "Язык",
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Визит",
+    "order": "Заказ",
+    "package": "Пакеты",
+    "instalment": "Планы"
+  }
+}

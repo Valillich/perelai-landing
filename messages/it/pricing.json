@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Prezzi — Perelai",
+    "description": "Informazioni sulle funzionalità di Perelai e sull'accesso allo spazio di lavoro."
+  },
+  "hero": {
+    "title": "Cosa ottieni oggi",
+    "body": "Perelai offre la gestione delle prenotazioni, dei clienti e del flusso di cassa. Ecco cosa include il tuo spazio di lavoro."
+  },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai è attualmente in versione Beta",
+    "body": "I flussi principali sono pronti, ma alcuni dettagli e integrazioni sono ancora in fase di perfezionamento."
+  },
+  "capabilities": {
+    "title": "Funzionalità attuali",
+    "inbox": "In arrivo Operativi — un elenco delle tue decisioni in sospeso, che rimane finché non le risolvi",
+    "calendar": "Un calendario che riflette il tipo di lavoro che svolgi davvero",
+    "booking": "Link di prenotazione pubblico — i tuoi clienti scelgono un servizio e un orario direttamente sulla tua pagina",
+    "clients": "Profilo cliente con cronologia visite, note e tracciamento dei pagamenti",
+    "payments": "Registrazione e associazione dei pagamenti a visite e ordini",
+    "finance": "Entrate, costi e saldi in sospeso senza bisogno di fogli di calcolo",
+    "orders": "Ordini con piani di pagamento concordati e tracciamento delle scadenze",
+    "packages": "Pacchetti a saldo prepagato che si scalano man mano che li usi",
+    "onboarding": "Configurazione adatta alla tua nicchia con 32 modelli aziendali e elenchi di servizi personalizzabili",
+    "googleCalendar": "Sincronizzazione bidirezionale con Google Calendar",
+    "contactImport": "Importazione dei contatti dal telefono tramite vCard",
+    "languages": "Disponibile in inglese, ucraino, polacco, tedesco, spagnolo, francese, russo e italiano",
+    "mobile": "Progettato per smartphone, comodo da computer",
+    "themes": "Modalità chiara e scura"
+  },
+  "noCharge": {
+    "title": "Prenotazioni e spazio di lavoro",
+    "commission": "Link di prenotazione diretto",
+    "commissionDetail": "Il tuo link di prenotazione è solo tuo. I clienti prenotano direttamente dal tuo link.",
+    "card": "Registrazione",
+    "cardDetail": "Conferma la tua email per completare la configurazione dello spazio di lavoro."
+  },
+  "future": {
+    "title": "Cosa succederà quando verrà introdotta la fatturazione",
+    "body": "I prezzi saranno annunciati prima di attivare qualsiasi sistema di pagamento."
+  },
+  "regionHint": "Il tuo mercato: {country} ({currency}). Le cifre di esempio in questa pagina lo utilizzano.",
+  "faq": {
+    "title": "Domande su prezzi e fatturazione",
+    "q1": "Quando inizierete a addebitare costi?",
+    "a1": "Ad oggi non è attivo alcun sistema di pagamento nell'applicazione. Prezzi e condizioni saranno annunciati con anticipo prima di qualsiasi addebito.",
+    "q2": "Cosa succederà quando saranno annunciati i prezzi?",
+    "a2": "Le condizioni di prezzo saranno comunicate per tempo in modo che tu possa valutarle prima di qualsiasi modifica.",
+    "q3": "Come funzionano le prenotazioni dei clienti?",
+    "a3": "Il tuo link di prenotazione è tuo. I clienti scelgono un servizio e un orario direttamente sulla tua pagina."
+  },
+  "cta": {
+    "title": "I tuoi clienti, le tue prenotazioni e il tuo flusso di cassa — in un unico posto",
+    "body": "Configuralo in un pomeriggio.",
+    "button": "Crea uno spazio di lavoro",
+    "micro": "Riceverai un'email di verifica per completare l'impostazione."
+  }
+}

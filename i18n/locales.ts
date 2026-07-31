@@ -1,7 +1,7 @@
 import catalog from "@/data/niche-catalog.generated.json"
 
-export const APP_LOCALES = ["en", "uk", "pl", "ru", "es", "fr", "de"] as const
-export const PUBLISHED_LOCALES = ["en", "uk", "pl"] as const
+export const APP_LOCALES = ["en", "uk", "pl", "ru", "es", "fr", "de", "pt", "tr"] as const
+export const PUBLISHED_LOCALES = ["en", "uk", "pl", "ru", "es", "fr", "de", "pt", "tr"] as const
 
 export type AppLocale = (typeof APP_LOCALES)[number]
 export type PublishedLocale = (typeof PUBLISHED_LOCALES)[number]

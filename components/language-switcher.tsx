@@ -85,7 +85,14 @@ export function LanguageSwitcher({
         <Globe2 className="h-3.5 w-3.5 opacity-90" strokeWidth={2.5} />
         <span className="mt-[1px] text-[12px] font-bold tracking-wider">{locale.toUpperCase()}</span>
       </summary>
-      <div className="absolute right-0 mt-2 min-w-36 rounded-2xl border border-border bg-card p-1.5 shadow-[0_12px_30px_rgba(16,24,40,0.14)]">
+      <div
+        className={cn(
+          "absolute right-0 mt-2 rounded-2xl border border-border bg-card p-1.5 shadow-[0_12px_30px_rgba(16,24,40,0.14)]",
+          PUBLISHED_LOCALES.length > 5
+            ? "grid min-w-72 grid-cols-2 gap-0.5"
+            : "min-w-36",
+        )}
+      >
         {PUBLISHED_LOCALES.map((target) => (
           <a
             key={target}
@@ -93,7 +100,7 @@ export function LanguageSwitcher({
             hrefLang={target}
             lang={target}
             onClick={() => selectLocale(target)}
-            className="flex items-center justify-between rounded-xl px-3 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-card-subtle hover:text-foreground"
+            className="flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-card-subtle hover:text-foreground"
           >
             <span>{t(`languages.${target}`)}</span>
             <span className="text-[11px] font-bold tracking-wider text-subtle-text">{target.toUpperCase()}</span>

@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Rascunho legal — Founding Beta",
+  "lastUpdated": "Última atualização: {date}",
+  "draftTitle": "Rascunho.",
+  "draftBody": "Esta página está sendo finalizada durante a fase Founding Beta do Perelai. A versão atual entra em vigor em {date}; notificaremos os usuários registrados por e-mail antes de qualquer alteração relevante.",
+  "questions": "Dúvidas:",
+  "bindingNotice": "A versão em inglês é a legalmente vinculativa. O texto final aprovado pelos proprietários e pelo departamento jurídico deve substituir este rascunho antes do lançamento do cadastro público.",
+  "englishOnlyNotice": "Este rascunho está disponível apenas em inglês. O texto final será publicado em todos os idiomas suportados.",
+  "backHome": "Voltar ao Perelai",
+  "returnTo": {
+    "login": "Voltar ao login",
+    "register": "Voltar ao cadastro",
+    "forgot": "Voltar à redefinição de senha"
+  }
+}

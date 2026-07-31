@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Precios — Perelai",
+    "description": "Información sobre las funciones de Perelai y el acceso al espacio de trabajo."
+  },
+  "hero": {
+    "title": "Lo que obtienes hoy",
+    "body": "Perelai ofrece gestión de reservas, clientes y flujo de caja. Esto es lo que incluye tu espacio de trabajo."
+  },
+  "beta": {
+    "badge": "Beta",
+    "title": "Perelai se encuentra actualmente en fase Beta",
+    "body": "Los flujos principales están listos, pero algunos detalles e integraciones siguen perfeccionándose."
+  },
+  "capabilities": {
+    "title": "Funciones actuales",
+    "inbox": "Bandeja Operativa — una lista para tus decisiones pendientes, que se mantiene hasta que las resuelvas",
+    "calendar": "Un calendario que refleja el tipo de trabajo que realmente haces",
+    "booking": "Enlace de reserva público — tus clientes eligen un servicio y una hora directamente en tu página",
+    "clients": "Perfiles de clientes con historial de visitas, notas y registros de pago",
+    "payments": "Registro y asignación de pagos a visitas y pedidos",
+    "finance": "Ingresos, costes y saldos pendientes sin necesidad de hojas de cálculo",
+    "orders": "Pedidos con planes de pago acordados y seguimiento de plazos",
+    "packages": "Paquetes de saldo prepagado que se descuentan conforme los usas",
+    "onboarding": "Configuración adaptada a tu nicho con 32 tipos de negocio y listas de servicios personalizables",
+    "googleCalendar": "Sincronización bidireccional con Google Calendar",
+    "contactImport": "Importación de contactos desde tu teléfono vía vCard",
+    "languages": "Disponible en inglés, ucraniano, polaco, alemán y español",
+    "mobile": "Diseñado para el móvil, cómodo en el ordenador",
+    "themes": "Modos claro y oscuro"
+  },
+  "noCharge": {
+    "title": "Reservas y Espacio de Trabajo",
+    "commission": "Enlace de reserva directo",
+    "commissionDetail": "Tu enlace de reserva es tuyo. Los clientes reservan directamente a través de tu enlace.",
+    "card": "Registro",
+    "cardDetail": "Confirma tu correo para terminar de configurar tu espacio de trabajo."
+  },
+  "future": {
+    "title": "Qué pasará cuando llegue la facturación",
+    "body": "Los precios se anunciarán antes de implementar cualquier sistema de cobro."
+  },
+  "regionHint": "Tu mercado: {country} ({currency}). Las cifras de ejemplo en esta página lo utilizan.",
+  "faq": {
+    "title": "Preguntas sobre precios y facturación",
+    "q1": "¿Cuándo empezarán a cobrar?",
+    "a1": "A día de hoy no hay sistema de cobro en la aplicación. Los precios y condiciones se anunciarán con antelación antes de cobrar nada.",
+    "q2": "¿Qué pasará cuando se anuncien las condiciones de facturación?",
+    "a2": "Las condiciones de precios se anunciarán con tiempo para que puedas revisarlas antes de que nada cambie.",
+    "q3": "¿Cómo funcionan las reservas de los clientes?",
+    "a3": "Tu enlace de reserva es tuyo. Los clientes eligen un servicio y una hora directamente en tu página."
+  },
+  "cta": {
+    "title": "Tus clientes, reservas y flujo de caja — en un solo lugar",
+    "body": "Configúralo en una tarde.",
+    "button": "Crear espacio de trabajo",
+    "micro": "Recibirás un correo de verificación para terminar de configurarlo."
+  }
+}

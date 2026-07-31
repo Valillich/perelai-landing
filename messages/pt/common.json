@@ -1,0 +1,24 @@
+{
+  "cta": {
+    "signup": "Criar espaço de trabalho",
+    "login": "Entrar"
+  },
+  "languageLabel": "Idioma",
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Visita",
+    "order": "Pedido",
+    "package": "Pacotes",
+    "instalment": "Planos"
+  }
+}

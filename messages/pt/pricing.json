@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Preços — Perelai",
+    "description": "Informações sobre os recursos do Perelai e acesso ao espaço de trabalho."
+  },
+  "hero": {
+    "title": "O que você tem acesso hoje",
+    "body": "O Perelai oferece gestão de agendamentos, clientes e fluxo de caixa. Veja o que está incluído no seu espaço de trabalho."
+  },
+  "beta": {
+    "badge": "Beta",
+    "title": "O Perelai está atualmente em versão Beta",
+    "body": "Os fluxos principais estão prontos, mas alguns detalhes e integrações continuam sendo aprimorados."
+  },
+  "capabilities": {
+    "title": "Recursos atuais",
+    "inbox": "Entrada Operacional — uma lista para suas decisões pendentes, que permanece até você resolvê-las",
+    "calendar": "Um calendário que reflete a estrutura real do seu trabalho",
+    "booking": "Link de agendamento público — seus clientes escolhem o serviço e o horário direto na sua página",
+    "clients": "Perfis de clientes com histórico de visitas, notas e acompanhamento de pagamentos",
+    "payments": "Registro e vinculação de pagamentos a visitas e pedidos",
+    "finance": "Receitas, custos e saldos pendentes sem precisar de planilhas",
+    "orders": "Pedidos com planos de pagamento combinados e acompanhamento de prazos",
+    "packages": "Pacotes de saldo pré-pago que são abatidos conforme o uso",
+    "onboarding": "Configuração adaptada ao seu nicho com 32 modelos de negócio e listas de serviços personalizáveis",
+    "googleCalendar": "Sincronização bidirecional com o Google Agenda",
+    "contactImport": "Importação de contatos do seu celular via vCard",
+    "languages": "Disponível em inglês, ucraniano, polonês, alemão, espanhol, francês, russo, italiano e português",
+    "mobile": "Desenvolvido para celular, confortável no computador",
+    "themes": "Modos claro e escuro"
+  },
+  "noCharge": {
+    "title": "Agendamentos e Espaço de Trabalho",
+    "commission": "Link de agendamento direto",
+    "commissionDetail": "Seu link de agendamento é seu. Os clientes agendam diretamente pelo seu próprio link.",
+    "card": "Cadastro",
+    "cardDetail": "Confirme seu e-mail para finalizar a configuração do seu espaço de trabalho."
+  },
+  "future": {
+    "title": "O que acontece quando os planos forem lançados",
+    "body": "Os preços serão anunciados antes de qualquer cobrança ser ativada."
+  },
+  "regionHint": "Seu mercado: {country} ({currency}). Os valores de exemplo nesta página utilizam esta moeda.",
+  "faq": {
+    "title": "Dúvidas sobre preços e cobrança",
+    "q1": "Quando vocês vão começar a cobrar?",
+    "a1": "Atualmente não há sistema de cobrança ativo no aplicativo. Os preços e condições serão anunciados com antecedência antes de qualquer cobrança.",
+    "q2": "O que acontece quando os preços forem anunciados?",
+    "a2": "As condições comerciais serão divulgadas com tempo suficiente para você avaliar antes de qualquer mudança.",
+    "q3": "Como funcionam os agendamentos dos clientes?",
+    "a3": "Seu link de agendamento é seu. Os clientes escolhem um serviço e horário diretamente na sua página."
+  },
+  "cta": {
+    "title": "Seus clientes, agendamentos e fluxo de caixa — em um só lugar",
+    "body": "Configure em uma tarde.",
+    "button": "Criar espaço de trabalho",
+    "micro": "Você receberá um e-mail de confirmação para concluir a instalação."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Hukuki Taslak — Founding Beta",
+  "lastUpdated": "Son Güncelleme: {date}",
+  "draftTitle": "Taslak.",
+  "draftBody": "Bu sayfa Perelai'ın Founding Beta sürecinde tamamlanmaktadır. Güncel sürüm {date} tarihinden itibaren geçerlidir; önemli bir değişiklik yapılması durumunda kayıtlı kullanıcılarımızı e-posta ile bilgilendireceğiz.",
+  "questions": "Sorular:",
+  "bindingNotice": "Hukuki olarak bağlayıcı olan tek metin İngilizce sürümdür. Sahipler ve hukuk departmanı tarafından onaylanan nihai metin, kamuya açık kayıtlar açılmadan önce bu taslağın yerini alacaktır.",
+  "englishOnlyNotice": "Bu taslak şu anda yalnızca İngilizce olarak mevcuttur. Nihai metin desteklenen tüm dillerde yayınlanacaktır.",
+  "backHome": "Perelai'a Dön",
+  "returnTo": {
+    "login": "Giriş sayfasına dön",
+    "register": "Kayıt sayfasına dön",
+    "forgot": "Şifre sıfırlamaya dön"
+  }
+}

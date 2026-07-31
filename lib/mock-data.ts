@@ -82,6 +82,8 @@ const CLIENT_NAMES: Record<AppLocale, string[]> = {
   es: ["Lucía", "Diego", "Carmen", "Mateo", "Sofía"],
   fr: ["Léa", "Hugo", "Chloé", "Louis", "Inès"],
   de: ["Lena", "Jonas", "Greta", "Felix", "Nora"],
+  pt: ["Maria", "João", "Ana", "Lucas", "Inês"],
+  tr: ["Ayşe", "Mehmet", "Fatma", "Ali", "Zeynep"],
 }
 
 const EXAMPLE_CAPTIONS: Record<AppLocale, string> = {
@@ -92,6 +94,8 @@ const EXAMPLE_CAPTIONS: Record<AppLocale, string> = {
   es: "Datos de ejemplo",
   fr: "Données d’exemple",
   de: "Beispieldaten",
+  pt: "Dados de exemplo",
+  tr: "Örnek veriler",
 }
 
 const DEFAULT_REFERENCE = "2026-07-15T12:00:00.000Z"

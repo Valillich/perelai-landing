@@ -27,7 +27,9 @@ export function MockCalendarScreen({
   const visits = dataset.base.visits
 
   return (
+    <div className="mx-auto w-full max-w-[360px]">
     <div className={cn("flex flex-col", className)} aria-hidden="true">
+     
       {/* Month header + nav arrows */}
       <div className="mb-1 flex items-center justify-between gap-2">
         <h3 className="mock-calendar-title">
@@ -44,9 +46,10 @@ export function MockCalendarScreen({
             </span>
           ))}
         </div>
-      </div>
+        </div>
 
       <MockCalendarGrid dataset={dataset} />
+      </div>
 
       {/* Selected day activity list */}
       <div className="mt-4 flex items-center justify-between gap-2 px-0.5">

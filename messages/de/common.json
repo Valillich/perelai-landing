@@ -1,0 +1,24 @@
+{
+  "cta": {
+    "signup": "Arbeitsbereich erstellen",
+    "login": "Anmelden"
+  },
+  "languageLabel": "Sprache",
+  "languages": {
+    "en": "English",
+    "uk": "Українська",
+    "pl": "Polski",
+    "ru": "Русский",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "tr": "Türkçe"
+  },
+  "terms": {
+    "visit": "Termin",
+    "order": "Bestellung",
+    "package": "Pakete",
+    "instalment": "Pläne"
+  }
+}

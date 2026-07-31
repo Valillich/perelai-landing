@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Müşteriler, Randevular ve Nakit Akışı",
+    "description": "Bağımsız uzmanlar için randevu, müşteri ve finans yazılımı. Net bir yapılacaklar listesi, güvenilir bir rakam, biyografiniz için tek bağlantı."
+  },
+  "nav": {
+    "features": "Özellikler",
+    "how": "Nasıl Çalışır",
+    "pricing": "Fiyatlandırma",
+    "login": "Giriş Yap",
+    "start": "Çalışma Alanı Oluştur",
+    "start_short": "Alan Oluştur",
+    "primaryLabel": "Ana Navigasyon",
+    "menuLabel": "Menüyü Aç"
+  },
+  "hero": {
+    "title": "Müşterileriniz, randevularınız ve nakit akışınız",
+    "accent": "— nihayet tek bir yerde.",
+    "body": "Haftanızı DM'lerden, notlardan ve hafızanızdan toplamaya çalışmayı bırakın. Yapılacak işlerin net listesi, güvenebileceğiniz bir rakam, biyografiniz için tek bir bağlantı.",
+    "signup": "Çalışma alanı oluştur",
+    "how": "Nasıl çalıştığını görün",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
+    "imageAlt": "Perelai çalışma alanı — Operasyonel Gelen Kutusu, yaklaşan ziyaretler ve finansal özet ile örnek veriler",
+    "imageCaption": "Örnek veriler",
+    "showcase": {
+      "ariaLabel": "Perelai uygulama önizlemesi",
+      "calendarTab": "Takvim",
+      "financeTab": "Finans",
+      "paid": "Ödendi",
+      "pending": "Ödenmedi"
+    }
+  },
+  "problem": {
+    "title": "Bu günü zaten biliyorsunuz",
+    "pain1Title": "DM Üzerinden Randevu Almak",
+    "pain1Body": "Müşteriler gece 11'de yazar. Ekran görüntüsü alırsınız, yarın takvime bakmaya söz verirsiniz ve sabah bunu unutursunuz.",
+    "pain2Title": "Üç Farklı Yere Dağılmış Notlar",
+    "pain2Body": "Geçen sefer hangi renk formülünü kullandınız? Bir notta, bir mesajda veya bir fişin arkasında — bir yerlerde.",
+    "pain3Title": "Ay Sonunda Parayı Toparlamaya Çalışmak",
+    "pain3Body": "«Bu hafta gerçekten ne kadar kazandım?» Havaleler, nakit ve 'bir dahakine öderim' diyen müşteriler arasında tahmin yürütürsünüz."
+  },
+  "inbox": {
+    "title": "Siz İlgilenene Kadar Kaybolmayan Gelen Kutusu",
+    "body": "Bir bildirim size bir şey olduğunu söyler. Operasyonel Gelen Kutusu, siz çözene kadar bunu saklar. Onaylanmamış randevular, ödenmemiş ziyaretler, takip edilecek müşteriler — henüz kararınızı bekleyen işler için tek bir liste.",
+    "caption": "Örnek veriler",
+    "detail": "İlginizi gerektiren işlerin listesi — sadece okuyana kadar değil, siz çözene kadar orada kalır."
+  },
+  "booking": {
+    "title": "Biyografiniz İçin Tek Bir Bağlantı",
+    "body": "Tek bir bağlantı paylaşın. Müşteriler bir hizmet, bir uzman ve bir saat seçsin. Biyografinize koyun, DM'den gönderin, kartvizite basın — tamamen size ait.",
+    "detail": "Randevu bağlantınız size aittir. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır."
+  },
+  "money": {
+    "title": "Gerçekten Tutan Hesaplar",
+    "body": "Tamamlanan iş ve alınan para ayrı ayrı kaydedilir — bu yüzden rakam gerçektir. Tamamlanan bir ziyaret, biri gerçekten ödeyene kadar gelir sayılmaz. Perelai ikisini birbirine karıştırmaz.",
+    "caption": "Örnek veriler",
+    "detail": "Gelirler, giderler ve kalan bakiyeler — tablolar olmadan."
+  },
+  "setup": {
+    "eyebrow": "Nasıl Çalışır",
+    "title": "Bir öğleden sonra kurun",
+    "body": "Hafta sonu taşınma stresine gerek yok. İşinizi seçin, müşterilerinizi aktarın ve bağlantınızı paylaşın.",
+    "step1Title": "İşinizi Seçin",
+    "step1Body": "32 iş şablonu; her biri düzenlenebilir hizmet listesiyle gelir. İlgili şablonlar ayrıca ek hizmetleri ve bağlı giderleri içerir.",
+    "step2Title": "Müşterilerinizi Getirin",
+    "step2Body": "vCard ile kişileri telefonunuzdan içe aktarın. Google Takviminizi bağlayın ve her iki platformu senkronize tutun.",
+    "step3Title": "Randevu Bağlantınızı Paylaşın",
+    "step3Body": "Biyografiniz için tek bağlantı. Müşteriler doğrudan kendi sayfanızdan randevu alır."
+  },
+  "not": {
+    "title": "Perelai Ne DEĞİLDİR",
+    "body": "Bunlardan birine ihtiyacınız varsa, size göre değiliz — ve bunu açıkça söylemeyi tercih ederiz.",
+    "item1Title": "Muhasebe Yazılımı Değildir",
+    "item1Body": "Perelai, nakit akışınızı görebilmeniz için neyin randevu alındığını, tamamlandığını ve ödendiğini kaydeder. Muhasebe, vergi beyannamesi veya finansal danışmanlık yapmaz.",
+    "item2Title": "Bir Pazar Yeri (Marketplace) Değildir",
+    "item2Body": "Randevu bağlantınız size aittir. Müşteriler aracı pazar yeri olmadan doğrudan sizinle randevu oluşturur.",
+    "item3Title": "Tıbbi Kayıt Sistemi Değildir",
+    "item3Body": "Klinik kayıtlar, tanı takibi veya hasta yönetimi sunmaz."
+  },
+  "nicheRouter": {
+    "title": "Sektörünüzü Bulun",
+    "body": "Gerçekte nasıl çalıştığınıza göre tasarlanmış sayfalar.",
+    "coloristsLabel": "Bağımsız Renk Uzmanları İçin",
+    "coloristsDescription": "Kendi kurallarıyla çalışan renk uzmanları için randevu, müşteri ve nakit akışı yönetimi.",
+    "lashArtistsLabel": "Bağımsız İpek Kirpik Uzmanları İçin",
+    "lashArtistsDescription": "Kendi ritmini belirleyen kirpik uzmanları için randevu, müşteri ve gelir takibi."
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Müşteriler benimle nasıl randevu oluşturur?",
+    "a1": "Doğrudan randevu bağlantınızı paylaşın. Müşteriler doğrudan sayfanızdan bir hizmet ve saat seçer.",
+    "q2": "Kaydolduktan hemen sonra ne olur?",
+    "a2": "E-postanızı doğrular ve ardından hızlı bir kurulum yaparsınız: uzmanlık alanınız, hizmetleriniz, ekibiniz (varsa) ve isteğe bağlı içe aktarmalar.",
+    "q3": "Hizmetlerim hazır gelecek mi?",
+    "a3": "Evet — her iş şablonu düzenlenebilir bir hizmet listesiyle başlar. İlgili şablonlar ek hizmetleri ve bağlı giderleri de içerir.",
+    "q4": "Müşterilerimi ve takvimimi aktarabilir miyim?",
+    "a4": "Evet: telefonunuzdaki kişileri (vCard) aktarabilir ve Google Takvim ile çift yönlü senkronizasyon kurabilirsiniz.",
+    "q5": "Farklı hizmetleri ve ek seçenekleri yönetebilir miyim?",
+    "a5": "Evet. Her şablon, ilgili hizmetlerin ve ek seçeneklerin özelleştirilebilir hallerini içerir.",
+    "q6": "Bu bir muhasebe yazılımı mı?",
+    "a6": "Hayır. Perelai, nakit akışınızı görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Muhasebe veya vergi takibi yapmaz."
+  },
+  "closing": {
+    "title": "Müşterileriniz, randevularınız ve nakit akışınız — tek bir yerde",
+    "body": "Bir öğleden sonra kurun.",
+    "cta": "Çalışma alanı oluştur",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+  },
+  "footer": {
+    "description": "Bağımsız hizmet uzmanları için randevu, müşteri ve finans yazılımı.",
+    "product": "Ürün",
+    "company": "Yasal",
+    "forColorists": "Bağımsız Renk Uzmanları İçin",
+    "forLashArtists": "Bağımsız Kirpik Uzmanları İçin",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Hizmet Koşulları"
+  }
+}

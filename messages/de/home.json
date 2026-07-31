@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Perelai — Kunden, Buchungen & Cashflow an einem Ort",
+    "description": "Buchungs-, Kunden- und Finanzsoftware für unabhängige Dienstleister. Eine Liste mit offenen Aufgaben, eine verlässliche Zahl, ein Link für Ihre Bio."
+  },
+  "nav": {
+    "features": "Funktionen",
+    "how": "So funktioniert es",
+    "pricing": "Preise",
+    "login": "Anmelden",
+    "start": "Arbeitsbereich erstellen",
+    "start_short": "Erstellen",
+    "primaryLabel": "Hauptmenü",
+    "menuLabel": "Menü öffnen"
+  },
+  "hero": {
+    "title": "Ihre Kunden, Buchungen und Einnahmen",
+    "accent": "— endlich an einem Ort.",
+    "body": "Hören Sie auf, Ihre Woche aus DMs, Notiz-Apps und Erinnerungen zu rekonstruieren. Eine Liste mit offenen Aufgaben, eine verlässliche Zahl, ein Link für Ihre Bio.",
+    "signup": "Arbeitsbereich erstellen",
+    "how": "So funktioniert es",
+    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
+    "imageAlt": "Perelai-Arbeitsbereich mit dem operativen Posteingang, bevorstehenden Terminen und Finanzübersicht — Beispieldaten",
+    "imageCaption": "Beispieldaten",
+    "showcase": {
+      "ariaLabel": "Perelai App-Vorschau",
+      "calendarTab": "Kalender",
+      "financeTab": "Finanzen",
+      "paid": "Bezahlt",
+      "pending": "Unbezahlt"
+    }
+  },
+  "problem": {
+    "title": "Sie kennen diesen Tag bereits",
+    "pain1Title": "Buchungen in Ihren DMs",
+    "pain1Body": "Kunden schreiben um 23 Uhr. Sie machen einen Screenshot, versprechen, morgen in den Kalender zu schauen, und vergessen es bis zum Morgen.",
+    "pain2Title": "Notizen an drei Orten",
+    "pain2Body": "Welche Farbformel wurde beim letzten Mal verwendet? Es steht in einer Notiz, einer Textnachricht oder auf der Rückseite einer Quittung — irgendwo.",
+    "pain3Title": "Einnahmen am Monatsende rekonstruiert",
+    "pain3Body": "\"Was habe ich diese Woche eigentlich verdient?\" Sie setzen es aus PayPal, Bargeld und Kunden, die beim nächsten Mal zahlen wollen, zusammen."
+  },
+  "inbox": {
+    "title": "Der Posteingang, der bleibt, bis Sie handeln",
+    "body": "Eine Benachrichtigung sagt Ihnen, dass etwas passiert ist. Der Posteingang behält es, bis Sie es erledigen. Unbestätigte Buchungen, unbezahlte Termine, Kunden, die eine Nachbetreuung benötigen — eine Liste für das, was noch Ihre Entscheidung erfordert.",
+    "caption": "Beispieldaten",
+    "detail": "Eine Liste für das, was Ihre Entscheidung erfordert — es bleibt dort, bis Sie es lösen, nicht nur bis Sie es lesen."
+  },
+  "booking": {
+    "title": "Ein Link für Ihre Bio",
+    "body": "Teilen Sie einen Link. Kunden wählen eine Leistung, eine Person und eine Zeit. Packen Sie ihn in Ihre Bio, senden Sie ihn per DM, drucken Sie ihn auf eine Karte — er gehört Ihnen.",
+    "detail": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt über Ihren Link."
+  },
+  "money": {
+    "title": "Finanzen, die Sinn ergeben",
+    "body": "Abgeschlossene Arbeit und erhaltenes Geld werden getrennt erfasst — so bleibt die Zahl real. Ein abgeschlossener Termin ist kein Umsatz, bis jemand tatsächlich bezahlt. Perelai vermischt beides nicht.",
+    "caption": "Beispieldaten",
+    "detail": "Einnahmen, Kosten und was noch aussteht — ohne Tabellenkalkulation."
+  },
+  "setup": {
+    "eyebrow": "So funktioniert es",
+    "title": "An einem Abend eingerichtet",
+    "body": "Keine Wochenend-Migration. Wählen Sie Ihr Gewerbe, importieren Sie Ihre Kunden, teilen Sie Ihren Link.",
+    "step1Title": "Wählen Sie Ihr Gewerbe",
+    "step1Body": "32 wählbare Geschäftstypen, jeweils mit einer bearbeitbaren Leistungsliste. Relevante Vorlagen enthalten auch Zusatzleistungen und verknüpfte Kosten.",
+    "step2Title": "Bringen Sie Ihre Kunden mit",
+    "step2Body": "Importieren Sie Kontakte von Ihrem Telefon per vCard. Verbinden Sie Ihren Google Kalender und halten Sie beide Seiten synchron.",
+    "step3Title": "Teilen Sie Ihren Buchungslink",
+    "step3Body": "Ein Link in Ihrer Bio. Kunden buchen direkt über Ihren eigenen Link."
+  },
+  "not": {
+    "title": "Was Perelai nicht ist",
+    "body": "Wenn Sie eines der folgenden Dinge benötigen, sind wir nicht die Richtigen — und das sagen wir Ihnen lieber direkt.",
+    "item1Title": "Keine Buchhaltungssoftware",
+    "item1Body": "Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung.",
+    "item2Title": "Kein Marktplatz",
+    "item2Body": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt und ohne Marktplatz-Vermittler.",
+    "item3Title": "Kein medizinisches Aktensystem",
+    "item3Body": "Keine klinischen Aufzeichnungen, keine Diagnoseverfolgung, kein Patientenmanagement."
+  },
+  "nicheRouter": {
+    "title": "Finden Sie Ihr Gewerbe",
+    "body": "Seiten, die für Ihre tatsächliche Arbeitsweise entwickelt wurden.",
+    "coloristsLabel": "Für unabhängige Coloristen",
+    "coloristsDescription": "Buchungen, Kunden und Cashflow für Coloristen, die nach ihren eigenen Regeln arbeiten.",
+    "lashArtistsLabel": "Für unabhängige Lash Artists",
+    "lashArtistsDescription": "Buchungen, Kundenarbeit und finanzielle Übersicht für Lash Artists, die nach ihren eigenen Regeln arbeiten."
+  },
+  "faq": {
+    "title": "Fragen",
+    "q1": "Wie buchen Kunden bei mir?",
+    "a1": "Teilen Sie Ihren direkten Buchungslink. Kunden wählen eine Leistung und eine Zeit direkt auf Ihrer Seite.",
+    "q2": "Was passiert direkt nach der Anmeldung?",
+    "a2": "Sie bestätigen Ihre E-Mail, dann folgt eine kurze Einrichtung: Ihr Gewerbe, Ihre Leistungen, Ihr Team (falls vorhanden) und optionale Importe.",
+    "q3": "Sind meine Leistungen bereits vorhanden?",
+    "a3": "Ja — jeder wählbare Geschäftstyp beginnt mit einer bearbeitbaren Leistungs- oder Artikelliste. Relevante Vorlagen enthalten auch Zusatzleistungen und verknüpfte Kosten.",
+    "q4": "Kann ich meine Kunden und meinen Kalender übernehmen?",
+    "a4": "Ja: Kontakte von Ihrem Telefon (vCard) und Zwei-Wege-Synchronisierung mit Google Kalender.",
+    "q5": "Kann ich mehrere Leistungen und Zusatzleistungen verwalten?",
+    "a5": "Ja. Jede Vorlage enthält wählbare Leistungen und relevante Optionen für Zusatzleistungen.",
+    "q6": "Ist dies eine Buchhaltungssoftware?",
+    "a6": "Nein. Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung."
+  },
+  "closing": {
+    "title": "Ihre Kunden, Buchungen und Einnahmen — an einem Ort",
+    "body": "An einem Abend eingerichtet.",
+    "cta": "Arbeitsbereich erstellen",
+    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
+  },
+  "footer": {
+    "description": "Buchungs-, Kunden- und Finanzsoftware für unabhängige Dienstleister.",
+    "product": "Produkt",
+    "company": "Rechtliches",
+    "forColorists": "Für unabhängige Coloristen",
+    "forLashArtists": "Für unabhängige Lash Artists",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen"
+  }
+}

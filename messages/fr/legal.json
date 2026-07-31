@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Projet juridique — Founding Beta",
+  "lastUpdated": "Dernière mise à jour : {date}",
+  "draftTitle": "Brouillon.",
+  "draftBody": "Cette page est en cours de finalisation pendant la phase Founding Beta de Perelai. La version actuelle est en vigueur au {date} ; nous informerons les utilisateurs inscrits par e-mail avant toute modification majeure.",
+  "questions": "Questions :",
+  "bindingNotice": "La version anglaise fait foi juridiquement. Le texte définitif approuvé doit remplacer ce projet avant l'ouverture des inscriptions publiques.",
+  "englishOnlyNotice": "Ce projet n'est disponible qu'en anglais. Le texte définitif sera publié dans toutes les langues prises en charge.",
+  "backHome": "Retour à Perelai",
+  "returnTo": {
+    "login": "Retour à la connexion",
+    "register": "Retour à l'inscription",
+    "forgot": "Retour à la réinitialisation du mot de passe"
+  }
+}

@@ -17,6 +17,7 @@ interface MockFinanceScreenProps {
  */
 export function MockFinanceScreen({ dataset, className }: MockFinanceScreenProps) {
   return (
+    <div className="mx-auto w-full max-w-[460px]">
     <div className={cn("flex flex-col", className)} aria-hidden="true">
       {/* Period navigator */}
       <div className="mb-3 flex items-center justify-between gap-2">
@@ -41,7 +42,7 @@ export function MockFinanceScreen({ dataset, className }: MockFinanceScreenProps
       <MockTrendChart dataset={dataset} gradientId="heroProfitAreaGradient" />
 
       <MockKpiTiles dataset={dataset} className="mt-4" />
-
+      </div>
       {/* Finance feed — the transaction list the app renders under the dashboard */}
       <div className="mt-4 space-y-2">
         {dataset.feed.map((item, index) => {
