@@ -14,6 +14,11 @@ import {
   RAIL_PRIMARY_DESTINATIONS,
   railLabel,
 } from "@/components/mock/MockDesktopRail"
+import {
+  DESKTOP_PANE_EMPTY_STATE_UI_KEYS,
+  MockDesktopPaneEmptyState,
+  paneEmptyStateLabel,
+} from "@/components/mock/MockDesktopPaneEmptyState"
 import { MockDesktopShell } from "@/components/mock/MockDesktopShell"
 import { MockMobileShell } from "@/components/mock/MockMobileShell"
 import uiStrings from "@/data/app-ui-strings.generated.json"
@@ -28,6 +33,13 @@ const datasetFor = (locale: (typeof PUBLISHED_LOCALES)[number]) =>
   buildAppScreenDataset(TEMPLATE, locale, undefined, REFERENCE)
 
 const ladderLabels = { summary: "One workspace", paid: "Paid", pending: "Unpaid" }
+
+/** React escapes `'` and `&` in text nodes; French and Turkish labels carry both. */
+const decodeEntities = (markup: string) =>
+  markup
+    .replaceAll("&#x27;", "'")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&amp;", "&")
 
 describe("rail label sourcing", () => {
   it("declares every key it renders and resolves each in every published locale", () => {
@@ -97,6 +109,91 @@ describe("shells render in every published locale", () => {
       expect(mobile).toContain(railLabel(locale, "nav.calendar"))
     })
   }
+})
+
+describe("the contextual pane's passive empty state", () => {
+  /**
+   * `CalendarPage` fills the third pane with a selected record or the create
+   * sheet, and falls back to `DesktopPaneEmptyState` when neither exists. The
+   * shell shows that fallback so the wide composition is the state a fresh
+   * workspace actually lands in.
+   */
+  it("declares every key it renders and resolves each in every published locale", () => {
+    for (const key of DESKTOP_PANE_EMPTY_STATE_UI_KEYS) {
+      for (const locale of PUBLISHED_LOCALES) {
+        expect(
+          (uiStrings.locales[locale] as Record<string, string>)[key],
+          `${key} @ ${locale}`,
+        ).toBeTruthy()
+      }
+    }
+  })
+
+  for (const locale of PUBLISHED_LOCALES) {
+    it(`renders generated product labels for ${locale}`, () => {
+      const markup = decodeEntities(
+        renderToStaticMarkup(createElement(MockDesktopPaneEmptyState, { locale })),
+      )
+
+      for (const key of DESKTOP_PANE_EMPTY_STATE_UI_KEYS) {
+        expect(markup).toContain(paneEmptyStateLabel(locale, key))
+      }
+    })
+  }
+
+  it("appears in the desktop shell's third pane, not a second finance screen", () => {
+    const markup = decodeEntities(
+      renderToStaticMarkup(
+        createElement(MockDesktopShell, {
+          dataset: datasetFor("en"),
+          paidLabel: "Paid",
+          pendingLabel: "Unpaid",
+        }),
+      ),
+    )
+
+    expect(markup).toContain(paneEmptyStateLabel("en", "calendar.desktop_create_title"))
+    expect(markup).toContain(paneEmptyStateLabel("en", "calendar.fab_add_visit"))
+  })
+
+  it("is omitted with the contextual pane below the wide threshold", () => {
+    const markup = decodeEntities(
+      renderToStaticMarkup(
+        createElement(MockDesktopShell, {
+          dataset: datasetFor("en"),
+          paidLabel: "Paid",
+          pendingLabel: "Unpaid",
+          contextualPane: false,
+        }),
+      ),
+    )
+
+    expect(markup).not.toContain(
+      paneEmptyStateLabel("en", "calendar.desktop_create_title"),
+    )
+  })
+
+  it("stays non-interactive inside the aria-hidden shell", () => {
+    const source = readFileSync(
+      resolve(ROOT, "components/mock/MockDesktopPaneEmptyState.tsx"),
+      "utf8",
+    )
+
+    // A real button inside an aria-hidden subtree is a focus trap to nowhere.
+    expect(source).not.toMatch(/<button|onClick|href=/)
+    // Product labels are read through the accessor, never written as literals.
+    expect(source).not.toContain("Plan your next entry")
+    expect(source).not.toContain("Add visit")
+  })
+
+  it("throws rather than rendering a blank pane when a string is missing", () => {
+    expect(() =>
+      paneEmptyStateLabel(
+        "en",
+        "calendar.does_not_exist" as (typeof DESKTOP_PANE_EMPTY_STATE_UI_KEYS)[number],
+      ),
+    ).toThrow(/Missing pane empty-state UI string/)
+  })
 })
 
 describe("the density ladder", () => {

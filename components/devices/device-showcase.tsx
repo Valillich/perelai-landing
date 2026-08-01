@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Monitor, Smartphone, Tablet } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { DeviceFrame } from "@/components/devices/device-frame"
@@ -11,12 +10,6 @@ import { MockMobileShell } from "@/components/mock/MockMobileShell"
 import type { PublishedLocale } from "@/i18n/locales"
 import type { AppScreenDataset } from "@/lib/app-screen-mock"
 import { cn } from "@/lib/cn"
-
-const SCREENSHOT = {
-  src: "/product/devices/desktop-calendar-1440.webp",
-  width: 1440,
-  height: 900,
-} as const
 
 interface DeviceShowcaseProps {
   locale: PublishedLocale
@@ -31,18 +24,12 @@ interface DeviceShowcaseProps {
  * Tabs show one panel at a time; every panel stays in the server-rendered DOM.
  */
 export function DeviceShowcase({
-  locale,
   dataset,
   paidLabel,
   pendingLabel,
   className,
 }: DeviceShowcaseProps) {
   const t = useTranslations("devices.showcase")
-  const screenshotIsEnglish = true
-  const screenshotCaption =
-    locale === "en" || !screenshotIsEnglish
-      ? t("screenshotCaption")
-      : t("screenshotCaptionEnglishUi")
 
   const panels = [
     {
@@ -67,7 +54,7 @@ export function DeviceShowcase({
       body: t("ipad.body"),
       icon: Tablet,
       visual: (
-        <DeviceFrame size="tablet" className="mx-auto w-full min-w-[620px] max-w-[820px]">
+        <DeviceFrame size="tablet" className="mx-auto w-full min-w-[720px] max-w-[820px]">
           <MockDesktopShell
             dataset={dataset}
             paidLabel={paidLabel}
@@ -83,13 +70,18 @@ export function DeviceShowcase({
       title: t("desktop.title"),
       body: t("desktop.body"),
       icon: Monitor,
+      // The full wide-desktop view: rail, Inbox, calendar, and the contextual
+      // pane in the passive state the app itself shows before anything is
+      // selected. Rendered at the product's own `85rem` threshold, so the
+      // third pane appears for the same reason it does in the app.
       visual: (
         <div className="overflow-x-auto">
-          <DeviceFrame size="desktop" className="min-w-[64rem]">
+          <DeviceFrame size="desktop">
             <MockDesktopShell
               dataset={dataset}
               paidLabel={paidLabel}
               pendingLabel={pendingLabel}
+              className="min-h-[520px] min-w-[85rem]"
             />
           </DeviceFrame>
         </div>

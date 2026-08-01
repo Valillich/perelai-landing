@@ -143,7 +143,7 @@ export function DeviceEmphasisPanel({
       hidden={!active}
       data-active={active ? "true" : "false"}
       className={cn(
-        "rounded-[20px] border border-border bg-background p-4 sm:p-5 overflow-scroll",
+        "rounded-[20px] border border-border bg-background p-4 sm:p-5 overflow-auto",
         active && "ring-1 ring-brand-600/20",
         className,
       )}

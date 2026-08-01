@@ -38,7 +38,9 @@ export function DeviceFrame({ size, children, className }: DeviceFrameProps) {
         className,
       )}
     >
-      <div className={cn("flex min-w-0 flex-1 overflow-hidden", style.inner)}>
+      <div className={cn("flex min-w-0 flex-1 overflow-hidden", 
+        size === "desktop" && "overflow-x-auto scrollbar-hide",
+        style.inner)}>
         {children}
       </div>
     </div>

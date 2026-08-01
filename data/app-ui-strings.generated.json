@@ -2,6 +2,9 @@
   "sourceCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
   "generatedAt": "2026-08-01T12:44:12+02:00",
   "allowlist": [
+    "calendar.desktop_create_description",
+    "calendar.desktop_create_title",
+    "calendar.fab_add_visit",
     "chart_labels.cost",
     "chart_labels.profit",
     "chart_labels.revenue",
@@ -209,6 +212,9 @@
   ],
   "locales": {
     "en": {
+      "calendar.desktop_create_description": "Choose the entry type for the current booking mode.",
+      "calendar.desktop_create_title": "Plan your next entry",
+      "calendar.fab_add_visit": "Add visit",
       "chart_labels.cost": "Cost",
       "chart_labels.profit": "Profit",
       "chart_labels.revenue": "Revenue",
@@ -415,6 +421,9 @@
       "year": "Year"
     },
     "uk": {
+      "calendar.desktop_create_description": "Оберіть тип запису для поточного режиму бронювання.",
+      "calendar.desktop_create_title": "Сплануйте наступний запис",
+      "calendar.fab_add_visit": "Додати візит",
       "chart_labels.cost": "Витрати",
       "chart_labels.profit": "Прибуток",
       "chart_labels.revenue": "Дохід",
@@ -621,6 +630,9 @@
       "year": "Рік"
     },
     "pl": {
+      "calendar.desktop_create_description": "Wybierz typ wpisu dla bieżącego trybu rezerwacji.",
+      "calendar.desktop_create_title": "Zaplanuj następny wpis",
+      "calendar.fab_add_visit": "Dodaj wizytę",
       "chart_labels.cost": "Koszt",
       "chart_labels.profit": "Zysk",
       "chart_labels.revenue": "Dochód",
@@ -827,6 +839,9 @@
       "year": "Rok"
     },
     "ru": {
+      "calendar.desktop_create_description": "Выберите тип записи для текущего режима бронирования.",
+      "calendar.desktop_create_title": "Запланируйте следующую запись",
+      "calendar.fab_add_visit": "Добавить визит",
       "chart_labels.cost": "Расходы",
       "chart_labels.profit": "Прибыль",
       "chart_labels.revenue": "Выручка",
@@ -1033,6 +1048,9 @@
       "year": "Год"
     },
     "es": {
+      "calendar.desktop_create_description": "Elige el tipo de entrada para el modo de reserva actual.",
+      "calendar.desktop_create_title": "Planifica tu próxima entrada",
+      "calendar.fab_add_visit": "Añadir visita",
       "chart_labels.cost": "Costo",
       "chart_labels.profit": "Ganancia",
       "chart_labels.revenue": "Ganancia",
@@ -1239,6 +1257,9 @@
       "year": "Año"
     },
     "fr": {
+      "calendar.desktop_create_description": "Choisissez le type d'entrée pour le mode de réservation actuel.",
+      "calendar.desktop_create_title": "Planifiez votre prochaine entrée",
+      "calendar.fab_add_visit": "Ajouter une visite",
       "chart_labels.cost": "Coût",
       "chart_labels.profit": "Profit",
       "chart_labels.revenue": "Revenu",
@@ -1445,6 +1466,9 @@
       "year": "Année"
     },
     "de": {
+      "calendar.desktop_create_description": "Wählen Sie den Eintragstyp für den aktuellen Buchungsmodus.",
+      "calendar.desktop_create_title": "Planen Sie Ihren nächsten Eintrag",
+      "calendar.fab_add_visit": "Termin hinzufügen",
       "chart_labels.cost": "Kosten",
       "chart_labels.profit": "Profitieren",
       "chart_labels.revenue": "Einnahmen",
@@ -1651,6 +1675,9 @@
       "year": "Jahr"
     },
     "pt": {
+      "calendar.desktop_create_description": "Escolha o tipo de entrada para o modo atual.",
+      "calendar.desktop_create_title": "Planeje seu próximo agendamento",
+      "calendar.fab_add_visit": "Adicionar visita",
       "chart_labels.cost": "Custo",
       "chart_labels.profit": "Lucro",
       "chart_labels.revenue": "Faturamento",
@@ -1857,6 +1884,9 @@
       "year": "Ano"
     },
     "tr": {
+      "calendar.desktop_create_description": "Mevcut mod için kayıt türünü seçin.",
+      "calendar.desktop_create_title": "Sonraki kaydınızı planlayın",
+      "calendar.fab_add_visit": "Randevu ekle",
       "chart_labels.cost": "Maliyet",
       "chart_labels.profit": "Kâr",
       "chart_labels.revenue": "Gelir",

@@ -75,6 +75,14 @@ const FIXED_UI_KEYS = [
   "desktop_navigation.contextual_payment_accounts",
   "desktop_navigation.contextual_memberships",
   "desktop_navigation.contextual_rental_resources",
+
+  // DVC4 — the desktop contextual pane's passive empty state, as CalendarPage
+  // renders it when nothing is selected. These are visible product strings, so
+  // the same drift rule applies: generated, never hand-typed. They sit in the
+  // terminology-profile namespace (beauty.json et al.), like `nav.calendar`.
+  "calendar.desktop_create_title",
+  "calendar.desktop_create_description",
+  "calendar.fab_add_visit",
 ]
 
 /**

@@ -98,7 +98,11 @@ describe("devices caption and alt contracts", () => {
     })
   }
 
-  it("ships the honesty-anchor screenshot assets", () => {
+  it("keeps the desktop capture on disk as claim evidence", () => {
+    // The capture no longer ships to visitors — the showcase renders live DOM
+    // instead — but DVC2's evidence set still gates the desktop multi-pane
+    // claim, so the asset and its manifest row must survive. See
+    // `docs/device-capture-manifest.md` §7 for the open §8.5 contract gap.
     expect(existsSync(join(ROOT, "public/product/devices/desktop-calendar-1440.webp"))).toBe(true)
     expect(existsSync(join(ROOT, "public/product/devices/desktop-calendar-1440.jpg"))).toBe(true)
   })
@@ -131,13 +135,13 @@ describe("device presentation source contracts", () => {
     expect(pageSource).toContain("limitations.noStore")
   })
 
-  it("composes DVC2R shells and the honesty screenshot, without store badges", () => {
+  it("composes DVC2R shells only, without store badges", () => {
     expect(showcaseSource).toContain("MockMobileShell")
     expect(showcaseSource).toContain("MockDesktopShell")
-    expect(showcaseSource).toContain("next/image")
-    expect(showcaseSource).toContain("/product/devices/desktop-calendar-1440.webp")
-    expect(showcaseSource).toContain("screenshotCaption")
-    expect(showcaseSource).toContain("screenshotCaptionEnglishUi")
+    // Every showcase visual is rendered DOM, so it follows the theme and the
+    // reader's locale. The capture manifest records that no screenshot ships.
+    expect(showcaseSource).not.toContain("next/image")
+    expect(showcaseSource).not.toContain("/product/devices/")
     expect(showcaseSource).not.toMatch(/App Store|Google Play|badge/i)
     expect(pageSource).toContain("MockDesktopShell")
     expect(pageSource).toContain("DeviceShowcase")

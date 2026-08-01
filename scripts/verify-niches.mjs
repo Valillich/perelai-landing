@@ -24,7 +24,26 @@ const MOCK_SCAN_PATHS = [
   path.join(ROOT, "components/mock"),
   path.join(ROOT, "lib/mock-data.ts"),
 ]
-const DESKTOP_RAIL_PATH = path.join(ROOT, "components/mock/MockDesktopRail.tsx")
+/**
+ * Mock components that render product strings from an exported key array.
+ * Each one is parsed and every key checked against the generated strings for
+ * every published locale, so renaming a label in the app fails the build here
+ * instead of silently drifting on the marketing site.
+ */
+const DECLARED_KEY_SOURCES = [
+  {
+    component: "MockDesktopRail",
+    file: path.join(ROOT, "components/mock/MockDesktopRail.tsx"),
+    exportName: "DESKTOP_RAIL_UI_KEYS",
+    emptyMessage: "the rail would render hand-typed labels",
+  },
+  {
+    component: "MockDesktopPaneEmptyState",
+    file: path.join(ROOT, "components/mock/MockDesktopPaneEmptyState.tsx"),
+    exportName: "DESKTOP_PANE_EMPTY_STATE_UI_KEYS",
+    emptyMessage: "the contextual pane would render hand-typed labels",
+  },
+]
 
 const errors = []
 const warnings = []
@@ -167,42 +186,40 @@ function verifyUiStringAllowlist(strings, referencedKeys) {
  * always runs; only the live sibling freshness comparison is skipped when the
  * app repo is absent.
  */
-function verifyDesktopRailKeys(strings) {
-  if (!existsSync(DESKTOP_RAIL_PATH)) {
-    fail(
-      `missing ${path.relative(ROOT, DESKTOP_RAIL_PATH)} — the rail key guard cannot run`,
-    )
-    return
+function verifyDeclaredMockKeys(strings, spec) {
+  const relative = path.relative(ROOT, spec.file)
+
+  if (!existsSync(spec.file)) {
+    fail(`missing ${relative} — the ${spec.component} key guard cannot run`)
+    return 0
   }
 
-  const source = readFileSync(DESKTOP_RAIL_PATH, "utf8")
+  const source = readFileSync(spec.file, "utf8")
   const declaration = source.match(
-    /DESKTOP_RAIL_UI_KEYS\s*=\s*\[([\s\S]*?)\]\s*as\s*const/,
+    new RegExp(`${spec.exportName}\\s*=\\s*\\[([\\s\\S]*?)\\]\\s*as\\s*const`),
   )
   if (!declaration) {
-    fail(
-      `components/mock/MockDesktopRail.tsx does not export a DESKTOP_RAIL_UI_KEYS [...] as const array`,
-    )
-    return
+    fail(`${relative} does not export a ${spec.exportName} [...] as const array`)
+    return 0
   }
 
-  const railKeys = [...declaration[1].matchAll(/["']([^"']+)["']/g)].map((m) => m[1])
-  if (railKeys.length === 0) {
-    fail("DESKTOP_RAIL_UI_KEYS is empty — the rail would render hand-typed labels")
-    return
+  const keys = [...declaration[1].matchAll(/["']([^"']+)["']/g)].map((m) => m[1])
+  if (keys.length === 0) {
+    fail(`${spec.exportName} is empty — ${spec.emptyMessage}`)
+    return 0
   }
 
-  for (const key of railKeys) {
+  for (const key of keys) {
     for (const locale of PUBLISHED_LOCALES) {
       if (!strings.locales?.[locale]?.[key]) {
         fail(
-          `MockDesktopRail references key "${key}" missing from app-ui-strings locale=${locale}`,
+          `${spec.component} references key "${key}" missing from app-ui-strings locale=${locale}`,
         )
       }
     }
   }
 
-  return railKeys.length
+  return keys.length
 }
 
 function main() {
@@ -216,7 +233,10 @@ function main() {
 
   const referencedKeys = collectReferencedKeys(MOCK_SCAN_PATHS)
   verifyUiStringAllowlist(strings, referencedKeys)
-  const railKeyCount = verifyDesktopRailKeys(strings)
+  const declaredKeyCount = DECLARED_KEY_SOURCES.reduce(
+    (total, spec) => total + verifyDeclaredMockKeys(strings, spec),
+    0,
+  )
 
   const beforeCommit = catalog.sourceCommit
   if (existsSync(APP_REPO)) {
@@ -242,7 +262,7 @@ function main() {
   }
 
   console.log(
-    `verify-niches: ok (${NICHE_PAGES.length} pages, ${referencedKeys.size} mock keys, ${railKeyCount ?? 0} rail keys, ${Object.keys(strings.locales).length} locales)`,
+    `verify-niches: ok (${NICHE_PAGES.length} pages, ${referencedKeys.size} mock keys, ${declaredKeyCount} declared product labels, ${Object.keys(strings.locales).length} locales)`,
   )
 }
 

@@ -1,4 +1,5 @@
 import { MockCalendarScreen } from "@/components/mock/MockCalendarScreen"
+import { MockDesktopPaneEmptyState } from "@/components/mock/MockDesktopPaneEmptyState"
 import { MockDesktopRail, type RailPrimaryId } from "@/components/mock/MockDesktopRail"
 import { MockFinanceScreen } from "@/components/mock/MockFinanceScreen"
 import { MockInboxTriage } from "@/components/mock/MockInboxTriage"
@@ -16,6 +17,12 @@ interface MockDesktopShellProps {
    * shows from 1360px.
    */
   contextualPane?: boolean
+  /**
+   * What the third pane holds. `empty` is the app's passive state — what a
+   * fresh workspace actually shows before anything is selected; `finance`
+   * fills it with a second populated screen.
+   */
+  contextualPaneContent?: "empty" | "finance"
   className?: string
 }
 
@@ -45,6 +52,7 @@ export function MockDesktopShell({
   pendingLabel,
   activeRail = "calendar",
   contextualPane = true,
+  contextualPaneContent = "empty",
   className,
 }: MockDesktopShellProps) {
   return (
@@ -59,12 +67,12 @@ export function MockDesktopShell({
 
       <div className="flex min-w-0 flex-1">
         {/* List pane — the Operational Inbox, which is what the app puts here. */}
-        <div className="min-w-0 flex-1 border-r border-border p-3">
+        <div className={cn("min-w-0 border-r border-border p-3", contextualPane && contextualPaneContent === "empty" ? "flex-[0.5]" : "flex-1")}>
           <MockInboxTriage dataset={dataset.base} showCaption={false} />
         </div>
 
         {/* Detail pane — the day the visitor is looking at. */}
-        <div className="min-w-0 flex-[1.15] p-3">
+        <div className={cn("min-w-0 p-3", contextualPane && contextualPaneContent === "empty" ? "flex-[0.5]" : "flex-[1.15]")}>
           <MockCalendarScreen
             dataset={dataset}
             paidLabel={paidLabel}
@@ -72,9 +80,15 @@ export function MockDesktopShell({
           />
         </div>
 
+        {/* Contextual pane — `CalendarPage` renders the selected record or the
+            create sheet here, and `DesktopPaneEmptyState` when neither exists. */}
         {contextualPane ? (
-          <div className="hidden min-w-0 flex-1 border-l border-border p-3 @[85rem]:block">
-            <MockFinanceScreen dataset={dataset} />
+          <div className={cn("hidden min-w-0 border-l border-border p-3 @[85rem]:block", contextualPane && contextualPaneContent === "empty" ? "flex-[0.5]" : "flex-1")}>
+            {contextualPaneContent === "finance" ? (
+              <MockFinanceScreen dataset={dataset} />
+            ) : (
+              <MockDesktopPaneEmptyState locale={dataset.locale} />
+            )}
           </div>
         ) : null}
       </div>
