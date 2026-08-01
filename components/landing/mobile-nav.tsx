@@ -2,6 +2,7 @@
 
 import { useRef, type ReactNode } from "react"
 import { Menu, X } from "lucide-react"
+import { analytics } from "@/lib/analytics"
 import { cn } from "@/lib/cn"
 
 export interface MobileNavItem {
@@ -44,6 +45,16 @@ export function MobileNav({
     if (detailsRef.current) detailsRef.current.open = false
   }
 
+  const handleItemClick = (item: MobileNavItem) => {
+    if (!item.current && item.href.includes("/install")) {
+      analytics.track({
+        name: "install_help_clicked",
+        properties: { source_surface: "header" },
+      })
+    }
+    close()
+  }
+
   return (
     <details
       ref={detailsRef}
@@ -71,7 +82,7 @@ export function MobileNav({
               key={item.href}
               href={item.href}
               aria-current={item.current ? "page" : undefined}
-              onClick={close}
+              onClick={() => handleItemClick(item)}
               className={cn(
                 "rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors",
                 item.current
@@ -93,7 +104,7 @@ export function MobileNav({
                   key={item.href}
                   href={item.href}
                   aria-current={item.current ? "page" : undefined}
-                  onClick={close}
+                  onClick={() => handleItemClick(item)}
                   className={cn(
                     "block rounded-xl px-3 py-2.5 text-[14px] font-medium transition-colors",
                     item.current

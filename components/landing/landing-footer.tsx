@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
+import { InstallHelpLink } from "@/components/devices/install-help-link"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { Link } from "@/i18n/navigation"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -12,6 +13,8 @@ export function LandingFooter({
   canonicalPath?: string
 }) {
   const t = useTranslations("home.footer")
+  // Same reviewed label the header uses, so the two entry points match.
+  const tDevices = useTranslations("devices.nav")
 
   return (
     <footer className="border-t border-border px-4 py-14 sm:px-6">
@@ -53,6 +56,18 @@ export function LandingFooter({
                 >
                   {t("forLashArtists")}
                 </Link>
+              </li>
+              {/* Reachable from every public route, so `/install` is never an
+                  orphan even for visitors who arrive deep in the site. */}
+              <li>
+                <InstallHelpLink
+                  href="/install"
+                  sourceSurface="footer"
+                  isCurrent={canonicalPath === "/install"}
+                  className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {tDevices("label")}
+                </InstallHelpLink>
               </li>
             </ul>
           </div>

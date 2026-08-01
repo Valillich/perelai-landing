@@ -7,6 +7,7 @@
     "features": "Features",
     "how": "How it works",
     "pricing": "Pricing",
+    "devices": "Devices",
     "login": "Log in",
     "start": "Create workspace",
     "start_short": "Create workspace",
@@ -20,6 +21,7 @@
     "signup": "Create workspace",
     "how": "See how it works",
     "micro": "You'll get a verification email to finish setting up.",
+    "deviceMicro": "Perelai runs in your browser. Installing it is optional.",
     "imageAlt": "Perelai workspace showing the operational Inbox, upcoming visits, and finance overview — example data",
     "imageCaption": "Example data",
     "showcase": {
@@ -55,6 +57,13 @@
     "body": "Completed work and received money are tracked separately — so the number is real. A completed visit is not revenue until someone actually pays. Perelai does not blur the two.",
     "caption": "Example data",
     "detail": "Revenue, costs and what's still outstanding — without a spreadsheet."
+  },
+  "devices": {
+    "title": "One address, one login",
+    "body": "Perelai runs in a web browser. Sign in at perelai.app from wherever you are working and you are in the same workspace. Installing it is optional, and there is no App Store or Google Play listing.",
+    "caption": "Example data",
+    "summary": "One Perelai workspace, opened from a supported browser on a phone, a tablet or a computer.",
+    "link": "How you open Perelai"
   },
   "setup": {
     "eyebrow": "How it works",
@@ -98,7 +107,11 @@
     "q5": "Can I manage multiple services and add-ons?",
     "a5": "Yes. Each template includes selectable services and relevant add-on options.",
     "q6": "Is this accounting software?",
-    "a6": "No. Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice."
+    "a6": "No. Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice.",
+    "q7": "Does Perelai have an iPhone or Android app?",
+    "a7": "Perelai is booking, client and money software for independent service professionals. Perelai is not listed on the App Store or on Google Play; it runs in a web browser at perelai.app instead. Installing Perelai from a browser is optional and not offered by every browser. Perelai needs an internet connection.",
+    "q8": "Can I use Perelai on a laptop or an iPad?",
+    "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
   },
   "closing": {
     "title": "Your clients, bookings and cash flow — in one place",
@@ -112,6 +125,7 @@
     "company": "Legal",
     "forColorists": "For independent colorists",
     "forLashArtists": "For independent lash artists",
+    "devices": "Devices",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

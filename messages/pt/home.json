@@ -19,7 +19,7 @@
     "body": "Chega de tentar reconstruir sua semana entre mensagens diretas, anotações e memória. Uma lista com o que falta fazer, um número em que você pode confiar, um único link para a sua bio.",
     "signup": "Criar espaço de trabalho",
     "how": "Ver como funciona",
-    "micro": "Você receberá um e-mail de confirmação para concluir a instalação.",
+    "micro": "Você receberá um e-mail de verificação para concluir a configuração.",
     "imageAlt": "Espaço de trabalho do Perelai mostrando a Entrada Operacional, próximas visitas e resumo financeiro — dados de exemplo",
     "imageCaption": "Dados de exemplo",
     "showcase": {
@@ -28,7 +28,8 @@
       "financeTab": "Finanças",
       "paid": "Pago",
       "pending": "Pendente"
-    }
+    },
+    "deviceMicro": "O Perelai funciona no seu navegador. A instalação é opcional."
   },
   "problem": {
     "title": "Você já conhece esse dia",
@@ -98,13 +99,17 @@
     "q5": "Posso gerenciar diferentes serviços e adicionais?",
     "a5": "Sim. Cada modelo inclui opções personalizáveis de serviços e adicionais relevantes.",
     "q6": "Este é um software de contabilidade?",
-    "a6": "Não. O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, impostos ou gestão tributária."
+    "a6": "Não. O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, impostos ou gestão tributária.",
+    "q7": "O Perelai tem uma app para iPhone ou Android?",
+    "a7": "O Perelai é software de marcações, clientes e dinheiro para profissionais de serviços independentes. O Perelai não está listado na App Store nem no Google Play; funciona num navegador web em perelai.app. Instalar o Perelai a partir de um navegador é opcional e não é oferecido por todos os navegadores. O Perelai precisa de uma ligação à internet.",
+    "q8": "Posso usar o Perelai num portátil ou iPad?",
+    "a8": "Abra perelai.app num navegador suportado no seu portátil ou iPad e inicie sessão com o mesmo acesso que usa no telemóvel. Um acesso, um espaço de trabalho. É necessária uma ligação à internet."
   },
   "closing": {
     "title": "Seus clientes, agendamentos e fluxo de caixa — em um só lugar",
     "body": "Configure em uma tarde.",
     "cta": "Criar espaço de trabalho",
-    "micro": "Você receberá um e-mail de confirmação para concluir a instalação."
+    "micro": "Você receberá um e-mail de verificação para concluir a configuração."
   },
   "footer": {
     "description": "Software de agendamento, gestão de clientes e finanças para profissionais independentes.",
@@ -115,5 +120,12 @@
     "rights": "Todos os direitos reservados.",
     "privacy": "Política de Privacidade",
     "terms": "Termos de Serviço"
+  },
+  "devices": {
+    "title": "Um espaço de trabalho. A vista muda com o ecrã.",
+    "body": "Inicie sessão em perelai.app e comece a trabalhar. Instalar o Perelai é opcional e depende do seu navegador. Não há listagem na App Store nem no Google Play.",
+    "caption": "Dados de exemplo",
+    "summary": "Um espaço de trabalho Perelai, aberto a partir de um navegador suportado num telemóvel, tablet ou computador.",
+    "link": "Como abrir o Perelai"
   }
 }

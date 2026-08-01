@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai w przeglądarce: instalacja i sklepy z aplikacjami",
+    "description": "Perelai działa w przeglądarce. Instalacja jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
+    "ogAlt": "Przestrzeń kalendarza Perelai w przeglądarce — przykładowe dane"
+  },
+  "nav": {
+    "label": "Urządzenia"
+  },
+  "hero": {
+    "eyebrow": "Jak otworzyć Perelai",
+    "title": "Otwórz Perelai w przeglądarce, którą już masz.",
+    "body": "Zaloguj się na perelai.app i zacznij pracę. Instalacja Perelai jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
+    "signup": "Utwórz przestrzeń pracy",
+    "login": "Zaloguj się",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
+    "caption": "Przykładowe dane",
+    "summary": "Przestrzeń pracy Perelai na komputerze z szyną nawigacji, skrzynką i kalendarzem — przykładowe dane."
+  },
+  "showcase": {
+    "title": "Jedna przestrzeń pracy. Widok zmienia się z ekranem.",
+    "body": "Perelai ma jeden adres w sieci. Otwórz go w obsługiwanej przeglądarce, zaloguj się — i jesteś w swoim obszarze roboczym: nie szukasz osobnej wersji na każdy ekran. Im szerszy ekran, tym więcej dnia pozostaje w widoku.",
+    "caption": "Przykładowe dane",
+    "summary": "Jedna przestrzeń pracy Perelai pokazana w skupionym, szerokim i szerszym układzie z przykładowymi danymi.",
+    "tablistLabel": "Rozmiar ekranu",
+    "phone": {
+      "title": "Na telefonie",
+      "body": "Skupiony układ do pracy między klientami — jedna rzecz naraz w obsługiwanej przeglądarce mobilnej."
+    },
+    "ipad": {
+      "title": "Na tablecie",
+      "body": "Ta sama przestrzeń pracy w obsługiwanej przeglądarce tabletu. Gdy ekran jest szerszy, pojawia się więcej miejsca."
+    },
+    "desktop": {
+      "title": "Na komputerze",
+      "body": "Gdy ekran się poszerza, harmonogram, lista i bieżące zadanie mogą zostać obok siebie."
+    },
+    "screenshotCaption": "Prawdziwy produkt · Przykładowe dane",
+    "screenshotCaptionEnglishUi": "Prawdziwy produkt · Przykładowe dane · Interfejs produktu po angielsku",
+    "screenshotAlt": "Przestrzeń kalendarza Perelai na komputerze — prawdziwy produkt z przykładowymi danymi"
+  },
+  "installBenefits": {
+    "title": "Jeśli przeglądarka proponuje instalację Perelai",
+    "body": "Niektóre przeglądarki mogą dodać witrynę do ekranu głównego lub otworzyć ją we własnym oknie. Czy ta opcja się pojawi, zależy od przeglądarki i urządzenia, a Perelai nigdy tego nie wymaga.",
+    "fallbackTitle": "Przeglądarka wystarczy",
+    "fallbackBody": "Instalacja jest opcjonalna. Perelai działa w obsługiwanej przeglądarce i ta ścieżka działa niezależnie od tego, czy cokolwiek zainstalujesz."
+  },
+  "guides": {
+    "title": "Od czego zacząć",
+    "body": "Ścieżka jest wszędzie ta sama: otwórz adres w obsługiwanej przeglądarce i zaloguj się. Wszystko później jest opcjonalne.",
+    "tablistLabel": "Platforma",
+    "iphone": {
+      "title": "iPhone",
+      "body": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się. Wszystko związane z instalacją później jest opcjonalne."
+    },
+    "ipad": {
+      "title": "iPad",
+      "body": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się. Ten sam adres, to samo logowanie co gdzie indziej."
+    },
+    "android": {
+      "title": "Android",
+      "body": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się. Wszystko związane z instalacją później jest opcjonalne."
+    },
+    "desktop": {
+      "title": "Laptop i komputer",
+      "body": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się. Instalacja jest opcjonalna i nie każda przeglądarka ją oferuje."
+    },
+    "embedded": {
+      "title": "Otwarte z linku w innej aplikacji",
+      "body": "Jeśli link otwiera Perelai we wbudowanej przeglądarce innej aplikacji, otwórz perelai.app w zwykłej obsługiwanej przeglądarce i zaloguj się."
+    }
+  },
+  "limitations": {
+    "title": "Czego się spodziewać",
+    "installVaries": "Czy przeglądarka proponuje instalację Perelai, zależy od przeglądarki i urządzenia. Niektóre w ogóle tego nie oferują, a Perelai tego nie potrzebuje.",
+    "noStore": "Nie ma wpisu w App Store ani Google Play.",
+    "online": "Perelai wymaga połączenia z internetem.",
+    "browserDecides": "Ta strona opisuje ogólną ścieżkę. To Twoja przeglądarka decyduje, jaką opcję instalacji — jeśli w ogóle — Ci pokazać."
+  },
+  "faq": {
+    "title": "Pytania",
+    "q1": "Czy Perelai ma aplikację na iPhone lub Android?",
+    "a1": "Perelai to oprogramowanie do rezerwacji, klientów i pieniędzy dla niezależnych specjalistów usług. Perelai nie jest w App Store ani Google Play; działa w przeglądarce na perelai.app. Instalacja Perelai z przeglądarki jest opcjonalna i nie każda przeglądarka ją oferuje. Perelai wymaga połączenia z internetem.",
+    "q2": "Czy mogę korzystać z Perelai bez instalacji?",
+    "a2": "Tak. Perelai działa w obsługiwanej przeglądarce. Zaloguj się na perelai.app i pracuj tam — instalacja jest opcjonalna i nigdy nie jest wymagana.",
+    "q3": "Czy mogę używać Perelai na iPadzie?",
+    "a3": "Otwórz perelai.app w obsługiwanej przeglądarce na tablecie i zaloguj się tym samym kontem co gdzie indziej. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem.",
+    "q4": "Czy mogę używać Perelai na laptopie lub komputerze?",
+    "a4": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się tym samym kontem co gdzie indziej. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem.",
+    "q5": "Dlaczego nie widzę opcji instalacji Perelai?",
+    "a5": "Decydują o tym przeglądarki, nie Perelai. Niektóre oferują dodanie strony do ekranu głównego lub otwarcie we własnym oknie, inne nigdy. Perelai i tak tego nie wymaga.",
+    "q6": "Czy Perelai działa offline?",
+    "a6": "Nie. Perelai wymaga połączenia z internetem."
+  },
+  "cta": {
+    "title": "Utwórz swoją przestrzeń pracy",
+    "body": "Zacznij w przeglądarce ze swoim zawodem, usługami i klientami.",
+    "signup": "Utwórz przestrzeń pracy",
+    "login": "Zaloguj się",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+  },
+  "compact": {
+    "text": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna.",
+    "link": "Jak otworzyć Perelai"
+  }
+}

@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v1
-**Last updated:** 2026-07-29
+**Document version:** v2
+**Last updated:** 2026-08-01
 
 ## Product Overview
 **One-liner:** Your clients, bookings and cash flow — finally in one place.
@@ -10,7 +10,7 @@
 
 **Product category:** Booking + client + money software for independent service professionals.
 
-**Product type:** SaaS (web app; mobile-first, installable in browser).
+**Product type:** SaaS, delivered browser-first as a web application. Installation is optional and depends on the browser and platform; it is not required to use Perelai. There is no current App Store or Google Play listing. Specific device-install, standalone-window, and notification claims remain governed by `docs/device-claim-contract.md`.
 
 **Business model:** Founding beta — no billing system, no Stripe, no subscriptions or trials. Registration ends in email verification; no card collected today.
 
@@ -74,6 +74,8 @@
 
 **Why customers choose us:** One list of what still needs doing; one number you can trust; a link you can put in your bio — without marketplace fees or blurred revenue.
 
+**Platform positioning:** Browser-first access is a compatibility fact, not a product differentiator or a comparison with native applications. Keep it subordinate to the clients, bookings, and cash-flow proposition; only state device-specific facts that are `PASS` in `docs/device-claim-contract.md`.
+
 ## Objections
 | Objection | Response |
 |-----------|----------|
@@ -82,6 +84,8 @@
 | Built for big salons, not me | Solo professional framing; templates for independent trades |
 | I'll set it up and abandon it | Honest scope and setup-in-an-evening path; not an all-in-one ERP |
 | Is this accounting? | No — tracks booked, completed, and paid activity for cash-flow visibility; not tax filing or financial advice |
+| Can I use it on my phone, iPad, or desktop? | Perelai works in a browser; installation is optional and varies by browser and platform. Do not upgrade this response to a device-specific installation, standalone-window, or iPhone-alert promise until the matching claim-contract row is `PASS`. |
+| Is there an App Store or Google Play listing? | No current listing. State this calmly as a distribution fact; do not frame the absence as a product weakness or an unsupported speed/reliability benefit. |
 
 **Anti-persona:** Businesses that need real accounting, tax filing, payroll, clinical records, or consumer lending. Say so plainly rather than trying to convert them.
 
@@ -104,10 +108,11 @@
 - Clients, bookings and cash flow in one place
 - A list that stays until you deal with it
 - Your booking link, no commission
+- Proxy device-language only (not yet validated for Perelai): app, phone, website, online booking, Android, desktop
 
-**Words to use:** Visit, Order, Package (prepaid credits), Workspace access, Payment confirmation, Instalment, Public service request, Rental reservation, Operational Inbox item
+**Words to use:** Visit, Order, Package (prepaid credits), Workspace access, Payment confirmation, Instalment, Public service request, Rental reservation, Operational Inbox item; browser-first; optional installation
 
-**Words to avoid:** personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; fake testimonials / usage counts; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
+**Words to avoid:** personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; native app; download; offline / offline sync; App Store / Google Play availability; one-click install everywhere; fake testimonials / usage counts; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
 
 **Glossary:**
 | Term | Meaning |
@@ -141,6 +146,7 @@
 | Founder-led credibility | Short signed "why we built this" with real name and reply path |
 | Risk reversal | Only product-backed facts — e.g. no card because no billing; no data-export promise; no scarcity without `docs/commercial-policy.md` approval |
 | Honesty as differentiation | "What Perelai is not" — not accounting, not a marketplace, not a medical record system |
+| Platform distribution | `docs/device-claim-contract.md` is the claim gate: browser delivery is the only current `PASS` platform fact. Installation, device-specific access, standalone display, and iPhone alerts remain `BLOCKED`; no current store listing. |
 
 ## Goals
 **Business goal:** Founding beta signups from independent US beauty professionals (`APPOINTMENT` mode).
@@ -165,4 +171,5 @@ AI/NLP, smart insights, marketing broadcasts, cohorts, RFM, churn prediction; fi
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v2 (2026-08-01) — DVC1A added browser-first and optional-install positioning, device objections, claim-avoidance language, and evidence-bound platform proof; core category and GTM unchanged.
 - v1 (2026-07-29) — Initial context transcribed from `messaging-and-claims.md` §1–§5 for LP0 baseline.

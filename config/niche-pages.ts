@@ -22,6 +22,7 @@ export interface NichePage {
  */
 export const RESERVED_SLUGS = [
   "pricing",
+  "install",
   "legal",
   "privacy",
   "terms",

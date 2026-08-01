@@ -28,7 +28,8 @@
       "financeTab": "Finanzas",
       "paid": "Pagado",
       "pending": "Sin pagar"
-    }
+    },
+    "deviceMicro": "Perelai funciona en tu navegador. La instalación es opcional."
   },
   "problem": {
     "title": "Ya conoces este día",
@@ -98,7 +99,11 @@
     "q5": "¿Puedo gestionar diferentes servicios y complementos?",
     "a5": "Sí. Cada plantilla incluye opciones personalizables tanto de servicios como de complementos relevantes.",
     "q6": "¿Esto es un software de contabilidad?",
-    "a6": "No. Perelai registra lo reservado, completado y pagado para que veas tu flujo de caja. No hace contabilidad, impuestos ni es asesoría financiera."
+    "a6": "No. Perelai registra lo reservado, completado y pagado para que veas tu flujo de caja. No hace contabilidad, impuestos ni es asesoría financiera.",
+    "q7": "¿Perelai tiene una app para iPhone o Android?",
+    "a7": "Perelai es software de reservas, clientes y dinero para profesionales de servicios independientes. Perelai no está en App Store ni en Google Play; funciona en un navegador web en perelai.app. Instalar Perelai desde un navegador es opcional y no todos los navegadores lo ofrecen. Perelai necesita conexión a internet.",
+    "q8": "¿Puedo usar Perelai en un portátil o iPad?",
+    "a8": "Abre perelai.app en un navegador compatible en tu portátil o iPad e inicia sesión con el mismo acceso que usas en tu teléfono. Un acceso, un espacio de trabajo. Se necesita conexión a internet."
   },
   "closing": {
     "title": "Tus clientes, reservas y flujo de caja — en un solo lugar",
@@ -115,5 +120,12 @@
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos del Servicio"
+  },
+  "devices": {
+    "title": "Un espacio de trabajo. La vista cambia con la pantalla.",
+    "body": "Inicia sesión en perelai.app y empieza a trabajar. Instalar Perelai es opcional y depende de tu navegador. No hay ficha en App Store ni en Google Play.",
+    "caption": "Datos de ejemplo",
+    "summary": "Un espacio de trabajo de Perelai, abierto desde un navegador compatible en un teléfono, una tablet o un ordenador.",
+    "link": "Cómo abrir Perelai"
   }
 }

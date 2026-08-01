@@ -14,6 +14,8 @@ import { Link } from "@/i18n/navigation"
 import { buildAppScreenDataset } from "@/lib/app-screen-mock"
 import { buildMockDataset } from "@/lib/mock-data"
 import { localePrimaryMarket } from "@/lib/market"
+import { DeviceConfidence } from "@/components/devices/device-confidence"
+import { DeviceSectionTracker } from "@/components/analytics/device-section-tracker"
 import { PageViewTracker } from "@/components/analytics/page-view-tracker"
 import { NicheFaq } from "./niche-faq"
 
@@ -189,6 +191,13 @@ export function NichePage({ locale, page, content }: NichePageProps) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative px-4 py-12 sm:px-6 sm:py-16">
+        <DeviceSectionTracker surface="niche" locale={locale} />
+        <div className="mx-auto max-w-6xl text-center">
+          <DeviceConfidence />
         </div>
       </section>
 

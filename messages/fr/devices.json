@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai dans le navigateur : installation et stores d’apps",
+    "description": "Perelai fonctionne dans un navigateur web. L’installation est facultative et dépend du navigateur. Il n’y a pas de fiche App Store ni Google Play.",
+    "ogAlt": "Espace calendrier Perelai dans un navigateur web — données d’exemple"
+  },
+  "nav": {
+    "label": "Appareils"
+  },
+  "hero": {
+    "eyebrow": "Comment ouvrir Perelai",
+    "title": "Ouvrez Perelai dans le navigateur que vous avez déjà.",
+    "body": "Connectez-vous sur perelai.app et commencez à travailler. Installer Perelai est facultatif et dépend de votre navigateur. Il n’y a pas de fiche App Store ni Google Play.",
+    "signup": "Créer un espace de travail",
+    "login": "Se connecter",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
+    "caption": "Données d'exemple",
+    "summary": "Espace de travail Perelai sur ordinateur avec rail de navigation, boîte de réception et calendrier — données d’exemple."
+  },
+  "showcase": {
+    "title": "Un seul espace de travail. La vue change avec l’écran.",
+    "body": "Perelai vit à une seule adresse web. Ouvrez-le dans un navigateur pris en charge, connectez-vous, et vous êtes dans votre espace de travail — pas de version séparée à chercher pour chaque écran. Plus l’écran est large, plus la journée reste visible.",
+    "caption": "Données d'exemple",
+    "summary": "Un espace de travail Perelai présenté dans des mises en page ciblée, large et plus large avec des données d’exemple.",
+    "tablistLabel": "Taille d’écran",
+    "phone": {
+      "title": "Sur téléphone",
+      "body": "Une mise en page concentrée pour travailler entre clients — une chose à la fois dans un navigateur mobile pris en charge."
+    },
+    "ipad": {
+      "title": "Sur tablette",
+      "body": "Le même espace de travail dans un navigateur de tablette pris en charge. Plus de place apparaît lorsque l’écran est plus large."
+    },
+    "desktop": {
+      "title": "Sur ordinateur",
+      "body": "Quand l’écran s’élargit, le planning, la liste et la tâche en cours peuvent rester côte à côte."
+    },
+    "screenshotCaption": "Produit réel · Données d’exemple",
+    "screenshotCaptionEnglishUi": "Produit réel · Données d’exemple · Interface produit affichée en anglais",
+    "screenshotAlt": "Espace calendrier Perelai sur ordinateur — produit réel avec données d’exemple"
+  },
+  "installBenefits": {
+    "title": "Si votre navigateur propose d’installer Perelai",
+    "body": "Certains navigateurs peuvent ajouter un site à l’écran d’accueil ou l’ouvrir dans sa propre fenêtre. Que cette option apparaisse dépend du navigateur et de l’appareil, et Perelai ne l’exige jamais.",
+    "fallbackTitle": "Le navigateur suffit",
+    "fallbackBody": "L’installation est facultative. Perelai fonctionne dans un navigateur pris en charge, et cette voie continue de fonctionner que vous installiez quelque chose ou non."
+  },
+  "guides": {
+    "title": "Par où commencer",
+    "body": "Le parcours est le même partout : ouvrez l’adresse dans un navigateur pris en charge et connectez-vous. Tout le reste est facultatif.",
+    "tablistLabel": "Plateforme",
+    "iphone": {
+      "title": "iPhone",
+      "body": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous. Installer quoi que ce soit ensuite est facultatif."
+    },
+    "ipad": {
+      "title": "iPad",
+      "body": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous. Même adresse, même connexion qu’ailleurs."
+    },
+    "android": {
+      "title": "Android",
+      "body": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous. Installer quoi que ce soit ensuite est facultatif."
+    },
+    "desktop": {
+      "title": "Ordinateur portable et de bureau",
+      "body": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous. L’installation est facultative et tous les navigateurs ne la proposent pas."
+    },
+    "embedded": {
+      "title": "Ouvert depuis un lien dans une autre application",
+      "body": "Si un lien ouvre Perelai dans le navigateur intégré d’une autre application, ouvrez perelai.app dans votre navigateur habituel pris en charge et connectez-vous."
+    }
+  },
+  "limitations": {
+    "title": "À quoi s’attendre",
+    "installVaries": "Qu’un navigateur propose d’installer Perelai dépend du navigateur et de l’appareil. Certains ne le proposent pas du tout, et Perelai n’en a pas besoin.",
+    "noStore": "Il n’y a pas de fiche App Store ni Google Play.",
+    "online": "Perelai a besoin d’une connexion internet.",
+    "browserDecides": "Cette page décrit le parcours général. C’est votre navigateur qui décide quelle option d’installation, le cas échéant, vous est proposée."
+  },
+  "faq": {
+    "title": "Questions",
+    "q1": "Perelai a-t-il une application iPhone ou Android ?",
+    "a1": "Perelai est un logiciel de réservation, de clients et d’argent pour les professionnels de services indépendants. Perelai n’est pas listé sur l’App Store ni sur Google Play ; il fonctionne dans un navigateur web sur perelai.app. Installer Perelai depuis un navigateur est facultatif et n’est pas proposé par tous les navigateurs. Perelai a besoin d’une connexion internet.",
+    "q2": "Puis-je utiliser Perelai sans rien installer ?",
+    "a2": "Oui. Perelai fonctionne dans un navigateur web pris en charge. Connectez-vous sur perelai.app et travaillez-y — l’installation est facultative et jamais obligatoire.",
+    "q3": "Puis-je utiliser Perelai sur iPad ?",
+    "a3": "Ouvrez perelai.app dans un navigateur pris en charge sur la tablette et connectez-vous avec le même compte qu’ailleurs. Une connexion, un espace de travail. Une connexion internet est requise.",
+    "q4": "Puis-je utiliser Perelai sur un ordinateur portable ou de bureau ?",
+    "a4": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous avec le même compte qu’ailleurs. Une connexion, un espace de travail. Une connexion internet est requise.",
+    "q5": "Pourquoi je ne vois pas d’option pour installer Perelai ?",
+    "a5": "Ce sont les navigateurs qui décident, pas Perelai. Certains proposent d’ajouter un site à l’écran d’accueil ou de l’ouvrir dans sa propre fenêtre, d’autres jamais. Perelai ne l’exige dans aucun cas.",
+    "q6": "Perelai fonctionne-t-il hors ligne ?",
+    "a6": "Non. Perelai a besoin d’une connexion internet."
+  },
+  "cta": {
+    "title": "Créez votre espace de travail",
+    "body": "Commencez dans le navigateur avec votre métier, vos services et vos clients.",
+    "signup": "Créer un espace de travail",
+    "login": "Se connecter",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration."
+  },
+  "compact": {
+    "text": "Perelai fonctionne dans votre navigateur. L’installation est facultative.",
+    "link": "Comment ouvrir Perelai"
+  }
+}

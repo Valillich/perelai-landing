@@ -139,7 +139,7 @@ function interpolate(template: string, vars: Record<string, string | number>): s
 }
 
 /**
- * Builds a deterministic mock dataset. Never uses Date.now() — pass a fixed
+ * Builds a deterministic mock dataset. Never reads the current clock — pass a fixed
  * referenceInstant so SSG output stays byte-identical.
  */
 export function buildMockDataset(

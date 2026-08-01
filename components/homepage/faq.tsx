@@ -14,6 +14,8 @@ export function Faq() {
     { q: t("q4"), a: t("a4") },
     { q: t("q5"), a: t("a5") },
     { q: t("q6"), a: t("a6") },
+    { q: t("q7"), a: t("a7") },
+    { q: t("q8"), a: t("a8") },
   ]
 
   return (

@@ -1,6 +1,7 @@
 import catalog from "@/data/niche-catalog.generated.json"
 import { getEnabledNichePages } from "@/config/niche-pages"
 import { PRICING_CAPABILITY_KEYS } from "@/content/pricing"
+import devicesEn from "@/messages/en/devices.json"
 import homeEn from "@/messages/en/home.json"
 import pricingEn from "@/messages/en/pricing.json"
 import { toAbsoluteLandingUrl } from "@/lib/seo"
@@ -29,6 +30,9 @@ export function buildLlmsTxt(): string {
       homeEn.money.detail,
     ]),
     "",
+    "## Platform & app stores",
+    devicesEn.faq.a1,
+    "",
     "## Who it is for",
     bulletList([
       "Independent service professionals.",
@@ -54,6 +58,7 @@ export function buildLlmsTxt(): string {
     "## Key URLs",
     bulletList([
       `Homepage: ${toAbsoluteLandingUrl("/")}`,
+      `Devices & Install: ${toAbsoluteLandingUrl("/install")}`,
       `Pricing: ${toAbsoluteLandingUrl("/pricing")}`,
       `Terms: ${toAbsoluteLandingUrl("/terms")}`,
       `Privacy: ${toAbsoluteLandingUrl("/privacy")}`,

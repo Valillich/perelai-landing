@@ -61,6 +61,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
               <p className="mt-4 text-[13px] text-subtle-text">
                 {t("hero.micro")}
               </p>
+              <p className="mt-1.5 text-[13px] text-subtle-text">
+                {t("hero.deviceMicro")}
+              </p>
             </Reveal>
           </div>
 

@@ -1,0 +1,33 @@
+{
+  "id": "phone-390x844",
+  "label": "Phone focused Calendar",
+  "route": "/calendar",
+  "requestedViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "measured": {
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "devicePixelRatio": 3,
+    "isDesktop": false,
+    "isWideDesktop": false,
+    "hasRail": false,
+    "hasBottomNavHint": true,
+    "layoutClass": "one-pane",
+    "matchDesktop": false,
+    "matchWide": false,
+    "bodyTextSample": "Aug\n26\nMo\nTu\nWe\nTh\nFr\nSa\nSu\n27\n28\n29\n30\n31\n1\n5\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n1\n2\n3\n4\n5\n6\nAUG 1, 2026\n5\n10:00\nJules Park\n\nClassic Manicure\n\nAM\nREVIEW"
+  },
+  "appCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
+  "browser": "Google Chrome (Playwright channel: chrome)",
+  "evidenceType": "automated-browser-emulation (not physical Safari/handset)",
+  "locale": "en",
+  "theme": "light",
+  "syntheticDataset": "Northlight Studio (synthetic nail_salon; fictional clients Mira Chen, Elena Volkov, Sofia Hart, Jules Park; no email/phone/address)",
+  "captureDate": "2026-08-01",
+  "originalPath": "docs/research/device-captures/originals/phone-390x844.png",
+  "evidencePath": "docs/research/device-captures/evidence/phone-390x844.png",
+  "fileSizeBytes": 333804,
+  "browserMode": "headless-automated"
+}

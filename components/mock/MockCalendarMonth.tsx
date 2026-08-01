@@ -16,7 +16,7 @@ export function MockCalendarMonth({ dataset, className }: MockCalendarMonthProps
   return (
     <figure
       className={cn(
-        "overflow-hidden rounded-[24px] border border-border bg-card p-5 shadow-[0_6px_20px_rgba(16,24,40,0.06)]",
+        "mock-surface-elevated-shadow overflow-hidden rounded-[24px] border border-border bg-card p-5",
         className,
       )}
     >
@@ -32,7 +32,7 @@ export function MockCalendarMonth({ dataset, className }: MockCalendarMonthProps
             {[ChevronLeft, ChevronRight].map((Icon, index) => (
               <span
                 key={index}
-                className="flex h-8 w-8 items-center justify-center rounded-xl border border-border bg-card text-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)]"
+                className="mock-control-shadow flex h-8 w-8 items-center justify-center rounded-xl border border-border bg-card text-foreground"
               >
                 <Icon className="h-4 w-4" />
               </span>

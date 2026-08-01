@@ -9,6 +9,7 @@ import { existsSync, readFileSync } from "node:fs"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { NICHE_PAGES, PRODUCTION_BOOKING_FLAGS, RESERVED_SLUGS } from "../config/niche-pages.ts"
+import { PUBLISHED_LOCALES } from "../i18n/locales.ts"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, "..")
@@ -23,6 +24,7 @@ const MOCK_SCAN_PATHS = [
   path.join(ROOT, "components/mock"),
   path.join(ROOT, "lib/mock-data.ts"),
 ]
+const DESKTOP_RAIL_PATH = path.join(ROOT, "components/mock/MockDesktopRail.tsx")
 
 const errors = []
 const warnings = []
@@ -154,6 +156,55 @@ function verifyUiStringAllowlist(strings, referencedKeys) {
   }
 }
 
+/**
+ * Condition 8 (DVC2R) — every product string the desktop rail renders must exist
+ * in the generated allowlist for every published locale.
+ *
+ * Rail labels are real destination names ("Calendar", "Kalender", "Календарь").
+ * Hand-typing them is the drift this guard exists to prevent, so the rail
+ * declares the keys it reads and this check proves the generator still ships
+ * them. It reads only committed local files, so — like conditions 6 and 7 — it
+ * always runs; only the live sibling freshness comparison is skipped when the
+ * app repo is absent.
+ */
+function verifyDesktopRailKeys(strings) {
+  if (!existsSync(DESKTOP_RAIL_PATH)) {
+    fail(
+      `missing ${path.relative(ROOT, DESKTOP_RAIL_PATH)} — the rail key guard cannot run`,
+    )
+    return
+  }
+
+  const source = readFileSync(DESKTOP_RAIL_PATH, "utf8")
+  const declaration = source.match(
+    /DESKTOP_RAIL_UI_KEYS\s*=\s*\[([\s\S]*?)\]\s*as\s*const/,
+  )
+  if (!declaration) {
+    fail(
+      `components/mock/MockDesktopRail.tsx does not export a DESKTOP_RAIL_UI_KEYS [...] as const array`,
+    )
+    return
+  }
+
+  const railKeys = [...declaration[1].matchAll(/["']([^"']+)["']/g)].map((m) => m[1])
+  if (railKeys.length === 0) {
+    fail("DESKTOP_RAIL_UI_KEYS is empty — the rail would render hand-typed labels")
+    return
+  }
+
+  for (const key of railKeys) {
+    for (const locale of PUBLISHED_LOCALES) {
+      if (!strings.locales?.[locale]?.[key]) {
+        fail(
+          `MockDesktopRail references key "${key}" missing from app-ui-strings locale=${locale}`,
+        )
+      }
+    }
+  }
+
+  return railKeys.length
+}
+
 function main() {
   if (!existsSync(CATALOG_PATH)) fail(`missing ${CATALOG_PATH}`)
   if (!existsSync(STRINGS_PATH)) fail(`missing ${STRINGS_PATH}`)
@@ -165,6 +216,7 @@ function main() {
 
   const referencedKeys = collectReferencedKeys(MOCK_SCAN_PATHS)
   verifyUiStringAllowlist(strings, referencedKeys)
+  const railKeyCount = verifyDesktopRailKeys(strings)
 
   const beforeCommit = catalog.sourceCommit
   if (existsSync(APP_REPO)) {
@@ -190,7 +242,7 @@ function main() {
   }
 
   console.log(
-    `verify-niches: ok (${NICHE_PAGES.length} pages, ${referencedKeys.size} mock keys, ${Object.keys(strings.locales).length} locales)`,
+    `verify-niches: ok (${NICHE_PAGES.length} pages, ${referencedKeys.size} mock keys, ${railKeyCount ?? 0} rail keys, ${Object.keys(strings.locales).length} locales)`,
   )
 }
 

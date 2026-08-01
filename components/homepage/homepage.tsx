@@ -5,6 +5,7 @@ import { Problem } from "./problem"
 import { Inbox } from "./inbox"
 import { Booking } from "./booking"
 import { Money } from "./money"
+import { Devices } from "./devices"
 import { Setup } from "./setup"
 import { Not } from "./not"
 import { NicheRouter } from "./niche-router"
@@ -24,6 +25,7 @@ export function Homepage({ locale }: { locale: PublishedLocale }) {
         <Inbox locale={locale} />
         <Booking />
         <Money locale={locale} />
+        <Devices locale={locale} />
         <Setup />
         <Not />
         <NicheRouter />

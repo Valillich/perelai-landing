@@ -1,0 +1,81 @@
+{
+  "appCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
+  "captureDate": "2026-08-01",
+  "browserMode": "headless-automated",
+  "evidenceType": "automated-browser-capture",
+  "note": "Pane counts require DOM verification of rail + Inbox + calendar content (+ contextual pane at wide). Breakpoint flags alone are insufficient.",
+  "results": [
+    {
+      "id": "desktop-1024x900",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "layoutClass": "two-pane",
+      "panesVerified": 2,
+      "panePresence": {
+        "rail": true,
+        "inbox": true,
+        "calendarContent": true,
+        "contextualPlanPane": false
+      },
+      "threePaneAsserted": false,
+      "matchDesktop": true,
+      "matchWide": false
+    },
+    {
+      "id": "desktop-1360x900",
+      "viewport": {
+        "width": 1360,
+        "height": 900
+      },
+      "layoutClass": "three-pane",
+      "panesVerified": 3,
+      "panePresence": {
+        "rail": true,
+        "inbox": true,
+        "calendarContent": true,
+        "contextualPlanPane": true
+      },
+      "threePaneAsserted": true,
+      "matchDesktop": true,
+      "matchWide": true
+    },
+    {
+      "id": "desktop-1440x900",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "layoutClass": "three-pane",
+      "panesVerified": 3,
+      "panePresence": {
+        "rail": true,
+        "inbox": true,
+        "calendarContent": true,
+        "contextualPlanPane": true
+      },
+      "threePaneAsserted": true,
+      "matchDesktop": true,
+      "matchWide": true
+    },
+    {
+      "id": "desktop-1600x900",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "layoutClass": "three-pane",
+      "panesVerified": 3,
+      "panePresence": {
+        "rail": true,
+        "inbox": true,
+        "calendarContent": true,
+        "contextualPlanPane": true
+      },
+      "threePaneAsserted": true,
+      "matchDesktop": true,
+      "matchWide": true
+    }
+  ]
+}

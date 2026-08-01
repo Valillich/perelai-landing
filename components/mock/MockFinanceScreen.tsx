@@ -12,7 +12,7 @@ interface MockFinanceScreenProps {
 
 /**
  * Replica of the in-app Finance dashboard (compact variant): period navigator,
- * profit trend, the three KPI cards that pick the chart's metric, and the
+ * profit trend, the trio of KPI cards that pick the chart's metric, and the
  * transaction feed the app renders underneath.
  */
 export function MockFinanceScreen({ dataset, className }: MockFinanceScreenProps) {
@@ -25,7 +25,7 @@ export function MockFinanceScreen({ dataset, className }: MockFinanceScreenProps
           <span
             key={index}
             className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)]",
+              "mock-control-shadow flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground",
               index === 1 && "order-3",
             )}
           >

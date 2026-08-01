@@ -28,7 +28,8 @@
       "financeTab": "Pieniądze",
       "paid": "Opłacone",
       "pending": "Nieopłacone"
-    }
+    },
+    "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna."
   },
   "problem": {
     "title": "Znasz już ten dzień",
@@ -98,7 +99,11 @@
     "q5": "Czy mogę zarządzać wieloma usługami?",
     "a5": "Tak. Każdy szablon zawiera wybór usług oraz opcje dodatków.",
     "q6": "Czy to jest oprogramowanie księgowe?",
-    "a6": "Nie. Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe."
+    "a6": "Nie. Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe.",
+    "q7": "Czy Perelai ma aplikację na iPhone lub Android?",
+    "a7": "Perelai to oprogramowanie do rezerwacji, klientów i pieniędzy dla niezależnych specjalistów usług. Perelai nie jest w App Store ani Google Play; działa w przeglądarce na perelai.app. Instalacja Perelai z przeglądarki jest opcjonalna i nie każda przeglądarka ją oferuje. Perelai wymaga połączenia z internetem.",
+    "q8": "Czy mogę używać Perelai na laptopie lub iPadzie?",
+    "a8": "Otwórz perelai.app w obsługiwanej przeglądarce na laptopie lub iPadzie i zaloguj się tym samym loginem, co na telefonie. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem."
   },
   "closing": {
     "title": "Twoi klienci, rezerwacje i przepływy pieniężne — w jednym miejscu",
@@ -115,5 +120,12 @@
     "rights": "Wszelkie prawa zastrzeżone.",
     "privacy": "Polityka prywatności",
     "terms": "Warunki korzystania"
+  },
+  "devices": {
+    "title": "Jedna przestrzeń pracy. Widok zmienia się z ekranem.",
+    "body": "Zaloguj się na perelai.app i zacznij pracę. Instalacja Perelai jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
+    "caption": "Przykładowe dane",
+    "summary": "Jedna przestrzeń pracy Perelai, otwarty z obsługiwanej przeglądarki na telefonie, tablecie lub komputerze.",
+    "link": "Jak otworzyć Perelai"
   }
 }

@@ -12,6 +12,11 @@ import {
 
 interface MockInboxTriageProps {
   dataset: MockDataset
+  /**
+   * Composed surfaces (the density ladder) carry one caption for the whole
+   * composition, so a nested Inbox must not add a second one.
+   */
+  showCaption?: boolean
   className?: string
 }
 
@@ -20,7 +25,11 @@ interface MockInboxTriageProps {
  * outside decorative chrome (aria-hidden).
  * Client updates both trust sentence and total amount in sync using detected market currency.
  */
-export function MockInboxTriage({ dataset, className }: MockInboxTriageProps) {
+export function MockInboxTriage({
+  dataset,
+  showCaption = true,
+  className,
+}: MockInboxTriageProps) {
   const { market } = useMarket(dataset.locale)
   const trust = buildTrustSentence(dataset, market)
   const trustAmountFormatted = formatTrustAmount(dataset.trustTotal, market)
@@ -28,7 +37,7 @@ export function MockInboxTriage({ dataset, className }: MockInboxTriageProps) {
   return (
     <figure
       className={cn(
-        "overflow-hidden rounded-[24px] border border-border bg-card p-5 shadow-[0_6px_20px_rgba(16,24,40,0.06)]",
+        "mock-surface-elevated-shadow overflow-hidden rounded-[24px] border border-border bg-card p-5",
         className,
       )}
     >
@@ -51,9 +60,11 @@ export function MockInboxTriage({ dataset, className }: MockInboxTriageProps) {
         </div>
       </div>
 
-      <figcaption className="mt-3 text-center text-[12px] font-medium text-subtle-text">
-        {dataset.exampleCaption}
-      </figcaption>
+      {showCaption ? (
+        <figcaption className="mt-3 text-center text-[12px] font-medium text-subtle-text">
+          {dataset.exampleCaption}
+        </figcaption>
+      ) : null}
     </figure>
   )
 }

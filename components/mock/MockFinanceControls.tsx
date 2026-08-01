@@ -41,7 +41,7 @@ export function MockPeriodTabs({
 }
 
 /**
- * The three metric cards under the chart. In the app these are radio buttons
+ * The trio of metric cards under the chart. In the app these are radio buttons
  * that re-point the chart, so the selected one carries a check — profit here,
  * which is what the trend line is showing.
  */
@@ -92,7 +92,7 @@ export function MockKpiTiles({
             className={cn(
               "absolute right-2 top-2 flex h-4 w-4 items-center justify-center rounded-full border",
               tile.active
-                ? "border-transparent bg-[rgba(var(--brand-600-rgb),0.1)] text-brand-600"
+                ? "border-transparent mock-brand-tint text-brand-600"
                 : "border-border",
             )}
           >

@@ -18,7 +18,7 @@ export function MockFinanceKpis({ dataset, className }: MockFinanceKpisProps) {
   return (
     <figure
       className={cn(
-        "overflow-hidden rounded-[24px] border border-border bg-card p-5 shadow-[0_6px_20px_rgba(16,24,40,0.06)]",
+        "mock-surface-elevated-shadow overflow-hidden rounded-[24px] border border-border bg-card p-5",
         className,
       )}
     >

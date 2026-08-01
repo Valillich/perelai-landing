@@ -1,0 +1,55 @@
+{
+  "search_date_utc": "2026-08-01T10:56:24Z",
+  "query": "Perelai",
+  "entity": "software",
+  "stores": {
+    "apple_itunes_us": {
+      "url": "https://itunes.apple.com/search?term=Perelai&entity=software&limit=25&country=us",
+      "resultCount": 2,
+      "results": [
+        {
+          "trackName": "\u05de\u05d6\u05dc\u05d5\u05d8\u05d5",
+          "bundleId": "com.lottomazal.app",
+          "sellerName": "Doron Perets",
+          "trackId": 6783021368,
+          "primaryGenreName": "Entertainment",
+          "trackViewUrl": "https://apps.apple.com/us/app/%D7%9E%D7%96%D7%9C%D7%95%D7%98%D7%95/id6783021368?uo=4",
+          "is_perelai": false,
+          "disambiguation": "Name is not Perelai; seller surname fuzzy-matches search term only."
+        },
+        {
+          "trackName": "\u05e2\u05d1\u05d5\u05d3\u05d4 \u05d1\u05d3\u05e7\u05d4 90",
+          "bundleId": "il.co.avodabedaka90",
+          "sellerName": "Rotem Peretz",
+          "trackId": 6787773632,
+          "primaryGenreName": "Business",
+          "trackViewUrl": "https://apps.apple.com/us/app/%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%91%D7%93%D7%A7%D7%94-90/id6787773632?uo=4",
+          "is_perelai": false,
+          "disambiguation": "Name is not Perelai; seller surname fuzzy-matches search term only."
+        }
+      ]
+    },
+    "apple_itunes_ua": {
+      "url": "https://itunes.apple.com/search?term=Perelai&entity=software&limit=25&country=ua",
+      "resultCount": 0,
+      "results": []
+    },
+    "apple_bundle_lookups": {
+      "ids_checked": [
+        "app.perelai",
+        "com.perelai.app",
+        "com.perelai.web",
+        "perelai.app"
+      ],
+      "resultCount_each": 0
+    },
+    "google_play_us": {
+      "url": "https://play.google.com/store/search?q=Perelai&c=apps&hl=en&gl=US",
+      "evidence": "google-play-search-perelai-us-2026-08-01.playwright.json",
+      "screenshot": "google-play-search-perelai-us-2026-08-01.png",
+      "apps_returned": 0,
+      "exact_perelai_card": false
+    }
+  },
+  "verdict": "No public App Store or Google Play listing for the product brand Perelai (booking/clients/money for independent service professionals at perelai.app) was found on 2026-08-01. Similarly named apps (PeryAI, Perla, Pearla, Relai, Perila, Peralogi, Hebrew apps with seller Perets/Peretz) are different products and do not list Perelai or perelai.app."
+}

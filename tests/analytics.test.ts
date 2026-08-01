@@ -7,6 +7,9 @@ import {
   resetAnalyticsEventDeduplication,
   trackAnalyticsEventOnce,
   type AnalyticsEvent,
+  type DeviceMessageViewedEvent,
+  type InstallGuideOpenedEvent,
+  type InstallHelpClickedEvent,
 } from "@/lib/analytics"
 
 const destinationUrl =
@@ -49,6 +52,20 @@ describe("signup acquisition events", () => {
     })
   })
 
+  test("supports install-specific CtaPosition values", () => {
+    const installPositions = ["install_hero_signup", "install_login", "install_final_signup"] as const
+
+    for (const ctaPosition of installPositions) {
+      const event = buildLandingCtaClickedEvent({
+        href: destinationUrl,
+        ctaPosition,
+        ctaText: "create_workspace",
+        destination: "signup",
+      })
+      expect(event.properties.cta_position).toBe(ctaPosition)
+    }
+  })
+
   test("does not send values that look like PII or a non-register destination", () => {
     const piiUrl =
       "https://app.example.test/register?utm_source=jane%40example.com&utm_campaign=4815551234"
@@ -58,6 +75,60 @@ describe("signup acquisition events", () => {
       properties: {},
     })
     expect(buildSignupStartedEvent("https://app.example.test/login?utm_source=instagram")).toBeUndefined()
+  })
+})
+
+describe("device & install analytics events", () => {
+  test("deduplicates device_message_viewed independently for home and niche surfaces", () => {
+    const events: AnalyticsEvent[] = []
+    configureAnalyticsAdapter({ track: (event) => events.push(event) })
+
+    const homeEvent: DeviceMessageViewedEvent = {
+      name: "device_message_viewed",
+      properties: { surface: "home", locale: "en" },
+    }
+    const nicheEvent: DeviceMessageViewedEvent = {
+      name: "device_message_viewed",
+      properties: { surface: "niche", locale: "en" },
+    }
+
+    expect(trackAnalyticsEventOnce("device_message_viewed:home", homeEvent)).toBe(true)
+    expect(trackAnalyticsEventOnce("device_message_viewed:home", homeEvent)).toBe(false)
+    expect(trackAnalyticsEventOnce("device_message_viewed:niche", nicheEvent)).toBe(true)
+
+    expect(events).toEqual([homeEvent, nicheEvent])
+  })
+
+  test("constructs typed install_guide_opened and install_help_clicked with fixed enums", () => {
+    const guideEvent: InstallGuideOpenedEvent = {
+      name: "install_guide_opened",
+      properties: { platform: "iphone", source_page: "/install" },
+    }
+
+    const helpEvent: InstallHelpClickedEvent = {
+      name: "install_help_clicked",
+      properties: { source_surface: "header" },
+    }
+
+    expect(guideEvent.properties.platform).toBe("iphone")
+    expect(helpEvent.properties.source_surface).toBe("header")
+  })
+
+  test("device events exclude PII and device fingerprint fields", () => {
+    const events: AnalyticsEvent[] = [
+      { name: "device_message_viewed", properties: { surface: "home", locale: "en" } },
+      { name: "install_guide_opened", properties: { platform: "android", source_page: "/install" } },
+      { name: "install_help_clicked", properties: { source_surface: "niche" } },
+    ]
+
+    const forbiddenFields = ["userAgent", "screenResolution", "deviceModel", "installedState", "displayMode", "notificationPermission", "ipAddress"]
+
+    for (const event of events) {
+      const propsKeys = Object.keys(event.properties)
+      for (const field of forbiddenFields) {
+        expect(propsKeys, `${event.name} should not contain ${field}`).not.toContain(field)
+      }
+    }
   })
 })
 
@@ -88,5 +159,7 @@ test("the tracking plan records the approved privacy decision while replay and c
   expect(plan).toMatch(/session replay.*off/i)
   expect(plan).toMatch(/click IDs.*off/i)
   expect(plan).toMatch(/full referrer.*off/i)
-  expect(plan).toMatch(/acquisitionNiche[\s\S]*acquisitionCampaign[\s\S]*acquisitionLandingPath/)
+  expect(plan).toMatch(/device_message_viewed/)
+  expect(plan).toMatch(/install_guide_opened/)
+  expect(plan).toMatch(/install_help_clicked/)
 })

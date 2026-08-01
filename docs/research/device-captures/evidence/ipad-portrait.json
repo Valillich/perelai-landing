@@ -1,0 +1,33 @@
+{
+  "id": "ipad-portrait",
+  "label": "iPad portrait Calendar",
+  "route": "/calendar",
+  "requestedViewport": {
+    "width": 834,
+    "height": 1194
+  },
+  "measured": {
+    "innerWidth": 834,
+    "innerHeight": 1194,
+    "devicePixelRatio": 2,
+    "isDesktop": false,
+    "isWideDesktop": false,
+    "hasRail": false,
+    "hasBottomNavHint": true,
+    "layoutClass": "one-pane",
+    "matchDesktop": false,
+    "matchWide": false,
+    "bodyTextSample": "Perelai is currently in beta\n\nCore workflows are ready, while selected integrations and details are still being refined.\n\nLearn more\nSend feedback\nDismiss\nAugust\n2026\nMo\nTu\nWe\nTh\nFr\nSa\nSu\n27\n28\n29\n30\n"
+  },
+  "appCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
+  "browser": "Google Chrome (Playwright channel: chrome)",
+  "evidenceType": "automated-browser-emulation (not physical Safari/handset)",
+  "locale": "en",
+  "theme": "light",
+  "syntheticDataset": "Northlight Studio (synthetic nail_salon; fictional clients Mira Chen, Elena Volkov, Sofia Hart, Jules Park; no email/phone/address)",
+  "captureDate": "2026-08-01",
+  "originalPath": "docs/research/device-captures/originals/ipad-portrait.png",
+  "evidencePath": "docs/research/device-captures/evidence/ipad-portrait.png",
+  "fileSizeBytes": 299659,
+  "browserMode": "headless-automated"
+}

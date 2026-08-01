@@ -28,7 +28,8 @@
       "financeTab": "Finans",
       "paid": "Ödendi",
       "pending": "Ödenmedi"
-    }
+    },
+    "deviceMicro": "Perelai tarayıcınızda çalışır. Kurulum isteğe bağlıdır."
   },
   "problem": {
     "title": "Bu günü zaten biliyorsunuz",
@@ -98,7 +99,11 @@
     "q5": "Farklı hizmetleri ve ek seçenekleri yönetebilir miyim?",
     "a5": "Evet. Her şablon, ilgili hizmetlerin ve ek seçeneklerin özelleştirilebilir hallerini içerir.",
     "q6": "Bu bir muhasebe yazılımı mı?",
-    "a6": "Hayır. Perelai, nakit akışınızı görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Muhasebe veya vergi takibi yapmaz."
+    "a6": "Hayır. Perelai, nakit akışınızı görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Muhasebe veya vergi takibi yapmaz.",
+    "q7": "Perelai’nin iPhone veya Android uygulaması var mı?",
+    "a7": "Perelai, bağımsız hizmet profesyonelleri için randevu, müşteri ve para yazılımıdır. Perelai App Store veya Google Play’de listelenmez; bunun yerine perelai.app adresinde bir web tarayıcısında çalışır. Perelai’yi bir tarayıcıdan kurmak isteğe bağlıdır ve her tarayıcı bunu sunmaz. Perelai internet bağlantısı gerektirir.",
+    "q8": "Perelai’yi bir dizüstü bilgisayarda veya iPad’de kullanabilir miyim?",
+    "a8": "Desteklenen bir tarayıcıda perelai.app adresini dizüstü bilgisayarınızda veya iPad’inizde açın ve telefonunuzda kullandığınız aynı girişle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gerekir."
   },
   "closing": {
     "title": "Müşterileriniz, randevularınız ve nakit akışınız — tek bir yerde",
@@ -115,5 +120,12 @@
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
     "terms": "Hizmet Koşulları"
+  },
+  "devices": {
+    "title": "Tek çalışma alanı. Görünüm ekranla birlikte değişir.",
+    "body": "perelai.app adresinde oturum açın ve çalışmaya başlayın. Perelai’yi kurmak isteğe bağlıdır ve tarayıcınıza bağlıdır. App Store veya Google Play kaydı yoktur.",
+    "caption": "Örnek veriler",
+    "summary": "Telefon, tablet veya bilgisayarda desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
+    "link": "Perelai’yi nasıl açarsınız"
   }
 }

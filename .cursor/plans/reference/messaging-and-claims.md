@@ -101,9 +101,34 @@ the claim.
 | # | Capability | Say | Never say | Source |
 |---|---|---|---|---|
 | F19 | 7 languages | "Works in English, Ukrainian, Polish, Russian, Spanish, French and German." | Do not list a language the landing itself does not ship | `apps/web/public/locales/` |
-| F20 | Mobile-first + desktop | "Built for your phone first. Comfortable on a laptop when you need it." | "Native app", "iOS app", "Android app" — it is a web app | `minimal_desktop_ready_layer_20260714` |
-| F21 | Installable | "Works instantly in your browser. Install it on your phone when you're ready." | The literal word **"PWA"** (CONTEXT §17) | — |
+| F20 | Mobile-first + desktop | "Built for your phone first. Comfortable on a laptop when you need it." | "Native app", "iOS app", "Android app" — it is a web app. Also: unqualified **"use it on iPad"** / cross-device promises until *Cross-device workspace* is `PASS`. Narrow density wording is gated by the separate *Responsive layout density* contract row (now `PASS` with automated 1024/1360/1600 pane asserts) — do not inflate it into a device matrix claim | `apps/web/src/utils/responsiveLayout.ts` (`64rem`/`85rem`), `DesktopNavigationRail.tsx`, `DesktopWorkspace.tsx`, `BottomNavigation.tsx`; device-specific wording gated by [`docs/device-claim-contract.md`](../../../docs/device-claim-contract.md) |
+| F21 | Browser first; use without installing | "Perelai runs in a web browser. Installing it is optional." | The literal word **"PWA"** (CONTEXT §17). Also: any **promise** that a named phone/browser will offer Install / Home Screen / an icon window — those rows are `BLOCKED` in the claim contract; "install in every browser", "one tap on any device" | Browser delivery: `apps/web/index.html`, `apps/web/public/manifest.json`. Optionality (use without installing): workspace `CONTEXT.md` §11 + §19.18, `OnboardingReviewStep.tsx` (install stays secondary). Claim-contract row **Use without installing** must read `PASS`. Named-browser install availability is a **separate** `BLOCKED` row — do not fold it into F21 |
 | F22 | Light & dark | "Light and dark." | — | `dark_mode_integration_9058a729` |
+| F23 | No store distribution | "There is no App Store or Google Play listing." | "Coming to the App Store", "Google Play soon", store badges, "download the app". Do not frame the absence as a benefit (device plan §5.4 rule 2) | Dated external store searches on **2026-08-01** (Apple iTunes Search API US/UA + bundleId lookups; Google Play search via Playwright DOM scrape) — evidence in [`docs/research/store-listing-checks/store-listing-absence-2026-08-01.json`](../../../docs/research/store-listing-checks/store-listing-absence-2026-08-01.json); claim-contract §1.6 / F23 row `PASS`. Repository absence alone is **not** sufficient |
+| F24 | Internet connection required | "Perelai needs an internet connection." | "Works offline", "offline-first", "book clients offline", "syncs when you reconnect", "no internet required" | `apps/web/public/notification-sw.js` (notification-only service worker — no offline application shell, no cache strategy, no background sync), `apps/web/src/utils/webPush.ts`; see `docs/device-claim-contract.md` §1.5 |
+
+**Device gate (amended 2026-08-01, DVC2 repair).** F20–F24 are the only Platform rows that touch
+devices, browsers or distribution. A device sentence needs **two** approvals: it must appear here
+*and* its matching row in [`docs/device-claim-contract.md`](../../../docs/device-claim-contract.md)
+must read `PASS`. Audit prose cannot override a `BLOCKED` contract row.
+
+**Shippable today (mechanically `PASS` in both places):**
+
+| Ledger | Claim-contract row that must be `PASS` | Allowed public shape |
+|---|---|---|
+| **F21** | **Use without installing** (+ browser delivery) | "Perelai runs in a web browser. Installing it is optional." — never a named-device install promise |
+| **F23** | **No store distribution** | "There is no App Store or Google Play listing." — sourced from dated store searches, not from "no native code in the repo" |
+| **F24** | Internet required | "Perelai needs an internet connection." |
+
+**Not shippable until their contract rows pass:**
+
+- **F20's device-specific *Say* expansions** and every strong cross-device / multi-pane marketing line
+  beyond what the **Responsive layout density** `PASS` row literally allows.
+- Named Safari / Chrome / Instagram / Facebook / Home Screen / standalone / push paths — contract
+  rows remain `BLOCKED` pending physical evidence.
+- Responsive density *may* ship in the narrow form backed by the density `PASS` row (authenticated
+  automated captures at 1024 / 1360 / 1600 with DOM pane asserts). Do not upgrade that into
+  unqualified "use it on iPad" without the cross-device row.
 
 ---
 
@@ -238,11 +263,12 @@ One idea per section, in this order. Each section advances one argument.
 | 3 | The Inbox | The differentiator, shown not told | *A notification tells you something happened. The Inbox keeps it until you deal with it.* |
 | 4 | Booking link | Removes the "how do clients reach me" question | One link, your clients, no commission |
 | 5 | Money that adds up | The honesty argument | Completed work and received money are tracked separately — so the number is real |
-| 6 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
-| 7 | What Perelai is not | Disqualify + build trust | Not accounting, not a marketplace, not a medical record system |
-| 8 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
-| 9 | FAQ | Objection handling | 6 questions, §8 below |
-| 10 | Final CTA | Recap + risk reversal | Repeat primary CTA + the no-card line |
+| 6 | Device fit | Answer "will this fit how I work?" before migration anxiety starts | *Perelai runs in a web browser. Installing it is optional, and there is no App Store or Google Play listing.* (F21 + F23) |
+| 7 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
+| 8 | What Perelai is not | Disqualify + build trust | Not accounting, not a marketplace, not a medical record system |
+| 9 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
+| 10 | FAQ | Objection handling | 6 questions, §8 below |
+| 11 | Final CTA | Recap + risk reversal | Repeat primary CTA + the no-card line |
 
 ---
 

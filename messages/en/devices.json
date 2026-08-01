@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai in your browser: installing and app stores",
+    "description": "Perelai runs in a web browser. Installing it is optional and depends on your browser. There is no App Store or Google Play listing.",
+    "ogAlt": "Perelai calendar workspace in a web browser — example data"
+  },
+  "nav": {
+    "label": "Devices"
+  },
+  "hero": {
+    "eyebrow": "Getting to Perelai",
+    "title": "Open Perelai in the browser you already have.",
+    "body": "Sign in at perelai.app and start working. Installing Perelai is optional and depends on your browser. There is no App Store or Google Play listing.",
+    "signup": "Create workspace",
+    "login": "Log in",
+    "micro": "You'll get a verification email to finish setting up.",
+    "caption": "Example data",
+    "summary": "Perelai desktop workspace with navigation rail, inbox and calendar — example data."
+  },
+  "showcase": {
+    "title": "One workspace. The view changes with the screen.",
+    "body": "Perelai lives at one web address. Open it in a supported browser, sign in, and you are in your workspace — there is no separate version to find for each screen. As the screen gets wider, more of the day stays in view.",
+    "caption": "Example data",
+    "summary": "One Perelai workspace shown in focused, wide, and wider layouts with example data.",
+    "tablistLabel": "Screen size",
+    "phone": {
+      "title": "On a phone",
+      "body": "A focused layout for work between clients — one thing at a time in a supported mobile browser."
+    },
+    "ipad": {
+      "title": "On a tablet",
+      "body": "The same workspace in a supported tablet browser. More room appears when the screen is wider."
+    },
+    "desktop": {
+      "title": "On a computer",
+      "body": "As the screen gets wider, the schedule, the list and the current task can stay side by side."
+    },
+    "screenshotCaption": "Actual product · Example data",
+    "screenshotCaptionEnglishUi": "Actual product · Example data · Product UI shown in English",
+    "screenshotAlt": "Perelai desktop calendar workspace — actual product with example data"
+  },
+  "installBenefits": {
+    "title": "If your browser offers to install Perelai",
+    "body": "Some browsers can add a website to a home screen or open it in a window of its own. Whether that option appears depends on the browser and the device, and Perelai never requires it.",
+    "fallbackTitle": "The browser stays enough",
+    "fallbackBody": "Installing is optional. Perelai runs in a supported browser, and that route keeps working whether or not you ever install anything."
+  },
+  "guides": {
+    "title": "Where to start",
+    "body": "The route is the same everywhere: open the address in a supported browser and sign in. Anything after that is optional.",
+    "tablistLabel": "Platform",
+    "iphone": {
+      "title": "iPhone",
+      "body": "Open perelai.app in a supported browser and sign in. Installing anything afterwards is optional."
+    },
+    "ipad": {
+      "title": "iPad",
+      "body": "Open perelai.app in a supported browser and sign in. Same address, same login as elsewhere."
+    },
+    "android": {
+      "title": "Android",
+      "body": "Open perelai.app in a supported browser and sign in. Installing anything afterwards is optional."
+    },
+    "desktop": {
+      "title": "Laptop and desktop",
+      "body": "Open perelai.app in a supported browser and sign in. Installing is optional and not every browser offers it."
+    },
+    "embedded": {
+      "title": "Opened from a link inside another app",
+      "body": "If a link opens Perelai inside another app's built-in browser, open perelai.app in your usual supported browser instead and sign in."
+    }
+  },
+  "limitations": {
+    "title": "What to expect",
+    "installVaries": "Whether a browser offers to install Perelai depends on the browser and the device. Some browsers do not offer it at all, and Perelai does not need it.",
+    "noStore": "There is no App Store or Google Play listing.",
+    "online": "Perelai needs an internet connection.",
+    "browserDecides": "This page describes the general route. Your own browser decides which install option, if any, it offers you."
+  },
+  "faq": {
+    "title": "Questions",
+    "q1": "Does Perelai have an iPhone or Android app?",
+    "a1": "Perelai is booking, client and money software for independent service professionals. Perelai is not listed on the App Store or on Google Play; it runs in a web browser at perelai.app instead. Installing Perelai from a browser is optional and not offered by every browser. Perelai needs an internet connection.",
+    "q2": "Can I use Perelai without installing anything?",
+    "a2": "Yes. Perelai runs in a supported web browser. Sign in at perelai.app and work there — installing is optional and never required.",
+    "q3": "Can I use Perelai on an iPad?",
+    "a3": "Open perelai.app in a supported browser on the tablet and sign in with the same login you use elsewhere. One login, one workspace. An internet connection is required.",
+    "q4": "Can I use Perelai on a laptop or desktop?",
+    "a4": "Open perelai.app in a supported browser and sign in with the same login you use elsewhere. One login, one workspace. An internet connection is required.",
+    "q5": "Why don't I see an option to install Perelai?",
+    "a5": "Browsers decide that, not Perelai. Some browsers offer to add a site to a home screen or open it in a window of its own, and others never do. Perelai does not require it either way.",
+    "q6": "Does Perelai work offline?",
+    "a6": "No. Perelai needs an internet connection."
+  },
+  "cta": {
+    "title": "Create your workspace",
+    "body": "Start in your browser with your trade, your services and your clients.",
+    "signup": "Create workspace",
+    "login": "Log in",
+    "micro": "You'll get a verification email to finish setting up."
+  },
+  "compact": {
+    "text": "Perelai runs in your browser. Installing it is optional.",
+    "link": "How you open Perelai"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Perelai im Browser: Installation und App-Stores",
+    "description": "Perelai läuft in einem Webbrowser. Die Installation ist optional und hängt vom Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "ogAlt": "Perelai-Kalenderarbeitsbereich in einem Webbrowser — Beispieldaten"
+  },
+  "nav": {
+    "label": "Geräte"
+  },
+  "hero": {
+    "eyebrow": "So öffnen Sie Perelai",
+    "title": "Öffnen Sie Perelai im Browser, den Sie bereits haben.",
+    "body": "Melden Sie sich bei perelai.app an und legen Sie los. Perelai zu installieren ist optional und hängt von Ihrem Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "signup": "Arbeitsbereich erstellen",
+    "login": "Anmelden",
+    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
+    "caption": "Beispieldaten",
+    "summary": "Perelai-Arbeitsbereich am Computer mit Navigationsleiste, Posteingang und Kalender — Beispieldaten."
+  },
+  "showcase": {
+    "title": "Ein Arbeitsbereich. Die Ansicht ändert sich mit dem Bildschirm.",
+    "body": "Perelai hat eine Webadresse. Öffnen Sie sie in einem unterstützten Browser, melden Sie sich an — und Sie sind in Ihrem Arbeitsbereich: keine separate Version für jeden Bildschirm. Je breiter der Bildschirm, desto mehr vom Tag bleibt im Blick.",
+    "caption": "Beispieldaten",
+    "summary": "Ein Perelai-Arbeitsbereich in fokussierten, breiten und breiteren Layouts mit Beispieldaten.",
+    "tablistLabel": "Bildschirmgröße",
+    "phone": {
+      "title": "Auf dem Telefon",
+      "body": "Ein fokussiertes Layout für die Arbeit zwischen Kunden — eins nach dem anderen in einem unterstützten mobilen Browser."
+    },
+    "ipad": {
+      "title": "Auf dem Tablet",
+      "body": "Derselbe Arbeitsbereich in einem unterstützten Tablet-Browser. Mehr Platz erscheint, wenn der Bildschirm breiter ist."
+    },
+    "desktop": {
+      "title": "Am Computer",
+      "body": "Wird der Bildschirm breiter, können Terminplan, Liste und aktuelle Aufgabe nebeneinander bleiben."
+    },
+    "screenshotCaption": "Echtes Produkt · Beispieldaten",
+    "screenshotCaptionEnglishUi": "Echtes Produkt · Beispieldaten · Produktoberfläche auf Englisch",
+    "screenshotAlt": "Perelai-Kalenderarbeitsbereich am Computer — echtes Produkt mit Beispieldaten"
+  },
+  "installBenefits": {
+    "title": "Wenn Ihr Browser anbietet, Perelai zu installieren",
+    "body": "Manche Browser können eine Website zum Home-Bildschirm hinzufügen oder in einem eigenen Fenster öffnen. Ob diese Option erscheint, hängt von Browser und Gerät ab — und Perelai verlangt es nie.",
+    "fallbackTitle": "Der Browser reicht",
+    "fallbackBody": "Die Installation ist optional. Perelai läuft in einem unterstützten Browser, und dieser Weg funktioniert weiter, ob Sie etwas installieren oder nicht."
+  },
+  "guides": {
+    "title": "Wo Sie starten",
+    "body": "Der Weg ist überall derselbe: Öffnen Sie die Adresse in einem unterstützten Browser und melden Sie sich an. Alles danach ist optional.",
+    "tablistLabel": "Plattform",
+    "iphone": {
+      "title": "iPhone",
+      "body": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich an. Alles zur Installation danach ist optional."
+    },
+    "ipad": {
+      "title": "iPad",
+      "body": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich an. Dieselbe Adresse, dieselbe Anmeldung wie anderswo."
+    },
+    "android": {
+      "title": "Android",
+      "body": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich an. Alles zur Installation danach ist optional."
+    },
+    "desktop": {
+      "title": "Laptop und Desktop",
+      "body": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich an. Die Installation ist optional und nicht jeder Browser bietet sie an."
+    },
+    "embedded": {
+      "title": "Über einen Link in einer anderen App geöffnet",
+      "body": "Wenn ein Link Perelai im eingebauten Browser einer anderen App öffnet, öffnen Sie perelai.app in Ihrem üblichen unterstützten Browser und melden Sie sich an."
+    }
+  },
+  "limitations": {
+    "title": "Was Sie erwarten können",
+    "installVaries": "Ob ein Browser anbietet, Perelai zu installieren, hängt von Browser und Gerät ab. Manche bieten es gar nicht an, und Perelai braucht es nicht.",
+    "noStore": "Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "online": "Perelai braucht eine Internetverbindung.",
+    "browserDecides": "Diese Seite beschreibt den allgemeinen Weg. Ihr eigener Browser entscheidet, welche Installationsoption — falls überhaupt — er anbietet."
+  },
+  "faq": {
+    "title": "Fragen",
+    "q1": "Hat Perelai eine iPhone- oder Android-App?",
+    "a1": "Perelai ist Buchungs-, Kunden- und Geldsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
+    "q2": "Kann ich Perelai ohne Installation nutzen?",
+    "a2": "Ja. Perelai läuft in einem unterstützten Webbrowser. Melden Sie sich bei perelai.app an und arbeiten Sie dort — die Installation ist optional und nie erforderlich.",
+    "q3": "Kann ich Perelai auf dem iPad nutzen?",
+    "a3": "Öffnen Sie perelai.app in einem unterstützten Browser auf dem Tablet und melden Sie sich mit derselben Anmeldung wie anderswo an. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich.",
+    "q4": "Kann ich Perelai auf Laptop oder Desktop nutzen?",
+    "a4": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich mit derselben Anmeldung wie anderswo an. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich.",
+    "q5": "Warum sehe ich keine Option, Perelai zu installieren?",
+    "a5": "Das entscheiden Browser, nicht Perelai. Manche bieten an, eine Seite zum Home-Bildschirm hinzuzufügen oder in einem eigenen Fenster zu öffnen, andere nie. Perelai verlangt es in keinem Fall.",
+    "q6": "Funktioniert Perelai offline?",
+    "a6": "Nein. Perelai braucht eine Internetverbindung."
+  },
+  "cta": {
+    "title": "Erstellen Sie Ihren Arbeitsbereich",
+    "body": "Starten Sie im Browser mit Ihrem Gewerbe, Ihren Leistungen und Ihren Kunden.",
+    "signup": "Arbeitsbereich erstellen",
+    "login": "Anmelden",
+    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
+  },
+  "compact": {
+    "text": "Perelai läuft in Ihrem Browser. Die Installation ist optional.",
+    "link": "So öffnen Sie Perelai"
+  }
+}

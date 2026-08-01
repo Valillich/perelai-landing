@@ -34,6 +34,11 @@
   --accent-purple-text: #7c3aed;
   --accent-blue-bg: #dbeafe;
   --accent-blue-text: #2563eb;
+  --mock-shadow-rgb: 16, 24, 40;
+  --mock-selected-border: rgb(var(--mock-shadow-rgb) / 0.06);
+  --mock-selected-bg: rgb(var(--brand-600-rgb) / 0.08);
+  --mock-attention: #d97706;
+  --mock-today: #e11d48;
 }
 
 .dark {
@@ -66,6 +71,11 @@
   --accent-purple-text: #c084fc;
   --accent-blue-bg: #1e293b;
   --accent-blue-text: #60a5fa;
+  --mock-shadow-rgb: 0, 0, 0;
+  --mock-selected-border: rgb(var(--primary-foreground) / 0.1);
+  --mock-selected-bg: rgb(var(--brand-600-rgb) / 0.08);
+  --mock-attention: #fbbf24;
+  --mock-today: #fb7185;
 }
 
 @theme inline {
@@ -322,6 +332,55 @@ html {
 
 .dark .mock-card-flat {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mock-device-frame-shadow {
+  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.04);
+}
+
+.dark .mock-device-frame-shadow {
+  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.2);
+}
+
+.mock-control-shadow {
+  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.04);
+}
+
+.mock-surface-elevated-shadow {
+  box-shadow: 0 6px 20px rgb(var(--mock-shadow-rgb) / 0.06);
+}
+
+.mock-brand-tint {
+  background-color: rgb(var(--brand-600-rgb) / 0.1);
+}
+
+.mock-brand-subtle {
+  background-color: rgb(var(--brand-600-rgb) / 0.06);
+}
+
+.mock-selected-day {
+  border-color: var(--mock-selected-border);
+  background-color: var(--mock-selected-bg);
+}
+
+.mock-attention-dot {
+  background-color: var(--mock-attention);
+}
+
+.mock-today-text {
+  color: var(--mock-today);
+}
+
+.mock-bottom-bar-shadow {
+  box-shadow: 0 8px 24px -10px rgba(16, 24, 40, 0.18);
+}
+
+.dark .mock-bottom-bar-shadow {
+  box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.5);
+}
+
+.mock-cta-brand-shadow {
+  box-shadow: 0 8px 24px rgba(var(--brand-600-rgb), 0.28);
 }
 
 @media (prefers-reduced-motion: reduce) {

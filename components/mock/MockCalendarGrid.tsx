@@ -44,15 +44,14 @@ export function MockCalendarGrid({ dataset, className }: MockCalendarGridProps) 
                 key={cell.key}
                 className={cn(
                   "relative flex h-[44px] flex-col items-center justify-center overflow-hidden rounded-xl",
-                  cell.isSelected &&
-                    "border border-[rgba(16,24,40,0.06)] bg-[rgba(var(--brand-600-rgb),0.08)] dark:border-white/10",
+                  cell.isSelected && "border mock-selected-day",
                 )}
               >
                 <span
                   className={cn(
                     "mock-money text-[13px] leading-none",
                     cell.inCurrentMonth ? "text-foreground" : "text-muted-foreground/60",
-                    cell.isToday ? "font-bold text-rose-500" : "font-normal",
+                    cell.isToday ? "font-bold mock-today-text" : "font-normal",
                   )}
                 >
                   {cell.day}
@@ -65,11 +64,11 @@ export function MockCalendarGrid({ dataset, className }: MockCalendarGridProps) 
                     </span>
                   ) : cell.attentionCount != null ? (
                     <span className="relative flex items-center justify-center">
-                      <span className="mock-money flex h-[17px] min-w-[17px] items-center justify-center rounded-full bg-[rgba(var(--brand-600-rgb),0.12)] px-1 text-[10px] font-bold leading-none text-brand-600">
+                      <span className="mock-money mock-brand-tint flex h-[17px] min-w-[17px] items-center justify-center rounded-full px-1 text-[10px] font-bold leading-none text-brand-600">
                         {cell.attentionCount}
                       </span>
                       {cell.hasUnread ? (
-                        <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full border-[1.5px] border-card bg-amber-500" />
+                        <span className="mock-attention-dot absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full border-[1.5px] border-card" />
                       ) : null}
                     </span>
                   ) : null}

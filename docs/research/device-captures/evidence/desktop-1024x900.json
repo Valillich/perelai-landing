@@ -1,0 +1,41 @@
+{
+  "id": "desktop-1024x900",
+  "label": "Desktop Calendar 1024x900",
+  "route": "/calendar",
+  "requestedViewport": {
+    "width": 1024,
+    "height": 900
+  },
+  "measured": {
+    "innerWidth": 1024,
+    "innerHeight": 900,
+    "devicePixelRatio": 2,
+    "matchDesktop": true,
+    "matchWide": false,
+    "dataResponsiveDesktop": true,
+    "dataResponsiveWideDesktop": false,
+    "panePresence": {
+      "rail": true,
+      "inbox": true,
+      "calendarContent": true,
+      "contextualPlanPane": false
+    },
+    "panesVerified": 2,
+    "layoutClass": "two-pane",
+    "bodyHasBeta": false,
+    "sample": "PERELAI\nBETA\nCalendar\nClients\nFinance\nTeam\nServices\nPlans\nAccounts\nPackages\nProfile\nSettings\nINBOX\n$125\nLOW CONFIDENCE\n\nConfirm to secure your revenue in finance.\n\nToday\n5\nOverdue\nUpcoming\n3\nREVIEW NEEDED (3)\nRemove All\n1\nAUG\n14:00\nElena Volkov\n\nClassic Pedicure\n\nAM\nREVIEW\n$55.00"
+  },
+  "appCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
+  "browser": "Google Chrome (Playwright channel: chrome)",
+  "browserMode": "headless-automated",
+  "evidenceType": "automated-browser-capture (Playwright headless Chrome on macOS host — NOT a physical/manual desktop check)",
+  "locale": "en",
+  "theme": "light",
+  "syntheticDataset": "Northlight Studio (synthetic nail_salon; fictional clients; no email/phone/address)",
+  "captureDate": "2026-08-01",
+  "originalPath": "docs/research/device-captures/originals/desktop-1024x900.png",
+  "evidencePath": "docs/research/device-captures/evidence/desktop-1024x900.png",
+  "fileSizeBytes": 411121,
+  "shipping": false,
+  "threePaneAsserted": false
+}

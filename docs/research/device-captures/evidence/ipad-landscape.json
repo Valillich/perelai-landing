@@ -1,0 +1,33 @@
+{
+  "id": "ipad-landscape",
+  "label": "iPad landscape Calendar",
+  "route": "/calendar",
+  "requestedViewport": {
+    "width": 1194,
+    "height": 834
+  },
+  "measured": {
+    "innerWidth": 1194,
+    "innerHeight": 834,
+    "devicePixelRatio": 2,
+    "isDesktop": true,
+    "isWideDesktop": false,
+    "hasRail": true,
+    "hasBottomNavHint": false,
+    "layoutClass": "two-pane (desktop >=1024px)",
+    "matchDesktop": true,
+    "matchWide": false,
+    "bodyTextSample": "PERELAI\nBETA\nCalendar\nClients\nFinance\nTeam\nServices\nPlans\nAccounts\nPackages\nProfile\nSettings\nINBOX\n$125\nLOW CONFIDENCE\n\nConfirm to secure your revenue in finance.\n\nToday\n5\nOverdue\nUpcoming\n3\nREVIEW NE"
+  },
+  "appCommit": "7e05cd232e85a906f17759a46b9b3f17ae8c6602",
+  "browser": "Google Chrome (Playwright channel: chrome)",
+  "evidenceType": "automated-browser-emulation (not physical Safari/handset)",
+  "locale": "en",
+  "theme": "light",
+  "syntheticDataset": "Northlight Studio (synthetic nail_salon; fictional clients Mira Chen, Elena Volkov, Sofia Hart, Jules Park; no email/phone/address)",
+  "captureDate": "2026-08-01",
+  "originalPath": "docs/research/device-captures/originals/ipad-landscape.png",
+  "evidencePath": "docs/research/device-captures/evidence/ipad-landscape.png",
+  "fileSizeBytes": 389452,
+  "browserMode": "headless-automated"
+}

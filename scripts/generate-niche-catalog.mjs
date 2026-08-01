@@ -52,7 +52,46 @@ const FIXED_UI_KEYS = [
   "quarter",
   "year",
   "coworker.busy_block_title",
+
+  // DVC2R — desktop navigation rail and bottom navigation.
+  // Every one of these is rendered as visible text by the app's own
+  // DesktopNavigationRail / BottomNavigation, so hand-typing "Calendar" into
+  // landing JSX would silently drift the moment the app renames a destination.
+  // The three primary destination labels sit in the terminology-profile
+  // namespace (beauty.json et al.), the rest in common.json.
+  "nav.calendar",
+  "clients",
+  "finance",
+  "settings",
+  "profile",
+  "product_stage.badge",
+  "desktop_navigation.primary",
+  "desktop_navigation.profile_workspace",
+  "desktop_navigation.workspace",
+  "desktop_navigation.quick_settings",
+  "desktop_navigation.contextual_staff",
+  "desktop_navigation.contextual_services",
+  "desktop_navigation.contextual_instalments",
+  "desktop_navigation.contextual_payment_accounts",
+  "desktop_navigation.contextual_memberships",
+  "desktop_navigation.contextual_rental_resources",
 ]
+
+/**
+ * Keys the app reads from the `common` namespace rather than from the
+ * company's terminology profile. `desktop_navigation.*` is a prefix because the
+ * rail resolves every contextual destination label out of `common`.
+ */
+const COMMON_NS_KEYS = new Set([
+  "week",
+  "month",
+  "quarter",
+  "year",
+  "coworker.busy_block_title",
+  "profile",
+  "product_stage.badge",
+])
+const COMMON_NS_PREFIXES = ["templates.", "desktop_navigation."]
 
 function fail(message) {
   console.error(`generate-niche-catalog: ${message}`)
@@ -75,6 +114,16 @@ function writeIfChanged(filePath, contents) {
 }
 
 function getSourceCommitMeta(appRepo) {
+  const status = spawnSync("git", ["-C", appRepo, "status", "--porcelain"], {
+    encoding: "utf8",
+  })
+  if (status.status !== 0) fail(`cannot read git status from ${appRepo}`)
+  if (status.stdout.trim().length > 0 && !process.env.ALLOW_DIRTY_SOURCE) {
+    fail(
+      `app repo at ${appRepo} has uncommitted changes. Clean or stash them in ${appRepo} so generated files strictly reproduce HEAD commit.`,
+    )
+  }
+
   const rev = spawnSync("git", ["-C", appRepo, "rev-parse", "HEAD"], {
     encoding: "utf8",
   })
@@ -166,8 +215,13 @@ process.stdout.write(JSON.stringify({
   }
 }
 
-function readJson(filePath) {
-  return JSON.parse(readFileSync(filePath, "utf8"))
+function readJsonFromHead(appRepo, relPath) {
+  const res = spawnSync("git", ["-C", appRepo, "show", `HEAD:${relPath}`], {
+    encoding: "utf8",
+    maxBuffer: 20 * 1024 * 1024,
+  })
+  if (res.status !== 0) fail(`cannot read git HEAD:${relPath} from ${appRepo}`)
+  return JSON.parse(res.stdout)
 }
 
 function lookupPath(obj, dotted) {
@@ -182,20 +236,19 @@ function lookupPath(obj, dotted) {
   return typeof cur === "string" ? cur : undefined
 }
 
-function resolveUiString(localeDir, terminologyProfile, key) {
-  const common = readJson(path.join(localeDir, "common.json"))
-  if (key === "week" || key === "month" || key === "quarter" || key === "year") {
-    return lookupPath(common, key)
-  }
-  if (key === "coworker.busy_block_title") {
-    return lookupPath(common, key)
-  }
-  if (key.startsWith("templates.")) {
+function resolveUiString(appRepo, locale, terminologyProfile, key) {
+  const commonRel = `apps/web/public/locales/${locale}/common.json`
+  const common = readJsonFromHead(appRepo, commonRel)
+  if (
+    COMMON_NS_KEYS.has(key) ||
+    COMMON_NS_PREFIXES.some((prefix) => key.startsWith(prefix))
+  ) {
     return lookupPath(common, key)
   }
 
   const ns = PROFILE_NS[terminologyProfile] ?? "beauty"
-  const profile = readJson(path.join(localeDir, `${ns}.json`))
+  const profileRel = `apps/web/public/locales/${locale}/${ns}.json`
+  const profile = readJsonFromHead(appRepo, profileRel)
   return lookupPath(profile, key)
 }
 
@@ -214,22 +267,19 @@ function extractUiStrings(appRepo, templates) {
   const byLocale = {}
 
   for (const locale of LOCALES) {
-    const localeDir = path.join(appRepo, "apps/web/public/locales", locale)
-    if (!existsSync(localeDir)) fail(`missing locale directory ${localeDir}`)
-
     const localeStrings = {}
     for (const key of allowlist) {
       // Prefer beauty profile for shared inbox/chart keys; fall back across profiles.
-      let value = resolveUiString(localeDir, "beauty", key)
+      let value = resolveUiString(appRepo, locale, "beauty", key)
       if (value == null && key.startsWith("inbox.")) {
         for (const profile of ["edu", "pro", "freelance", "rental", "personal"]) {
-          value = resolveUiString(localeDir, profile, key)
+          value = resolveUiString(appRepo, locale, profile, key)
           if (value != null) break
         }
       }
       if (value == null && key.startsWith("chart_labels.")) {
         for (const profile of ["edu", "pro", "freelance", "rental", "personal"]) {
-          value = resolveUiString(localeDir, profile, key)
+          value = resolveUiString(appRepo, locale, profile, key)
           if (value != null) break
         }
       }

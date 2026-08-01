@@ -1,4 +1,4 @@
-export type LandingPageType = "home" | "pricing" | "niche" | "terms" | "privacy"
+export type LandingPageType = "home" | "pricing" | "niche" | "terms" | "privacy" | "install"
 export type CtaPosition =
   | "header_login"
   | "header_signup"
@@ -7,6 +7,9 @@ export type CtaPosition =
   | "niche_hero"
   | "niche_final_cta"
   | "pricing_signup"
+  | "install_hero_signup"
+  | "install_login"
+  | "install_final_signup"
 export type CtaText = "create_workspace" | "log_in"
 export type CtaDestination = "signup" | "login"
 
@@ -75,6 +78,29 @@ export interface FaqOpenedEvent {
   }
 }
 
+export interface DeviceMessageViewedEvent {
+  name: "device_message_viewed"
+  properties: {
+    surface: "home" | "niche"
+    locale: string
+  }
+}
+
+export interface InstallGuideOpenedEvent {
+  name: "install_guide_opened"
+  properties: {
+    platform: "iphone" | "ipad" | "android" | "desktop" | "browser"
+    source_page: "/install"
+  }
+}
+
+export interface InstallHelpClickedEvent {
+  name: "install_help_clicked"
+  properties: {
+    source_surface: "hero" | "home_section" | "niche" | "header" | "footer" | "faq"
+  }
+}
+
 /** Retained from LP8b; legal links are part of a separate, small funnel. */
 export interface LegalViewedEvent {
   name: "legal_viewed"
@@ -102,6 +128,9 @@ export type AnalyticsEvent =
   | NichePageViewedEvent
   | LanguageSwitchedEvent
   | FaqOpenedEvent
+  | DeviceMessageViewedEvent
+  | InstallGuideOpenedEvent
+  | InstallHelpClickedEvent
   | LegalViewedEvent
   | LegalReturnClickedEvent
 

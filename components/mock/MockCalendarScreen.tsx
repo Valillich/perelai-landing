@@ -40,7 +40,7 @@ export function MockCalendarScreen({
           {[ChevronLeft, ChevronRight].map((Icon, index) => (
             <span
               key={index}
-              className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-card text-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)]"
+              className="mock-control-shadow flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-card text-foreground"
             >
               <Icon className="h-4 w-4" />
             </span>
@@ -66,7 +66,7 @@ export function MockCalendarScreen({
             className="mock-card-flat flex items-stretch gap-3 p-3"
           >
             {/* Date module, small variant: clock glyph over the visit time. */}
-            <div className="flex min-h-[46px] w-[50px] shrink-0 flex-col items-center justify-center rounded-xl border border-border bg-[rgba(var(--brand-600-rgb),0.06)]">
+            <div className="mock-brand-subtle flex min-h-[46px] w-[50px] shrink-0 flex-col items-center justify-center rounded-xl border border-border">
               <Clock className="mb-1 h-3.5 w-3.5 text-brand-600" />
               <span className="mock-money text-[13px] font-semibold leading-none text-foreground">
                 {visit.timeLabel}

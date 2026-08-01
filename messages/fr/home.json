@@ -19,7 +19,7 @@
     "body": "Cessez de reconstituer votre semaine entre les DMs, les notes éparses et votre mémoire. Une liste de ce qu'il reste à faire, un chiffre fiable, un lien unique dans votre bio.",
     "signup": "Créer un espace de travail",
     "how": "Voir comment ça marche",
-    "micro": "Vous recevrez un e-mail de confirmation pour finaliser l'installation.",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
     "imageAlt": "Espace de travail Perelai montrant la boîte de réception opérationnelle, les prochaines visites et le résumé financier — données d'exemple",
     "imageCaption": "Données d'exemple",
     "showcase": {
@@ -28,7 +28,8 @@
       "financeTab": "Finances",
       "paid": "Payé",
       "pending": "Non payé"
-    }
+    },
+    "deviceMicro": "Perelai fonctionne dans votre navigateur. L’installation est facultative."
   },
   "problem": {
     "title": "Vous connaissez déjà cette journée",
@@ -98,13 +99,17 @@
     "q5": "Puis-je gérer différentes prestations et options ?",
     "a5": "Oui. Chaque modèle comprend des options personnalisables adaptées à vos prestations.",
     "q6": "S'agit-il d'un logiciel de comptabilité ?",
-    "a6": "Non. Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait ni comptabilité, ni déclaration fiscale, ni conseil financier."
+    "a6": "Non. Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait ni comptabilité, ni déclaration fiscale, ni conseil financier.",
+    "q7": "Perelai a-t-il une application iPhone ou Android ?",
+    "a7": "Perelai est un logiciel de réservation, de clients et d’argent pour les professionnels de services indépendants. Perelai n’est pas listé sur l’App Store ni sur Google Play ; il fonctionne dans un navigateur web sur perelai.app. Installer Perelai depuis un navigateur est facultatif et n’est pas proposé par tous les navigateurs. Perelai a besoin d’une connexion internet.",
+    "q8": "Puis-je utiliser Perelai sur un ordinateur portable ou un iPad ?",
+    "a8": "Ouvrez perelai.app dans un navigateur pris en charge sur votre ordinateur portable ou iPad et connectez-vous avec le même identifiant que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise."
   },
   "closing": {
     "title": "Vos clients, vos réservations et votre trésorerie — en un seul endroit",
     "body": "Configurez-le en un après-midi.",
     "cta": "Créer un espace de travail",
-    "micro": "Vous recevrez un e-mail de confirmation pour finaliser l'installation."
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration."
   },
   "footer": {
     "description": "Logiciel de réservation, gestion client et finances pour professionnels indépendants.",
@@ -115,5 +120,12 @@
     "rights": "Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation"
+  },
+  "devices": {
+    "title": "Un seul espace de travail. La vue change avec l’écran.",
+    "body": "Connectez-vous sur perelai.app et commencez à travailler. Installer Perelai est facultatif et dépend de votre navigateur. Il n’y a pas de fiche App Store ni Google Play.",
+    "caption": "Données d'exemple",
+    "summary": "Un espace de travail Perelai, ouvert depuis un navigateur pris en charge sur un téléphone, une tablette ou un ordinateur.",
+    "link": "Comment ouvrir Perelai"
   }
 }

@@ -7,7 +7,7 @@ import { localePrimaryMarket, type SupportedMarket } from "@/lib/market"
  * Kept out of lib/mock-data.ts because verify-niches scans that file for
  * MOCK_UI_KEYS — nothing here needs generated app strings.
  *
- * Everything is derived from a fixed reference instant, never Date.now(), so
+ * Everything is derived from a fixed reference instant, never the current clock, so
  * the statically generated HTML stays byte-identical between builds.
  */
 
@@ -98,7 +98,7 @@ export function buildAppScreenDataset(
   const rows = Math.ceil((leading + daysInMonth) / 7)
 
   // The selected day's cell must add up to the visits rendered beneath it —
-  // a reader who checks will otherwise see three visits under an empty day.
+  // a reader who checks will otherwise see a trio of visits under an empty day.
   const selectedDayTotal = base.visits.reduce((sum, visit) => sum + visit.amount, 0)
 
   const calendarCells: AppScreenCalendarCell[] = []
@@ -154,7 +154,7 @@ export function buildAppScreenDataset(
 
   // Monday..Sunday, sourced from a known Monday. Two letters, matching the
   // app's `format(date, 'EEEEEE')` — Intl has no two-letter weekday width, and
-  // the three-letter "short" form does not fit a ~26px day column.
+  // the abbreviated "short" form does not fit a ~26px day column.
   const weekdayFormatter = new Intl.DateTimeFormat(locale, {
     weekday: "short",
     timeZone: "UTC",

@@ -25,6 +25,7 @@ function localizedEntries(
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...localizedEntries("/", 1, "monthly"),
+    ...localizedEntries("/install", 0.7, "monthly"),
     ...localizedEntries("/pricing", 0.6, "monthly"),
     ...NICHE_PAGES.filter((page) => page.enabled).flatMap((page) =>
       localizedEntries(page.path, 0.8, "monthly"),

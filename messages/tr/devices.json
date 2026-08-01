@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Tarayıcıda Perelai: kurulum ve uygulama mağazaları",
+    "description": "Perelai bir web tarayıcısında çalışır. Kurulum isteğe bağlıdır ve tarayıcıya bağlıdır. App Store veya Google Play kaydı yoktur.",
+    "ogAlt": "Web tarayıcısında Perelai takvim çalışma alanı — örnek veriler"
+  },
+  "nav": {
+    "label": "Cihazlar"
+  },
+  "hero": {
+    "eyebrow": "Perelai’ye nasıl ulaşılır",
+    "title": "Perelai’yi zaten sahip olduğunuz tarayıcıda açın.",
+    "body": "perelai.app adresinde oturum açın ve çalışmaya başlayın. Perelai’yi kurmak isteğe bağlıdır ve tarayıcınıza bağlıdır. App Store veya Google Play kaydı yoktur.",
+    "signup": "Çalışma alanı oluştur",
+    "login": "Giriş yap",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
+    "caption": "Örnek veriler",
+    "summary": "Gezinme rayı, gelen kutusu ve takvim ile bilgisayarda Perelai çalışma alanı — örnek veriler."
+  },
+  "showcase": {
+    "title": "Tek çalışma alanı. Görünüm ekranla birlikte değişir.",
+    "body": "Perelai tek bir web adresinde yaşar. Desteklenen bir tarayıcıda açın, oturum açın — ve çalışma alanınızdasınızdır: her ekran için ayrı bir sürüm aramanız gerekmez. Ekran genişledikçe günün daha fazlası görünür kalır.",
+    "caption": "Örnek veriler",
+    "summary": "Örnek verilerle odaklı, geniş ve daha geniş düzenlerde gösterilen tek bir Perelai çalışma alanı.",
+    "tablistLabel": "Ekran boyutu",
+    "phone": {
+      "title": "Telefonda",
+      "body": "Müşteriler arasında çalışma için odaklı bir düzen — desteklenen bir mobil tarayıcıda bir seferde bir iş."
+    },
+    "ipad": {
+      "title": "Tablette",
+      "body": "Desteklenen bir tablet tarayıcısında aynı çalışma alanı. Ekran daha geniş olduğunda daha fazla yer görünür."
+    },
+    "desktop": {
+      "title": "Bilgisayarda",
+      "body": "Ekran genişledikçe program, liste ve güncel görev yan yana kalabilir."
+    },
+    "screenshotCaption": "Gerçek ürün · Örnek veriler",
+    "screenshotCaptionEnglishUi": "Gerçek ürün · Örnek veriler · Ürün arayüzü İngilizce gösterilir",
+    "screenshotAlt": "Bilgisayarda Perelai takvim çalışma alanı — örnek verilerle gerçek ürün"
+  },
+  "installBenefits": {
+    "title": "Tarayıcınız Perelai’yi kurmayı önerirse",
+    "body": "Bazı tarayıcılar bir siteyi ana ekrana ekleyebilir veya kendi penceresinde açabilir. Bu seçeneğin görünmesi tarayıcıya ve cihaza bağlıdır; Perelai bunu asla zorunlu kılmaz.",
+    "fallbackTitle": "Tarayıcı yeter",
+    "fallbackBody": "Kurulum isteğe bağlıdır. Perelai desteklenen bir tarayıcıda çalışır ve bir şey kurup kurmamanızdan bağımsız olarak bu yol çalışmaya devam eder."
+  },
+  "guides": {
+    "title": "Nereden başlanır",
+    "body": "Yol her yerde aynıdır: adresi desteklenen bir tarayıcıda açın ve oturum açın. Bundan sonrası isteğe bağlıdır.",
+    "tablistLabel": "Platform",
+    "iphone": {
+      "title": "iPhone",
+      "body": "perelai.app adresini desteklenen bir tarayıcıda açın ve oturum açın. Sonrasında bir şey kurmak isteğe bağlıdır."
+    },
+    "ipad": {
+      "title": "iPad",
+      "body": "perelai.app adresini desteklenen bir tarayıcıda açın ve oturum açın. Başka yerdekiyle aynı adres, aynı giriş."
+    },
+    "android": {
+      "title": "Android",
+      "body": "perelai.app adresini desteklenen bir tarayıcıda açın ve oturum açın. Sonrasında bir şey kurmak isteğe bağlıdır."
+    },
+    "desktop": {
+      "title": "Dizüstü ve masaüstü",
+      "body": "perelai.app adresini desteklenen bir tarayıcıda açın ve oturum açın. Kurulum isteğe bağlıdır ve her tarayıcı sunmaz."
+    },
+    "embedded": {
+      "title": "Başka bir uygulamanın içindeki bağlantıdan açıldı",
+      "body": "Bir bağlantı Perelai’yi başka bir uygulamanın yerleşik tarayıcısında açarsa, perelai.app adresini olağan desteklenen tarayıcınızda açın ve oturum açın."
+    }
+  },
+  "limitations": {
+    "title": "Ne beklemelisiniz",
+    "installVaries": "Bir tarayıcının Perelai’yi kurmayı önerip önermemesi tarayıcıya ve cihaza bağlıdır. Bazıları hiç sunmaz ve Perelai buna ihtiyaç duymaz.",
+    "noStore": "App Store veya Google Play kaydı yoktur.",
+    "online": "Perelai internet bağlantısı gerektirir.",
+    "browserDecides": "Bu sayfa genel yolu anlatır. Hangi kurulum seçeneğinin (varsa) sunulacağına kendi tarayıcınız karar verir."
+  },
+  "faq": {
+    "title": "Sorular",
+    "q1": "Perelai’nin iPhone veya Android uygulaması var mı?",
+    "a1": "Perelai, bağımsız hizmet profesyonelleri için randevu, müşteri ve para yazılımıdır. Perelai App Store veya Google Play’de listelenmez; bunun yerine perelai.app adresinde bir web tarayıcısında çalışır. Perelai’yi bir tarayıcıdan kurmak isteğe bağlıdır ve her tarayıcı bunu sunmaz. Perelai internet bağlantısı gerektirir.",
+    "q2": "Hiçbir şey kurmadan Perelai’yi kullanabilir miyim?",
+    "a2": "Evet. Perelai desteklenen bir web tarayıcısında çalışır. perelai.app adresinde oturum açın ve orada çalışın — kurulum isteğe bağlıdır ve asla zorunlu değildir.",
+    "q3": "iPad’de Perelai’yi kullanabilir miyim?",
+    "a3": "Tablette desteklenen bir tarayıcıda perelai.app adresini açın ve başka yerde kullandığınız aynı girişle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gerekir.",
+    "q4": "Dizüstü veya masaüstünde Perelai’yi kullanabilir miyim?",
+    "a4": "Desteklenen bir tarayıcıda perelai.app adresini açın ve başka yerde kullandığınız aynı girişle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gerekir.",
+    "q5": "Neden Perelai’yi kurma seçeneğini görmüyorum?",
+    "a5": "Buna tarayıcılar karar verir, Perelai değil. Bazıları bir siteyi ana ekrana eklemeyi veya kendi penceresinde açmayı sunar, bazıları asla. Perelai bunu hiçbir şekilde zorunlu kılmaz.",
+    "q6": "Perelai çevrimdışı çalışır mı?",
+    "a6": "Hayır. Perelai internet bağlantısı gerektirir."
+  },
+  "cta": {
+    "title": "Çalışma alanınızı oluşturun",
+    "body": "Tarayıcıda mesleğiniz, hizmetleriniz ve müşterilerinizle başlayın.",
+    "signup": "Çalışma alanı oluştur",
+    "login": "Giriş yap",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+  },
+  "compact": {
+    "text": "Perelai tarayıcınızda çalışır. Kurulum isteğe bağlıdır.",
+    "link": "Perelai’yi nasıl açarsınız"
+  }
+}

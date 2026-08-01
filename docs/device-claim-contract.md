@@ -1,0 +1,121 @@
+# Device Claim Contract
+
+**Repository:** `/Users/valery/Sites/perelai-landing`
+**Sibling App (Read-Only Evidence):** `/Users/valery/Sites/beauty-finance`
+**Created:** 2026-08-01
+**Amended:** 2026-08-01 (DVC2 evidence repair — store absence, F21 split, capture classification, 1024/1360/1600 pane asserts)
+**Governing Plan:** `.cursor/plans/devices/00_device_distribution_marketing_plan_20260731.md`
+
+---
+
+## 1. Inventory of Current App & Install Behavior
+
+This inventory reflects direct source code inspection of `/Users/valery/Sites/beauty-finance` (`apps/web/` and `libs/core/`).
+
+### 1.1 Manifest & Web Application Delivery
+* **Source:** `apps/web/index.html`, `apps/web/public/manifest.json`
+* **Display Mode:** `"display": "standalone"`, `"orientation": "portrait"`, short/full name `"Perelai"`.
+* **Delivery Model:** Responsive web application at `https://perelai.app`.
+* **Browser First:** The application opens and functions in a standard web browser without installation.
+
+### 1.2 In-App Install Entry Points
+* **Post-Onboarding Review:** `OnboardingReviewStep.tsx` — install stays secondary.
+* **Settings / Quick Settings:** `InstallAppSettingsControl.tsx` — Install / Add to Home Screen when the browser exposes it; hidden in standalone.
+
+### 1.3 Install Routing (`resolveInstallRoute` in `installTarget.ts`)
+Routes include `native-prompt`, `ios-share-sheet`, `ios-chrome-menu`, `open-in-safari`, `none`. **Code presence is not physical evidence** that a named browser on a named device will show that path.
+
+### 1.4 Responsive Layout Thresholds
+* `< 1024px` (`64rem`): one-pane + bottom navigation.
+* `1024–1359px`: desktop rail + two-pane workspaces.
+* `≥ 1360px` (`85rem`): wide three-pane Calendar (Inbox + day + contextual).
+* Workspace capped near `1600px`.
+
+### 1.5 No Offline Application Shell
+`notification-sw.js` is notification-oriented only. Internet is required for product data operations.
+
+### 1.6 No public store listing (dated external evidence)
+
+Absence of a store listing **cannot** be proved from repository contents alone. External store searches were run on **2026-08-01**:
+
+| Store | Query | Result | Evidence location |
+|---|---|---|---|
+| Apple iTunes Search API (`country=us`) | `Perelai`, `entity=software` | `resultCount=2`; returned apps are **not** Perelai (`מזלוטו` / `עבודה בדקה 90`; sellers Doron Perets / Rotem Peretz). No track named Perelai; no seller/bundle tied to perelai.app. | `docs/research/store-listing-checks/apple-itunes-search-perelai-us-2026-08-01.json` |
+| Apple iTunes Search API (`country=ua`) | same | `resultCount=0` | `docs/research/store-listing-checks/apple-itunes-search-perelai-ua-2026-08-01.json` |
+| Apple bundleId lookup | `app.perelai`, `com.perelai.app`, `com.perelai.web`, `perelai.app` | each `resultCount=0` | recorded in `docs/research/store-listing-checks/store-listing-absence-2026-08-01.json` |
+| Google Play search (`hl=en&gl=US`) | `Perelai` | Playwright DOM scrape: **0** app detail cards; no exact “Perelai” app card | `docs/research/store-listing-checks/google-play-search-perelai-us-2026-08-01.playwright.json` + `.png` |
+
+**Verdict:** No public App Store or Google Play listing for the product brand Perelai (booking/clients/money workspace at perelai.app) was found on 2026-08-01. Similarly named apps (PeryAI, Perla, Pearla, Relai, Perila, Peralogi, Hebrew apps matching seller surnames) are different products.
+
+---
+
+## 2. Screenshot & Manual Evidence Gap List
+
+See [`device-capture-manifest.md`](device-capture-manifest.md) for the full table.
+
+### Captured (automated Playwright Chrome, authenticated synthetic workspace):
+1. Phone 390×844 (emulated) — one-pane.
+2. iPad portrait 834×1194 (emulated) — **one-pane** (does not enter two-pane).
+3. iPad landscape 1194×834 (emulated) — two-pane + rail.
+4. Desktop **1024×900** — **two-pane** verified in DOM (rail + Inbox + calendar content); contextual pane absent.
+5. Desktop **1360×900**, **1440×900**, **1600×900** — **three-pane** verified in DOM (rail + Inbox + calendar + “Plan your next entry”).
+6. Shipping honesty-anchor WebP/JPEG derived from the unedited 1440 capture.
+
+**Evidence class:** all of the above are **automated browser captures** (`headless: true` Playwright, Chrome channel). They are **not** physical-desktop manual checks and **not** physical iPhone/iPad Safari / Android checks.
+
+### Still unavailable (physical / manual):
+1. Physical iPhone Safari (install / Home Screen / standalone / push).
+2. Physical iPad Safari.
+3. Physical Android Chrome install prompt + standalone.
+4. Headed/manual desktop Chrome verification session (optional; automated captures cover layout density).
+5. Desktop Safari / Firefox install-absent fallback.
+6. Embedded Instagram/Facebook-style webview escape on a physical device.
+
+---
+
+## 3. Device Claim Ledger
+
+Status rules:
+* `PASS`: Backed by verified code **and** the evidence type required for that claim (code/invariant, dated external search, or authenticated capture as specified).
+* `BLOCKED`: Missing the required evidence class (usually physical-device).
+* `FORBIDDEN`: Must never be claimed.
+
+| Claim | Public Wording | Code / evidence source | Manual / external evidence | Status | Owner | Checked |
+|---|---|---|---|---|---|---|
+| Browser delivery | "Works in your browser." / "Perelai runs in a web browser." | `index.html`, `manifest.json` | Local browser access | `PASS` | Valery | 2026-08-01 |
+| **Use without installing** | "Installing it is optional." / "Can I use Perelai without installing anything? Yes." | Workspace `CONTEXT.md` §11/§19.18; `OnboardingReviewStep.tsx` (install secondary); app usable in browser without install | Product invariant + code — **not** a device matrix row | `PASS` | Valery | 2026-08-01 |
+| Named browser/device install or Home Screen setup | "Install it on your phone…", "Add to Home Screen", Safari/Chrome-specific steps | `installTarget.ts`, `usePwaPrompt.ts`, `IosInstallPrompt.tsx` | Physical device verification missing | `BLOCKED` | Valery | 2026-08-01 |
+| Cross-device workspace | "Use Perelai on phone, iPad and desktop." | `responsiveLayout.ts`, rail | Physical iPhone/iPad Safari missing; automated layout captures only | `BLOCKED` | Valery | 2026-08-01 |
+| Responsive layout density | "The layout adapts as your screen gets wider." | `responsiveLayout.ts` (`64rem`/`85rem`) | Automated authenticated Chrome captures at **1024 / 1360 / 1600** (and 1440) with **DOM pane asserts** — see capture manifest §2 | `PASS` | Valery | 2026-08-01 |
+| iPad portrait two-pane / rail | Portrait iPad shows rail + two panes | `64rem` = 1024px | Emulated iPad Pro 11 portrait **834 CSS px** stayed one-pane | `BLOCKED` — do not ship | Valery | 2026-08-01 |
+| iOS/iPad Home Screen setup | "Add it to your iPhone or iPad Home Screen." | `ios-share-sheet` / `ios-chrome-menu` routes | Physical Safari missing | `BLOCKED` | Valery | 2026-08-01 |
+| Android / Desktop browser install prompt | "Install from a compatible browser on Android or desktop." | `beforeinstallprompt` path | Physical prompt capture missing | `BLOCKED` | Valery | 2026-08-01 |
+| Standalone app window | "Open Perelai from its icon." | `display: "standalone"` | Physical standalone launch missing | `BLOCKED` | Valery | 2026-08-01 |
+| iPhone push condition | Home Screen enables alerts | `pushBlockedByInstall`, `webPush.ts` | Production VAPID + physical receipt missing | `BLOCKED` | Valery | 2026-08-01 |
+| Light and dark themes | "Light and dark themes." | theme script / tokens | Full device-surface audit pending DVC2R | `BLOCKED` | Valery | 2026-08-01 |
+| **No store distribution (F23)** | "There is no App Store or Google Play listing." | Delivery is web (`manifest.json`); **plus** dated store searches §1.6 | `docs/research/store-listing-checks/store-listing-absence-2026-08-01.json` | `PASS` | Valery | 2026-08-01 |
+| Internet required (F24) | "Perelai needs an internet connection." | `notification-sw.js` has no offline shell | Architecture | `PASS` | Valery | 2026-08-01 |
+| Native app / store download / badges / offline / one-click everywhere / etc. | (forbidden wordings) | — | — | `FORBIDDEN` | Valery | 2026-08-01 |
+
+**Two-approval rule:** a public device sentence needs (1) a Platform row in `messaging-and-claims.md` §2.4 **and** (2) the matching claim-contract row above as `PASS`. Informal audit prose cannot override a `BLOCKED` row.
+
+---
+
+## 4. Remaining physical blockers
+
+1. Physical iPhone Safari Home Screen + standalone (+ push if claimed).
+2. Physical iPad Safari.
+3. Physical Android Chrome install prompt + standalone.
+4. Embedded webview escape on a physical device.
+
+Layout-density copy may use the automated 1024/1360/1600 pane-asserted captures. Device-specific install/Safari/Chrome/webview instructions may **not**.
+
+---
+
+## 5. Phase gate status
+
+* **DVC2 evidence repair:** COMPLETE for store-absence evidence, F21 split, automated desktop breakpoint pane asserts, capture relabeling.
+* **Shipping asset:** `public/product/devices/desktop-calendar-1440.webp` remains an unedited real-app screenshot; classified as **automated browser capture**, not physical-desktop manual evidence.
+* **Sibling app source:** unmodified by this work.
+* **DVC2R:** may proceed using one/two/three-pane observations.
+* **DVC3:** may publish only sentences whose claim-contract row is `PASS` under the two-approval rule.

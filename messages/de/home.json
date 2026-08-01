@@ -28,7 +28,8 @@
       "financeTab": "Finanzen",
       "paid": "Bezahlt",
       "pending": "Unbezahlt"
-    }
+    },
+    "deviceMicro": "Perelai läuft in Ihrem Browser. Die Installation ist optional."
   },
   "problem": {
     "title": "Sie kennen diesen Tag bereits",
@@ -98,7 +99,11 @@
     "q5": "Kann ich mehrere Leistungen und Zusatzleistungen verwalten?",
     "a5": "Ja. Jede Vorlage enthält wählbare Leistungen und relevante Optionen für Zusatzleistungen.",
     "q6": "Ist dies eine Buchhaltungssoftware?",
-    "a6": "Nein. Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung."
+    "a6": "Nein. Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung.",
+    "q7": "Hat Perelai eine iPhone- oder Android-App?",
+    "a7": "Perelai ist Buchungs-, Kunden- und Geldsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
+    "q8": "Kann ich Perelai auf einem Laptop oder iPad nutzen?",
+    "a8": "Öffnen Sie perelai.app in einem unterstützten Browser auf Ihrem Laptop oder iPad und melden Sie sich mit derselben Anmeldung an, die Sie auf Ihrem Smartphone nutzen. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich."
   },
   "closing": {
     "title": "Ihre Kunden, Buchungen und Einnahmen — an einem Ort",
@@ -115,5 +120,12 @@
     "rights": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutzerklärung",
     "terms": "Nutzungsbedingungen"
+  },
+  "devices": {
+    "title": "Ein Arbeitsbereich. Die Ansicht ändert sich mit dem Bildschirm.",
+    "body": "Melden Sie sich bei perelai.app an und legen Sie los. Perelai zu installieren ist optional und hängt von Ihrem Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "caption": "Beispieldaten",
+    "summary": "Ein Perelai-Arbeitsbereich, geöffnet aus einem unterstützten Browser auf Telefon, Tablet oder Computer.",
+    "link": "So öffnen Sie Perelai"
   }
 }
