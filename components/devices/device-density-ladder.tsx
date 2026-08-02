@@ -68,7 +68,7 @@ export function DeviceDensityLadder({
             Stacks first on narrow containers; on wide containers it sits on the
             desktop baseline at the front right.
           */}
-          <div className="mx-auto w-full max-w-[320px] @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:right-0 @[64rem]:top-10 @[64rem]:z-20 @[64rem]:mx-0 @[64rem]:w-[280px] @[64rem]:max-w-none">
+          <div className="mx-auto w-full max-w-[320px] @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:right-0 @[64rem]:top-10 @[64rem]:z-20 @[64rem]:mx-0 @[64rem]:w-[320px] @[64rem]:max-w-none">
             <DeviceFrame size="phone" className="h-full">
               <MockMobileShell
                 dataset={dataset}
@@ -79,24 +79,9 @@ export function DeviceDensityLadder({
             </DeviceFrame>
           </div>
 
-          {/*
-            2. Tablet density: 82px desktop navigation rail + two-pane workspace.
-            Stacks second on narrow containers; on wide containers it sits in front
-            of the desktop ground plane at an intermediate baseline position.
-          */}
-          <div className="mx-auto w-full max-w-[540px] overflow-x-auto @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:left-[160px] @[64rem]:top-14 @[64rem]:z-10 @[64rem]:mx-0 @[64rem]:w-[360px] @[64rem]:max-w-none @[64rem]:overflow-visible">
-            <DeviceFrame size="tablet" className="h-full min-w-[28rem] @[64rem]:min-w-0">
-              <MockDesktopShell
-                dataset={dataset}
-                paidLabel={labels.paid}
-                pendingLabel={labels.pending}
-                contextualPane={false}
-              />
-            </DeviceFrame>
-          </div>
 
           {/*
-            3. Desktop density: 82px desktop rail + full two-pane / wide 3-pane workspace.
+            2. Desktop density: 82px desktop rail + full two-pane / wide 3-pane workspace.
             Spans the full container width as the ground plane composition.
           */}
           <div className="overflow-x-auto @[64rem]:overflow-visible">
