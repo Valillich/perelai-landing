@@ -61,9 +61,9 @@ export function DeviceDensityLadder({
     <figure className={cn("@container", className)}>
       <p className="sr-only">{labels.summary}</p>
 
-      <div className="rounded-[24px] border border-border bg-card/40 p-3 sm:p-4">
-        <div className="relative flex flex-col gap-4 @[64rem]:block">
-          <div className="mx-auto w-full max-w-[320px] @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:right-0 @[64rem]:top-10 @[64rem]:z-20 @[64rem]:mx-0 @[64rem]:w-[320px] @[64rem]:max-w-none">
+      <div className="overflow-visible border border-border bg-card/40 p-3 sm:p-4">
+        <div className="relative flex flex-col gap-4 overflow-visible @[64rem]:block">
+          <div className="mx-auto w-full border border-border rounded-[2.25rem] max-w-[320px] overflow-visible @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:right-0 @[64rem]:top-10 @[64rem]:z-20 @[64rem]:mx-0 @[64rem]:w-[320px] @[64rem]:max-w-none @[64rem]:mock-device-phone-cast-shadow">
             <DeviceFrame size="phone" className="h-full">
               <MockMobileShell
                 dataset={dataset}

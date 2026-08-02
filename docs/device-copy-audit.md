@@ -674,3 +674,131 @@ works against a claim the plan spent §4.3 protecting, so it should not be carri
 | typecheck / lint / test / verify:niches / build / `git diff --check` | ✅ `PASS` |
 
 **Phase verdict:** `PASS`. F1 and F2 are copy items carried forward, not route blockers.
+
+---
+
+## 13. The "almost like an app" framing — where it may go, and what gates it (2026-08-02)
+
+**Skills applied:** `marketing-psychology` (§5.4 mechanisms), `copywriting`, `copy-editing`,
+`cro` (placement), `product-marketing` (keep it subordinate). `ai-seo` is deferred to DVC6A,
+which owns the extractable answer block.
+
+### 13.1 The question
+
+Can the landing tell a visitor that Perelai works close to an app once it is on a phone's home
+screen, so nobody reads the page as "browser only"? On the homepage device block **and** on
+`/install`?
+
+### 13.2 The answer: the copy is already written, and it is evidence-gated, not wording-gated
+
+This request maps to three claim-contract rows, all `BLOCKED`, and to two drafts this file has
+already held since DVC1 (§4):
+
+| What the visitor would read | Contract row | Draft already written | Status |
+|---|---|---|---|
+| "Open Perelai from its icon, in its own window." | *Standalone app window* | §4, target `devices.installBenefits.body` | `BLOCKED` |
+| "Add Perelai to your iPhone or iPad Home Screen." | *iOS/iPad Home Screen setup* | §4, target `devices.guides.iphone.body`, `.ipad.body` | `BLOCKED` |
+| "Install it from a compatible browser on Android or desktop." | *Android / Desktop browser install* | §4, target `devices.guides.android.body`, `.desktop.body` | `BLOCKED` |
+
+Nothing here needs a copywriter. It needs one session with a physical phone. Promoting a draft by
+editing prose is explicitly barred by the rule at the end of §4 and by the two-approval rule in
+`device-claim-contract.md` §3.
+
+### 13.3 What is already shipping, and why the page can still read as "browser only"
+
+`devices.installBenefits.body` already carries the capability in its legal form — a statement about
+what browsers in general can do, not a Perelai promise:
+
+> "Some browsers can add a website to a home screen or open it in a window of its own. Whether that
+> option appears depends on the browser and the device, and Perelai never requires it."
+
+Judged by the `copy-editing` **So What** sweep, that section spends every word on *whether* you can
+install and none on *what changes* — because "what changes" is the blocked half. Three hedges in two
+sentences is what `marketing-psychology` §5.4 rule 1 calls defensive length, and defensiveness is
+exactly what makes a reader conclude "so it is just a website".
+
+**Open question for the owner, flagged not resolved:** that sentence is the only place in the
+namespace that describes home-screen and own-window behaviour, and §4.1 does not map it to a `PASS`
+row. Either it was approved as a generic browser-capability statement — in which case the identical
+formulation may be mirrored into `home.devices.body` today, which is the cheapest available fix — or
+it was not, in which case it is already ahead of its row on `/install` and should be pulled back.
+Decide that before DVC5 copies homepage copy from it.
+
+### 13.4 What the page already says without a claim
+
+Per plan §8.1 rule 2, the strongest available answer is not a sentence. The homepage device block and
+the `/install` showcase already render `MockMobileShell` — the product's own **bottom navigation**,
+beside the desktop composition's 82px rail. A phone frame carrying app chrome is the "this is not a
+website" signal delivered pre-attentively, before a word is read, and it needs no claim-contract row
+because it demonstrates rather than asserts.
+
+If the perception problem persists after the rows below turn `PASS`, the fix is emphasis and
+placement, not a stronger adjective.
+
+### 13.5 Should the `IosInstallPrompt` flow be ported to the landing? No.
+
+**Verdict: do not port the routing, and do not port the step-by-step. Port one sentence.**
+
+| Reason | Source |
+|---|---|
+| Landing-side UA detection is barred outright | plan §7.3 |
+| Duplicating `installTarget.ts` is a named non-goal | plan §15 |
+| Device-specific install/Safari/Chrome/webview instructions may not ship | `device-claim-contract.md` §4 |
+| The app is the authoritative guide because it knows the browser; the landing does not | plan §7.1 item 4 |
+
+There is also a maintenance argument the plan does not spell out, and it is the strongest one. During
+this same work cycle the app's own prompt was corrected twice: `detectIsIpad()` matched every iPhone
+(the UA contains "like Mac OS X"), so iPhones were shown the wrong browser bar; and the flow was
+rebuilt from a step-at-a-time wizard into a single cheat sheet after it emerged that the iOS share
+sheet covers the prompt, plus a Safari compact-mode branch and a final confirmation step were missing
+entirely. A static copy of those instructions on `perelai.com` would have carried the wrong guidance
+for the whole period, with no test to catch it. `verify:niches` guards product *labels*; it cannot
+guard a procedure.
+
+**What may transfer, once the rows are `PASS`:** one sentence setting the expectation that a guide
+exists — the shape of "Perelai shows you the route your browser supports", which §4 already holds as
+a draft against `devices.limitations.browserDecides`. Not the steps, not the branches, not the
+screenshots.
+
+### 13.6 Unblock kit — the minimum evidence run
+
+Physical hardware is mandatory (`device-validation-matrix.md` §3.4) and unavailable on this
+workstation: no device, and `xcrun simctl` fails with error 72. This is the single constraint holding
+every line in 13.2.
+
+The run below is the smallest one that releases all three rows. Capture into
+`docs/research/device-captures/physical/`, then update `device-claim-contract.md` §3 and re-run this
+audit.
+
+| # | On the device | Pass criterion | Releases |
+|---:|---|---|---|
+| 1 | iPhone Safari → open `perelai.app`, sign in | Workspace loads and is usable without installing | Confirms *Use without installing* on real hardware |
+| 2 | Share → scroll → **Add to Home Screen** | The entry exists and is reachable | *iOS/iPad Home Screen setup* |
+| 3 | The confirmation screen, then **Add** | Icon lands on the home screen with the Perelai mark | *iOS/iPad Home Screen setup* |
+| 4 | Launch from that icon | Opens without Safari's address bar and tab bar | **Standalone app window** — the row this whole request depends on |
+| 5 | iPad Safari, portrait and landscape | Record the effective CSS width and the pane count | *Cross-device workspace*, *iPad portrait* |
+| 6 | Android Chrome → the in-product Install action | Whether the browser offers it, and what launching the result looks like | *Android / Desktop browser install* |
+
+Steps 1–3 are already substantially evidenced: physical iPhone Safari screenshots of `perelai.app`,
+including the share sheet with **Add to Home Screen** visible and the compact-address-bar `···` menu,
+were produced on 2026-08-01 during the app-side prompt work. They were not filed as claim evidence
+and carry no capture metadata, so they do not satisfy §3 as they stand — but the missing shots are
+**4** (the standalone launch) and the two confirmations in 2–3, not a fresh start.
+
+**Step 4 is the whole ask.** It is one screenshot. Until it exists, "почти как приложение" is a
+promise the landing cannot keep, and per plan §4 the honest page says browser-first, install
+optional, no store — which is what it says today.
+
+### 13.7 What ships the moment each row flips
+
+| Row → `PASS` | Homepage (`home.devices.*`) | `/install` |
+|---|---|---|
+| *Standalone app window* | Add the own-window outcome to `body`; the section stops being purely about the browser | Rewrite `installBenefits.title`/`body` from "if your browser offers" to what installing changes — the §7.1 item 3 job the section cannot currently do |
+| *iOS/iPad Home Screen setup* | No homepage change; keep the section one idea deep | `guides.iphone.body`, `guides.ipad.body` gain the Home Screen route, pointing at the in-app guide rather than repeating it |
+| *Android / Desktop browser install* | — | `guides.android.body`, `guides.desktop.body` gain the in-product Install action |
+
+Homepage placement stays as decided in plan §6.3 and `messaging-and-claims.md` §7 row 6 — after
+Money, before Setup, one idea, one link to `/install`. No second CTA, no install button on
+`perelai.com`; that origin cannot install the app on `perelai.app` (plan §4.2).
+
+**Status:** `BLOCKED` on step 4 of §13.6. No shipping message value changed by this entry.

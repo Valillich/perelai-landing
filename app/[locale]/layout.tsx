@@ -51,7 +51,7 @@ export default async function LocaleLayout({
   ])
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInlineScript }} />
       </head>

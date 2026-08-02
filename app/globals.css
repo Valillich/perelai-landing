@@ -344,6 +344,21 @@ html {
   box-shadow: 0 4px 12px rgba(var(--mock-shadow-rgb), 0.2);
 }
 
+/* Phone-over-tablet cast: light from the right, shadow falls left onto the
+   tablet. @utility so @[64rem]: can apply it via Tailwind's container variant.
+   On the phone wrapper — DeviceFrame overflow-hidden would clip box-shadow. */
+@utility mock-device-phone-cast-shadow {
+  box-shadow:
+    -36px 12px 60px -8px rgba(var(--mock-shadow-rgb), 0.4),
+    -12px 4px 24px -4px rgba(var(--mock-shadow-rgb), 0.18);
+
+  @variant dark {
+    box-shadow:
+      -36px 12px 60px -8px rgba(var(--mock-shadow-rgb), 0.65),
+      -12px 4px 24px -4px rgba(var(--mock-shadow-rgb), 0.4);
+  }
+}
+
 /* Device bezel.
 
    `--card` and `--background` are both #ffffff in light mode, so an untinted
