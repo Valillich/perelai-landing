@@ -60,7 +60,7 @@
   },
   "devices": {
     "title": "One address, one login",
-    "body": "Perelai runs in a web browser. Sign in at perelai.app from wherever you are working and you are in the same workspace. Installing it is optional, and there is no App Store or Google Play listing.",
+    "body": "Perelai runs in a web browser. Sign in at perelai.app from wherever you are working and you are in the same workspace. On iPhone you can add it to your Home Screen, where it opens from its own icon in its own window. Installing it is optional, and there is no App Store or Google Play listing.",
     "caption": "Example data",
     "summary": "One Perelai workspace, opened from a supported browser on a phone, a tablet or a computer.",
     "link": "How you open Perelai"

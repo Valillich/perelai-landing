@@ -40,8 +40,8 @@
     "screenshotAlt": "Espace calendrier Perelai sur ordinateur — produit réel avec données d’exemple"
   },
   "installBenefits": {
-    "title": "Si votre navigateur propose d’installer Perelai",
-    "body": "Certains navigateurs peuvent ajouter un site à l’écran d’accueil ou l’ouvrir dans sa propre fenêtre. Que cette option apparaisse dépend du navigateur et de l’appareil, et Perelai ne l’exige jamais.",
+    "title": "Ce qui change quand Perelai est sur l'écran d'accueil",
+    "body": "Sur iPhone, ajoutez Perelai à l'écran d'accueil : il s'ouvre depuis sa propre icône, dans sa propre fenêtre, sans barre d'adresse ni onglets. iOS demande s'il faut l'ouvrir comme app web ; laissez cette option activée et ce sera le cas à chaque fois.",
     "fallbackTitle": "Le navigateur suffit",
     "fallbackBody": "L’installation est facultative. Perelai fonctionne dans un navigateur pris en charge, et cette voie continue de fonctionner que vous installiez quelque chose ou non."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Plateforme",
     "iphone": {
       "title": "iPhone",
-      "body": "Ouvrez perelai.app dans un navigateur pris en charge et connectez-vous. Installer quoi que ce soit ensuite est facultatif."
+      "body": "Ouvrez perelai.app dans Safari et connectez-vous. Pour le garder sur l'écran d'accueil : Partager, puis « Sur l'écran d'accueil ». Perelai affiche les mêmes étapes dans l'app."
     },
     "ipad": {
       "title": "iPad",

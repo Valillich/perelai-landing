@@ -40,8 +40,8 @@
     "screenshotAlt": "Espaço de calendário Perelai no computador — produto real com dados de exemplo"
   },
   "installBenefits": {
-    "title": "Se o seu navegador oferecer instalar o Perelai",
-    "body": "Alguns navegadores podem adicionar um site ao ecrã inicial ou abri-lo numa janela própria. Se essa opção aparece depende do navegador e do dispositivo, e o Perelai nunca a exige.",
+    "title": "O que muda quando o Perelai está na tela de início",
+    "body": "No iPhone, adicione o Perelai à tela de início: ele abre a partir do próprio ícone, em uma janela própria, sem barra de endereço nem abas. O iOS pergunta se deve abri-lo como app web; deixe essa opção ligada e será assim sempre.",
     "fallbackTitle": "O navegador basta",
     "fallbackBody": "A instalação é opcional. O Perelai funciona num navegador suportado, e esse caminho continua a funcionar quer instale algo ou não."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Plataforma",
     "iphone": {
       "title": "iPhone",
-      "body": "Abra perelai.app num navegador suportado e inicie sessão. Instalar qualquer coisa depois é opcional."
+      "body": "Abra o perelai.app no Safari e entre. Para deixá-lo na tela de início: Compartilhar e depois “Adicionar à Tela de Início”. O Perelai mostra os mesmos passos dentro do app."
     },
     "ipad": {
       "title": "iPad",

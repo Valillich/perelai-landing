@@ -63,10 +63,34 @@ See [`device-capture-manifest.md`](device-capture-manifest.md) for the full tabl
 
 **Evidence class:** all of the above are **automated browser captures** (`headless: true` Playwright, Chrome channel). They are **not** physical-desktop manual checks and **not** physical iPhone/iPad Safari / Android checks.
 
+### 2.1 Physical iPhone run — owner, 2026-08-02
+
+The first physical-device evidence in this contract. Owner-run on a personal iPhone against
+production `https://perelai.app/`.
+
+| Step | Observed | Artifact |
+|---|---|---|
+| Safari loads and signs in without installing | Workspace usable in the browser | Screenshots, 2026-08-01 |
+| Share sheet carries **Add to Home Screen** | Entry present below the app row; also reachable from the compact address bar's `···` menu | Screenshots, 2026-08-01 |
+| iOS confirmation sheet for `https://perelai.app/` | Perelai icon, editable name "Perelai", URL, **Open as Web App** switch **on**, Add | Screenshot, 2026-08-02 |
+| Launch from the resulting icon | Opens standalone, in its own window | **Owner attestation, 2026-08-02** |
+
+**Two caveats the copy must respect.**
+
+1. **Open as Web App is a switch the person can turn off.** With it off iOS adds a bookmark, not a
+   standalone launcher. Public copy therefore describes the default and does not promise the outcome
+   unconditionally.
+2. **The standalone launch is an owner attestation, not a filed capture.** Everything else in this
+   row has an artifact. Filing a screenshot of the launched window into
+   `docs/research/device-captures/physical/` would close the last gap; until then the row is `PASS`
+   on owner sign-off, which §3's status rules permit for the Owner but which a later reviewer should
+   be able to see was not a screenshot.
+
 ### Still unavailable (physical / manual):
-1. Physical iPhone Safari (install / Home Screen / standalone / push).
-2. Physical iPad Safari.
-3. Physical Android Chrome install prompt + standalone.
+1. Physical **iPad** Safari — the iPhone run does not transfer; iPad is a different layout class
+   (emulation put portrait at 834 CSS px, i.e. one-pane).
+2. Physical Android Chrome install prompt + standalone.
+3. Physical iPhone push receipt with production VAPID.
 4. Headed/manual desktop Chrome verification session (optional; automated captures cover layout density).
 5. Desktop Safari / Firefox install-absent fallback.
 6. Embedded Instagram/Facebook-style webview escape on a physical device.
@@ -84,13 +108,15 @@ Status rules:
 |---|---|---|---|---|---|---|
 | Browser delivery | "Works in your browser." / "Perelai runs in a web browser." | `index.html`, `manifest.json` | Local browser access | `PASS` | Valery | 2026-08-01 |
 | **Use without installing** | "Installing it is optional." / "Can I use Perelai without installing anything? Yes." | Workspace `CONTEXT.md` §11/§19.18; `OnboardingReviewStep.tsx` (install secondary); app usable in browser without install | Product invariant + code — **not** a device matrix row | `PASS` | Valery | 2026-08-01 |
-| Named browser/device install or Home Screen setup | "Install it on your phone…", "Add to Home Screen", Safari/Chrome-specific steps | `installTarget.ts`, `usePwaPrompt.ts`, `IosInstallPrompt.tsx` | Physical device verification missing | `BLOCKED` | Valery | 2026-08-01 |
+| **iPhone Safari Home Screen setup** | "Add Perelai to your iPhone Home Screen." | `installTarget.ts` (`ios-share-sheet`), `usePwaPrompt.ts`, `IosInstallPrompt.tsx` | **Physical iPhone Safari, 2026-08-02** — §2.1: share sheet carrying **Add to Home Screen**, then the iOS confirmation sheet for `https://perelai.app/` showing the Perelai icon, the name, and **Open as Web App** enabled | `PASS` | Valery | 2026-08-02 |
+| Named install on any **other** browser or device | "Install it on your phone…", Chrome/Android/desktop-specific steps | `installTarget.ts` routes | Physical verification missing outside iPhone Safari | `BLOCKED` | Valery | 2026-08-02 |
 | Cross-device workspace | "Use Perelai on phone, iPad and desktop." | `responsiveLayout.ts`, rail | Physical iPhone/iPad Safari missing; automated layout captures only | `BLOCKED` | Valery | 2026-08-01 |
 | Responsive layout density | "The layout adapts as your screen gets wider." | `responsiveLayout.ts` (`64rem`/`85rem`) | Automated authenticated Chrome captures at **1024 / 1360 / 1600** (and 1440) with **DOM pane asserts** — see capture manifest §2 | `PASS` | Valery | 2026-08-01 |
 | iPad portrait two-pane / rail | Portrait iPad shows rail + two panes | `64rem` = 1024px | Emulated iPad Pro 11 portrait **834 CSS px** stayed one-pane | `BLOCKED` — do not ship | Valery | 2026-08-01 |
-| iOS/iPad Home Screen setup | "Add it to your iPhone or iPad Home Screen." | `ios-share-sheet` / `ios-chrome-menu` routes | Physical Safari missing | `BLOCKED` | Valery | 2026-08-01 |
+| iPad Home Screen setup | "Add it to your iPad Home Screen." | `ios-share-sheet` route | Physical **iPad** Safari missing — the iPhone run does not transfer | `BLOCKED` | Valery | 2026-08-02 |
 | Android / Desktop browser install prompt | "Install from a compatible browser on Android or desktop." | `beforeinstallprompt` path | Physical prompt capture missing | `BLOCKED` | Valery | 2026-08-01 |
-| Standalone app window | "Open Perelai from its icon." | `display: "standalone"` | Physical standalone launch missing | `BLOCKED` | Valery | 2026-08-01 |
+| **Standalone app window (iPhone)** | "Open Perelai from its own icon, in its own window." | `manifest.json` → `display: "standalone"`; `apple-mobile-web-app-capable` | **Physical iPhone, 2026-08-02** — owner-run standalone launch confirmed; the iOS confirmation sheet's **Open as Web App** switch is the platform's own statement of the same behaviour. Conditional on that switch staying on, which the copy says | `PASS` | Valery | 2026-08-02 |
+| Standalone app window (iPad / Android) | Same wording, other platforms | Same manifest | Physical launch missing on both | `BLOCKED` | Valery | 2026-08-02 |
 | iPhone push condition | Home Screen enables alerts | `pushBlockedByInstall`, `webPush.ts` | Production VAPID + physical receipt missing | `BLOCKED` | Valery | 2026-08-01 |
 | Light and dark themes | "Light and dark themes." | theme script / tokens | Full device-surface audit pending DVC2R | `BLOCKED` | Valery | 2026-08-01 |
 | **No store distribution (F23)** | "There is no App Store or Google Play listing." | Delivery is web (`manifest.json`); **plus** dated store searches §1.6 | `docs/research/store-listing-checks/store-listing-absence-2026-08-01.json` | `PASS` | Valery | 2026-08-01 |
@@ -103,12 +129,16 @@ Status rules:
 
 ## 4. Remaining physical blockers
 
-1. Physical iPhone Safari Home Screen + standalone (+ push if claimed).
-2. Physical iPad Safari.
-3. Physical Android Chrome install prompt + standalone.
-4. Embedded webview escape on a physical device.
+1. ~~Physical iPhone Safari Home Screen + standalone~~ — **cleared 2026-08-02**, §2.1.
+2. Physical iPhone **push** receipt with production VAPID — still blocking the alerts claim.
+3. Physical **iPad** Safari — blocks every iPad sentence and the cross-device "phone, iPad and desktop" line.
+4. Physical **Android** Chrome install prompt + standalone.
+5. Embedded webview escape on a physical device.
+6. A filed screenshot of the launched standalone window (§2.1 caveat 2).
 
-Layout-density copy may use the automated 1024/1360/1600 pane-asserted captures. Device-specific install/Safari/Chrome/webview instructions may **not**.
+Layout-density copy may use the automated 1024/1360/1600 pane-asserted captures. **iPhone** Home
+Screen and standalone-window wording is now permitted. Instructions naming any other browser or
+device may **not** ship.
 
 ---
 

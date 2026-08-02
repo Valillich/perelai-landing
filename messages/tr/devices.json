@@ -40,8 +40,8 @@
     "screenshotAlt": "Bilgisayarda Perelai takvim çalışma alanı — örnek verilerle gerçek ürün"
   },
   "installBenefits": {
-    "title": "Tarayıcınız Perelai’yi kurmayı önerirse",
-    "body": "Bazı tarayıcılar bir siteyi ana ekrana ekleyebilir veya kendi penceresinde açabilir. Bu seçeneğin görünmesi tarayıcıya ve cihaza bağlıdır; Perelai bunu asla zorunlu kılmaz.",
+    "title": "Perelai ana ekrandayken ne değişir",
+    "body": "iPhone'da Perelai'yi ana ekrana ekleyin: kendi simgesinden, kendi penceresinde açılır — adres çubuğu ve sekmeler olmadan. iOS bunu web uygulaması olarak açıp açmayacağını sorar; bu anahtarı açık bırakın, her seferinde böyle açılır.",
     "fallbackTitle": "Tarayıcı yeter",
     "fallbackBody": "Kurulum isteğe bağlıdır. Perelai desteklenen bir tarayıcıda çalışır ve bir şey kurup kurmamanızdan bağımsız olarak bu yol çalışmaya devam eder."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Platform",
     "iphone": {
       "title": "iPhone",
-      "body": "perelai.app adresini desteklenen bir tarayıcıda açın ve oturum açın. Sonrasında bir şey kurmak isteğe bağlıdır."
+      "body": "perelai.app’i Safari’de açın ve giriş yapın. Ana ekranda tutmak için: Paylaş, sonra “Ana Ekrana Ekle”. Perelai aynı adımları uygulama içinde de gösterir."
     },
     "ipad": {
       "title": "iPad",

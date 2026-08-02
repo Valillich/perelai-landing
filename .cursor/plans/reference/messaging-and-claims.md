@@ -133,10 +133,12 @@ claim contract — not a reading of this table.
 | F21 | Browser first; use without installing | "Perelai runs in a web browser. Installing it is optional." | The literal word **"PWA"** (CONTEXT §17). Also: any **promise** that a named phone/browser will offer Install / Home Screen / an icon window — those rows are `BLOCKED` in the claim contract; "install in every browser", "one tap on any device" | Browser delivery: `apps/web/index.html`, `apps/web/public/manifest.json`. Optionality (use without installing): workspace `CONTEXT.md` §11 + §19.18, `OnboardingReviewStep.tsx` (install stays secondary). Claim-contract row **Use without installing** must read `PASS`. Named-browser install availability is a **separate** `BLOCKED` row — do not fold it into F21 |
 | F22 | Light & dark | "Light and dark." | — | `dark_mode_integration_9058a729` |
 | F23 | No store distribution | "There is no App Store or Google Play listing." | "Coming to the App Store", "Google Play soon", store badges, "download the app". Do not frame the absence as a benefit (device plan §5.4 rule 2) | Dated external store searches on **2026-08-01** (Apple iTunes Search API US/UA + bundleId lookups; Google Play search via Playwright DOM scrape) — evidence in [`docs/research/store-listing-checks/store-listing-absence-2026-08-01.json`](../../../docs/research/store-listing-checks/store-listing-absence-2026-08-01.json); claim-contract §1.6 / F23 row `PASS`. Repository absence alone is **not** sufficient |
+| F26 | iPhone Home Screen + own window | "Add Perelai to your iPhone Home Screen and it opens from its own icon, in its own window." Pair it with the condition: iOS asks whether to open it as a web app, and that switch has to stay on. | Do not extend to iPad or Android — those rows are `BLOCKED`. Never "native app", "native performance", "same as a native app" (§4.2, absolute). Do not promise alerts: the push row is still `BLOCKED` | `manifest.json` → `display: "standalone"`, `apple-mobile-web-app-capable` in `apps/web/index.html`, `installTarget.ts` `ios-share-sheet` route; **physical iPhone evidence 2026-08-02** in [`docs/device-claim-contract.md`](../../../docs/device-claim-contract.md) §2.1 |
 | F24 | Internet connection required | "Perelai needs an internet connection." | "Works offline", "offline-first", "book clients offline", "syncs when you reconnect", "no internet required" | `apps/web/public/notification-sw.js` (notification-only service worker — no offline application shell, no cache strategy, no background sync), `apps/web/src/utils/webPush.ts`; see `docs/device-claim-contract.md` §1.5 |
 
-**Device gate (amended 2026-08-01, DVC2 repair).** F20–F24 are the only Platform rows that touch
-devices, browsers or distribution. A device sentence needs **two** approvals: it must appear here
+**Device gate (amended 2026-08-02).** F20–F24 and F26 are the Platform rows that touch
+devices, browsers or distribution. F26 takes the next free ledger number after the TEAM1
+collaboration row and sits here in §2.4 because it is a platform fact, not a team one. A device sentence needs **two** approvals: it must appear here
 *and* its matching row in [`docs/device-claim-contract.md`](../../../docs/device-claim-contract.md)
 must read `PASS`. Audit prose cannot override a `BLOCKED` contract row.
 
@@ -147,13 +149,16 @@ must read `PASS`. Audit prose cannot override a `BLOCKED` contract row.
 | **F21** | **Use without installing** (+ browser delivery) | "Perelai runs in a web browser. Installing it is optional." — never a named-device install promise |
 | **F23** | **No store distribution** | "There is no App Store or Google Play listing." — sourced from dated store searches, not from "no native code in the repo" |
 | **F24** | Internet required | "Perelai needs an internet connection." |
+| **F26** | **iPhone Safari Home Screen setup** + **Standalone app window (iPhone)** | "Add Perelai to your iPhone Home Screen and it opens from its own icon, in its own window." — **iPhone only**, and paired with the Open-as-Web-App condition |
 
 **Not shippable until their contract rows pass:**
 
 - **F20's device-specific *Say* expansions** and every strong cross-device / multi-pane marketing line
   beyond what the **Responsive layout density** `PASS` row literally allows.
-- Named Safari / Chrome / Instagram / Facebook / Home Screen / standalone / push paths — contract
-  rows remain `BLOCKED` pending physical evidence.
+- **iPad and Android** Home Screen / install / standalone wording, and any push promise — those
+  contract rows stayed `BLOCKED` when the iPhone rows cleared on 2026-08-02. F26 does not generalise:
+  one device passing is evidence about that device.
+- Chrome / Instagram / Facebook / embedded-webview mechanics — still `BLOCKED`.
 - Responsive density *may* ship in the narrow form backed by the density `PASS` row (authenticated
   automated captures at 1024 / 1360 / 1600 with DOM pane asserts). Do not upgrade that into
   unqualified "use it on iPad" without the cross-device row.

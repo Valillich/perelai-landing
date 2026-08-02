@@ -40,8 +40,8 @@
     "screenshotAlt": "Przestrzeń kalendarza Perelai na komputerze — prawdziwy produkt z przykładowymi danymi"
   },
   "installBenefits": {
-    "title": "Jeśli przeglądarka proponuje instalację Perelai",
-    "body": "Niektóre przeglądarki mogą dodać witrynę do ekranu głównego lub otworzyć ją we własnym oknie. Czy ta opcja się pojawi, zależy od przeglądarki i urządzenia, a Perelai nigdy tego nie wymaga.",
+    "title": "Co się zmienia, gdy Perelai jest na ekranie początkowym",
+    "body": "Na iPhonie dodaj Perelai do ekranu początkowego — otworzy się z własnej ikony, we własnym oknie, bez paska adresu i kart. iOS zapyta, czy otwierać go jako aplikację internetową; zostaw ten przełącznik włączony, a tak będzie za każdym razem.",
     "fallbackTitle": "Przeglądarka wystarczy",
     "fallbackBody": "Instalacja jest opcjonalna. Perelai działa w obsługiwanej przeglądarce i ta ścieżka działa niezależnie od tego, czy cokolwiek zainstalujesz."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Platforma",
     "iphone": {
       "title": "iPhone",
-      "body": "Otwórz perelai.app w obsługiwanej przeglądarce i zaloguj się. Wszystko związane z instalacją później jest opcjonalne."
+      "body": "Otwórz perelai.app w Safari i zaloguj się. Aby zostawić go na ekranie początkowym: „Udostępnij”, potem „Do ekranu początkowego”. Te same kroki Perelai pokazuje w aplikacji."
     },
     "ipad": {
       "title": "iPad",

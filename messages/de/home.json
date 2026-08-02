@@ -123,7 +123,7 @@
   },
   "devices": {
     "title": "Ein Arbeitsbereich. Die Ansicht ändert sich mit dem Bildschirm.",
-    "body": "Melden Sie sich bei perelai.app an und legen Sie los. Perelai zu installieren ist optional und hängt von Ihrem Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "body": "Perelai läuft in einem Webbrowser. Melden Sie sich auf perelai.app an, wo immer Sie arbeiten — es ist derselbe Workspace. Auf dem iPhone können Sie es zum Home-Bildschirm hinzufügen, wo es über ein eigenes Symbol in einem eigenen Fenster öffnet. Die Installation ist optional, und es gibt keinen Eintrag im App Store oder bei Google Play.",
     "caption": "Beispieldaten",
     "summary": "Ein Perelai-Arbeitsbereich, geöffnet aus einem unterstützten Browser auf Telefon, Tablet oder Computer.",
     "link": "So öffnen Sie Perelai"

@@ -123,7 +123,7 @@
   },
   "devices": {
     "title": "Un seul espace de travail. La vue change avec l’écran.",
-    "body": "Connectez-vous sur perelai.app et commencez à travailler. Installer Perelai est facultatif et dépend de votre navigateur. Il n’y a pas de fiche App Store ni Google Play.",
+    "body": "Perelai fonctionne dans un navigateur web. Connectez-vous sur perelai.app là où vous travaillez : c'est le même espace de travail. Sur iPhone, vous pouvez l'ajouter à l'écran d'accueil, où il s'ouvre depuis sa propre icône dans sa propre fenêtre. L'installation est facultative, et il n'existe aucune fiche App Store ou Google Play.",
     "caption": "Données d'exemple",
     "summary": "Un espace de travail Perelai, ouvert depuis un navigateur pris en charge sur un téléphone, une tablette ou un ordinateur.",
     "link": "Comment ouvrir Perelai"

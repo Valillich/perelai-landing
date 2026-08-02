@@ -123,7 +123,7 @@
   },
   "devices": {
     "title": "Tek çalışma alanı. Görünüm ekranla birlikte değişir.",
-    "body": "perelai.app adresinde oturum açın ve çalışmaya başlayın. Perelai’yi kurmak isteğe bağlıdır ve tarayıcınıza bağlıdır. App Store veya Google Play kaydı yoktur.",
+    "body": "Perelai bir web tarayıcısında çalışır. Nerede çalışıyorsanız perelai.app’te oturum açın — aynı çalışma alanıdır. iPhone’da ana ekrana ekleyebilirsiniz; orada kendi simgesinden, kendi penceresinde açılır. Kurulum isteğe bağlıdır ve App Store veya Google Play’de bir kaydı yoktur.",
     "caption": "Örnek veriler",
     "summary": "Telefon, tablet veya bilgisayarda desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
     "link": "Perelai’yi nasıl açarsınız"

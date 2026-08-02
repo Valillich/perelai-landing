@@ -123,7 +123,7 @@
   },
   "devices": {
     "title": "Jedna przestrzeń pracy. Widok zmienia się z ekranem.",
-    "body": "Zaloguj się na perelai.app i zacznij pracę. Instalacja Perelai jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
+    "body": "Perelai działa w przeglądarce internetowej. Zaloguj się na perelai.app tam, gdzie pracujesz — to ta sama przestrzeń robocza. Na iPhonie możesz dodać go do ekranu początkowego, gdzie otworzy się z własnej ikony we własnym oknie. Instalacja jest opcjonalna, a w App Store ani Google Play go nie ma.",
     "caption": "Przykładowe dane",
     "summary": "Jedna przestrzeń pracy Perelai, otwarty z obsługiwanej przeglądarki na telefonie, tablecie lub komputerze.",
     "link": "Jak otworzyć Perelai"

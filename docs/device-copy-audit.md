@@ -802,3 +802,67 @@ Money, before Setup, one idea, one link to `/install`. No second CTA, no install
 `perelai.com`; that origin cannot install the app on `perelai.app` (plan §4.2).
 
 **Status:** `BLOCKED` on step 4 of §13.6. No shipping message value changed by this entry.
+
+---
+
+## 14. Drafts promoted — physical iPhone evidence, 2026-08-02
+
+The owner ran the §13.6 kit on a personal iPhone against production `https://perelai.app/` and
+supplied the iOS confirmation sheet (Perelai icon, name, URL, **Open as Web App** on) plus a direct
+attestation that launching from the resulting icon opens Perelai in its own window.
+
+Both halves of the two-approval rule were moved before any copy changed:
+
+1. `device-claim-contract.md` §2.1 records the run; §3 splits the old combined rows and marks
+   **iPhone Safari Home Screen setup** and **Standalone app window (iPhone)** as `PASS`.
+2. `messaging-and-claims.md` §2.4 gains **F26** with the allowed shape and its never-say list, and
+   the device gate's shippable table now lists it.
+
+### 14.1 What shipped
+
+| §4 draft | Now live in | Wording as shipped |
+|---|---|---|
+| "Open Perelai from its icon, in its own window." | `devices.installBenefits.title` / `.body` | The section finally does its §7.1 item 3 job — it describes what changes, not whether installing is possible |
+| "Add Perelai to your iPhone Home Screen." | `devices.guides.iphone.body` | Names Safari and the Share → Add to Home Screen route, then hands off to the in-app guide |
+| — (new) | `home.devices.body` | One added sentence, so the homepage block stops reading as browser-only |
+
+All nine locales updated together. The `en` shape:
+
+> **What changes when it's on your Home Screen**
+> On iPhone, add Perelai to your Home Screen and it opens from its own icon, in its own window — no
+> address bar, no tabs. iOS asks whether to open it as a web app; leave that switch on and it opens
+> that way every time.
+
+### 14.2 Three deliberate restraints
+
+**Named the condition, not just the outcome.** `Open as Web App` is a switch the person can turn off,
+and with it off iOS adds a bookmark rather than a launcher. Saying so is the `copy-editing`
+Specificity sweep applied honestly: a concrete condition reads as more credible than an unqualified
+promise, and it is the difference between a claim that survives a support ticket and one that does
+not.
+
+**iPhone only, everywhere.** One device passing is evidence about that device. `guides.ipad`,
+`guides.android` and `guides.desktop` are untouched and still say "supported browser, installing
+optional". The cross-device line ("phone, iPad and desktop") stays in §4 as a blocked draft.
+
+**No push, no native comparison.** The iPhone alerts row still needs production VAPID plus a physical
+receipt. "Native app", "native performance" and "same as a native app" remain `FORBIDDEN` at any
+evidence level (plan §4.2) — this section describes a window, not a runtime.
+
+### 14.3 Still blocked after this
+
+| Row | Missing |
+|---|---|
+| iPad Home Screen setup, cross-device workspace, iPad portrait panes | Physical iPad Safari |
+| Android / desktop browser install, standalone on those platforms | Physical Android Chrome and a desktop native prompt |
+| iPhone push condition | Production VAPID + physical receipt on an installed iPhone |
+| Embedded-webview escape | Physical run from an in-app browser |
+| §2.1 caveat 2 | A filed screenshot of the launched standalone window; the row currently rests on owner attestation |
+
+### 14.4 Not done here, on purpose
+
+The `/install` FAQ has no "does it work like an app?" question yet, and that is the natural home for
+the §9.5 extractable answer now that the fact is shippable. DVC6A owns the answer-engine contract —
+question-shaped headings, entity consistency across page / `llms.txt` / JSON-LD / OG, and the manual
+four-assistant baseline — so adding it here would fragment that work. It is the first thing DVC6A
+should pick up.

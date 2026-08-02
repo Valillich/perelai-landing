@@ -40,8 +40,8 @@
     "screenshotAlt": "Perelai-Kalenderarbeitsbereich am Computer — echtes Produkt mit Beispieldaten"
   },
   "installBenefits": {
-    "title": "Wenn Ihr Browser anbietet, Perelai zu installieren",
-    "body": "Manche Browser können eine Website zum Home-Bildschirm hinzufügen oder in einem eigenen Fenster öffnen. Ob diese Option erscheint, hängt von Browser und Gerät ab — und Perelai verlangt es nie.",
+    "title": "Was sich ändert, wenn Perelai auf dem Home-Bildschirm liegt",
+    "body": "Fügen Sie Perelai auf dem iPhone zum Home-Bildschirm hinzu — es öffnet sich über ein eigenes Symbol, in einem eigenen Fenster, ohne Adressleiste und Tabs. iOS fragt, ob es als Web-App geöffnet werden soll; lassen Sie diesen Schalter an, dann bleibt es dabei.",
     "fallbackTitle": "Der Browser reicht",
     "fallbackBody": "Die Installation ist optional. Perelai läuft in einem unterstützten Browser, und dieser Weg funktioniert weiter, ob Sie etwas installieren oder nicht."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Plattform",
     "iphone": {
       "title": "iPhone",
-      "body": "Öffnen Sie perelai.app in einem unterstützten Browser und melden Sie sich an. Alles zur Installation danach ist optional."
+      "body": "Öffnen Sie perelai.app in Safari und melden Sie sich an. Um es auf dem Home-Bildschirm zu behalten: „Teilen“, dann „Zum Home-Bildschirm“. Dieselben Schritte zeigt Perelai auch in der App."
     },
     "ipad": {
       "title": "iPad",

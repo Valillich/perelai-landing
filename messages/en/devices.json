@@ -40,8 +40,8 @@
     "screenshotAlt": "Perelai desktop calendar workspace — actual product with example data"
   },
   "installBenefits": {
-    "title": "If your browser offers to install Perelai",
-    "body": "Some browsers can add a website to a home screen or open it in a window of its own. Whether that option appears depends on the browser and the device, and Perelai never requires it.",
+    "title": "What changes when it's on your Home Screen",
+    "body": "On iPhone, add Perelai to your Home Screen and it opens from its own icon, in its own window — no address bar, no tabs. iOS asks whether to open it as a web app; leave that switch on and it opens that way every time.",
     "fallbackTitle": "The browser stays enough",
     "fallbackBody": "Installing is optional. Perelai runs in a supported browser, and that route keeps working whether or not you ever install anything."
   },
@@ -51,7 +51,7 @@
     "tablistLabel": "Platform",
     "iphone": {
       "title": "iPhone",
-      "body": "Open perelai.app in a supported browser and sign in. Installing anything afterwards is optional."
+      "body": "Open perelai.app in Safari and sign in. To keep it on your Home Screen: Share, then Add to Home Screen. Perelai shows you the same steps inside the app."
     },
     "ipad": {
       "title": "iPad",
