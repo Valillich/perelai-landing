@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v2
-**Last updated:** 2026-08-01
+**Document version:** v3
+**Last updated:** 2026-08-02
 
 ## Product Overview
 **One-liner:** Your clients, bookings and cash flow — finally in one place.
@@ -18,6 +18,13 @@
 **Target companies:** Independent colorists and premium solo beauty professionals in the United States. `APPOINTMENT` mode. Everything else is Wave 2+.
 
 **Decision-makers:** Solo owner-operators (the professional who books, serves, and collects payment).
+
+**The ICP did not change on 2026-08-02.** Perelai now documents two ways of working with other people
+(team access inside one workspace; a link between two separate businesses that share space). Both are
+**optional progressions the flagship solo buyer opts into later** — not a second audience, not a
+repositioning toward salons, and never the frame of a headline. The buyer is still the solo
+professional; the collaboration story exists to stop them disqualifying themselves in either
+direction ("this is too big for me" / "I might hire someone next year, so I'd have to move again").
 
 **Primary use case:** Run clients, bookings, and cash flow from one place without reconstructing the day from DMs, notes apps, and memory.
 
@@ -81,7 +88,9 @@
 |-----------|----------|
 | Do I need a card to start? | No card collected today — no billing system. Beta duration or price commitment only when recorded in `docs/commercial-policy.md`. |
 | Migrating will take a weekend | vCard import, Google Calendar sync, niche templates with pre-filled services |
-| Built for big salons, not me | Solo professional framing; templates for independent trades |
+| Built for big salons, not me | Solo professional framing; templates for independent trades. Team capability does **not** mean salon-first: the collaboration section is placed late, opens with "Work solo. Add people when you need them.", and adds no CTA. Never answer this objection with "Built for teams" or "Manage your salon team". |
+| If I add someone, will they see everything? | Answer with the two concrete roles, not with vague permission language: team members are invited with Staff or Supervisor access, and each gets the access their role allows. Do not say "granular permissions", "custom roles", or "complete privacy". |
+| Someone else rents the room / the chair next to me — do we have to share a system? | No. A coworker is a **separate business**, not a team member: no shared account, no shared client list, no workspace access. Only company identity and occupied times cross that boundary. Publication of this answer is gated on TC5 in `docs/team-collaboration-claim-contract.md` — currently `HOLD`. |
 | I'll set it up and abandon it | Honest scope and setup-in-an-evening path; not an all-in-one ERP |
 | Is this accounting? | No — tracks booked, completed, and paid activity for cash-flow visibility; not tax filing or financial advice |
 | Can I use it on my phone, iPad, or desktop? | Perelai works in a browser; installation is optional and varies by browser and platform. Do not upgrade this response to a device-specific installation, standalone-window, or iPhone-alert promise until the matching claim-contract row is `PASS`. |
@@ -96,7 +105,7 @@
 
 **Habit:** The notes app + the paper book + the phone calendar works "well enough" and costs nothing.
 
-**Anxiety:** "Migrating my clients will take a weekend." "It'll be built for salons with 12 chairs, not me." "I'll set it up and then abandon it."
+**Anxiety:** "Migrating my clients will take a weekend." "It'll be built for salons with 12 chairs, not me." "I'll set it up and then abandon it." Adding people has its own two-sided anxiety, and the second half is the one usually missed: *identity* ("is this too big for someone like me?") and *access* ("if I let someone in, what do they see?"). Answer identity by keeping the solo frame first and the collaboration content late; answer access with the two named roles and the exact company boundary, never with reassurance adjectives.
 
 ## Customer Language
 **How they describe the problem:**
@@ -110,9 +119,9 @@
 - Your booking link, no commission
 - Proxy device-language only (not yet validated for Perelai): app, phone, website, online booking, Android, desktop
 
-**Words to use:** Visit, Order, Package (prepaid credits), Workspace access, Payment confirmation, Instalment, Public service request, Rental reservation, Operational Inbox item; browser-first; optional installation
+**Words to use:** Visit, Order, Package (prepaid credits), Workspace access, Payment confirmation, Instalment, Public service request, Rental reservation, Operational Inbox item; browser-first; optional installation; team member (marketing prose); Staff / Supervisor (product role labels, taken from the generated app string catalog); coworker (**a linked separate business only**); occupied times
 
-**Words to avoid:** personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; native app; download; offline / offline sync; App Store / Google Play availability; one-click install everywhere; fake testimonials / usage counts; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
+**Words to avoid:** personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; native app; download; offline / offline sync; App Store / Google Play availability; one-click install everywhere; fake testimonials / usage counts; built for teams / manage your salon team / built for salons / requires a team; granular permissions / custom roles / enterprise workforce management / SSO; payroll / timesheets / commissions / HR; shared calendar (coworker sense) / shared client list / shared account; nothing is shared / complete privacy / private by default / anonymous; no double-booking ever / real-time locking; streamline collaboration / work better together / one shared workspace; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
 
 **Glossary:**
 | Term | Meaning |
@@ -123,6 +132,9 @@
 | Payment confirmation | Not fiscal receipt or tax invoice |
 | Instalment | Not "payment plan" in UI labels |
 | Operational Inbox item | Not "notification" |
+| Team member | Someone with workspace access **inside one company**, invited as Staff or Supervisor. Marketing prose word; not "employee", "seat", or "user" |
+| Coworker | A **separate business** linked to yours because you share space or equipment. Not a role, not a seat, not a colleague inside your workspace, and never a person |
+| Occupied times | The only schedule information that crosses a coworker boundary — company name, colour, start, end. Not "their calendar", not "a shared calendar" |
 
 ## Brand Voice
 **Tone:** Direct, honest, founder-led — credible for pre-commercial beta without fake social proof.
@@ -162,6 +174,19 @@ Use **Say** column verbatim or as base; never upgrade the claim.
 
 **Setup and integrations:** Niche-aware onboarding (32 business types); Google Calendar sync; Google sign-in; vCard import; market-aware defaults; staff & multi-company.
 
+**Working with other people (optional, secondary — added 2026-08-02).** Two mechanisms, never merged:
+
+| Mechanism | What may be said | Claim gate on 2026-08-02 |
+|---|---|---|
+| Team access inside one workspace | "Invite team members with Staff or Supervisor access." · "Keep schedules, time off and assigned services together." · "Give each person the access their role allows." | TC1–TC4 `PASS` |
+| Client context that follows the client | "Pinned client notes and visit notes stay with the client history." Once, as supporting proof inside the workspace side. | TC8 `PASS` |
+| Coworker link between two separate businesses | "Link a separate business that shares your space." · "You each see the other company's occupied times — not client, service, staff, money or note details." · Occupied times are checked when a visit is saved and excluded from public booking availability. | TC5 **`HOLD`** — nothing in this row may ship, in any language or visual, until a new dated verification entry clears it |
+
+The boundary is the message. Accepting a coworker invite creates **no** workspace access in the other
+company and shares **no** client list. Never claim more privacy than that: company name, colour and
+occupied intervals genuinely do cross. `docs/team-collaboration-claim-contract.md` is the gate;
+`.cursor/plans/reference/messaging-and-claims.md` F15/F25/F4 carry the allowed wording.
+
 **Communication:** Reminders & notifications (email, in-app, push — not SMS/WhatsApp/Telegram); client preferences; payment confirmations.
 
 **Platform:** 7 languages in app; mobile-first + desktop web; installable in browser; light & dark.
@@ -169,7 +194,21 @@ Use **Say** column verbatim or as base; never upgrade the claim.
 ## Not shippable (do not imply availability)
 AI/NLP, smart insights, marketing broadcasts, cohorts, RFM, churn prediction; file attachments on notes; SaaS billing/subscriptions/trials; public REQUEST/ORDER/RENTAL intake (disabled by default); curated market price suggestions; SMS/WhatsApp/Telegram/Slack/Discord.
 
+**Notes non-goals (added 2026-08-02).** Notes are real and stay under *Clients + history*. They are
+not a product category and get no section, page, or nav item of their own. Do not imply attachments or
+media, tags, mentions, note search, rich text, AI summarization, a global or company-wide notes feed,
+or notes visible to a linked coworker company. Legacy client descriptions and transaction comments are
+compatibility fields, not a feature.
+
+**Collaboration non-goals (added 2026-08-02).** No payroll, timesheets, commissions, clock-in, or HR
+records. No roles beyond Owner / Supervisor / Staff, and no user-defined roles. No cross-company
+sharing of clients, services, staff, money, payment state, notes, titles, or transaction identifiers.
+No enterprise permission platform, no SSO. The invite mechanics that exist in the app — expiry,
+creator succession, caps, locking, database invariants, error codes — are implementation details and
+never marketing content.
+
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v3 (2026-08-02) — TEAM1 added working-with-other-people as an *optional secondary* capability (team access vs coworker link), two access objections, the identity/access anxiety split, team & coworker terminology, and Notes/collaboration non-goals. Flagship solo ICP, category, hero, and CTA unchanged; coworker wording is held on TC5 and is not publishable.
 - v2 (2026-08-01) — DVC1A added browser-first and optional-install positioning, device objections, claim-avoidance language, and evidence-bound platform proof; core category and GTM unchanged.
 - v1 (2026-07-29) — Initial context transcribed from `messaging-and-claims.md` §1–§5 for LP0 baseline.

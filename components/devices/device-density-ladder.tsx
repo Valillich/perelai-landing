@@ -63,11 +63,6 @@ export function DeviceDensityLadder({
 
       <div className="rounded-[24px] border border-border bg-card/40 p-3 sm:p-4">
         <div className="relative flex flex-col gap-4 @[64rem]:block">
-          {/*
-            1. Phone density: single-pane focused layout with bottom navigation bar.
-            Stacks first on narrow containers; on wide containers it sits on the
-            desktop baseline at the front right.
-          */}
           <div className="mx-auto w-full max-w-[320px] @[64rem]:absolute @[64rem]:bottom-0 @[64rem]:right-0 @[64rem]:top-10 @[64rem]:z-20 @[64rem]:mx-0 @[64rem]:w-[320px] @[64rem]:max-w-none">
             <DeviceFrame size="phone" className="h-full">
               <MockMobileShell
@@ -79,14 +74,9 @@ export function DeviceDensityLadder({
             </DeviceFrame>
           </div>
 
-
-          {/*
-            2. Desktop density: 82px desktop rail + full two-pane / wide 3-pane workspace.
-            Spans the full container width as the ground plane composition.
-          */}
           <div className="overflow-x-auto @[64rem]:overflow-visible">
             <DeviceFrame
-              size="desktop"
+              size="tablet"
               className="min-w-[64rem] @[64rem]:w-full @[64rem]:min-w-0"
             >
               <MockDesktopShell

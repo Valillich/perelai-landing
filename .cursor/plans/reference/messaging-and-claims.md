@@ -8,6 +8,12 @@ FAQ answer and meta description produced in Phases LP6–LP8 must be traceable t
 **Rule for every agent working on copy:** if a claim is not in §2, you may not write it. If you
 believe it should be, add it to §2 with a source file path first, in a separate change.
 
+**Amended 2026-08-02 (TEAM1, team collaboration).** F4 gained the notes supporting line and its
+never-say list; F15 gained the narrow team shapes; F25 (coworker shared availability) was added and is
+**held** on TC5; a Collaboration gate was added after §2.2; §4.1 gained eight collaboration bans;
+§4.2 gained the team/coworker terminology rows; §7 inserted **Collaboration** as row 7 and the former
+rows 7–11 shifted to 8–12. Nothing in §1 (positioning/ICP) or §6 (CTA policy) changed.
+
 ---
 
 ## 1. Positioning (use this, don't re-derive it)
@@ -70,7 +76,7 @@ the claim.
 | F1 | Operational Inbox | "One list of what still needs your decision — it stays there until you resolve it, not until you read it." | "AI triage", "smart inbox", "automatically handles" | `apps/api/src/inbox/`, `components/inbox/`, ADR-0009 |
 | F2 | Mode-aware Calendar | "A calendar that shows the kind of work you actually do — appointments, orders, requests or reservations." | Do not promise REQUEST/ORDER/RENTAL **public intake** — see §4 | `CalendarPage.tsx`, `calendar-projection/`, ADR-0008 |
 | F3 | Public booking page | "Share one link. Clients pick a service, a person and a time. No commission." | "Marketplace", "get discovered", "new clients from Perelai" | `apps/api/src/public-booking/`, `PublicBookingPage.tsx` |
-| F4 | Clients + history | "Every client's visits, notes and payments in one place." | "CRM", "360° customer view", "lifetime value prediction" | `apps/api/src/clients/`, `notes/`, `ClientDetailsPage.tsx` |
+| F4 | Clients + history (incl. notes) | "Every client's visits, notes and payments in one place." Supporting line, when client context needs proof: "Pinned client notes and visit notes stay with the client history." | "CRM", "360° customer view", "lifetime value prediction". For the notes half: attachments, files, tags, mentions, note search, rich text, AI summaries, a global/company-wide notes feed, or notes visible to a linked coworker company | `apps/api/src/clients/`, `notes/`, `ClientDetailsPage.tsx`, `PinnedClientNoteCard.tsx`; supporting line gated by TC8 in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) (`PASS` 2026-08-02) |
 | F5 | Payment recording & allocation | "Record what was actually received and see exactly what it paid for." | "Payment processing", "we handle payments", "get paid instantly" — Perelai **records**, it does not process | `payment-accounts/`, ADR-0002 |
 | F6 | Finance overview | "Revenue, costs and what's still outstanding — without a spreadsheet." | "Accounting", "bookkeeping", "tax", "P&L", "financial advice" | `apps/api/src/finance/`, `FinancePage.tsx` |
 | F7 | Orders + instalments | "Agree a payment schedule and track what's still owed." | "Financing", "BNPL", "credit", "lending", "invoice", "bill" | `apps/api/src/orders/`, ADR-0006 |
@@ -86,7 +92,29 @@ the claim.
 | F12 | Google sign-in | "Sign in with Google." | "Perelai reads your contacts" — the Contacts scope is **deliberately not requested** | `auth/google-auth.guard.ts` |
 | F13 | vCard contact import | "Bring your contacts across from your phone." | "One-click migration from [competitor]" | `apps/api/src/imports/`, `ob14-vcard-preview-company-estimate.md` |
 | F14 | Market-aware defaults | "Currency and country are set from your market; time-based service templates start with editable durations." | Do **not** promise suggested *prices* — the curated price catalog is intentionally empty (`ob13`). Do not promise durations for ORDER/REQUEST/non-time-based items. Durations come from the template, not from the market. | `supported-markets.ts`, `price-packs-catalog.ts` |
-| F15 | Staff & multi-company | "Add your team with roles, or run more than one business from one login." | "Enterprise permissions", "SSO" | `staff/`, `invites/`, `memberships/` |
+| F15 | Staff & multi-company | "Add your team with roles, or run more than one business from one login." Narrow homepage shapes: "Invite team members with Staff or Supervisor access." · "Keep schedules, time off and assigned services together." · "Give each person the access their role allows." | "Enterprise permissions", "SSO", "granular permissions", "custom roles", "roles you define", "payroll", "timesheets", "commissions", "HR management", "built for salons", "requires a team", "enterprise workforce management". Never restate a role scope as an absolute ("Staff can never see another client", "everyone sees everything") | `staff/`, `invites/`, `memberships/`, `common/utils/staff-scope.util.ts`; narrow shapes gated by TC1–TC4 in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) (`PASS` 2026-08-02) |
+| F25 | Coworker shared availability (separate businesses) | "Link a separate business that shares your space." · "You each see the other company's occupied times — not client, service, staff, money or note details." · "Coworker occupied times are checked when a visit is saved and excluded from public booking availability." | "Shared calendar", "calendar sharing", "sync your calendars with your coworkers"; "nothing is shared"; "complete privacy", "private by default", "anonymous"; "no double-booking ever", "real-time locking"; "shared account", "shared client list", "one shared workspace", "collaborate with anyone"; coworker described as a role, seat, membership, or team member | `apps/api/src/coworkers/`, `coworker-busy.service.ts` (returns `id`, `startAt`, `endAt`, `companyName`, `companyColor` only), `apps/api/prisma/schema.prisma` (`CoworkerGroup`, `CoworkerMembership`, `CoworkerInvite`), `apps/api/src/public-booking/public-booking.service.ts`; **publication gated by TC5–TC7** in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) |
+
+**Collaboration gate (added 2026-08-02, TEAM1).** F25 takes the next free ledger number after F24 but
+lives here in §2.2, beside F15, because the two mechanisms have to be read together. F15 and F25
+describe mechanisms that must never
+be merged. A **team member** has workspace access inside *one* company (`CompanyMembership`, Staff or
+Supervisor). A **coworker** is a *separate business* linked to yours; accepting a coworker invite
+creates no membership and shares no client list. Like the device rows, a collaboration sentence needs
+**two** approvals: it must appear here *and* its matching row in
+[`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md)
+must read `PASS`.
+
+| Ledger | Claim-contract rows | Status on 2026-08-02 | Consequence |
+|---|---|---|---|
+| **F15** narrow shapes | TC1, TC2, TC3, TC4 | `PASS` | The team half of the collaboration section may ship. |
+| **F4** notes supporting line | TC8 | `PASS` | One supporting line, inside the workspace side only. Never a standalone Notes section, never in a coworker surface. |
+| **F25** | TC5 `HOLD`, TC6 `PASS`, TC7 `PASS` | **Held on TC5** | No coworker sentence, key, label, panel, or visual may ship. TC6/TC7 describe the boundary *of* a link that TC5 has not yet cleared, so they cannot carry it alone. |
+| **F15** multi-company half | TC9 `HOLD` | Held **for this section only** | "Run more than one business from one login" stays exactly where it is today. Do not import it into collaboration copy. |
+
+TC5 is held because its focused integration evidence could not be executed (no `TEST_DATABASE_URL`),
+not because the mechanism was found absent. Clearing it requires a new dated verification entry in the
+claim contract — not a reading of this table.
 
 ### 2.3 Communication
 
@@ -166,6 +194,13 @@ silence unless there is a dated commitment.
 | "lending", "credit", "BNPL", "financing" | CONTEXT §17. Instalments = tracking an agreed schedule. |
 | "PWA" | CONTEXT §17 wording rule. |
 | Fake testimonials, fake logos, fake counts ("Join 10,000+ pros") | Pre-commercial beta. There are no customers to cite yet. |
+| "Built for teams", "Manage your salon team", "Salon team management", "built for salons" | Added 2026-08-02 (TEAM1). Destroys message match with the flagship solo ICP, whose documented anxiety is *"It'll be built for salons with 12 chairs, not me."* Collaboration is a progression the visitor opts into, never the frame. |
+| "Payroll", "timesheets", "commissions", "clock in/out", "HR" | Added 2026-08-02. Perelai stores staff schedules, time-off blocks and assigned services. It calculates no wage, hour total, or commission. Also an anti-persona boundary (§1). |
+| "Granular permissions", "custom roles", "define your own roles", "permission matrix" | Added 2026-08-02. There are exactly three role semantics — Owner, Supervisor, Staff. Vagueness here reads as enterprise software to a solo buyer and overstates the product. |
+| "Shared calendar", "share your calendar with your coworkers", "calendar sharing" (coworker sense) | Added 2026-08-02. Only occupied intervals cross a coworker boundary. F11 Google Calendar **sync** is a separate, real integration — do not let this ban shadow it, and do not let F11's wording leak into coworker copy. |
+| "Nothing is shared", "complete privacy", "private by default", "anonymous" (coworker sense) | Added 2026-08-02. Company name, colour and occupied intervals *are* shared. Overclaiming privacy is the fastest way to be caught being wrong; state the precise visible and hidden fields instead. |
+| "No double-booking ever", "never double-book", "real-time locking" | Added 2026-08-02. Coworker occupied times are checked on save and excluded from public booking availability. That is a check, not a guarantee. |
+| "Streamline collaboration", "work better together", "one shared workspace", "collaborate with anyone" | Added 2026-08-02. §4.3 already bans "streamline". These phrases also hide *which* of the two mechanisms is meant, which is the exact ambiguity this section exists to remove. |
 
 ### 4.2 Terminology discipline (from the app glossary — keep landing and app consistent)
 
@@ -180,6 +215,10 @@ silence unless there is a dated commitment.
 | Public service request | booking, visit |
 | Rental reservation | visit, booking |
 | Operational Inbox item | notification |
+| Team member *(marketing prose)* | employee, seat, user, headcount, "your staff" as a mass noun |
+| Staff, Supervisor *(product role labels — take the English from the generated app string catalog, never hand-typed)* | `STAFF` / `SUPERVISOR` enum names in prose; invented role names |
+| Coworker — **a linked separate business** | coworker as a person, a colleague inside your workspace, a role, or a seat |
+| Occupied times | shared calendar, busy calendar sharing, their schedule |
 
 ### 4.3 Style bans (copywriting skill)
 
@@ -264,11 +303,30 @@ One idea per section, in this order. Each section advances one argument.
 | 4 | Booking link | Removes the "how do clients reach me" question | One link, your clients, no commission |
 | 5 | Money that adds up | The honesty argument | Completed work and received money are tracked separately — so the number is real |
 | 6 | Device fit | Answer "will this fit how I work?" before migration anxiety starts | *Perelai runs in a web browser. Installing it is optional, and there is no App Store or Google Play listing.* (F21 + F23) |
-| 7 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
-| 8 | What Perelai is not | Disqualify + build trust | Not accounting, not a marketplace, not a medical record system |
-| 9 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
-| 10 | FAQ | Objection handling | 6 questions, §8 below |
-| 11 | Final CTA | Recap + risk reversal | Repeat primary CTA + the no-card line |
+| 7 | Collaboration | Answer "can I use this alone, and what happens if I add someone?" | *Work solo. Add people when you need them.* (F15 narrow shapes; F4 notes line as the one supporting proof) |
+| 8 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
+| 9 | What Perelai is not | Disqualify + build trust | Not accounting, not a marketplace, not a medical record system |
+| 10 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
+| 11 | FAQ | Objection handling | 6 questions, §8 below |
+| 12 | Final CTA | Recap + risk reversal | Repeat primary CTA + the no-card line |
+
+**Order constraints (binding).**
+
+```text
+Hero → Problem → Inbox → Booking → Money → Devices → Collaboration → Setup → Not → Niche router → FAQ → Final CTA
+```
+
+- **Device fit stays immediately after Money.** That adjacency is the DVC decision (device plan §6.3)
+  and Collaboration does not disturb it — Collaboration is inserted *after* Devices, not between Money
+  and Devices.
+- **Collaboration sits between Devices and Setup** because it is objection handling, not a new
+  purchase argument: Inbox, Booking and Money must land first, and the section then hands the visitor
+  straight to Setup's existing "your team if you have one" step (§8 FAQ 2).
+- **Collaboration adds no CTA.** The page keeps exactly one primary action. It also adds no route, no
+  header/footer item, no anchor target, no FAQ row, no metadata, OG/Twitter, JSON-LD or `llms.txt`
+  claim, and no niche-page block. The `#features` anchor stays on Inbox.
+- **Notes is not a section.** It appears once, as a supporting line inside Collaboration's workspace
+  side (F4 + TC8). See `docs/team-collaboration-copy-audit.md` §8 for the recorded rationale.
 
 ---
 

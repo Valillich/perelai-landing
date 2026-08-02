@@ -2,11 +2,6 @@ import { CtaButton } from "@/components/cta-button"
 import { CtaCard } from "@/components/cta-card"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { LandingHeader } from "@/components/landing/landing-header"
-import {
-  MockCalendarMonth,
-  MockFinanceKpis,
-  MockInboxTriage,
-} from "@/components/mock"
 import type { NichePageContent } from "@/content/niches/types"
 import type { NichePage } from "@/config/niche-pages"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -18,6 +13,7 @@ import { DeviceConfidence } from "@/components/devices/device-confidence"
 import { DeviceSectionTracker } from "@/components/analytics/device-section-tracker"
 import { PageViewTracker } from "@/components/analytics/page-view-tracker"
 import { NicheFaq } from "./niche-faq"
+import { NicheMockSuite } from "./niche-mock-suite"
 
 interface NichePageProps {
   locale: PublishedLocale
@@ -25,26 +21,13 @@ interface NichePageProps {
   content: NichePageContent
 }
 
-function NicheMockSuite({ locale, page }: Pick<NichePageProps, "locale" | "page">) {
+export function NichePage({ locale, page, content }: NichePageProps) {
+  const canonicalPath = page.path
   const market = localePrimaryMarket(locale)
   const dataset = buildMockDataset(page.templateId, locale, market, "2026-07-15T12:00:00.000Z")
   // The calendar mock renders the real app grid, which needs a full month
   // rather than the two-week strip the shared niche dataset carries.
   const screenDataset = buildAppScreenDataset(page.templateId, locale, market)
-
-  // Calendar slightly wider than inbox: seven day columns need the room;
-  // inbox cards read fine in a narrower column. Below `lg` everything stacks.
-  return (
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-      <MockCalendarMonth dataset={screenDataset} />
-      <MockInboxTriage dataset={dataset} />
-      <MockFinanceKpis dataset={screenDataset} className="lg:col-span-2" />
-    </div>
-  )
-}
-
-export function NichePage({ locale, page, content }: NichePageProps) {
-  const canonicalPath = page.path
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -99,7 +82,11 @@ export function NichePage({ locale, page, content }: NichePageProps) {
                 {content.cta.label}
               </CtaButton>
             </div>
-            <NicheMockSuite locale={locale} page={page} />
+            <NicheMockSuite
+              niche={page.niche}
+              dataset={dataset}
+              screenDataset={screenDataset}
+            />
           </div>
         </div>
       </section>

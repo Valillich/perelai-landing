@@ -35,8 +35,8 @@
   --accent-blue-bg: #dbeafe;
   --accent-blue-text: #2563eb;
   --mock-shadow-rgb: 16, 24, 40;
-  --mock-selected-border: rgb(var(--mock-shadow-rgb) / 0.06);
-  --mock-selected-bg: rgb(var(--brand-600-rgb) / 0.08);
+  --mock-selected-border: rgba(var(--mock-shadow-rgb), 0.06);
+  --mock-selected-bg: rgba(var(--brand-600-rgb), 0.08);
   --mock-attention: #d97706;
   --mock-today: #e11d48;
 }
@@ -72,8 +72,10 @@
   --accent-blue-bg: #1e293b;
   --accent-blue-text: #60a5fa;
   --mock-shadow-rgb: 0, 0, 0;
-  --mock-selected-border: rgb(var(--primary-foreground) / 0.1);
-  --mock-selected-bg: rgb(var(--brand-600-rgb) / 0.08);
+  /* `--primary-foreground` is a hex, not a channel triplet, so it can never be
+     fed to `rgb()`; the declaration was invalid and computed to `unset`. */
+  --mock-selected-border: rgba(255, 255, 255, 0.1);
+  --mock-selected-bg: rgba(var(--brand-600-rgb), 0.08);
   --mock-attention: #fbbf24;
   --mock-today: #fb7185;
 }
@@ -335,27 +337,67 @@ html {
 }
 
 .mock-device-frame-shadow {
-  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.04);
+  box-shadow: 0 4px 12px rgba(var(--mock-shadow-rgb), 0.04);
 }
 
 .dark .mock-device-frame-shadow {
-  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.2);
+  box-shadow: 0 4px 12px rgba(var(--mock-shadow-rgb), 0.2);
+}
+
+/* Device bezel.
+
+   `--card` and `--background` are both #ffffff in light mode, so an untinted
+   bezel vanishes on a white page and the frame reads as a floating screenshot
+   rather than as a device. This gives the bezel its own material: a flat
+   top-to-bottom brand wash over the card colour, plus a brand-tinted edge.
+
+   Deliberately not the `mock-glass-frame` treatment. That one is a conic
+   specular rim with `backdrop-filter` and a drop-shadow glow, which plan §8.1
+   rule 4 rules out for these compositions — no glass reflections, no glow, no
+   gradient blob. A flat wash is a material, not a highlight, and it uses the
+   one permitted accent. */
+.mock-device-bezel {
+  background-image: linear-gradient(
+    180deg,
+    rgba(var(--brand-600-rgb), 0.08) 0%,
+    rgba(var(--brand-600-rgb), 0.03) 100%
+  );
+  border-color: rgba(var(--brand-600-rgb), 0.2);
+}
+
+.dark .mock-device-bezel {
+  background-image: linear-gradient(
+    180deg,
+    rgba(var(--brand-600-rgb), 0.16) 0%,
+    rgba(var(--brand-600-rgb), 0.06) 100%
+  );
+  border-color: rgba(var(--brand-600-rgb), 0.3);
+}
+
+/* The screen edge, one step quieter than the bezel — the contrast between the
+   two is what makes the bezel legible as a bezel instead of as padding. */
+.mock-device-screen {
+  border-color: rgba(var(--brand-600-rgb), 0.14);
+}
+
+.dark .mock-device-screen {
+  border-color: rgba(var(--brand-600-rgb), 0.22);
 }
 
 .mock-control-shadow {
-  box-shadow: 0 4px 12px rgb(var(--mock-shadow-rgb) / 0.04);
+  box-shadow: 0 4px 12px rgba(var(--mock-shadow-rgb), 0.04);
 }
 
 .mock-surface-elevated-shadow {
-  box-shadow: 0 6px 20px rgb(var(--mock-shadow-rgb) / 0.06);
+  box-shadow: 0 6px 20px rgba(var(--mock-shadow-rgb), 0.06);
 }
 
 .mock-brand-tint {
-  background-color: rgb(var(--brand-600-rgb) / 0.1);
+  background-color: rgba(var(--brand-600-rgb), 0.1);
 }
 
 .mock-brand-subtle {
-  background-color: rgb(var(--brand-600-rgb) / 0.06);
+  background-color: rgba(var(--brand-600-rgb), 0.06);
 }
 
 .mock-selected-day {

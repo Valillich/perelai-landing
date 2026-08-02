@@ -14,6 +14,13 @@ a premium presentation contract and the ported desktop shell are added (§8.1–
 set in §2 gains `ai-seo`, `marketing-psychology`, `seo-audit`, and `signup`, and `aso` is demoted.
 Phase `DVC2R` is inserted between DVC2 and DVC3. Nothing in §4 (claim contract) was loosened.
 
+**Amended:** 2026-08-02 by TEAM1 of
+[`../features/00_team_collaboration_features_marketing_plan_20260802.md`](../features/00_team_collaboration_features_marketing_plan_20260802.md).
+Homepage-order statements in §5.4, §6.1, §6.3, §6.5 and DVC5 were rewritten from “after Money and
+before Setup” to “**immediately after Money**”, so a `Collaboration` section may sit between `Devices`
+and `Setup`. The `Money → Devices` adjacency is unchanged and still binding. No device claim, visual
+contract, evidence rule, CTA rule, or `/install` decision was touched.
+
 **Companion executor prompts:**
 
 [`01_device_distribution_llm_prompts_20260731.md`](01_device_distribution_llm_prompts_20260731.md)
@@ -319,7 +326,7 @@ Framing rules, binding on all device copy:
    the store the frame of reference and invite the comparison. State the path; move on.
 3. **Reduce the unknown, do not reframe it as a benefit.** “Open it in your browser, then add it to
    your Home Screen” is an instruction. “No app store friction” is a slogan defending a gap.
-4. **Answer at the moment of doubt, not before it.** §6.3's placement — after Money, before Setup —
+4. **Answer at the moment of doubt, not before it.** §6.3's placement — immediately after Money —
    is this rule applied to the homepage: the anxiety only exists once the visitor wants the product.
 5. **One concession, stated calmly, buys the rest.** §4.3's required honesty language is a
    credibility instrument, not a legal disclaimer. A page that volunteers its own limitation is
@@ -339,7 +346,7 @@ that browser delivery is *superior* to native rather than simply how Perelai wor
 ```text
 Homepage (/)
 ├── Device reassurance near hero CTA
-├── Full “on your devices” section after Money and before Setup
+├── Full “on your devices” section immediately after Money
 └── Link to Installation hub
 
 Installation hub (/install)
@@ -380,12 +387,19 @@ At execution time use `PUBLISHED_LOCALES` from code. The verified set on 2026-07
 
 ### 6.3 Homepage placement rationale
 
-The full section belongs after `Money` and before `Setup`:
+The full section belongs **immediately after `Money`**, and ahead of `Setup`:
 
 - the visitor has already understood the product's main value;
 - device availability answers “will this fit how I work?” before migration/setup anxiety is handled;
 - it avoids leading with distribution jargon;
 - it provides a natural bridge from product outcomes to starting the workspace.
+
+**Amended 2026-08-02 (TEAM1).** The binding half of this decision is the `Money → Devices` adjacency,
+not literal contact with `Setup`. `Collaboration` is inserted between `Devices` and `Setup` by
+`../features/00_team_collaboration_features_marketing_plan_20260802.md` §6.1, giving
+`… → Money → Devices → Collaboration → Setup → …`. Devices still follows Money immediately, still
+precedes migration/setup anxiety, and none of its claims, visuals, or CTA rules change. Any future
+section proposing to sit between `Money` and `Devices` is still rejected by this section.
 
 The hero gets only one short reassurance line or compact accessible device row. It must not add a
 second competing CTA.
@@ -396,6 +410,11 @@ adds up”, then shift the former rows 6–10 down by one. It does not change th
 Inbox, Booking, or Money. During DVC1, update that reference table so future executors do not receive
 two conflicting homepage orders; the new row may use only existing platform claims F20/F21/F22 plus
 the device claim contract.
+
+Since 2026-08-02 that table carries a further row — **Collaboration**, row 7, immediately after Device
+fit — added by TEAM1. Device fit's own row number and its position after “Money that adds up” are
+unchanged. `.cursor/plans/reference/messaging-and-claims.md` §7 is the single authority on the current
+homepage order; read it there rather than reconstructing it from this paragraph.
 
 ### 6.4 Niche and pricing scope
 
@@ -413,7 +432,7 @@ resolve against §8.2.
 | Surface | Visual | Rationale |
 |---|---|---|
 | Homepage hero | **Unchanged.** The existing `HeroShowcase` already rotates two live phone screens. Add one line of text reassurance in the CTA microcopy area only. | The hero is the LCP element and carries the single primary CTA. Adding a device composition here costs performance and dilutes the one action. §6.3 already ruled this out; §8 does not reopen it. |
-| Homepage device section (after `Money`, before `Setup`) | `DeviceDensityLadder` — one workspace at three densities, live, in a single composition. | The section's job is to make “one workspace, three densities” self-evident in under two seconds. A single continuous object does that; three tabbed panels do not (§8.3). |
+| Homepage device section (immediately after `Money`) | `DeviceDensityLadder` — one workspace at three densities, live, in a single composition. | The section's job is to make “one workspace, three densities” self-evident in under two seconds. A single continuous object does that; three tabbed panels do not (§8.3). |
 | `/install` hero | `MockDesktopShell` at full width, rail visible. | Answers the category question — “is there a desktop app?” — in one glance, before the H1 is read. Desktop is the layout class a visitor is least likely to assume exists. |
 | `/install` showcase | Phone / iPad / Desktop, each a live composition. Tabs are permitted **here only**, with all three panels in server-rendered DOM (§7.3). | A long-form reference page earns progressive disclosure; the homepage does not. |
 | Niche pages | `DeviceConfidence` — three small neutral glyph frames, one line, one link. No product surface. | Niche pages already carry three mock surfaces. A fourth would bloat the page and dilute the niche-specific text budget that `check-uniqueness.mjs` measures. |
@@ -1110,7 +1129,7 @@ Requirements:
 
 - short reassurance near the hero CTA without a second CTA;
 - `HeroShowcase` left unchanged — it already owns the homepage's one rotating element (§6.5);
-- full device section after `Money` and before `Setup`, rendering `DeviceDensityLadder` as one
+- full device section immediately after `Money`, rendering `DeviceDensityLadder` as one
   composition, not tabbed panels;
 - compact shared niche block after niche Setup, linked to `/install`;
 - two factual homepage FAQ additions, including the store question;

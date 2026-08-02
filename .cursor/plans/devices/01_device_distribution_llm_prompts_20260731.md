@@ -13,6 +13,11 @@ DVC2 and DVC3 and is now what DVC3 depends on. DVC2 became evidence capture and 
 components. Skill loads changed in DVC1A, DVC1B, DVC4, and DVC6A. A design/visual section was added
 to the universal preamble, and reusable prompt **R-DVC3** audits premium presentation.
 
+**Updated 2026-08-02, TEAM1 (team collaboration).** Homepage-order wording in the DVC1B and DVC5
+prompts now reads “immediately after `Money`” instead of “after `Money` and before `Setup`”, because a
+`Collaboration` section sits between `Devices` and `Setup`. The `Money → Devices` adjacency is
+unchanged and still asserted. No device claim, asset, route, or gate was otherwise altered.
+
 **Run order:**
 
 ```text
@@ -256,7 +261,7 @@ DVC0 → DVC1A → DVC1B → DVC2 → DVC2R → DVC3 → DVC4 → DVC5 → DVC6A
 > 4. Create `docs/device-copy-audit.md` containing:
 >    - one row per claim with the matching claim-contract source;
 >    - CTA hierarchy and expected next step;
->    - why the full section sits after Money and before Setup;
+>    - why the full section sits immediately after Money;
 >    - the seven copy-editing sweeps and findings;
 >    - 2–3 alternative **future experiment** headlines/section headings with rationale, while keeping
 >      one canonical shipping version.
@@ -533,7 +538,7 @@ DVC0 → DVC1A → DVC1B → DVC2 → DVC2R → DVC3 → DVC4 → DVC5 → DVC6A
 >    - **leave `HeroShowcase` alone.** It already rotates two live phone screens and owns the one
 >      rotating element on the page. Do not add a device composition to the hero, and do not add a
 >      second autoplaying element anywhere (plan §6.5, §8.9);
->    - add the full shared device section after `<Money>` and before `<Setup>`, rendering
+>    - add the full shared device section **immediately after `<Money>`**, rendering
 >      `DeviceDensityLadder` — **one composition, not three tabbed panels**. Tabs are permitted on
 >      `/install` only;
 >    - keep clients/bookings/cash-flow and the existing Create workspace CTA visually dominant.
@@ -553,8 +558,12 @@ DVC0 → DVC1A → DVC1B → DVC2 → DVC2R → DVC3 → DVC4 → DVC5 → DVC6A
 > 5. Add localized internal-link tracking hook-up only if DVC6B's typed event already exists; otherwise
 >    leave analytics for DVC6B rather than inventing a temporary event.
 >
-> **Gate:** homepage section order is Hero → Problem → Inbox → Booking → Money → Devices → Setup;
-> primary CTA hierarchy is unchanged; niche uniqueness remains green; all internal links preserve
+> **Gate:** `Devices` renders immediately after `Money` and ahead of `Setup` — from 2026-08-02 the
+> canonical order is Hero → Problem → Inbox → Booking → Money → Devices → **Collaboration** → Setup
+> (`.cursor/plans/reference/messaging-and-claims.md` §7; the Collaboration section itself is delivered
+> by `../features/00_team_collaboration_features_marketing_plan_20260802.md`, not by DVC5). Assert the
+> `Money → Devices` adjacency, not literal contact between `Devices` and `Setup`.
+> Primary CTA hierarchy is unchanged; niche uniqueness remains green; all internal links preserve
 > locale; mobile has no horizontal scroll; no App Store/Google Play badge or fake install action;
 > typecheck/lint/tests/verify/build pass.
 

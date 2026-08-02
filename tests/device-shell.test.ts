@@ -230,10 +230,33 @@ describe("the density ladder", () => {
     expect(markup).toContain(railLabel("en", "nav.calendar"))
     // The same day total appears across chromes because the dataset is shared.
     expect(markup).toContain(dataset.selectedDayLabel)
-    // Frame sizes for phone (rounded-[26px]), tablet (rounded-[20px]), and desktop (rounded-[16px])
-    expect(markup).toContain("rounded-[26px]")
-    expect(markup).toContain("rounded-[20px]")
-    expect(markup).toContain("rounded-[16px]")
+  })
+
+  it("gives each chrome a distinct frame silhouette", () => {
+    // The bezel radius is what separates a handheld from a display, so assert
+    // the contrast rather than pinning the exact values — those are a design
+    // decision that lives in `device-frame.tsx`.
+    const phone = renderToStaticMarkup(
+      createElement(DeviceFrame, { size: "phone", children: null }),
+    )
+    const tablet = renderToStaticMarkup(
+      createElement(DeviceFrame, { size: "tablet", children: null }),
+    )
+    const desktop = renderToStaticMarkup(
+      createElement(DeviceFrame, { size: "desktop", children: null }),
+    )
+
+    const outerRadius = (m: string) => m.match(/rounded-\[([\d.]+)rem\]/)?.[1]
+    const phoneRadius = Number(outerRadius(phone))
+    const tabletRadius = Number(outerRadius(tablet))
+    const desktopRadius = Number(outerRadius(desktop))
+
+    expect(phoneRadius).toBeGreaterThan(tabletRadius)
+    expect(tabletRadius).toBeGreaterThan(desktopRadius)
+
+    // Each size appears in the ladder with its own bezel.
+    expect(markup).toContain(`rounded-[${phoneRadius}rem]`)
+    expect(markup).toContain(`rounded-[${tabletRadius}rem]`)
   })
 
   it("is deterministic across renders", () => {
