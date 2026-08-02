@@ -70,4 +70,28 @@ describe("verify:niches", () => {
     expect(result.status).not.toBe(0)
     expect(`${result.stdout}\n${result.stderr}`).toMatch(/differs from app HEAD/)
   }, 15000)
+
+  it("exits non-zero when a required team/note key is removed from a locale fixture", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "perelai-verify-team-key-"))
+    dirs.push(dir)
+
+    const stringsPath = path.join(dir, "app-ui-strings.generated.json")
+    cpSync(path.join(ROOT, "data/app-ui-strings.generated.json"), stringsPath)
+
+    const strings = JSON.parse(readFileSync(stringsPath, "utf8"))
+    delete strings.locales.uk["staff_management.role_staff_title"]
+    writeFileSync(stringsPath, `${JSON.stringify(strings, null, 2)}\n`)
+
+    const result = spawnSync("pnpm", ["verify:niches"], {
+      cwd: ROOT,
+      encoding: "utf8",
+      env: {
+        ...process.env,
+        VERIFY_STRINGS_PATH: stringsPath,
+      },
+    })
+
+    expect(result.status).not.toBe(0)
+    expect(`${result.stdout}\n${result.stderr}`).toMatch(/staff_management\.role_staff_title/)
+  }, 15000)
 })

@@ -127,5 +127,14 @@
     "caption": "Örnek veriler",
     "summary": "Telefon, tablet veya bilgisayarda desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
     "link": "Perelai’yi nasıl açarsınız"
+  },
+  "collaboration": {
+    "title": "Tek başınıza çalışın. İhtiyacınız olduğunda kişi ekleyin.",
+    "body": "Kendi çalışma alanınızla başlayın. Ekip erişimini yalnızca faydalı olduğunda ekleyin.",
+    "teamTitle": "Ekibiniz",
+    "teamBody": "Ekip üyelerini Personel veya Yöneticisi erişimiyle davet edin. Çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun.",
+    "notesDetail": "Sabitlenmiş müşteri notları ve ziyaret notları müşteri geçmişinde kalır.",
+    "summary": "Tek bir işletme içinde ekip rollerini, çalışma saatlerini ve sabitlenmiş bir müşteri notunu gösteren Perelai çalışma alanı örneği.",
+    "caption": "Örnek veriler"
   }
 }

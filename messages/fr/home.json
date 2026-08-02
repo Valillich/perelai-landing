@@ -127,5 +127,14 @@
     "caption": "Données d'exemple",
     "summary": "Un espace de travail Perelai, ouvert depuis un navigateur pris en charge sur un téléphone, une tablette ou un ordinateur.",
     "link": "Comment ouvrir Perelai"
+  },
+  "collaboration": {
+    "title": "Travaillez en solo. Ajoutez du monde selon vos besoins.",
+    "body": "Commencez avec votre propre espace de travail. Ajoutez des accès équipe uniquement lorsque cela devient utile.",
+    "teamTitle": "Votre équipe",
+    "teamBody": "Invitez des membres de l'équipe avec un accès Personnel ou Responsable. Regroupez les plannings, congés et prestations attribuées.",
+    "notesDetail": "Les notes clients épinglées et les notes de visite restent dans l'historique du client.",
+    "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note client épinglée au sein d'une seule entreprise.",
+    "caption": "Exemple de données"
   }
 }

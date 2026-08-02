@@ -7,6 +7,7 @@ import {
   resetAnalyticsEventDeduplication,
   trackAnalyticsEventOnce,
   type AnalyticsEvent,
+  type CollaborationMessageViewedEvent,
   type DeviceMessageViewedEvent,
   type InstallGuideOpenedEvent,
   type InstallHelpClickedEvent,
@@ -75,6 +76,60 @@ describe("signup acquisition events", () => {
       properties: {},
     })
     expect(buildSignupStartedEvent("https://app.example.test/login?utm_source=instagram")).toBeUndefined()
+  })
+})
+
+describe("collaboration analytics events", () => {
+  test("deduplicates collaboration_message_viewed once per page session with key collaboration_message_viewed:home", () => {
+    const events: AnalyticsEvent[] = []
+    configureAnalyticsAdapter({ track: (event) => events.push(event) })
+
+    const homeEvent: CollaborationMessageViewedEvent = {
+      name: "collaboration_message_viewed",
+      properties: { surface: "home", locale: "en" },
+    }
+
+    expect(trackAnalyticsEventOnce("collaboration_message_viewed:home", homeEvent)).toBe(true)
+    expect(trackAnalyticsEventOnce("collaboration_message_viewed:home", homeEvent)).toBe(false)
+
+    expect(events).toEqual([homeEvent])
+  })
+
+  test("collaboration_message_viewed contains only surface and locale and excludes all forbidden properties", () => {
+    const event: CollaborationMessageViewedEvent = {
+      name: "collaboration_message_viewed",
+      properties: { surface: "home", locale: "uk" },
+    }
+
+    expect(Object.keys(event.properties).sort()).toEqual(["locale", "surface"])
+    expect(event.properties.surface).toBe("home")
+    expect(event.properties.locale).toBe("uk")
+
+    const forbiddenFields = [
+      "teamSize",
+      "roles",
+      "noteContent",
+      "companyData",
+      "clientData",
+      "viewport",
+      "screenResolution",
+      "userAgent",
+      "browserVersion",
+      "deviceModel",
+      "displayMode",
+      "installedState",
+      "freeText",
+      "urlParams",
+      "visitorInput",
+      "gclid",
+      "fbclid",
+      "ipAddress",
+    ]
+
+    const propsKeys = Object.keys(event.properties)
+    for (const field of forbiddenFields) {
+      expect(propsKeys, `collaboration_message_viewed should not contain ${field}`).not.toContain(field)
+    }
   })
 })
 
@@ -160,6 +215,7 @@ test("the tracking plan records the approved privacy decision while replay and c
   expect(plan).toMatch(/click IDs.*off/i)
   expect(plan).toMatch(/full referrer.*off/i)
   expect(plan).toMatch(/device_message_viewed/)
+  expect(plan).toMatch(/collaboration_message_viewed/)
   expect(plan).toMatch(/install_guide_opened/)
   expect(plan).toMatch(/install_help_clicked/)
 })

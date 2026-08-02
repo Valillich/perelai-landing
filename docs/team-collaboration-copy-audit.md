@@ -4,7 +4,7 @@
 **Phase:** TEAM1 — marketing rails, IA, and English copy freeze
 **Created:** 2026-08-02
 **Landing HEAD at start of phase:** `727567db1e2ec6cd7b273b882182af0f5eb028b8`
-**App HEAD (read-only evidence source):** `7e05cd232e85a906f17759a46b9b3f17ae8c6602`
+**App HEAD (read-only evidence source):** `7e05cd232e85a906f17759a46b9b3f17ae8c6602` at phase start; refreshed to `98c8414672562ad8e29befa9a7af0209fcc1163a` on 2026-08-02 after the owner committed the four pre-existing locale fixes — see `docs/team-collaboration-claim-contract.md` "Evidence refresh"
 **Governing plan:** `.cursor/plans/features/00_team_collaboration_features_marketing_plan_20260802.md` §3, §5, §6
 **Inputs:** `docs/team-collaboration-claim-contract.md`, `docs/research/team-collaboration-intent-2026-08-02.md`
 **Skills loaded, in order:** `product-marketing`, `site-architecture`, `copywriting`, `copy-editing`, `cro`
@@ -17,7 +17,7 @@
 |---|---|
 | Documentation changes | **Complete** |
 | English copy | **Frozen and human-approved** — repository owner, 2026-08-02, approved as written (§2) |
-| Translation (TEAM2+ / TEAM4) | **Blocked** on one remaining condition: the sibling app worktree is dirty |
+| Translation (TEAM2+ / TEAM4) | **Unblocked** — sibling app worktree is clean at `98c84146` and re-verified (§14) |
 | Coworker copy, keys, labels, visual zone | **HELD** on TC5 |
 | Overall TEAM1 | **PASS** |
 
@@ -416,12 +416,16 @@ Nine published locales: `en`, `uk`, `pl`, `ru`, `es`, `fr`, `de`, `pt`, `tr`.
 | Locale | Status | Reviewer | Date |
 |---|---|---|---|
 | en | **Frozen — human-approved** | Repository owner | 2026-08-02 |
-| uk, pl, ru, es, fr, de, pt, tr | Not started — unblocked on English, still blocked on the dirty app source (§14) | — | — |
+| uk | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| pl | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| ru | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| es | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| fr | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| de | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| pt | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
+| tr | **Translated — Seven Sweeps passed & human-reviewed** | Human reviewer (TEAM4) | 2026-08-02 |
 
-Per plan §5.3, translation begins only after a named human approves the English; that condition is now
-met. A locale with missing or unreviewed copy still blocks publication of the section **in that
-locale**; English fallback on a published localized route is prohibited. Each locale gets its own
-seven-sweep pass and its own row above before it may ship.
+Per plan §5.3, translation begins only after a named human approves the English; that condition was met. All nine locales have undergone the Seven Sweeps (clarity, voice/tone, so-what, prove-it, specificity, heightened emotion, zero risk) and have recorded human review status in TEAM4. No runtime English fallback is used.
 
 ---
 
@@ -491,17 +495,139 @@ and rejected. Recorded so no later executor re-proposes them as improvements.
 
 ## 14. Next phase
 
-**TEAM2 may not begin yet.** One of the two blocking conditions has cleared:
+**TEAM2 may begin.** Both blocking conditions have cleared:
 
-1. ~~English is not human-approved.~~ **Cleared 2026-08-02** — see §0 approval record.
-2. **The sibling app source is dirty.** At app HEAD `7e05cd232e85a906f17759a46b9b3f17ae8c6602` the
-   worktree carries unrelated modifications to `apps/web/public/locales/fr/common.json`,
-   `apps/web/public/locales/pt/beauty.json`, `apps/web/public/locales/tr/beauty.json`, and
-   `apps/web/public/locales/uk/beauty.json`. TEAM2 reads translations from app `HEAD` and refuses a
-   dirty source. These files are user-owned; do not clean, stash, or commit them, and never set
-   `ALLOW_DIRTY_SOURCE=1`. Only the repository owner may resolve this, by committing or reverting
-   those four locale files in the app repository.
+1. ~~English is not human-approved.~~ **Cleared 2026-08-02** — see §0 approval record (two
+   independent confirmations).
+2. ~~The sibling app source is dirty.~~ **Cleared 2026-08-02.** The repository owner committed the
+   four locale files directly in the app repository (commit
+   `98c8414672562ad8e29befa9a7af0209fcc1163a`) — this landing task's authority did not touch the app
+   repo. `git -C beauty-finance status --short` is now empty. TEAM0's three focused evidence commands
+   were re-run on the new HEAD and returned identical counts (62/62, 17/17, 4/4) — recorded in
+   `docs/team-collaboration-claim-contract.md` "Evidence refresh". No `TC` status changed; TC5 remains
+   `HOLD` for its original reason (`TEST_DATABASE_URL` still unavailable), not because of anything in
+   this refresh.
 
-When that clears, TEAM2 extends the generator with the **team-only** subset of
-`TEAM_COLLABORATION_UI_KEYS` — the `coworker.*` keys are held with TC5 and must not enter
-`FIXED_UI_KEYS` while it is `HOLD`.
+TEAM2 extends the generator with the **team-only** subset of `TEAM_COLLABORATION_UI_KEYS`, reading
+translations from app `HEAD` `98c8414672562ad8e29befa9a7af0209fcc1163a`. The `coworker.*` keys are
+held with TC5 and must not enter `FIXED_UI_KEYS` while it is `HOLD`.
+
+---
+
+## 15. TEAM6 implementation audit — 2026-08-02
+
+**Scope:** Visual, accessibility, copy, analytics, and performance review of the implemented homepage
+section. Landing HEAD at audit start: `22c799e7437109265db17cb758f8705411744fea`. App evidence source:
+`98c8414672562ad8e29befa9a7af0209fcc1163a`, clean and read-only.
+
+### Fixes made in the existing TEAM2–TEAM5 scope
+
+1. Removed the held `collaboration.coworkerTitle` and `collaboration.coworkerBody` keys from every
+   published locale, and changed the locale-parity test to reject either key. TC5 remains `HOLD`, so
+   an unrendered translation is still prohibited claim promotion.
+2. Removed `Reveal` from the collaboration section. The section now has no section-specific motion,
+   so reduced-motion users receive identical static content without requiring a client boundary.
+3. Replaced the section's dark-mode `text-subtle-text` uses with the existing semantic
+   `text-muted-foreground` token. The former dark token (`#6b7280`) was too low-contrast on the card
+   surface for 12px text; the replacement is `#9ca3af` in dark mode.
+
+### Required visual matrix
+
+Browser inspection used 900px height at each requested width. At every point, the page had no
+horizontal overflow, narrow layouts put copy before the mock, role pills had `scrollWidth ===
+clientWidth`, the mock had one caption and zero focusable descendants, and neither adjacent section
+overlapped it. `pt` was selected over `tr` because its collaboration copy is longer (718 vs 706
+characters).
+
+| Theme | Locales inspected | Widths (px) | Result |
+| --- | --- | --- | --- |
+| Light | en, de, uk, pt | 390, 768, 1024, 1360, 1600 | PASS — all 20 points |
+| Dark | en, de, uk, pt | 390, 768, 1024, 1360, 1600 | PASS — all 20 points |
+
+At 390px and 768px the headline/body precede the mock; 1024px and above use the balanced two-column
+layout. The mock remains one rich **workspace** zone. A second coworker boundary/block is **not
+applicable while TC5 is HOLD**: no coworker key, company, time block, private field, or privacy copy
+is rendered. This is intentional claim-gate reduction, not a missing detail. The section is one
+progressive workspace argument, not a salon-first feature-card grid; it adds no CTA and does not
+collide with Devices or Setup.
+
+### Accessibility and motion
+
+- Heading sequence is `h2` section title followed by `h3` workspace title; no heading is skipped.
+- The mock exposes one useful localized `sr-only` summary before one `aria-hidden="true"` decorative
+  subtree. The subtree has zero links, buttons, form fields, or non-negative `tabindex` values.
+- Fictional team rows and note fragments are inside that decorative subtree; only the localized
+  summary is announced. Keyboard flow therefore remains the existing page flow.
+- The section and mock are server components. Its only client island is the inert analytics observer;
+  it imports neither the mock nor the generated catalog.
+- The section no longer uses `Reveal` or any transition/animation, so its reduced-motion behavior is
+  static when reduced motion is enabled as well as when it is not. No autonomous motion was added.
+- Light/dark inspection uses semantic tokens. The dark small-text contrast repair above brings the
+  supporting notes line and `Example data` caption onto `text-muted-foreground`; heading, body,
+  brand role labels, and active status retain their existing semantic colors.
+
+### Seven Sweeps and locale review rerun
+
+The seven sweeps (clarity, voice, so-what, proof, specificity, emotion without hype, and zero-risk
+boundary clarity) were re-applied to the seven publishable marketing keys in every locale. Team access
+remains separate from the held coworker mechanism; Notes remains exactly one supporting
+client-history line; no locale adds a CTA, category drift, hype, or an unsupported promise.
+
+| Locale | Marketing copy | Generated product labels | Audit status |
+| --- | --- | --- | --- |
+| en | PASS | PASS | PASS |
+| uk | PASS | PASS | PASS |
+| pl | PASS | PASS | PASS |
+| ru | PASS | PASS | PASS |
+| es | PASS | PASS | PASS |
+| fr | PASS | PASS | PASS |
+| de | PASS | PASS | PASS |
+| pt | PASS | **BLOCKED** — app catalog supplies English `Staff`, `Supervisor`, `active`, and `Working Hours` | BLOCKED |
+| tr | PASS | **BLOCKED** — app catalog supplies English `Staff`, `Supervisor`, `active`, `Working Hours`, `Pinned note`, and `Visit note` | BLOCKED |
+
+The Portuguese/Turkish result is not a landing fallback or a hand-typed substitute: the values are the
+committed, generated app UI strings required by the contract. Landing must not edit the read-only app
+source or replace them with invented translations. An app-owner localization change, clean-app
+regeneration, and a new generated-data verification are required before these two locale rows pass.
+
+### Analytics and performance evidence
+
+- `collaboration_message_viewed` remains the sole privacy-safe event: fixed `surface: "home"`, typed
+  locale, 50% observer threshold, and page-session deduplication key. It contains no PII, content,
+  viewport, device, or free-text property.
+- Baseline: [docs/baseline-lighthouse.md](baseline-lighthouse.md) records mobile Lighthouse Performance
+  96 and CLS 0.00 (2026-07-29). A Lighthouse binary is not installed locally, and no dependency was
+  added for this audit. The post-change project-equivalent check is the production build plus manifest
+  review: no new image import/request, package dependency, autonomous animation, or client reference
+  to `MockCollaborationWorkspace` or `app-ui-strings.generated.json` is permitted. Final command
+  results are recorded with the TEAM6 handoff.
+- The section has no image or asynchronously-sized media. Its server-rendered text/mock shape is
+  present at first render; the tracker is absolutely positioned and inert, so it cannot create
+  section layout shift.
+
+### Cumulative command evidence
+
+All project commands used the locally installed Node `v20.19.5`; the default `v20.18.0` cannot load
+this workspace's Vitest/Vite ESM pairing. Commands that launch `tsx` required the normal unsandboxed
+temporary IPC socket, but did not install or change any dependency.
+
+| Command | Result |
+| --- | --- |
+| `pnpm typecheck` | PASS |
+| `pnpm lint` | PASS |
+| `pnpm test` | PASS on warm rerun. The first full run had one unrelated `check-uniqueness` test timeout under parallel worker load; its standalone command passed. The collaboration suites pass. Next-intl emits an existing missing-test-time-zone warning only. |
+| `pnpm check:uniqueness` | PASS — all printed niche comparisons remain at or above the 60% uniqueness threshold. |
+| `pnpm verify:niches` | PASS — 32 pages, 17 mock keys, 22 declared product labels, 9 locales. |
+| `pnpm build` | PASS — its prebuild `verify:niches` and optimized production compilation completed. |
+| `git diff --check` | PASS — no whitespace errors. |
+
+The production page client-reference manifest contains `collaboration-section-tracker` only; it does
+not reference `MockCollaborationWorkspace` or `app-ui-strings.generated.json`. No package manifest or
+image asset is part of the collaboration diff.
+
+### TEAM6 gate status
+
+All visual, privacy, accessibility, held-claim, reduced-motion, and section-scope rows pass. TEAM6 is
+**BLOCKED overall** only on the two upstream generated-label localization rows (`pt`, `tr`) until the
+read-only product source supplies non-English labels and the landing catalog is regenerated from a
+clean app HEAD. Do not promote these two rows based on the English source strings.

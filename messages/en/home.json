@@ -65,6 +65,15 @@
     "summary": "One Perelai workspace, opened from a supported browser on a phone, a tablet or a computer.",
     "link": "How you open Perelai"
   },
+  "collaboration": {
+    "title": "Work solo. Add people when you need them.",
+    "body": "Start with your own workspace. Add team access only when it becomes useful.",
+    "teamTitle": "Your team",
+    "teamBody": "Invite team members with Staff or Supervisor access. Keep schedules, time off and assigned services together.",
+    "notesDetail": "Pinned client notes and visit notes stay with the client history.",
+    "summary": "Example Perelai workspace showing team roles, schedules and a pinned client note inside one business.",
+    "caption": "Example data"
+  },
   "setup": {
     "eyebrow": "How it works",
     "title": "Set up in an evening",

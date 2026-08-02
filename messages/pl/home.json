@@ -127,5 +127,14 @@
     "caption": "Przykładowe dane",
     "summary": "Jedna przestrzeń pracy Perelai, otwarty z obsługiwanej przeglądarki na telefonie, tablecie lub komputerze.",
     "link": "Jak otworzyć Perelai"
+  },
+  "collaboration": {
+    "title": "Pracuj solo. Dodawaj ludzi, gdy ich potrzebujesz.",
+    "body": "Zacznij od własnej przestrzeni roboczej. Dodaj dostęp zespołowy tylko wtedy, gdy stanie się przydatny.",
+    "teamTitle": "Twój zespół",
+    "teamBody": "Zapraszaj członków zespołu z dostępem Personel lub Przełożony. Trzymaj grafiki, urlopy i przypisane usługi w jednym miejscu.",
+    "notesDetail": "Przypięte notatki o kliencie i notatki z wizyt pozostają w historii klienta.",
+    "summary": "Przykład przestrzeni roboczej Perelai pokazujący role w zespole, grafiki i przypiętą notatkę o kliencie w ramach jednej firmy.",
+    "caption": "Przykładowe dane"
   }
 }

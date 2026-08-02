@@ -127,5 +127,14 @@
     "caption": "Beispieldaten",
     "summary": "Ein Perelai-Arbeitsbereich, geöffnet aus einem unterstützten Browser auf Telefon, Tablet oder Computer.",
     "link": "So öffnen Sie Perelai"
+  },
+  "collaboration": {
+    "title": "Arbeiten Sie solo. Fügen Sie Personen hinzu, wenn Sie sie brauchen.",
+    "body": "Beginnen Sie mit Ihrem eigenen Arbeitsbereich. Fügen Sie Teamzugänge erst hinzu, wenn es nützlich wird.",
+    "teamTitle": "Ihr Team",
+    "teamBody": "Laden Sie Teammitglieder mit Zugang als Mitarbeiter oder Supervisor ein. Halten Sie Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen zusammen.",
+    "notesDetail": "Angepinnte Kundennotizen und Besuchsnotizen bleiben in der Kundenhistorie.",
+    "summary": "Beispiel für einen Perelai-Arbeitsbereich mit Teamrollen, Arbeitszeiten und einer angepinnten Kundennotiz in einem Unternehmen.",
+    "caption": "Beispieldaten"
   }
 }

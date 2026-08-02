@@ -53,6 +53,15 @@ const FIXED_UI_KEYS = [
   "year",
   "coworker.busy_block_title",
 
+  // TEAM2 — Team collaboration section UI labels (workspace team & notes)
+  "staff_management.header_title",
+  "staff_management.status_active",
+  "staff_management.working_hours",
+  "staff_management.role_staff_title",
+  "staff_management.role_supervisor_title",
+  "notes.pinned_title",
+  "notes.visit_note",
+
   // DVC2R — desktop navigation rail and bottom navigation.
   // Every one of these is rendered as visible text by the app's own
   // DesktopNavigationRail / BottomNavigation, so hand-typing "Calendar" into
@@ -98,6 +107,8 @@ const COMMON_NS_KEYS = new Set([
   "coworker.busy_block_title",
   "profile",
   "product_stage.badge",
+  "notes.pinned_title",
+  "notes.visit_note",
 ])
 const COMMON_NS_PREFIXES = ["templates.", "desktop_navigation."]
 

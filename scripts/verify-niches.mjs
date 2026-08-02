@@ -43,6 +43,12 @@ const DECLARED_KEY_SOURCES = [
     exportName: "DESKTOP_PANE_EMPTY_STATE_UI_KEYS",
     emptyMessage: "the contextual pane would render hand-typed labels",
   },
+  {
+    component: "MockCollaborationWorkspace",
+    file: path.join(ROOT, "components/mock/MockCollaborationWorkspace.tsx"),
+    exportName: "TEAM_COLLABORATION_UI_KEYS",
+    emptyMessage: "the collaboration mock would render hand-typed labels",
+  },
 ]
 
 const errors = []

@@ -3,20 +3,51 @@
 **Phase:** TEAM0 — evidence, research, and claim contract
 **Verification date:** 2026-08-02
 **Landing HEAD:** `727567db1e2ec6cd7b273b882182af0f5eb028b8`
-**App HEAD:** `7e05cd232e85a906f17759a46b9b3f17ae8c6602`
+**App HEAD (original TEAM0 verification):** `7e05cd232e85a906f17759a46b9b3f17ae8c6602`
+**App HEAD (current, after TEAM1 evidence refresh below):** `98c8414672562ad8e29befa9a7af0209fcc1163a`
 
 ## Scope and evidence rules
 
 This contract is the publication gate for the proposed homepage collaboration section. A `PASS` means the current app source was inspected at the app HEAD above and the named focused evidence was available. A `HOLD` sentence is not public copy and may not be added in a later phase without a new verification entry.
 
-The app worktree contained unrelated locale edits when inspected:
+The app worktree contained unrelated locale edits when originally inspected on 2026-08-02:
 
 - `apps/web/public/locales/fr/common.json`
 - `apps/web/public/locales/pt/beauty.json`
 - `apps/web/public/locales/tr/beauty.json`
 - `apps/web/public/locales/uk/beauty.json`
 
-They do not overlap the inspected implementation paths and were not changed. All required evidence paths from the binding plan resolved at their stated locations; no path mapping was required.
+They did not overlap the inspected implementation paths and were not changed at that time. All required evidence paths from the binding plan resolved at their stated locations; no path mapping was required.
+
+## Evidence refresh — 2026-08-02 (same day, TEAM1)
+
+The repository owner committed the four locale files above directly in the app repository
+(commit `98c8414672562ad8e29befa9a7af0209fcc1163a`, "fix(locales): update translations for calendar
+in French, Portuguese, Turkish, and Ukrainian"). This landing task's authority never touched the app
+repo — the owner performed the commit themselves, outside this task, per the read-only rule in the
+binding plan. This section only records the consequence for the evidence gate.
+
+**Diff inspected, `7e05cd23..98c84146`:** exactly the four files above, four single-line changes —
+a French mislabel fix (`contextual_memberships`: "Paquetes" → "Forfaits"), Portuguese and Turkish
+`nav.calendar` translated from the placeholder English string "Calendar" to "Calendário"/"Takvim", and
+a Ukrainian spelling correction (`nav.calendar`: "Календарь" → "Календар"). None of the four touch
+`staff/`, `coworkers/`, `notes/`, or `public-booking/` — the paths every `TC` row in this contract
+depends on.
+
+**Focused evidence re-run on the new HEAD**, using the exact commands TEAM0 recorded below:
+
+| Command | Original result (`7e05cd23`) | Re-run result (`98c84146`) |
+|---|---|---|
+| API 62-test command (staff/scope/notes/coworker-privacy) | 62 passed | 62 passed |
+| Web coworker command (`CoworkerBusyCard`, `CoworkerListCard`, `coworkersApi`) | 17 passed | 17 passed |
+| `public-booking.service.spec.ts -t 'coworker'` | 4 passed | 4 passed |
+
+All three counts are identical. Every `PASS`/`HOLD` status below is unchanged by this refresh — this
+is a same-day evidence correction, not a re-verification that loosens or tightens any row. TC5 remains
+`HOLD` for the same reason as the original entry: its integration test still cannot run without
+`TEST_DATABASE_URL`, and that has not changed.
+
+`git -C beauty-finance status --short` is now empty; the app worktree is clean as of this refresh.
 
 The two collaboration mechanisms are deliberately separate:
 

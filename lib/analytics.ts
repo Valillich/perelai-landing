@@ -1,3 +1,5 @@
+import type { PublishedLocale } from "@/i18n/locales"
+
 export type LandingPageType = "home" | "pricing" | "niche" | "terms" | "privacy" | "install"
 export type CtaPosition =
   | "header_login"
@@ -86,6 +88,14 @@ export interface DeviceMessageViewedEvent {
   }
 }
 
+export interface CollaborationMessageViewedEvent {
+  name: "collaboration_message_viewed"
+  properties: {
+    surface: "home"
+    locale: PublishedLocale
+  }
+}
+
 export interface InstallGuideOpenedEvent {
   name: "install_guide_opened"
   properties: {
@@ -129,6 +139,7 @@ export type AnalyticsEvent =
   | LanguageSwitchedEvent
   | FaqOpenedEvent
   | DeviceMessageViewedEvent
+  | CollaborationMessageViewedEvent
   | InstallGuideOpenedEvent
   | InstallHelpClickedEvent
   | LegalViewedEvent

@@ -45,6 +45,7 @@ value, full referrer URL, or arbitrary query parameter. `cta_text` is a fixed an
 | `language_switched` | The language switcher selects a different published locale. | `from_locale`, `to_locale` |
 | `faq_opened` | A homepage or niche FAQ item is expanded. | Fixed `question_id`, `page_type` |
 | `device_message_viewed` | Homepage or niche device section reaches 50% visibility once. | `surface: 'home' | 'niche'`, `locale` |
+| `collaboration_message_viewed` | Homepage collaboration section reaches 50% visibility once. | `surface: 'home'`, `locale` |
 | `install_guide_opened` | Visitor explicitly selects a platform guide tab on `/install`. | `platform: 'iphone' | 'ipad' | 'android' | 'desktop' | 'browser'`, `source_page: '/install'` |
 | `install_help_clicked` | Visitor follows an internal link leading to `/install`. | `source_surface: 'hero' | 'home_section' | 'niche' | 'header' | 'footer' | 'faq'` |
 
@@ -58,7 +59,7 @@ already a required, privacy-safe funnel:
 
 Client-effect events are guarded with a page-session key so React strict mode cannot send duplicates.
 `pricing_viewed` includes its surface in that key, allowing one `page` event and one independent
-`section` event. `device_message_viewed` includes its surface (`home` or `niche`) in that key and fires once when 50% visible.
+`section` event. `device_message_viewed` includes its surface (`home` or `niche`) in that key and fires once when 50% visible. `collaboration_message_viewed` includes its surface (`home`) in that key and fires once when 50% visible.
 Click, guide-open, help-click, and FAQ events are emitted once for each actual user action.
 
 ## Cross-domain funnel and report
