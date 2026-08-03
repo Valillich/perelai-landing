@@ -145,7 +145,14 @@
     "teamBody": "Laden Sie Teammitglieder mit Zugang als Mitarbeiter oder Supervisor ein. Halten Sie Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen zusammen.",
     "notesDetail": "Angepinnte Kundennotizen und Besuchsnotizen bleiben in der Kundenhistorie.",
     "summary": "Beispiel für einen Perelai-Arbeitsbereich mit Teamrollen, Arbeitszeiten und einer angepinnten Kundennotiz in einem Unternehmen.",
-    "caption": "Beispieldaten"
+    "caption": "Beispieldaten",
+    "mock": {
+      "pinnedNote": "Bevorzugt ruhige Vormittage vor der Farbe.",
+      "visitNote": "Farbton beim letzten Besuch bestätigt.",
+      "hours1": "Mo–Fr · 09:00–17:00",
+      "hours2": "Di–Sa · 10:00–18:00",
+      "hours3": "Mi–So · 11:00–19:00"
+    }
   },
   "finance": {
     "title": "Umsatz, Kosten und Gewinn für jeden Zeitraum",

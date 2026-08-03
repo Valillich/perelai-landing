@@ -145,7 +145,14 @@
     "teamBody": "Invitez des membres d'équipe avec un accès Personnel ou Supervisor. Conservez les plannings, les congés et les prestations attribuées ensemble.",
     "notesDetail": "Les notes de clients épinglées et les notes de visites restent dans l'historique du client.",
     "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note de client épinglée au sein d'une entreprise.",
-    "caption": "Données d'exemple"
+    "caption": "Données d'exemple",
+    "mock": {
+      "pinnedNote": "Préfère les matins calmes avant la coloration.",
+      "visitNote": "Nuance confirmée lors de la dernière visite.",
+      "hours1": "Lun–Ven · 09:00–17:00",
+      "hours2": "Mar–Sam · 10:00–18:00",
+      "hours3": "Mer–Dim · 11:00–19:00"
+    }
   },
   "finance": {
     "title": "Revenu, coûts et profit pour toute période",

@@ -145,7 +145,14 @@
     "teamBody": "Zapraszaj członków zespołu z dostępem Personel lub Przełożony. Trzymaj grafiki, urlopy i przypisane usługi w jednym miejscu.",
     "notesDetail": "Przypięte notatki o kliencie i notatki z wizyt pozostają w historii klienta.",
     "summary": "Przykład przestrzeni roboczej Perelai pokazujący role w zespole, grafiki i przypiętą notatkę o kliencie w ramach jednej firmy.",
-    "caption": "Przykładowe dane"
+    "caption": "Przykładowe dane",
+    "mock": {
+      "pinnedNote": "Preferuje spokojne poranki przed koloryzacją.",
+      "visitNote": "Potwierdzono dopasowanie odcienia na ostatniej wizycie.",
+      "hours1": "Pon–Pt · 09:00–17:00",
+      "hours2": "Wt–Sob · 10:00–18:00",
+      "hours3": "Śr–Niedz · 11:00–19:00"
+    }
   },
   "finance": {
     "title": "Przychód, koszty i zysk za dowolny okres",

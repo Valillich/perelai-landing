@@ -109,7 +109,14 @@
     "teamBody": "Invite team members with Staff or Supervisor access. Keep schedules, time off and assigned services together.",
     "notesDetail": "Pinned client notes and visit notes stay with the client history.",
     "summary": "Example Perelai workspace showing team roles, schedules and a pinned client note inside one business.",
-    "caption": "Example data"
+    "caption": "Example data",
+    "mock": {
+      "pinnedNote": "Prefers quiet mornings before colour.",
+      "visitNote": "Confirmed shade match on last visit.",
+      "hours1": "Mon–Fri · 09:00–17:00",
+      "hours2": "Tue–Sat · 10:00–18:00",
+      "hours3": "Wed–Sun · 11:00–19:00"
+    }
   },
   "setup": {
     "eyebrow": "How it works",

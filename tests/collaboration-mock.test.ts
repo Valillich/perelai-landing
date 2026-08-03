@@ -39,6 +39,13 @@ const renderMock = (
         summary: overrides?.summary ?? FROZEN_SUMMARY,
         exampleCaption: overrides?.exampleCaption ?? FROZEN_CAPTION,
         showCaption: overrides?.showCaption,
+        mockData: {
+          pinnedNote: "Prefers quiet mornings before colour.",
+          visitNote: "Confirmed shade match on last visit.",
+          hours1: "Mon–Fri · 09:00–17:00",
+          hours2: "Tue–Sat · 10:00–18:00",
+          hours3: "Wed–Sun · 11:00–19:00",
+        }
       }),
     ),
   )
@@ -160,9 +167,9 @@ describe("privacy and TC5 HOLD shape", () => {
     const hiddenStart = markup.indexOf('aria-hidden="true"')
     const beforeHidden = markup.slice(0, hiddenStart)
 
-    expect(beforeHidden).not.toContain("Jordan Lee")
-    expect(beforeHidden).not.toContain("Casey Morgan")
-    expect(beforeHidden).not.toContain("Riley Quinn")
+    expect(beforeHidden).not.toContain("Mia")
+    expect(beforeHidden).not.toContain("Leo")
+    expect(beforeHidden).not.toContain("Ana")
     expect(beforeHidden).not.toContain("Prefers quiet mornings")
     expect(beforeHidden).not.toContain("Confirmed shade match")
   })

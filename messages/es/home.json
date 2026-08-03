@@ -145,7 +145,14 @@
     "teamBody": "Invita a miembros del equipo con acceso de Personal o Supervisor. Mantén horarios, ausencias y servicios asignados juntos.",
     "notesDetail": "Las notas fijadas de clientes y las notas de visitas se quedan en el historial del cliente.",
     "summary": "Ejemplo de espacio de trabajo Perelai que muestra roles de equipo, horarios y una nota fijada de cliente dentro de una empresa.",
-    "caption": "Datos de ejemplo"
+    "caption": "Datos de ejemplo",
+    "mock": {
+      "pinnedNote": "Prefiere mañanas tranquilas antes del color.",
+      "visitNote": "Tono confirmado en la última visita.",
+      "hours1": "Lun–Vie · 09:00–17:00",
+      "hours2": "Mar–Sáb · 10:00–18:00",
+      "hours3": "Mié–Dom · 11:00–19:00"
+    }
   },
   "finance": {
     "title": "Ingresos, costes y beneficio para cualquier período",

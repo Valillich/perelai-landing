@@ -44,6 +44,13 @@ export function Collaboration({ locale }: CollaborationProps) {
             locale={locale}
             summary={t("collaboration.summary")}
             exampleCaption={t("collaboration.caption")}
+            mockData={{
+              pinnedNote: t("collaboration.mock.pinnedNote"),
+              visitNote: t("collaboration.mock.visitNote"),
+              hours1: t("collaboration.mock.hours1"),
+              hours2: t("collaboration.mock.hours2"),
+              hours3: t("collaboration.mock.hours3"),
+            }}
           />
         </div>
       </div>

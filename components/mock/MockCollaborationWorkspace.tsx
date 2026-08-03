@@ -1,6 +1,7 @@
 import uiStrings from "@/data/app-ui-strings.generated.json"
 import { cn } from "@/lib/cn"
 import type { AppLocale } from "@/i18n/locales"
+import { clientDisplayName } from "@/lib/mock-data"
 
 /**
  * Product strings this mock renders as visible text.
@@ -37,37 +38,6 @@ export function collaborationLabel(
   return value
 }
 
-/**
- * Deterministic fictional roster. Names are obviously synthetic, contain no
- * email or phone, and stay inside the aria-hidden decorative subtree.
- */
-const TEAM_ROWS = [
-  {
-    id: "row-supervisor",
-    name: "Jordan Lee",
-    initials: "JL",
-    roleKey: "staff_management.role_supervisor_title" as const,
-    hours: "Mon–Fri · 09:00–17:00",
-  },
-  {
-    id: "row-staff",
-    name: "Casey Morgan",
-    initials: "CM",
-    roleKey: "staff_management.role_staff_title" as const,
-    hours: "Tue–Sat · 10:00–18:00",
-  },
-  {
-    id: "row-staff-alt",
-    name: "Riley Quinn",
-    initials: "RQ",
-    roleKey: "staff_management.role_staff_title" as const,
-    hours: "Wed–Sun · 11:00–19:00",
-  },
-] as const
-
-const PINNED_NOTE_BODY = "Prefers quiet mornings before colour."
-const VISIT_NOTE_BODY = "Confirmed shade match on last visit."
-
 interface MockCollaborationWorkspaceProps {
   locale: AppLocale
   /** One sr-only summary — marketing locale copy, never product strings. */
@@ -80,6 +50,13 @@ interface MockCollaborationWorkspaceProps {
    */
   showCaption?: boolean
   className?: string
+  mockData: {
+    pinnedNote: string
+    visitNote: string
+    hours1: string
+    hours2: string
+    hours3: string
+  }
 }
 
 /**
@@ -99,12 +76,41 @@ export function MockCollaborationWorkspace({
   exampleCaption,
   showCaption = true,
   className,
+  mockData,
 }: MockCollaborationWorkspaceProps) {
   const header = collaborationLabel(locale, "staff_management.header_title")
   const statusActive = collaborationLabel(locale, "staff_management.status_active")
   const workingHours = collaborationLabel(locale, "staff_management.working_hours")
   const pinnedTitle = collaborationLabel(locale, "notes.pinned_title")
   const visitNote = collaborationLabel(locale, "notes.visit_note")
+
+  const name1 = clientDisplayName(locale, "Mia")
+  const name2 = clientDisplayName(locale, "Leo")
+  const name3 = clientDisplayName(locale, "Ana")
+
+  const TEAM_ROWS = [
+    {
+      id: "row-supervisor",
+      name: name1,
+      initials: name1.charAt(0),
+      roleKey: "staff_management.role_supervisor_title" as const,
+      hours: mockData.hours1,
+    },
+    {
+      id: "row-staff",
+      name: name2,
+      initials: name2.charAt(0),
+      roleKey: "staff_management.role_staff_title" as const,
+      hours: mockData.hours2,
+    },
+    {
+      id: "row-staff-alt",
+      name: name3,
+      initials: name3.charAt(0),
+      roleKey: "staff_management.role_staff_title" as const,
+      hours: mockData.hours3,
+    },
+  ] as const
 
   return (
     <figure
@@ -149,13 +155,13 @@ export function MockCollaborationWorkspace({
             <p className="text-[11px] font-semibold tracking-wide text-muted-foreground">
               {pinnedTitle}
             </p>
-            <p className="mt-0.5 text-[13px] leading-snug text-foreground">{PINNED_NOTE_BODY}</p>
+            <p className="mt-0.5 text-[13px] leading-snug text-foreground">{mockData.pinnedNote}</p>
           </div>
           <div className="min-w-0 border-t border-border pt-2">
             <p className="text-[11px] font-semibold tracking-wide text-muted-foreground">
               {visitNote}
             </p>
-            <p className="mt-0.5 text-[13px] leading-snug text-foreground">{VISIT_NOTE_BODY}</p>
+            <p className="mt-0.5 text-[13px] leading-snug text-foreground">{mockData.visitNote}</p>
           </div>
         </div>
       </div>

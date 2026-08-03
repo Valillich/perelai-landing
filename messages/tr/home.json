@@ -145,7 +145,14 @@
     "teamBody": "Ekip üyelerini Personel veya Süpervizör erişimiyle davet edin. Çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun.",
     "notesDetail": "Sabitlenmiş müşteri notları ve ziyaret notları müşteri geçmişinde kalır.",
     "summary": "Bir işletme içinde ekip rollerini, çalışma saatlerini ve sabitlenmiş bir müşteri notunu gösteren Perelai çalışma alanı örneği.",
-    "caption": "Örnek veriler"
+    "caption": "Örnek veriler",
+    "mock": {
+      "pinnedNote": "Boya öncesi sakin sabahları tercih eder.",
+      "visitNote": "Son ziyarette renk tonu onaylandı.",
+      "hours1": "Pzt–Cum · 09:00–17:00",
+      "hours2": "Sal–Cmt · 10:00–18:00",
+      "hours3": "Çar–Paz · 11:00–19:00"
+    }
   },
   "finance": {
     "title": "Herhangi bir dönem için ciro, maliyet ve kâr",
