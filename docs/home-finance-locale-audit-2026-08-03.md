@@ -811,4 +811,57 @@ Following the user's targeted review ("REVISE, then approve"), the drafts have b
 | `states.title` | Виконана робота, виручка, платежі та заборгованість за відкритими замовленнями обліковуються окремо. |
 | `states.body` | Візит може бути завершений до того, як його буде враховано у виручці. Передплачений пакет може покрити вартість візиту без нового платежу, а за відкритим замовленням може ще залишатися заборгованість. Perelai обліковує ці стани окремо, тому кожен показник має зрозуміле значення. |
 | `closing.title` | Зрозумілий фінансовий результат із розбивкою за клієнтами та категоріями послуг. |
+## 10. Revision 8 (Applied) — "A Clear View" Pivot & Natural Tone Polish
 
+Following owner review on 2026-08-03, the hero copy was refined across all 7 non-English locales (`de`, `es`, `fr`, `pl`, `pt`, `tr`, `uk`) to fix unnatural calques, dialect mismatches, and terminology issues (e.g. removing German `Tabellenkalkulationen` → `Tabellen`, fixing Turkish `finansman` → `finans`, fixing Ukrainian `Ясна` → `Чітка`, adjusting `przychód od każdego klienta` → `przychód według klientów`, etc.).
+
+**Status:** APPLIED to `messages/{de,es,fr,pl,pt,tr,uk}/home.json`.
+
+### 10.1 German (`de`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Ein klarer Blick auf Ihre Geschäftsfinanzen |
+| `hero.accent` | Ohne komplizierte Tabellen |
+| `hero.body` | Verwalten Sie Ihren Terminplan und Ihre Finanzen an einem Ort. Verfolgen Sie den Umsatz nach Kunden, schlüsseln Sie das Ergebnis nach Leistungskategorien auf und treffen Sie fundierte Entscheidungen mit klaren Zahlen, die Sie jederzeit im Blick haben. |
+
+### 10.2 Spanish (`es`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Una visión clara de las finanzas de tu negocio |
+| `hero.accent` | Sin hojas de cálculo complicadas |
+| `hero.body` | Gestiona tu agenda y tus finanzas en un solo lugar. Haz un seguimiento de los ingresos por cliente, desglosa el resultado por categoría de servicio y toma decisiones informadas con cifras claras siempre al alcance de la mano. |
+
+### 10.3 French (`fr`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Une vision claire des finances de votre activité |
+| `hero.accent` | Sans tableurs complexes |
+| `hero.body` | Gérez votre emploi du temps et vos finances au même endroit. Suivez les revenus par client, ventilez le résultat par catégorie de prestation et prenez des décisions éclairées grâce à une vue claire, toujours accessible. |
+
+### 10.4 Polish (`pl`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Jasny obraz finansów firmy |
+| `hero.accent` | Bez skomplikowanych arkuszy |
+| `hero.body` | Zarządzaj terminarzem i finansami w jednym miejscu. Śledź przychód według klientów, analizuj wynik w podziale na kategorie usług i podejmuj świadome decyzje dzięki przejrzystym danym dostępnym w każdej chwili. |
+
+### 10.5 Portuguese (`pt`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Uma visão clara das finanças do seu negócio |
+| `hero.accent` | Sem planilhas complicadas |
+| `hero.body` | Gerencie sua agenda e finanças em um só lugar. Acompanhe a receita por cliente, detalhe o resultado por categoria de serviço e tome decisões informadas com dados claros sempre ao seu alcance. |
+
+### 10.6 Turkish (`tr`)
+| Key | Draft |
+|---|---|
+| `hero.title` | İşletme finansınıza net bir bakış |
+| `hero.accent` | Karmaşık e-tablolar olmadan |
+| `hero.body` | Programınızı ve finansınızı tek bir yerden yönetin. Müşteri bazında geliri takip edin, sonucu hizmet kategorisine göre ayırın ve her an elinizin altındaki net verilerle bilinçli kararlar alın. |
+
+### 10.7 Ukrainian (`uk`)
+| Key | Draft |
+|---|---|
+| `hero.title` | Чітка фінансова картина бізнесу |
+| `hero.accent` | Без складних електронних таблиць |
+| `hero.body` | Керуйте розкладом і фінансами в одному місці. Відстежуйте виручку за клієнтами, розбивайте результат за категоріями послуг і приймайте рішення на основі зрозумілих показників, доступних у будь-який момент. |

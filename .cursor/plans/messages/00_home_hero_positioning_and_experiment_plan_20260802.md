@@ -212,9 +212,10 @@ Provisional lead candidate:
 
 | Key | Provisional English direction |
 |---|---|
-| Eyebrow | Financial tracking and analytics for independent service businesses |
-| H1 | See the money behind your business. |
-| Body | Explain the verified completed/settled/cash/expense/open-balance model and connect it to clients, service categories, and visits in no more than two short sentences. |
+| Eyebrow | Simple finance software for independent service businesses |
+| H1 | A Clear View of Your Business Finances |
+| H1 Accent | Without Complicated Spreadsheets |
+| Body | Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips. |
 | Primary CTA | Preserve the currently approved signup label and handoff. |
 | Secondary CTA | Preserve the currently approved login/demo/help action; do not invent one. |
 | Microcopy | Preserve approved domain and verification-email expectations. |

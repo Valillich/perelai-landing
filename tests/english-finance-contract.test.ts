@@ -6,10 +6,10 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
   test("matches approved English source set verbatim (docs/home-hero-copy-audit.md §II.7)", () => {
     // II.7.1 Hero
     expect(homeEn.hero.eyebrow).toBe("Simple finance software for independent service businesses")
-    expect(homeEn.hero.title).toBe("Revenue, costs and profit — ")
-    expect(homeEn.hero.accent).toBe("broken down by client and service category.")
+    expect(homeEn.hero.title).toBe("A Clear View of Your Business Finances")
+    expect(homeEn.hero.accent).toBe("Without Complicated Spreadsheets")
     expect(homeEn.hero.body).toBe(
-      "Review revenue, costs and profit for any period. Completed work counts toward revenue only after settlement, while recorded payments remain separate."
+      "Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips."
     )
     expect(homeEn.hero.signup).toBe("Create workspace")
     expect(homeEn.hero.how).toBe("See how it works")
