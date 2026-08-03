@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "Perelai",
   domain: "perelai.com",
   url: "https://perelai.com",
-  title: "Perelai — Clients, Bookings & Cash Flow for Independent Professionals",
+  title: "Perelai — Simple Finance Software for Service Businesses",
   description:
-    "Your clients, bookings and cash flow — finally in one place. Booking + client + money software for independent service professionals.",
+    "Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work.",
   links: {
     app: "https://perelai.app",
     booking: "https://book.perelai.app",

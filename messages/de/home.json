@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Perelai — Kunden, Buchungen & Cashflow an einem Ort",
-    "description": "Buchungs-, Kunden- und Finanzsoftware für unabhängige Dienstleister. Eine Liste mit offenen Aufgaben, eine verlässliche Zahl, ein Link für Ihre Bio."
+    "title": "Perelai — Einfache Finanzsoftware für Dienstleister",
+    "description": "Erfassen Sie Einnahmen, Ausgaben, Zahlungen und Salden — mit Auswertungen, die mit Kunden, Leistungen und erledigter Arbeit verknüpft sind."
   },
   "nav": {
     "features": "Funktionen",
@@ -14,9 +14,10 @@
     "menuLabel": "Menü öffnen"
   },
   "hero": {
-    "title": "Ihre Kunden, Buchungen und Einnahmen",
-    "accent": "— endlich an einem Ort.",
-    "body": "Hören Sie auf, Ihre Woche aus DMs, Notiz-Apps und Erinnerungen zu rekonstruieren. Eine Liste mit offenen Aufgaben, eine verlässliche Zahl, ein Link für Ihre Bio.",
+    "eyebrow": "Finanzerfassung und Auswertung für selbstständige Dienstleister",
+    "title": "Sehen Sie das Geld",
+    "accent": "hinter Ihrem Geschäft.",
+    "body": "Perelai erfasst Einnahmen, Ausgaben, Zahlungen und offene Beträge und verknüpft die Zahlen mit den Kunden, Leistungen und Terminen dahinter. Sehen Sie, was erledigt, was bezahlt und was noch offen ist.",
     "signup": "Arbeitsbereich erstellen",
     "how": "So funktioniert es",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
@@ -101,18 +102,18 @@
     "q6": "Ist dies eine Buchhaltungssoftware?",
     "a6": "Nein. Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung.",
     "q7": "Hat Perelai eine iPhone- oder Android-App?",
-    "a7": "Perelai ist Buchungs-, Kunden- und Geldsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
+    "a7": "Perelai ist Finanzsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
     "q8": "Kann ich Perelai auf einem Laptop oder iPad nutzen?",
     "a8": "Öffnen Sie perelai.app in einem unterstützten Browser auf Ihrem Laptop oder iPad und melden Sie sich mit derselben Anmeldung an, die Sie auf Ihrem Smartphone nutzen. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich."
   },
   "closing": {
-    "title": "Ihre Kunden, Buchungen und Einnahmen — an einem Ort",
+    "title": "Ihre Finanzen, verknüpft mit der Arbeit dahinter.",
     "body": "An einem Abend eingerichtet.",
     "cta": "Arbeitsbereich erstellen",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
   },
   "footer": {
-    "description": "Buchungs-, Kunden- und Finanzsoftware für unabhängige Dienstleister.",
+    "description": "Einfache Finanzsoftware für selbstständige Dienstleister.",
     "product": "Produkt",
     "company": "Rechtliches",
     "forColorists": "Für unabhängige Coloristen",

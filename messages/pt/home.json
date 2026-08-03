@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Perelai — Clientes, Agendamentos e Fluxo de Caixa",
-    "description": "Software de agendamento e finanças para profissionais independentes. Uma lista clara de pendências, um número confiável, um link para a sua bio."
+    "title": "Perelai — Software financeiro simples para serviços",
+    "description": "Controle receitas, despesas, pagamentos e saldos, com análise financeira ligada aos seus clientes, serviços e trabalho concluído."
   },
   "nav": {
     "features": "Recursos",
@@ -14,9 +14,10 @@
     "menuLabel": "Abrir menu"
   },
   "hero": {
-    "title": "Seus clientes, agendamentos e fluxo de caixa",
-    "accent": "— finalmente em um só lugar.",
-    "body": "Chega de tentar reconstruir sua semana entre mensagens diretas, anotações e memória. Uma lista com o que falta fazer, um número em que você pode confiar, um único link para a sua bio.",
+    "eyebrow": "Controle financeiro e análise para negócios de serviços independentes",
+    "title": "Veja o dinheiro",
+    "accent": "por trás do seu negócio.",
+    "body": "O Perelai registra receitas, despesas, pagamentos e saldos em aberto, e liga os números aos clientes, serviços e atendimentos por trás deles. Veja o que foi concluído, o que foi pago e o que continua em aberto.",
     "signup": "Criar espaço de trabalho",
     "how": "Ver como funciona",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração.",
@@ -101,18 +102,18 @@
     "q6": "Este é um software de contabilidade?",
     "a6": "Não. O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, impostos ou gestão tributária.",
     "q7": "O Perelai tem uma app para iPhone ou Android?",
-    "a7": "O Perelai é software de marcações, clientes e dinheiro para profissionais de serviços independentes. O Perelai não está listado na App Store nem no Google Play; funciona num navegador web em perelai.app. Instalar o Perelai a partir de um navegador é opcional e não é oferecido por todos os navegadores. O Perelai precisa de uma ligação à internet.",
+    "a7": "O Perelai é software financeiro para negócios de serviços independentes. O Perelai não está listado na App Store nem no Google Play; funciona num navegador web em perelai.app. Instalar o Perelai a partir de um navegador é opcional e não é oferecido por todos os navegadores. O Perelai precisa de uma ligação à internet.",
     "q8": "Posso usar o Perelai num portátil ou iPad?",
     "a8": "Abra perelai.app num navegador suportado no seu portátil ou iPad e inicie sessão com o mesmo acesso que usa no telemóvel. Um acesso, um espaço de trabalho. É necessária uma ligação à internet."
   },
   "closing": {
-    "title": "Seus clientes, agendamentos e fluxo de caixa — em um só lugar",
+    "title": "Suas finanças, ligadas ao trabalho por trás delas.",
     "body": "Configure em uma tarde.",
     "cta": "Criar espaço de trabalho",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração."
   },
   "footer": {
-    "description": "Software de agendamento, gestão de clientes e finanças para profissionais independentes.",
+    "description": "Software financeiro simples para negócios de serviços independentes.",
     "product": "Produto",
     "company": "Informações legais",
     "forColorists": "Para coloristas independentes",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Perelai — Müşteriler, Randevular ve Nakit Akışı",
-    "description": "Bağımsız uzmanlar için randevu, müşteri ve finans yazılımı. Net bir yapılacaklar listesi, güvenilir bir rakam, biyografiniz için tek bağlantı."
+    "title": "Perelai — Hizmet işletmeleri için basit finans yazılımı",
+    "description": "Gelirleri, giderleri, ödemeleri ve bakiyeleri takip edin; finansal analizler müşterilerinize, hizmetlerinize ve tamamlanan işe bağlıdır."
   },
   "nav": {
     "features": "Özellikler",
@@ -14,9 +14,10 @@
     "menuLabel": "Menüyü Aç"
   },
   "hero": {
-    "title": "Müşterileriniz, randevularınız ve nakit akışınız",
-    "accent": "— nihayet tek bir yerde.",
-    "body": "Haftanızı DM'lerden, notlardan ve hafızanızdan toplamaya çalışmayı bırakın. Yapılacak işlerin net listesi, güvenebileceğiniz bir rakam, biyografiniz için tek bir bağlantı.",
+    "eyebrow": "Bağımsız hizmet işletmeleri için finansal takip ve analiz",
+    "title": "İşletmenizin arkasındaki",
+    "accent": "parayı görün.",
+    "body": "Perelai gelirleri, giderleri, ödemeleri ve ödenmemiş bakiyeleri takip eder ve rakamları arkalarındaki müşteriler, hizmetler ve randevularla ilişkilendirir. Neyin tamamlandığını, neyin ödendiğini ve neyin hâlâ açık olduğunu görün.",
     "signup": "Çalışma alanı oluştur",
     "how": "Nasıl çalıştığını görün",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
@@ -101,18 +102,18 @@
     "q6": "Bu bir muhasebe yazılımı mı?",
     "a6": "Hayır. Perelai, nakit akışınızı görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Muhasebe veya vergi takibi yapmaz.",
     "q7": "Perelai’nin iPhone veya Android uygulaması var mı?",
-    "a7": "Perelai, bağımsız hizmet profesyonelleri için randevu, müşteri ve para yazılımıdır. Perelai App Store veya Google Play’de listelenmez; bunun yerine perelai.app adresinde bir web tarayıcısında çalışır. Perelai’yi bir tarayıcıdan kurmak isteğe bağlıdır ve her tarayıcı bunu sunmaz. Perelai internet bağlantısı gerektirir.",
+    "a7": "Perelai, bağımsız hizmet işletmeleri için finans yazılımıdır. Perelai App Store veya Google Play’de listelenmez; bunun yerine perelai.app adresinde bir web tarayıcısında çalışır. Perelai’yi bir tarayıcıdan kurmak isteğe bağlıdır ve her tarayıcı bunu sunmaz. Perelai internet bağlantısı gerektirir.",
     "q8": "Perelai’yi bir dizüstü bilgisayarda veya iPad’de kullanabilir miyim?",
     "a8": "Desteklenen bir tarayıcıda perelai.app adresini dizüstü bilgisayarınızda veya iPad’inizde açın ve telefonunuzda kullandığınız aynı girişle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gerekir."
   },
   "closing": {
-    "title": "Müşterileriniz, randevularınız ve nakit akışınız — tek bir yerde",
+    "title": "Finansallarınız, arkasındaki işle bağlantılı.",
     "body": "Bir öğleden sonra kurun.",
     "cta": "Çalışma alanı oluştur",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
   },
   "footer": {
-    "description": "Bağımsız hizmet uzmanları için randevu, müşteri ve finans yazılımı.",
+    "description": "Bağımsız hizmet işletmeleri için basit finans yazılımı.",
     "product": "Ürün",
     "company": "Yasal",
     "forColorists": "Bağımsız Renk Uzmanları İçin",

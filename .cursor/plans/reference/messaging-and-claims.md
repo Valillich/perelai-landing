@@ -14,14 +14,68 @@ never-say list; F15 gained the narrow team shapes; F25 (coworker shared availabi
 §4.2 gained the team/coworker terminology rows; §7 inserted **Collaboration** as row 7 and the former
 rows 7–11 shifted to 8–12. Nothing in §1 (positioning/ICP) or §6 (CTA policy) changed.
 
+**Amended 2026-08-03 (MSG1, homepage hero message).** §1 replaced the retired one-liner and gained the
+frozen homepage message with its clause-to-claim map; §4.1 gained one rejected-hero-pattern row
+("finally" / "in one place"); §7 row 1 replaced the retired Hero key line. **No claim row changed
+status.** §2 (the whole feature inventory), the Collaboration gate, TC5's `HOLD`, F4's notes decision,
+the Device gate, §5 (proof strategy), §6 (CTA policy) and §8–§10 are untouched. The frozen English is
+**`AWAITING OWNER APPROVAL`** — it is the documented positioning, not yet published copy.
+
 ---
 
 ## 1. Positioning (use this, don't re-derive it)
 
-**Category (the shelf):** booking + client + money software for independent service professionals.
-Not a CRM, not accounting, not a marketplace.
+**Category (the shelf) — changed 2026-08-03 by owner direction:** **financial tracking and analytics
+software for small service businesses.** Plain form: *simple finance software for independent service
+businesses.* Not accounting, not bookkeeping, not a marketplace, not payment processing, not a CRM.
 
-**One-liner:** *Your clients, bookings and cash flow — finally in one place.*
+**Booking, Calendar and CRM are no longer the category.** They are the mechanism that collects the
+financial context without manual entry:
+
+```text
+booking / order → completed work → payment or debt → financial analytics
+```
+
+Booking is a *source of financial data*, never the reason to buy. Do not lead any page, meta description
+or ad with it.
+
+**One-liner:** *Perelai is financial tracking and analytics software that connects the money of a service
+business to its clients, services and daily work.* (Internal line, not a public headline.)
+
+**Short tagline:** *Clear work. Clear money.*
+
+**Published homepage message (2026-08-03).** Claim gate:
+[`docs/finance-claim-contract.md`](../../../docs/finance-claim-contract.md). Live in all nine locales.
+
+| Surface | English | Claim rows |
+|---|---|---|
+| Hero `eyebrow` | Financial tracking and analytics for independent service businesses | FC1, FC4, FC5, FC6 |
+| Hero `title` | See the money | — (no capability asserted) |
+| Hero `accent` | behind your business. | — |
+| Hero `body` | Perelai tracks income, expenses, payments and outstanding balances, and connects the numbers to the clients, services and visits behind them. See what was completed, what was paid and what is still outstanding. | FC1, FC3, FC7, FC2 |
+| `meta.title` | Perelai — Simple Finance Software for Service Businesses | category line |
+| `meta.description` | Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work. | FC1, FC3, FC5, FC7 |
+| `closing.title` | Your finances, connected to the work behind them. | mechanism restatement |
+
+Clause-by-clause:
+
+| Phrase | Ledger | Basis |
+|---|---|---|
+| tracks income, expenses … for any period | **FC1** | `getSummary` → income, tips, expenses, profit, revenue; day/week/month/quarter/year. Never "accounting", "bookkeeping", "tax", "P&L". |
+| outstanding balances · what is still outstanding | **FC3** (+ existing **F7**) | `getDebtSummary` → open orders, total outstanding, overdue instalments. Order-scoped. |
+| payments | **FC7** (+ existing **F5**) | `PaymentAllocation` is the canonical cash ledger. Perelai **records**; it does not process. |
+| what was completed … what was paid | **FC2** | `REVENUE_FILTER` counts only `COMPLETED\|NO_SHOW` **and** `paymentStatus: PAID`. A completed unpaid visit is not revenue. |
+| connects the numbers to the clients, services and visits behind them | **FC4 + FC5** | Per-client summaries and per-**category** revenue/cost breakdowns. |
+| financial analytics connected to your clients, services and completed work | **FC4, FC5, FC6** | Category and client breakdowns plus `getSummaryOverTime`. |
+
+**The boundary that must never blur.** Summary revenue = *settled* completed work
+(`paymentStatus: PAID`, which includes non-cash package redemption). Cash actually received =
+`PaymentAllocation`. ADR-0002 §5 is explicit that `PAID` **is not proof cash was received**. Never attach
+"what came in", "money received" or "cash in hand" to the summary/analytics total — that language belongs
+to payments and payment accounts only.
+
+No published phrase depends on **F25/TC5**, on any device row, or on any `HOLD`/`BLOCKED` row.
+**FC8 (export) is `BLOCKED`** and **FC10 (refunds/corrections) is not audited** — neither may be claimed.
 
 **What makes it different (in priority order):**
 
@@ -206,6 +260,7 @@ silence unless there is a dated commitment.
 | "Nothing is shared", "complete privacy", "private by default", "anonymous" (coworker sense) | Added 2026-08-02. Company name, colour and occupied intervals *are* shared. Overclaiming privacy is the fastest way to be caught being wrong; state the precise visible and hidden fields instead. |
 | "No double-booking ever", "never double-book", "real-time locking" | Added 2026-08-02. Coworker occupied times are checked on save and excluded from public booking availability. That is a check, not a guarantee. |
 | "Streamline collaboration", "work better together", "one shared workspace", "collaborate with anyone" | Added 2026-08-02. §4.3 already bans "streamline". These phrases also hide *which* of the two mechanisms is meant, which is the exact ambiguity this section exists to remove. |
+| **"finally", "at last", "in one place", "all in one", "everything you need" as the hero or closing argument** — including the retired live hero *"Your clients, bookings and cash flow — finally in one place."* | Added 2026-08-03 (MSG1). "In one place" is category parity: a booking tool, a CRM, a calendar or a salon suite can print it unchanged, so it differentiates nothing and invites a feature-count comparison. "Finally" manufactures novelty without naming anything novel. Together they made Perelai sound like a larger planner instead of a system that keeps unresolved work visible and separates completed work from money received. Applies in every published locale — ban the local equivalents too. **Scope:** this bans the *positioning argument*, not the F4 feature-level phrasing "Every client's visits, notes and payments in one place", which stays as written in §2.1. Rationale and the full rejected-direction register: [`docs/home-hero-copy-audit.md`](../../../docs/home-hero-copy-audit.md) §10. |
 
 ### 4.2 Terminology discipline (from the app glossary — keep landing and app consistent)
 
@@ -302,7 +357,7 @@ One idea per section, in this order. Each section advances one argument.
 
 | # | Section | Job | Key line |
 |---|---|---|---|
-| 1 | Hero | State the promise for a cold visitor in 5 seconds | *Your clients, bookings and cash flow — finally in one place.* |
+| 1 | Hero | State the category and the promise for a cold visitor in 5 seconds | Eyebrow *Financial tracking and analytics for independent service businesses* + H1 *See the money behind your business.* (FC1/FC4/FC5/FC6; published 2026-08-03. The eyebrow carries the shelf so the H1 can carry the outcome — see §1.) |
 | 2 | Problem | Prove you understand the day | The DMs, the notes app, the "what did I actually earn this week" |
 | 3 | The Inbox | The differentiator, shown not told | *A notification tells you something happened. The Inbox keeps it until you deal with it.* |
 | 4 | Booking link | Removes the "how do clients reach me" question | One link, your clients, no commission |

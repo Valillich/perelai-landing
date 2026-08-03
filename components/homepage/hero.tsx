@@ -22,6 +22,12 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
           {/* Text */}
           <div className="lg:col-span-7">
             <Reveal>
+              <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.08em] text-muted-foreground sm:text-[14px]">
+                {t("hero.eyebrow")}
+              </p>
+            </Reveal>
+
+            <Reveal delay={0.04}>
               <h1 className="text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[56px]">
                 {t("hero.title")}{" "}
                 <span className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">

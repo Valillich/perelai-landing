@@ -1,14 +1,33 @@
 # Product Marketing Context
 
-**Document version:** v3
-**Last updated:** 2026-08-02
+**Document version:** v6
+**Last updated:** 2026-08-03
 
 ## Product Overview
-**One-liner:** Your clients, bookings and cash flow — finally in one place.
+**One-liner:** Perelai is financial tracking and analytics software that connects the money of a service business to its clients, services and daily work.
 
-**What it does:** Booking + client + money software for independent service professionals. Not a CRM, not accounting, not a marketplace. Perelai keeps a company-level operational Inbox of unresolved work, separates fulfilment from money so numbers stay trustworthy, preselects niche-aware onboarding from the landing page the user arrived on, and offers direct booking with no take rate on the business's own link.
+**Short tagline:** Clear work. Clear money.
 
-**Product category:** Booking + client + money software for independent service professionals.
+**Current homepage message (published 2026-08-03, owner-directed finance-first repositioning).** Claim gate: [`docs/finance-claim-contract.md`](../docs/finance-claim-contract.md). Live in all nine published locales.
+
+| Surface | English |
+|---|---|
+| Hero eyebrow | Financial tracking and analytics for independent service businesses |
+| Hero H1 | **See the money behind your business.** (`title` + `accent`) |
+| Hero body | Perelai tracks income, expenses, payments and outstanding balances, and connects the numbers to the clients, services and visits behind them. See what was completed, what was paid and what is still outstanding. |
+| Meta title | Perelai — Simple Finance Software for Service Businesses |
+| Meta description | Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work. |
+| Closing title | Your finances, connected to the work behind them. |
+
+**Two retired positionings**, kept only as historical audit record — do not reintroduce either:
+1. *“Your clients, bookings and cash flow — finally in one place.”* — retired v4. “Finally / in one place” remains a named ban (`messaging-and-claims.md` §4.1).
+2. *“Know what still needs doing — and what was actually paid.”* — frozen at v4/v5 under MSG1, **superseded before publication** by the v6 category change. Its audit survives in `docs/home-hero-copy-audit.md`; the completed-vs-paid principle it carried survives as FC2 and is still in the hero body.
+
+**What it does:** Financial tracking and analytics for small service businesses. Perelai records income, expenses, payments and outstanding balances, and connects every record to the client, service, visit, order, package or instalment behind it. Completed work is kept separate from money received. Booking, Calendar and clients are **not the category** — they are how the financial context gets collected without manual entry. Not accounting, not bookkeeping, not a marketplace, not payment processing.
+
+**Product category:** Financial tracking and analytics software for small service businesses. Plain-language form: *simple finance software for independent service businesses.*
+
+**Category demotion note (2026-08-03).** Booking, Calendar and CRM moved from *category* to *mechanism*. The chain is: `booking / order → completed work → payment or debt → financial analytics`. Booking is a source of financial data and a reason the numbers need no manual entry — never the reason to buy. Do not lead any page, ad or meta description with booking.
 
 **Product type:** SaaS, delivered browser-first as a web application. Installation is optional and depends on the browser and platform; it is not required to use Perelai. There is no current App Store or Google Play listing. Specific device-install, standalone-window, and notification claims remain governed by `docs/device-claim-contract.md`.
 
@@ -26,7 +45,7 @@ repositioning toward salons, and never the frame of a headline. The buyer is sti
 professional; the collaboration story exists to stop them disqualifying themselves in either
 direction ("this is too big for me" / "I might hire someone next year, so I'd have to move again").
 
-**Primary use case:** Run clients, bookings, and cash flow from one place without reconstructing the day from DMs, notes apps, and memory.
+**Primary use case:** Keep unresolved work visible until it is dealt with, and see completed work separately from money actually received — without reconstructing the day from DMs, notes apps, and memory.
 
 **Jobs to be done:**
 - "Stop losing track of what still needs doing after a busy day."
@@ -113,15 +132,19 @@ direction ("this is too big for me" / "I might hire someone next year, so I'd ha
 - Double-booked / no-show / client wants to pay later
 - Bookings in DMs at 11pm
 
-**How they describe us:**
-- Clients, bookings and cash flow in one place
+**How they describe us:** *(Provenance, recorded 2026-08-03: these are internal paraphrases, not verified Voice of Customer. MSG0 rated flagship proxy research **LOW** confidence — all source URLs failed live recheck on 2026-08-02 and no pain theme cleared the ≥5-independent-signal bar. Do not quote these as customer language.)*
+- A list of what still needs doing, and a record of what was actually paid
 - A list that stays until you deal with it
 - Your booking link, no commission
 - Proxy device-language only (not yet validated for Perelai): app, phone, website, online booking, Android, desktop
 
 **Words to use:** Visit, Order, Package (prepaid credits), Workspace access, Payment confirmation, Instalment, Public service request, Rental reservation, Operational Inbox item; browser-first; optional installation; team member (marketing prose); Staff / Supervisor (product role labels, taken from the generated app string catalog); coworker (**a linked separate business only**); occupied times
 
-**Words to avoid:** personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; native app; download; offline / offline sync; App Store / Google Play availability; one-click install everywhere; fake testimonials / usage counts; built for teams / manage your salon team / built for salons / requires a team; granular permissions / custom roles / enterprise workforce management / SSO; payroll / timesheets / commissions / HR; shared calendar (coworker sense) / shared client list / shared account; nothing is shared / complete privacy / private by default / anonymous; no double-booking ever / real-time locking; streamline collaboration / work better together / one shared workspace; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
+**Words to use (finance, added v6):** financial tracking; finance software; business finance workspace; income and expense tracking; payment tracking; cash-flow visibility; financial analytics; outstanding balances; money received; simple business finances; operational financial overview; profit (the app's own label — FC9).
+
+**Use with care (v6):** *financial management* (implies budgets and forecasting Perelai does not have); *bookkeeping* (SEO copy only, never the category — it implies tax categories, reconciliation, formal reports and accountant access); *cash flow* (only where the number genuinely reflects money moving, not the settled-work total — FC2/FC7).
+
+**Words to avoid:** accounting software; automated accounting; tax-ready books; financial advisor; profit optimization; banking; invoicing platform; **export / download your data** (FC8 `BLOCKED`, and not approved in `docs/commercial-policy.md`); **revenue by service** (analytics are category-granular — FC4); **"what came in" / "money received" attached to the summary total** (FC2/FC7 boundary); finally / at last (novelty theatre — nothing novel is being named); in one place / all in one / everything you need (category parity a calendar or salon suite can claim unchanged); personal CFO; CRM; accounting / bookkeeping / tax / P&L; marketplace / get discovered; AI triage / smart inbox; payment processing / get paid instantly; membership / subscription (for packages); receipt (fiscal sense); invoice / bill; financing / BNPL / credit / lending; PWA; native app; download; offline / offline sync; App Store / Google Play availability; one-click install everywhere; fake testimonials / usage counts; built for teams / manage your salon team / built for salons / requires a team; granular permissions / custom roles / enterprise workforce management / SSO; payroll / timesheets / commissions / HR; shared calendar (coworker sense) / shared client list / shared account; nothing is shared / complete privacy / private by default / anonymous; no double-booking ever / real-time locking; streamline collaboration / work better together / one shared workspace; streamline, optimize, innovative, seamless, leverage, empower, revolutionize, game-changing, effortlessly; exclamation points
 
 **Glossary:**
 | Term | Meaning |
@@ -158,7 +181,7 @@ direction ("this is too big for me" / "I might hire someone next year, so I'd ha
 | Founder-led credibility | Short signed "why we built this" with real name and reply path |
 | Risk reversal | Only product-backed facts — e.g. no card because no billing; no data-export promise; no scarcity without `docs/commercial-policy.md` approval |
 | Honesty as differentiation | "What Perelai is not" — not accounting, not a marketplace, not a medical record system |
-| Platform distribution | `docs/device-claim-contract.md` is the claim gate: browser delivery is the only current `PASS` platform fact. Installation, device-specific access, standalone display, and iPhone alerts remain `BLOCKED`; no current store listing. |
+| Platform distribution | `docs/device-claim-contract.md` is the claim gate. Current `PASS`: browser delivery / use without installing (F21); no store listing (F23); internet required (F24); iPhone Home Screen setup and standalone window (F26), paired with the Open-as-Web-App condition. Still `BLOCKED`: iPad and Android install/standalone, named-browser install mechanics, and push/iPhone alerts. Do not generalise the iPhone PASS. |
 
 ## Goals
 **Business goal:** Founding beta signups from independent US beauty professionals (`APPOINTMENT` mode).
@@ -209,6 +232,10 @@ never marketing content.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v5 (2026-08-03) — Corrected Platform distribution proof: iPhone Home Screen + standalone (F26) is `PASS` with the Open-as-Web-App condition; iPad, Android, named-browser install mechanics and push remain `BLOCKED`. Fixes a stale v4 sentence that still said all install/standalone claims were blocked.
+- v6 (2026-08-03) — **Owner-directed category change: finance-first.** Category moved from "booking + client + money software" to "financial tracking and analytics software for small service businesses"; Booking/Calendar/CRM demoted from category to the mechanism that collects financial context. New one-liner, tagline, hero (eyebrow + "See the money behind your business."), meta and closing shipped to all nine published locales. Gated by the new [`docs/finance-claim-contract.md`](../docs/finance-claim-contract.md) (FC1–FC10): three copy lines in the owner's draft were amended or rejected because analytics are category-granular (not per-service), export is `BLOCKED`, and the summary total is settled work rather than cash received. The MSG1 hero was superseded before publication. Claim statuses otherwise unchanged; TC5 still HOLD; F1 upgraded to full PASS after its integration suite ran (14 passed).
+- v5 (2026-08-03) — Interim revision by the repository owner between MSG1 and the v6 repositioning; no separate changelog entry was recorded at the time.
+- v4 (2026-08-03) — MSG1 retired the "finally / in one place" one-liner and hero for a mechanism-led message ("Know what still needs doing — and what was actually paid."); added the frozen homepage message block (`AWAITING OWNER APPROVAL`), rewrote the primary use case and the "how they describe us" list off the retired parity frame, marked that list as unverified paraphrase after MSG0 rated flagship proxy research LOW, and added finally / in-one-place / all-in-one to Words to avoid. No claim status changed: Devices, team, coworker (TC5 still HOLD), Notes, ICP, personas, objections, non-goals, capability inventory and CTA are untouched.
 - v3 (2026-08-02) — TEAM1 added working-with-other-people as an *optional secondary* capability (team access vs coworker link), two access objections, the identity/access anxiety split, team & coworker terminology, and Notes/collaboration non-goals. Flagship solo ICP, category, hero, and CTA unchanged; coworker wording is held on TC5 and is not publishable.
 - v2 (2026-08-01) — DVC1A added browser-first and optional-install positioning, device objections, claim-avoidance language, and evidence-bound platform proof; core category and GTM unchanged.
 - v1 (2026-07-29) — Initial context transcribed from `messaging-and-claims.md` §1–§5 for LP0 baseline.
