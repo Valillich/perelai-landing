@@ -6,10 +6,10 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
   test("matches approved English source set verbatim (docs/home-hero-copy-audit.md §II.7)", () => {
     // II.7.1 Hero
     expect(homeEn.hero.eyebrow).toBe("Simple finance software for independent service businesses")
-    expect(homeEn.hero.title).toBe("Revenue, costs and profit")
-    expect(homeEn.hero.accent).toBe("— connected to the work behind them.")
+    expect(homeEn.hero.title).toBe("Revenue, costs and profit — ")
+    expect(homeEn.hero.accent).toBe("broken down by client and service category.")
     expect(homeEn.hero.body).toBe(
-      "Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate."
+      "Review revenue, costs and profit for any period. Completed work counts toward revenue only after settlement, while recorded payments remain separate."
     )
     expect(homeEn.hero.signup).toBe("Create workspace")
     expect(homeEn.hero.how).toBe("See how it works")
@@ -22,9 +22,9 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
     // II.7.2 Sections
     expect(homeEn.finance.title).toBe("Revenue, costs and profit for any period")
     expect(homeEn.finance.body).toBe("Review revenue, costs and calculated profit for a day, week, month, quarter or year.")
-    expect(homeEn.states.title).toBe("Completed, settled, recorded and owed are different states")
+    expect(homeEn.states.title).toBe("Completed work, revenue, payments and open-order balances are tracked separately.")
     expect(homeEn.states.body).toBe(
-      "A visit can be completed and not yet settled. A visit settled with a prepaid package moves no money. An open order can still be owed months later. Perelai keeps completed work, settled revenue, recorded payments and open-order balances apart, so each number means one thing."
+      "A visit can be completed before it counts toward revenue. A prepaid package can cover a visit without a new payment, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
     )
     expect(homeEn.drivers.title).toBe("See where the result comes from")
     expect(homeEn.drivers.body).toBe(
@@ -59,9 +59,9 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
     // II.7.5 Metadata, Closing, Footer, Site Config
     expect(homeEn.meta.title).toBe("Perelai — Simple Finance Software for Service Businesses")
     expect(homeEn.meta.description).toBe(
-      "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
+      "Track revenue, costs and profit for any period, with breakdowns by service category and client."
     )
-    expect(homeEn.closing.title).toBe("Your financial result, connected to the work behind it.")
+    expect(homeEn.closing.title).toBe("A clear financial result, broken down by client and service.")
     expect(homeEn.footer.description).toBe("Simple finance software for independent service businesses.")
     expect(siteConfig.description).toBe(homeEn.meta.description)
   })

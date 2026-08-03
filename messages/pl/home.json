@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — proste oprogramowanie finansowe dla usługodawców",
-    "description": "Śledź przychód, koszty i zysk za dowolny okres, z podziałem na kategorię i klienta powiązanym z usługami, z których wynikają."
+    "description": "Śledź przychód, koszty i zysk za dowolny okres, z podziałem według kategorii usług i klientów."
   },
   "nav": {
     "features": "Funkcje",
@@ -17,8 +17,8 @@
   "hero": {
     "eyebrow": "Proste oprogramowanie finansowe dla niezależnych firm usługowych",
     "title": "Przychód, koszty i zysk",
-    "accent": "— powiązane z usługami, z których wynikają.",
-    "body": "Śledź przychód, koszty i zysk za dowolny okres. Rozbij wynik według kategorii usług i klienta — praca liczy się do przychodu dopiero po rozliczeniu, a zarejestrowane płatności pozostają oddzielnym zapisem.",
+    "accent": "— z podziałem według klientów i kategorii usług.",
+    "body": "Śledź przychód, koszty i zysk za dowolny okres. Wykonana praca jest uwzględniana w przychodzie dopiero po rozliczeniu, a zarejestrowane płatności są wykazywane oddzielnie.",
     "signup": "Utwórz przestrzeń pracy",
     "how": "Zobacz, jak to działa",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
@@ -116,7 +116,7 @@
     }
   },
   "closing": {
-    "title": "Twój wynik finansowy — powiązany z usługami, z których wynika.",
+    "title": "Jasny wynik finansowy, z podziałem według klientów i kategorii usług.",
     "body": "Konfiguracja w jeden wieczór.",
     "cta": "Utwórz przestrzeń pracy",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
@@ -175,8 +175,8 @@
     }
   },
   "states": {
-    "title": "Wykonane, rozliczone, zarejestrowane i należne to różne stany",
-    "body": "Wizyta może być wykonana, zanim przychód zostanie rozliczony. Rozliczenie wizyty pakietem nie powoduje przepływu środków. Na otwartym zamówieniu może jeszcze przez kilka miesięcy pozostawać nieuregulowana należność. Perelai trzyma wykonaną pracę, rozliczony przychód, zarejestrowane płatności i salda otwartych zamówień oddzielnie, więc każda liczba oznacza dokładnie jedno."
+    "title": "Wykonana praca, przychód, zarejestrowane płatności i salda otwartych zamówień to nie to samo.",
+    "body": "Wizyta może być wykonana, zanim zostanie wliczona do przychodu. Przedpłacony pakiet może pokryć wizytę bez nowej płatności, podczas gdy w otwartym zamówieniu może nadal pozostawać nieuregulowana kwota. Perelai rozróżnia te stany, dzięki czemu każda liczba ma jasne znaczenie."
   },
   "drivers": {
     "title": "Zobacz, skąd bierze się wynik",

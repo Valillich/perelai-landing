@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Simple Finance Software for Service Businesses",
-    "description": "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
+    "description": "Track revenue, costs and profit for any period, with breakdowns by service category and client."
   },
   "nav": {
     "features": "Features",
@@ -16,9 +16,9 @@
   },
   "hero": {
     "eyebrow": "Simple finance software for independent service businesses",
-    "title": "Revenue, costs and profit",
-    "accent": "— connected to the work behind them.",
-    "body": "Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate.",
+    "title": "A Clear View of Your Business Finances",
+    "accent": "Without Complicated Spreadsheets",
+    "body": "Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips.",
     "signup": "Create workspace",
     "how": "See how it works",
     "micro": "You'll get a verification email to finish setting up.",
@@ -54,8 +54,8 @@
     }
   },
   "states": {
-    "title": "Completed, settled, recorded and owed are different states",
-    "body": "A visit can be completed and not yet settled. A visit settled with a prepaid package moves no money. An open order can still be owed months later. Perelai keeps completed work, settled revenue, recorded payments and open-order balances apart, so each number means one thing."
+    "title": "Completed work, revenue, payments and open-order balances are tracked separately.",
+    "body": "A visit can be completed before it counts toward revenue. A prepaid package can cover a visit without a new payment, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
   },
   "drivers": {
     "title": "See where the result comes from",
@@ -90,10 +90,10 @@
     "detail": "Your booking link is yours. Clients book directly on your link."
   },
   "money": {
-    "title": "Revenue, costs and profit for any period",
-    "body": "Review revenue, costs and calculated profit for a day, week, month, quarter or year.",
+    "title": "Revenue, costs and outstanding amounts on open orders",
+    "body": "Completed work, revenue and actually recorded payments are accounted for separately. So instead of a single mixed figure, you see the different financial states of the business.",
     "caption": "Example data",
-    "detail": "Review revenue, costs and calculated profit for a day, week, month, quarter or year."
+    "detail": "Completed work, revenue and actually recorded payments are accounted for separately. So instead of a single mixed figure, you see the different financial states of the business."
   },
   "devices": {
     "title": "One address, one login",
@@ -175,7 +175,7 @@
     "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
   },
   "closing": {
-    "title": "Your financial result, connected to the work behind it.",
+    "title": "A clear financial result, broken down by client and service.",
     "body": "Set up in an evening.",
     "cta": "Create workspace",
     "micro": "You'll get a verification email to finish setting up."

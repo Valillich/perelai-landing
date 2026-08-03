@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Einfache Finanzsoftware für Dienstleister",
-    "description": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum, mit Auswertungen nach Kategorie und Kunde, verbunden mit der Arbeit dahinter."
+    "description": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum, aufgeschlüsselt nach Leistungskategorien und Kunden."
   },
   "nav": {
     "features": "Funktionen",
@@ -17,8 +17,8 @@
   "hero": {
     "eyebrow": "Einfache Finanzsoftware für selbstständige Dienstleister",
     "title": "Umsatz, Kosten und Gewinn",
-    "accent": "— verbunden mit der Arbeit dahinter.",
-    "body": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum. Schlüsseln Sie das Ergebnis nach Leistungskategorie und Kunde auf – abgeschlossene Arbeit zählt erst zum Umsatz, wenn sie realisiert ist, und erfasste Zahlungen bleiben davon getrennt.",
+    "accent": "— aufgeschlüsselt nach Kunden und Leistungskategorien.",
+    "body": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum. Abgeschlossene Arbeit wird erst im Umsatz berücksichtigt, wenn ihr Wert abgerechnet ist. Erfasste Zahlungen werden separat ausgewiesen.",
     "signup": "Arbeitsbereich erstellen",
     "how": "So funktioniert es",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
@@ -116,7 +116,7 @@
     }
   },
   "closing": {
-    "title": "Ihr Finanzergebnis, verbunden mit der Arbeit dahinter.",
+    "title": "Ein klares Finanzergebnis, aufgeschlüsselt nach Kunden und Leistungskategorien.",
     "body": "An einem Abend eingerichtet.",
     "cta": "Arbeitsbereich erstellen",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
@@ -175,8 +175,8 @@
     }
   },
   "states": {
-    "title": "Abgeschlossen, realisiert, erfasst und offen sind unterschiedliche Zustände",
-    "body": "Ein Termin kann abgeschlossen sein, ohne dass der Umsatz schon realisiert ist. Wird ein Termin über ein vorausbezahltes Paket abgerechnet, entsteht keine neue Geldbewegung. Ein offener Auftrag kann noch Monate später geschuldet sein. Perelai hält abgeschlossene Arbeit, realisierten Umsatz, erfasste Zahlungen und offene Auftragssalden auseinander, sodass jede Zahl genau eine Bedeutung hat."
+    "title": "Abgeschlossene Arbeit, Umsatz, erfasste Zahlungen und offene Auftragssalden sind nicht dasselbe.",
+    "body": "Ein Termin kann abgeschlossen sein, bevor er zum Umsatz zählt. Ein vorausbezahltes Paket kann einen Termin abdecken, ohne dass eine neue Zahlung erfolgt, während ein offener Auftrag noch einen ausstehenden Betrag aufweisen kann. Perelai weist diese Zustände getrennt aus, sodass jede Zahl eine klare Bedeutung hat."
   },
   "drivers": {
     "title": "Sehen Sie, woher das Ergebnis kommt",

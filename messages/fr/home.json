@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Logiciel de finances simple pour les services",
-    "description": "Suivez le revenu, les coûts et le profit pour toute période, avec des répartitions par catégorie et par client reliées au travail qui les a générés."
+    "description": "Suivez le revenu, les coûts et le profit pour toute période, avec des répartitions par catégorie de prestation et par client."
   },
   "nav": {
     "features": "Fonctionnalités",
@@ -17,8 +17,8 @@
   "hero": {
     "eyebrow": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services",
     "title": "Revenu, coûts et profit",
-    "accent": "— reliés au travail qui les a générés.",
-    "body": "Suivez le revenu, les coûts et le profit pour toute période. Répartissez le résultat par catégorie de prestation et par client : le travail réalisé ne compte dans le revenu qu'une fois réglé, et les paiements enregistrés restent à part.",
+    "accent": "— répartis par client et par catégorie de prestation.",
+    "body": "Consultez le revenu, les coûts et le profit pour toute période. Le travail réalisé n’est inclus dans le revenu qu’une fois réglé. Les paiements enregistrés sont présentés séparément.",
     "signup": "Créer un espace de travail",
     "how": "Voir comment ça marche",
     "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration.",
@@ -116,7 +116,7 @@
     }
   },
   "closing": {
-    "title": "Votre résultat financier, relié au travail qui l'a généré.",
+    "title": "Un résultat financier clair, ventilé par client et par catégorie de prestation.",
     "body": "Configuré en une soirée.",
     "cta": "Créer un espace de travail",
     "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration."
@@ -175,8 +175,8 @@
     }
   },
   "states": {
-    "title": "Réalisé, réglé, enregistré et dû sont des états différents",
-    "body": "Une visite peut être réalisée sans que le revenu ne soit encore réglé. Si une visite est réglée par un forfait prépayé, cela n'entraîne aucun mouvement d'argent. Une commande ouverte peut rester due des mois plus tard. Perelai garde le travail réalisé, le revenu réglé, les paiements enregistrés et les soldes de commandes ouvertes séparés, afin que chaque chiffre ne signifie qu'une seule chose."
+    "title": "Le travail réalisé, le revenu, les paiements enregistrés et les soldes de commandes ouvertes ne sont pas la même chose.",
+    "body": "Une visite peut être réalisée avant de compter dans le revenu. Un forfait prépayé peut couvrir une prestation sans nouveau paiement, tandis qu’un solde peut rester dû sur une commande ouverte. Perelai distingue clairement ces états afin que chaque chiffre ait une signification précise."
   },
   "drivers": {
     "title": "Voyez d'où vient le résultat",

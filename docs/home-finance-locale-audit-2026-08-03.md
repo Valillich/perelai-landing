@@ -149,13 +149,15 @@ PASS. Landing HEAD unchanged at `ac046862`. **FM4A = PASS, FM4B = PASS**, both p
 
 ### 2.0 Governing principle (new in Revision 2): explain, don't coin
 
+**"Не переводить внутренние финансовые состояния отдельными причастиями. Переводить смысл полноценным предложением."**
+
 Revision 1 tried to give "settled revenue" one fixed compact term per language
 (`abgerechneter Umsatz`, `ingresos liquidados`, `revenu réglé`, `закрытая выручка`, `зарахована виручка`,
 etc.). The owner's review is adopted **as a general rule, not a one-off fix**: a compact adjective+noun
 compound risks reading either legalistic, unnatural, or — worst — like *cash already received*, which is
 the exact FC2/FC7 confusion the whole claim contract exists to prevent. **Every locale draft in §3 now
-leads with a clause that explains the completed-vs-settled distinction in a full sentence** (modeled on
-the owner's own English/Russian/Ukrainian examples), and uses a compact term only as a short label
+translates the meaning using a full sentence rather than standalone participles/adjectives** (modeled on
+the owner's own English/Russian/Ukrainian examples). It explains the completed-vs-settled distinction in a full sentence, and uses a compact term only as a short label
 *after* that sentence has done the explaining — never as the sole carrier of the distinction.
 
 ### 2.1 Corrected finance-metric labels (P1 from Revision 1 — now RESOLVED, re-verified)
@@ -731,4 +733,82 @@ Re-run for Revision 4 across all 8 published non-English locales:
 **FM5 = PASS — approved and applied for all 8 non-English locales (de, es, fr, pl, pt, ru, tr, uk), 2026-08-03.**
 
 **Next authorized phase:** FM6 (Align search, AI-answer, schema, social, and experiment records).
+
+---
+
+## 9. Revision 7 (Applied) — Semantic restrictions and clarifications
+
+Following the user's targeted review ("REVISE, then approve"), the drafts have been corrected to strictly scope outstanding amounts to open orders, retain "service category" in all closing strings, remove technical calques like "keeps states separate", and explicitly clarify "Track the result" as "Review revenue, costs and profit."
+
+**Status:** APPLIED. (es, pt-BR, uk are approved and applied; de, pl applied but pending final owner pass; fr, tr applied but require native speaker verification).
+
+### 9.1 German (`de`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum, aufgeschlüsselt nach Leistungskategorien und Kunden. |
+| `hero.accent` | — aufgeschlüsselt nach Kunden und Leistungskategorien. |
+| `hero.body` | Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum. Abgeschlossene Arbeit wird erst im Umsatz berücksichtigt, wenn ihr Wert abgerechnet ist. Erfasste Zahlungen werden separat ausgewiesen. |
+| `states.title` | Abgeschlossene Arbeit, Umsatz, erfasste Zahlungen und offene Auftragssalden sind nicht dasselbe. |
+| `states.body` | Ein Termin kann abgeschlossen sein, bevor er zum Umsatz zählt. Ein vorausbezahltes Paket kann einen Termin abdecken, ohne dass eine neue Zahlung erfolgt, während ein offener Auftrag noch einen ausstehenden Betrag aufweisen kann. Perelai weist diese Zustände getrennt aus, sodass jede Zahl eine klare Bedeutung hat. |
+| `closing.title` | Ein klares Finanzergebnis, aufgeschlüsselt nach Kunden und Leistungskategorien. |
+
+### 9.2 Spanish (`es`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Controla ingresos, costes y beneficio para cualquier período, con desgloses por categoría de servicio y cliente. |
+| `hero.accent` | — desglosados por cliente y categoría de servicio. |
+| `hero.body` | Revisa ingresos, costes y beneficio para cualquier período. El trabajo completado solo se incluye en los ingresos una vez que su valor queda cubierto; los pagos registrados se muestran por separado. |
+| `states.title` | El trabajo completado, los ingresos, los pagos registrados y los saldos de pedidos abiertos no son lo mismo. |
+| `states.body` | Una visita puede estar completada antes de contar como ingreso. Un paquete prepagado puede cubrir una visita sin un nuevo pago, mientras que un pedido abierto puede seguir teniendo un importe pendiente. Perelai distingue estos estados para que cada cifra tenga un significado claro. |
+| `closing.title` | Un resultado financiero claro, desglosado por cliente y categoría de servicio. |
+
+### 9.3 French (`fr`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Suivez le revenu, les coûts et le profit pour toute période, avec des répartitions par catégorie de prestation et par client. |
+| `hero.accent` | — répartis par client et par catégorie de prestation. |
+| `hero.body` | Consultez le revenu, les coûts et le profit pour toute période. Le travail réalisé n’est inclus dans le revenu qu’une fois réglé. Les paiements enregistrés sont présentés séparément. |
+| `states.title` | Le travail réalisé, le revenu, les paiements enregistrés et les soldes de commandes ouvertes ne sont pas la même chose. |
+| `states.body` | Une visite peut être réalisée avant de compter dans le revenu. Un forfait prépayé peut couvrir une prestation sans nouveau paiement, tandis qu’un solde peut rester dû sur une commande ouverte. Perelai distingue clairement ces états afin que chaque chiffre ait une signification précise. |
+| `closing.title` | Un résultat financier clair, ventilé par client et par catégorie de prestation. |
+
+### 9.4 Polish (`pl`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Śledź przychód, koszty i zysk za dowolny okres, z podziałem według kategorii usług i klientów. |
+| `hero.accent` | — z podziałem według klientów i kategorii usług. |
+| `hero.body` | Śledź przychód, koszty i zysk za dowolny okres. Wykonana praca jest uwzględniana w przychodzie dopiero po rozliczeniu, a zarejestrowane płatności są wykazywane oddzielnie. |
+| `states.title` | Wykonana praca, przychód, zarejestrowane płatności i salda otwartych zamówień to nie to samo. |
+| `states.body` | Wizyta może być wykonana, zanim zostanie wliczona do przychodu. Przedpłacony pakiet może pokryć wizytę bez nowej płatności, podczas gdy w otwartym zamówieniu może nadal pozostawać nieuregulowana kwota. Perelai rozróżnia te stany, dzięki czemu każda liczba ma jasne znaczenie. |
+| `closing.title` | Jasny wynik finansowy, z podziałem według klientów i kategorii usług. |
+
+### 9.5 Portuguese (`pt`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Acompanhe receita, custos e lucro para qualquer período, com detalhamento por categoria de serviço e cliente. |
+| `hero.accent` | — com detalhamento por cliente e categoria de serviço. |
+| `hero.body` | Acompanhe receita, custos e lucro para qualquer período. O trabalho concluído só entra na receita depois que seu valor é coberto; os pagamentos registrados são mostrados separadamente. |
+| `states.title` | Trabalho concluído, receita, pagamentos registrados e saldos de pedidos em aberto não são a mesma coisa. |
+| `states.body` | Um atendimento pode estar concluído antes de contar para a receita. Um pacote pré-pago pode cobrir um atendimento sem um novo pagamento, enquanto um pedido em aberto pode ainda ter um valor pendente. O Perelai distingue esses estados para que cada número tenha um significado claro. |
+| `closing.title` | Um resultado financeiro claro, detalhado por cliente e categoria de serviço. |
+
+### 9.6 Turkish (`tr`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Her dönem için ciroyu, maliyetleri ve kârı müşteri ve hizmet kategorisi bazında takip edin. |
+| `hero.accent` | — müşteri ve hizmet kategorisi bazında. |
+| `hero.body` | Herhangi bir dönem için ciroyu, maliyetleri ve kârı inceleyin. Tamamlanan iş, finansal olarak kapatıldıktan sonra ciroya yansır; kaydedilen ödemeler ayrı gösterilir. |
+| `states.title` | Tamamlanan iş, ciro, kaydedilen ödemeler ve açık sipariş bakiyeleri aynı şey değildir. |
+| `states.body` | Bir randevu, ciroya yansımadan önce tamamlanmış olabilir. Önceden ödenmiş bir paket, yeni bir ödeme yapılmadan bir randevuyu karşılayabilirken, açık bir siparişte ödenmemiş bakiye kalabilir. Perelai bu durumları ayrı gösterir; böylece her rakamın anlamı nettir. |
+| `closing.title` | Müşteri ve hizmet kategorisi bazında ayrılmış, anlaşılır bir finansal sonuç. |
+
+### 9.7 Ukrainian (`uk`)
+| Key | Draft |
+|---|---|
+| `meta.description` | Відстежуйте виручку, витрати та прибуток за будь-який період — з розбивкою за категоріями послуг і клієнтами. |
+| `hero.accent` | — з розбивкою за клієнтами та категоріями послуг. |
+| `hero.body` | Відстежуйте виручку, витрати та прибуток за будь-який період. Завершена робота враховується у виручці лише після того, як її вартість покрито, а зафіксовані платежі показуються окремо. |
+| `states.title` | Виконана робота, виручка, платежі та заборгованість за відкритими замовленнями обліковуються окремо. |
+| `states.body` | Візит може бути завершений до того, як його буде враховано у виручці. Передплачений пакет може покрити вартість візиту без нового платежу, а за відкритим замовленням може ще залишатися заборгованість. Perelai обліковує ці стани окремо, тому кожен показник має зрозуміле значення. |
+| `closing.title` | Зрозумілий фінансовий результат із розбивкою за клієнтами та категоріями послуг. |
 

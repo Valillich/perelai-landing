@@ -10,7 +10,7 @@
 
 **Version:** 2.0
 
-**Status:** planning only; the English message, translations, rollout, and experiment are not approved by this document
+**Status:** FM4A (English freeze) and FM5 (Locale Drafts) owner-approved on 2026-08-03. FM5 draft application to JSON files in progress.
 
 **Companion prompts:** `01_home_hero_positioning_llm_prompts_20260802.md`
 
@@ -314,6 +314,7 @@ English is the only source language. The eight other locale files are drafts unt
 Per locale, reviewers must verify:
 
 - natural finance terminology for independent service businesses, not literal English calques;
+- internal financial states are not translated as standalone participles/adjectives, but rather their meaning is translated using a full sentence;
 - local distinction between revenue/income, payment/cash, expense/cost, balance/debt, and profit;
 - the intended dialect (`pt-BR` or another repository-defined target) and consistent register;
 - H1 brevity at 320 px, no forced awkward line breaks, and no clipping at 200% zoom;

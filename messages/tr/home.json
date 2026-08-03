@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Hizmet işletmeleri için basit finans yazılımı",
-    "description": "Herhangi bir dönem için ciroyu, maliyetleri ve kârı takip edin; kategoriye ve müşteriye göre dökümler arkalarındaki işle ilişkilidir."
+    "description": "Her dönem için ciroyu, maliyetleri ve kârı müşteri ve hizmet kategorisi bazında takip edin."
   },
   "nav": {
     "features": "Özellikler",
@@ -17,8 +17,8 @@
   "hero": {
     "eyebrow": "Bağımsız hizmet işletmeleri için basit finans yazılımı",
     "title": "Ciro, maliyet ve kâr",
-    "accent": "— arkalarındaki işle ilişkili.",
-    "body": "Herhangi bir dönem için ciroyu, maliyetleri ve kârı takip edin. Sonucu hizmet kategorisine ve müşteriye göre ayırın: tamamlanan iş, ciroya ancak kesinleştikten sonra yansır; kaydedilen ödemeler ise ayrı tutulur.",
+    "accent": "— müşteri ve hizmet kategorisi bazında.",
+    "body": "Herhangi bir dönem için ciroyu, maliyetleri ve kârı inceleyin. Tamamlanan iş, finansal olarak kapatıldıktan sonra ciroya yansır; kaydedilen ödemeler ayrı gösterilir.",
     "signup": "Çalışma alanı oluştur",
     "how": "Nasıl çalıştığını görün",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
@@ -116,7 +116,7 @@
     }
   },
   "closing": {
-    "title": "Finansal sonucunuz, arkasındaki işle ilişkili.",
+    "title": "Müşteri ve hizmet kategorisi bazında ayrılmış, anlaşılır bir finansal sonuç.",
     "body": "Tek bir akşamda kurulur.",
     "cta": "Çalışma alanı oluştur",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
@@ -175,8 +175,8 @@
     }
   },
   "states": {
-    "title": "Tamamlanan, kesinleşen, kaydedilen ve hâlâ ödenmemiş olan farklı durumlardır",
-    "body": "Bir randevu tamamlanmış olabilir, ancak ciroya henüz yansımamış olabilir. Bir randevu önceden ödenmiş bir paketle kesinleşiyorsa, yeni bir para hareketi oluşmaz. Açık bir sipariş aylar sonra bile hâlâ ödenmemiş olabilir. Perelai tamamlanan işi, ciroyu, kaydedilen ödemeleri ve açık sipariş bakiyelerini ayrı tutar; böylece her rakam tek bir şey ifade eder."
+    "title": "Tamamlanan iş, ciro, kaydedilen ödemeler ve açık sipariş bakiyeleri aynı şey değildir.",
+    "body": "Bir randevu, ciroya yansımadan önce tamamlanmış olabilir. Önceden ödenmiş bir paket, yeni bir ödeme yapılmadan bir randevuyu karşılayabilirken, açık bir siparişte ödenmemiş bakiye kalabilir. Perelai bu durumları ayrı gösterir; böylece her rakamın anlamı nettir."
   },
   "drivers": {
     "title": "Sonucun nereden geldiğini görün",

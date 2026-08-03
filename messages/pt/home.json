@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Software financeiro simples para serviços",
-    "description": "Acompanhe receita, custos e lucro para qualquer período, com detalhamento por categoria e cliente conectado aos serviços que os geraram."
+    "description": "Acompanhe receita, custos e lucro para qualquer período, com detalhamento por categoria de serviço e cliente."
   },
   "nav": {
     "features": "Recursos",
@@ -17,8 +17,8 @@
   "hero": {
     "eyebrow": "Software financeiro simples para prestadores de serviços independentes",
     "title": "Receita, custos e lucro",
-    "accent": "— conectados aos serviços que os geraram.",
-    "body": "Acompanhe receita, custos e lucro para qualquer período. Detalhe o resultado por categoria de serviço e cliente: o trabalho só entra na receita depois de liquidado, e os pagamentos registrados ficam à parte.",
+    "accent": "— com detalhamento por cliente e categoria de serviço.",
+    "body": "Acompanhe receita, custos e lucro para qualquer período. O trabalho concluído só entra na receita depois que seu valor é coberto; os pagamentos registrados são mostrados separadamente.",
     "signup": "Criar espaço de trabalho",
     "how": "Veja como funciona",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração.",
@@ -116,7 +116,7 @@
     }
   },
   "closing": {
-    "title": "Seu resultado financeiro, conectado aos serviços que o geraram.",
+    "title": "Um resultado financeiro claro, detalhado por cliente e categoria de serviço.",
     "body": "Configurado em uma noite.",
     "cta": "Criar espaço de trabalho",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração."
@@ -175,8 +175,8 @@
     }
   },
   "states": {
-    "title": "Concluído, liquidado, registrado e em aberto são estados diferentes",
-    "body": "Um atendimento pode estar concluído antes de a receita ser liquidada. Quando um atendimento é liquidado com um pacote pré-pago, não há nova movimentação de dinheiro. Um pedido pode continuar com saldo em aberto por meses. O Perelai mantém trabalho concluído, receita liquidada, pagamentos registrados e saldos de pedidos em aberto separados, para que cada número signifique só uma coisa."
+    "title": "Trabalho concluído, receita, pagamentos registrados e saldos de pedidos em aberto não são a mesma coisa.",
+    "body": "Um atendimento pode estar concluído antes de contar para a receita. Um pacote pré-pago pode cobrir um atendimento sem um novo pagamento, enquanto um pedido em aberto pode ainda ter um valor pendente. O Perelai distingue esses estados para que cada número tenha um significado claro."
   },
   "drivers": {
     "title": "Veja de onde vem o resultado",
