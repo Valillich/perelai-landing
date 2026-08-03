@@ -75,3 +75,20 @@ export function getBreadcrumbListJsonLd(
     })),
   }
 }
+
+export function getFaqPageJsonLd(
+  faqs: Array<{ question: string; answer: string }>,
+): JsonLdNode {
+  return {
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  }
+}
+

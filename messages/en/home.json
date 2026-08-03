@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Simple Finance Software for Service Businesses",
-    "description": "Track revenue, costs and profit for any period, with breakdowns by service category and client."
+    "description": "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
   },
   "nav": {
     "features": "Features",
@@ -175,7 +175,7 @@
     "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
   },
   "closing": {
-    "title": "A clear financial result, broken down by client and service.",
+    "title": "Your financial result, connected to the work behind it.",
     "body": "Set up in an evening.",
     "cta": "Create workspace",
     "micro": "You'll get a verification email to finish setting up."

@@ -1,3 +1,4 @@
+import fs from "fs"
 import { describe, expect, test } from "vitest"
 import sitemap from "@/app/sitemap"
 import robots from "@/app/robots"
@@ -6,7 +7,7 @@ import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { buildPricingMarkdown, buildLlmsTxt } from "@/lib/machine-readable"
 import { SEO_DESCRIPTION_MAX, SEO_TITLE_MAX, toAbsoluteLandingUrl } from "@/lib/seo"
-import { getSoftwareApplicationJsonLd } from "@/lib/structured-data"
+import { getFaqPageJsonLd, getSoftwareApplicationJsonLd } from "@/lib/structured-data"
 
 import homeDe from "@/messages/de/home.json"
 import homeEn from "@/messages/en/home.json"
@@ -244,3 +245,59 @@ describe("machine-readable files & answer-engine contract", () => {
     }
   })
 })
+
+describe("finance-first machine-readable order and FM6 contract", () => {
+  test("llms.txt puts Finance detail before Inbox and Booking details", () => {
+    const llms = buildLlmsTxt()
+    const moneyIndex = llms.indexOf(homeEn.money.detail)
+    const inboxIndex = llms.indexOf(homeEn.inbox.detail)
+    const bookingIndex = llms.indexOf(homeEn.booking.detail)
+
+    expect(moneyIndex).toBeGreaterThan(-1)
+    expect(inboxIndex).toBeGreaterThan(-1)
+    expect(bookingIndex).toBeGreaterThan(-1)
+
+    expect(moneyIndex).toBeLessThan(inboxIndex)
+    expect(moneyIndex).toBeLessThan(bookingIndex)
+  })
+
+  test("llms.txt contains standalone, quotable factual answer to 'What is Perelai?'", () => {
+    const llms = buildLlmsTxt()
+    expect(llms).toContain("Perelai is financial tracking and analytics software for independent service businesses.")
+    expect(llms).toContain("operational finance software, not accounting or bookkeeping software.")
+  })
+
+  test("getFaqPageJsonLd formats visible FAQs into valid FAQPage schema", () => {
+    const faqs = [
+      { question: homeEn.faq.q1, answer: homeEn.faq.a1 },
+      { question: homeEn.faq.q2, answer: homeEn.faq.a2 },
+    ]
+    const schema = getFaqPageJsonLd(faqs)
+    expect(schema["@type"]).toBe("FAQPage")
+    expect(Array.isArray(schema.mainEntity)).toBe(true)
+    expect((schema.mainEntity as any[])[0]).toEqual({
+      "@type": "Question",
+      name: homeEn.faq.q1,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: homeEn.faq.a1,
+      },
+    })
+  })
+
+  test("homepage page.tsx and opengraph-image.tsx enforce finance-first feature order", () => {
+    const pageTsx = fs.readFileSync("app/[locale]/page.tsx", "utf-8")
+    const ogTsx = fs.readFileSync("app/[locale]/opengraph-image.tsx", "utf-8")
+
+    expect(pageTsx).toContain('featureList: [t("money.detail"), t("inbox.detail"), t("booking.detail")]')
+    expect(ogTsx).toContain('featureLines: [home.money.detail, home.inbox.detail, home.booking.detail]')
+  })
+
+  test("experiment backlog states no A/B test is running and registers control and dormant candidates", () => {
+    const backlog = fs.readFileSync("docs/experiment-backlog.md", "utf-8")
+    expect(backlog).toContain("NO A/B TEST IS RUNNING, AND NONE IS READY")
+    expect(backlog).toContain("REGISTERED FINANCE-FIRST CONTROL & DORMANT CANDIDATES (FM6)")
+    expect(backlog).toContain("Dormant Candidate A")
+  })
+})
+

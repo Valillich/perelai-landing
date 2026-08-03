@@ -59,9 +59,9 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
     // II.7.5 Metadata, Closing, Footer, Site Config
     expect(homeEn.meta.title).toBe("Perelai — Simple Finance Software for Service Businesses")
     expect(homeEn.meta.description).toBe(
-      "Track revenue, costs and profit for any period, with breakdowns by service category and client."
+      "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
     )
-    expect(homeEn.closing.title).toBe("A clear financial result, broken down by client and service.")
+    expect(homeEn.closing.title).toBe("Your financial result, connected to the work behind it.")
     expect(homeEn.footer.description).toBe("Simple finance software for independent service businesses.")
     expect(siteConfig.description).toBe(homeEn.meta.description)
   })

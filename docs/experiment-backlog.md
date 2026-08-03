@@ -40,61 +40,37 @@ Session recordings and scroll maps are **OFF**. The LP10 privacy decision enforc
 
 ---
 
-## 1. Hero Message — candidate and traffic policy
+## 1. Hero Message — candidate and traffic policy (FM6 Alignment)
 
-> **SUPERSEDED 2026-08-03 (FM2).** The `operational_clarity` candidate below — and the whole
-> `operational_clarity` / `beyond_calendar` / `fragmented_week` / `booking_to_payment` set — belonged to
-> the retired booking-first positioning and is **no longer a live experiment candidate**. Perelai's
-> category changed to financial tracking and analytics; a headline test across a category boundary would
-> compare two different products, not two messages.
+> **SUPERSEDED (FM2 / FM6).** All booking-first operational-clarity candidates (`operational_clarity` — *"Know what still needs doing"*, `beyond_calendar`, `fragmented_week`, `booking_to_payment`) are **SUPERSEDED** by the finance-first category pivot.
 >
-> **No replacement experiment is registered here, deliberately.** FM2 owns only this supersession note.
-> The finance-first control and any dormant candidates get registered in **FM6**, after the English
-> freeze is owner-approved (FM2), implemented (FM4A/FM4B) and localized with named human review (FM5).
-> Registering one now would imply an approved message that does not yet exist.
+> **REGISTERED FINANCE-FIRST CONTROL & DORMANT CANDIDATES (FM6):**
+> - **Control (Approved FM2/FM4A/FM5):** Eyebrow: *"Simple finance software for independent service businesses"* · H1: *"Revenue, costs and profit"* · Accent: *"— connected to the work behind them."* · Body: *"Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate."*
+> - **Dormant Candidate A (Financial visibility):** H1: *"A Clear View of Your Business Finances"* · Accent: *"Without Complicated Spreadsheets"*
+> - **Dormant Candidate B (Connected financial context):** H1: *"Your Business Finances, Connected to the Work"*
+> - **Dormant Candidate C (State separation):** H1: *"Completed Work, Revenue and Payments — Tracked Separately"*
 >
-> **No A/B test is running, and none is ready.** Every gate in §1.2 below remains unmet — there is still
-> no observed baseline, no sticky assignment, no privacy approval, and feature flags remain OFF by the
-> approved tracking plan. Retained below as the traffic/feasibility policy, which survives the category
-> change unchanged.
+> **NO A/B TEST IS RUNNING, AND NONE IS READY.** Feature flags remain **OFF** in the approved tracking plan. The first launch is a single approved rollout across all 9 published locales. No environment switch, cookie, query param, or runtime variant selector is active.
 
-*Rewritten 2026-08-03 (MSG1). Supersedes the previous entry, whose control and variant wording
-("Stop losing time on admin" / "Focus on your craft, we handle the rest") was never on the site,
-described a product that handles work automatically, and carried an assumed sample as if it were a
-launch instruction.*
+### 1.1 First launch is a rollout, not an experiment
 
-**Status:** **not runnable.** Classified as a future **true A/B**, currently blocked on traffic,
-assignment and privacy gates. Nothing in this entry authorises traffic.
+The first launch ships **one** owner-approved message set across all nine published locales:
+*"Revenue, costs and profit — connected to the work behind them."* Shipping it is a **rollout**. Its job is to establish a production baseline.
 
-### 1.1 First launch is not an experiment
+Dormant alternatives remain in documentation only. They do **not** become a runtime variant registry, environment switch, query parameter, cookie, feature flag, or random assignment.
 
-The first launch ships **one** message in all nine published locales:
-`operational_clarity` — *"Know what still needs doing — and what was actually paid."* It was selected on
-claim safety, differentiation and a weighted scorecard, not on measurement
-(`docs/home-hero-copy-audit.md` §5). Shipping it is a **rollout**. Its job is to establish a baseline.
+### 1.2 Preconditions before any future test becomes runnable
 
-Documented alternatives — `beyond_calendar`, `fragmented_week`, `booking_to_payment` — stay in
-documentation. They do **not** become a runtime variant registry, an environment switch, a query
-parameter, a cookie, a feature flag or a random assignment. Never run A/B/n across all four at this
-stage: four arms need roughly twice the sample of two, and nine locales would turn one copy test into a
-translation-and-segmentation problem where pooling arms across languages invalidates the conclusion.
-
-`fragmented_week` is additionally **not eligible** until its DM-import inference risk is resolved; its
-pain language rests on proxy sources that failed live recheck and cleared no independent-signal
-threshold.
-
-### 1.2 Preconditions before this becomes a runnable test
-
-| # | Gate | State on 2026-08-03 |
+| # | Gate | State on 2026-08-03 (FM6) |
 |---|---|---|
-| 1 | Approved English shipped and stable in production | Not started — MSG1 is held on owner approval |
-| 2 | `landing_viewed`, `landing_cta_clicked`, `signup_started` verified live | Not verified |
-| 3 | Observed baseline for the exact primary metric, with confidence interval, over ≥2 full weekly cycles (prefer 28 days) | **None** — MSG5 owns this |
+| 1 | Approved English shipped and stable in production | Implemented in FM4A/FM4B; localized in FM5; aligned in FM6 |
+| 2 | `landing_viewed`, `landing_cta_clicked`, `signup_started` verified live | Not yet verified in production baseline |
+| 3 | Observed baseline for the exact primary metric over ≥2 full weekly cycles | **None** — FM9 rollout observation owns this |
 | 4 | Eligible daily exposures measured, by locale and source | Unknown |
-| 5 | Sticky, flicker-free assignment resolved **before** the hero renders | Does not exist |
-| 6 | Privacy/legal approval for whatever storage that assignment needs | Not sought. Analytics is `persistence: 'memory'` with no visitor ID; a sticky experiment cookie is a **new** privacy decision even though the analytics provider stays memory-only |
-| 7 | Feature flags | Deliberately **OFF** in the approved tracking plan. Turning them on to run this test would contradict that approval |
-| 8 | Variant persisted into the app for the onboarding guardrail | Does not exist; must never be smuggled into `utm_campaign` |
+| 5 | Sticky, flicker-free assignment resolved **before** hero renders | Does not exist |
+| 6 | Privacy/legal approval for experiment storage | Not sought (`persistence: 'memory'`) |
+| 7 | Feature flags | Deliberately **OFF** in approved tracking plan |
+| 8 | Variant persisted into app for onboarding guardrail | Does not exist |
 
 ### 1.3 Feasibility rule
 

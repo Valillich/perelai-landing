@@ -163,6 +163,8 @@ function dumpCatalogViaTsx(appRepo) {
     fail(`tsx not found at ${tsxBin}; install deps in the app repo or set PERELAI_APP_REPO`)
   }
 
+  const tmpDumpFile = path.join(appRepo, ".tmp-catalog-dump.json")
+
   const dumpScript = `
 import { BUSINESS_TEMPLATES_CATALOG } from ${JSON.stringify(
     path.join(appRepo, "libs/core/src/templates/business-templates-catalog.ts"),
@@ -209,7 +211,9 @@ const markets = SUPPORTED_MARKETS.map((m) => ({
   name: m.name,
 }));
 
-process.stdout.write(JSON.stringify({
+import fs from "node:fs";
+
+fs.writeFileSync(${JSON.stringify(tmpDumpFile)}, JSON.stringify({
   supportedLocales: [...I18N_SUPPORTED_LANGUAGE_CODES],
   templates,
   groups,
@@ -228,7 +232,8 @@ process.stdout.write(JSON.stringify({
   }
 
   try {
-    return JSON.parse(result.stdout)
+    const raw = readFileSync(tmpDumpFile, "utf8")
+    return JSON.parse(raw)
   } catch (error) {
     fail(`tsx dump returned invalid JSON: ${error.message}`)
   }
