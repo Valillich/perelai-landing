@@ -14,12 +14,11 @@ never-say list; F15 gained the narrow team shapes; F25 (coworker shared availabi
 §4.2 gained the team/coworker terminology rows; §7 inserted **Collaboration** as row 7 and the former
 rows 7–11 shifted to 8–12. Nothing in §1 (positioning/ICP) or §6 (CTA policy) changed.
 
-**Amended 2026-08-03 (MSG1, homepage hero message).** §1 replaced the retired one-liner and gained the
+**Amended 2026-08-03 (MSG1, homepage hero message; SUPERSEDED BY FM0–FM11).** §1 replaced the retired one-liner and gained the
 frozen homepage message with its clause-to-claim map; §4.1 gained one rejected-hero-pattern row
 ("finally" / "in one place"); §7 row 1 replaced the retired Hero key line. **No claim row changed
 status.** §2 (the whole feature inventory), the Collaboration gate, TC5's `HOLD`, F4's notes decision,
-the Device gate, §5 (proof strategy), §6 (CTA policy) and §8–§10 are untouched. The frozen English is
-**`AWAITING OWNER APPROVAL`** — it is the documented positioning, not yet published copy.
+the Device gate, §5 (proof strategy), §6 (CTA policy) and §8–§10 are untouched. The former MSG0–MSG7 execution sequence is superseded by FM0–FM11. The frozen English is **`AWAITING OWNER APPROVAL`** — it is provisional positioning in the worktree, not published copy.
 
 ---
 
@@ -29,8 +28,8 @@ the Device gate, §5 (proof strategy), §6 (CTA policy) and §8–§10 are untou
 software for small service businesses.** Plain form: *simple finance software for independent service
 businesses.* Not accounting, not bookkeeping, not a marketplace, not payment processing, not a CRM.
 
-**Booking, Calendar and CRM are no longer the category.** They are the mechanism that collects the
-financial context without manual entry:
+**Booking, Calendar and CRM are no longer the category.** They are the mechanism that keeps each
+financial record connected to the work behind it:
 
 ```text
 booking / order → completed work → payment or debt → financial analytics
@@ -39,34 +38,54 @@ booking / order → completed work → payment or debt → financial analytics
 Booking is a *source of financial data*, never the reason to buy. Do not lead any page, meta description
 or ad with it.
 
+**Automation absolutes are banned (R13).** Never write "without manual entry", "automatic bookkeeping",
+"finance that fills itself in" or any equivalent. Expenses, corrections and manually added work all
+require the owner to enter them. The honest form is *"connected to the work behind it."*
+
 **One-liner:** *Perelai is financial tracking and analytics software that connects the money of a service
 business to its clients, services and daily work.* (Internal line, not a public headline.)
 
 **Short tagline:** *Clear work. Clear money.*
 
-**Published homepage message (2026-08-03).** Claim gate:
-[`docs/finance-claim-contract.md`](../../../docs/finance-claim-contract.md). Live in all nine locales.
+**Homepage message — OWNER-APPROVED 2026-08-03 (FM2).** Full set + approval record:
+[`docs/home-hero-copy-audit.md`](../../../docs/home-hero-copy-audit.md) §II.7. Claim gate:
+[`docs/finance-claim-contract.md`](../../../docs/finance-claim-contract.md). Approved as **English source
+only** — not implemented, not translated, not deployed. The strings currently in `messages/` are the
+superseded pre-approval draft; FM4A/FM5 replace them.
 
-| Surface | English | Claim rows |
+| Surface | Approved English | Claim rows |
 |---|---|---|
-| Hero `eyebrow` | Financial tracking and analytics for independent service businesses | FC1, FC4, FC5, FC6 |
-| Hero `title` | See the money | — (no capability asserted) |
-| Hero `accent` | behind your business. | — |
-| Hero `body` | Perelai tracks income, expenses, payments and outstanding balances, and connects the numbers to the clients, services and visits behind them. See what was completed, what was paid and what is still outstanding. | FC1, FC3, FC7, FC2 |
+| Hero `eyebrow` | Simple finance software for independent service businesses | category line |
+| Hero `title` | Revenue, costs and profit | FC1, FC9 |
+| Hero `accent` | — connected to the work behind them. | FC4, FC5, FC7 |
+| Hero `body` | Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate. | FC1, FC4, FC5, FC2, FC7 |
 | `meta.title` | Perelai — Simple Finance Software for Service Businesses | category line |
-| `meta.description` | Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work. | FC1, FC3, FC5, FC7 |
-| `closing.title` | Your finances, connected to the work behind them. | mechanism restatement |
+| `meta.description` | Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them. | FC1, FC4, FC5 |
+| `closing.title` | Your financial result, connected to the work behind it. | mechanism restatement |
+
+### Binding finance vocabulary (owner-set, 2026-08-03)
+
+| Term | Meaning | Rule |
+|---|---|---|
+| **Revenue / Cost / Profit** | Primary analytics metrics | Use as the metric names |
+| **Income / Expense** | Additional *transaction types* | **Never use Income as a synonym for Revenue** |
+| **Payment** | Recorded receipt / allocation | — |
+| **Account Balance** | Balance of a **payment account** | **Never use Balance as a synonym for customer debt** |
+| **Outstanding / Overdue** | Scoped to **orders and instalments** | Never unscoped |
+
+Always qualify debt wording — *"open-order balance"*, never a bare *"balance"*.
+**Profit:** say "calculated profit"; **do not publish an equation** until FC9 is amended.
 
 Clause-by-clause:
 
 | Phrase | Ledger | Basis |
 |---|---|---|
-| tracks income, expenses … for any period | **FC1** | `getSummary` → income, tips, expenses, profit, revenue; day/week/month/quarter/year. Never "accounting", "bookkeeping", "tax", "P&L". |
-| outstanding balances · what is still outstanding | **FC3** (+ existing **F7**) | `getDebtSummary` → open orders, total outstanding, overdue instalments. Order-scoped. |
-| payments | **FC7** (+ existing **F5**) | `PaymentAllocation` is the canonical cash ledger. Perelai **records**; it does not process. |
-| what was completed … what was paid | **FC2** | `REVENUE_FILTER` counts only `COMPLETED\|NO_SHOW` **and** `paymentStatus: PAID`. A completed unpaid visit is not revenue. |
-| connects the numbers to the clients, services and visits behind them | **FC4 + FC5** | Per-client summaries and per-**category** revenue/cost breakdowns. |
-| financial analytics connected to your clients, services and completed work | **FC4, FC5, FC6** | Category and client breakdowns plus `getSummaryOverTime`. |
+| Track revenue, costs and profit for any period | **FC1**, **FC9** | `getSummary`; period enum day/week/month/quarter/year. Profit is the UI label only — never "accounting", "bookkeeping", "tax", "P&L", and no public equation. |
+| by service category | **FC4** | `getRevenueByCategory` / `getCostByCategory` group on `categoryId`. Category granularity — never "by service". |
+| and client | **FC5** | `getClientSummary`, `getClientRevenueByCategory`, `getClientSummaryOverTime`. |
+| completed work, settled revenue and recorded payments stay separate | **FC2** + **FC7** | `REVENUE_FILTER` = `COMPLETED\|NO_SHOW` **and** `paymentStatus: PAID`; `PaymentAllocation` is the cash ledger; package redemption settles without an allocation. |
+| what is still owed on open orders *(sections/FAQ)* | **FC3** (+ existing **F7**) | `getDebtSummary`. **Scoped** to open orders and overdue instalments. |
+| connected to the work behind them | **FC4 + FC5 + FC7** | Payments recorded against the visit/order/instalment; totals break down by client and category. |
 
 **The boundary that must never blur.** Summary revenue = *settled* completed work
 (`paymentStatus: PAID`, which includes non-cash package redemption). Cash actually received =
@@ -77,37 +96,41 @@ to payments and payment accounts only.
 No published phrase depends on **F25/TC5**, on any device row, or on any `HOLD`/`BLOCKED` row.
 **FC8 (export) is `BLOCKED`** and **FC10 (refunds/corrections) is not audited** — neither may be claimed.
 
-**What makes it different (in priority order):**
+**What makes it different (in priority order — rewritten finance-first 2026-08-03, FM2):**
 
-1. **The operational Inbox.** Everyone else sends notifications. Perelai keeps a company-level list of
-   *unresolved work* that stays there until someone actually resolves it. Reading a notification does
-   not clear the item. This is the differentiator; lead with it after the core promise.
-2. **Fulfilment and money are separate — on purpose.** A completed visit is not revenue. A paid visit
-   may be settled by cash, by prepaid credits, or both. Competitors blur this and produce numbers
-   owners do not trust. Perelai does not.
-3. **Onboarding that already knows the business.** 32 selectable business types with editable
-   service/item lists; relevant templates also include add-ons, linked costs and time-based
-   durations. The right one is preselected from the page the user arrived on, and the app's
-   vocabulary changes with it.
-4. **Direct booking with no take rate.** The public booking link is the business's own; Perelai takes
-   no commission on bookings.
+1. **Every number is traceable to the work behind it.** Payments are recorded against the visit, order
+   or instalment they paid for, and totals break down by client and service category. A generic expense
+   tracker records an amount; Perelai records what it was for. This is the differentiator; lead with it.
+   (FC4, FC5, FC7)
+2. **Completed, settled and recorded cash stay separate states.** A completed visit enters summary
+   revenue only once it is settled — and settlement may be a package redemption, which moves no cash.
+   Competitors collapse these into one figure and produce numbers owners do not trust. (FC2, FC7)
+3. **Financial records are a by-product of the day's normal work.** Finishing a visit, recording a
+   payment, adding a cost and redeeming a package are what build the period summary — there is no
+   separate month-end finance exercise. *Not an automation claim; see the R13 ban above.*
+4. **Analytics without accounting vocabulary.** Period, category and client breakdowns with no chart of
+   accounts, no debits and credits, no reconciliation. (FC1, FC4, FC5, FC6, FC9)
+
+**Supporting mechanisms — never the lead:** operational Inbox (F1), public booking link with no take
+rate (F3), clients and history (F4), niche-aware onboarding (F10). These earn their place by keeping the
+financial record connected to real work.
 
 **ICP (initial GTM, do not broaden):** independent colorists and premium solo beauty professionals in
 the **United States**. `APPOINTMENT` mode. Everything else is Wave 2+.
 
-**Jobs to be done:**
-- "Stop losing track of what still needs doing after a busy day."
-- "Know what I actually earned this week without rebuilding it from memory."
-- "Let clients book me without me answering DMs at 11pm."
+**Jobs to be done (finance-first, FM2):**
+- "Tell me what my result actually is this month, without rebuilding it from memory."
+- "Show me which service categories and which clients my revenue comes from."
+- "Show me what is still owed on open orders and instalments, and what is overdue."
 
 **Four forces (JTBD) — the spine of every niche page:**
 
 | Force | Content |
 |---|---|
-| **Push** | Bookings in DMs, notes in three places, money reconstructed from memory at month end, no idea which clients stopped coming. |
-| **Pull** | One list of what still needs doing; one number you can trust; a link you can put in your bio. |
-| **Habit** | The notes app + the paper book + the phone calendar works "well enough" and costs nothing. |
-| **Anxiety** | "Migrating my clients will take a weekend." "It'll be built for salons with 12 chairs, not me." "I'll set it up and then abandon it." |
+| **Push** | The month-end reconstruction. Money arrived in several places, costs sit in receipts, and no figure traces back to the visit that produced it — so the owner does not trust their own number. |
+| **Pull** | A period result you can open — completed work, expenses, payments, what is still owed on open orders — broken down by client and service category, each figure traceable to the work behind it. |
+| **Habit** | The notes app, the paper book and a mental estimate. Free, familiar, "good enough" until a pricing or drop-a-service decision. |
+| **Anxiety** | "Migrating my clients will take a weekend." "It'll be built for salons with 12 chairs, not me." "I'll set it up and then abandon it." Plus the finance-specific one: *"will this number match my bank?"* — answer it honestly with the settled-vs-cash distinction, never by implying they will always agree. |
 
 Anxiety is the one the current landing does nothing about. Each niche page must answer all three
 anxieties explicitly — that is what the vCard/Google Calendar import section, the solo-vs-team framing
@@ -332,10 +355,10 @@ an email-verification screen, not in the app.
 
 | Position | Copy | Destination |
 |---|---|---|
-| Primary | **Create your free workspace** (alt: *Join the Founding Beta* only while that programme is approved and active) | `buildAppSignupUrl({ niche, source, campaign, landingPath, locale })` |
+| Primary | **Create workspace** — commercially neutral by owner decision 2026-08-03. **"Create your free workspace" and "Join the Founding Beta" are both retired**: *free* depends on `CF-04` and the Founding Beta programme has no approved row. | `buildAppSignupUrl({ niche, source, campaign, landingPath, locale })` |
 | Secondary | **See how it works** | `#how` on the same page |
 | Header, logged-out | **Log in** | `${NEXT_PUBLIC_APP_URL}/login` |
-| Micro-copy under primary | "No card. You'll get a verification email to finish setting up." | — |
+| Micro-copy under primary | **"You'll get a verification email to finish setting up."** — the "No card." prefix is **retired** (depends on `CF-01`, `PENDING`). Banned alongside it: *free*, *Founding Beta*, *trial*, future pricing, price lock, seat scarcity. | — |
 
 That micro-copy is not decoration: `AuthRegisterResult` is `{ verificationRequired: true }`, so the
 user *will* hit an inbox step. Saying so ahead of time is the cheapest activation win available.
@@ -357,34 +380,46 @@ One idea per section, in this order. Each section advances one argument.
 
 | # | Section | Job | Key line |
 |---|---|---|---|
-| 1 | Hero | State the category and the promise for a cold visitor in 5 seconds | Eyebrow *Financial tracking and analytics for independent service businesses* + H1 *See the money behind your business.* (FC1/FC4/FC5/FC6; published 2026-08-03. The eyebrow carries the shelf so the H1 can carry the outcome — see §1.) |
-| 2 | Problem | Prove you understand the day | The DMs, the notes app, the "what did I actually earn this week" |
-| 3 | The Inbox | The differentiator, shown not told | *A notification tells you something happened. The Inbox keeps it until you deal with it.* |
-| 4 | Booking link | Removes the "how do clients reach me" question | One link, your clients, no commission |
-| 5 | Money that adds up | The honesty argument | Completed work and received money are tracked separately — so the number is real |
-| 6 | Device fit | Answer "will this fit how I work?" before migration anxiety starts | *Perelai runs in a web browser. Installing it is optional, and there is no App Store or Google Play listing.* (F21 + F23) |
-| 7 | Collaboration | Answer "can I use this alone, and what happens if I add someone?" | *Work solo. Add people when you need them.* (F15 narrow shapes; F4 notes line as the one supporting proof) |
-| 8 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
-| 9 | What Perelai is not | Disqualify + build trust | Not accounting, not a marketplace, not a medical record system |
-| 10 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
-| 11 | FAQ | Objection handling | 6 questions, §8 below |
-| 12 | Final CTA | Recap + risk reversal | Repeat primary CTA + the no-card line |
+| 1 | Hero | State the category and the promise for a cold visitor in 5 seconds | Eyebrow *Simple finance software for independent service businesses* + H1 *Revenue, costs and profit — connected to the work behind them.* (owner-approved 2026-08-03; the eyebrow carries the shelf so the H1 can carry the metrics — see §1) |
+| 2 | Finance overview | Show the period result as the first product proof | *Revenue, costs and profit for any period* — review revenue, costs and calculated profit for a day, week, month, quarter or year (FC1, FC9) |
+| 3 | Financial states | The honesty argument, and the one competitors get wrong | *Completed, settled, recorded and owed are different states* — a visit can be completed and not yet settled; a package redemption settles without moving money; an open order can still be owed months later (FC2, FC3, FC7) |
+| 4 | Drivers | Answer "where does the result come from?" | *See where the result comes from* — revenue by service category, costs by category, a client's revenue history, and how the result changes over time (FC4, FC5, FC6) |
+| 5 | Connected records | The mechanism behind every number | *Every figure has work behind it* — payments recorded against the visit, order or instalment they paid for, connected to client and service category (FC7) |
+| 6 | Daily operations | Show *how* the records get created, without leading with it | *Build the financial record as you work* — complete a visit, record a payment, add a cost, redeem a package; Booking, Calendar and Inbox keep these connected (F1, F3, F4) — supporting mechanism only, never the purchase argument |
+| 7 | Device fit | Answer "will this fit how I work?" before migration anxiety starts | *Perelai runs in a web browser. Installing it is optional, and there is no App Store or Google Play listing.* (F21 + F23) |
+| 8 | Collaboration | Answer "can I use this alone, and what happens if I add someone?" | *Work solo. Add people when you need them.* (F15 narrow shapes; F4 notes line as the one supporting proof) |
+| 9 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
+| 10 | What Perelai is not | Disqualify + build trust | Not accounting, not bookkeeping, not a marketplace, not a medical record system; no export |
+| 11 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
+| 12 | FAQ | Objection handling | §8 below |
+| 13 | Final CTA | Recap + risk reversal | Repeat primary CTA — **CTA/commercial wording is `HOLD`**, see the CTA section in `.agents/product-marketing.md` |
 
-**Order constraints (binding).**
+**Order (FM2 narrative rewrite — FM3 owns the binding specification).**
 
 ```text
-Hero → Problem → Inbox → Booking → Money → Devices → Collaboration → Setup → Not → Niche router → FAQ → Final CTA
+Hero → Finance overview → Financial states → Drivers → Connected records → Daily operations →
+Devices → Collaboration → Setup → Not → Niche router → FAQ → Final CTA
 ```
 
-- **Device fit stays immediately after Money.** That adjacency is the DVC decision (device plan §6.3)
-  and Collaboration does not disturb it — Collaboration is inserted *after* Devices, not between Money
-  and Devices.
+This replaces the retired booking-first order
+(`Hero → Problem → Inbox → Booking → Money → Devices → …`), which was FM0 defect **R2**: the top of this
+document was finance-first while the hierarchy still argued Inbox and Booking first. FM2 sets the
+narrative order; **FM3 must bind it**, map every existing component to reuse/revise/split/move/retire,
+and specify the HeroShowcase and deterministic fixture. Do not implement this order before FM3 and
+FM4B.
+
+- **Device fit stays immediately after the last product-argument section.** In the retired order that
+  section was Money; in the finance-first order it is *Daily operations*. The DVC decision (device plan
+  §6.3) is that Devices directly follows the product argument and precedes Collaboration — that
+  adjacency is preserved, and Collaboration is still inserted *after* Devices. **FM3 must re-confirm
+  this against the DVC plan before binding the order.**
 - **Collaboration sits between Devices and Setup** because it is objection handling, not a new
-  purchase argument: Inbox, Booking and Money must land first, and the section then hands the visitor
+  purchase argument: the finance sections must land first, and the section then hands the visitor
   straight to Setup's existing "your team if you have one" step (§8 FAQ 2).
 - **Collaboration adds no CTA.** The page keeps exactly one primary action. It also adds no route, no
   header/footer item, no anchor target, no FAQ row, no metadata, OG/Twitter, JSON-LD or `llms.txt`
-  claim, and no niche-page block. The `#features` anchor stays on Inbox.
+  claim, and no niche-page block. The `#features` anchor moves with FM3's component map; it must land
+  on a finance section, not on Inbox — **FM3 owns that decision.**
 - **Notes is not a section.** It appears once, as a supporting line inside Collaboration's workspace
   side (F4 + TC8). See `docs/team-collaboration-copy-audit.md` §8 for the recorded rationale.
 
@@ -394,9 +429,11 @@ Hero → Problem → Inbox → Booking → Money → Devices → Collaboration �
 
 Six for the homepage; each niche page swaps 3–5 of them for niche-specific ones.
 
-1. **Do I need a card to start?** No card is collected today because there is no billing system.
-   State beta duration or a future price commitment only when `docs/commercial-policy.md` records
-   dated owner approval.
+1. **Do I need a card to start?** **RETIRED as a published FAQ row (owner decision 2026-08-03).** The
+   answer depends on `CF-01`, which is still `PENDING` with no owner, so no card, price, commission,
+   beta-duration or price-lock claim may be published. Do not restore this row — or any *free* / *No
+   card* / *Founding Beta* / *trial* wording — until `docs/commercial-policy.md` records a dated owner
+   approval. The approved homepage copy deliberately makes no commercial claim at all.
 2. **What happens right after I sign up?** You confirm your email, then a short setup: your trade,
    your services, your team if you have one, and optional imports.
 3. **Will my services already be there?** Yes — each selectable business type starts with an

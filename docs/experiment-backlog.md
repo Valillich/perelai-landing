@@ -41,6 +41,23 @@ Session recordings and scroll maps are **OFF**. The LP10 privacy decision enforc
 ---
 
 ## 1. Hero Message — candidate and traffic policy
+
+> **SUPERSEDED 2026-08-03 (FM2).** The `operational_clarity` candidate below — and the whole
+> `operational_clarity` / `beyond_calendar` / `fragmented_week` / `booking_to_payment` set — belonged to
+> the retired booking-first positioning and is **no longer a live experiment candidate**. Perelai's
+> category changed to financial tracking and analytics; a headline test across a category boundary would
+> compare two different products, not two messages.
+>
+> **No replacement experiment is registered here, deliberately.** FM2 owns only this supersession note.
+> The finance-first control and any dormant candidates get registered in **FM6**, after the English
+> freeze is owner-approved (FM2), implemented (FM4A/FM4B) and localized with named human review (FM5).
+> Registering one now would imply an approved message that does not yet exist.
+>
+> **No A/B test is running, and none is ready.** Every gate in §1.2 below remains unmet — there is still
+> no observed baseline, no sticky assignment, no privacy approval, and feature flags remain OFF by the
+> approved tracking plan. Retained below as the traffic/feasibility policy, which survives the category
+> change unchanged.
+
 *Rewritten 2026-08-03 (MSG1). Supersedes the previous entry, whose control and variant wording
 ("Stop losing time on admin" / "Focus on your craft, we handle the rest") was never on the site,
 described a product that handles work automatically, and carried an assumed sample as if it were a

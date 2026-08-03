@@ -1,117 +1,107 @@
-# Finance claim contract
+# Finance Claim Contract
 
-**Phase:** FIN0 — evidence and claim contract for the finance-first repositioning
+**Phase:** FM1 — evidence and claim contract for the finance-first repositioning
 **Verification date:** 2026-08-03
-**Landing HEAD:** `7e528d67231d9a772eec71af4bb7b4f1ea80bd14`
+**Landing HEAD:** `32aa27e1a57aefc4a9d6fb348e8cbbe9b2f66ae9`
 **App HEAD (`beauty-finance`):** `f081179fe5beba5f5eeb3bf0bdb7568ad61f032f` (worktree clean)
 
-## Why this contract exists
+---
 
-The owner directed a category change on 2026-08-03: Perelai is to be positioned as **finance software
-for small service businesses**, with Booking, Calendar and CRM demoted to the mechanism that *collects
-the financial context* rather than the product category.
+## 1. Why this contract exists
 
-That change moves the load-bearing claims from F1/F3 (Inbox, booking link) to the finance surface. The
-existing rail carried exactly **one** finance analytics row — F6, *"Revenue, costs and what's still
-outstanding — without a spreadsheet."* Every other sentence in the new positioning (per-client results,
-per-category breakdowns, period comparison, contribution/profit, outstanding balances) was **unaudited**.
-This file audits them before any of it reaches public copy or translation.
+The category decision requires Perelai to be positioned as **financial tracking and analytics software for small service businesses**. Booking, Calendar, and CRM serve as the operational mechanism that collects financial context without manual entry.
 
-Same rule as the device and team contracts: a finance sentence needs **two** approvals — a row here that
-reads `PASS`, and a matching entry in `.cursor/plans/reference/messaging-and-claims.md` §2.
+This change shifts the load-bearing marketing claims to the finance surface. Every public finance claim, headline, card, FAQ item, and metadata string must be traceable to a `PASS` row in this contract and a matching entry in `.cursor/plans/reference/messaging-and-claims.md` §2 under the two-approval rule.
 
-## Test evidence run on 2026-08-03
-
-`TEST_DATABASE_URL` was supplied by the owner for this session, which unblocked the integration suites
-that FIN0's predecessor (MSG0) had to record as blocked.
-
-| Command | Result |
-|---|---|
-| `jest … --testPathPatterns='operational-inbox.integration.spec'` | **14 passed** — this clears the MSG0 blocker on F1 |
-| `jest … finance.service.spec.ts finance.controller.spec.ts orders.service.spec.ts` | **71 passed** |
-| `jest … --testPathPatterns='finance-audit.integration.spec\|finance-feed-v2.integration.spec'` | **27 passed** |
-
-> **Credential handling.** The connection string is deliberately **not** recorded in this repository.
-> `TEST_DATABASE_URL` is a developer-supplied environment variable; see `docs/testing-env.md` for how to
-> set it. Committing a live database URL with its password into a tracked document would publish the
-> credential to everyone with repository access and to every future clone.
+This document repairs and enforces the evidence boundaries established during the FM0 audit:
+1. `earned` is conservatively **rejected** for public marketing copy (FC1).
+2. "Outstanding" debt is explicitly **scoped** to open orders and overdue instalments (FC3).
+3. "Brought in" is **rejected** for client revenue history to avoid cash/revenue confusion (FC5).
+4. Recorded cash semantics are explicitly **distinguished** from settled revenue and non-cash package redemptions (FC7).
+5. The UI metric label `Profit` is strictly **limited** to the product's calculation (`revenue - totalExpenses`) and forbidden from carrying accounting profit implications (FC9).
 
 ---
 
-## Claim rows
+## 2. Test Evidence Executed on 2026-08-03
 
-| ID | Exact allowed public wording | Prohibited wording | Implementation path | Evidence | Status |
-|---|---|---|---|---|---|
-| **FC1** | "Track what you earned, what you spent and what is left, for any period." | "Accounting", "bookkeeping", "tax", "P&L", "tax-ready", "financial advice" | `finance.service.ts` `getSummary` → returns `income`, `tips`, `expenses`, `profit`, `revenue`, `additionalIncome`, `additionalExpenses`; periods `day\|week\|month\|quarter\|year` | 71-test unit batch | **PASS** |
-| **FC2** | "A completed visit does not count until it is settled." | **"Revenue means cash in the bank"**, "see the money that came in" *attached to the summary number*, "every completed visit becomes revenue" | `finance.service.ts` `REVENUE_FILTER = { status: [COMPLETED, NO_SHOW], paymentStatus: PAID }` — a `COMPLETED` visit with `paymentStatus: PENDING` is excluded from revenue | `useGhostVisitUndo.spec.ts` 15 passed (MSG0); `finance.service.spec.ts` | **PASS**, with the boundary in FC7 |
-| **FC3** | "See what is still owed, and what is overdue." | "Debt collection", "we chase payments for you", "guaranteed payment" | `orders.service.ts` `getDebtSummary(companyId)` → `openOrdersCount`, `totalOutstanding`, `overdueInstalmentsCount` | `orders.service.spec.ts` within the 71-test batch | **PASS** — company-wide, **order-scoped** |
-| **FC4** | "See which service categories bring in the most, and where the costs sit." | **"revenue by service"**, "per-service profitability" — the grouping is by **category**, not by individual service | `finance.service.ts` `getRevenueByCategory`, `getCostByCategory` — group on `categoryId` | 71-test unit batch | **PASS at category granularity only** |
-| **FC5** | "See what each client has brought in over time." | "Lifetime value prediction", "client scoring", "churn prediction", "CRM" | `getClientSummary`, `getClientRevenueByCategory`, `getClientCostByCategory`, `getClientSummaryOverTime` | 71-test unit batch | **PASS** |
-| **FC6** | "Compare periods and see how the result moves month to month." | "Forecasting", "projections", "budgets", "what-if planning" | `getSummaryOverTime`; `PeriodsList` day/week/month/quarter/year | 71-test unit batch | **PASS** |
-| **FC7** | "Money you actually received is recorded as payments against the work it paid for." | "Payment processing", "we handle payments", "get paid instantly", "banking" | ADR-0002: `PaymentAllocation` is the canonical cash ledger; `payment-accounts.service.ts` balances derive from allocations | `payment-accounts.service.spec.ts` (MSG0, 173-test batch); `finance-audit.integration.spec.ts` 27 passed | **PASS** |
-| **FC8** | — | **"Export"**, "download your data", "export to CSV/Excel", "hand it to your accountant" | No export implementation found in `apps/api/src` or `apps/web/src` (searched 2026-08-03) | Absence + `docs/commercial-policy.md` lists *"Data export availability"* as **not approved** | **BLOCKED** |
-| **FC9** | The word **"profit"** may be used, because the app's own generated string catalog labels the metric `Profit` in every niche vocabulary. | Do not extend it to "net profit", "P&L", "margin analysis", "tax-ready profit", or any accounting-grade framing | `apps/web/public/locales/en/{beauty,pro,rent,freelance,edu,personal}.json` → `Profit` | Generated catalog | **PASS as a label, not as an accounting claim** |
-| **FC10** | — | "Refunds and corrections", "void and reverse", "audit trail" as *public* copy | ADR-0002 §7 describes reversals, but the public-facing behaviour was **not** audited in this pass | Not audited | **NOT AUDITED — do not claim** |
+Unit tests were executed using repository commands against app HEAD `f081179fe5beba5f5eeb3bf0bdb7568ad61f032f`:
+
+| Test Command / Path | Test Result | Scope & Coverage | Status |
+|---|---|---|---|
+| `./node_modules/.bin/jest --no-cache --config apps/api/jest.config.ts --runInBand apps/api/src/finance/finance.service.spec.ts apps/api/src/finance/finance.controller.spec.ts apps/api/src/orders/orders.service.spec.ts` | **71 passed** (3 suites) | `getSummary`, `getRevenueByCategory`, `getCostByCategory`, `getSummaryOverTime`, `getClientSummary`, `getClientRevenueByCategory`, `getClientCostByCategory`, `getClientSummaryOverTime`, `getDebtSummary`, order creation, payments, and instalment reconciliation | **PASS (unit)** |
+| `./node_modules/.bin/jest --no-cache --config apps/api/jest.config.ts --runInBand apps/api/src/payment-accounts/payment-accounts.service.spec.ts` | **30 passed** (1 suite) | Account resolution, currency matching (PERF.8A), balance calculation, allocation handling, non-cash package redemption exclusion | **PASS (unit)** |
+| `./node_modules/.bin/jest --no-cache --config apps/web/jest.config.ts --runInBand src/hooks/useGhostVisitUndo.spec.ts` | **15 passed** (1 suite) | Visit status `COMPLETED` with `paymentStatus: PENDING` (completed work ≠ revenue) | **PASS (unit)** |
+| `./node_modules/.bin/jest --no-cache --config apps/api/jest.config.ts --runInBand --testPathIgnorePatterns='a^' --testPathPatterns='finance-audit.integration.spec\|finance-feed-v2.integration.spec'` | **Failed** (`TEST_DATABASE_URL` unset) | Integration database audit suites (`PERF.0`) | **HOLD (integration DB required)** |
+
+> **Environment Note:** Source code inspection is `PASS` for all audited core finance methods. Integration suites requiring a live PostgreSQL test database are recorded as `HOLD (integration DB required)` per repository rules without blocking unit-verified source rows.
 
 ---
 
-## The one boundary that matters most
+## 3. Financial State Model & Boundaries
 
-FC2 and FC7 describe **two different numbers**, and the finance-first positioning makes it easy to blur
-them. Getting this wrong would be the exact failure Perelai criticises competitors for.
+The following state boundaries must be preserved across all marketing copy, component visuals, and localized strings:
 
 ```text
-Finance summary revenue   = completed work that is SETTLED
-                            (paymentStatus = PAID — cash and/or package redemption)
-
-Cash actually received    = sum of PaymentAllocation
-                            (package redemption creates NO allocation — ADR-0002 §1, §5)
+1. Completed Work      = VisitStatus.COMPLETED or VisitStatus.NO_SHOW (operational record of work done)
+2. Settled Revenue     = REVENUE_FILTER: status IN [COMPLETED, NO_SHOW] AND paymentStatus = PAID
+                         (includes cash/card/transfer/online payments AND non-cash package redemptions)
+3. Cash Recorded       = PaymentAllocation where source NOT IN ('PACKAGE_REDEMPTION', 'TRANSFER')
+                         (actual money allocated to cash/bank payment accounts)
+4. Expenses / Costs    = TransactionItem (amount < 0) + AdditionalFinance (amount < 0)
+5. Open Order Debt     = Order where status = 'OPEN' (totalAmount - sum of instalment amountPaid)
+6. Overdue Debt        = Instalment where status NOT IN ('PAID', 'CANCELLED') AND dueDate < startOfToday
+7. Product Profit      = In-product metric calculation: revenue - totalExpenses
 ```
 
-ADR-0002 §5 is explicit: `paymentStatus = PAID` means *financially settled*, and **is not proof that cash
-was received**. A visit paid entirely from a prepaid package is `PAID`, counts toward summary revenue,
-and moved no money that day.
-
-**Consequence for copy.** The safe axis is *completed → settled → outstanding*. Attaching cash language
-("what came in", "money received", "cash in hand") to the **summary/analytics number** is prohibited.
-Cash language belongs to payments and payment accounts (FC7), where it is true.
-
-This is why the owner's draft line *"so you can see what came in, what is still owed"* is not published
-as written, and why the owner's own safer alternative is the one adopted:
-
-> **See what was completed, what was paid and what is still outstanding.**
+### Critical Financial Invariant (ADR-0002 §5)
+`paymentStatus = PAID` means *financially settled*, which is **not proof that cash was received**. A visit paid from a prepaid package is `PAID`, counts toward summary revenue, and creates **zero cash allocation**. Cash language ("what came in", "money received", "cash in hand") belongs exclusively to payments and payment accounts (FC7), never to summary revenue.
 
 ---
 
-## Disposition of the owner's proposed copy
+## 4. Audited Claim Rows (FC1–FC10)
 
-| Proposed | Disposition |
-|---|---|
-| "Financial tracking and analytics for independent service businesses" (eyebrow) | **Eligible** — FC1, FC4, FC5, FC6 |
-| "See the money behind your business." (H1) | **Eligible** — asserts no capability; "behind" is exactly the connect-money-to-work mechanism |
-| "track income, expenses, payments and outstanding balances" | **Eligible** — FC1 + FC7 + FC3 |
-| "Keep completed work separate from money received" | **Eligible** — FC2. Retained from the previous positioning; it is the one claim that survives the category change unchanged |
-| "understand which clients and **services** drive your results" | **Amend → "service categories"** — FC4 is category-granular. "Services" overstates by one level |
-| "See what you delivered, what you **earned** and what was actually paid" | **Rejected** — the owner flagged `earned` themselves; it reads as recognised revenue |
-| "so you can see **what came in**, what is still owed" (Вариант 3) | **Rejected** — attaches cash semantics to the settled-work number. See the boundary above |
-| "Your business finances, **without the spreadsheet**" (Вариант 4) | **Rejected as an absolute**; the owner's safer form is adopted instead: "Spend less time managing business finances in spreadsheets" |
-| "Understand your business finances without accounting complexity." | **Eligible** — states what is *not* required of the user; makes no accounting claim |
-| "Financial clarity built into your daily workflow." | **Eligible** — FC1/FC2/FC7 describe records created during normal work |
-| CTA "**Join the Founding Beta**" | **Blocked.** `docs/commercial-policy.md` has no approved Founding Beta row, and rails §6 allows that label *only while the programme is approved and active*. Primary CTA stays **"Create your free workspace"** |
-| "export" (listed as a product requirement) | **FC8 BLOCKED** — kept out of copy entirely |
-| Screenshot order: Finance → Client → Payment → Inbox → Calendar | **Eligible as a plan**, but it is a visual/asset change, not copy. Not executed in this pass |
+| ID | User-Facing Concept & Allowed Public Wording | Prohibited Wording | Implementation Path & Filters | Test Evidence | Status |
+|---|---|---|---|---|---|
+| **FC1** | **Period Financial Summary**<br>Allowed: *"Track completed work, expenses, payments and what remains for any period."* | **"earned"**, **"what you earned"**, "accounting", "bookkeeping", "tax", "P&L", "tax-ready", "financial advice" | `apps/api/src/finance/finance.service.ts` (`getSummary` lines 734–819): returns `income`, `tips`, `expenses`, `profit`, `revenue`, `additionalIncome`, `additionalExpenses`; periods: `day\|week\|month\|quarter\|year`. | `finance.service.spec.ts` (71-test batch passed) | **PASS (source & unit)**<br>*Note: `earned` is explicitly REJECTED.* |
+| **FC2** | **Settled Revenue Boundary**<br>Allowed: *"A completed visit is included in summary revenue only when it is settled."* | **"Revenue means cash in the bank"**, **"see the money that came in"** *(attached to summary total)*, "every completed visit becomes cash" | `apps/api/src/finance/finance.service.ts` (`REVENUE_FILTER` lines 44–47): `status IN [COMPLETED, NO_SHOW] AND paymentStatus = PAID`. Excludes `COMPLETED` visits with `paymentStatus = PENDING`. | `useGhostVisitUndo.spec.ts` (15 passed); `finance.service.spec.ts` | **PASS (source & unit)** |
+| **FC3** | **Open Order & Instalment Debt Scope**<br>Allowed: *"See what is still owed on open orders and instalments, and what is overdue."* | **Unscoped "outstanding balances"**, "debt collection", "we chase payments for you", "guaranteed payment", "all company debt", "accounts receivable" | `apps/api/src/orders/orders.service.ts` (`getDebtSummary` lines 1321–1367): returns `openOrdersCount`, `totalOutstanding`, `overdueInstalmentsCount`. Explicitly scoped to `Order` where `status = 'OPEN'`. | `orders.service.spec.ts` (71-test batch passed) | **PASS (order-scoped)** |
+| **FC4** | **Service-Category Aggregation Boundary**<br>Allowed: *"See which service categories bring in the most revenue, and where expenses sit."* | **"revenue by service"**, **"per-service profitability"**, "service-level P&L" — aggregation is by **category**, not individual service | `apps/api/src/finance/finance.service.ts` (`getRevenueByCategory` lines 821–874, `getCostByCategory` lines 876–913): groups on `categoryId`. | `finance.service.spec.ts` (71-test batch passed) | **PASS (category granularity only)** |
+| **FC5** | **Client Financial History**<br>Allowed: *"See client revenue history and category breakdowns over time."* | **"what each client has brought in"**, "lifetime value prediction", "client scoring", "churn prediction" | `apps/api/src/finance/finance.service.ts` (`getClientSummary` lines 962–1036, `getClientRevenueByCategory` lines 1038–1096, `getClientCostByCategory` lines 1098–1141): scoped to `clientId`. | `finance.service.spec.ts` (71-test batch passed) | **PASS (settled revenue source)** |
+| **FC6** | **Period Comparisons**<br>Allowed: *"Compare periods and see how your result moves month to month."* | "Forecasting", "projections", "budgets", "what-if planning" | `apps/api/src/finance/finance.service.ts` (`getSummaryOverTime` lines 915–960): generates local time buckets (`generateLocalBuckets`). | `finance.service.spec.ts` (71-test batch passed) | **PASS (source & unit)** |
+| **FC7** | **Recorded Cash Ledger**<br>Allowed: *"Money actually received is recorded as payments against the work it paid for."* | "Payment processing", "we handle payments", "get paid instantly", "banking", "bank sync" | `apps/api/src/payment-accounts/payment-accounts.service.ts` (`calculateBalances` lines 334–439): `PaymentAllocation` ledger (`source NOT IN ('PACKAGE_REDEMPTION', 'TRANSFER')`). Package redemptions create zero cash allocation. | `payment-accounts.service.spec.ts` (30 passed); `finance-audit.integration.spec.ts` (requires `TEST_DATABASE_URL`) | **PASS (source & unit)**<br>*HOLD on integration DB* |
+| **FC8** | **Data Export**<br>Allowed: *None (claim is blocked)* | **"Export"**, **"download your data"**, "export to CSV/Excel", "hand it to your accountant" | No export implementation found in `apps/api/src` or `apps/web/src`; `docs/commercial-policy.md` lists export as **not approved**. | Code search & commercial policy verification | **BLOCKED / FORBIDDEN** |
+| **FC9** | **Product Profit Metric Label**<br>Allowed: *"See your calculated profit (revenue minus expenses) for any period."* | **"Net profit"**, **"accounting profit"**, **"tax profit"**, "P&L", "margin analysis", "tax-ready profit" | `apps/api/src/finance/finance.service.ts` line 805: `const profit = revenue - totalExpenses`. App UI string catalog labels metric `Profit` across all niche templates. | Generated string catalog; unit tests | **PASS (UI label only; not accounting profit)** |
+| **FC10** | **Refunds & Corrections**<br>Allowed: *None (not audited for public copy)* | "Refunds and corrections", "void and reverse", "audit trail" as public marketing copy | ADR-0002 §7 describes backend reversals, but public-facing behaviour and UI workflow were **not** audited for public copy. | Not audited for public copy | **NOT AUDITED / BLOCKED** |
 
 ---
 
-## Product risk the owner already identified
+## 5. Marketing Terminology Table
 
-> *"Иначе landing будет обещать финансовый продукт, а пользователь после регистрации увидит
-> booking-приложение с дополнительным dashboard."*
+Every term in this table has been audited against product code and claim rows. Copywriters and localized translators must adhere strictly to these classifications:
 
-The audit says this risk is **lower than feared but real**. Present and verified: per-period summary,
-revenue/cost by category, per-client results, trend over time, outstanding and overdue, allocations,
-instalments, packages. Absent or unaudited: **export (FC8, blocked)** and **refunds/corrections
-(FC10, not audited)**. Nothing in the frozen copy depends on either.
+| Concept | Allowed Phrase | Careful Phrase | Banned Phrase | Source Row | Reason |
+|---|---|---|---|---|---|
+| **Summary Period Tracking** | "Track completed work, expenses, payments and what remains for any period." | "Track completed visits and expenses" | "Track what you earned", "accounting", "bookkeeping", "tax-ready", "P&L" | FC1 | `earned` is ambiguous recognized revenue; Perelai is operational finance software, not an accounting suite. |
+| **Settled Revenue Boundary** | "A completed visit is included in summary revenue only when it is settled." | "Revenue counts completed work that is paid or redeemed" | "Revenue means cash in the bank", "every completed visit becomes cash" | FC2 | Settled revenue includes non-cash package redemptions (`paymentStatus = PAID`). Cash actually received is tracked separately. |
+| **Debt Scope** | "See what is still owed on open orders and instalments, and what is overdue." | "See open order balances" | "Debt collection", "chase payments for you", "accounts receivable", "all client debt" | FC3 | `getDebtSummary` is strictly scoped to open orders and overdue instalments, not all company receivables. |
+| **Service Granularity** | "See which service categories bring in the most revenue, and where expenses sit." | "Category breakdown" | "Revenue by service", "per-service profitability", "individual service P&L" | FC4 | Database aggregation is grouped by `categoryId`, not individual service IDs. |
+| **Client Financial History** | "See client revenue history and category breakdowns over time." | "Client revenue over time" | "See what each client has brought in", "lifetime value prediction", "client scoring" | FC5 | "Brought in" implies cash received, whereas client summary calculates settled revenue. |
+| **Trend & Comparison** | "Compare periods and see how your result moves month to month." | "Period-over-period comparison" | "Forecasting", "projections", "budgets", "what-if planning" | FC6 | Historical trend comparison only; no forecasting or budgeting capability exists in code. |
+| **Cash Ledger** | "Money actually received is recorded as payments against the work it paid for." | "Recorded cash allocations" | "Payment processing", "we handle payments", "get paid instantly", "bank sync" | FC7 | Perelai records payments and allocations; it does not process payments or sync bank accounts. Package redemptions create zero cash allocation. |
+| **Data Export** | *None* | *None* | "Export", "download your data", "export to CSV", "hand it to your accountant" | FC8 | No export feature exists in code; commercial policy marks export as not approved. |
+| **Profit Metric** | "See your calculated profit (revenue minus expenses) for any period." | "In-app profit calculation" | "Net profit", "accounting profit", "tax profit", "P&L", "tax-ready profit" | FC9 | Metric is simple subtraction (`revenue - totalExpenses`); must not imply formal accounting profit. |
+| **Refunds & Corrections** | *None* | *None* | "Refunds and corrections", "void and reverse", "audit trail" | FC10 | Public behavior and workflow not audited for public copy in this pass. |
 
-The genuine gap is *granularity*, not existence: analytics group by **category**, so per-individual-service
-profitability is not available and must not be implied.
+---
+
+## 6. Revalidation Triggers & Freshness Date
+
+- **Freshness Date:** 2026-08-03
+- **Landing HEAD:** `32aa27e1a57aefc4a9d6fb348e8cbbe9b2f66ae9`
+- **App HEAD:** `f081179fe5beba5f5eeb3bf0bdb7568ad61f032f`
+- **Revalidation Trigger:** This contract must be revalidated if any of the following occur:
+  1. Modification to `REVENUE_FILTER` or `getSummary` in `apps/api/src/finance/finance.service.ts`.
+  2. Changes to `PaymentAllocationSource` or allocation queries in `apps/api/src/payment-accounts/payment-accounts.service.ts`.
+  3. Changes to `getDebtSummary` or order status calculation in `apps/api/src/orders/orders.service.ts`.
+  4. Implementation of export features (FC8) or public refund/correction workflows (FC10).
+  5. Changes to commercial policy regarding export or payments in `docs/commercial-policy.md`.

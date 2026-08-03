@@ -18,8 +18,11 @@ intentionally absent or marked not started.
 | Phase | Scope | Status |
 |---|---|---|
 | **MSG0** | Evidence, claim re-verify, recommendation triage, research confidence | **PASS** 2026-08-02 |
-| **MSG1** | Rails, candidate scorecard, sweeps, panel, English freeze | **HOLD** 2026-08-03 — English frozen and presented; **panel ≥8 gate not met (7.75)**; **owner approval missing** |
-| MSG2–MSG7 | Translation, implementation, rollout, experiment readiness | Not started — blocked until MSG1 panel gate and owner approval both clear |
+| **MSG1** | Rails, candidate scorecard, sweeps, panel, English freeze | **SUPERSEDED** — historical only |
+| MSG2–MSG7 | Translation, implementation, rollout, experiment readiness | **SUPERSEDED** by the FM0–FM11 sequence |
+
+> **This whole MSG section (§0–§12) is historical.** The current work is the finance-first FM sequence.
+> Jump to **PART II — FM2** at the end of this file for the live candidate set and approval record.
 
 ### Repository snapshot (MSG0)
 
@@ -624,3 +627,362 @@ owner with a dated record). Category clarity on the visible hero remains an open
 | 6 | “Unresolved work” is system language rather than chair language in the shared body | Future challenger-body idea; not an MSG1 or MSG2 edit |
 | 7 | `siteConfig.title` in `lib/site.ts` still reads “Perelai — Clients, Bookings & Cash Flow for Independent Professionals” — stale ordering, though it contains no banned phrase. Not in the MSG1 freeze set. | MSG2 to decide; flagged, not frozen here |
 | 8 | `docs/experiment-backlog.md` entry 2 (“CTA Copy”) proposes a CTA change that already shipped. Stale, and outside the MSG1 hero-entry scope. | MSG5 backlog review |
+
+---
+---
+
+# PART II — FM2: Finance-first canonical positioning and English source set
+
+**Everything above this line (§0–§12) is the retired MSG0–MSG7 sequence and is kept as historical
+audit record only.** It selected `operational_clarity` ("Know what still needs doing — and what was
+actually paid."), which was superseded before publication by the owner-directed finance-first category
+change. Do not treat any MSG scorecard, freeze or gate above as current. The MSG1 approval block in
+§11.3 is **void** — that English set is no longer a candidate.
+
+**Phase:** FM2 — canonical positioning rewrite and English source set for owner approval
+**Date:** 2026-08-03
+**Landing HEAD:** `32aa27e1a57aefc4a9d6fb348e8cbbe9b2f66ae9`
+**Product HEAD:** `f081179fe5beba5f5eeb3bf0bdb7568ad61f032f` (clean)
+**Claim gate:** `docs/finance-claim-contract.md` (FM1-repaired, FC1–FC10)
+**Skills used:** `product-marketing` (canonical doc structure, versioning), `customer-research` (evidence
+classing — it is why §II.6 records the VOC gap instead of inventing language), `copywriting` (candidate
+construction), `copy-editing` (Seven Sweeps + full checklist), `marketing-psychology` (ambiguity
+aversion, category fluency, pratfall/honesty), `cro` (five-second category test).
+
+---
+
+## II.1 P1 — the committed copy violates the FM1-repaired contract
+
+This is the most important finding of FM2 and it is **not** fixable in this phase (FM2 may not edit
+`messages/`, components or metadata).
+
+The finance-first copy committed at HEAD `32aa27e1` was written **before** FM1 repaired the contract.
+Three of its phrases are now prohibited:
+
+| Committed string | Location | Violates | Why |
+|---|---|---|---|
+| "Perelai tracks **income**, expenses, payments and outstanding balances…" | `messages/en/home.json` `hero.body` + 8 locales | Universal preamble; FC1 | `income` is on the do-not-use list until a repaired row gives it an unambiguous marketing-safe meaning. No row does. |
+| "…and **outstanding balances**" | same | **FC3** | FC3 bans *unscoped* "outstanding balances". The evidence is open-order and overdue-instalment debt only, not all receivables. |
+| "…what is still **outstanding**" | same | **FC3** | Same unscoped-debt defect. |
+| "Track **income**, expenses, payments and **balances**…" | `messages/*/home.json` `meta.description`, `lib/site.ts` | FC1, FC3 | Same two defects on the machine-readable surface. |
+
+**Severity P1.** This is FM0 defect **R5** confirmed and widened: it affects the hero body, the meta
+description and `siteConfig.description`, in all nine locales, not just the English hero.
+
+**Owner phase:** FM4A (English) and FM5 (locales). The source set in §II.7 already removes all three.
+Nothing was edited in this phase.
+
+---
+
+## II.2 The three candidates
+
+Constant across A/B/C: audience (independent service businesses), eyebrow, offer, CTA, proof, and page
+below the hero. **Only the message angle changes.** All three obey the FM1 terminology table: no
+`earned`, no `brought in`, no `income`, no unscoped `outstanding`, no export, no accounting vocabulary,
+no automation absolute.
+
+Shared eyebrow: **Financial tracking and analytics for independent service businesses**
+
+### Candidate A — financial visibility *(owner's lead candidate)*
+
+| Field | Value |
+|---|---|
+| `title` / `accent` | **See the money** / **behind your business.** |
+| H1 as announced | See the money behind your business. |
+| Body | Track completed work, expenses and payments for any period. See which service categories and clients your revenue comes from, and compare how your result moves month to month. |
+| Five-second takeaway | "This shows me my business's financial result." |
+| Claim mapping | FC1 (period summary), FC4 (category), FC5 (client), FC6 (comparison) |
+| **Ambiguity risk — HIGH** | "See the **money**" invites a *cash* reading, which is the precise conflation FC2/FC7 exist to prevent. Summary revenue is settled work and may include a package redemption that moved no cash. The headline does not say "cash", but it does not resist the reading either; the body has to do all the disambiguation. |
+| Localization risk — MEDIUM | "behind your business" is a spatial metaphor. In several published locales the natural rendering of *behind* is temporal ("after") or literal ("at the back of"), which loses the "underlying" sense. `tr` needs full clause inversion. |
+| Why it might lose | It is a metaphor, not a mechanism. A generic expense tracker could publish the identical headline tomorrow. It gives the visitor a feeling of financial clarity without naming what makes Perelai's version different. |
+
+### Candidate B — connected context
+
+| Field | Value |
+|---|---|
+| `title` / `accent` | **Every number traces** / **back to the work.** |
+| H1 as announced | Every number traces back to the work. |
+| Body | Perelai records payments against the work they paid for, and keeps every visit, order and instalment attached to its client and service category. Track completed work, expenses and payments for any period. |
+| Five-second takeaway | "This finance tool knows what each number was actually for." |
+| Claim mapping | FC7 (payments recorded against the work), FC4, FC5, FC1 |
+| Ambiguity risk — MEDIUM | "Traces" can suggest an **audit trail**, which is FC10 territory and *not audited*. Mitigated because the body defines tracing as client/category attachment, not as reversal history. |
+| Localization risk — MEDIUM | "traces back to" is idiomatic; `de`/`pl`/`uk` need a verb closer to *"is connected to"* to avoid a forensic reading. |
+| Why it might lose | It is the strongest differentiator and the weakest hook. It presumes the visitor already cares about traceability — a person who has never been burned by an untraceable number will read it as a technical detail. |
+
+### Candidate C — state separation
+
+| Field | Value |
+|---|---|
+| `title` / `accent` | **Completed is not** / **the same as paid.** |
+| H1 as announced | Completed is not the same as paid. |
+| Body | A completed visit enters your revenue only once it is settled — and a package redemption settles it without moving cash. Perelai keeps completed work, payments and what is still owed on open orders apart, so each number means one thing. |
+| Five-second takeaway | "This one is precise about money in a way my current tool isn't." |
+| Claim mapping | FC2 (settled-revenue boundary), FC7 (recorded cash), FC3 (open-order debt) |
+| Ambiguity risk — LOW | The safest of the three. It states the boundary rather than gesturing at it, and it is the only H1 that cannot be misread as a cash promise. |
+| Localization risk — HIGH | "Settled" is the hardest word in the whole finance vocabulary to render across nine locales without drifting into *paid*, *closed* or *agreed*. If a locale collapses settled→paid, the sentence becomes self-contradictory. |
+| Why it might lose | It leads with a negation and a distinction, not with a benefit. A cold visitor who has never been confused by a revenue number will not know why this matters, and the category is carried entirely by the eyebrow. |
+
+---
+
+## II.3 Seven Sweeps (applied to A, and to the dependent drafts)
+
+Run on the recommended source set. Findings that changed the copy are marked **EDITED**.
+
+| Sweep | Finding | Disposition |
+|---|---|---|
+| **1 Clarity** | The eyebrow carries the category; the H1 carries the outcome. Cold visitor gets shelf + promise in one glance. | PASS |
+| 1 | Body sentence 2 originally read "which service categories and clients **bring in** the most" — FC5 bans *brought in*. | **EDITED** → "which service categories and clients your revenue comes from" |
+| **2 Voice** | Plain declaratives, no exclamation, no hype adjective; matches the documented direct/honest register throughout eyebrow, H1, body, sections, FAQ and closing. | PASS |
+| **3 So what** | "Compare how your result moves month to month" answers *why track at all*. The drivers clause answers *what do I do with it*. | PASS |
+| 3 | "Connected records" section risked stating a mechanism with no consequence. | **EDITED** → added "so you can check any figure instead of trusting it" |
+| **4 Prove it** | Every clause maps to an FC row with product source and a passing test (§II.2 tables). No statistic, testimonial, logo, customer count or performance promise appears anywhere in the set. | PASS |
+| 4 | No unearned superlative and no absolute (`100%`, `always`, `never`, `guaranteed`, `automatic`). | PASS |
+| **5 Specificity** | "For any period" is backed by a real enum (day/week/month/quarter/year). "Service categories" is deliberately less impressive than "services" and more accurate (FC4). | PASS |
+| 5 | Financial-states section originally said "four different states" and then listed four — a count that would break if the product adds one. | **EDITED** → removed the count, kept the list |
+| **6 Emotion** | The charge sits on recognition — "so each number means one thing" and "instead of trusting it" name the distrust the owner already feels. Deliberately restrained: there is **no first-party VOC** for the finance pivot (§II.6), so dramatising the reader's month-end would be invention. | PASS |
+| **7 Zero risk** | CTA, destination, verification helper and device micro-copy unchanged. The "will it match my bank?" objection is answered honestly in the FAQ rather than avoided. | PASS — but see the CTA `HOLD` |
+| 7 | Risk-reversal micro-copy ("No card…") depends on `CF-01`, which is `PENDING` with no owner. | **HOLD** — flagged to owner, not changed |
+| **Loop-back** | Re-ran sweeps 1–6 after the three edits; no earlier finding re-opened. | PASS |
+
+### Copy-editing checklist — exceptions worth recording
+
+Full checklist run. All items pass except these, recorded deliberately:
+
+- **"Numbers and timeframes included" — N/A by policy.** No statistic may appear pre-commercially (rails §5).
+- **"Social proof specific and attributed" — N/A.** No testimonials, logos or counts exist.
+- **"Every feature connects to a benefit"** — the Daily-operations section intentionally states mechanism
+  without a benefit bridge, because giving Booking a benefit sentence would re-promote it toward the
+  category it was just demoted from.
+
+---
+
+## II.4 Four-perspective review
+
+Panel required by FM2. **All four are reviewer roles applied by the executing agent.** None is a real
+person, customer, or research participant. Nothing here is VOC and none of it satisfies a comprehension
+test.
+
+| Reviewer | Score | Critique |
+|---|---:|---|
+| **Solo ICP** *(simulated)* | **7** | A lands: "see the money" is what I actually want. But the eyebrow says *financial tracking and analytics* and my honest reaction is "so it's a bookkeeping app?" — the thing I don't want. The FAQ fixes it; the top of the page doesn't. Also: my current booking tool already shows me a revenue chart, and nothing above the fold tells me why this one is different. |
+| **Finance-semantic reviewer** | **6 → dissent** | **A is the riskiest of the three and I do not endorse it as written.** "See the money" reads as cash. FC2/FC7 say the summary total is *settled work* and may include a package redemption that moved no money. We are one screenshot away from a user saying "your app says €2,545 and my bank says €1,900." B and C are both semantically safer. If A ships, the body must carry the settled/cash distinction, and the Financial-states section must appear immediately below the fold — not four sections down. |
+| **Conversion writer** | **8** | A wins the five-second test and it isn't close. B is the better argument and the worse headline; C is a correction, not a promise — you cannot lead a cold page with a negation. Keep A, but the body has to name the differentiator, because "see the money" alone is category parity with every expense tracker. |
+| **Localization lead** | **7** | A's metaphor is the problem. *Behind* renders temporally or literally in several targets, and `tr` needs full inversion, so nine locales will not carry one consistent image. C is semantically cleanest but "settled" is the single hardest word we have — if one locale collapses settled→paid, the sentence contradicts itself. B translates most predictably. Whichever wins, "settled", "recorded", "open orders" and "service category" go in the terminology table **before** FM5, not during it. |
+
+### Disagreement and resolution
+
+**The panel does not agree, and FM2 does not manufacture agreement.**
+
+The conversion writer and the finance-semantic reviewer are in direct conflict: A is the most
+comprehensible and the least semantically safe. Both are right, and the tension is real rather than
+resolvable by wording alone.
+
+Resolution carried into the source set:
+
+1. **A is recommended, per the owner's lead-candidate instruction** — but as a *recommendation with a
+   recorded dissent*, not a panel consensus. FM2 explicitly says A is not an automatic winner; the
+   decision is the owner's.
+2. **The body was rewritten to carry the differentiator**, answering the conversion writer and the solo
+   ICP: it now names period tracking, category/client drivers and comparison rather than restating the
+   headline.
+3. **The finance-semantic reviewer's structural condition is adopted into the page order** — Financial
+   states is **section 3**, directly below Finance overview, so the settled-vs-cash boundary appears
+   above the fold-and-a-half rather than late. This is already reflected in `messaging-and-claims.md` §7
+   and is binding on FM3.
+4. **The solo ICP's "is this bookkeeping?" objection is answered by a dedicated FAQ row** rather than by
+   softening the eyebrow, because the eyebrow is the only place the category is stated plainly.
+5. **Unresolved:** the localization lead's objection to the *behind* metaphor cannot be resolved in
+   English. If FM5 finds that three or more locales cannot carry it naturally, the correct action is to
+   return to FM2 and reconsider B — **not** to invent nine different headlines. Recorded as a
+   pre-condition on FM5.
+
+Panel average **7.0**. Two reviewers below 8 with a live dissent. **This is not a clean PASS and is not
+presented as one.**
+
+---
+
+## II.5 Rejected patterns re-confirmed for the finance category
+
+| Pattern | Why rejected |
+|---|---|
+| "finally", "at last", "all in one", "everything you need" | Novelty theatre and category parity (carried over, still banned) |
+| "Know what still needs doing — and what was actually paid." | MSG1 winner; superseded by the category change. Its completed-vs-paid principle survives as FC2. |
+| Any accounting/bookkeeping/tax/P&L/"tax-ready"/"hand it to your accountant" framing | Wrong category and a compliance implication Perelai cannot meet |
+| "Personal CFO", "financial advisor", "profit optimization" | Advice implication; banned |
+| "without manual entry", "finance that fills itself in", "automatic bookkeeping" | R13 — expenses and corrections require entry |
+| "Export", "download your data" | FC8 `BLOCKED` and not approved commercially |
+| "revenue by service", "per-service profitability" | FC4 — aggregation is category-level |
+| "what came in", "money received", "cash in hand" attached to a summary total | FC2/FC7 boundary |
+| "earned", "brought in", "income" | FC1/FC5 and the universal preamble |
+| Unscoped "outstanding balances" | FC3 — evidence is open-order/instalment debt |
+| Enterprise jargon: "operating system", "platform", "suite", "ERP" | Wrong weight for a solo buyer |
+| Bank sync, reconciliation, "matches your bank automatically" | No such capability; FC7 never-say |
+
+---
+
+## II.6 Research status — an honest gap
+
+The finance-first pivot has **no first-party Voice of Customer behind it at all.**
+
+| Evidence class | State |
+|---|---|
+| Implementation proof | Strong — FC1–FC7, FC9 pass on source with passing unit tests |
+| First-party VOC | **None.** No customer interview, survey or support corpus exists |
+| Proxy VOC | Only the retired colorist set: 10 unreverified threads, all URLs 403 on recheck, no theme clearing the ≥5-signal bar. **None of it is about financial reporting.** The two closest themes (earnings clarity, 2 threads) were already sub-threshold |
+| Founder/advisor input | The category decision itself. Strategic hypothesis, **not** customer evidence |
+
+**Consequence:** the pivot is justified by product capability and owner strategy, not by demonstrated
+demand. That is a legitimate basis for a first launch, but it must not be described as
+research-validated. The five-second comprehension protocol remains **required future work** and is now
+more important than it was under MSG1, because the category itself changed — the earlier proxy research
+does not transfer.
+
+---
+
+## II.7 English source set — **OWNER-APPROVED 2026-08-03**
+
+The owner reviewed candidates A/B/C under R-FM2, **did not approve Candidate A or the FM2 draft
+verbatim**, and supplied replacement strings. Candidate selection is closed; the strings below are the
+owner's own text, recorded exactly as supplied.
+
+The decisive owner input was an **established in-product finance vocabulary** the landing must preserve.
+This resolves the II.4 panel dissent in a way no candidate did: the H1 now leads with the product's own
+metric names rather than a cash-adjacent metaphor, which removes the finance-semantic reviewer's core
+objection to "See the money."
+
+### II.7.0 Binding vocabulary (owner-set)
+
+| Term | Meaning | Rule |
+|---|---|---|
+| **Revenue / Cost / Profit** | The primary analytics metrics | Use these as the metric names |
+| **Income / Expense** | Additional *transaction types* | **Never use Income as a synonym for Revenue** |
+| **Payment** | A recorded receipt / allocation | — |
+| **Account Balance** | Balance of a **payment account** | **Never use Balance as a synonym for customer debt** |
+| **Outstanding / Overdue** | Scoped to **orders and instalments** only | Never unscoped |
+
+Plus: never attach cash / money-received language to summary **Revenue**.
+
+### II.7.1 Hero
+
+| Key | Approved English |
+|---|---|
+| `hero.eyebrow` | Simple finance software for independent service businesses |
+| `hero.title` | Revenue, costs and profit |
+| `hero.accent` | — connected to the work behind them. |
+| H1 as announced | Revenue, costs and profit — connected to the work behind them. (62 chars) |
+| `hero.body` | Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate. |
+| `hero.signup` | Create workspace |
+| `hero.how` | See how it works |
+| `hero.micro` | You'll get a verification email to finish setting up. |
+| `hero.deviceMicro` | Perelai runs in your browser. Installing it is optional. |
+| `hero.imageCaption` | Example data |
+| `hero.imageAlt` | Perelai finance overview showing revenue, costs and calculated profit for a period, a service-category breakdown and an open-order balance — example data. |
+
+### II.7.2 Sections
+
+| Key | Approved English |
+|---|---|
+| `finance.title` | Revenue, costs and profit for any period |
+| `finance.body` | Review revenue, costs and calculated profit for a day, week, month, quarter or year. |
+| `states.title` | Completed, settled, recorded and owed are different states |
+| `states.body` | A visit can be completed and not yet settled. A visit settled with a prepaid package moves no money. An open order can still be owed months later. Perelai keeps completed work, settled revenue, recorded payments and open-order balances apart, so each number means one thing. |
+| `drivers.title` | See where the result comes from |
+| `drivers.body` | Review revenue by service category, costs by category, a client's revenue history and how the result changes over time. |
+| `records.title` | Every figure has work behind it |
+| `records.body` | Payments are recorded against the visit, order or instalment they paid for, and stay connected to the relevant client and service category. |
+| `operations.title` | Build the financial record as you work |
+| `operations.body` | Complete a visit, record a payment, add a cost or redeem a package. Booking, Calendar and Inbox keep these actions connected to clients and services. Clients can also book through your own link. |
+
+### II.7.3 Accessible finance summary
+
+| Key | Approved English |
+|---|---|
+| `finance.summary` | Example Perelai finance overview showing monthly revenue, costs and calculated profit, a service-category breakdown and an open-order balance. |
+| `finance.caption` | Example data |
+
+### II.7.4 FAQ
+
+| Key | Approved English |
+|---|---|
+| `q_category.question` | Is this accounting software? |
+| `q_category.answer` | No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice. |
+| `q_bank.question` | Will the number match my bank? |
+| `q_bank.answer` | Not always. Summary revenue represents completed work that has been settled, and a prepaid package can settle a visit without moving money. Recorded payments and payment-account balances show money movement separately. |
+
+**No export FAQ may be published until FC8 is `PASS`.**
+
+### II.7.5 Metadata, closing, footer, site default
+
+| Key | Approved English | Length |
+|---|---|---|
+| `meta.title` | Perelai — Simple Finance Software for Service Businesses | 56 (≤60 ✅) |
+| `meta.description` | Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them. | 118 (≤155 ✅) |
+| `closing.title` | Your financial result, connected to the work behind it. | — |
+| `footer.description` | Simple finance software for independent service businesses. | — |
+| `siteConfig.description` | *Identical to `meta.description`.* | 118 |
+| Internal one-liner *(not public)* | Perelai is financial tracking and analytics software that connects revenue, costs and recorded payments to the clients, service categories and daily work behind them. | — |
+
+### II.7.6 Profit terminology decision (owner)
+
+**Do not publish "profit = revenue minus expenses."** The app exposes Revenue / Cost / Profit as metric
+labels while *Expense* is also a separate transaction term, so the public equation cannot be stated until
+the exact FC9 implementation formula and terminology are verified. Until then use **"calculated profit"**
+with no equation.
+
+### II.7.7 CTA / commercial decision (owner)
+
+The approved set **makes no commercial claim**, so the pending commercial rows no longer gate this phase.
+
+| Position | Approved |
+|---|---|
+| Primary CTA | Create workspace |
+| Secondary CTA | See how it works |
+| Micro-copy | You'll get a verification email to finish setting up. |
+
+**Banned from this copy:** *free*, *No card*, *Founding Beta*, *trial*, *future pricing*, *price lock*,
+*seat scarcity*. CF-01–CF-04 may remain `PENDING` for future commercial copy; they do **not** hold FM2.
+
+### II.7.8 Claim mapping of the approved set
+
+| Approved phrase | Row | Basis |
+|---|---|---|
+| Track revenue, costs and profit for any period · Review … for a day, week, month, quarter or year | FC1, FC9 | `getSummary`; period enum `day\|week\|month\|quarter\|year` |
+| completed work, settled revenue and recorded payments stay separate · states.body | FC2, FC7 | `REVENUE_FILTER` = `COMPLETED\|NO_SHOW` **and** `paymentStatus: PAID`; `PaymentAllocation` is the cash ledger; package redemption creates no allocation |
+| by service category · revenue by service category, costs by category | FC4 | `getRevenueByCategory` / `getCostByCategory` group on `categoryId` — category granularity, correctly stated |
+| a client's revenue history | FC5 | `getClientSummary`, `getClientRevenueByCategory`, `getClientSummaryOverTime` |
+| how the result changes over time | FC6 | `getSummaryOverTime` |
+| Payments are recorded against the visit, order or instalment they paid for | FC7 | Allocation semantics |
+| what is still owed on open orders · open-order balance | FC3 | `getDebtSummary` — **scoped**, as required |
+| calculated profit *(no equation)* | FC9 | UI label only; equation withheld per II.7.6 |
+
+**Verified absent from every approved string:** `income`, `earned`, `brought in`, unscoped
+`outstanding`/`balances`, `export`, accounting/bookkeeping/tax/P&L, bank sync/reconciliation, payment
+processing, `revenue by service`, automation absolutes, cash language attached to summary Revenue,
+and every banned commercial term. **No new claim-contract violation found.**
+
+### II.7.9 Owner approval record
+
+| Field | Value |
+|---|---|
+| **Status** | **APPROVED WITH REPLACEMENTS** |
+| Reviewer | Repository owner |
+| Decision date | **2026-08-03** |
+| Decision | Approved the finance-first category, the initial ICP, the FM2 narrative order and the six semantic boundaries. **Rejected** Candidate A and the FM2 draft §II.7 verbatim; supplied the replacement strings recorded in §II.7.1–II.7.7 as the approved set. |
+| Exact approved strings | §II.7.1 – §II.7.7 above, verbatim |
+| Explicitly **not** approved | Translations, implementation, deployment, any experiment; the public profit equation; any commercial claim |
+
+FM4A must implement §II.7.1–II.7.5 **verbatim** and may not improve the wording. FM5 may not begin from
+anything other than this set.
+
+---
+
+## II.8 Findings carried out of FM2
+
+| # | Severity | Finding | Owner phase |
+|---|---|---|---|
+| 1 | **P1** | Copy committed at `32aa27e1` violates the FM1-repaired contract in all nine locales plus `lib/site.ts`: `income` (FC1/preamble), unscoped `outstanding balances` and `what is still outstanding` (FC3). The approved set removes all three. | FM4A (en), FM5 (locales) |
+| 2 | **P2** | **FC9 now conflicts with the owner decision.** `finance-claim-contract.md` FC9 and the terminology table both give the *allowed* public wording as "See your calculated profit **(revenue minus expenses)** for any period." The owner has withheld the public equation pending verification of the exact implementation formula and Cost/Expense terminology. FM2 may not edit the contract. **FM1 must amend FC9** to withhold the equation. No FM2 document publishes it. | FM1 (amendment) |
+| 3 | **P3** | **"Balance" needs a qualifier, always.** The owner banned *Balance* as a synonym for customer debt and defined *Account Balance* as a payment-account balance — while the approved copy correctly uses the qualified compound **"open-order balance"**. These are consistent, but only because the compound is always qualified. Bare "balance" in any locale, or "balances" as a stand-in for debt, reintroduces the collision. Add it to the FM5 terminology table. | FM5 |
+| 4 | **P2** | **Forbidden-term tests must use boundary-correct rules, not naive substrings.** Verified during the FM2 gate rerun: a substring check for the FC4 ban `revenue by service` fires on the *allowed* phrase `revenue by service category`, and a check for `balance` fires on the allowed compounds `open-order balance` and `payment-account balance`. Both are false positives that would block approved copy. FM4A's public-copy forbidden-term test must encode: **FC4** → `revenue by service(?!\s+categor)`; **balance** → allowed only when qualified (`open-order balance`, `payment-account balance`), banned bare; **accounting / bookkeeping / tax / reconcile** → allowed only inside an explicit denial sentence (the approved `q_category.answer` contains all four legitimately). Document these three exceptions in the test itself. | FM4A |
+| 5 | P3 | The finance pivot still has **no first-party VOC** (§II.6). The five-second comprehension protocol has not been run and the retired proxy research does not transfer across the category change. | Pre-FM9 research |
+| 6 | P3 | Localization lead's condition stands: if three or more locales cannot carry the approved H1 naturally, **return to FM2** — do not invent nine different headlines. The approved H1 is metric-led rather than metaphor-led, which should reduce this risk relative to Candidate A. | FM5 |
