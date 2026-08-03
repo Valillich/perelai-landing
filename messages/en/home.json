@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Simple Finance Software for Service Businesses",
-    "description": "Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work."
+    "description": "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
   },
   "nav": {
     "features": "Features",
@@ -15,15 +15,15 @@
     "menuLabel": "Open menu"
   },
   "hero": {
-    "eyebrow": "Financial tracking and analytics for independent service businesses",
-    "title": "See the money",
-    "accent": "behind your business.",
-    "body": "Perelai tracks income, expenses, payments and outstanding balances, and connects the numbers to the clients, services and visits behind them. See what was completed, what was paid and what is still outstanding.",
+    "eyebrow": "Simple finance software for independent service businesses",
+    "title": "Revenue, costs and profit",
+    "accent": "— connected to the work behind them.",
+    "body": "Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate.",
     "signup": "Create workspace",
     "how": "See how it works",
     "micro": "You'll get a verification email to finish setting up.",
     "deviceMicro": "Perelai runs in your browser. Installing it is optional.",
-    "imageAlt": "Perelai workspace showing the operational Inbox, upcoming visits, and finance overview — example data",
+    "imageAlt": "Perelai finance overview showing revenue, costs and calculated profit for a period, a service-category breakdown and an open-order balance — example data.",
     "imageCaption": "Example data",
     "showcase": {
       "ariaLabel": "Perelai app preview",
@@ -32,6 +32,42 @@
       "paid": "Paid",
       "pending": "Unpaid"
     }
+  },
+  "finance": {
+    "title": "Revenue, costs and profit for any period",
+    "body": "Review revenue, costs and calculated profit for a day, week, month, quarter or year.",
+    "caption": "Example data",
+    "summary": "Example Perelai finance overview showing monthly revenue, costs and calculated profit, a service-category breakdown and an open-order balance.",
+    "fixture": {
+      "category": {
+        "color": "Color services",
+        "styling": "Styling & finishing"
+      },
+      "openOrders": "on open orders",
+      "orderInstalment": "3-session order, instalment 1",
+      "records": {
+        "visitPayment": "Payment recorded against a visit",
+        "packageRedemption": "Package redemption, no cash movement",
+        "orderInstalment": "Payment recorded against an order/instalment",
+        "noShowFee": "Payment recorded against a visit marked no-show"
+      }
+    }
+  },
+  "states": {
+    "title": "Completed, settled, recorded and owed are different states",
+    "body": "A visit can be completed and not yet settled. A visit settled with a prepaid package moves no money. An open order can still be owed months later. Perelai keeps completed work, settled revenue, recorded payments and open-order balances apart, so each number means one thing."
+  },
+  "drivers": {
+    "title": "See where the result comes from",
+    "body": "Review revenue by service category, costs by category, a client's revenue history and how the result changes over time."
+  },
+  "records": {
+    "title": "Every figure has work behind it",
+    "body": "Payments are recorded against the visit, order or instalment they paid for, and stay connected to the relevant client and service category."
+  },
+  "operations": {
+    "title": "Build the financial record as you work",
+    "body": "Complete a visit, record a payment, add a cost or redeem a package. Booking, Calendar and Inbox keep these actions connected to clients and services. Clients can also book through your own link."
   },
   "problem": {
     "title": "You already know this day",
@@ -54,10 +90,10 @@
     "detail": "Your booking link is yours. Clients book directly on your link."
   },
   "money": {
-    "title": "Money that adds up",
-    "body": "Completed work and received money are tracked separately — so the number is real. A completed visit is not revenue until someone actually pays. Perelai does not blur the two.",
+    "title": "Revenue, costs and profit for any period",
+    "body": "Review revenue, costs and calculated profit for a day, week, month, quarter or year.",
     "caption": "Example data",
-    "detail": "Revenue, costs and what's still outstanding — without a spreadsheet."
+    "detail": "Review revenue, costs and calculated profit for a day, week, month, quarter or year."
   },
   "devices": {
     "title": "One address, one login",
@@ -90,7 +126,7 @@
     "title": "What Perelai is not",
     "body": "If you need any of these, we are not the right fit — and we would rather say so.",
     "item1Title": "Not accounting software",
-    "item1Body": "Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice.",
+    "item1Body": "Perelai tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice.",
     "item2Title": "Not a marketplace",
     "item2Body": "Your booking link is yours. Clients book directly without a marketplace intermediary.",
     "item3Title": "Not a medical record system",
@@ -106,6 +142,14 @@
   },
   "faq": {
     "title": "Questions",
+    "q_category": {
+      "question": "Is this accounting software?",
+      "answer": "No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice."
+    },
+    "q_bank": {
+      "question": "Will the number match my bank?",
+      "answer": "Not always. Summary revenue represents completed work that has been settled, and a prepaid package can settle a visit without moving money. Recorded payments and payment-account balances show money movement separately."
+    },
     "q1": "How do clients book with me?",
     "a1": "Share your direct booking link. Clients choose a service and time directly on your page.",
     "q2": "What happens right after I sign up?",
@@ -117,14 +161,14 @@
     "q5": "Can I manage multiple services and add-ons?",
     "a5": "Yes. Each template includes selectable services and relevant add-on options.",
     "q6": "Is this accounting software?",
-    "a6": "No. Perelai tracks what was booked, completed and paid so you can see your cash flow. It is not accounting, tax filing, or financial advice.",
+    "a6": "No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice.",
     "q7": "Does Perelai have an iPhone or Android app?",
     "a7": "Perelai is finance software for independent service businesses. Perelai is not listed on the App Store or on Google Play; it runs in a web browser at perelai.app instead. Installing Perelai from a browser is optional and not offered by every browser. Perelai needs an internet connection.",
     "q8": "Can I use Perelai on a laptop or an iPad?",
     "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
   },
   "closing": {
-    "title": "Your finances, connected to the work behind them.",
+    "title": "Your financial result, connected to the work behind it.",
     "body": "Set up in an evening.",
     "cta": "Create workspace",
     "micro": "You'll get a verification email to finish setting up."

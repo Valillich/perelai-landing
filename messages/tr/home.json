@@ -1,27 +1,28 @@
 {
   "meta": {
     "title": "Perelai — Hizmet işletmeleri için basit finans yazılımı",
-    "description": "Gelirleri, giderleri, ödemeleri ve bakiyeleri takip edin; finansal analizler müşterilerinize, hizmetlerinize ve tamamlanan işe bağlıdır."
+    "description": "Herhangi bir dönem için ciroyu, maliyetleri ve kârı takip edin; kategoriye ve müşteriye göre dökümler arkalarındaki işle ilişkilidir."
   },
   "nav": {
     "features": "Özellikler",
-    "how": "Nasıl Çalışır",
+    "how": "Nasıl çalışır",
     "pricing": "Fiyatlandırma",
-    "login": "Giriş Yap",
-    "start": "Çalışma Alanı Oluştur",
-    "start_short": "Alan Oluştur",
-    "primaryLabel": "Ana Navigasyon",
-    "menuLabel": "Menüyü Aç"
+    "login": "Giriş yap",
+    "start": "Çalışma alanı oluştur",
+    "start_short": "Oluştur",
+    "primaryLabel": "Ana menü",
+    "menuLabel": "Menüyü aç",
+    "devices": "Cihazlar"
   },
   "hero": {
-    "eyebrow": "Bağımsız hizmet işletmeleri için finansal takip ve analiz",
-    "title": "İşletmenizin arkasındaki",
-    "accent": "parayı görün.",
-    "body": "Perelai gelirleri, giderleri, ödemeleri ve ödenmemiş bakiyeleri takip eder ve rakamları arkalarındaki müşteriler, hizmetler ve randevularla ilişkilendirir. Neyin tamamlandığını, neyin ödendiğini ve neyin hâlâ açık olduğunu görün.",
+    "eyebrow": "Bağımsız hizmet işletmeleri için basit finans yazılımı",
+    "title": "Ciro, maliyet ve kâr",
+    "accent": "— arkalarındaki işle ilişkili.",
+    "body": "Herhangi bir dönem için ciroyu, maliyetleri ve kârı takip edin. Sonucu hizmet kategorisine ve müşteriye göre ayırın: tamamlanan iş, ciroya ancak kesinleştikten sonra yansır; kaydedilen ödemeler ise ayrı tutulur.",
     "signup": "Çalışma alanı oluştur",
     "how": "Nasıl çalıştığını görün",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
-    "imageAlt": "Perelai çalışma alanı — Operasyonel Gelen Kutusu, yaklaşan ziyaretler ve finansal özet ile örnek veriler",
+    "imageAlt": "Perelai finans genel görünümü — bir dönem için ciro, maliyet ve hesaplanan kâr, hizmet kategorisine göre döküm ve açık sipariş bakiyesi ile — örnek veriler.",
     "imageCaption": "Örnek veriler",
     "showcase": {
       "ariaLabel": "Perelai uygulama önizlemesi",
@@ -34,81 +35,89 @@
   },
   "problem": {
     "title": "Bu günü zaten biliyorsunuz",
-    "pain1Title": "DM Üzerinden Randevu Almak",
-    "pain1Body": "Müşteriler gece 11'de yazar. Ekran görüntüsü alırsınız, yarın takvime bakmaya söz verirsiniz ve sabah bunu unutursunuz.",
-    "pain2Title": "Üç Farklı Yere Dağılmış Notlar",
-    "pain2Body": "Geçen sefer hangi renk formülünü kullandınız? Bir notta, bir mesajda veya bir fişin arkasında — bir yerlerde.",
-    "pain3Title": "Ay Sonunda Parayı Toparlamaya Çalışmak",
-    "pain3Body": "«Bu hafta gerçekten ne kadar kazandım?» Havaleler, nakit ve 'bir dahakine öderim' diyen müşteriler arasında tahmin yürütürsünüz."
+    "pain1Title": "DM'lerinizdeki randevular",
+    "pain1Body": "Müşteriler gece 23:00'te yazar. Ekran görüntüsü alırsınız, yarın takvime bakmaya söz verirsiniz ve sabaha kadar unutursunuz.",
+    "pain2Title": "Üç farklı yerdeki notlar",
+    "pain2Body": "Geçen sefer hangi renk formülü kullanıldı? Bir notta, bir mesajda veya bir makbuzun arkasında — bir yerlerdedir.",
+    "pain3Title": "Ay sonunda yeniden oluşturulan para",
+    "pain3Body": "«Bu hafta gerçekten ne kazandım?» EFT, nakit ve bir dahaki sefere ödeyeceğini söyleyen bir müşteri arasında parçaları birleştirirsiniz."
   },
   "inbox": {
-    "title": "Siz İlgilenene Kadar Kaybolmayan Gelen Kutusu",
-    "body": "Bir bildirim size bir şey olduğunu söyler. Operasyonel Gelen Kutusu, siz çözene kadar bunu saklar. Onaylanmamış randevular, ödenmemiş ziyaretler, takip edilecek müşteriler — henüz kararınızı bekleyen işler için tek bir liste.",
+    "title": "Siz ilgilenene kadar bekleyen Gelen Kutusu",
+    "body": "Bir bildirim size bir şey olduğunu söyler. Gelen Kutusu siz halledene kadar saklar. Onaylanmamış randevular, ödenmemiş ziyaretler, takip gerektiren müşteriler: kararınızı bekleyenlerin bir listesi.",
     "caption": "Örnek veriler",
-    "detail": "İlginizi gerektiren işlerin listesi — sadece okuyana kadar değil, siz çözene kadar orada kalır."
+    "detail": "Kararınızı bekleyenlerin bir listesi: sadece okuyana kadar değil, çözene kadar orada kalır."
   },
   "booking": {
-    "title": "Biyografiniz İçin Tek Bir Bağlantı",
-    "body": "Tek bir bağlantı paylaşın. Müşteriler bir hizmet, bir uzman ve bir saat seçsin. Biyografinize koyun, DM'den gönderin, kartvizite basın — tamamen size ait.",
-    "detail": "Randevu bağlantınız size aittir. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır."
+    "title": "Biyografiniz için tek bir bağlantı",
+    "body": "Bir bağlantı paylaşın. Müşteriler hizmet, kişi ve zaman seçsin. Biyografinize koyun, DM ile gönderin, karta basın: size aittir.",
+    "detail": "Randevu bağlantınız size aittir. Müşteriler doğrudan sizin bağlantınız üzerinden randevu alır."
   },
   "money": {
-    "title": "Gerçekten Tutan Hesaplar",
-    "body": "Tamamlanan iş ve alınan para ayrı ayrı kaydedilir — bu yüzden rakam gerçektir. Tamamlanan bir ziyaret, biri gerçekten ödeyene kadar gelir sayılmaz. Perelai ikisini birbirine karıştırmaz.",
+    "title": "Ciro, maliyet ve kâr her dönem için",
+    "body": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin.",
     "caption": "Örnek veriler",
-    "detail": "Gelirler, giderler ve kalan bakiyeler — tablolar olmadan."
+    "detail": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin."
   },
   "setup": {
-    "eyebrow": "Nasıl Çalışır",
-    "title": "Bir öğleden sonra kurun",
-    "body": "Hafta sonu taşınma stresine gerek yok. İşinizi seçin, müşterilerinizi aktarın ve bağlantınızı paylaşın.",
-    "step1Title": "İşinizi Seçin",
-    "step1Body": "32 iş şablonu; her biri düzenlenebilir hizmet listesiyle gelir. İlgili şablonlar ayrıca ek hizmetleri ve bağlı giderleri içerir.",
-    "step2Title": "Müşterilerinizi Getirin",
-    "step2Body": "vCard ile kişileri telefonunuzdan içe aktarın. Google Takviminizi bağlayın ve her iki platformu senkronize tutun.",
-    "step3Title": "Randevu Bağlantınızı Paylaşın",
-    "step3Body": "Biyografiniz için tek bağlantı. Müşteriler doğrudan kendi sayfanızdan randevu alır."
+    "eyebrow": "Nasıl çalışır",
+    "title": "Tek bir akşamda kurulur",
+    "body": "Hafta sonu taşıması yok. İş kolunuzu seçin, müşterilerinizi aktarın, bağlantınızı paylaşın.",
+    "step1Title": "İş kolunuzu seçin",
+    "step1Body": "Seçilebilir 32 işletme türü, her biri düzenlenebilir bir hizmet listesiyle. İlgili şablonlar ayrıca ek seçenekler ve bağlı maliyetler içerir.",
+    "step2Title": "Müşterilerinizi getirin",
+    "step2Body": "Kişileri telefonunuzdan vCard ile aktarın. Google Takvim'inizi bağlayın ve her iki tarafı senkronize tutun.",
+    "step3Title": "Randevu bağlantınızı paylaşın",
+    "step3Body": "Biyografinizde tek bir bağlantı. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır."
   },
   "not": {
-    "title": "Perelai Ne DEĞİLDİR",
-    "body": "Bunlardan birine ihtiyacınız varsa, size göre değiliz — ve bunu açıkça söylemeyi tercih ederiz.",
-    "item1Title": "Muhasebe Yazılımı Değildir",
-    "item1Body": "Perelai, nakit akışınızı görebilmeniz için neyin randevu alındığını, tamamlandığını ve ödendiğini kaydeder. Muhasebe, vergi beyannamesi veya finansal danışmanlık yapmaz.",
-    "item2Title": "Bir Pazar Yeri (Marketplace) Değildir",
-    "item2Body": "Randevu bağlantınız size aittir. Müşteriler aracı pazar yeri olmadan doğrudan sizinle randevu oluşturur.",
-    "item3Title": "Tıbbi Kayıt Sistemi Değildir",
-    "item3Body": "Klinik kayıtlar, tanı takibi veya hasta yönetimi sunmaz."
+    "title": "Perelai ne değildir",
+    "body": "Aşağıdakilerden herhangi birine ihtiyacınız varsa doğru seçenek değiliz — ve bunu açıkça söylemeyi tercih ederiz.",
+    "item1Title": "Muhasebe yazılımı değildir",
+    "item1Body": "Perelai; ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez.",
+    "item2Title": "Bir pazar yeri değildir",
+    "item2Body": "Randevu bağlantınız size aittir. Müşteriler aracı olmadan doğrudan randevu alır.",
+    "item3Title": "Tıbbi kayıt sistemi değildir",
+    "item3Body": "Klinik kayıtlar, tanı takibi veya hasta yönetimi yoktur."
   },
   "nicheRouter": {
-    "title": "Sektörünüzü Bulun",
-    "body": "Gerçekte nasıl çalıştığınıza göre tasarlanmış sayfalar.",
-    "coloristsLabel": "Bağımsız Renk Uzmanları İçin",
-    "coloristsDescription": "Kendi kurallarıyla çalışan renk uzmanları için randevu, müşteri ve nakit akışı yönetimi.",
-    "lashArtistsLabel": "Bağımsız İpek Kirpik Uzmanları İçin",
-    "lashArtistsDescription": "Kendi ritmini belirleyen kirpik uzmanları için randevu, müşteri ve gelir takibi."
+    "title": "İş kolunuzu bulun",
+    "body": "Gerçekte nasıl çalıştığınız için tasarlanmış sayfalar.",
+    "coloristsLabel": "Bağımsız renklendirme uzmanları için",
+    "coloristsDescription": "Kendi kurallarıyla çalışan renklendirme uzmanları için randevular, müşteriler ve nakit akışı.",
+    "lashArtistsLabel": "Bağımsız kirpik tasarımcıları için",
+    "lashArtistsDescription": "Kendi kurallarıyla çalışan kirpik tasarımcıları için randevular, müşteri çalışmaları ve finansal görünürlük."
   },
   "faq": {
-    "title": "Sıkça Sorulan Sorular",
-    "q1": "Müşteriler benimle nasıl randevu oluşturur?",
-    "a1": "Doğrudan randevu bağlantınızı paylaşın. Müşteriler doğrudan sayfanızdan bir hizmet ve saat seçer.",
+    "title": "Sorular",
+    "q1": "Müşteriler benden nasıl randevu alır?",
+    "a1": "Doğrudan randevu bağlantınızı paylaşın. Müşteriler doğrudan sayfanızdan hizmet ve zaman seçsin.",
     "q2": "Kaydolduktan hemen sonra ne olur?",
-    "a2": "E-postanızı doğrular ve ardından hızlı bir kurulum yaparsınız: uzmanlık alanınız, hizmetleriniz, ekibiniz (varsa) ve isteğe bağlı içe aktarmalar.",
-    "q3": "Hizmetlerim hazır gelecek mi?",
-    "a3": "Evet — her iş şablonu düzenlenebilir bir hizmet listesiyle başlar. İlgili şablonlar ek hizmetleri ve bağlı giderleri de içerir.",
-    "q4": "Müşterilerimi ve takvimimi aktarabilir miyim?",
-    "a4": "Evet: telefonunuzdaki kişileri (vCard) aktarabilir ve Google Takvim ile çift yönlü senkronizasyon kurabilirsiniz.",
-    "q5": "Farklı hizmetleri ve ek seçenekleri yönetebilir miyim?",
-    "a5": "Evet. Her şablon, ilgili hizmetlerin ve ek seçeneklerin özelleştirilebilir hallerini içerir.",
+    "a2": "E-postanızı onaylarsınız, ardından kısa bir kurulum gelir: iş kolunuz, hizmetleriniz, ekibiniz (varsa) ve isteğe bağlı aktarımlar.",
+    "q3": "Hizmetlerim zaten hazır olacak mı?",
+    "a3": "Evet — her işletme türü düzenlenebilir bir hizmet veya ürün listesiyle başlar. İlgili şablonlar ayrıca ek seçenekler ve maliyetler içerir.",
+    "q4": "Müşterilerimi ve takvimimi getirebilir miyim?",
+    "a4": "Evet: telefonunuzdaki kişiler (vCard) ve Google Takvim ile iki yönlü senkronizasyon.",
+    "q5": "Birden fazla hizmet ve ek seçeneği yönetebilir miyim?",
+    "a5": "Evet. Her şablon seçilebilir hizmetler ve ilgili seçenekler içerir.",
     "q6": "Bu bir muhasebe yazılımı mı?",
-    "a6": "Hayır. Perelai, nakit akışınızı görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Muhasebe veya vergi takibi yapmaz.",
-    "q7": "Perelai’nin iPhone veya Android uygulaması var mı?",
-    "a7": "Perelai, bağımsız hizmet işletmeleri için finans yazılımıdır. Perelai App Store veya Google Play’de listelenmez; bunun yerine perelai.app adresinde bir web tarayıcısında çalışır. Perelai’yi bir tarayıcıdan kurmak isteğe bağlıdır ve her tarayıcı bunu sunmaz. Perelai internet bağlantısı gerektirir.",
-    "q8": "Perelai’yi bir dizüstü bilgisayarda veya iPad’de kullanabilir miyim?",
-    "a8": "Desteklenen bir tarayıcıda perelai.app adresini dizüstü bilgisayarınızda veya iPad’inizde açın ve telefonunuzda kullandığınız aynı girişle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gerekir."
+    "a6": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez.",
+    "q7": "Perelai'nin iPhone veya Android uygulaması var mı?",
+    "a7": "Perelai bağımsız hizmet işletmeleri için finans yazılımıdır. Perelai App Store veya Google Play'de yer almaz; perelai.app adresinde bir web tarayıcısında çalışır. Perelai'yi bir tarayıcıdan yüklemek isteğe bağlıdır ve tüm tarayıcılar tarafından sunulmaz. Perelai bir internet bağlantısı gerektirir.",
+    "q8": "Perelai'yi dizüstü bilgisayarda veya iPad'de kullanabilir miyim?",
+    "a8": "Dizüstü bilgisayarınızda veya iPad'inizde desteklenen bir tarayıcıda perelai.app adresini açın ve telefonunuzda kullandığınız aynı giriş bilgileriyle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gereklidir.",
+    "q_category": {
+      "question": "Bu bir muhasebe yazılımı mı?",
+      "answer": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez."
+    },
+    "q_bank": {
+      "question": "Bu rakam bankamla eşleşir mi?",
+      "answer": "Her zaman değil. Özet cirosu, kesinleşmiş tamamlanan işi yansıtır ve önceden ödenmiş bir paket, para hareketi olmadan bir randevuyu kesinleştirebilir. Kaydedilen ödemeler ve ödeme hesabı bakiyeleri para hareketini ayrı olarak gösterir."
+    }
   },
   "closing": {
-    "title": "Finansallarınız, arkasındaki işle bağlantılı.",
-    "body": "Bir öğleden sonra kurun.",
+    "title": "Finansal sonucunuz, arkasındaki işle ilişkili.",
+    "body": "Tek bir akşamda kurulur.",
     "cta": "Çalışma alanı oluştur",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
   },
@@ -116,26 +125,62 @@
     "description": "Bağımsız hizmet işletmeleri için basit finans yazılımı.",
     "product": "Ürün",
     "company": "Yasal",
-    "forColorists": "Bağımsız Renk Uzmanları İçin",
-    "forLashArtists": "Bağımsız Kirpik Uzmanları İçin",
+    "forColorists": "Bağımsız renklendirme uzmanları için",
+    "forLashArtists": "Bağımsız kirpik tasarımcıları için",
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
-    "terms": "Hizmet Koşulları"
+    "terms": "Kullanım Koşulları"
   },
   "devices": {
-    "title": "Tek çalışma alanı. Görünüm ekranla birlikte değişir.",
-    "body": "Perelai bir web tarayıcısında çalışır. Nerede çalışıyorsanız perelai.app’te oturum açın — aynı çalışma alanıdır. iPhone’da ana ekrana ekleyebilirsiniz; orada kendi simgesinden, kendi penceresinde açılır. Kurulum isteğe bağlıdır ve App Store veya Google Play’de bir kaydı yoktur.",
+    "title": "Tek bir çalışma alanı. Görünüm ekranla değişir.",
+    "body": "Perelai bir web tarayıcısında çalışır. Nerede çalışıyorsanız perelai.app'te oturum açın, aynı çalışma alanında olursunuz. iPhone'da ana ekrana ekleyebilirsiniz; orada kendi simgesinden, kendi penceresinde açılır. Kurulum isteğe bağlıdır ve App Store veya Google Play'de bir kaydı yoktur.",
     "caption": "Örnek veriler",
-    "summary": "Telefon, tablet veya bilgisayarda desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
-    "link": "Perelai’yi nasıl açarsınız"
+    "summary": "Telefon, tablet veya bilgisayardaki desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
+    "link": "Perelai nasıl açılır"
   },
   "collaboration": {
-    "title": "Tek başınıza çalışın. İhtiyacınız olduğunda kişi ekleyin.",
-    "body": "Kendi çalışma alanınızla başlayın. Ekip erişimini yalnızca faydalı olduğunda ekleyin.",
+    "title": "Solo çalışın. İhtiyacınız olduğunda kişi ekleyin.",
+    "body": "Kendi çalışma alanınızla başlayın. Ekip erişimini yalnızca faydalı hale geldiğinde ekleyin.",
     "teamTitle": "Ekibiniz",
-    "teamBody": "Ekip üyelerini Personel veya Yöneticisi erişimiyle davet edin. Çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun.",
+    "teamBody": "Ekip üyelerini Personel veya Süpervizör erişimiyle davet edin. Çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun.",
     "notesDetail": "Sabitlenmiş müşteri notları ve ziyaret notları müşteri geçmişinde kalır.",
-    "summary": "Tek bir işletme içinde ekip rollerini, çalışma saatlerini ve sabitlenmiş bir müşteri notunu gösteren Perelai çalışma alanı örneği.",
+    "summary": "Bir işletme içinde ekip rollerini, çalışma saatlerini ve sabitlenmiş bir müşteri notunu gösteren Perelai çalışma alanı örneği.",
     "caption": "Örnek veriler"
+  },
+  "finance": {
+    "title": "Herhangi bir dönem için ciro, maliyet ve kâr",
+    "body": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin.",
+    "caption": "Örnek veriler",
+    "summary": "Aylık ciroyu, maliyeti ve hesaplanan kârı, hizmet kategorisine göre dökümü ve açık sipariş bakiyesini gösteren örnek Perelai finans genel görünümü.",
+    "fixture": {
+      "category": {
+        "color": "Renklendirme hizmetleri",
+        "styling": "Şekillendirme ve son işlem"
+      },
+      "openOrders": "açık siparişlerden",
+      "orderInstalment": "3 seanslık sipariş, 1. taksit",
+      "records": {
+        "visitPayment": "Bir randevuyla ilişkilendirilen ödeme",
+        "packageRedemption": "Paket kullanımı, para hareketi yok",
+        "orderInstalment": "Bir siparişle/taksitle ilişkilendirilen ödeme",
+        "noShowFee": "Gelinmedi olarak işaretlenen bir randevuyla ilişkilendirilen ödeme"
+      }
+    }
+  },
+  "states": {
+    "title": "Tamamlanan, kesinleşen, kaydedilen ve hâlâ ödenmemiş olan farklı durumlardır",
+    "body": "Bir randevu tamamlanmış olabilir, ancak ciroya henüz yansımamış olabilir. Bir randevu önceden ödenmiş bir paketle kesinleşiyorsa, yeni bir para hareketi oluşmaz. Açık bir sipariş aylar sonra bile hâlâ ödenmemiş olabilir. Perelai tamamlanan işi, ciroyu, kaydedilen ödemeleri ve açık sipariş bakiyelerini ayrı tutar; böylece her rakam tek bir şey ifade eder."
+  },
+  "drivers": {
+    "title": "Sonucun nereden geldiğini görün",
+    "body": "Hizmet kategorisine göre ciroyu, kategoriye göre maliyetleri, bir müşterinin ciro geçmişini ve sonucun zaman içinde nasıl değiştiğini inceleyin."
+  },
+  "records": {
+    "title": "Her rakamın arkasında bir iş var",
+    "body": "Ödemeler, karşılığında yapıldıkları randevu, sipariş veya taksitle ilişkilendirilir ve ilgili müşteri ile hizmet kategorisiyle bağlantılı kalır."
+  },
+  "operations": {
+    "title": "Çalışırken finansal verilerinizi güncel tutun",
+    "body": "Bir randevuyu tamamlayın, bir ödeme kaydedin, bir maliyet ekleyin veya bir paket kullanın. Randevu, Takvim ve Gelen Kutusu bu işlemleri müşteriler ve hizmetlerle bağlantılı tutar. Müşteriler ayrıca kendi bağlantınız üzerinden de randevu alabilir."
   }
 }

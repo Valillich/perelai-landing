@@ -394,7 +394,7 @@ One idea per section, in this order. Each section advances one argument.
 | 12 | FAQ | Objection handling | §8 below |
 | 13 | Final CTA | Recap + risk reversal | Repeat primary CTA — **CTA/commercial wording is `HOLD`**, see the CTA section in `.agents/product-marketing.md` |
 
-**Order (FM2 narrative rewrite — FM3 owns the binding specification).**
+**Order (FM2 narrative rewrite — bound by FM3 2026-08-03).**
 
 ```text
 Hero → Finance overview → Financial states → Drivers → Connected records → Daily operations →
@@ -403,23 +403,29 @@ Devices → Collaboration → Setup → Not → Niche router → FAQ → Final C
 
 This replaces the retired booking-first order
 (`Hero → Problem → Inbox → Booking → Money → Devices → …`), which was FM0 defect **R2**: the top of this
-document was finance-first while the hierarchy still argued Inbox and Booking first. FM2 sets the
-narrative order; **FM3 must bind it**, map every existing component to reuse/revise/split/move/retire,
-and specify the HeroShowcase and deterministic fixture. Do not implement this order before FM3 and
-FM4B.
+document was finance-first while the hierarchy still argued Inbox and Booking first. FM2 set the
+narrative order; **FM3 bound it** against the real component tree — component-by-component disposition
+(reuse/revise/split/move/merge/retire), the HeroShowcase reorder, and the deterministic fixture are
+specified in
+[`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md).
+Do not implement this order before FM4A/FM4B.
 
 - **Device fit stays immediately after the last product-argument section.** In the retired order that
   section was Money; in the finance-first order it is *Daily operations*. The DVC decision (device plan
   §6.3) is that Devices directly follows the product argument and precedes Collaboration — that
-  adjacency is preserved, and Collaboration is still inserted *after* Devices. **FM3 must re-confirm
-  this against the DVC plan before binding the order.**
+  adjacency is preserved, and Collaboration is still inserted *after* Devices. **Re-confirmed by FM3
+  (2026-08-03)** against the DVC plan — see
+  [`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md)
+  §4.
 - **Collaboration sits between Devices and Setup** because it is objection handling, not a new
   purchase argument: the finance sections must land first, and the section then hands the visitor
   straight to Setup's existing "your team if you have one" step (§8 FAQ 2).
 - **Collaboration adds no CTA.** The page keeps exactly one primary action. It also adds no route, no
   header/footer item, no anchor target, no FAQ row, no metadata, OG/Twitter, JSON-LD or `llms.txt`
-  claim, and no niche-page block. The `#features` anchor moves with FM3's component map; it must land
-  on a finance section, not on Inbox — **FM3 owns that decision.**
+  claim, and no niche-page block. **Bound by FM3 (2026-08-03):** `#features` moves from `Inbox` to
+  `Finance overview` (the renamed `money.tsx`/`finance-overview.tsx`, position 2, the first product-proof
+  section below the hero). Full component map, disposition, and fixture specification:
+  [`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md).
 - **Notes is not a section.** It appears once, as a supporting line inside Collaboration's workspace
   side (F4 + TC8). See `docs/team-collaboration-copy-audit.md` §8 for the recorded rationale.
 

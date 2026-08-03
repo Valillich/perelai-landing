@@ -13,7 +13,7 @@ const languageNames = {
   es: "Español",
   fr: "Français",
   de: "Deutsch",
-  pt: "Português",
+  pt: "Português (BR)",
   tr: "Türkçe"
 };
 

@@ -16,6 +16,9 @@ interface HeroShowcaseProps {
     paid: string
     pending: string
     caption: string
+    categoryColor: string
+    categoryStyling: string
+    openOrders: string
   }
 }
 
@@ -23,8 +26,7 @@ const ROTATE_MS = 7000
 
 /**
  * Hero product preview: two app-screen replicas that auto-advance and can be
- * switched by hand. Replaces the former 1.2 MB hero-dashboard.png — the screens
- * are live DOM, so they follow the theme toggle instead of baking in light mode.
+ * switched by hand. Finance renders first on load (FM3 §5 / defect R7).
  */
 export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
   const [index, setIndex] = useState(0)
@@ -34,8 +36,8 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
   const prefersReducedMotion = useReducedMotion()
 
   const screens = [
-    { key: "calendar", tab: labels.calendarTab },
     { key: "finance", tab: labels.financeTab },
+    { key: "calendar", tab: labels.calendarTab },
   ] as const
 
   const advance = useCallback(() => {
@@ -61,20 +63,9 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
       onBlur={() => setPaused(false)}
     >
       <figure className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-3 shadow-[0_24px_60px_-20px_rgba(var(--brand-600-rgb),0.3)] backdrop-blur-xl sm:p-4">
-        {/*
-          The screens themselves are aria-hidden decoration — the hero copy
-          carries their message. This names what the region contains so the
-          tab buttons below are not two labels pointing at nothing.
-        */}
         <p className="sr-only">
           {labels.ariaLabel}: {screens.map((screen) => screen.tab).join(", ")} — {labels.caption}
         </p>
-        {/*
-          Both screens stay mounted and share one grid cell, so the frame is
-          always as tall as the taller screen and never jumps mid-rotation.
-          AnimatePresence would unmount the outgoing screen and collapse the
-          frame to whatever the incoming one happens to need.
-        */}
         <div className="grid">
           {screens.map((screen, screenIndex) => {
             const isActive = screenIndex === index
@@ -98,7 +89,14 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
                     pendingLabel={labels.pending}
                   />
                 ) : (
-                  <MockFinanceScreen dataset={dataset} />
+                  <MockFinanceScreen
+                    dataset={dataset}
+                    categoryLabels={{
+                      color: labels.categoryColor,
+                      styling: labels.categoryStyling,
+                    }}
+                    openOrdersLabel={labels.openOrders}
+                  />
                 )}
               </motion.div>
             )

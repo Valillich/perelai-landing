@@ -83,3 +83,23 @@ describe("mock components", () => {
     expect(html).toContain(dataset.base.labels["chart_labels.revenue"])
   })
 })
+
+describe("buildAppScreenDataset finance fixture wiring", () => {
+  it("derives kpis, trend and feed from the finance fixture — not revenue*0.27", () => {
+    const dataset = buildAppScreenDataset("independent_colorist", "en", "US", REFERENCE)
+    expect(dataset.kpis).toEqual({ revenue: 625, cost: 240, profit: 385 })
+    expect(dataset.openOrderBalance).toBe(300)
+    expect(dataset.trend.at(-1)?.profit).toBe(385)
+    expect(dataset.feed).toHaveLength(3)
+    expect(dataset.feed.map((item) => item.amount)).toEqual([220, 180, 140])
+    expect(dataset.categoryBreakdown.map((row) => row.settledRevenue)).toEqual([535, 90])
+  })
+
+  it("stays byte-identical across builds for a fixed reference instant", () => {
+    const a = buildAppScreenDataset("independent_colorist", "en", "US", REFERENCE)
+    const b = buildAppScreenDataset("independent_colorist", "en", "US", REFERENCE)
+    expect(a.kpis).toEqual(b.kpis)
+    expect(a.trend).toEqual(b.trend)
+    expect(a.feed).toEqual(b.feed)
+  })
+})

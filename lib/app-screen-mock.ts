@@ -1,5 +1,13 @@
+import uiStrings from "@/data/app-ui-strings.generated.json"
 import type { AppLocale } from "@/i18n/locales"
 import { buildMockDataset, type MockDataset } from "@/lib/mock-data"
+import {
+  FINANCE_OVERVIEW_FEED,
+  FINANCE_TREND_CHECKPOINT_DAYS,
+  getFinanceKpis,
+  getFinanceTotals,
+  getFinanceTrendProfit,
+} from "@/lib/finance-fixture"
 import { localePrimaryMarket, type SupportedMarket } from "@/lib/market"
 
 /**
@@ -7,6 +15,7 @@ import { localePrimaryMarket, type SupportedMarket } from "@/lib/market"
  * Kept out of lib/mock-data.ts because verify-niches scans that file for
  * MOCK_UI_KEYS — nothing here needs generated app strings.
  *
+ * KPI / trend / feed figures come from lib/finance-fixture.ts (FM3 §6 / FM4B).
  * Everything is derived from a fixed reference instant, never the current clock, so
  * the statically generated HTML stays byte-identical between builds.
  */
@@ -41,6 +50,11 @@ export interface AppScreenFeedItem {
   direction: "income" | "expense"
 }
 
+export interface AppScreenCategoryLine {
+  categoryId: "color" | "styling"
+  settledRevenue: number
+}
+
 export interface AppScreenDataset {
   locale: AppLocale
   market: SupportedMarket
@@ -56,6 +70,9 @@ export interface AppScreenDataset {
   kpis: { revenue: number; cost: number; profit: number }
   /** Finance feed rows shown under the dashboard. */
   feed: AppScreenFeedItem[]
+  /** Compact category breakdown for Finance overview / Hero (FM3 §6.7). */
+  categoryBreakdown: AppScreenCategoryLine[]
+  openOrderBalance: number
 }
 
 function hashSeed(input: string): number {
@@ -74,6 +91,20 @@ function seeded(salt: string, base: number, spread: number): number {
 /** Monday-first weekday index, matching the app's `startOfWeek({weekStartsOn: 1})`. */
 function mondayFirstIndex(date: Date): number {
   return (date.getUTCDay() + 6) % 7
+}
+
+function resolveFixtureName(locale: AppLocale, nameKey: string, base: MockDataset): string {
+  const fromServices = [...base.services, ...base.addons, ...base.expenses].find(
+    (item) => item.nameKey === nameKey,
+  )
+  if (fromServices) return fromServices.name
+
+  const localeTable = uiStrings.locales[locale] as Record<string, string> | undefined
+  const value = localeTable?.[nameKey]
+  if (!value) {
+    throw new Error(`Missing fixture UI string for locale=${locale} key=${nameKey}`)
+  }
+  return value
 }
 
 export function buildAppScreenDataset(
@@ -122,11 +153,9 @@ export function buildAppScreenDataset(
       continue
     }
 
-    // Salted with the template so two niche pages never show the same month.
+    // Cosmetic density only — these totals never feed KPIs (FM3 §7 ban 2).
     const roll = hashSeed(`${templateId}:day:${key}`) % 10
     const isWeekend = mondayFirstIndex(cellDate) >= 5
-    // Days ahead of "today" are booked but not yet earned — they carry the
-    // unconfirmed-count pill instead of a total, exactly as the app renders them.
     const isFuture = day > todayDay
     const isToday = day === todayDay
     const isBusy = isWeekend ? roll > 6 : roll > 2
@@ -152,9 +181,6 @@ export function buildAppScreenDataset(
     timeZone: "UTC",
   }).format(instant)
 
-  // Monday..Sunday, sourced from a known Monday. Two letters, matching the
-  // app's `format(date, 'EEEEEE')` — Intl has no two-letter weekday width, and
-  // the abbreviated "short" form does not fit a ~26px day column.
   const weekdayFormatter = new Intl.DateTimeFormat(locale, {
     weekday: "short",
     timeZone: "UTC",
@@ -177,15 +203,15 @@ export function buildAppScreenDataset(
     day: "numeric",
     timeZone: "UTC",
   })
-  const trend: AppScreenTrendPoint[] = [1, 6, 11, 16, 21, 26, 31]
-    .filter((day) => day <= daysInMonth)
-    .map((day) => ({
-      label: trendFormatter.format(new Date(Date.UTC(year, month, day))),
-      profit: seeded(`${templateId}:trend:${month}:${day}`, 420, 900),
-    }))
+  const trend: AppScreenTrendPoint[] = FINANCE_TREND_CHECKPOINT_DAYS.filter(
+    (day) => day <= daysInMonth,
+  ).map((day) => ({
+    label: trendFormatter.format(new Date(Date.UTC(year, month, day))),
+    profit: getFinanceTrendProfit(day),
+  }))
 
-  const revenue = calendarCells.reduce((sum, cell) => sum + (cell.total ?? 0), 0)
-  const cost = Math.round(revenue * 0.27)
+  const kpis = getFinanceKpis()
+  const totals = getFinanceTotals()
 
   const feedDateFormatter = new Intl.DateTimeFormat(locale, {
     day: "numeric",
@@ -195,29 +221,12 @@ export function buildAppScreenDataset(
   const feedDateLabel = (day: number, time: string) =>
     `${feedDateFormatter.format(new Date(Date.UTC(year, month, day)))} · ${time}`
 
-  // Modulo indexing: a handful of templates ship a single service.
-  const serviceAt = (index: number) => base.services[index % base.services.length].name
-
-  const feed: AppScreenFeedItem[] = [
-    {
-      title: serviceAt(0),
-      dateLabel: feedDateLabel(todayDay, "14:30"),
-      amount: seeded(`${templateId}:feed:0`, 90, 120),
-      direction: "income",
-    },
-    {
-      title: base.expenses[0]?.name ?? serviceAt(1),
-      dateLabel: feedDateLabel(todayDay, "11:05"),
-      amount: seeded(`${templateId}:feed:1`, 30, 60),
-      direction: "expense",
-    },
-    {
-      title: serviceAt(1),
-      dateLabel: feedDateLabel(todayDay - 1, "17:45"),
-      amount: seeded(`${templateId}:feed:2`, 70, 140),
-      direction: "income",
-    },
-  ]
+  const feed: AppScreenFeedItem[] = FINANCE_OVERVIEW_FEED.map((item) => ({
+    title: resolveFixtureName(locale, item.nameKey, base),
+    dateLabel: feedDateLabel(item.day, item.time),
+    amount: item.amount,
+    direction: item.direction,
+  }))
 
   return {
     locale,
@@ -230,8 +239,13 @@ export function buildAppScreenDataset(
     selectedDayLabel,
     selectedDayCount: base.visits.length,
     trend,
-    kpis: { revenue, cost, profit: revenue - cost },
+    kpis,
     feed,
+    categoryBreakdown: totals.byCategory.map((category) => ({
+      categoryId: category.categoryId,
+      settledRevenue: category.settledRevenue,
+    })),
+    openOrderBalance: totals.openOrderBalance,
   }
 }
 

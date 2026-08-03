@@ -63,6 +63,45 @@ import trDevices from "@/messages/tr/devices.json"
 
 import type { PublishedLocale } from "@/i18n/locales"
 
+/**
+ * Deep-merge message trees so FM4A English finance keys remain available in
+ * non-English locales until FM5 ships translations. Overlay wins on conflict.
+ */
+function mergeMessages(
+  base: Record<string, unknown>,
+  overlay: Record<string, unknown>,
+): Record<string, unknown> {
+  const result: Record<string, unknown> = { ...base }
+  for (const [key, value] of Object.entries(overlay)) {
+    const existing = result[key]
+    if (
+      value &&
+      typeof value === "object" &&
+      !Array.isArray(value) &&
+      existing &&
+      typeof existing === "object" &&
+      !Array.isArray(existing)
+    ) {
+      result[key] = mergeMessages(
+        existing as Record<string, unknown>,
+        value as Record<string, unknown>,
+      )
+    } else {
+      result[key] = value
+    }
+  }
+  return result
+}
+
+function withEnglishHomeFallback(
+  localeHome: Record<string, unknown>,
+): typeof enHome {
+  return mergeMessages(
+    enHome as unknown as Record<string, unknown>,
+    localeHome,
+  ) as typeof enHome
+}
+
 export const messagesByLocale = {
   en: {
     common: enCommon,
@@ -74,7 +113,7 @@ export const messagesByLocale = {
   },
   uk: {
     common: ukCommon,
-    home: ukHome,
+    home: withEnglishHomeFallback(ukHome as unknown as Record<string, unknown>),
     legal: ukLegal,
     niche: ukNiche,
     pricing: ukPricing,
@@ -82,7 +121,7 @@ export const messagesByLocale = {
   },
   pl: {
     common: plCommon,
-    home: plHome,
+    home: withEnglishHomeFallback(plHome as unknown as Record<string, unknown>),
     legal: plLegal,
     niche: plNiche,
     pricing: plPricing,
@@ -90,7 +129,7 @@ export const messagesByLocale = {
   },
   ru: {
     common: ruCommon,
-    home: ruHome,
+    home: withEnglishHomeFallback(ruHome as unknown as Record<string, unknown>),
     legal: ruLegal,
     niche: ruNiche,
     pricing: ruPricing,
@@ -98,7 +137,7 @@ export const messagesByLocale = {
   },
   es: {
     common: esCommon,
-    home: esHome,
+    home: withEnglishHomeFallback(esHome as unknown as Record<string, unknown>),
     legal: esLegal,
     niche: esNiche,
     pricing: esPricing,
@@ -106,7 +145,7 @@ export const messagesByLocale = {
   },
   fr: {
     common: frCommon,
-    home: frHome,
+    home: withEnglishHomeFallback(frHome as unknown as Record<string, unknown>),
     legal: frLegal,
     niche: frNiche,
     pricing: frPricing,
@@ -114,7 +153,7 @@ export const messagesByLocale = {
   },
   de: {
     common: deCommon,
-    home: deHome,
+    home: withEnglishHomeFallback(deHome as unknown as Record<string, unknown>),
     legal: deLegal,
     niche: deNiche,
     pricing: dePricing,
@@ -122,7 +161,7 @@ export const messagesByLocale = {
   },
   pt: {
     common: ptCommon,
-    home: ptHome,
+    home: withEnglishHomeFallback(ptHome as unknown as Record<string, unknown>),
     legal: ptLegal,
     niche: ptNiche,
     pricing: ptPricing,
@@ -130,7 +169,7 @@ export const messagesByLocale = {
   },
   tr: {
     common: trCommon,
-    home: trHome,
+    home: withEnglishHomeFallback(trHome as unknown as Record<string, unknown>),
     legal: trLegal,
     niche: trNiche,
     pricing: trPricing,

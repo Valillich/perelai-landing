@@ -27,10 +27,10 @@ describe("Homepage section order contract", () => {
     const devicesIndex = source.indexOf("<Devices")
     const collabIndex = source.indexOf("<Collaboration")
     const setupIndex = source.indexOf("<Setup")
-    const moneyIndex = source.indexOf("<Money")
+    const operationsIndex = source.indexOf("<Operations")
 
-    expect(moneyIndex).toBeGreaterThan(-1)
-    expect(devicesIndex).toBeGreaterThan(moneyIndex)
+    expect(operationsIndex).toBeGreaterThan(-1)
+    expect(devicesIndex).toBeGreaterThan(operationsIndex)
     expect(collabIndex).toBeGreaterThan(devicesIndex)
     expect(setupIndex).toBeGreaterThan(collabIndex)
 
@@ -41,6 +41,7 @@ describe("Homepage section order contract", () => {
     expect(renderSection).not.toContain("<Problem")
     expect(renderSection).not.toContain("<Inbox")
     expect(renderSection).not.toContain("<Booking")
+    expect(renderSection).not.toContain("<Money")
   })
 })
 

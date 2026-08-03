@@ -396,3 +396,11 @@ describe("the shell kit stays a presentation layer", () => {
     })
   }
 })
+
+describe("homepage Devices shares finance fixture totals", () => {
+  it("matches Finance overview KPI numbers for independent_colorist", () => {
+    const dataset = datasetFor("en")
+    expect(dataset.kpis).toEqual({ revenue: 625, cost: 240, profit: 385 })
+    expect(dataset.openOrderBalance).toBe(300)
+  })
+})

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Perelai — proste oprogramowanie finansowe dla usług",
-    "description": "Śledź przychody, koszty, płatności i salda, z analizą finansową powiązaną z klientami, usługami i wykonaną pracą."
+    "title": "Perelai — proste oprogramowanie finansowe dla usługodawców",
+    "description": "Śledź przychód, koszty i zysk za dowolny okres, z podziałem na kategorię i klienta powiązanym z usługami, z których wynikają."
   },
   "nav": {
     "features": "Funkcje",
@@ -11,17 +11,18 @@
     "start": "Utwórz przestrzeń pracy",
     "start_short": "Utwórz przestrzeń",
     "primaryLabel": "Nawigacja główna",
-    "menuLabel": "Otwórz menu"
+    "menuLabel": "Otwórz menu",
+    "devices": "Urządzenia"
   },
   "hero": {
-    "eyebrow": "Śledzenie finansów i analityka dla niezależnych firm usługowych",
-    "title": "Zobacz pieniądze",
-    "accent": "stojące za Twoją firmą.",
-    "body": "Perelai śledzi przychody, koszty, płatności i nierozliczone salda oraz łączy liczby z klientami, usługami i wizytami, które za nimi stoją. Zobacz, co zostało wykonane, co opłacone, a co wciąż pozostaje do zapłaty.",
+    "eyebrow": "Proste oprogramowanie finansowe dla niezależnych firm usługowych",
+    "title": "Przychód, koszty i zysk",
+    "accent": "— powiązane z usługami, z których wynikają.",
+    "body": "Śledź przychód, koszty i zysk za dowolny okres. Rozbij wynik według kategorii usług i klienta — praca liczy się do przychodu dopiero po rozliczeniu, a zarejestrowane płatności pozostają oddzielnym zapisem.",
     "signup": "Utwórz przestrzeń pracy",
     "how": "Zobacz, jak to działa",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
-    "imageAlt": "Przestrzeń pracy Perelai z operacyjną skrzynką, nadchodzącymi wizytami i przeglądem finansów — przykładowe dane",
+    "imageAlt": "Przegląd finansów Perelai z przychodem, kosztami i obliczonym zyskiem za okres, podziałem na kategorię usług i saldem otwartych zamówień — przykładowe dane.",
     "imageCaption": "Przykładowe dane",
     "showcase": {
       "ariaLabel": "Podgląd aplikacji Perelai",
@@ -72,8 +73,8 @@
   "not": {
     "title": "Czym Perelai nie jest",
     "body": "Jeśli potrzebujesz którejś z tych rzeczy, nie jesteśmy właściwym wyborem — i wolimy to powiedzieć wprost.",
-    "item1Title": "To nie jest program księgowy",
-    "item1Body": "Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe.",
+    "item1Title": "To nie jest oprogramowanie księgowe",
+    "item1Body": "Perelai śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych.",
     "item2Title": "To nie jest marketplace",
     "item2Body": "Twój link należy do Ciebie. Klienci rezerwują bezpośrednio bez pośredników.",
     "item3Title": "To nie jest system dokumentacji medycznej",
@@ -100,14 +101,22 @@
     "q5": "Czy mogę zarządzać wieloma usługami?",
     "a5": "Tak. Każdy szablon zawiera wybór usług oraz opcje dodatków.",
     "q6": "Czy to jest oprogramowanie księgowe?",
-    "a6": "Nie. Perelai śledzi rezerwacje, wykonane usługi i wpłaty, aby pokazać przepływy pieniężne. To nie jest księgowość ani doradztwo finansowe.",
+    "a6": "Nie. Perelai to operacyjne oprogramowanie finansowe. Śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych.",
     "q7": "Czy Perelai ma aplikację na iPhone lub Android?",
     "a7": "Perelai to oprogramowanie finansowe dla niezależnych firm usługowych. Perelai nie jest w App Store ani Google Play; działa w przeglądarce na perelai.app. Instalacja Perelai z przeglądarki jest opcjonalna i nie każda przeglądarka ją oferuje. Perelai wymaga połączenia z internetem.",
     "q8": "Czy mogę używać Perelai na laptopie lub iPadzie?",
-    "a8": "Otwórz perelai.app w obsługiwanej przeglądarce na laptopie lub iPadzie i zaloguj się tym samym loginem, co na telefonie. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem."
+    "a8": "Otwórz perelai.app w obsługiwanej przeglądarce na laptopie lub iPadzie i zaloguj się tym samym loginem, co na telefonie. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem.",
+    "q_category": {
+      "question": "Czy to jest oprogramowanie księgowe?",
+      "answer": "Nie. Perelai to operacyjne oprogramowanie finansowe. Śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych."
+    },
+    "q_bank": {
+      "question": "Czy ta liczba będzie zgodna z moim bankiem?",
+      "answer": "Nie zawsze. Przychód w podsumowaniu obejmuje wykonaną pracę, która została rozliczona, a pakiet przedpłacony może rozliczyć wizytę bez przepływu środków. Zarejestrowane płatności i salda kont płatności pokazują ruch środków osobno."
+    }
   },
   "closing": {
-    "title": "Twoje finanse połączone z pracą, która za nimi stoi.",
+    "title": "Twój wynik finansowy — powiązany z usługami, z których wynika.",
     "body": "Konfiguracja w jeden wieczór.",
     "cta": "Utwórz przestrzeń pracy",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
@@ -137,5 +146,41 @@
     "notesDetail": "Przypięte notatki o kliencie i notatki z wizyt pozostają w historii klienta.",
     "summary": "Przykład przestrzeni roboczej Perelai pokazujący role w zespole, grafiki i przypiętą notatkę o kliencie w ramach jednej firmy.",
     "caption": "Przykładowe dane"
+  },
+  "finance": {
+    "title": "Przychód, koszty i zysk za dowolny okres",
+    "body": "Sprawdź przychód, koszty i obliczony zysk za dzień, tydzień, miesiąc, kwartał lub rok.",
+    "caption": "Przykładowe dane",
+    "summary": "Przykładowy przegląd finansów Perelai z miesięcznym przychodem, kosztami i obliczonym zyskiem, podziałem na kategorię usług i saldem otwartych zamówień.",
+    "fixture": {
+      "category": {
+        "color": "Usługi kolorystyczne",
+        "styling": "Stylizacja i wykończenie"
+      },
+      "openOrders": "z otwartych zamówień",
+      "orderInstalment": "Zamówienie na 3 sesje, 1. rata",
+      "records": {
+        "visitPayment": "Płatność przypisana do wizyty",
+        "packageRedemption": "Wykorzystanie pakietu, brak ruchu środków",
+        "orderInstalment": "Płatność przypisana do zamówienia/raty",
+        "noShowFee": "Płatność przypisana do wizyty oznaczonej jako niestawiennictwo"
+      }
+    }
+  },
+  "states": {
+    "title": "Wykonane, rozliczone, zarejestrowane i należne to różne stany",
+    "body": "Wizyta może być wykonana, zanim przychód zostanie rozliczony. Rozliczenie wizyty pakietem nie powoduje przepływu środków. Na otwartym zamówieniu może jeszcze przez kilka miesięcy pozostawać nieuregulowana należność. Perelai trzyma wykonaną pracę, rozliczony przychód, zarejestrowane płatności i salda otwartych zamówień oddzielnie, więc każda liczba oznacza dokładnie jedno."
+  },
+  "drivers": {
+    "title": "Zobacz, skąd bierze się wynik",
+    "body": "Sprawdź przychód według kategorii usług, koszty według kategorii, historię przychodu klienta i to, jak wynik zmienia się w czasie."
+  },
+  "records": {
+    "title": "Za każdą liczbą stoi praca",
+    "body": "Płatności są przypisane do wizyty, zamówienia lub raty, za które zapłacono, i pozostają powiązane z odpowiednim klientem i kategorią usług."
+  },
+  "operations": {
+    "title": "Zapisuj dane finansowe w trakcie pracy",
+    "body": "Zakończ wizytę, zarejestruj płatność, dodaj koszt albo wykorzystaj pakiet. Rezerwacje, Kalendarz i Skrzynka utrzymują te działania powiązane z klientami i usługami. Klienci mogą też rezerwować przez Twój własny link."
   }
 }

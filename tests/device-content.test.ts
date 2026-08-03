@@ -182,7 +182,7 @@ describe("device concepts in home FAQ across all published locales", () => {
       // Must explicitly mention iPad/tablet concept in q8
       expect(q8, `${locale} missing iPad/tablet concept in home.faq.q8`).toMatch(/iPad|tablet|планшет|таблет/i)
       // Must explicitly mention laptop/computer concept in q8
-      expect(q8, `${locale} missing laptop/computer concept in home.faq.q8`).toMatch(/laptop|portátil|ordinateur|komputer|ноутбук|ноутбуц|комп|dizüstü/i)
+      expect(q8, `${locale} missing laptop/computer concept in home.faq.q8`).toMatch(/laptop|portátil|computador|ordinateur|komputer|ноутбук|ноутбуц|комп|dizüstü/i)
     })
   }
 })

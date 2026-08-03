@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Einfache Finanzsoftware für Dienstleister",
-    "description": "Erfassen Sie Einnahmen, Ausgaben, Zahlungen und Salden — mit Auswertungen, die mit Kunden, Leistungen und erledigter Arbeit verknüpft sind."
+    "description": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum, mit Auswertungen nach Kategorie und Kunde, verbunden mit der Arbeit dahinter."
   },
   "nav": {
     "features": "Funktionen",
@@ -11,17 +11,18 @@
     "start": "Arbeitsbereich erstellen",
     "start_short": "Erstellen",
     "primaryLabel": "Hauptmenü",
-    "menuLabel": "Menü öffnen"
+    "menuLabel": "Menü öffnen",
+    "devices": "Geräte"
   },
   "hero": {
-    "eyebrow": "Finanzerfassung und Auswertung für selbstständige Dienstleister",
-    "title": "Sehen Sie das Geld",
-    "accent": "hinter Ihrem Geschäft.",
-    "body": "Perelai erfasst Einnahmen, Ausgaben, Zahlungen und offene Beträge und verknüpft die Zahlen mit den Kunden, Leistungen und Terminen dahinter. Sehen Sie, was erledigt, was bezahlt und was noch offen ist.",
+    "eyebrow": "Einfache Finanzsoftware für selbstständige Dienstleister",
+    "title": "Umsatz, Kosten und Gewinn",
+    "accent": "— verbunden mit der Arbeit dahinter.",
+    "body": "Erfassen Sie Umsatz, Kosten und Gewinn für jeden Zeitraum. Schlüsseln Sie das Ergebnis nach Leistungskategorie und Kunde auf – abgeschlossene Arbeit zählt erst zum Umsatz, wenn sie realisiert ist, und erfasste Zahlungen bleiben davon getrennt.",
     "signup": "Arbeitsbereich erstellen",
     "how": "So funktioniert es",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
-    "imageAlt": "Perelai-Arbeitsbereich mit dem operativen Posteingang, bevorstehenden Terminen und Finanzübersicht — Beispieldaten",
+    "imageAlt": "Perelai-Finanzübersicht mit Umsatz, Kosten und berechnetem Gewinn für einen Zeitraum, einer Aufschlüsselung nach Leistungskategorie und einem offenen Auftragssaldo — Beispieldaten.",
     "imageCaption": "Beispieldaten",
     "showcase": {
       "ariaLabel": "Perelai App-Vorschau",
@@ -53,10 +54,10 @@
     "detail": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt über Ihren Link."
   },
   "money": {
-    "title": "Finanzen, die Sinn ergeben",
-    "body": "Abgeschlossene Arbeit und erhaltenes Geld werden getrennt erfasst — so bleibt die Zahl real. Ein abgeschlossener Termin ist kein Umsatz, bis jemand tatsächlich bezahlt. Perelai vermischt beides nicht.",
+    "title": "Umsatz, Kosten und Gewinn für jeden Zeitraum",
+    "body": "Sehen Sie Umsatz, Kosten und berechneten Gewinn für einen Tag, eine Woche, einen Monat, ein Quartal oder ein Jahr.",
     "caption": "Beispieldaten",
-    "detail": "Einnahmen, Kosten und was noch aussteht — ohne Tabellenkalkulation."
+    "detail": "Sehen Sie Umsatz, Kosten und berechneten Gewinn für einen Tag, eine Woche, einen Monat, ein Quartal oder ein Jahr."
   },
   "setup": {
     "eyebrow": "So funktioniert es",
@@ -73,7 +74,7 @@
     "title": "Was Perelai nicht ist",
     "body": "Wenn Sie eines der folgenden Dinge benötigen, sind wir nicht die Richtigen — und das sagen wir Ihnen lieber direkt.",
     "item1Title": "Keine Buchhaltungssoftware",
-    "item1Body": "Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung.",
+    "item1Body": "Perelai erfasst Umsatz, Kosten, berechneten Gewinn, erfasste Zahlungen und was auf offenen Aufträgen noch geschuldet wird, mit Aufschlüsselung nach Kategorie und Kunde. Es macht keine Steuererklärung, keinen Kontenabgleich, erstellt keine gesetzlichen Berichte und gibt keine Finanzberatung.",
     "item2Title": "Kein Marktplatz",
     "item2Body": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt und ohne Marktplatz-Vermittler.",
     "item3Title": "Kein medizinisches Aktensystem",
@@ -100,14 +101,22 @@
     "q5": "Kann ich mehrere Leistungen und Zusatzleistungen verwalten?",
     "a5": "Ja. Jede Vorlage enthält wählbare Leistungen und relevante Optionen für Zusatzleistungen.",
     "q6": "Ist dies eine Buchhaltungssoftware?",
-    "a6": "Nein. Perelai erfasst, was gebucht, abgeschlossen und bezahlt wurde, damit Sie Ihren Cashflow sehen können. Es ist keine Buchhaltung, Steuererklärung oder Finanzberatung.",
+    "a6": "Nein. Perelai ist operative Finanzsoftware. Es erfasst Umsatz, Kosten, berechneten Gewinn, erfasste Zahlungen und was auf offenen Aufträgen noch geschuldet wird, mit Aufschlüsselung nach Kategorie und Kunde. Es macht keine Steuererklärung, keinen Kontenabgleich, erstellt keine gesetzlichen Berichte und gibt keine Finanzberatung.",
     "q7": "Hat Perelai eine iPhone- oder Android-App?",
     "a7": "Perelai ist Finanzsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
     "q8": "Kann ich Perelai auf einem Laptop oder iPad nutzen?",
-    "a8": "Öffnen Sie perelai.app in einem unterstützten Browser auf Ihrem Laptop oder iPad und melden Sie sich mit derselben Anmeldung an, die Sie auf Ihrem Smartphone nutzen. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich."
+    "a8": "Öffnen Sie perelai.app in einem unterstützten Browser auf Ihrem Laptop oder iPad und melden Sie sich mit derselben Anmeldung an, die Sie auf Ihrem Smartphone nutzen. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich.",
+    "q_category": {
+      "question": "Ist das eine Buchhaltungssoftware?",
+      "answer": "Nein. Perelai ist operative Finanzsoftware. Es erfasst Umsatz, Kosten, berechneten Gewinn, erfasste Zahlungen und was auf offenen Aufträgen noch geschuldet wird, mit Aufschlüsselung nach Kategorie und Kunde. Es macht keine Steuererklärung, keinen Kontenabgleich, erstellt keine gesetzlichen Berichte und gibt keine Finanzberatung."
+    },
+    "q_bank": {
+      "question": "Stimmt die Zahl mit meiner Bank überein?",
+      "answer": "Nicht immer. Der ausgewiesene Umsatz umfasst abgeschlossene Arbeit, die realisiert wurde — und ein Paket kann einen Termin abrechnen, ohne dass Geld bewegt wird. Erfasste Zahlungen und Salden der Zahlungskonten zeigen Geldbewegungen separat."
+    }
   },
   "closing": {
-    "title": "Ihre Finanzen, verknüpft mit der Arbeit dahinter.",
+    "title": "Ihr Finanzergebnis, verbunden mit der Arbeit dahinter.",
     "body": "An einem Abend eingerichtet.",
     "cta": "Arbeitsbereich erstellen",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
@@ -137,5 +146,41 @@
     "notesDetail": "Angepinnte Kundennotizen und Besuchsnotizen bleiben in der Kundenhistorie.",
     "summary": "Beispiel für einen Perelai-Arbeitsbereich mit Teamrollen, Arbeitszeiten und einer angepinnten Kundennotiz in einem Unternehmen.",
     "caption": "Beispieldaten"
+  },
+  "finance": {
+    "title": "Umsatz, Kosten und Gewinn für jeden Zeitraum",
+    "body": "Sehen Sie Umsatz, Kosten und berechneten Gewinn für einen Tag, eine Woche, einen Monat, ein Quartal oder ein Jahr.",
+    "caption": "Beispieldaten",
+    "summary": "Beispielhafte Perelai-Finanzübersicht mit monatlichem Umsatz, Kosten und berechnetem Gewinn, einer Aufschlüsselung nach Leistungskategorie und einem offenen Auftragssaldo.",
+    "fixture": {
+      "category": {
+        "color": "Farbleistungen",
+        "styling": "Styling & Finish"
+      },
+      "openOrders": "aus offenen Aufträgen",
+      "orderInstalment": "3er-Serienauftrag, 1. Rate",
+      "records": {
+        "visitPayment": "Zahlung, zugeordnet zu einem Termin",
+        "packageRedemption": "Paketeinlösung, keine Zahlungsbewegung",
+        "orderInstalment": "Zahlung, zugeordnet zu einem Auftrag/einer Rate",
+        "noShowFee": "Zahlung, zugeordnet zu einem als „nicht erschienen\" markierten Termin"
+      }
+    }
+  },
+  "states": {
+    "title": "Abgeschlossen, realisiert, erfasst und offen sind unterschiedliche Zustände",
+    "body": "Ein Termin kann abgeschlossen sein, ohne dass der Umsatz schon realisiert ist. Wird ein Termin über ein vorausbezahltes Paket abgerechnet, entsteht keine neue Geldbewegung. Ein offener Auftrag kann noch Monate später geschuldet sein. Perelai hält abgeschlossene Arbeit, realisierten Umsatz, erfasste Zahlungen und offene Auftragssalden auseinander, sodass jede Zahl genau eine Bedeutung hat."
+  },
+  "drivers": {
+    "title": "Sehen Sie, woher das Ergebnis kommt",
+    "body": "Sehen Sie Umsatz nach Leistungskategorie, Kosten nach Kategorie, die Umsatzhistorie eines Kunden und wie sich das Ergebnis über die Zeit verändert."
+  },
+  "records": {
+    "title": "Jede Zahl hat Arbeit dahinter",
+    "body": "Zahlungen werden dem jeweiligen Termin, Auftrag oder der Rate zugeordnet, für die sie bezahlt wurden, und bleiben mit dem jeweiligen Kunden und der Leistungskategorie verbunden."
+  },
+  "operations": {
+    "title": "Erfassen Sie Ihre Finanzdaten direkt im Arbeitsalltag",
+    "body": "Schließen Sie einen Termin ab, erfassen Sie eine Zahlung, erfassen Sie einen Kostenposten oder lösen Sie ein Paket ein. Buchung, Kalender und Posteingang halten diese Aktionen mit Kunden und Leistungen verbunden. Kunden können auch über Ihren eigenen Link buchen."
   }
 }

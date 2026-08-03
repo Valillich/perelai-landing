@@ -4,7 +4,7 @@ export const siteConfig = {
   url: "https://perelai.com",
   title: "Perelai — Simple Finance Software for Service Businesses",
   description:
-    "Track income, expenses, payments and balances, with financial analytics connected to your clients, services and completed work.",
+    "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them.",
   links: {
     app: "https://perelai.app",
     booking: "https://book.perelai.app",

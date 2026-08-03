@@ -1,27 +1,28 @@
 {
   "meta": {
     "title": "Perelai — Logiciel de finances simple pour les services",
-    "description": "Suivez les revenus, les dépenses, les paiements et les soldes, avec une analyse financière reliée à vos clients, prestations et travaux réalisés."
+    "description": "Suivez le revenu, les coûts et le profit pour toute période, avec des répartitions par catégorie et par client reliées au travail qui les a générés."
   },
   "nav": {
     "features": "Fonctionnalités",
     "how": "Comment ça marche",
     "pricing": "Tarifs",
-    "login": "Se connecter",
+    "login": "Connexion",
     "start": "Créer un espace de travail",
-    "start_short": "Créer un espace",
-    "primaryLabel": "Navigation principale",
-    "menuLabel": "Ouvrir le menu"
+    "start_short": "Créer",
+    "primaryLabel": "Menu principal",
+    "menuLabel": "Ouvrir le menu",
+    "devices": "Appareils"
   },
   "hero": {
-    "eyebrow": "Suivi financier et analyse pour les indépendants des services",
-    "title": "Voyez l'argent",
-    "accent": "derrière votre activité.",
-    "body": "Perelai suit les revenus, les dépenses, les paiements et les soldes impayés, et relie les chiffres aux clients, aux prestations et aux visites qui les ont générés. Voyez ce qui a été réalisé, ce qui a été encaissé et ce qui reste dû.",
+    "eyebrow": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services",
+    "title": "Revenu, coûts et profit",
+    "accent": "— reliés au travail qui les a générés.",
+    "body": "Suivez le revenu, les coûts et le profit pour toute période. Répartissez le résultat par catégorie de prestation et par client : le travail réalisé ne compte dans le revenu qu'une fois réglé, et les paiements enregistrés restent à part.",
     "signup": "Créer un espace de travail",
     "how": "Voir comment ça marche",
-    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
-    "imageAlt": "Espace de travail Perelai montrant la boîte de réception opérationnelle, les prochaines visites et le résumé financier — données d'exemple",
+    "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration.",
+    "imageAlt": "Aperçu financier Perelai montrant le revenu, les coûts et le profit calculé pour une période, une répartition par catégorie de prestation et un solde de commandes ouvertes — données d'exemple.",
     "imageCaption": "Données d'exemple",
     "showcase": {
       "ariaLabel": "Aperçu de l'application Perelai",
@@ -30,112 +31,156 @@
       "paid": "Payé",
       "pending": "Non payé"
     },
-    "deviceMicro": "Perelai fonctionne dans votre navigateur. L’installation est facultative."
+    "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative."
   },
   "problem": {
     "title": "Vous connaissez déjà cette journée",
-    "pain1Title": "Réservations par DM",
-    "pain1Body": "Les clients écrivent à 23h. Vous faites une capture d'écran, promettez de vérifier votre agenda demain, et vous l'oubliez au réveil.",
-    "pain2Title": "Des notes éparpillées partout",
-    "pain2Body": "Quelle formule de couleur avez-vous utilisée la dernière fois ? C'est dans une note, un message ou au dos d'un ticket — quelque part.",
-    "pain3Title": "L'argent reconstitué en fin de mois",
-    "pain3Body": "« Combien ai-je vraiment gagné cette semaine ? » Vous le devinez entre les virements, les espèces et les clients qui ont dit qu'ils paieraient la prochaine fois."
+    "pain1Title": "Des réservations dans vos messages",
+    "pain1Body": "Les clients écrivent à 23h. Vous faites une capture d'écran, promettez de regarder votre calendrier demain, et oubliez le lendemain matin.",
+    "pain2Title": "Des notes à trois endroits",
+    "pain2Body": "Quelle formule de couleur a été utilisée la dernière fois ? C'est dans une note, un SMS ou au dos d'un reçu — quelque part.",
+    "pain3Title": "L'argent reconstitué à la fin du mois",
+    "pain3Body": "« Combien ai-je vraiment gagné cette semaine ? » Vous rassemblez tout cela entre PayPal, espèces et un client qui a promis de payer la prochaine fois."
   },
   "inbox": {
-    "title": "La boîte de réception qui reste jusqu'à ce que vous agissiez",
-    "body": "Une notification vous informe d'un événement. La boîte de réception opérationnelle le conserve jusqu'à ce que vous le résolviez. Réservations non confirmées, visites impayées, suivis clients — une liste dédiée à ce qui demande votre décision.",
+    "title": "La Boîte de réception qui reste jusqu'à ce que vous traitiez",
+    "body": "Une notification vous indique qu'il s'est passé quelque chose. La Boîte de réception le conserve jusqu'à ce que vous le traitiez. Réservations non confirmées, visites non payées, clients à relancer : une liste de ce qui demande votre décision.",
     "caption": "Données d'exemple",
-    "detail": "Une liste de ce qui requiert votre attention — elle reste là jusqu'à résolution, pas seulement jusqu'à lecture."
+    "detail": "Une liste de ce qui demande votre décision : elle reste là jusqu'à ce que vous la résolviez, pas seulement jusqu'à ce que vous la lisiez."
   },
   "booking": {
-    "title": "Un lien unique pour votre bio",
-    "body": "Partagez un lien unique. Les clients choisissent une prestation, un membre de l'équipe et un créneau. Mettez-le dans votre bio, envoyez-le par DM, imprimez-le sur une carte — c'est le vôtre.",
-    "detail": "Votre lien de réservation vous appartient. Les clients réservent directement via votre propre lien."
+    "title": "Un lien pour votre bio",
+    "body": "Partagez un lien unique. Les clients choisissent une prestation, une personne et un créneau. Mettez-le dans votre bio, envoyez-le par message, imprimez-le sur une carte : il est à vous.",
+    "detail": "Votre lien de réservation vous appartient. Les clients réservent directement sur votre lien."
   },
   "money": {
-    "title": "Des chiffres qui tombent juste",
-    "body": "Le travail effectué et l'argent encaissé sont enregistrés séparément — c'est pourquoi le chiffre est réel. Une visite terminée n'est pas un revenu tant que quelqu'un ne l'a pas réellement payée. Perelai ne mélange pas les deux.",
+    "title": "Revenu, coûts et profit pour toute période",
+    "body": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année.",
     "caption": "Données d'exemple",
-    "detail": "Revenus, coûts et soldes restants — sans aucun tableur."
+    "detail": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année."
   },
   "setup": {
     "eyebrow": "Comment ça marche",
-    "title": "Configurez-le en un après-midi",
-    "body": "Pas de migration compliquée le week-end. Choisissez votre métier, importez vos clients et partagez votre lien.",
-    "step1Title": "Choisissez votre métier",
-    "step1Body": "32 modèles de métier, chacun avec une liste de prestations modifiable. Les modèles pertinents incluent également les options et dépenses associées.",
+    "title": "Configuré en une soirée",
+    "body": "Pas de migration le week-end. Choisissez votre activité, importez vos clients, partagez votre lien.",
+    "step1Title": "Choisissez votre activité",
+    "step1Body": "32 types d'entreprises sélectionnables, chacun avec une liste de prestations modifiable. Les modèles concernés incluent aussi des options et des coûts reliés.",
     "step2Title": "Importez vos clients",
-    "step2Body": "Importez vos contacts depuis votre téléphone via vCard. Connectez votre Google Agenda et gardez les deux plateformes synchronisées.",
+    "step2Body": "Importez les contacts de votre téléphone via vCard. Connectez votre Google Agenda et gardez les deux côtés synchronisés.",
     "step3Title": "Partagez votre lien de réservation",
-    "step3Body": "Un lien unique pour votre bio. Les clients réservent directement via votre propre lien."
+    "step3Body": "Un lien dans votre bio. Les clients réservent directement sur votre propre lien."
   },
   "not": {
     "title": "Ce que Perelai n'est pas",
-    "body": "Si vous cherchez l'un de ces éléments, nous ne sommes pas faits pour vous — et nous préférons vous le dire en toute transparence.",
+    "body": "Si vous avez besoin de l'une de ces choses, nous ne sommes pas la bonne solution — et nous préférons le dire clairement.",
     "item1Title": "Pas un logiciel de comptabilité",
-    "item1Body": "Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait pas de comptabilité, de déclarations fiscales ni de conseil financier.",
-    "item2Title": "Pas une plateforme de mise en relation",
-    "item2Body": "Votre lien de réservation vous appartient. Les clients réservent directement avec vous, sans intermédiaire.",
-    "item3Title": "Pas un système de dossier médical",
-    "item3Body": "Il n'offre pas de dossiers cliniques, de suivi de diagnostic ni de gestion de patients."
+    "item1Body": "Perelai suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier.",
+    "item2Title": "Pas une plateforme d'intermédiaire",
+    "item2Body": "Votre lien vous appartient. Les clients réservent directement sans intermédiaire.",
+    "item3Title": "Pas un système de dossiers médicaux",
+    "item3Body": "Pas de dossiers cliniques, pas de suivi des diagnostics, pas de gestion des soins des patients."
   },
   "nicheRouter": {
-    "title": "Trouvez votre métier",
-    "body": "Des pages pensées pour votre manière réelle de travailler.",
+    "title": "Trouvez votre activité",
+    "body": "Des pages conçues pour votre manière de travailler.",
     "coloristsLabel": "Pour les coloristes indépendants",
-    "coloristsDescription": "Réservations, gestion client et trésorerie pour les coloristes qui travaillent selon leurs propres règles.",
-    "lashArtistsLabel": "Pour les lash artists indépendants",
-    "lashArtistsDescription": "Visibilité sur les réservations, les clients et l'argent pour les spécialistes du regard qui fixent leurs propres règles."
+    "coloristsDescription": "Réservations, clients et gestion financière pour les coloristes qui travaillent selon leurs propres règles.",
+    "lashArtistsLabel": "Pour les lash artists indépendantes",
+    "lashArtistsDescription": "Réservations, suivi des clientes et visibilité financière pour les lash artists qui travaillent selon leurs propres règles."
   },
   "faq": {
-    "title": "Foire aux questions",
+    "title": "Questions",
     "q1": "Comment les clients réservent-ils avec moi ?",
-    "a1": "Partagez votre lien direct de réservation. Les clients choisissent une prestation et un horaire directement sur votre page.",
+    "a1": "Partagez votre lien de réservation direct. Les clients choisissent une prestation et un créneau directement sur votre page.",
     "q2": "Que se passe-t-il juste après mon inscription ?",
-    "a2": "Vous confirmez votre e-mail puis effectuez une configuration rapide : votre métier, vos prestations, votre équipe (si vous en avez) et des importations optionnelles.",
-    "q3": "Mes prestations seront-elles déjà préremplies ?",
-    "a3": "Oui — chaque modèle de métier démarre avec une liste de prestations ou d'articles modifiables. Les modèles pertinents incluent aussi des options et des dépenses associées.",
+    "a2": "Vous confirmez votre e-mail, puis vous passez une courte configuration : votre activité, vos prestations, votre équipe (si vous en avez une) et des importations facultatives.",
+    "q3": "Mes prestations seront-elles déjà présentes ?",
+    "a3": "Oui — chaque type d'entreprise commence avec une liste modifiable de prestations ou d'articles. Les modèles concernés incluent aussi des options et des coûts.",
     "q4": "Puis-je importer mes clients et mon agenda ?",
-    "a4": "Oui : vous pouvez importer les contacts de votre téléphone (vCard) et effectuer une synchronisation bidirectionnelle avec Google Agenda.",
-    "q5": "Puis-je gérer différentes prestations et options ?",
-    "a5": "Oui. Chaque modèle comprend des options personnalisables adaptées à vos prestations.",
-    "q6": "S'agit-il d'un logiciel de comptabilité ?",
-    "a6": "Non. Perelai enregistre ce qui est réservé, réalisé et payé pour vous donner une vision claire de votre trésorerie. Il ne fait ni comptabilité, ni déclaration fiscale, ni conseil financier.",
+    "a4": "Oui : contacts depuis votre téléphone (vCard) et synchronisation bidirectionnelle avec Google Agenda.",
+    "q5": "Puis-je gérer plusieurs prestations et options ?",
+    "a5": "Oui. Chaque modèle inclut des prestations sélectionnables et des options pertinentes.",
+    "q6": "Est-ce un logiciel de comptabilité ?",
+    "a6": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier.",
     "q7": "Perelai a-t-il une application iPhone ou Android ?",
-    "a7": "Perelai est un logiciel de finances pour les indépendants des services. Perelai n’est pas listé sur l’App Store ni sur Google Play ; il fonctionne dans un navigateur web sur perelai.app. Installer Perelai depuis un navigateur est facultatif et n’est pas proposé par tous les navigateurs. Perelai a besoin d’une connexion internet.",
+    "a7": "Perelai est un logiciel de finances pour les entreprises de services indépendantes. Perelai n'est pas présent sur l'App Store ni sur Google Play ; il fonctionne dans un navigateur web sur perelai.app. L'installation depuis un navigateur est facultative et n'est pas proposée par tous les navigateurs. Perelai nécessite une connexion internet.",
     "q8": "Puis-je utiliser Perelai sur un ordinateur portable ou un iPad ?",
-    "a8": "Ouvrez perelai.app dans un navigateur pris en charge sur votre ordinateur portable ou iPad et connectez-vous avec le même identifiant que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise."
+    "a8": "Ouvrez perelai.app dans un navigateur compatible sur votre ordinateur ou iPad et connectez-vous avec les mêmes identifiants que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise.",
+    "q_category": {
+      "question": "Est-ce un logiciel de comptabilité ?",
+      "answer": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier."
+    },
+    "q_bank": {
+      "question": "Le chiffre correspondra-t-il à ma banque ?",
+      "answer": "Pas toujours. Le revenu du résumé représente le travail réalisé qui a été réglé, et un forfait prépayé peut régler une visite sans déplacer d'argent. Les paiements enregistrés et les soldes des comptes de paiement montrent le mouvement d'argent séparément."
+    }
   },
   "closing": {
-    "title": "Vos finances, reliées au travail qui les a générées.",
-    "body": "Configurez-le en un après-midi.",
+    "title": "Votre résultat financier, relié au travail qui l'a généré.",
+    "body": "Configuré en une soirée.",
     "cta": "Créer un espace de travail",
-    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration."
+    "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration."
   },
   "footer": {
-    "description": "Logiciel de finances simple pour les indépendants des services.",
+    "description": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services.",
     "product": "Produit",
     "company": "Mentions légales",
-    "forColorists": "Pour coloristes indépendants",
-    "forLashArtists": "Pour lash artists indépendants",
+    "forColorists": "Pour les coloristes indépendants",
+    "forLashArtists": "Pour les lash artists indépendantes",
     "rights": "Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation"
   },
   "devices": {
-    "title": "Un seul espace de travail. La vue change avec l’écran.",
-    "body": "Perelai fonctionne dans un navigateur web. Connectez-vous sur perelai.app là où vous travaillez : c'est le même espace de travail. Sur iPhone, vous pouvez l'ajouter à l'écran d'accueil, où il s'ouvre depuis sa propre icône dans sa propre fenêtre. L'installation est facultative, et il n'existe aucune fiche App Store ou Google Play.",
+    "title": "Un espace de travail. L'affichage s'adapte à l'écran.",
+    "body": "Perelai fonctionne dans un navigateur web. Connectez-vous sur perelai.app où que vous travailliez, et vous retrouvez le même espace de travail. Sur iPhone, vous pouvez l'ajouter à l'écran d'accueil, où il s'ouvre depuis sa propre icône dans sa propre fenêtre. L'installation est facultative, et il n'existe aucune fiche App Store ou Google Play.",
     "caption": "Données d'exemple",
-    "summary": "Un espace de travail Perelai, ouvert depuis un navigateur pris en charge sur un téléphone, une tablette ou un ordinateur.",
+    "summary": "Un espace de travail Perelai, ouvert depuis un navigateur compatible sur téléphone, tablette ou ordinateur.",
     "link": "Comment ouvrir Perelai"
   },
   "collaboration": {
-    "title": "Travaillez en solo. Ajoutez du monde selon vos besoins.",
-    "body": "Commencez avec votre propre espace de travail. Ajoutez des accès équipe uniquement lorsque cela devient utile.",
+    "title": "Travaillez en solo. Ajoutez du monde quand vous en avez besoin.",
+    "body": "Commencez avec votre propre espace de travail. Ajoutez des accès d'équipe seulement quand cela devient utile.",
     "teamTitle": "Votre équipe",
-    "teamBody": "Invitez des membres de l'équipe avec un accès Personnel ou Responsable. Regroupez les plannings, congés et prestations attribuées.",
-    "notesDetail": "Les notes clients épinglées et les notes de visite restent dans l'historique du client.",
-    "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note client épinglée au sein d'une seule entreprise.",
-    "caption": "Exemple de données"
+    "teamBody": "Invitez des membres d'équipe avec un accès Personnel ou Supervisor. Conservez les plannings, les congés et les prestations attribuées ensemble.",
+    "notesDetail": "Les notes de clients épinglées et les notes de visites restent dans l'historique du client.",
+    "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note de client épinglée au sein d'une entreprise.",
+    "caption": "Données d'exemple"
+  },
+  "finance": {
+    "title": "Revenu, coûts et profit pour toute période",
+    "body": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année.",
+    "caption": "Données d'exemple",
+    "summary": "Exemple d'aperçu financier Perelai avec le revenu, les coûts et le profit calculé du mois, une répartition par catégorie de prestation et un solde de commandes ouvertes.",
+    "fixture": {
+      "category": {
+        "color": "Prestations couleur",
+        "styling": "Coiffage & finitions"
+      },
+      "openOrders": "sur commandes ouvertes",
+      "orderInstalment": "Commande à 3 séances, 1er versement",
+      "records": {
+        "visitPayment": "Paiement affecté à une visite",
+        "packageRedemption": "Utilisation d'un forfait, sans mouvement d'argent",
+        "orderInstalment": "Paiement affecté à une commande/un versement",
+        "noShowFee": "Paiement affecté à une visite marquée absente"
+      }
+    }
+  },
+  "states": {
+    "title": "Réalisé, réglé, enregistré et dû sont des états différents",
+    "body": "Une visite peut être réalisée sans que le revenu ne soit encore réglé. Si une visite est réglée par un forfait prépayé, cela n'entraîne aucun mouvement d'argent. Une commande ouverte peut rester due des mois plus tard. Perelai garde le travail réalisé, le revenu réglé, les paiements enregistrés et les soldes de commandes ouvertes séparés, afin que chaque chiffre ne signifie qu'une seule chose."
+  },
+  "drivers": {
+    "title": "Voyez d'où vient le résultat",
+    "body": "Consultez le revenu par catégorie de prestation, les coûts par catégorie, l'historique de revenu d'un client et l'évolution du résultat dans le temps."
+  },
+  "records": {
+    "title": "Chaque chiffre a du travail derrière lui",
+    "body": "Les paiements sont affectés à la visite, à la commande ou au versement qu'ils ont réglé, et restent reliés au client et à la catégorie de prestation concernés."
+  },
+  "operations": {
+    "title": "Mettez à jour votre suivi financier au fil de votre activité",
+    "body": "Terminez une visite, enregistrez un paiement, ajoutez un coût ou utilisez un forfait. Réservation, Calendrier et Boîte de réception gardent ces actions reliées aux clients et aux prestations. Les clients peuvent aussi réserver via votre propre lien."
   }
 }

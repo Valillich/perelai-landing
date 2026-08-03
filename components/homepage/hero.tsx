@@ -93,6 +93,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
                   paid: t("hero.showcase.paid"),
                   pending: t("hero.showcase.pending"),
                   caption: t("hero.imageCaption"),
+                  categoryColor: t("finance.fixture.category.color"),
+                  categoryStyling: t("finance.fixture.category.styling"),
+                  openOrders: t("finance.fixture.openOrders"),
                 }}
               />
             </Reveal>

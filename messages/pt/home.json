@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Perelai — Software financeiro simples para serviços",
-    "description": "Controle receitas, despesas, pagamentos e saldos, com análise financeira ligada aos seus clientes, serviços e trabalho concluído."
+    "description": "Acompanhe receita, custos e lucro para qualquer período, com detalhamento por categoria e cliente conectado aos serviços que os geraram."
   },
   "nav": {
     "features": "Recursos",
@@ -9,19 +9,20 @@
     "pricing": "Preços",
     "login": "Entrar",
     "start": "Criar espaço de trabalho",
-    "start_short": "Criar espaço",
+    "start_short": "Criar",
     "primaryLabel": "Navegação principal",
-    "menuLabel": "Abrir menu"
+    "menuLabel": "Abrir menu",
+    "devices": "Dispositivos"
   },
   "hero": {
-    "eyebrow": "Controle financeiro e análise para negócios de serviços independentes",
-    "title": "Veja o dinheiro",
-    "accent": "por trás do seu negócio.",
-    "body": "O Perelai registra receitas, despesas, pagamentos e saldos em aberto, e liga os números aos clientes, serviços e atendimentos por trás deles. Veja o que foi concluído, o que foi pago e o que continua em aberto.",
+    "eyebrow": "Software financeiro simples para prestadores de serviços independentes",
+    "title": "Receita, custos e lucro",
+    "accent": "— conectados aos serviços que os geraram.",
+    "body": "Acompanhe receita, custos e lucro para qualquer período. Detalhe o resultado por categoria de serviço e cliente: o trabalho só entra na receita depois de liquidado, e os pagamentos registrados ficam à parte.",
     "signup": "Criar espaço de trabalho",
-    "how": "Ver como funciona",
+    "how": "Veja como funciona",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração.",
-    "imageAlt": "Espaço de trabalho do Perelai mostrando a Entrada Operacional, próximas visitas e resumo financeiro — dados de exemplo",
+    "imageAlt": "Visão financeira do Perelai mostrando receita, custos e lucro calculado de um período, um detalhamento por categoria de serviço e um saldo de pedidos em aberto — dados de exemplo.",
     "imageCaption": "Dados de exemplo",
     "showcase": {
       "ariaLabel": "Prévia do aplicativo Perelai",
@@ -30,112 +31,156 @@
       "paid": "Pago",
       "pending": "Pendente"
     },
-    "deviceMicro": "O Perelai funciona no seu navegador. A instalação é opcional."
+    "deviceMicro": "O Perelai funciona em um navegador web. Instalar é opcional."
   },
   "problem": {
-    "title": "Você já conhece esse dia",
-    "pain1Title": "Agendamentos pelo Instagram ou WhatsApp",
-    "pain1Body": "Os clientes mandam mensagem às 23h. Você tira print, promete olhar a agenda amanhã e esquece no dia seguinte.",
-    "pain2Title": "Anotações espalhadas em todo lugar",
-    "pain2Body": "Qual fórmula de cor você usou da última vez? Está em um bloco de notas, em uma conversa ou no verso de um comprovante — em algum lugar.",
+    "title": "Você já conhece este dia",
+    "pain1Title": "Agendamentos nas suas mensagens",
+    "pain1Body": "Clientes escrevem às 23h. Você tira print, promete olhar a agenda amanhã e esquece até a manhã seguinte.",
+    "pain2Title": "Anotações em três lugares",
+    "pain2Body": "Qual fórmula de cor usou da última vez? Está em uma nota, em uma mensagem ou no verso de um recibo — em algum lugar.",
     "pain3Title": "Dinheiro reconstruído no fim do mês",
-    "pain3Body": "«Quanto eu realmente ganhei esta semana?» Você tenta adivinhar somando PIX, dinheiro e clientes que disseram que pagariam na próxima."
+    "pain3Body": "«Quanto ganhei de fato esta semana?» Você junta tudo entre Pix, dinheiro e uma cliente que disse que pagaria na próxima vez."
   },
   "inbox": {
-    "title": "A caixa de entrada que não some até você resolver",
-    "body": "Uma notificação avisa que algo aconteceu. A Entrada Operacional guarda essa pendência até você resolvê-la. Agendamentos não confirmados, visitas não pagas, clientes para retornar — uma lista focada no que exige sua decisão.",
+    "title": "A Caixa de entrada que fica até você resolver",
+    "body": "Uma notificação avisa que algo aconteceu. A Caixa de entrada guarda até você resolver. Agendamentos não confirmados, atendimentos não pagos, clientes para retorno: uma lista do que exige sua decisão.",
     "caption": "Dados de exemplo",
-    "detail": "Uma lista do que precisa da sua atenção — fica lá até você resolver, não apenas até você ler."
+    "detail": "Uma lista do que exige sua decisão: fica lá até você resolver, não só até você ler."
   },
   "booking": {
-    "title": "Um único link para a sua bio",
-    "body": "Compartilhe um link exclusivo. Os clientes escolhem um serviço, o profissional e o horário. Coloque na bio, envie no WhatsApp, imprima no cartão — é seu.",
-    "detail": "Seu link de agendamento é seu. Os clientes agendam diretamente pelo seu próprio link."
+    "title": "Um link para sua bio",
+    "body": "Compartilhe um link. Clientes escolhem serviço, profissional e horário. Coloque na bio, envie por mensagem, imprima no cartão: é seu.",
+    "detail": "Seu link de agendamento é seu. Os clientes agendam diretamente no seu link."
   },
   "money": {
-    "title": "Contas que fecham de verdade",
-    "body": "O trabalho realizado e o dinheiro recebido são registrados separadamente — por isso o número é real. Uma visita concluída não é receita até que alguém realmente pague. O Perelai não mistura as duas coisas.",
+    "title": "Receita, custos e lucro para qualquer período",
+    "body": "Veja receita, custos e lucro calculated por dia, semana, mês, trimestre ou ano.",
     "caption": "Dados de exemplo",
-    "detail": "Receitas, custos e saldos pendentes — sem precisar de planilhas."
+    "detail": "Veja receita, custos e lucro calculado por dia, semana, mês, trimestre ou ano."
   },
   "setup": {
     "eyebrow": "Como funciona",
-    "title": "Configure em uma tarde",
-    "body": "Sem migrações complicadas no fim de semana. Escolha sua profissão, importe seus clientes e compartilhe seu link.",
-    "step1Title": "Escolha sua profissão",
-    "step1Body": "32 modelos de negócio, cada um com uma lista de serviços personalizável. Os modelos relevantes incluem também adicionais e despesas vinculadas.",
+    "title": "Configurado em uma noite",
+    "body": "Sem migração de fim de semana. Escolha seu segmento, importe seus clientes, compartilhe seu link.",
+    "step1Title": "Escolha seu segmento",
+    "step1Body": "32 tipos de negócios selecionáveis, cada um com uma lista editável de serviços. Modelos relevantes também incluem opcionais e custos vinculados.",
     "step2Title": "Traga seus clientes",
-    "step2Body": "Importe contatos do celular via vCard. Conecte seu Google Agenda e mantenha as duas plataformas sincronizadas.",
+    "step2Body": "Importe contatos do seu celular via vCard. Conecte seu Google Agenda e mantenha ambos os lados sincronizados.",
     "step3Title": "Compartilhe seu link de agendamento",
-    "step3Body": "Um link exclusivo para sua bio. Os clientes agendam diretamente pela sua página."
+    "step3Body": "Um link na sua bio. Os clientes agendam diretamente no seu próprio link."
   },
   "not": {
-    "title": "O que o Perelai NÃO é",
-    "body": "Se você precisa de algo desta lista, não somos o sistema ideal — e preferimos ser transparentes sobre isso.",
+    "title": "O que o Perelai não é",
+    "body": "Se você precisa de alguma destas coisas, não somos a opção certa — e preferimos dizer isso abertamente.",
     "item1Title": "Não é um software de contabilidade",
-    "item1Body": "O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, declaração de impostos nem consultoria financeira.",
-    "item2Title": "Não é um marketplace",
-    "item2Body": "Seu link de agendamento é seu. Os clientes agendam diretamente com você, sem intermediários ou comissões.",
+    "item1Body": "O Perelai acompanha receita, custos, lucro calculado, pagamentos registrados e o que ainda está em aberto em pedidos, com detalhamento por categoria e cliente. Não prepara nem entrega declaração de impostos, não concilia contas bancárias, não gera relatórios oficiais nem oferece consultoria financeira.",
+    "item2Title": "Não é um intermediário",
+    "item2Body": "Seu link de agendamento é seu. Os clientes agendam diretamente sem intermediários.",
     "item3Title": "Não é um sistema de prontuário médico",
-    "item3Body": "Não oferece prontuários clínicos, acompanhamento de diagnósticos ou gestão de pacientes."
+    "item3Body": "Sem registros clínicos, sem acompanhamento de diagnósticos, sem gestão de tratamentos de pacientes."
   },
   "nicheRouter": {
-    "title": "Encontre sua profissão",
-    "body": "Páginas pensadas exatamente para a sua rotina de trabalho.",
+    "title": "Encontre seu segmento",
+    "body": "Páginas feitas para como você realmente trabalha.",
     "coloristsLabel": "Para coloristas independentes",
-    "coloristsDescription": "Agendamentos, clientes e fluxo de caixa para coloristas que trabalham no próprio ritmo.",
+    "coloristsDescription": "Agendamentos, clientes e fluxo de caixa para coloristas que trabalham sob suas próprias regras.",
     "lashArtistsLabel": "Para lash artists independentes",
-    "lashArtistsDescription": "Clareza em agendamentos, clientes e receita para profissionais de cílios que definem suas próprias regras."
+    "lashArtistsDescription": "Agendamentos, atendimento a clientes e visibilidade financeira para lash artists que trabalham sob suas próprias regras."
   },
   "faq": {
-    "title": "Perguntas frequentes",
+    "title": "Perguntas",
     "q1": "Como os clientes agendam comigo?",
-    "a1": "Compartilhe seu link direto de agendamento. Os clientes escolhem o serviço e o horário diretamente na sua página.",
-    "q2": "O que acontece logo após o cadastro?",
-    "a2": "Você confirma seu e-mail e faz uma configuração rápida: sua profissão, seus serviços, sua equipe (se houver) e importações opcionais.",
-    "q3": "Meus serviços já virão pré-cadastrados?",
-    "a3": "Sim — cada modelo de negócio começa com uma lista de serviços editável. Os modelos relevantes incluem também adicionais e custos vinculados.",
-    "q4": "Posso importar meus clientes e minha agenda?",
-    "a4": "Sim: você pode importar os contatos do seu celular (vCard) e configurar a sincronização bidirecional com o Google Agenda.",
-    "q5": "Posso gerenciar diferentes serviços e adicionais?",
-    "a5": "Sim. Cada modelo inclui opções personalizáveis de serviços e adicionais relevantes.",
-    "q6": "Este é um software de contabilidade?",
-    "a6": "Não. O Perelai registra o que foi agendado, realizado e pago para dar clareza ao seu fluxo de caixa. Não faz contabilidade, impostos ou gestão tributária.",
-    "q7": "O Perelai tem uma app para iPhone ou Android?",
-    "a7": "O Perelai é software financeiro para negócios de serviços independentes. O Perelai não está listado na App Store nem no Google Play; funciona num navegador web em perelai.app. Instalar o Perelai a partir de um navegador é opcional e não é oferecido por todos os navegadores. O Perelai precisa de uma ligação à internet.",
-    "q8": "Posso usar o Perelai num portátil ou iPad?",
-    "a8": "Abra perelai.app num navegador suportado no seu portátil ou iPad e inicie sessão com o mesmo acesso que usa no telemóvel. Um acesso, um espaço de trabalho. É necessária uma ligação à internet."
+    "a1": "Compartilhe seu link de agendamento direto. Os clientes escolhem o serviço e o horário diretamente na sua página.",
+    "q2": "O que acontece logo após me cadastrar?",
+    "a2": "Você confirma seu e-mail e faz uma configuração rápida: seu segmento, seus serviços, sua equipe (se tiver) e importações opcionais.",
+    "q3": "Meus serviços já estarão lá?",
+    "a3": "Sim: cada tipo de negócio começa com uma lista editável de serviços ou itens. Modelos relevantes também incluem opcionais e custos.",
+    "q4": "Posso trazer meus clientes e minha agenda?",
+    "a4": "Sim: contatos do seu celular (vCard) e sincronização bidirecional com o Google Agenda.",
+    "q5": "Posso gerenciar múltiplos serviços e opcionais?",
+    "a5": "Sim. Cada modelo inclui serviços selecionáveis e opções relevantes.",
+    "q6": "Isso é um software de contabilidade?",
+    "a6": "Não. O Perelai é um software financeiro operacional. Acompanha receita, custos, lucro calculado, pagamentos registrados e o que ainda está em aberto em pedidos, com detalhamento por categoria e cliente. Não prepara nem entrega declaração de impostos, não concilia contas bancárias, não gera relatórios oficiais nem oferece consultoria financeira.",
+    "q7": "O Perelai tem um aplicativo para iPhone ou Android?",
+    "a7": "O Perelai é um software financeiro para prestadores de serviços independentes. O Perelai não está na App Store nem no Google Play; funciona em um navegador web em perelai.app. Instalar o Perelai a partir de um navegador é opcional e não é oferecido por todos os navegadores. O Perelai precisa de uma conexão à internet.",
+    "q8": "Posso usar o Perelai em um computador ou iPad?",
+    "a8": "Abra perelai.app em um navegador compatível no seu computador ou iPad e entre com o mesmo acesso que usa no celular. Um acesso, um espaço de trabalho. É necessária uma conexão à internet.",
+    "q_category": {
+      "question": "Isso é um software de contabilidade?",
+      "answer": "Não. O Perelai é um software financeiro operacional. Acompanha receita, custos, lucro calculado, pagamentos registrados e o que ainda está em aberto em pedidos, com detalhamento por categoria e cliente. Não prepara nem entrega declaração de impostos, não concilia contas bancárias, não gera relatórios oficiais nem oferece consultoria financeira."
+    },
+    "q_bank": {
+      "question": "O número vai bater com o meu banco?",
+      "answer": "Nem sempre. A receita do resumo representa trabalho concluído que foi liquidado, e um pacote pré-pago pode liquidar um atendimento sem movimentar dinheiro. Pagamentos registrados e saldos das contas de pagamento mostram a movimentação de dinheiro separadamente."
+    }
   },
   "closing": {
-    "title": "Suas finanças, ligadas ao trabalho por trás delas.",
-    "body": "Configure em uma tarde.",
+    "title": "Seu resultado financeiro, conectado aos serviços que o geraram.",
+    "body": "Configurado em uma noite.",
     "cta": "Criar espaço de trabalho",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração."
   },
   "footer": {
-    "description": "Software financeiro simples para negócios de serviços independentes.",
+    "description": "Software financeiro simples para prestadores de serviços independentes.",
     "product": "Produto",
-    "company": "Informações legais",
+    "company": "Jurídico",
     "forColorists": "Para coloristas independentes",
     "forLashArtists": "Para lash artists independentes",
     "rights": "Todos os direitos reservados.",
-    "privacy": "Política de Privacidade",
-    "terms": "Termos de Serviço"
+    "privacy": "Política de privacidade",
+    "terms": "Termos de serviço"
   },
   "devices": {
-    "title": "Um espaço de trabalho. A vista muda com o ecrã.",
-    "body": "O Perelai funciona em um navegador web. Entre em perelai.app de onde você trabalha: é o mesmo espaço de trabalho. No iPhone dá para adicioná-lo à tela de início, onde ele abre a partir do próprio ícone em uma janela própria. Instalar é opcional e não há listagem na App Store nem no Google Play.",
+    "title": "Um espaço de trabalho. A exibição se adapta à tela.",
+    "body": "O Perelai funciona em um navegador web. Entre em perelai.app de onde você estiver trabalhando e você estará no mesmo espaço de trabalho. No iPhone, você pode adicioná-lo à tela de início, de onde ele abre a partir do próprio ícone em sua própria janela. Instalar é opcional, e não há listagem na App Store nem na Google Play.",
     "caption": "Dados de exemplo",
-    "summary": "Um espaço de trabalho Perelai, aberto a partir de um navegador suportado num telemóvel, tablet ou computador.",
+    "summary": "Um espaço de trabalho Perelai, aberto a partir de um navegador compatível em celular, tablet ou computador.",
     "link": "Como abrir o Perelai"
   },
   "collaboration": {
     "title": "Trabalhe solo. Adicione pessoas quando precisar.",
-    "body": "Comece com seu próprio espaço de trabalho. Adicione acesso para a equipe apenas quando for útil.",
+    "body": "Comece com seu próprio espaço de trabalho. Adicione acessos de equipe apenas quando for útil.",
     "teamTitle": "Sua equipe",
-    "teamBody": "Convide membros da equipe com acesso de Equipe ou Supervisor. Mantenha horários, folgas e serviços atribuídos em um só lugar.",
-    "notesDetail": "Notas fixadas do cliente e notas de visitas permanecem no histórico do cliente.",
-    "summary": "Exemplo de espaço de trabalho do Perelai mostrando funções de equipe, horários e uma nota fixada do cliente em uma única empresa.",
+    "teamBody": "Convide membros da equipe com acesso de Funcionário ou Supervisor. Mantenha horários, folgas e serviços atribuídos juntos.",
+    "notesDetail": "Notas fixadas de clientes e notas de atendimentos ficam no histórico do cliente.",
+    "summary": "Exemplo de espaço de trabalho Perelai mostrando funções de equipe, horários e uma nota fixada de cliente dentro de uma empresa.",
     "caption": "Dados de exemplo"
+  },
+  "finance": {
+    "title": "Receita, custos e lucro para qualquer período",
+    "body": "Veja receita, custos e lucro calculado por dia, semana, mês, trimestre ou ano.",
+    "caption": "Dados de exemplo",
+    "summary": "Visão financeira de exemplo do Perelai com receita, custos e lucro calculado mensais, um detalhamento por categoria de serviço e um saldo de pedidos em aberto.",
+    "fixture": {
+      "category": {
+        "color": "Serviços de coloração",
+        "styling": "Finalização e styling"
+      },
+      "openOrders": "em pedidos em aberto",
+      "orderInstalment": "Pedido de 3 sessões, 1ª parcela",
+      "records": {
+        "visitPayment": "Pagamento vinculado a um atendimento",
+        "packageRedemption": "Resgate de pacote, sem movimentação de dinheiro",
+        "orderInstalment": "Pagamento vinculado a um pedido/uma parcela",
+        "noShowFee": "Pagamento vinculado a um atendimento marcado como não comparecimento"
+      }
+    }
+  },
+  "states": {
+    "title": "Concluído, liquidado, registrado e em aberto são estados diferentes",
+    "body": "Um atendimento pode estar concluído antes de a receita ser liquidada. Quando um atendimento é liquidado com um pacote pré-pago, não há nova movimentação de dinheiro. Um pedido pode continuar com saldo em aberto por meses. O Perelai mantém trabalho concluído, receita liquidada, pagamentos registrados e saldos de pedidos em aberto separados, para que cada número signifique só uma coisa."
+  },
+  "drivers": {
+    "title": "Veja de onde vem o resultado",
+    "body": "Veja a receita por categoria de serviço, os custos por categoria, o histórico de receita de um cliente e como o resultado muda ao longo do tempo."
+  },
+  "records": {
+    "title": "Todo número tem trabalho por trás",
+    "body": "Os pagamentos são vinculados ao atendimento, ao pedido ou à parcela que pagaram, e permanecem conectados ao cliente e à categoria de serviço correspondentes."
+  },
+  "operations": {
+    "title": "Mantenha o controle financeiro atualizado enquanto trabalha",
+    "body": "Conclua um atendimento, registre um pagamento, adicione um custo ou resgate um pacote. Agendamentos, Agenda e Caixa de entrada mantêm essas ações conectadas a clientes e serviços. Os clientes também podem agendar pelo seu próprio link."
   }
 }

@@ -986,3 +986,17 @@ anything other than this set.
 | 4 | **P2** | **Forbidden-term tests must use boundary-correct rules, not naive substrings.** Verified during the FM2 gate rerun: a substring check for the FC4 ban `revenue by service` fires on the *allowed* phrase `revenue by service category`, and a check for `balance` fires on the allowed compounds `open-order balance` and `payment-account balance`. Both are false positives that would block approved copy. FM4A's public-copy forbidden-term test must encode: **FC4** → `revenue by service(?!\s+categor)`; **balance** → allowed only when qualified (`open-order balance`, `payment-account balance`), banned bare; **accounting / bookkeeping / tax / reconcile** → allowed only inside an explicit denial sentence (the approved `q_category.answer` contains all four legitimately). Document these three exceptions in the test itself. | FM4A |
 | 5 | P3 | The finance pivot still has **no first-party VOC** (§II.6). The five-second comprehension protocol has not been run and the retired proxy research does not transfer across the category change. | Pre-FM9 research |
 | 6 | P3 | Localization lead's condition stands: if three or more locales cannot carry the approved H1 naturally, **return to FM2** — do not invent nine different headlines. The approved H1 is metric-led rather than metaphor-led, which should reduce this risk relative to Candidate A. | FM5 |
+
+---
+
+## II.9 Implementation Status Appendix (FM4A — 2026-08-03)
+
+**Phase:** FM4A — Approved English Message Implementation
+**Status:** **PASS**
+
+### Executed Changes:
+1. `messages/en/home.json`: Applied exact owner-approved English source set (§II.7.1–§II.7.5) verbatim across `meta`, `hero`, `finance`, `states`, `drivers`, `records`, `operations`, `faq` (`q_category`, `q_bank`), `closing`, and `footer`. Removed prohibited terms `income` and unscoped `outstanding balances`.
+2. `lib/site.ts`: Updated `siteConfig.description` to match `homeEn.meta.description` verbatim (`"Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."`), resolving P1 defect II.1 on the site metadata surface.
+3. `tests/english-finance-contract.test.ts`: Created focused contract and forbidden-terms test suite verifying verbatim match with §II.7 freeze and enforcing the repaired terminology table rules without false positives (P2 defect II.8 #4).
+4. Preserved non-English locale files (`de`, `es`, `fr`, `pl`, `pt`, `ru`, `tr`, `uk`), React layouts/components, metadata route renderers, JSON-LD, OG images, tracking, and product code.
+

@@ -1,6 +1,7 @@
 import catalog from "@/data/niche-catalog.generated.json"
 import uiStrings from "@/data/app-ui-strings.generated.json"
 import type { AppLocale } from "@/i18n/locales"
+import { getFinanceKpis } from "@/lib/finance-fixture"
 import {
   formatCurrency,
   localePrimaryMarket,
@@ -84,6 +85,17 @@ const CLIENT_NAMES: Record<AppLocale, string[]> = {
   de: ["Lena", "Jonas", "Greta", "Felix", "Nora"],
   pt: ["Maria", "João", "Ana", "Lucas", "Inês"],
   tr: ["Ayşe", "Mehmet", "Fatma", "Ali", "Zeynep"],
+}
+
+/** English pool keys used by the finance fixture, mapped to the locale's display names. */
+export const CLIENT_NAME_KEYS = ["Mia", "Leo", "Ana", "Noah", "Eva"] as const
+
+export function clientDisplayName(
+  locale: AppLocale,
+  englishKey: (typeof CLIENT_NAME_KEYS)[number],
+): string {
+  const index = CLIENT_NAME_KEYS.indexOf(englishKey)
+  return CLIENT_NAMES[locale][index] ?? englishKey
 }
 
 const EXAMPLE_CAPTIONS: Record<AppLocale, string> = {
@@ -195,9 +207,9 @@ export function buildMockDataset(
   }
 
   const trustTotal = visits.reduce((sum, visit) => sum + visit.amount, 0)
-  const revenue = seededAmount(templateId, "kpi:revenue", 1800, 900)
-  const cost = seededAmount(templateId, "kpi:cost", 400, 350)
-  const profit = revenue - cost
+
+  // KPI figures come from the finance fixture (FM3 §6 / FM4B) — never seeded.
+  const kpis = getFinanceKpis()
 
   const sparkline = Array.from({ length: 8 }, (_, index) =>
     seededAmount(templateId, `spark:${index}`, 20, 80),
@@ -226,7 +238,7 @@ export function buildMockDataset(
     calendarMonthLabel: monthFormatter.format(instant),
     inboxCount: visits.length,
     trustTotal,
-    kpis: { revenue, cost, profit },
+    kpis,
     sparkline,
     labels,
     exampleCaption: EXAMPLE_CAPTIONS[locale],

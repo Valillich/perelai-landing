@@ -1,10 +1,11 @@
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Hero } from "./hero"
-import { Problem } from "./problem"
-import { Inbox } from "./inbox"
-import { Booking } from "./booking"
-import { Money } from "./money"
+import { FinanceOverview } from "./finance-overview"
+import { FinancialStates } from "./financial-states"
+import { Drivers } from "./drivers"
+import { ConnectedRecords } from "./connected-records"
+import { Operations } from "./operations"
 import { Devices } from "./devices"
 import { Collaboration } from "./collaboration"
 import { Setup } from "./setup"
@@ -17,15 +18,16 @@ import type { PublishedLocale } from "@/i18n/locales"
 
 export function Homepage({ locale }: { locale: PublishedLocale }) {
   return (
-    <main className="min-h-screen bg-background text-foreground flex flex-col">
+    <main className="flex min-h-screen flex-col bg-background text-foreground">
       <PageViewTracker landingPath="/" locale={locale} pageType="home" />
       <LandingHeader locale={locale} sectionAnchors />
       <div className="flex-1">
         <Hero locale={locale} />
-        <Problem />
-        <Inbox locale={locale} />
-        <Booking />
-        <Money locale={locale} />
+        <FinanceOverview locale={locale} />
+        <FinancialStates />
+        <Drivers locale={locale} />
+        <ConnectedRecords locale={locale} />
+        <Operations locale={locale} />
         <Devices locale={locale} />
         <Collaboration locale={locale} />
         <Setup />
