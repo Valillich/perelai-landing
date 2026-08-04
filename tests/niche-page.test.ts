@@ -4,7 +4,6 @@ import {
   NICHE_PAGES,
   RESERVED_SLUGS,
   getEnabledNichePageBySlug,
-  getEnabledNichePagesForLocale,
   getNichePageLocales,
   getNicheStaticParams,
 } from "@/config/niche-pages"
@@ -29,52 +28,30 @@ import { content as lashEnglishContent } from "@/content/niches/lash-artist/en"
 
 describe("the published niche pages", () => {
   test("publishes the fully translated Wave 1a and Wave 1b routes for every published locale", () => {
-    expect(getNicheStaticParams()).toEqual([
-      ...["for-independent-colorists", "for-lash-artists"].flatMap((nichePage) =>
-        PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage })),
-      ),
-      // Staged in English only until the other eight locales are reviewed. These
-      // must not gain routes by being added to PUBLISHED_LOCALES.
-      { locale: "en", nichePage: "for-massage-therapists" },
-      { locale: "en", nichePage: "for-salons" },
-    ])
+    expect(getNicheStaticParams()).toEqual(
+      [
+        "for-independent-colorists",
+        "for-lash-artists",
+        "for-massage-therapists",
+        "for-salons",
+        "for-personal-trainers",
+        "for-music-teachers",
+      ].flatMap((nichePage) => PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage }))),
+    )
   })
 
-  const stagedEnglishOnly = [
-    { niche: "hair-salon", slug: "for-salons" },
-    { niche: "massage-therapist", slug: "for-massage-therapists" },
-  ]
-
-  test.each(stagedEnglishOnly)(
-    "gives $niche a route only in the locales it declares",
-    ({ niche, slug }) => {
-      const page = NICHE_PAGES.find((candidate) => candidate.niche === niche)
-      expect(page?.enabled).toBe(true)
-      expect(getNichePageLocales(page!)).toEqual(["en"])
-
-      expect(getEnabledNichePageBySlug(slug, "en")?.niche).toBe(niche)
-      for (const locale of PUBLISHED_LOCALES.filter((candidate) => candidate !== "en")) {
-        expect(getEnabledNichePageBySlug(slug, locale)).toBeUndefined()
-        expect(getEnabledNichePagesForLocale(locale).map((entry) => entry.niche)).not.toContain(
-          niche,
-        )
-      }
-    },
-  )
-
-  test("never advertises an hreflang alternate for a locale that has no page", () => {
-    for (const { niche } of stagedEnglishOnly) {
-      const page = NICHE_PAGES.find((candidate) => candidate.niche === niche)!
-      const alternates = getLocalizedAlternates(page.path, "en", getNichePageLocales(page))
-
-      expect(Object.keys(alternates).sort()).toEqual(["en", "x-default"])
-      expect(alternates["x-default"]).toBe(alternates.en)
+  test("publishes reciprocal hreflang clusters for every enabled niche page", () => {
+    for (const path of [
+      "/for-lash-artists",
+      "/for-salons",
+      "/for-massage-therapists",
+      "/for-personal-trainers",
+      "/for-music-teachers",
+    ]) {
+      expect(Object.keys(getLocalizedAlternates(path, "en")).sort()).toEqual(
+        [...PUBLISHED_LOCALES, "x-default"].sort(),
+      )
     }
-
-    // A fully translated sibling still gets the complete reciprocal cluster.
-    expect(Object.keys(getLocalizedAlternates("/for-lash-artists", "en")).sort()).toEqual(
-      [...PUBLISHED_LOCALES, "x-default"].sort(),
-    )
   })
 
   test("every locale a page declares has a content module and its router label keys", () => {

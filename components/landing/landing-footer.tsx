@@ -20,6 +20,8 @@ export function LandingFooter({
   // footer never links to a route that 404s.
   const hasSalons = !!getEnabledNichePageBySlug("for-salons", locale)
   const hasMassage = !!getEnabledNichePageBySlug("for-massage-therapists", locale)
+  const hasPersonalTrainers = !!getEnabledNichePageBySlug("for-personal-trainers", locale)
+  const hasMusicTeachers = !!getEnabledNichePageBySlug("for-music-teachers", locale)
 
   return (
     <footer className="border-t border-border px-4 py-14 sm:px-6">
@@ -79,6 +81,26 @@ export function LandingFooter({
                     className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {t("forMassageTherapists")}
+                  </Link>
+                </li>
+              )}
+              {hasPersonalTrainers && (
+                <li>
+                  <Link
+                    href="/for-personal-trainers"
+                    className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {t("forPersonalTrainers")}
+                  </Link>
+                </li>
+              )}
+              {hasMusicTeachers && (
+                <li>
+                  <Link
+                    href="/for-music-teachers"
+                    className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {t("forMusicTeachers")}
                   </Link>
                 </li>
               )}

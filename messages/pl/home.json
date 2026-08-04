@@ -88,7 +88,15 @@
     "coloristsLabel": "Dla niezależnych kolorystów",
     "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach.",
     "lashArtistsLabel": "Dla niezależnych stylistek rzęs",
-    "lashArtistsDescription": "Rezerwacje, praca z klientkami i widoczność pieniędzy dla stylistek rzęs pracujących na własnych zasadach."
+    "lashArtistsDescription": "Rezerwacje, praca z klientkami i widoczność pieniędzy dla stylistek rzęs pracujących na własnych zasadach.",
+    "salonsLabel": "Dla właścicieli salonów fryzjerskich",
+    "salonsDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla salonu — z podziałem według kategorii usług i klienta.",
+    "massageLabel": "Dla masażystów",
+    "massageDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla praktyki solo — z przedpłaconymi karnetami i otwartymi saldami osobno.",
+    "personalTrainerLabel": "Dla trenerów personalnych",
+    "personalTrainerDescription": "Przychód z sesji, zarejestrowane koszty i wyliczony zysk — z rozliczeniami karnetów i historią klienta osobno.",
+    "musicTeacherLabel": "Dla nauczycieli muzyki",
+    "musicTeacherDescription": "Przychód z lekcji, zarejestrowane koszty i wyliczony zysk dla prywatnego studia — z rozliczeniami karnetów osobno."
   },
   "faq": {
     "title": "Pytania",
@@ -131,7 +139,11 @@
     "forLashArtists": "Dla niezależnych stylistek rzęs",
     "rights": "Wszelkie prawa zastrzeżone.",
     "privacy": "Polityka prywatności",
-    "terms": "Warunki korzystania"
+    "terms": "Warunki korzystania",
+    "forSalons": "Dla właścicieli salonów fryzjerskich",
+    "forMassageTherapists": "Dla masażystów",
+    "forPersonalTrainers": "Dla trenerów personalnych",
+    "forMusicTeachers": "Dla nauczycieli muzyki"
   },
   "devices": {
     "title": "Jedna przestrzeń pracy. Widok zmienia się z ekranem.",

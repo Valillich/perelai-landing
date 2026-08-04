@@ -88,7 +88,15 @@
     "coloristsLabel": "Para coloristas independientes",
     "coloristsDescription": "Reservas, clientes y flujo de caja para coloristas que trabajan con sus propias reglas.",
     "lashArtistsLabel": "Para estilistas de pestañas independientes",
-    "lashArtistsDescription": "Reservas, trabajo con clientes y visibilidad del dinero para estilistas de pestañas que trabajan con sus propias reglas."
+    "lashArtistsDescription": "Reservas, trabajo con clientes y visibilidad del dinero para estilistas de pestañas que trabajan con sus propias reglas.",
+    "salonsLabel": "Para dueños de salones de peluquería",
+    "salonsDescription": "Ingresos, costes registrados y beneficio calculado para un salón, agrupados por categoría de servicio y cliente.",
+    "massageLabel": "Para masajistas",
+    "massageDescription": "Ingresos, costes registrados y beneficio calculado para una práctica en solitario, con paquetes prepago y saldos abiertos por separado.",
+    "personalTrainerLabel": "Para entrenadores personales",
+    "personalTrainerDescription": "Ingresos de sesiones, costes registrados y beneficio calculado, con canjes de paquete e historial de cliente aparte.",
+    "musicTeacherLabel": "Para profesores de música",
+    "musicTeacherDescription": "Ingresos de clases, costes registrados y beneficio calculado para un estudio privado, con canjes de paquete aparte."
   },
   "faq": {
     "title": "Preguntas",
@@ -131,7 +139,11 @@
     "forLashArtists": "Para estilistas de pestañas independientes",
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de privacidad",
-    "terms": "Términos de servicio"
+    "terms": "Términos de servicio",
+    "forSalons": "Para dueños de salones de peluquería",
+    "forMassageTherapists": "Para masajistas",
+    "forPersonalTrainers": "Para entrenadores personales",
+    "forMusicTeachers": "Para profesores de música"
   },
   "devices": {
     "title": "Un espacio de trabajo. La vista cambia con la pantalla.",

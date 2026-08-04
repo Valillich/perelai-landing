@@ -88,7 +88,15 @@
     "coloristsLabel": "Para coloristas independentes",
     "coloristsDescription": "Agendamentos, clientes e fluxo de caixa para coloristas que trabalham sob suas próprias regras.",
     "lashArtistsLabel": "Para lash artists independentes",
-    "lashArtistsDescription": "Agendamentos, atendimento a clientes e visibilidade financeira para lash artists que trabalham sob suas próprias regras."
+    "lashArtistsDescription": "Agendamentos, atendimento a clientes e visibilidade financeira para lash artists que trabalham sob suas próprias regras.",
+    "salonsLabel": "Para donos de salões de cabeleireiro",
+    "salonsDescription": "Faturamento, custos registrados e lucro calculado para um salão, agrupados por categoria de serviço e cliente.",
+    "massageLabel": "Para massoterapeutas",
+    "massageDescription": "Faturamento, custos registrados e lucro calculado para uma prática solo, com pacotes pré-pagos e saldos abertos separados.",
+    "personalTrainerLabel": "Para personal trainers",
+    "personalTrainerDescription": "Faturamento de sessões, custos registrados e lucro calculado — com resgates de pacote e histórico do cliente separados.",
+    "musicTeacherLabel": "Para professores de música",
+    "musicTeacherDescription": "Faturamento de aulas, custos registrados e lucro calculado para um estúdio privado — com resgates de pacote separados."
   },
   "faq": {
     "title": "Perguntas",
@@ -131,7 +139,11 @@
     "forLashArtists": "Para lash artists independentes",
     "rights": "Todos os direitos reservados.",
     "privacy": "Política de privacidade",
-    "terms": "Termos de serviço"
+    "terms": "Termos de serviço",
+    "forSalons": "Para donos de salões de cabeleireiro",
+    "forMassageTherapists": "Para massoterapeutas",
+    "forPersonalTrainers": "Para personal trainers",
+    "forMusicTeachers": "Para professores de música"
   },
   "devices": {
     "title": "Um espaço de trabalho. A exibição se adapta à tela.",

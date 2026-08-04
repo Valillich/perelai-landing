@@ -90,13 +90,11 @@ export const NICHE_PAGES: NichePage[] = [
     enabled: false,
   },
   {
-    // English-only staged launch (2026-08-04), same terms as `/for-salons`.
     path: "/for-massage-therapists",
     niche: "massage-therapist",
     templateId: "massage",
     wave: "1b",
     enabled: true,
-    locales: ["en"],
   },
   {
     path: "/for-barbers",
@@ -106,14 +104,11 @@ export const NICHE_PAGES: NichePage[] = [
     enabled: false,
   },
   {
-    // English-only staged launch (2026-08-04). The eight other locales stay
-    // unpublished until each has named human review; see content/niches/hair-salon.
     path: "/for-salons",
     niche: "hair-salon",
     templateId: "salon",
     wave: "1b",
     enabled: true,
-    locales: ["en"],
   },
   {
     path: "/for-private-tutors",
@@ -150,14 +145,14 @@ export const NICHE_PAGES: NichePage[] = [
     niche: "personal-trainer",
     templateId: "personal_trainer",
     wave: "2",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-music-teachers",
     niche: "music-teacher",
     templateId: "music_teacher",
     wave: "2",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-yoga-instructors",

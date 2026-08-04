@@ -88,7 +88,15 @@
     "coloristsLabel": "Bağımsız renklendirme uzmanları için",
     "coloristsDescription": "Kendi kurallarıyla çalışan renklendirme uzmanları için randevular, müşteriler ve nakit akışı.",
     "lashArtistsLabel": "Bağımsız kirpik tasarımcıları için",
-    "lashArtistsDescription": "Kendi kurallarıyla çalışan kirpik tasarımcıları için randevular, müşteri çalışmaları ve finansal görünürlük."
+    "lashArtistsDescription": "Kendi kurallarıyla çalışan kirpik tasarımcıları için randevular, müşteri çalışmaları ve finansal görünürlük.",
+    "salonsLabel": "Kuaför salonu sahipleri için",
+    "salonsDescription": "Bir salon için ciro, kaydedilen maliyetler ve hesaplanan kâr — hizmet kategorisi ve müşteriye göre gruplanır.",
+    "massageLabel": "Masaj terapistleri için",
+    "massageDescription": "Solo bir pratik için ciro, kaydedilen maliyetler ve hesaplanan kâr — ön ödemeli paketler ve açık bakiyeler ayrı tutulur.",
+    "personalTrainerLabel": "Kişisel antrenörler için",
+    "personalTrainerDescription": "Seans cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ve müşteri geçmişi ayrı okunaklı.",
+    "musicTeacherLabel": "Müzik öğretmenleri için",
+    "musicTeacherDescription": "Özel stüdyo için ders cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ayrı okunaklı."
   },
   "faq": {
     "title": "Sorular",
@@ -131,7 +139,11 @@
     "forLashArtists": "Bağımsız kirpik tasarımcıları için",
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Koşulları"
+    "terms": "Kullanım Koşulları",
+    "forSalons": "Kuaför salonu sahipleri için",
+    "forMassageTherapists": "Masaj terapistleri için",
+    "forPersonalTrainers": "Kişisel antrenörler için",
+    "forMusicTeachers": "Müzik öğretmenleri için"
   },
   "devices": {
     "title": "Tek bir çalışma alanı. Görünüm ekranla değişir.",

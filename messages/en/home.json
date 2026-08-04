@@ -151,7 +151,11 @@
     "salonsLabel": "For hair salon owners",
     "salonsDescription": "Revenue, recorded costs and calculated profit for a salon, grouped by service category and client.",
     "massageLabel": "For massage therapists",
-    "massageDescription": "Revenue, recorded costs and calculated profit for a solo practice, with prepaid packages and open balances kept separate."
+    "massageDescription": "Revenue, recorded costs and calculated profit for a solo practice, with prepaid packages and open balances kept separate.",
+    "personalTrainerLabel": "For personal trainers",
+    "personalTrainerDescription": "Session revenue, recorded costs and calculated profit for a solo practice, with package redemptions kept separate.",
+    "musicTeacherLabel": "For music teachers",
+    "musicTeacherDescription": "Lesson revenue, recorded costs and calculated profit for a private studio, with package redemptions kept separate."
   },
   "faq": {
     "title": "Questions",
@@ -194,6 +198,8 @@
     "forLashArtists": "For independent lash artists",
     "forSalons": "For hair salon owners",
     "forMassageTherapists": "For massage therapists",
+    "forPersonalTrainers": "For personal trainers",
+    "forMusicTeachers": "For music teachers",
     "devices": "How to open Perelai?",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",

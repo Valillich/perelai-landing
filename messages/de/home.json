@@ -88,7 +88,15 @@
     "coloristsLabel": "Für unabhängige Coloristen",
     "coloristsDescription": "Buchungen, Kunden und Cashflow für Coloristen, die nach ihren eigenen Regeln arbeiten.",
     "lashArtistsLabel": "Für unabhängige Lash Artists",
-    "lashArtistsDescription": "Buchungen, Kundenarbeit und finanzielle Übersicht für Lash Artists, die nach ihren eigenen Regeln arbeiten."
+    "lashArtistsDescription": "Buchungen, Kundenarbeit und finanzielle Übersicht für Lash Artists, die nach ihren eigenen Regeln arbeiten.",
+    "salonsLabel": "Für Friseursalon-Inhaber",
+    "salonsDescription": "Umsatz, erfasste Kosten und berechneter Gewinn für einen Salon — aufgeschlüsselt nach Leistungskategorie und Kunde.",
+    "massageLabel": "Für Massagetherapeuten",
+    "massageDescription": "Umsatz, erfasste Kosten und berechneter Gewinn für eine Solo-Praxis — mit vorausbezahlten Paketen und offenen Salden getrennt.",
+    "personalTrainerLabel": "Für Personal Trainer",
+    "personalTrainerDescription": "Umsatz aus Einheiten, erfasste Kosten und berechneter Gewinn — mit Paketeinlösungen und Kundenhistorie getrennt lesbar.",
+    "musicTeacherLabel": "Für Musiklehrer",
+    "musicTeacherDescription": "Umsatz aus Unterricht, erfasste Kosten und berechneter Gewinn für ein Privatstudio — mit Paketeinlösungen getrennt lesbar."
   },
   "faq": {
     "title": "Fragen",
@@ -131,7 +139,11 @@
     "forLashArtists": "Für unabhängige Lash Artists",
     "rights": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutzerklärung",
-    "terms": "Nutzungsbedingungen"
+    "terms": "Nutzungsbedingungen",
+    "forSalons": "Für Friseursalon-Inhaber",
+    "forMassageTherapists": "Für Massagetherapeuten",
+    "forPersonalTrainers": "Für Personal Trainer",
+    "forMusicTeachers": "Für Musiklehrer"
   },
   "devices": {
     "title": "Ein Arbeitsbereich. Die Ansicht ändert sich mit dem Bildschirm.",
