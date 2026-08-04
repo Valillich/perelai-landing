@@ -16,7 +16,7 @@
   },
   "hero": {
     "eyebrow": "Einfache Finanzsoftware für selbstständige Dienstleister",
-    "title": "Ein klarer Blick auf Ihre Geschäftsfinanzen.",
+    "title": "Ein klarer Blick auf Ihre Geschäftsfinanzen",
     "accent": "Ohne komplizierte Tabellen",
     "body": "Verwalten Sie Ihren Terminplan und Ihre Finanzen an einem Ort. Verfolgen Sie den Umsatz nach Kunden, schlüsseln Sie das Ergebnis nach Leistungskategorien auf und treffen Sie fundierte Entscheidungen mit klaren Zahlen, die Sie jederzeit im Blick haben.",
     "signup": "Arbeitsbereich erstellen",
@@ -29,7 +29,9 @@
       "calendarTab": "Kalender",
       "financeTab": "Finanzen",
       "paid": "Bezahlt",
-      "pending": "Unbezahlt"
+      "pending": "Unbezahlt",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     },
     "deviceMicro": "Perelai läuft in Ihrem Browser. Die Installation ist optional."
   },

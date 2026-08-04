@@ -30,9 +30,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
             <Reveal delay={0.04}>
               <h1 className="text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[56px]">
                 {t("hero.title")}{" "}
-                <span className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">
+                <div className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">
                   {t("hero.accent")}
-                </span>
+                </div>
               </h1>
             </Reveal>
 
@@ -96,6 +96,8 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
                   categoryColor: t("finance.fixture.category.color"),
                   categoryStyling: t("finance.fixture.category.styling"),
                   openOrders: t("finance.fixture.openOrders"),
+                  pauseAutoplay: t("hero.showcase.pauseAutoplay"),
+                  resumeAutoplay: t("hero.showcase.resumeAutoplay"),
                 }}
               />
             </Reveal>

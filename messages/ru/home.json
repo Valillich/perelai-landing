@@ -29,7 +29,9 @@
       "calendarTab": "Календарь",
       "financeTab": "Финансы",
       "paid": "Оплачено",
-      "pending": "Не оплачено"
+      "pending": "Не оплачено",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     },
     "deviceMicro": "Perelai работает в вашем браузере. Установка необязательна."
   },

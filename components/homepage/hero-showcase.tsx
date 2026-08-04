@@ -1,6 +1,7 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
+import { Pause, Play } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 import { MockCalendarScreen } from "@/components/mock/MockCalendarScreen"
 import { MockFinanceScreen } from "@/components/mock/MockFinanceScreen"
@@ -19,6 +20,8 @@ interface HeroShowcaseProps {
     categoryColor: string
     categoryStyling: string
     openOrders: string
+    pauseAutoplay?: string
+    resumeAutoplay?: string
   }
 }
 
@@ -30,10 +33,14 @@ const ROTATE_MS = 7000
  */
 export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
   const [index, setIndex] = useState(0)
-  const [paused, setPaused] = useState(false)
+  const [hoverOrFocusPaused, setHoverOrFocusPaused] = useState(false)
+  const [explicitlyPaused, setExplicitlyPaused] = useState(false)
   /** Once the visitor picks a screen, stop yanking it away from them. */
   const [userPicked, setUserPicked] = useState(false)
   const prefersReducedMotion = useReducedMotion()
+
+  const pauseLabel = labels.pauseAutoplay ?? "Pause automatic rotation"
+  const resumeLabel = labels.resumeAutoplay ?? "Resume automatic rotation"
 
   const screens = [
     { key: "finance", tab: labels.financeTab },
@@ -44,23 +51,31 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
     setIndex((current) => (current + 1) % screens.length)
   }, [screens.length])
 
+  const isPaused = Boolean(
+    explicitlyPaused || userPicked || hoverOrFocusPaused || prefersReducedMotion,
+  )
+
   // WCAG 2.2.2: auto-updating content needs a way to stop it. Hover/focus
-  // pauses, picking a tab stops it for good, and reduced motion never starts it.
+  // temporarily pauses, explicit button or picking a tab stops it, and reduced motion never starts it.
   useEffect(() => {
-    if (paused || userPicked || prefersReducedMotion) return
+    if (isPaused) return
     const timer = window.setInterval(advance, ROTATE_MS)
     return () => window.clearInterval(timer)
-  }, [advance, paused, prefersReducedMotion, userPicked])
+  }, [advance, isPaused])
+
+  const togglePause = useCallback(() => {
+    setExplicitlyPaused((current) => !current)
+  }, [])
 
   return (
     <div
       role="group"
       aria-roledescription="carousel"
       aria-label={labels.ariaLabel}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
+      onMouseEnter={() => setHoverOrFocusPaused(true)}
+      onMouseLeave={() => setHoverOrFocusPaused(false)}
+      onFocus={() => setHoverOrFocusPaused(true)}
+      onBlur={() => setHoverOrFocusPaused(false)}
     >
       <figure className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-3 shadow-[0_24px_60px_-20px_rgba(var(--brand-600-rgb),0.3)] backdrop-blur-xl sm:p-4">
         <p className="sr-only">
@@ -104,30 +119,48 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
         </div>
 
         <figcaption className="mt-3 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
-            {screens.map((screen, screenIndex) => (
-              <button
-                key={screen.key}
-                type="button"
-                onClick={() => {
-                  setIndex(screenIndex)
-                  setUserPicked(true)
-                }}
-                aria-current={screenIndex === index}
-                className={cn(
-                  "rounded-full px-3 py-1.5 text-[12px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600",
-                  screenIndex === index
-                    ? "bg-card text-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground",
-                )}
-              >
-                {screen.tab}
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 rounded-full bg-secondary p-1">
+              {screens.map((screen, screenIndex) => (
+                <button
+                  key={screen.key}
+                  type="button"
+                  onClick={() => {
+                    setIndex(screenIndex)
+                    setUserPicked(true)
+                  }}
+                  aria-current={screenIndex === index}
+                  className={cn(
+                    "rounded-full px-3 py-1.5 text-[12px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600",
+                    screenIndex === index
+                      ? "bg-card text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
+                >
+                  {screen.tab}
+                </button>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={togglePause}
+              aria-label={isPaused ? resumeLabel : pauseLabel}
+              aria-pressed={isPaused}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
+            >
+              {isPaused ? (
+                <Play className="h-3.5 w-3.5" aria-hidden="true" />
+              ) : (
+                <Pause className="h-3.5 w-3.5" aria-hidden="true" />
+              )}
+            </button>
           </div>
+
           <span className="text-[12px] font-medium text-subtle-text">{labels.caption}</span>
         </figcaption>
       </figure>
     </div>
   )
 }
+

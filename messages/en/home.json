@@ -16,7 +16,7 @@
   },
   "hero": {
     "eyebrow": "Simple finance software for independent service businesses",
-    "title": "A Clear View of Your Business Finances.",
+    "title": "A Clear View of Your Business Finances",
     "accent": "Without Complicated Spreadsheets",
     "body": "Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips.",
     "signup": "Create workspace",
@@ -26,11 +26,13 @@
     "imageAlt": "Perelai finance overview showing revenue, costs and calculated profit for a period, a service-category breakdown and an open-order balance — example data.",
     "imageCaption": "Example data",
     "showcase": {
-      "ariaLabel": "Perelai app preview",
+      "ariaLabel": "Perelai interactive app preview",
       "calendarTab": "Calendar",
-      "financeTab": "Money",
-      "paid": "Paid",
-      "pending": "Unpaid"
+      "financeTab": "Finance",
+      "paid": "Settled",
+      "pending": "Open order",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     }
   },
   "finance": {

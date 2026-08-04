@@ -16,7 +16,7 @@
   },
   "hero": {
     "eyebrow": "Bağımsız hizmet işletmeleri için basit finans yazılımı",
-    "title": "İşletme finansınıza net bir bakış.",
+    "title": "İşletme finansınıza net bir bakış",
     "accent": "Karmaşık e-tablolar olmadan",
     "body": "Programınızı ve finansınızı tek bir yerden yönetin. Müşteri bazında geliri takip edin, sonucu hizmet kategorisine göre ayırın ve her an elinizin altındaki net verilerle bilinçli kararlar alın.",
     "signup": "Çalışma alanı oluştur",
@@ -29,7 +29,9 @@
       "calendarTab": "Takvim",
       "financeTab": "Finans",
       "paid": "Ödendi",
-      "pending": "Ödenmedi"
+      "pending": "Ödenmedi",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     },
     "deviceMicro": "Perelai tarayıcınızda çalışır. Kurulum isteğe bağlıdır."
   },

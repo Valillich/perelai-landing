@@ -16,7 +16,7 @@
   },
   "hero": {
     "eyebrow": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services",
-    "title": "Une vision claire des finances de votre activité.",
+    "title": "Une vision claire des finances de votre activité",
     "accent": "Sans tableurs complexes",
     "body": "Gérez votre emploi du temps et vos finances au même endroit. Suivez les revenus par client, ventilez le résultat par catégorie de prestation et prenez des décisions éclairées grâce à une vue claire, toujours accessible.",
     "signup": "Créer un espace de travail",
@@ -29,7 +29,9 @@
       "calendarTab": "Calendrier",
       "financeTab": "Finances",
       "paid": "Payé",
-      "pending": "Non payé"
+      "pending": "Non payé",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     },
     "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative."
   },

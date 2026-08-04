@@ -4,7 +4,6 @@ import { MockVisitCard } from "@/components/mock/MockVisitCard"
 import { useMarket } from "@/lib/region"
 import { cn } from "@/lib/cn"
 import {
-  buildTrustSentence,
   formatReadyToConfirm,
   formatTrustAmount,
   type MockDataset,

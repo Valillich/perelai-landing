@@ -16,7 +16,7 @@
   },
   "hero": {
     "eyebrow": "Proste oprogramowanie finansowe dla niezależnych firm usługowych",
-    "title": "Jasny obraz finansów firmy.",
+    "title": "Jasny obraz finansów firmy",
     "accent": "Bez skomplikowanych arkuszy",
     "body": "Zarządzaj terminarzem i finansami w jednym miejscu. Śledź przychód według klientów, analizuj wynik w podziale na kategorie usług i podejmuj świadome decyzje dzięki przejrzystym danym dostępnym w każdej chwili.",
     "signup": "Utwórz przestrzeń pracy",
@@ -29,7 +29,9 @@
       "calendarTab": "Kalendarz",
       "financeTab": "Pieniądze",
       "paid": "Opłacone",
-      "pending": "Nieopłacone"
+      "pending": "Nieopłacone",
+      "pauseAutoplay": "Pause automatic rotation",
+      "resumeAutoplay": "Resume automatic rotation"
     },
     "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna."
   },
