@@ -5,12 +5,12 @@
     "ogAlt": "Przestrzeń kalendarza Perelai w przeglądarce — przykładowe dane"
   },
   "nav": {
-    "label": "Urządzenia"
+    "label": "Jak otworzyć Perelai?"
   },
   "hero": {
     "eyebrow": "Jak otworzyć Perelai",
     "title": "Otwórz Perelai w przeglądarce, którą już masz.",
-    "body": "Zaloguj się na perelai.app i zacznij pracę. Instalacja Perelai jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
+    "body": "Zaloguj się na <url>perelai.app</url> i zacznij pracę. Instalacja Perelai jest opcjonalna i zależy od przeglądarki. Nie ma wpisu w App Store ani Google Play.",
     "signup": "Utwórz przestrzeń pracy",
     "login": "Zaloguj się",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",

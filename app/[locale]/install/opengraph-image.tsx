@@ -27,7 +27,8 @@ export default async function OpenGraphImage({ params }: Props) {
   return renderOgCardImage({
     eyebrow: devices.nav.label,
     title: devices.hero.title,
-    body: devices.hero.body,
+    // Strip rich-text tags from the install hero body (page uses t.rich).
+    body: devices.hero.body.replace(/<\/?url>/g, ""),
     localeLabel: locale,
     // The three honest limitations, so a shared preview carries the same
     // platform answer as the page and cannot promise a store listing.

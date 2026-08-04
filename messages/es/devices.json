@@ -5,12 +5,12 @@
     "ogAlt": "Espacio de calendario de Perelai en un navegador web — datos de ejemplo"
   },
   "nav": {
-    "label": "Dispositivos"
+    "label": "Cómo abrir Perelai?"
   },
   "hero": {
     "eyebrow": "Cómo abrir Perelai",
     "title": "Abre Perelai en el navegador que ya tienes.",
-    "body": "Inicia sesión en perelai.app y empieza a trabajar. Instalar Perelai es opcional y depende de tu navegador. No hay ficha en App Store ni en Google Play.",
+    "body": "Inicia sesión en <url>perelai.app</url> y empieza a trabajar. Instalar Perelai es opcional y depende de tu navegador. No hay ficha en App Store ni en Google Play.",
     "signup": "Crear espacio de trabajo",
     "login": "Iniciar sesión",
     "micro": "Recibirás un correo de verificación para terminar de configurarlo.",

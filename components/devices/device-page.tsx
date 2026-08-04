@@ -9,6 +9,7 @@ import { MockDesktopShell } from "@/components/mock/MockDesktopShell"
 import type { PublishedLocale } from "@/i18n/locales"
 import { buildAppScreenDataset } from "@/lib/app-screen-mock"
 import { localePrimaryMarket } from "@/lib/market"
+import { siteConfig } from "@/lib/site"
 
 /** Fixed reference instant — SSG output must stay byte-identical across builds. */
 const REFERENCE_INSTANT = "2026-07-15T12:00:00.000Z"
@@ -57,7 +58,16 @@ export function DevicePage({ locale }: DevicePageProps) {
               {t("hero.title")}
             </h1>
             <p className="mt-5 text-pretty text-[17px] leading-relaxed text-muted-foreground sm:text-[18px]">
-              {t("hero.body")}
+              {t.rich("hero.body", {
+                url: (chunks) => (
+                  <a
+                    href={siteConfig.links.app}
+                    className="font-medium text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <CtaButton

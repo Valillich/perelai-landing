@@ -5,12 +5,12 @@
     "ogAlt": "Perelai calendar workspace in a web browser — example data"
   },
   "nav": {
-    "label": "Devices"
+    "label": "How to open Perelai?"
   },
   "hero": {
     "eyebrow": "Getting to Perelai",
     "title": "Open Perelai in the browser you already have.",
-    "body": "Sign in at perelai.app and start working. Installing Perelai is optional and depends on your browser. There is no App Store or Google Play listing.",
+    "body": "Sign in at <url>perelai.app</url> and start working. Installing Perelai is optional and depends on your browser. There is no App Store or Google Play listing.",
     "signup": "Create workspace",
     "login": "Log in",
     "micro": "You'll get a verification email to finish setting up.",

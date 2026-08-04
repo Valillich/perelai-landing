@@ -11,7 +11,8 @@
     "start": "Crea spazio di lavoro",
     "start_short": "Crea spazio",
     "primaryLabel": "Navigazione principale",
-    "menuLabel": "Apri menu"
+    "menuLabel": "Apri menu",
+    "devices": "Come aprire Perelai?"
   },
   "hero": {
     "title": "I tuoi clienti, le tue prenotazioni e il tuo flusso di cassa",

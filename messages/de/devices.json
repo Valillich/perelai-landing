@@ -5,12 +5,12 @@
     "ogAlt": "Perelai-Kalenderarbeitsbereich in einem Webbrowser — Beispieldaten"
   },
   "nav": {
-    "label": "Geräte"
+    "label": "So öffnen Sie Perelai"
   },
   "hero": {
     "eyebrow": "So öffnen Sie Perelai",
     "title": "Öffnen Sie Perelai im Browser, den Sie bereits haben.",
-    "body": "Melden Sie sich bei perelai.app an und legen Sie los. Perelai zu installieren ist optional und hängt von Ihrem Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
+    "body": "Melden Sie sich bei <url>perelai.app</url> an und legen Sie los. Perelai zu installieren ist optional und hängt von Ihrem Browser ab. Es gibt keinen Eintrag im App Store oder bei Google Play.",
     "signup": "Arbeitsbereich erstellen",
     "login": "Anmelden",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",

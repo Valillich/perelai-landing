@@ -5,12 +5,12 @@
     "ogAlt": "Espace calendrier Perelai dans un navigateur web — données d’exemple"
   },
   "nav": {
-    "label": "Appareils"
+    "label": "Comment ouvrir Perelai?"
   },
   "hero": {
     "eyebrow": "Comment ouvrir Perelai",
     "title": "Ouvrez Perelai dans le navigateur que vous avez déjà.",
-    "body": "Connectez-vous sur perelai.app et commencez à travailler. Installer Perelai est facultatif et dépend de votre navigateur. Il n’y a pas de fiche App Store ni Google Play.",
+    "body": "Connectez-vous sur <url>perelai.app</url> et commencez à travailler. Installer Perelai est facultatif et dépend de votre navigateur. Il n’y a pas de fiche App Store ni Google Play.",
     "signup": "Créer un espace de travail",
     "login": "Se connecter",
     "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",

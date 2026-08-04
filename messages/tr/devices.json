@@ -5,12 +5,12 @@
     "ogAlt": "Web tarayıcısında Perelai takvim çalışma alanı — örnek veriler"
   },
   "nav": {
-    "label": "Cihazlar"
+    "label": "Perelai’yi nasıl açarsınız"
   },
   "hero": {
     "eyebrow": "Perelai’ye nasıl ulaşılır",
     "title": "Perelai’yi zaten sahip olduğunuz tarayıcıda açın.",
-    "body": "perelai.app adresinde oturum açın ve çalışmaya başlayın. Perelai’yi kurmak isteğe bağlıdır ve tarayıcınıza bağlıdır. App Store veya Google Play kaydı yoktur.",
+    "body": "<url>perelai.app</url> adresinde oturum açın ve çalışmaya başlayın. Perelai’yi kurmak isteğe bağlıdır ve tarayıcınıza bağlıdır. App Store veya Google Play kaydı yoktur.",
     "signup": "Çalışma alanı oluştur",
     "login": "Giriş yap",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
