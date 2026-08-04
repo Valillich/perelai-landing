@@ -33,7 +33,7 @@ export function MockFinanceScreen({
     direction: item.direction,
   }))
 
-  const showBreakdown = Boolean(categoryLabels && openOrdersLabel)
+  const showBreakdown = false;
 
   return (
     <div className="mx-auto w-full max-w-[460px]">

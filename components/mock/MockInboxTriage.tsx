@@ -31,7 +31,6 @@ export function MockInboxTriage({
   className,
 }: MockInboxTriageProps) {
   const { market } = useMarket(dataset.locale)
-  const trust = buildTrustSentence(dataset, market)
   const trustAmountFormatted = formatTrustAmount(dataset.trustTotal, market)
 
   return (
@@ -41,8 +40,6 @@ export function MockInboxTriage({
         className,
       )}
     >
-      <p className="text-[13px] leading-relaxed text-muted-foreground">{trust}</p>
-
       <div aria-hidden="true" className="mt-4">
         <div className="flex items-center justify-between gap-2">
           <p className="text-[13px] font-semibold text-foreground">{dataset.labels["inbox.title"]}</p>

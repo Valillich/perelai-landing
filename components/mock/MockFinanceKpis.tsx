@@ -24,7 +24,7 @@ export function MockFinanceKpis({
   openOrdersLabel,
   summary,
 }: MockFinanceKpisProps) {
-  const showBreakdown = Boolean(categoryLabels && openOrdersLabel)
+  const showBreakdown = false;
 
   return (
     <figure

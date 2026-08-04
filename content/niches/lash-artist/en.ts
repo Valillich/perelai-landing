@@ -84,7 +84,7 @@ export const content: NichePageContent = {
   cta: {
     title: "Keep the lash day visible after the last client.",
     body: "Create a workspace that starts with your services and keeps Visits, money and next decisions in one place.",
-    label: "Create your free workspace",
+    label: "Create your workspace",
     microcopy: "No card. You’ll get a verification email to finish setting up.",
   },
   research: lashArtistResearch,
