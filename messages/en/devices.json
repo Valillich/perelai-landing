@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "What changes when it's on your Home Screen",
-    "body": "On iPhone, add Perelai to your Home Screen and it opens from its own icon, in its own window — no address bar, no tabs. iOS asks whether to open it as a web app; leave that switch on and it opens that way every time.",
+    "body": "On iPhone, add Perelai to your Home Screen. During setup, leave “Open as Web App” turned on. After that, Perelai opens from its own icon in a separate window, without browser tabs or an address bar.",
     "fallbackTitle": "The browser stays enough",
     "fallbackBody": "Installing is optional. Perelai runs in a supported browser, and that route keeps working whether or not you ever install anything."
   },

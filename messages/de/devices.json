@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "Was sich ändert, wenn Perelai auf dem Home-Bildschirm liegt",
-    "body": "Fügen Sie Perelai auf dem iPhone zum Home-Bildschirm hinzu — es öffnet sich über ein eigenes Symbol, in einem eigenen Fenster, ohne Adressleiste und Tabs. iOS fragt, ob es als Web-App geöffnet werden soll; lassen Sie diesen Schalter an, dann bleibt es dabei.",
+    "body": "Fügen Sie Perelai auf dem iPhone zum Home-Bildschirm hinzu. Lassen Sie beim Hinzufügen die Option „Als Web-App öffnen“ aktiviert. Danach öffnet sich Perelai über ein eigenes Symbol in einem separaten Fenster, ohne Browser-Tabs oder Adressleiste.",
     "fallbackTitle": "Der Browser reicht",
     "fallbackBody": "Die Installation ist optional. Perelai läuft in einem unterstützten Browser, und dieser Weg funktioniert weiter, ob Sie etwas installieren oder nicht."
   },

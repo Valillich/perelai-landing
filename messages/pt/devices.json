@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "O que muda quando o Perelai está na tela de início",
-    "body": "No iPhone, adicione o Perelai à tela de início: ele abre a partir do próprio ícone, em uma janela própria, sem barra de endereço nem abas. O iOS pergunta se deve abri-lo como app web; deixe essa opção ligada e será assim sempre.",
+    "body": "No iPhone, adicione o Perelai à tela de início. Durante a configuração, deixe ativada a opção «Abrir como app web». Depois disso, o Perelai abre a partir do próprio ícone, numa janela separada, sem abas do navegador nem barra de endereço.",
     "fallbackTitle": "O navegador basta",
     "fallbackBody": "A instalação é opcional. O Perelai funciona num navegador suportado, e esse caminho continua a funcionar quer instale algo ou não."
   },

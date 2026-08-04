@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "Ce qui change quand Perelai est sur l'écran d'accueil",
-    "body": "Sur iPhone, ajoutez Perelai à l'écran d'accueil : il s'ouvre depuis sa propre icône, dans sa propre fenêtre, sans barre d'adresse ni onglets. iOS demande s'il faut l'ouvrir comme app web ; laissez cette option activée et ce sera le cas à chaque fois.",
+    "body": "Sur iPhone, ajoutez Perelai à l'écran d'accueil. Pendant la configuration, laissez l'option « Ouvrir comme app web » activée. Ensuite, Perelai s'ouvre depuis sa propre icône dans une fenêtre séparée, sans onglets du navigateur ni barre d'adresse.",
     "fallbackTitle": "Le navigateur suffit",
     "fallbackBody": "L’installation est facultative. Perelai fonctionne dans un navigateur pris en charge, et cette voie continue de fonctionner que vous installiez quelque chose ou non."
   },

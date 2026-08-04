@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "Perelai ana ekrandayken ne değişir",
-    "body": "iPhone'da Perelai'yi ana ekrana ekleyin: kendi simgesinden, kendi penceresinde açılır — adres çubuğu ve sekmeler olmadan. iOS bunu web uygulaması olarak açıp açmayacağını sorar; bu anahtarı açık bırakın, her seferinde böyle açılır.",
+    "body": "iPhone'da Perelai'yi ana ekrana ekleyin. Kurulum sırasında “Web Uygulaması Olarak Aç” seçeneğini açık bırakın. Bundan sonra Perelai, kendi simgesinden ayrı bir pencerede açılır; tarayıcı sekmeleri veya adres çubuğu olmaz.",
     "fallbackTitle": "Tarayıcı yeter",
     "fallbackBody": "Kurulum isteğe bağlıdır. Perelai desteklenen bir tarayıcıda çalışır ve bir şey kurup kurmamanızdan bağımsız olarak bu yol çalışmaya devam eder."
   },

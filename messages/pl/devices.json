@@ -41,7 +41,7 @@
   },
   "installBenefits": {
     "title": "Co się zmienia, gdy Perelai jest na ekranie początkowym",
-    "body": "Na iPhonie dodaj Perelai do ekranu początkowego — otworzy się z własnej ikony, we własnym oknie, bez paska adresu i kart. iOS zapyta, czy otwierać go jako aplikację internetową; zostaw ten przełącznik włączony, a tak będzie za każdym razem.",
+    "body": "Na iPhonie dodaj Perelai do ekranu początkowego. Podczas dodawania pozostaw włączoną opcję „Otwieraj jako aplikację internetową”. Po tym Perelai będzie uruchamiać się z osobnej ikony we własnym oknie — bez paska adresu i kart.",
     "fallbackTitle": "Przeglądarka wystarczy",
     "fallbackBody": "Instalacja jest opcjonalna. Perelai działa w obsługiwanej przeglądarce i ta ścieżka działa niezależnie od tego, czy cokolwiek zainstalujesz."
   },
