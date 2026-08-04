@@ -77,7 +77,7 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
       onFocus={() => setHoverOrFocusPaused(true)}
       onBlur={() => setHoverOrFocusPaused(false)}
     >
-      <figure className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-3 shadow-[0_24px_60px_-20px_rgba(var(--brand-600-rgb),0.3)] backdrop-blur-xl sm:p-4">
+      <figure className="overflow-hidden rounded-[24px] border border-border bg-card/40 p-3 shadow-[0_24px_60px_-20px_rgba(var(--brand-600-rgb),0.3)] sm:p-4">
         <p className="sr-only">
           {labels.ariaLabel}: {screens.map((screen) => screen.tab).join(", ")} — {labels.caption}
         </p>
