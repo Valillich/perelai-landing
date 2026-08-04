@@ -91,11 +91,15 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
                 className="col-start-1 row-start-1"
                 initial={false}
                 animate={{
-                  opacity: isActive ? 1 : 0,
+                  // Slide only — opacity on glass mocks flashes the shell underlay on iOS.
                   x: prefersReducedMotion || isActive ? 0 : screenIndex < index ? -28 : 28,
                 }}
                 transition={{ duration: 0.42, ease: [0.32, 0.72, 0, 1] }}
-                style={{ pointerEvents: isActive ? "auto" : "none" }}
+                style={{
+                  visibility: isActive ? "visible" : "hidden",
+                  pointerEvents: isActive ? "auto" : "none",
+                }}
+                aria-hidden={!isActive}
               >
                 {screen.key === "calendar" ? (
                   <MockCalendarScreen

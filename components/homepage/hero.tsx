@@ -73,9 +73,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
             </Reveal>
           </div>
 
-          {/* Product preview */}
+          {/* Product preview — no opacity fade: glass mocks flash their shell on iOS. */}
           <div className="relative lg:col-span-5">
-            <Reveal delay={0.2}>
+            <Reveal delay={0.2} fade={false}>
               <div
                 aria-hidden
                 className="pointer-events-none absolute -inset-4 -z-10 rounded-[40px] opacity-60 blur-[80px]"

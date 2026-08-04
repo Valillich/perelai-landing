@@ -246,6 +246,7 @@ html {
 
 .mock-card-elevated {
   position: relative;
+  z-index: 1;
   isolation: isolate;
   border-radius: 12px;
   padding: 16px 10px;
