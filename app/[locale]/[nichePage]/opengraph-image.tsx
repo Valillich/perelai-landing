@@ -18,7 +18,7 @@ export async function generateImageMetadata({ params }: Props) {
     return generateOgImageMetadata("Perelai workspace preview")
   }
 
-  const page = getEnabledNichePageBySlug(nichePage)
+  const page = getEnabledNichePageBySlug(nichePage, locale)
   if (!page) {
     return generateOgImageMetadata("Perelai workspace preview")
   }
@@ -31,7 +31,7 @@ export default async function OpenGraphImage({ params }: Props) {
   const { locale, nichePage } = await params
   if (!isPublishedLocale(locale)) notFound()
 
-  const page = getEnabledNichePageBySlug(nichePage)
+  const page = getEnabledNichePageBySlug(nichePage, locale)
   if (!page) notFound()
 
   const content = getNicheContent(page, locale)

@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Meus serviços de cílios já virão prontos?", a: "Sim. O modelo para lash artists começa com seis serviços editáveis (Design, Tintura, Brow Lamination, Lash Lifting & Tinta, Extensão e Manutenção) além de materiais e adicionais vinculados." },
-    { q: "Os clientes podem agendar sem mandar mensagem?", a: "Compartilhe um link de agendamento na bio ou no WhatsApp. As clientes escolhem o serviço, profissional e horário. O Perelai não cobra nenhuma comissão." },
+    { q: "Os clientes podem agendar sem mandar mensagem?", a: "Compartilhe um link de agendamento na bio ou no WhatsApp. As clientes escolhem o serviço, profissional e horário." },
     { q: "O que acontece se uma cliente atrasar ou faltar?", a: "O Perelai pode enviar lembretes automáticos por e-mail, in-app e push. O atendimento e a receita são separados, então um atendimento cancelado não conta como dinheiro recebido." },
     { q: "Consigo ver quanto a semana realmente rendeu?", a: "Registre os recebimentos reais, vincule materiais e cola ao serviço feito e veja receitas, custos e pendências sem usar planilhas." },
     { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard e conecte o Google Agenda se desejar. A lista de serviços pode ser personalizada aos poucos no seu tempo." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "O Perelai foi feito para gerenciar clientes, agendamentos e finanças do seu trabalho com cílios. Não substitui softwares ultra-especializados.",
     items: [
       { title: "Não é software de contabilidade", body: "Acompanha o que foi agendado, realizado e pago para dar clareza ao fluxo de caixa. Não faz balanço nem declaração de impostos." },
-      { title: "Não é um marketplace", body: "Seu link é seu. O Perelai não cobra comissão nem se intromete na gestão de clientes." },
+      { title: "Não é um marketplace", body: "Seu link é seu." },
       { title: "Não é um sistema de prontuário médico", body: "Não gerencia prontuários clínicos, diagnósticos nem fichas médicas." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Mantenha o seu dia de cílios organizado mesmo após a última cliente ir embora.",
     body: "Crie um espaço de trabalho que começa pelos seus serviços e reúne visitas, recebimentos e pendências no mesmo lugar.",
     label: "Criar espaço de trabalho",
-    microcopy: "Sem cartão de crédito. Você receberá um e-mail de confirmação para concluir o cadastro.",
+    microcopy: "Você receberá um e-mail de confirmação para concluir o cadastro.",
   },
   research: lashArtistResearch,
 }

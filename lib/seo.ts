@@ -51,11 +51,14 @@ export function buildLocalizedPageMetadata({
   pathname,
   title,
   description,
+  availableLocales,
 }: {
   locale: PublishedLocale
   pathname: string
   title: string
   description: string
+  /** Narrows the hreflang cluster for a page not published in every locale. */
+  availableLocales?: readonly PublishedLocale[]
 }): Metadata {
   assertMetadataLength(title, SEO_TITLE_MAX, "title", locale, pathname)
   assertMetadataLength(description, SEO_DESCRIPTION_MAX, "description", locale, pathname)
@@ -68,7 +71,7 @@ export function buildLocalizedPageMetadata({
     description,
     alternates: {
       canonical,
-      languages: getLocalizedAlternates(pathname, locale),
+      languages: getLocalizedAlternates(pathname, locale, availableLocales),
     },
     openGraph: {
       type: "website",

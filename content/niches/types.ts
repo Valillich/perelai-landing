@@ -2,6 +2,24 @@ import type { PublishedLocale } from "@/i18n/locales"
 
 export type MockKind = "colorist-workspace" | "lash-workspace"
 
+/**
+ * Evidence class for a research source. Optional so existing niche research files stay valid;
+ * new research should always declare it, because these classes carry different weight and
+ * different publication rules.
+ *
+ * - `independent_forum`      — unmoderated practitioner discussion. Proxy VOC, not first-party.
+ * - `vendor_hosted_customer` — a customer quote published by a vendor about their own product.
+ *                              Never usable as Perelai social proof.
+ * - `competitor_claim`       — a competitor's own marketing claim. Usable only to set a capability
+ *                              boundary in internal review; never quoted on a public page.
+ * - `first_party_voc`        — Perelai's own users or prospects, with recorded consent.
+ */
+export type NicheEvidenceClass =
+  | "independent_forum"
+  | "vendor_hosted_customer"
+  | "competitor_claim"
+  | "first_party_voc"
+
 export interface NicheResearchSource {
   sourceUrl: string
   capturedAt: string
@@ -9,6 +27,7 @@ export interface NicheResearchSource {
   sourceKind: string
   excerpt: string
   theme: string
+  evidenceClass?: NicheEvidenceClass
 }
 
 export interface NicheResearchVerbatim {

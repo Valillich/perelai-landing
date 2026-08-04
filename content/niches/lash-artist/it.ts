@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "I miei servizi ciglia sono già preimpostati?", a: "Sì. Il modello per lash artist parte con sei servizi modificabili (Definizione, Tinta, Brow Lamination, Laminazione ciglia & tinta, Extension e Ritocco ciglia) oltre a materiali e opzioni abbinate." },
-    { q: "Le clienti possono prenotare senza passare dai messaggi privati?", a: "Condividi un link di prenotazione nella bio o in chat. Le clienti scelgono servizio, specialista e orario. Perelai non trattiene alcuna commissione." },
+    { q: "Le clienti possono prenotare senza passare dai messaggi privati?", a: "Condividi un link di prenotazione nella bio o in chat. Le clienti scelgono servizio, specialista e orario." },
     { q: "Cosa succede se una cliente è in ritardo o non si presenta?", a: "Perelai invia promemoria automatici via email, in-app e notifiche push. Lavoro e incassi sono separati, perciò una visita saltata non conta come incasso." },
     { q: "Posso vedere quanto ha reso davvero la settimana?", a: "Registra gli incassi reali, collega materiali e colla al lavoro svolto e vedi entrate, costi e sospesi senza fogli di calcolo." },
     { q: "Devo spostare tutto in un solo fine settimana?", a: "No. Inizia dai contatti del telefono via vCard e collega opzionalmente Google Calendar. L'elenco servizi si adatta man mano al tuo ritmo." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai è pensato per la gestione clienti, prenotazioni e finanze del tuo lavoro ciglia. Non sostituisce software ultra-specializzati.",
     items: [
       { title: "Non è un software di contabilità", body: "Traccia ciò che è prenotato, eseguito e pagato per la tua visibilità di cassa. Non è un bilancio fiscale." },
-      { title: "Non è un marketplace", body: "Il tuo link è tuo. Perelai non prende commissioni né si intromette nella gestione clienti." },
+      { title: "Non è un marketplace", body: "Il tuo link è tuo." },
       { title: "Non è un sistema per cartelle cliniche", body: "Non gestisce schede cliniche, diagnosi né pazienti." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Mantieni visibile la tua giornata ciglia anche dopo l'ultima cliente.",
     body: "Crea uno spazio di lavoro che parte dai tuoi servizi e unisce visite, incassi e prossimi passaggi nello stesso posto.",
     label: "Crea uno spazio di lavoro",
-    microcopy: "Nessuna carta di credito richiesta. Riceverai un'email di conferma per completare l'impostazione.",
+    microcopy: "Riceverai un'email di conferma per completare l'impostazione.",
   },
   research: lashArtistResearch,
 }

@@ -4,6 +4,7 @@ import { InstallHelpLink } from "@/components/devices/install-help-link"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { Link } from "@/i18n/navigation"
 import type { PublishedLocale } from "@/i18n/locales"
+import { getEnabledNichePageBySlug } from "@/config/niche-pages"
 
 export function LandingFooter({
   locale,
@@ -15,6 +16,10 @@ export function LandingFooter({
   const t = useTranslations("home.footer")
   // Same reviewed label the header uses, so the two entry points match.
   const tDevices = useTranslations("devices.nav")
+  // Staged English-only pages: hidden in locales that have no translation, so the
+  // footer never links to a route that 404s.
+  const hasSalons = !!getEnabledNichePageBySlug("for-salons", locale)
+  const hasMassage = !!getEnabledNichePageBySlug("for-massage-therapists", locale)
 
   return (
     <footer className="border-t border-border px-4 py-14 sm:px-6">
@@ -57,6 +62,26 @@ export function LandingFooter({
                   {t("forLashArtists")}
                 </Link>
               </li>
+              {hasSalons && (
+                <li>
+                  <Link
+                    href="/for-salons"
+                    className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {t("forSalons")}
+                  </Link>
+                </li>
+              )}
+              {hasMassage && (
+                <li>
+                  <Link
+                    href="/for-massage-therapists"
+                    className="text-[14px] text-muted-foreground transition-colors hover:text-foreground"
+                  >
+                    {t("forMassageTherapists")}
+                  </Link>
+                </li>
+              )}
               {/* Reachable from every public route, so `/install` is never an
                   orphan even for visitors who arrive deep in the site. */}
               <li>

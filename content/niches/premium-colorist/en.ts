@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Will my color services already be there?", a: "Yes. The independent colorist template starts with six editable services, including Root Color, Dimensional Color / Balayage, Corrective Color, Gloss & Toner, and Haircut & Finish. It also includes Bond Treatment, Extra Product for Long Hair and Styling Finish as add-ons." },
-    { q: "Can clients stop booking through my DMs?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time. Perelai takes no commission on bookings." },
+    { q: "Can clients stop booking through my DMs?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time." },
     { q: "What happens when someone does not show?", a: "Perelai can send automatic reminders by email, in-app and push. It records work and money separately, so a missed Visit is not treated as money received." },
     { q: "Can I see whether a color day actually paid off?", a: "Record what was actually received, link Color Product and Disposable Supplies to the relevant work, and see revenue, costs and what is still outstanding without a spreadsheet." },
     { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard and optionally connect Google Calendar. The service list is already editable, so you can make it yours as you go." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai is for running the client, booking and money side of your color work. It does not pretend to replace specialist tools.",
     items: [
       { title: "Not accounting software", body: "It tracks what was booked, completed and paid for cash-flow visibility. It is not tax filing or financial advice." },
-      { title: "Not a marketplace", body: "Your booking link is yours. Perelai takes no commission and does not rent the client relationship." },
+      { title: "Not a marketplace", body: "Your booking link is yours. Perelai does not rent the client relationship." },
       { title: "Not a medical record system", body: "It does not provide clinical records, diagnosis tracking or patient treatment management." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Keep the color work moving, without rebuilding the day later.",
     body: "Create a workspace that starts with your color services and keeps visits, money and follow-ups in one place.",
     label: "Create your workspace",
-    microcopy: "No card. You’ll get a verification email to finish setting up.",
+    microcopy: "You’ll get a verification email to finish setting up.",
   },
   research: independentColoristResearch,
 }

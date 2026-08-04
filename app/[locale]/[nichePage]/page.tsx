@@ -4,7 +4,11 @@ import { setRequestLocale } from "next-intl/server"
 import { NichePage } from "@/components/niche/niche-page"
 import { JsonLd } from "@/components/seo/json-ld"
 import { getNicheContent } from "@/content/niches"
-import { getEnabledNichePageBySlug, getNicheStaticParams } from "@/config/niche-pages"
+import {
+  getEnabledNichePageBySlug,
+  getNicheStaticParams,
+  getNichePageLocales,
+} from "@/config/niche-pages"
 import { isPublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { buildLocalizedPageMetadata, toAbsoluteLandingUrl } from "@/lib/seo"
@@ -26,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { locale, nichePage } = await params
   if (!isPublishedLocale(locale)) return {}
 
-  const page = getEnabledNichePageBySlug(nichePage)
+  const page = getEnabledNichePageBySlug(nichePage, locale)
   if (!page) return {}
 
   const content = getNicheContent(page, locale)
@@ -35,6 +39,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     pathname: page.path,
     title: content.meta.title,
     description: content.meta.description,
+    availableLocales: getNichePageLocales(page),
   })
 }
 
@@ -42,7 +47,7 @@ export default async function NicheLandingPage({ params }: PageProps) {
   const { locale, nichePage } = await params
   if (!isPublishedLocale(locale)) notFound()
 
-  const page = getEnabledNichePageBySlug(nichePage)
+  const page = getEnabledNichePageBySlug(nichePage, locale)
   if (!page) notFound()
 
   const content = getNicheContent(page, locale)

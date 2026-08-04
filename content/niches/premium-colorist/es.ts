@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "¿Estarán ya incluidos mis servicios de color?", a: "Sí. La plantilla de colorista independiente comienza con seis servicios personalizables, incluyendo Color de Raíz, Color Dimensional / Balayage, Corrección de Color, Gloss y Matiz, y Corte y Peinado. También incluye Tratamiento, Producto Extra y Peinado como complementos." },
-    { q: "¿Pueden los clientes dejar de reservar a través de mis DMs?", a: "Comparte un enlace de reserva en tu bio o mándalo por mensaje. Los clientes eligen un servicio, una persona y una hora. Perelai no cobra comisión por las reservas." },
+    { q: "¿Pueden los clientes dejar de reservar a través de mis DMs?", a: "Comparte un enlace de reserva en tu bio o mándalo por mensaje. Los clientes eligen un servicio, una persona y una hora." },
     { q: "¿Qué ocurre cuando alguien no aparece?", a: "Perelai puede enviar recordatorios automáticos por email, en la app y notificaciones push. Registra el trabajo y el dinero por separado, de forma que una Visita perdida no cuente como dinero recibido." },
     { q: "¿Puedo ver si un día de color realmente mereció la pena?", a: "Registra lo que ingresaste, asocia los productos de color y materiales al trabajo correspondiente, y ve ingresos, costes y saldos pendientes sin abrir una hoja de cálculo." },
     { q: "¿Tengo que migrar todo en un fin de semana?", a: "No. Empieza por los contactos de tu teléfono usando vCard y opcionalmente conecta Google Calendar. La lista de servicios ya es editable, así que puedes ir haciéndola tuya a tu ritmo." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai está pensado para llevar los clientes, reservas y dinero de tu trabajo de color. No pretende reemplazar herramientas especializadas.",
     items: [
       { title: "No es software de contabilidad", body: "Lleva un registro de lo reservado, completado y pagado para que veas tu flujo de caja. No hace declaración de impuestos ni da consejo financiero." },
-      { title: "No es un marketplace", body: "Tu enlace de reserva es tuyo. Perelai no se lleva comisiones ni alquila tu relación con los clientes." },
+      { title: "No es un marketplace", body: "Tu enlace de reserva es tuyo." },
       { title: "No es un sistema médico", body: "No ofrece historiales clínicos, seguimiento de diagnósticos ni gestión de pacientes." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Mantén el ritmo del color sin tener que reconstruir tu día después.",
     body: "Crea un espacio de trabajo que empiece con tus servicios de color y unifique visitas, finanzas y seguimiento en un solo lugar.",
     label: "Crear espacio de trabajo",
-    microcopy: "Sin tarjeta. Recibirás un correo de verificación para terminar la configuración.",
+    microcopy: "Recibirás un correo de verificación para terminar la configuración.",
   },
   research: independentColoristResearch,
 }

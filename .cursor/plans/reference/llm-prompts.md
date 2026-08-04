@@ -530,6 +530,25 @@ smaller models conflicting workflows.
 
 ---
 
+## R1-B — Reusable: Translate and activate a niche page locale
+
+> Load marketing **`copy-editing`**.
+>
+> You are translating an already approved English niche page into **`{{LOCALE}}`**.
+>
+> Source of truth is the English version in `content/niches/{{SLUG}}/en.ts`.
+>
+> 1. Translate `en.ts` into `content/niches/{{SLUG}}/{{LOCALE}}.ts`.
+> 2. Translate the niche router label keys into `messages/{{LOCALE}}/home.json` (e.g., `nicheRouter.salonsLabel` and `nicheRouter.salonsDescription`).
+> 3. Translate the footer link in `messages/{{LOCALE}}/home.json` if one exists (e.g., `footer.forSalons`).
+> 4. Rules: transcreate headlines, use app domain terms from the locale's `common.json`, respect `messaging-and-claims.md` §4.2, keep interpolation intact.
+> 5. Never translate a banned claim into existence (e.g., "no card required", "no commission").
+> 6. After translating all files, add `"{{LOCALE}}"` to the `locales` array for this niche in `config/niche-pages.ts`.
+>
+> **Gate:** `pnpm typecheck && pnpm test && pnpm build` passes. The page renders in the new locale. No banned phrases are present.
+
+---
+
 ## R2 — Reusable: pre-ship copy audit
 
 > Load **`copy-editing`**.
@@ -598,6 +617,38 @@ smaller models conflicting workflows.
 >
 > **Gate:** recorded LP12.3 evidence; human-reviewed complete translations; uniqueness and
 > `verify:niches` green; canonical/OG/schema valid; R2 and R3 pass; no orphan route.
+
+---
+
+## W2-F — Wave 2 niche page (Finance-First) — one prompt per niche
+
+> Load marketing **`customer-research`**, **`copywriting`**, **`copy-editing`**,
+> **`programmatic-seo`**, **`cro`**, **`site-architecture`**, and repo-local
+> **`design-taste-frontend`**, **`tdd`**.
+>
+> First verify with dated evidence that LP12.3's entry gate passed: Wave 1b has been stable for at
+> least four weeks and at least two niches directionally beat the homepage baseline with uncertainty
+> reported. If evidence is absent, do not enable or route this page; report the missing evidence.
+>
+> Build exactly one Wave 2 page for **`{{TEMPLATE_ID}}`** at **`{{PATH}}`**, emitting
+> **`niche={{SLUG}}`**. Take all three values from `niche-catalog.md` §6. Do not infer, add or alter a
+> slug. `/for-lawyers` is forbidden until the app has a dedicated legal template; the existing
+> `legal` slug resolves to Consulting.
+>
+> Follow the P11 workflow but with a **STAGED LAUNCH**: sourced niche-specific research; terminology and mocks from this template's generated services/items, add-ons and expenses; `requiresStaff` and booking-mode semantics from generated data; ≤40% text overlap against homepage and every sibling; correct CTA acquisition handoff.
+>
+> **CRITICAL STAGED LAUNCH RULE:** Write the page ONLY in English (`en.ts`). Do NOT generate files for other locales. In `config/niche-pages.ts`, configure this page with `locales: ["en"]`. Other locales will be added in a separate phase after the English draft is approved. Do not enable another Wave 2 entry.
+>
+> **CRITICAL INSTRUCTION FOR COPYWRITING (FINANCE-FIRST):**
+> We have skipped the FM8 migration for existing niche pages, meaning older pages are still "booking-first". However, this NEW Wave 2 page MUST be created using the new "finance-first" positioning. 
+> 
+> When writing the copy for this page:
+> 1. IGNORE the old booking-first structure from `messaging-and-claims.md §9`.
+> 2. INSTEAD, strictly follow the new canonical positioning from `.cursor/plans/messages/00_home_hero_positioning_and_experiment_plan_20260802.md` (e.g. "A Clear View of Your Business Finances").
+> 3. Follow the FM8 rule from `01_home_hero_positioning_llm_prompts_20260802.md`: "Preserve finance-first entity/category consistency while retaining useful niche specificity. Map every niche financial clause to the repaired claim contract; do not infer service-level analytics from category data."
+> 4. Ensure the terminology table is still built correctly for the specific niche, but the overall framing must lead with financial visibility, not just operational pain.
+>
+> **Gate:** recorded LP12.3 evidence; uniqueness and `verify:niches` green; canonical/OG/schema valid in English; R2 and R3 pass; no orphan route.
 
 ---
 

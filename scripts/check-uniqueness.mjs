@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url"
 import { content as enColorist } from "../content/niches/premium-colorist/en.ts"
 import { content as plColorist } from "../content/niches/premium-colorist/pl.ts"
 import { content as ukColorist } from "../content/niches/premium-colorist/uk.ts"
+import { content as enHairSalon } from "../content/niches/hair-salon/en.ts"
+import { content as enMassage } from "../content/niches/massage-therapist/en.ts"
 import { content as enLashArtist } from "../content/niches/lash-artist/en.ts"
 import { content as plLashArtist } from "../content/niches/lash-artist/pl.ts"
 import { content as ukLashArtist } from "../content/niches/lash-artist/uk.ts"
@@ -65,6 +67,9 @@ export function checkUniquenessForPages(nichePageList, locales = ["en", "uk", "p
   const contentMap = {
     "premium-colorist": { en: enColorist, uk: ukColorist, pl: plColorist },
     "lash-artist": { en: enLashArtist, uk: ukLashArtist, pl: plLashArtist },
+    // English-only staged pages: uk/pl have no content, so those locales skip them.
+    "hair-salon": { en: enHairSalon },
+    "massage-therapist": { en: enMassage },
   }
 
   for (const locale of locales) {

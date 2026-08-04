@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Kirpik hizmetlerim hazır gelecek mi?", a: "Evet. Şablon; Kaş Tasarımı, Boyama, Brow Lamination, Lash Lifting, İpek Kirpik ve Bakım gibi 6 düzenlenebilir hizmetle gelir." },
-    { q: "Müşteriler mesaj atmadan randevu alabilir mi?", a: "Randevu bağlantınızı bio'da veya mesajda paylaşın. Müşteriler hizmet, uzman ve saat seçer. Perelai komisyon almaz." },
+    { q: "Müşteriler mesaj atmadan randevu alabilir mi?", a: "Randevu bağlantınızı bio'da veya mesajda paylaşın. Müşteriler hizmet, uzman ve saat seçer." },
     { q: "Müşteri geç kalırsa veya gelmezse ne olur?", a: "Perelai otomatik e-posta, push ve uygulama içi hatırlatmalar gönderir. İş ve ödeme ayrı tutulduğu için gelinmeyen randevu gelir sayılmaz." },
     { q: "Haftanın gerçekten ne kazandırdığını görebilir miyim?", a: "Gerçek tahsilatları yazın, yapıştırıcı ve malzeme giderlerini bağlayın; gelir, gider ve alacakları tablo tutmadan görün." },
     { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. vCard ile kişileri aktararak başlayın ve isteğe bağlı Google Takvim'i bağlayın. Hizmet listenizi zamanla düzenleyebilirsiniz." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai, kirpik işinizin müşteri, randevu ve finans tarafını yönetmek içindir. Uzmanlaşmış yazılımların yerini alma iddiasında değildir.",
     items: [
       { title: "Muhasebe Yazılımı Değildir", body: "Nakit akışını görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Vergi beyannamesi vermez." },
-      { title: "Pazar Yeri Değildir", body: "Bağlantınız size aittir. Perelai komisyon almaz ve müşteri yönetimine karışmaz." },
+      { title: "Pazar Yeri Değildir", body: "Bağlantınız size aittir." },
       { title: "Tıbbi Kayıt Sistemi Değildir", body: "Klinik kayıtlar, tanı takibi veya hasta yönetimi sunmaz." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Son müşteriden sonra bile kirpik gününüzü net ve düzenli tutun.",
     body: "Hizmetlerinizle başlayan ve ziyaretleri, ödemeleri ve sonraki adımları aynı yerde toplayan bir çalışma alanı oluşturun.",
     label: "Çalışma alanı oluştur",
-    microcopy: "Kredi kartı gerekmez. Kurulumu tamamlamak için doğrulama e-postası alacaksınız.",
+    microcopy: "Kurulumu tamamlamak için doğrulama e-postası alacaksınız.",
   },
   research: lashArtistResearch,
 }

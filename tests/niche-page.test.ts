@@ -1,22 +1,102 @@
 import { describe, expect, test } from "vitest"
 import catalog from "@/data/niche-catalog.generated.json"
 import {
+  NICHE_PAGES,
   RESERVED_SLUGS,
   getEnabledNichePageBySlug,
+  getEnabledNichePagesForLocale,
+  getNichePageLocales,
   getNicheStaticParams,
 } from "@/config/niche-pages"
 import { PUBLISHED_LOCALES } from "@/i18n/locales"
+import { getLocalizedAlternates } from "@/i18n/paths"
+import { getNicheContent } from "@/content/niches"
+import { nicheLabelKeys } from "@/lib/niche-labels"
 import { buildAppSignupUrl } from "@/lib/urls"
+import de from "@/messages/de/home.json"
+import en from "@/messages/en/home.json"
+import es from "@/messages/es/home.json"
+import fr from "@/messages/fr/home.json"
+import pl from "@/messages/pl/home.json"
+import pt from "@/messages/pt/home.json"
+import ru from "@/messages/ru/home.json"
+import tr from "@/messages/tr/home.json"
+import uk from "@/messages/uk/home.json"
+
+const homeMessages = { de, en, es, fr, pl, pt, ru, tr, uk }
 import { content as englishContent } from "@/content/niches/premium-colorist/en"
 import { content as lashEnglishContent } from "@/content/niches/lash-artist/en"
 
 describe("the published niche pages", () => {
-  test("publishes the approved Wave 1a and Wave 1b routes for every published locale", () => {
-    expect(getNicheStaticParams()).toEqual(
-      ["for-independent-colorists", "for-lash-artists"].flatMap((nichePage) =>
+  test("publishes the fully translated Wave 1a and Wave 1b routes for every published locale", () => {
+    expect(getNicheStaticParams()).toEqual([
+      ...["for-independent-colorists", "for-lash-artists"].flatMap((nichePage) =>
         PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage })),
       ),
+      // Staged in English only until the other eight locales are reviewed. These
+      // must not gain routes by being added to PUBLISHED_LOCALES.
+      { locale: "en", nichePage: "for-massage-therapists" },
+      { locale: "en", nichePage: "for-salons" },
+    ])
+  })
+
+  const stagedEnglishOnly = [
+    { niche: "hair-salon", slug: "for-salons" },
+    { niche: "massage-therapist", slug: "for-massage-therapists" },
+  ]
+
+  test.each(stagedEnglishOnly)(
+    "gives $niche a route only in the locales it declares",
+    ({ niche, slug }) => {
+      const page = NICHE_PAGES.find((candidate) => candidate.niche === niche)
+      expect(page?.enabled).toBe(true)
+      expect(getNichePageLocales(page!)).toEqual(["en"])
+
+      expect(getEnabledNichePageBySlug(slug, "en")?.niche).toBe(niche)
+      for (const locale of PUBLISHED_LOCALES.filter((candidate) => candidate !== "en")) {
+        expect(getEnabledNichePageBySlug(slug, locale)).toBeUndefined()
+        expect(getEnabledNichePagesForLocale(locale).map((entry) => entry.niche)).not.toContain(
+          niche,
+        )
+      }
+    },
+  )
+
+  test("never advertises an hreflang alternate for a locale that has no page", () => {
+    for (const { niche } of stagedEnglishOnly) {
+      const page = NICHE_PAGES.find((candidate) => candidate.niche === niche)!
+      const alternates = getLocalizedAlternates(page.path, "en", getNichePageLocales(page))
+
+      expect(Object.keys(alternates).sort()).toEqual(["en", "x-default"])
+      expect(alternates["x-default"]).toBe(alternates.en)
+    }
+
+    // A fully translated sibling still gets the complete reciprocal cluster.
+    expect(Object.keys(getLocalizedAlternates("/for-lash-artists", "en")).sort()).toEqual(
+      [...PUBLISHED_LOCALES, "x-default"].sort(),
     )
+  })
+
+  test("every locale a page declares has a content module and its router label keys", () => {
+    for (const page of NICHE_PAGES.filter((candidate) => candidate.enabled)) {
+      for (const locale of getNichePageLocales(page)) {
+        expect(() => getNicheContent(page, locale)).not.toThrow()
+
+        const keys = nicheLabelKeys(page)
+        if (!keys) continue
+        const messages = homeMessages[locale] as unknown as Record<
+          string,
+          Record<string, unknown>
+        >
+        for (const key of [keys.label, keys.description]) {
+          const [namespace, name] = key.split(".")
+          expect(
+            messages[namespace]?.[name],
+            `${page.niche}: missing ${key} in messages/${locale}/home.json`,
+          ).toBeTruthy()
+        }
+      }
+    }
   })
 
   test("keeps application and locale routes out of the niche-page namespace", () => {

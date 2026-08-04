@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Czy moje usługi koloryzacyjne będą już na liście?", a: "Tak. Szablon niezależnego kolorysty zaczyna się od sześciu edytowalnych usług, w tym farbowania odrostów, koloryzacji wielotonowej lub balayage, korekty koloru, tonera i nabłyszczania oraz strzyżenia z modelowaniem. Zawiera także pielęgnację regenerującą, dodatkową porcję farb na długie włosy i stylizację końcową." },
-    { q: "Czy klienci mogą przestać rezerwować przez moje DM-y?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klient wybiera usługę, osobę i czas. Perelai nie pobiera prowizji od rezerwacji." },
+    { q: "Czy klienci mogą przestać rezerwować przez moje DM-y?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klient wybiera usługę, osobę i czas." },
     { q: "Co się dzieje, gdy klientka nie przyjdzie?", a: "Perelai może wysyłać automatyczne przypomnienia przez e-mail, w aplikacji i jako push. Praca i pieniądze są rejestrowane osobno, więc opuszczona Wizyta nie jest traktowana jako otrzymane pieniądze." },
     { q: "Czy zobaczę, czy dzień koloryzacji naprawdę się opłacił?", a: "Zapisuj faktycznie otrzymane pieniądze, przypisuj farby, rozjaśniacze i materiały jednorazowe do właściwej pracy, a potem zobacz przychody, koszty i otwarte należności bez arkusza." },
     { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard i opcjonalnie połącz Google Calendar. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai pomaga prowadzić klientów, rezerwacje i pieniądze w pracy z kolorem. Nie udaje, że zastępuje specjalistyczne narzędzia.",
     items: [
       { title: "Nie jest programem księgowym", body: "Śledzi to, co zostało zarezerwowane, wykonane i opłacone, aby pokazać przepływy pieniężne. Nie jest rozliczeniem podatkowym ani poradą finansową." },
-      { title: "Nie jest marketplace’em", body: "Twój link do rezerwacji należy do Ciebie. Perelai nie pobiera prowizji i nie wynajmuje relacji z klientami." },
+      { title: "Nie jest marketplace’em", body: "Twój link do rezerwacji należy do Ciebie." },
       { title: "Nie jest systemem dokumentacji medycznej", body: "Nie oferuje dokumentacji klinicznej, śledzenia diagnoz ani zarządzania leczeniem pacjentów." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Prowadź pracę z kolorem dalej bez wieczornego odtwarzania dnia.",
     body: "Utwórz przestrzeń pracy, która zaczyna się od Twoich usług i trzyma Wizyty, pieniądze oraz kolejne sprawy w jednym miejscu.",
     label: "Utwórz bezpłatną przestrzeń pracy",
-    microcopy: "Bez karty. Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
+    microcopy: "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
   },
   research: independentColoristResearch,
 }

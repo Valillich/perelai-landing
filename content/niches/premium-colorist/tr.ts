@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Renk hizmetlerim hazır gelecek mi?", a: "Evet. Şablon; Dip Boyası, Balyaj, Renk Düzeltme, Cila ve Kesim gibi 6 düzenlenebilir ana hizmet ve ek bakım seçenekleriyle birlikte gelir." },
-    { q: "Müşteriler DM'den yazmadan randevu alabilir mi?", a: "Randevu bağlantınızı profilinizde paylaşın veya mesajla gönderin. Müşteriler hizmet, uzman ve saat seçer. Perelai komisyon almaz." },
+    { q: "Müşteriler DM'den yazmadan randevu alabilir mi?", a: "Randevu bağlantınızı profilinizde paylaşın veya mesajla gönderin. Müşteriler hizmet, uzman ve saat seçer." },
     { q: "Biri gelmediğinde (No-show) ne olur?", a: "Perelai e-posta, uygulama içi ve push ile otomatik hatırlatmalar gönderebilir. İş ve gelir ayrı takip edildiği için gelinmeyen randevu gelir sayılmaz." },
     { q: "Bir boya gününün gerçekten karlı olup olmadığını görebilir miyim?", a: "Tahsil edilen miktarı kaydedin, ürün ve malzeme giderlerini bağlayın; gelir, gider ve alacakları tablo tutmadan görün." },
     { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. Kişilerinizi vCard ile aktararak başlayın ve isteğe bağlı olarak Google Takvim'i bağlayın. Hizmet listenizi zamanla adım adım ayarlayabilirsiniz." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai, renk işinizin müşteri, randevu ve para tarafını yönetmek içindir. Uzmanlaşmış araçların yerini alma iddiasında değildir.",
     items: [
       { title: "Muhasebe Yazılımı Değildir", body: "Nakit akışını görmeniz için randevu alınan, tamamlanan ve ödenen işleri kaydeder. Vergi beyannamesi vermez." },
-      { title: "Pazar Yeri (Marketplace) Değildir", body: "Randevu bağlantınız size aittir. Perelai komisyon almaz ve müşteri ilişkinize karışmaz." },
+      { title: "Pazar Yeri (Marketplace) Değildir", body: "Randevu bağlantınız size aittir." },
       { title: "Tıbbi Kayıt Sistemi Değildir", body: "Klinik kayıtlar, tanı takibi veya hasta yönetimi sunmaz." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Günü gece yeniden toparlamak zorunda kalmadan renklendirme işinizi kontrol altında tutun.",
     body: "Renk hizmetlerinizle başlayan ve ziyaretleri, nakit akışını ve sonraki adımları tek bir yerde tutan bir çalışma alanı oluşturun.",
     label: "Çalışma alanı oluştur",
-    microcopy: "Kredi kartı gerekmez. Kurulumu tamamlamak için doğrulama e-postası alacaksınız.",
+    microcopy: "Kurulumu tamamlamak için doğrulama e-postası alacaksınız.",
   },
   research: independentColoristResearch,
 }

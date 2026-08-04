@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Sind meine Farbleistungen bereits vorhanden?", a: "Ja. Die Vorlage für unabhängige Coloristen startet mit sechs bearbeitbaren Leistungen, einschließlich Ansatzfarbe, Dimensionale Farbe / Balayage, Farbkorrektur, Gloss & Toner und Haarschnitt & Styling. Sie enthält auch Bonding-Behandlung, Extra-Produkt für langes Haar und Styling als Zusatzleistungen." },
-    { q: "Können Kunden aufhören, über meine DMs zu buchen?", a: "Teilen Sie einen Buchungslink in Ihrer Bio oder senden Sie ihn in einer Nachricht. Kunden wählen eine Leistung, eine Person und eine Zeit. Perelai nimmt keine Provision auf Buchungen." },
+    { q: "Können Kunden aufhören, über meine DMs zu buchen?", a: "Teilen Sie einen Buchungslink in Ihrer Bio oder senden Sie ihn in einer Nachricht. Kunden wählen eine Leistung, eine Person und eine Zeit." },
     { q: "Was passiert, wenn jemand nicht erscheint?", a: "Perelai kann automatische Erinnerungen per E-Mail, in der App und als Push-Benachrichtigung senden. Arbeit und Einnahmen werden getrennt erfasst, sodass ein verpasster Termin nicht als eingenommenes Geld behandelt wird." },
     { q: "Kann ich sehen, ob sich ein Farbtag tatsächlich gelohnt hat?", a: "Erfassen Sie, was tatsächlich eingenommen wurde, verknüpfen Sie Farbprodukte und Einwegmaterialien mit der entsprechenden Arbeit und sehen Sie Einnahmen, Kosten und ausstehende Beträge ohne Tabellenkalkulation." },
     { q: "Muss ich alles an einem Wochenende umziehen?", a: "Nein. Starten Sie mit Kontakten von Ihrem Telefon per vCard und verbinden Sie optional den Google Kalender. Die Leistungsliste ist bereits bearbeitbar, sodass Sie sie Schritt für Schritt anpassen können." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai ist für die Verwaltung von Kunden, Buchungen und Finanzen Ihrer Farbarbeit gedacht. Es gibt nicht vor, spezialisierte Tools zu ersetsetzen.",
     items: [
       { title: "Keine Buchhaltungssoftware", body: "Es erfasst, was gebucht, abgeschlossen und bezahlt wurde, um den Cashflow sichtbar zu machen. Es ist keine Steuererklärung oder Finanzberatung." },
-      { title: "Kein Marktplatz", body: "Ihr Buchungslink gehört Ihnen. Perelai nimmt keine Provision und drängt sich nicht in die Kundenbeziehung." },
+      { title: "Kein Marktplatz", body: "Ihr Buchungslink gehört Ihnen." },
       { title: "Kein medizinisches Aktensystem", body: "Es bietet keine klinischen Aufzeichnungen, Diagnoseverfolgung oder Patientenmanagement." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Halten Sie die Farbarbeit am Laufen, ohne den Tag später rekonstruieren zu müssen.",
     body: "Erstellen Sie einen Arbeitsbereich, der mit Ihren Farbleistungen beginnt und Termine, Einnahmen und Nachbereitungen an einem Ort hält.",
     label: "Arbeitsbereich erstellen",
-    microcopy: "Keine Kreditkarte nötig. Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
+    microcopy: "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
   },
   research: independentColoristResearch,
 }

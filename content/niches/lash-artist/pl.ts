@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Czy moje usługi rzęs będą już na liście?", a: "Tak. Szablon stylistki rzęs zaczyna się od sześciu edytowalnych usług: regulacji brwi, henny brwi, laminacji brwi, liftingu i henny rzęs, przedłużania rzęs oraz uzupełnienia rzęs. Zawiera też pakiet henny rzęs i brwi oraz kleje i akcesoria." },
-    { q: "Czy klientki mogą rezerwować bez wymiany DM-ów?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klientka wybiera usługę, osobę i czas. Perelai nie pobiera prowizji od rezerwacji. Osoba szukająca Henny Brwi zaczyna od nazwanej usługi, a klientka na Uzupełnienie Rzęs ma jasną drogę bez pytania Cię w wiadomości o każdy wolny termin." },
+    { q: "Czy klientki mogą rezerwować bez wymiany DM-ów?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klientka wybiera usługę, osobę i czas. Osoba szukająca Henny Brwi zaczyna od nazwanej usługi, a klientka na Uzupełnienie Rzęs ma jasną drogę bez pytania Cię w wiadomości o każdy wolny termin." },
     { q: "Co się dzieje, gdy klientka się spóźnia lub nie przychodzi?", a: "Perelai może wysyłać automatyczne przypomnienia przez e-mail, w aplikacji i jako push. Praca i pieniądze są rejestrowane osobno, więc opuszczona Wizyta nie jest traktowana jako otrzymane pieniądze." },
     { q: "Czy zobaczę, co tydzień naprawdę przyniósł?", a: "Zapisuj faktycznie otrzymane pieniądze, przypisuj kleje i akcesoria do właściwej pracy, a potem zobacz przychody, koszty i otwarte należności bez arkusza. Wykonane Przedłużanie Rzęs to zrealizowana praca, a nie automatycznie otrzymane pieniądze, więc liczba nie ukrywa należności wymagającej dalszej decyzji." },
     { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard i opcjonalnie połącz Google Calendar. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai pomaga prowadzić klientów, rezerwacje i pieniądze w pracy z rzęsami. Nie udaje, że zastępuje specjalistyczne narzędzia.",
     items: [
       { title: "Nie jest programem księgowym", body: "Śledzi to, co zostało zarezerwowane, wykonane i opłacone, aby pokazać przepływy pieniężne. Nie jest rozliczeniem podatkowym ani poradą finansową." },
-      { title: "Nie jest marketplace’em", body: "Twój link do rezerwacji należy do Ciebie. Perelai nie pobiera prowizji i nie wynajmuje relacji z klientami." },
+      { title: "Nie jest marketplace’em", body: "Twój link do rezerwacji należy do Ciebie." },
       { title: "Nie jest systemem dokumentacji medycznej", body: "Nie oferuje dokumentacji klinicznej, śledzenia diagnoz ani zarządzania leczeniem pacjentów." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Trzymaj dzień z rzęsami na widoku po ostatniej klientce.",
     body: "Utwórz przestrzeń pracy, która zaczyna się od Twoich usług i trzyma Wizyty, pieniądze oraz kolejne decyzje w jednym miejscu.",
     label: "Utwórz bezpłatną przestrzeń pracy",
-    microcopy: "Bez karty. Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
+    microcopy: "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
   },
   research: lashArtistResearch,
 }

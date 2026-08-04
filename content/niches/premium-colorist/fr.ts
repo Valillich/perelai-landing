@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Mes prestations de couleur sont-elles déjà configurées ?", a: "Oui. Le modèle pour coloriste indépendant démarre avec six prestations modifiables, dont Couleur de racines, Couleur dimensionnelle / Balayage, Correction de couleur, Gloss & Patine, et Coupe & Coiffage. Il inclut aussi Soin traitant, Supplément cheveux longs et Coiffage comme options." },
-    { q: "Les clients peuvent-ils arrêter de réserver via mes DMs ?", a: "Partagez un lien de réservation dans votre bio ou envoyez-le par message. Les clients choisissent une prestation, un membre de l'équipe et un créneau. Perelai ne prend aucune commission sur les réservations." },
+    { q: "Les clients peuvent-ils arrêter de réserver via mes DMs ?", a: "Partagez un lien de réservation dans votre bio ou envoyez-le par message. Les clients choisissent une prestation, un membre de l'équipe et un créneau." },
     { q: "Que se passe-t-il si quelqu'un ne vient pas ?", a: "Perelai peut envoyer des rappels automatiques par e-mail, dans l'application et par notification push. Le travail et l'argent sont suivis séparément, afin qu'un rendez-vous manqué ne soit pas comptabilisé comme un revenu." },
     { q: "Puis-je voir si une journée de couleur a vraiment été rentable ?", a: "Enregistrez les montants réellement encaissés, associez les produits de couleur et consommables à la prestation correspondante, et consultez revenus, coûts et montants dus sans tableur." },
     { q: "Dois-je tout migrer en un week-end ?", a: "Non. Commencez par importer vos contacts depuis votre téléphone via vCard et connectez éventuellement Google Agenda. La liste de prestations est entièrement modifiable à votre rythme." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "Perelai est conçu pour gérer la clientèle, les réservations et les finances de votre activité de coloration. Il n'a pas vocation à remplacer des outils spécialisés.",
     items: [
       { title: "Pas un logiciel de comptabilité", body: "Il enregistre ce qui est réservé, réalisé et payé pour rendre la trésorerie visible. Ce n'est ni un bilan fiscal ni un conseil financier." },
-      { title: "Pas une plateforme de mise en relation", body: "Votre lien de réservation est le vôtre. Perelai ne prend aucune commission et n'interfère pas dans votre relation client." },
+      { title: "Pas une plateforme de mise en relation", body: "Votre lien de réservation est le vôtre." },
       { title: "Pas un système de dossier médical", body: "Il ne fournit pas de dossiers cliniques, de suivi de diagnostic ni de gestion de patients." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Gardez votre journée de coloration sous contrôle sans avoir à la reconstituer plus tard.",
     body: "Créez un espace de travail qui commence par vos prestations de couleur et rassemble visites, trésorerie et suivis en un seul endroit.",
     label: "Créer un espace de travail",
-    microcopy: "Pas de carte de crédit requise. Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
+    microcopy: "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
   },
   research: independentColoristResearch,
 }

@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "¿Estarán mis servicios de pestañas ya ahí?", a: "Sí. La plantilla incluye seis servicios editables (Diseño, Tinte, Laminado, Lifting, Extensiones y Relleno) y también el Tinte Combinado y los Materiales, para que no tengas que picarlo todo a mano." },
-    { q: "¿Podrán reservar sin pasar por mis DMs?", a: "Comparte tu enlace de reserva en tu bio o en un mensaje. Ellos escogen servicio, persona y hora. Perelai no cobra comisión. Alguien que busca un Tinte de Cejas lo ve claro, y quien busca un Relleno no tiene que esperar a que le pases horarios por texto." },
+    { q: "¿Podrán reservar sin pasar por mis DMs?", a: "Comparte tu enlace de reserva en tu bio o en un mensaje. Ellos escogen servicio, persona y hora. Alguien que busca un Tinte de Cejas lo ve claro, y quien busca un Relleno no tiene que esperar a que le pases horarios por texto." },
     { q: "¿Qué pasa si un cliente llega tarde o no aparece?", a: "Perelai envía avisos automáticos por correo, en la app y por push. Como separa el trabajo hecho del dinero ingresado, una Visita a la que no se presentan no cuenta como si lo hubieras cobrado. La decisión pendiente se queda ahí hasta que veas qué hacer con esa reserva." },
     { q: "¿Puedo ver lo que ingresé esta semana en realidad?", a: "Apunta lo cobrado, vincula tus Materiales al trabajo que toque, y mira tus ingresos, costes y lo que falta por pagar sin usar Excel. Te da un punto de partida mejor que andar mirando atrás sumando rellenos y materiales en los chats." },
     { q: "¿Tengo que mudar todo en un mismo fin de semana?", a: "No. Empieza subiendo contactos con vCard y enganchando tu Google Calendar si quieres. La lista de servicios se puede ir editando. Arranca con las reservas próximas y luego vas trayendo más, sin dejar de atender lo que paga las facturas." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai está pensado para los clientes, las reservas y el dinero de tu trabajo con pestañas. No es una herramienta contable compleja.",
     items: [
       { title: "No es software de contabilidad", body: "Apuntamos lo reservado, hecho y pagado para tu visión de caja. No hace declaración de la Renta." },
-      { title: "No es un marketplace", body: "Tu enlace es tuyo. Perelai no se lleva tajada ni gestiona por ti a los clientes." },
+      { title: "No es un marketplace", body: "Tu enlace es tuyo." },
       { title: "No es un sistema médico", body: "No llevamos historiales clínicos, ni diagnósticos ni gestión de pacientes oftalmológicos." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Mantén a la vista tu día de pestañas incluso tras el último cliente.",
     body: "Crea un espacio de trabajo que empieza por tus servicios y unifica visitas, pagos y decisiones en el mismo sitio.",
     label: "Crear espacio de trabajo",
-    microcopy: "Sin tarjeta. Te llegará un correo para rematar el alta.",
+    microcopy: "Te llegará un correo para rematar el alta.",
   },
   research: lashArtistResearch,
 }

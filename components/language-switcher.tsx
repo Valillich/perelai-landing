@@ -7,6 +7,7 @@ import { analytics } from "@/lib/analytics"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { cn } from "@/lib/cn"
+import { getNichePageByPath, isNichePagePublishedIn } from "@/config/niche-pages"
 
 const ONE_YEAR_SECONDS = 60 * 60 * 24 * 365
 
@@ -37,8 +38,14 @@ export function LanguageSwitcher({
     setCurrent({ pathname: unprefixedPath(window.location.pathname), search: window.location.search })
   }, [])
 
-  const hrefFor = (target: PublishedLocale) =>
-    `${localizePath(target, current.pathname)}${current.search}`
+  const nichePage = getNichePageByPath(current.pathname)
+
+  const hrefFor = (target: PublishedLocale) => {
+    if (nichePage && !isNichePagePublishedIn(nichePage, target)) {
+      return `${localizePath(locale, current.pathname)}${current.search}`
+    }
+    return `${localizePath(target, current.pathname)}${current.search}`
+  }
 
   const selectLocale = (target: PublishedLocale) => {
     document.cookie = `NEXT_LOCALE=${target}; Path=/; Max-Age=${ONE_YEAR_SECONDS}; SameSite=Lax`

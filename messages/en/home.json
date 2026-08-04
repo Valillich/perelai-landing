@@ -147,7 +147,11 @@
     "coloristsLabel": "For independent colorists",
     "coloristsDescription": "Booking, clients and cash flow for colorists who work on their own terms.",
     "lashArtistsLabel": "For independent lash artists",
-    "lashArtistsDescription": "Booking, client work and money visibility for lash artists who work on their own terms."
+    "lashArtistsDescription": "Booking, client work and money visibility for lash artists who work on their own terms.",
+    "salonsLabel": "For hair salon owners",
+    "salonsDescription": "Revenue, recorded costs and calculated profit for a salon, grouped by service category and client.",
+    "massageLabel": "For massage therapists",
+    "massageDescription": "Revenue, recorded costs and calculated profit for a solo practice, with prepaid packages and open balances kept separate."
   },
   "faq": {
     "title": "Questions",
@@ -188,6 +192,8 @@
     "company": "Legal",
     "forColorists": "For independent colorists",
     "forLashArtists": "For independent lash artists",
+    "forSalons": "For hair salon owners",
+    "forMassageTherapists": "For massage therapists",
     "devices": "How to open Perelai?",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",

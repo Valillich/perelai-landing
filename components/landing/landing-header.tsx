@@ -7,7 +7,7 @@ import { CtaButton } from "@/components/cta-button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { MobileNav, type MobileNavItem } from "@/components/landing/mobile-nav"
 import { NicheMenu, type NicheMenuItem } from "@/components/landing/niche-menu"
-import { getEnabledNichePages } from "@/config/niche-pages"
+import { getEnabledNichePagesForLocale } from "@/config/niche-pages"
 import { Link } from "@/i18n/navigation"
 import { localizePath } from "@/i18n/paths"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -59,7 +59,7 @@ export function LandingHeader({
     { href: localizePath(locale, "/install"), label: tDevices("label"), current: isInstall },
   ]
 
-  const nicheItems: NicheMenuItem[] = labelledNichePages(getEnabledNichePages()).map(
+  const nicheItems: NicheMenuItem[] = labelledNichePages(getEnabledNichePagesForLocale(locale)).map(
     ({ page, keys }) => ({
       href: localizePath(locale, page.path),
       label: tNiche(keys.label),

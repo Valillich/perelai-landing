@@ -13,7 +13,7 @@ export interface LegalDraftContent {
 
 /** ISO so the rendered date can follow the page locale rather than English. */
 export const LEGAL_DRAFT_EFFECTIVE_DATE = "2026-07-30"
-export const LEGAL_CONTACT_EMAIL = "legal@perelai.com"
+export const LEGAL_CONTACT_EMAIL = "support@perelai.com"
 
 export function formatLegalDate(isoDate: string, locale: string): string {
   const parsed = new Date(`${isoDate}T00:00:00Z`)
@@ -79,7 +79,7 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
       },
       {
         heading: "Contact",
-        body: "Questions about these draft terms can be sent to legal@perelai.com.",
+        body: "Questions about these draft terms can be sent to support@perelai.com.",
       },
     ],
   },
@@ -125,7 +125,7 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
       },
       {
         heading: "Contact and complaints",
-        body: "Questions, requests and complaints about this draft policy can be sent to legal@perelai.com. The final policy will include the relevant complaint routes.",
+        body: "Questions, requests and complaints about this draft policy can be sent to support@perelai.com. The final policy will include the relevant complaint routes.",
       },
     ],
   },

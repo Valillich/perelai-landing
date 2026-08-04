@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Will my lash services already be there?", a: "Yes. The lash artist template starts with six editable services: Brow Shaping, Brow Tint, Brow Lamination, Lash Lift & Tint, Lash Extensions and Lash Refill. It also includes Brow & Lash Tint Combo and Supplies & Adhesive, so you are not naming every common service from a blank page." },
-    { q: "Can clients book without a DM exchange?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time. Perelai takes no commission on bookings. Someone looking for Brow Tint can start with that named service, while a Lash Refill client can see the same clear route without asking you to type out available times." },
+    { q: "Can clients book without a DM exchange?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time. Someone looking for Brow Tint can start with that named service, while a Lash Refill client can see the same clear route without asking you to type out available times." },
     { q: "What happens when a client is late or does not show?", a: "Perelai can send automatic reminders by email, in-app and push. Work and money are recorded separately, so a missed Visit is not treated as money received. You decide how to handle a future booking request while the unfinished decision stays visible." },
     { q: "Can I see what the week actually brought in?", a: "Record what was actually received, link Supplies & Adhesive to the relevant work, and see revenue, costs and what is still outstanding without a spreadsheet. That gives you a clearer starting point than trying to reconstruct refills, brow work, fresh sets and materials from messages after the week is over. A completed extension set is work done, not automatically money received, so the number does not hide a balance that still needs attention." },
     { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard and optionally connect Google Calendar. Your service list is editable, so you can make it yours as you go. Begin with the next few bookings, then decide what else is useful to bring across without pausing the work that pays the bills." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai is for the client, booking and money side of your lash work. It does not pretend to replace specialist tools.",
     items: [
       { title: "Not accounting software", body: "It tracks what was booked, completed and paid for cash-flow visibility. It is not tax filing or financial advice." },
-      { title: "Not a marketplace", body: "Your booking link is yours. Perelai takes no commission and does not rent the client relationship." },
+      { title: "Not a marketplace", body: "Your booking link is yours. Perelai does not rent the client relationship." },
       { title: "Not a medical record system", body: "It does not provide clinical records, diagnosis tracking or patient treatment management." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Keep the lash day visible after the last client.",
     body: "Create a workspace that starts with your services and keeps Visits, money and next decisions in one place.",
     label: "Create your workspace",
-    microcopy: "No card. You’ll get a verification email to finish setting up.",
+    microcopy: "You’ll get a verification email to finish setting up.",
   },
   research: lashArtistResearch,
 }

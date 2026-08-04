@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Mes prestations de cils sont-elles déjà configurées ?", a: "Oui. Le modèle pour lash artist démarre avec six prestations modifiables : Restructuration des sourcils, Teinture des sourcils, Brow lift, Rehaussement de cils & teinture, Pose complète d'extensions et Remplissage de cils." },
-    { q: "Les clients peuvent-ils réserver sans passer par les DMs ?", a: "Partagez un lien de réservation dans votre bio ou par message. Les clients choisissent la prestation, le membre de l'équipe et l'horaire. Perelai ne prend pas de commission sur les réservations." },
+    { q: "Les clients peuvent-ils réserver sans passer par les DMs ?", a: "Partagez un lien de réservation dans votre bio ou par message. Les clients choisissent la prestation, le membre de l'équipe et l'horaire." },
     { q: "Que se passe-t-il si un client est en retard ou ne vient pas ?", a: "Perelai peut envoyer des rappels automatiques par e-mail, notification push et dans l'application. Le travail et l'argent sont suivis séparément pour qu'un rendez-vous manqué ne soit pas comptabilisé comme revenu." },
     { q: "Puis-je voir ce que la semaine a réellement rapporté ?", a: "Consignez les montants encaissés, associez le matériel & la colle au travail réalisé, et visualisez revenus, coûts et montants dus sans tableur." },
     { q: "Dois-je tout migrer en un week-end ?", a: "Non. Incorporez vos contacts depuis votre téléphone via vCard et connectez optionnellement Google Agenda. La liste de prestations est entièrement adaptable à votre rythme." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai est pensé pour la gestion client, les réservations et le suivi financier de votre activité de cils. Il ne remplace pas des outils spécialisés.",
     items: [
       { title: "Pas un logiciel de comptabilité", body: "Il suit ce qui est réservé, réalisé et payé pour donner une visibilité sur la trésorerie. Ce n'est pas un bilan fiscal." },
-      { title: "Pas une plateforme de mise en relation", body: "Votre lien de réservation vous appartient. Perelai ne prend pas de commission et n'intervient pas dans votre relation client." },
+      { title: "Pas une plateforme de mise en relation", body: "Votre lien de réservation vous appartient." },
       { title: "Pas un système de dossier médical", body: "Il ne fournit pas de dossiers cliniques, de suivi de diagnostic ni de gestion de patients." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Gardez votre journée de cils claire et lisible même après le dernier client.",
     body: "Créez un espace de travail qui démarre avec vos prestations et réunit visites, trésorerie et décisions au même endroit.",
     label: "Créer un espace de travail",
-    microcopy: "Pas de carte de crédit requise. Vous recevrez un e-mail de confirmation pour finaliser l'installation.",
+    microcopy: "Vous recevrez un e-mail de confirmation pour finaliser l'installation.",
   },
   research: lashArtistResearch,
 }

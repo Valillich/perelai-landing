@@ -18,6 +18,9 @@ import { content as lashDe } from "./lash-artist/de"
 import { content as lashPt } from "./lash-artist/pt"
 import { content as lashTr } from "./lash-artist/tr"
 
+import { content as salonEn } from "./hair-salon/en"
+import { content as massageEn } from "./massage-therapist/en"
+
 import type { NichePageContent } from "@/content/niches/types"
 import type { NichePage } from "@/config/niche-pages"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -35,6 +38,16 @@ const lashArtist = {
   tr: lashTr
 } satisfies Record<PublishedLocale, NichePageContent>
 
+/**
+ * Pages staged in English only, via `locales: ["en"]` in the registry. No other
+ * locale can route to them, so the remaining eight stay unwritten until each has
+ * named human review. Move a niche out of here once it is fully translated.
+ */
+const stagedEnglishOnly: Record<string, Partial<Record<PublishedLocale, NichePageContent>>> = {
+  "hair-salon": { en: salonEn },
+  "massage-therapist": { en: massageEn },
+}
+
 export function getNicheContent(
   page: NichePage,
   locale: PublishedLocale,
@@ -45,6 +58,15 @@ export function getNicheContent(
 
   if (page.niche === "lash-artist") {
     return lashArtist[locale]
+  }
+
+  const staged = stagedEnglishOnly[page.niche]
+  if (staged) {
+    const content = staged[locale]
+    if (content) return content
+    throw new Error(
+      `"${page.niche}" has no "${locale}" content. The registry must not publish a locale without one.`,
+    )
   }
 
   throw new Error(`No content module for enabled niche "${page.niche}"`)

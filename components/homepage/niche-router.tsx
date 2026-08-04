@@ -1,13 +1,17 @@
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { ArrowRight } from "lucide-react"
 import { Reveal } from "@/components/landing/reveal"
 import { Link } from "@/i18n/navigation"
-import { getEnabledNichePages } from "@/config/niche-pages"
+import { getEnabledNichePagesForLocale } from "@/config/niche-pages"
+import type { PublishedLocale } from "@/i18n/locales"
 import { labelledNichePages } from "@/lib/niche-labels"
 
 export function NicheRouter() {
   const t = useTranslations("home")
-  const nichePages = labelledNichePages(getEnabledNichePages())
+  const locale = useLocale() as PublishedLocale
+  // Only pages published in this locale: a card pointing at a locale that has no
+  // translation would link straight to a 404.
+  const nichePages = labelledNichePages(getEnabledNichePagesForLocale(locale))
 
   if (nichePages.length === 0) return null
 

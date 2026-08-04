@@ -58,7 +58,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Sind meine Wimpern-Services bereits vorhanden?", a: "Ja. Die Vorlage für Lash Artists startet mit sechs bearbeitbaren Services: Augenbrauenformen, Augenbrauenfärben, Brow Lifting, Wimpernlifting & Färben, Wimpernverlängerung und Wimpernauffüllung. Sie beinhaltet auch die Kombi aus Augenbrauen- & Wimpernfärben sowie Materialien & Kleber, sodass Sie nicht jeden gängigen Service von einem leeren Blatt aus benennen müssen." },
-    { q: "Können Kunden ohne DM-Austausch buchen?", a: "Teilen Sie einen Buchungslink in Ihrer Bio oder senden Sie ihn in einer Nachricht. Kunden wählen einen Service, eine Person und eine Zeit. Perelai nimmt keine Provision für Buchungen. Jemand, der ein Augenbrauenfärben sucht, kann mit diesem benannten Service beginnen, während ein Kunde für eine Wimpernauffüllung denselben klaren Weg sieht, ohne Sie nach freien Terminen fragen zu müssen." },
+    { q: "Können Kunden ohne DM-Austausch buchen?", a: "Teilen Sie einen Buchungslink in Ihrer Bio oder senden Sie ihn in einer Nachricht. Kunden wählen einen Service, eine Person und eine Zeit. Jemand, der ein Augenbrauenfärben sucht, kann mit diesem benannten Service beginnen, während ein Kunde für eine Wimpernauffüllung denselben klaren Weg sieht, ohne Sie nach freien Terminen fragen zu müssen." },
     { q: "Was passiert, wenn ein Kunde zu spät kommt oder nicht erscheint?", a: "Perelai kann automatische Erinnerungen per E-Mail, in-App und Push senden. Arbeit und Einnahmen werden separat erfasst, sodass ein verpasster Termin nicht als eingenommenes Geld behandelt wird. Sie entscheiden, wie Sie mit einer zukünftigen Buchungsanfrage umgehen, während die ungelöste Entscheidung sichtbar bleibt." },
     { q: "Kann ich sehen, was die Woche tatsächlich eingebracht hat?", a: "Erfassen Sie, was tatsächlich eingenommen wurde, verknüpfen Sie Materialien & Kleber mit der entsprechenden Arbeit und sehen Sie Einnahmen, Kosten und was noch aussteht, ohne Tabellenkalkulation. Das gibt Ihnen einen klareren Startpunkt, als nach der Woche Auffüllungen, Augenbrauenbehandlungen, Neusets und Materialien aus Nachrichten zu rekonstruieren. Ein abgeschlossenes Extension-Set ist getane Arbeit, nicht automatisch eingenommenes Geld, sodass die Zahl kein Saldo verbirgt, das noch Aufmerksamkeit erfordert." },
     { q: "Muss ich alles an einem Wochenende umziehen?", a: "Nein. Starten Sie mit Kontakten von Ihrem Telefon per vCard und verbinden Sie optional Google Calendar. Ihre Service-Liste ist bearbeitbar, sodass Sie sie Schritt für Schritt anpassen können. Beginnen Sie mit den nächsten Buchungen und entscheiden Sie dann, was sonst noch nützlich ist, ohne die Arbeit zu pausieren, die Ihre Rechnungen bezahlt." },
@@ -77,7 +77,7 @@ export const content: NichePageContent = {
     body: "Perelai ist für die Kunden-, Buchungs- und Geldseite Ihrer Wimpernarbeit gedacht. Es gibt nicht vor, spezialisierte Tools zu ersetzen.",
     items: [
       { title: "Keine Buchhaltungssoftware", body: "Es erfasst, was gebucht, abgeschlossen und bezahlt wurde, um den Cashflow sichtbar zu machen. Es ist keine Steuererklärung oder Finanzberatung." },
-      { title: "Kein Marktplatz", body: "Ihr Buchungslink gehört Ihnen. Perelai nimmt keine Provision und mischt sich nicht in die Kundenbeziehung ein." },
+      { title: "Kein Marktplatz", body: "Ihr Buchungslink gehört Ihnen." },
       { title: "Kein medizinisches Aktensystem", body: "Es bietet keine klinischen Aufzeichnungen, Diagnoseverfolgung oder Patientenmanagement." },
     ],
   },
@@ -85,7 +85,7 @@ export const content: NichePageContent = {
     title: "Halten Sie den Wimpern-Tag auch nach dem letzten Kunden sichtbar.",
     body: "Erstellen Sie einen Arbeitsbereich, der mit Ihren Services beginnt und Termine, Geldflüsse und nächste Entscheidungen an einem Ort hält.",
     label: "Arbeitsbereich erstellen",
-    microcopy: "Keine Kreditkarte nötig. Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
+    microcopy: "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
   },
   research: lashArtistResearch,
 }

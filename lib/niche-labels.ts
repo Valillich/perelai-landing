@@ -18,6 +18,14 @@ const NICHE_LABEL_KEYS: Record<string, { label: string; description: string }> =
     label: "nicheRouter.lashArtistsLabel",
     description: "nicheRouter.lashArtistsDescription",
   },
+  "hair-salon": {
+    label: "nicheRouter.salonsLabel",
+    description: "nicheRouter.salonsDescription",
+  },
+  "massage-therapist": {
+    label: "nicheRouter.massageLabel",
+    description: "nicheRouter.massageDescription",
+  },
 }
 
 export interface NicheLabelKeys {

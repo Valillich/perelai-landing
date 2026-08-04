@@ -48,7 +48,7 @@ export const content: NichePageContent = {
   },
   faq: [
     { q: "Meus serviços de coloração já vêm cadastrados?", a: "Sim. O modelo para coloristas independentes começa com seis serviços editáveis, incluindo Retoque de Raiz, Cor Dimensional / Balayage, Correção de Cor, Matrização & Gloss, e Corte & Escova. Inclui também Tratamento, Adicional Cabelo Longo e Escova como adicionais." },
-    { q: "Os clientes podem parar de agendar por mensagem direta?", a: "Compartilhe seu link de agendamento na bio ou envie no WhatsApp. Os clientes escolhem o serviço, o profissional e o horário. O Perelai não cobra comissão sobre agendamentos." },
+    { q: "Os clientes podem parar de agendar por mensagem direta?", a: "Compartilhe seu link de agendamento na bio ou envie no WhatsApp. Os clientes escolhem o serviço, o profissional e o horário." },
     { q: "O que acontece quando alguém não aparece?", a: "O Perelai pode enviar lembretes automáticos por e-mail, in-app e notificações push. O atendimento e o dinheiro são registrados separadamente, assim uma falta não conta como receita." },
     { q: "Consigo ver se um dia de coloração foi realmente lucrativo?", a: "Registre o que foi realmente recebido, vincule produtos e descartáveis ao serviço e veja receitas, custos e pendências sem planilhas." },
     { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard e conecte o Google Agenda se quiser. A lista de serviços pode ser ajustada gradualmente no seu ritmo." },
@@ -67,7 +67,7 @@ export const content: NichePageContent = {
     body: "O Perelai foi feito para gerenciar clientes, agendamentos e o dinheiro do seu trabalho de cor. Não tenta substituir ferramentas especializadas.",
     items: [
       { title: "Não é software de contabilidade", body: "Registra o agendado, o realizado e o pago para dar visibilidade ao fluxo de caixa. Não faz declaração de imposto de renda." },
-      { title: "Não é um marketplace", body: "Seu link de agendamento é seu. O Perelai não cobra comissões nem interfere no relacionamento com seus clientes." },
+      { title: "Não é um marketplace", body: "Seu link de agendamento é seu." },
       { title: "Não é um sistema de prontuário médico", body: "Não oferece prontuários clínicos, acompanhamento de diagnósticos ou gestão de pacientes." },
     ],
   },
@@ -75,7 +75,7 @@ export const content: NichePageContent = {
     title: "Mantenha o dia de coloração sob controle sem precisar reconstruir tudo à noite.",
     body: "Crie um espaço de trabalho que começa com seus serviços de cor e reúne atendimentos, finanças e próximas etapas em um só lugar.",
     label: "Criar espaço de trabalho",
-    microcopy: "Sem cartão de crédito. Você receberá um e-mail de confirmação para concluir o cadastro.",
+    microcopy: "Você receberá um e-mail de confirmação para concluir o cadastro.",
   },
   research: independentColoristResearch,
 }

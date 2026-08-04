@@ -1,4 +1,4 @@
-import { PUBLISHED_LOCALES } from "@/i18n/locales"
+import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 
 export type BookingMode = "APPOINTMENT" | "REQUEST" | "ORDER" | "RENTAL"
 export type NicheWave = "1a" | "1b" | "2" | "3a" | "3b" | "3c" | "hold-legal"
@@ -14,6 +14,17 @@ export interface NichePage {
   /** Only Wave 1a is enabled until later gates pass. */
   enabled: boolean
   aliases?: string[]
+  /**
+   * Locales this page is published in. Omit for the normal case — a page
+   * translated into every published locale.
+   *
+   * Set it to stage a page that is approved in some locales but not others: only
+   * these locales get a route, a sitemap entry, an hreflang alternate, a homepage
+   * router card and a header menu item. A locale left out here has no page, so it
+   * must not be advertised anywhere. Every locale listed must have a content
+   * module and its `home.nicheRouter.*` label keys.
+   */
+  locales?: readonly PublishedLocale[]
 }
 
 /**
@@ -79,11 +90,13 @@ export const NICHE_PAGES: NichePage[] = [
     enabled: false,
   },
   {
+    // English-only staged launch (2026-08-04), same terms as `/for-salons`.
     path: "/for-massage-therapists",
     niche: "massage-therapist",
     templateId: "massage",
     wave: "1b",
-    enabled: false,
+    enabled: true,
+    locales: ["en"],
   },
   {
     path: "/for-barbers",
@@ -93,11 +106,14 @@ export const NICHE_PAGES: NichePage[] = [
     enabled: false,
   },
   {
+    // English-only staged launch (2026-08-04). The eight other locales stay
+    // unpublished until each has named human review; see content/niches/hair-salon.
     path: "/for-salons",
     niche: "hair-salon",
     templateId: "salon",
     wave: "1b",
-    enabled: false,
+    enabled: true,
+    locales: ["en"],
   },
   {
     path: "/for-private-tutors",
@@ -301,14 +317,39 @@ function pageSlug(page: NichePage): string {
   return page.path.replace(/^\//, "")
 }
 
-export function getEnabledNichePageBySlug(slug: string): NichePage | undefined {
+/** Locales a page is actually published in. Defaults to every published locale. */
+export function getNichePageLocales(page: NichePage): readonly PublishedLocale[] {
+  return page.locales ?? PUBLISHED_LOCALES
+}
+
+export function isNichePagePublishedIn(page: NichePage, locale: PublishedLocale): boolean {
+  return getNichePageLocales(page).includes(locale)
+}
+
+/** Enabled pages available in `locale` — what a locale may link to and list. */
+export function getEnabledNichePagesForLocale(locale: PublishedLocale): NichePage[] {
+  return getEnabledNichePages().filter((page) => isNichePagePublishedIn(page, locale))
+}
+
+/**
+ * Resolves a slug to an enabled page. Pass `locale` on routing surfaces: a page
+ * that is not published in that locale must 404 rather than render a missing
+ * translation.
+ */
+export function getEnabledNichePageBySlug(
+  slug: string,
+  locale?: PublishedLocale,
+): NichePage | undefined {
   if (RESERVED_SLUGS.includes(slug as (typeof RESERVED_SLUGS)[number])) return undefined
-  return getEnabledNichePages().find((page) => pageSlug(page) === slug)
+  const page = getEnabledNichePages().find((candidate) => pageSlug(candidate) === slug)
+  if (!page) return undefined
+  if (locale && !isNichePagePublishedIn(page, locale)) return undefined
+  return page
 }
 
 export function getNicheStaticParams() {
   return getEnabledNichePages().flatMap((page) =>
-    PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage: pageSlug(page) })),
+    getNichePageLocales(page).map((locale) => ({ locale, nichePage: pageSlug(page) })),
   )
 }
 

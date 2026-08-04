@@ -15,17 +15,29 @@ function absoluteUrl(pathname: string): string {
   return new URL(pathname, env.NEXT_PUBLIC_LANDING_URL).toString()
 }
 
-/** Produces a complete, reciprocal hreflang cluster for a translated page. */
+/**
+ * Produces a complete, reciprocal hreflang cluster for a translated page.
+ *
+ * `availableLocales` narrows the cluster for a page that is not published in every
+ * locale — a staged niche page, for example. Only real URLs may be advertised: an
+ * hreflang pointing at a locale that 404s is a crawl error, not a hint. `x-default`
+ * falls back to the first available locale when the page has no English version.
+ */
 export function getLocalizedAlternates(
   pathname: string,
   _currentLocale: PublishedLocale,
+  availableLocales: readonly PublishedLocale[] = PUBLISHED_LOCALES,
 ): Record<string, string> {
+  const locales = PUBLISHED_LOCALES.filter((locale) => availableLocales.includes(locale))
   const languages = Object.fromEntries(
-    PUBLISHED_LOCALES.map((locale) => [locale, absoluteUrl(localizePath(locale, pathname))]),
+    locales.map((locale) => [locale, absoluteUrl(localizePath(locale, pathname))]),
   )
+  const defaultLocale = locales.includes("en") ? "en" : locales[0]
 
   return {
     ...languages,
-    "x-default": absoluteUrl(localizePath("en", pathname)),
+    ...(defaultLocale
+      ? { "x-default": absoluteUrl(localizePath(defaultLocale, pathname)) }
+      : {}),
   }
 }
