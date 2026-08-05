@@ -113,7 +113,7 @@
     "q6": "Ist dies eine Buchhaltungssoftware?",
     "a6": "Nein. Perelai ist operative Finanzsoftware. Es erfasst Umsatz, Kosten, berechneten Gewinn, erfasste Zahlungen und was auf offenen Aufträgen noch geschuldet wird, mit Aufschlüsselung nach Kategorie und Kunde. Es macht keine Steuererklärung, keinen Kontenabgleich, erstellt keine gesetzlichen Berichte und gibt keine Finanzberatung.",
     "q7": "Hat Perelai eine iPhone- oder Android-App?",
-    "a7": "Perelai ist Finanzsoftware für selbstständige Dienstleister. Perelai ist nicht im App Store oder bei Google Play gelistet; es läuft in einem Webbrowser unter perelai.app. Perelai aus einem Browser zu installieren ist optional und wird nicht von jedem Browser angeboten. Perelai braucht eine Internetverbindung.",
+    "a7": "Perelai ist eine Web-App. Für die Nutzung von Perelai benötigen Sie nur einen Browser und eine Internetverbindung. Es ist nicht im App Store oder bei Google Play gelistet. Einige Browser bieten an, Perelai zum Home-Bildschirm hinzuzufügen oder in einem separaten Fenster zu öffnen, was dem Verhalten einer nativen App nahekommen kann.",
     "q8": "Kann ich Perelai auf einem Laptop oder iPad nutzen?",
     "a8": "Öffnen Sie perelai.app in einem unterstützten Browser auf Ihrem Laptop oder iPad und melden Sie sich mit derselben Anmeldung an, die Sie auf Ihrem Smartphone nutzen. Eine Anmeldung, ein Arbeitsbereich. Eine Internetverbindung ist erforderlich.",
     "q_category": {

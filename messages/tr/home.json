@@ -113,7 +113,7 @@
     "q6": "Bu bir muhasebe yazılımı mı?",
     "a6": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez.",
     "q7": "Perelai'nin iPhone veya Android uygulaması var mı?",
-    "a7": "Perelai bağımsız hizmet işletmeleri için finans yazılımıdır. Perelai App Store veya Google Play'de yer almaz; perelai.app adresinde bir web tarayıcısında çalışır. Perelai'yi bir tarayıcıdan yüklemek isteğe bağlıdır ve tüm tarayıcılar tarafından sunulmaz. Perelai bir internet bağlantısı gerektirir.",
+    "a7": "Perelai bir web uygulamasıdır. Perelai'yi kullanmak için yalnızca bir tarayıcı ve internet bağlantısı gerekir. App Store veya Google Play'de yer almaz. Bazı tarayıcılar Perelai'yi ana ekrana eklemeyi veya ayrı bir pencerede açmayı sunar; bu da yerel bir uygulama davranışına yakın olabilir.",
     "q8": "Perelai'yi dizüstü bilgisayarda veya iPad'de kullanabilir miyim?",
     "a8": "Dizüstü bilgisayarınızda veya iPad'inizde desteklenen bir tarayıcıda perelai.app adresini açın ve telefonunuzda kullandığınız aynı giriş bilgileriyle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gereklidir.",
     "q_category": {

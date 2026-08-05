@@ -180,7 +180,7 @@
     "q6": "Is this accounting software?",
     "a6": "No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice.",
     "q7": "Does Perelai have an iPhone or Android app?",
-    "a7": "Perelai is finance software for independent service businesses. Perelai is not listed on the App Store or on Google Play; it runs in a web browser at perelai.app instead. Installing Perelai from a browser is optional and not offered by every browser. Perelai needs an internet connection.",
+    "a7": "Perelai is a web app. To use Perelai, you only need a browser and an internet connection. It is not listed on the App Store or Google Play. Some browsers let you add Perelai to your Home Screen or open it in a separate window, which can feel close to a native app.",
     "q8": "Can I use Perelai on a laptop or an iPad?",
     "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
   },

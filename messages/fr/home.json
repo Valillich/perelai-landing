@@ -113,7 +113,7 @@
     "q6": "Est-ce un logiciel de comptabilité ?",
     "a6": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier.",
     "q7": "Perelai a-t-il une application iPhone ou Android ?",
-    "a7": "Perelai est un logiciel de finances pour les entreprises de services indépendantes. Perelai n'est pas présent sur l'App Store ni sur Google Play ; il fonctionne dans un navigateur web sur perelai.app. L'installation depuis un navigateur est facultative et n'est pas proposée par tous les navigateurs. Perelai nécessite une connexion internet.",
+    "a7": "Perelai est une application web. Pour utiliser Perelai, vous avez seulement besoin d'un navigateur et d'une connexion internet. Il n'est pas présent sur l'App Store ni sur Google Play. Certains navigateurs permettent d'ajouter Perelai à l'écran d'accueil ou de l'ouvrir dans une fenêtre séparée, ce qui peut se rapprocher du comportement d'une application native.",
     "q8": "Puis-je utiliser Perelai sur un ordinateur portable ou un iPad ?",
     "a8": "Ouvrez perelai.app dans un navigateur compatible sur votre ordinateur ou iPad et connectez-vous avec les mêmes identifiants que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise.",
     "q_category": {
