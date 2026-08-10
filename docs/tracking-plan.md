@@ -1,8 +1,8 @@
 # Landing tracking plan
 
-**Status:** Implementation complete; provider adapter approved and enabled.
-**Reviewed:** 2026-07-30
-**Owner/legal decision: approved.** A privacy owner and legal counsel have approved the PostHog EU Cloud provider, lawful basis, disclosures, retention, and consent experience.
+**Status:** PostHog event collection is enabled. Cloudflare Web Analytics RUM is recorded as a second analytics recipient, but remains disabled until its separate privacy and consent decision is approved and the activation checks below are complete.
+**Reviewed:** 2026-08-05
+**Owner/legal decision:** PostHog EU Cloud is approved. The owner has requested broader performance analytics through Cloudflare Web Analytics; Cloudflare’s distinct recipient, processing, and disclosure decision is **pending privacy/legal approval**.
 
 ## Current configuration
 
@@ -19,6 +19,45 @@ The landing exposes a typed, provider-neutral adapter in `lib/analytics.ts`. Pro
 | Click IDs | Off. `gclid`, `fbclid`, `msclkid`, and arbitrary query parameters are neither handed off nor tracked. |
 | Referrers | Full referrer URLs are off. Landing attribution retains only allowlisted referrer hostnames. |
 | Forms | The landing has no forms. No field values are observed or sent. |
+
+## Cloudflare Web Analytics RUM: second recipient
+
+Cloudflare Web Analytics is being added for real-user performance measurement, not for product
+funnel events. It is separate from the typed `lib/analytics.ts` contract: Cloudflare RUM does not
+support custom events, and its edge injection must not be used to duplicate `landing_viewed`, CTA,
+signup, or onboarding measurements that belong in PostHog and the application report.
+
+| Area | Planned Cloudflare RUM configuration |
+| --- | --- |
+| Recipient / purpose | Cloudflare, as a second analytics recipient, for page views, traffic patterns, page-load timing and Core Web Vitals. |
+| Status | **Disabled pending approval.** The current Cloudflare dashboard setting must remain `Disable` until this section’s acceptance criteria are signed off. |
+| Activation choice | After approval, select **Enable, excluding visitor data in the EU** for `perelai.com`, not global `Enable`. This prevents the beacon from running for visitors routed through EEA/EU, UK, and Swiss Cloudflare data centres. |
+| Delivery / scope | Cloudflare’s automatic setup injects the RUM beacon at the edge. Before activation, confirm that the zone has no unintended public subdomains; without Web Analytics rules, automatic setup can inject it on every page and subdomain in the zone. Scope rules to the landing hostname and public landing paths where the account plan supports rules. |
+| Browser storage / identifiers | Cloudflare documents no use of cookies, localStorage, sessionStorage, IndexedDB, IP fingerprinting, or a cross-session visitor ID. It does generate an ephemeral `pageloadId` for each page load. This absence of persistent storage does **not** decide the consent or disclosure requirement. |
+| Browser data sent | Performance API data including navigation/resource timings, paint timings, LCP, CLS, INP, TTFB, page URL (`landingPath`), and referrer URL. Cloudflare says it receives source IP as part of request handling and discards it at the nearest data centre rather than storing it. |
+| Query-string safeguard | Cloudflare currently says Web Analytics does not log query strings, including UTM parameters, to avoid sensitive-data collection. Treat that as an implementation fact to re-verify before activation and on material Cloudflare changes; it is not permission to place PII in URLs. The landing must continue to avoid PII and arbitrary query passthrough. |
+| Processing location | RUM data is generally processed at the nearest Cloudflare data centre and may be processed in a different region from where it originated. It is not an EU-only processing promise. |
+| Retention / sampling | Cloudflare documents seven days of unsampled beacon data, aggregated long-term data at about 10% of original volume, and six months of dashboard access. |
+| Features deliberately out of scope | No session replay, heatmaps, click IDs, advertising pixels, user profiles, custom event payloads, form capture, or cross-domain identifier. |
+
+### Cloudflare activation gates
+
+Do not change the dashboard setting until all of the following are recorded by the owner and privacy/legal reviewer:
+
+1. Cloudflare is added to the public privacy disclosure as an analytics recipient, including the
+   RUM purpose, processing geography, browser data categories, retention/sampling, and the
+   EU/EEA/UK/Swiss exclusion.
+2. The lawful basis and consent experience are expressly approved for this collection. “Cookieless”
+   or “no browser storage” is not treated as a blanket exemption.
+3. The owner accepts the automatic-injection scope after checking the Cloudflare zone’s hostnames
+   and any Web Analytics rules. If that scope cannot be limited to the intended landing surfaces,
+   keep RUM disabled.
+4. A pre-production network check confirms that the beacon is absent for excluded EU traffic,
+   only the intended hostname/path receives the beacon, and no PII-bearing query string is present
+   in the data available to the account.
+5. This plan, the privacy page, and the Cloudflare dashboard setting are updated together with the
+   activation date and reviewer names. Re-review if Cloudflare enables query-string or custom-event
+   support.
 
 The site does use limited non-analytics browser state:
 

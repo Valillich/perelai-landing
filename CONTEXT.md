@@ -80,9 +80,12 @@ The real Perelai mark — violet rounded tile with the white `P` monogram, copie
 | `public/brand/perelai-icon-512.png`, `-192.png` | manifest / PWA sizes |
 | `public/brand/perelai-mark-64.png` | header and footer logo mark |
 
-> ⚠️ `public/icon.svg`, `public/apple-icon.png`, `public/icon-{light,dark}-32x32.png`,
-> `public/placeholder-*` are **v0 template branding, not Perelai**. They are unreferenced and must be
-> deleted in Phase LP1.2 (after `git init` in LP0.1 makes deletion reversible).
+> ✅ The v0 template icons (`public/icon.svg`, `public/apple-icon.png`,
+> `public/icon-{light,dark}-32x32.png`) were deleted 2026-08-10. `public/apple-icon.png` was not
+> merely unreferenced — a `public/` file shadows the App Router metadata route of the same name, so
+> `/apple-icon.png` was serving the black `v0` tile and Google picked it up as the search-result
+> favicon. Never re-add a `public/` file whose name collides with an `app/` metadata convention
+> (`favicon.ico`, `icon.*`, `apple-icon.*`, `opengraph-image.*`, `twitter-image.*`).
 > Header and footer still render a generic `Sparkles` lucide icon as the logo — LP1.2 replaces it
 > with `perelai-mark-64.png`. An SVG master should be requested from design; none exists in either repo.
 
