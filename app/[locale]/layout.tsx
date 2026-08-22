@@ -30,6 +30,11 @@ export const dynamicParams = false
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_LANDING_URL),
+  icons: {
+    icon: "/icon.png?v=2",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-icon.png?v=2",
+  },
 }
 
 export default async function LocaleLayout({
