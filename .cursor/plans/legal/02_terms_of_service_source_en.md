@@ -56,9 +56,10 @@ or suspend access where verification is not completed or lawful use cannot be es
 
 ## 3. Accounts, workspaces and staff
 
-An **Account** identifies a user. A **Workspace** is the Customer's business environment in the
-Service. The workspace owner controls workspace settings, roles and invitations. A Customer may use
-more than one workspace where the Service supports it.
+An **Account** identifies a user. A **Company** (also called a **Workspace** in user-facing legal copy)
+is the Customer's tenant business environment in the Service. The Company owner controls workspace
+settings, roles and invitations. A Customer may use more than one Company where the Service supports
+it.
 
 The Customer is responsible for:
 
@@ -73,13 +74,20 @@ An invited staff user accepts these Terms for their own use. Staff users do not 
 Customer's behalf unless they have authority to do so. The workspace owner's instructions and
 existing DPA govern our processing of Customer Personal Data for that workspace.
 
+A workspace role and a SaaS billing role are separate. A person who pays for one or more Companies
+must have authority to purchase the relevant subscriptions, but does not receive workspace access or
+owner powers merely by being the payer. Likewise, being a Company owner does not automatically allow
+that person to manage another payer's billing relationship. Where supported, one payer relationship
+may fund separate subscriptions for multiple Companies; each Company keeps its own access state.
+
 ## 4. The Service and product stage
 
 Depending on the production configuration, subscription and workspace settings, the Service may
 include account and role management, calendar and scheduling, Google Calendar integration, client
 records, operational Inbox items, imports, public appointment booking or other intake modes,
 operational payment records, reports, packages, memberships, instalment tracking, transactional
-communications, notifications and public status or receipt pages.
+communications, notifications, public status or receipt pages and, when released for that Company,
+Workspace Data Export.
 
 Features may be labelled beta, preview, experimental or controlled by a feature flag. Such features
 may change, be limited by market or account, or be withdrawn. Unless a separate written service level
@@ -152,8 +160,9 @@ present Perelai as the seller or provider of your underlying offering.
 
 At the product stage covered by this draft, Perelai may store operational payment statuses, amounts,
 methods, balances and allocations, but does not receive or hold End Client funds and does not store
-full card credentials. **This sentence must be removed or revised before any payment-processing or
-Merchant of Record launch.**
+full card credentials. SaaS subscription checkout through Paddle is a separate transaction for access
+to Perelai; it does not process the Customer's End Client payments. **Re-review this sentence before
+launching any future End Client payment-processing integration.**
 
 Perelai is not a bank, payment institution, money transmitter, accountant or tax adviser. A public
 payment confirmation or **Public Receipt** generated through the Service is not a fiscal receipt or tax
@@ -190,6 +199,11 @@ determines purposes and essential means.
 If you import contacts, calendar events, CSV/vCard data or other content, you confirm that you have the
 right and lawful basis to do so. You must review previews and results. Imports may contain errors,
 unsupported fields or duplicates; keep an independent source or export where appropriate.
+
+Do not rely on roadmap descriptions of improved Import or Workspace Data Export controls. Only the
+formats, scope, retention and recovery behaviour actually enabled for your Company form part of the
+Service. Opening an import preview or generating an archive is not a substitute for maintaining
+appropriate business records and independent continuity arrangements.
 
 Google sign-in and Google Calendar are separate functions. If you connect Google Calendar:
 
@@ -241,18 +255,63 @@ necessary booking confirmation or security message.
 
 ## 13. Fees, beta access, taxes and refunds
 
-**Commercial model is not approved. Counsel/owner must replace this section before paid launch.**
+**The architecture below is approved for planning; commercial values and consequences remain
+approval-gated. Counsel/owner must resolve all `[TBD]` and reconcile this section with production
+Paddle settings before paid launch.**
 
-Unless an Order Form or checkout expressly states otherwise, we may offer some or all of the Founding
-Beta without charge for a limited period. Free or beta access does not create an entitlement to a
-future free plan or particular price. We will not start an automatically renewing paid subscription
-without presenting and obtaining acceptance of the applicable price, billing period, taxes, renewal,
-cancellation and refund terms.
+### 13.1 Plans, Offers, Companies and payer relationship
 
-Before paid billing begins, this section must identify whether the seller is Perelai or a Merchant of
-Record and must state: currency, billing interval, taxes, trial/card rules, renewal, failed payment,
-price-change notice, cancellation effective date, downgrade effects, refunds and post-cancellation
-data access. Do not publish inconsistent seller-of-record language.
+A **Plan** describes product capabilities or limits. An **Offer** identifies approved commercial
+terms for a Plan, such as price and billing interval. Creating or using multiple Companies is not by
+itself a premium Plan feature. Each paid Company has a separate subscription and access state even
+when the same payer funds more than one Company.
+
+A landing-page `OfferCode`, campaign or redirect is only an untrusted request to review an Offer. It
+does not reserve a price, create a subscription, prove eligibility or grant Service access. The app
+shows the authoritative Offer after the Company exists and before checkout.
+
+### 13.2 Trial
+
+The planned trial is one 21-day no-card Service trial for each eligible payer relationship, not one
+trial per Company or user. It starts when the first eligible Company durably completes onboarding.
+Other eligible Companies attached to the same payer during that window share the original end date;
+creating another Company does not restart it. A Company still must complete its own onboarding before
+receiving Company-specific product access. Invited staff do not receive a separate payer trial.
+
+The no-card trial does not by itself authorise a charge. The exact checkout-during-trial behaviour,
+first-charge date, cancellation deadline and any eligibility exclusions are `[TBD: owner/counsel and
+BILL0 approval]` and must be shown before purchase.
+
+### 13.3 Seller roles, checkout and taxes
+
+Perelai supplies and licenses the Product under these Terms. For a production purchase through
+Paddle, the applicable Paddle entity is the authorised reseller/Merchant of Record for the buyer
+Transaction and charges the buyer under the [Paddle Buyer Terms](https://www.paddle.com/legal/buyer-terms).
+The applicable Paddle entity depends on the buyer's purchase location. This allocation does not make
+Paddle the operator of the Perelai Product and does not make Perelai or Paddle the seller of a
+Customer's End Client services.
+
+Each approved Offer has a canonical USD economic anchor. Paddle Checkout may automatically present
+and charge a supported local currency based on the transaction location. Tax may be included in or
+added to the displayed price depending on the transaction country. The final currency, subtotal,
+discount, applicable tax and total are those shown in Paddle Checkout before confirmation—not a
+Company accounting currency, locale, IP-derived landing guess or marketing display.
+
+Perelai does not operate a separate foreign-exchange or VAT engine for these SaaS purchases. Launch
+does not use country-specific unit-price overrides or regional/PPP Offers. Any future regional pricing
+requires separate commercial, abuse, tax and legal approval and new terms where necessary.
+
+### 13.4 Activation, renewal, cancellation, failed payment and refunds
+
+A browser redirect or checkout-success screen is not proof that paid access is active. Access changes
+only after Perelai receives and projects an authenticated provider event. While confirmation is
+pending, the app must describe access as pending and provide recovery/support—not promise activation.
+
+The exact billing interval, renewal date, automatic-renewal disclosure, price-change notice,
+cancellation effective date, failed-payment retries, grace/restricted mode, refund rules and
+post-cancellation access are `[TBD: approved production policy]`. They must be stated in the
+[Billing, Cancellation and Refund Policy](/legal/billing), Paddle Checkout and the Buyer Portal without
+contradiction. Mandatory buyer rights continue to apply where they cannot lawfully be excluded.
 
 ## 14. Intellectual property and feedback
 
@@ -297,6 +356,14 @@ We will give advance or prompt notice where reasonably possible, limit the suspe
 necessary, and provide a support route. Emergency action may occur without advance notice. Suspension
 does not authorise us to use Customer Data for unrelated purposes.
 
+A billing restriction is not automatic Company termination or deletion. Subject to the approved
+policy and security/legal limits, restricted mode is intended to preserve authentication, reading
+existing data, billing recovery, safe settings/support, account closure/deletion and any separately
+approved export action, while blocking new value-creating activity such as new clients, bookings,
+requests, orders and imports. New public intake must fail neutrally without revealing a Company's
+billing status. The final grace period and allowed action matrix are `[TBD]` and must match product
+enforcement.
+
 ## 17. Termination, export and deletion
 
 You may stop using the Service and request workspace closure through `[TBD: verified product path]`.
@@ -304,7 +371,19 @@ Either party may terminate for material breach not cured within `[TBD: counsel-a
 as an approved Order Form allows. We may terminate beta access on `[TBD]` notice, subject to mandatory
 law and a reasonable opportunity to export data where feasible.
 
-Before termination, export Customer Data using `[TBD: actual formats and controls]`. After termination:
+Where enabled, **Workspace Data Export** lets an authorised Company owner download a defined archive
+of that Company's operational history. It is not a guaranteed full backup, a reverse-import file or a
+person-scoped response to a privacy access/portability request. Generating or downloading it does not
+delete the source data. The planned archive is available for 24 hours from readiness
+`[TBD: verify shipped configuration]`; its exact datasets, formats and exclusions are described at the
+point of export.
+
+An individual privacy request follows the process in the Privacy Notice and DPA. It may require
+identity verification, contextual information, a narrower person-specific dataset, legal exceptions
+and protection of other people's rights. A Company archive does not close that request by itself.
+
+Before termination, export Customer Data using `[TBD: actual shipped tools and any post-restriction/
+post-termination availability]`. After termination:
 
 - authorised access remains available for `[TBD: export window]` unless security/law requires earlier
   restriction;
@@ -413,8 +492,12 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
 
 1. The contracting entity is a Ukrainian FOP; exact identity and address are unknown.
 2. The Service is intended for B2B use, but counsel has not completed consumer-status analysis.
-3. No production billing/payment-processing/Merchant of Record architecture is confirmed.
-4. No SLA, export period, deletion schedule, liability cap, governing law or forum is approved.
+3. Provider-neutral SaaS Billing architecture and Paddle as first production Merchant of Record are
+   plan-frozen, not implemented. Exact catalog, trial conversion, renewal, cancellation, restriction
+   and refunds remain approval-gated.
+4. Workspace Data Export is planned, not live; the 24-hour artifact period and security claims require
+   release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
+   or forum is approved.
 5. Public booking creates a business/End Client relationship, not a Perelai service contract.
 6. Files, AI and deployment-specific features must be reconciled with the release fact table.
 7. Counsel should review Ukrainian electronic-contract formation, Polish/EU establishment, each

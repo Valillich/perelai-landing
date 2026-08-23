@@ -158,6 +158,13 @@ If Perelai receives a request relating primarily to Customer Personal Data, Pere
 - provide available self-service tools and reasonable assistance; and
 - protect other Customers, individuals and security when verifying or exporting data.
 
+Where enabled, Workspace Data Export is a Company-wide operational archive created on an authorised
+owner's instruction. It may assist the Customer with continuity or some rights-response work, but it
+is not designed as a complete verified response to an individual Data Subject. The Customer and
+Perelai must still apply request-specific identity verification, scope, contextual disclosures,
+exceptions and protection of third-party rights. Perelai will not represent that downloading a tenant
+archive alone fulfils access, portability or regional privacy duties.
+
 The Customer is responsible for assessing and responding to the request. Material bespoke assistance
 outside standard Service functionality may be charged at reasonable agreed rates unless the need was
 caused by Perelai's breach or law requires otherwise.
@@ -216,7 +223,11 @@ Supervisory Authority's powers.
 ## 12. Return and deletion
 
 During the Agreement, the Customer may access/export Customer Personal Data using `[TBD: verified
-tools and formats]`. On termination or the Customer's lawful instruction, Perelai will, at the
+tools and formats]`. If Workspace Data Export is enabled, it is an owner-only, Company-scoped archive
+with a defined manifest, formats and exclusions; generating/downloading it does not delete source
+data. Its planned 24-hour artifact retention and short-lived download controls are not contractual
+claims until production evidence is approved. On termination or the Customer's lawful instruction,
+Perelai will, at the
 Customer's choice, delete or return Customer Personal Data and delete copies, unless applicable law
 requires storage.
 
@@ -224,6 +235,8 @@ The operational schedule is:
 
 ```text
 Export availability after termination: [TBD]
+Workspace Data Export scope/formats: [TBD verified release manifest]
+Workspace artifact/grant/object cleanup: [TBD verified configuration and orphan sweep]
 Active-system deletion: [TBD]
 Backup rotation/deletion: [TBD]
 Public link invalidation: [TBD]
@@ -297,7 +310,7 @@ Form. The Customer must keep them current.
 
 Provision, support and security of the Perelai business operations Service as enabled/configured by
 the Customer, including scheduling, client management, public intake, imports, operational records,
-communications and related features verified as live.
+communications, and owner-triggered Workspace Data Export if verified live.
 
 ## B. Duration
 
@@ -312,6 +325,8 @@ lawful retention.
 - import/synchronise calendar events and supported files/data;
 - send transactional/service messages on Customer instructions;
 - generate operational reports/status/receipt views;
+- create and securely deliver a defined Company operational archive on an authorised owner request,
+  if Workspace Data Export is enabled;
 - back up, secure, troubleshoot and support the Service; and
 - delete, return or de-identify data on instruction and schedule.
 
@@ -366,6 +381,9 @@ Continuous/recurring for active Service use; imports and user-triggered operatio
 | encryption in transit | [TBD exact scope] | [TBD] |
 | encryption at rest/key management | [TBD; do not claim from platform assumption] | [TBD] |
 | OAuth token protection/revocation | [TBD] | [TBD] |
+| sensitive-action confirmation and export grants | [TBD actor/Company/action binding, hash, one-time use and TTL] | [TBD EX1 tests] |
+| private export storage and short-lived delivery | [TBD object isolation, signed URL max age, no URL persistence/logging] | [TBD EX1/storage tests] |
+| CSV formula-injection neutralisation and archive integrity | [TBD] | [TBD EX1 format tests] |
 | secure development/change control | [TBD] | [TBD] |
 | vulnerability/dependency management | [TBD] | [TBD] |
 | logging/monitoring/access review | [TBD] | [TBD] |

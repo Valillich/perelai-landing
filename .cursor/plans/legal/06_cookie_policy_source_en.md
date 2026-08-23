@@ -83,6 +83,11 @@ Legal handoff visits containing `from` must not overwrite first-touch attributio
 parameters must be removed from analytics properties, and full/referrer URLs must not expose app or
 public-flow tokens.
 
+Landing may preserve only a generated public PRIMARY `OfferCode` with registration attribution. It
+must not load a Paddle SDK, open checkout, or store Paddle product/price/customer/subscription IDs or
+checkout URLs. `offer` is untrusted intent and must not be inferred from niche, locale, Company
+currency, IP or browser region.
+
 ## 5. App and public-page inventory
 
 The app contains many first-party browser-storage entries. The implementation LLM must generate the
@@ -95,6 +100,7 @@ remains clear. At minimum, disclose these verified high-impact groups:
 | language/theme/privacy preferences | i18n localStorage, `bf-theme`, privacy-mode settings | remember requested app settings | until changed/removed `[verify]` | functional |
 | last-login email | first-party localStorage | prefill returning-user email | until replaced/removed | functional; minimise and disclose |
 | onboarding draft | company-scoped sessionStorage | preserve incomplete onboarding in the tab | tab/session or explicit clear `[verify]` | necessary/functional |
+| billing intent/return state if launched | provider-free OfferCode and pending/recovery status `[TBD audit]` | safely continue app-created checkout and wait for webhook projection | `[TBD explicit TTL/clear]` | necessary/functional/security; never store provider secrets or bearer checkout URL |
 | public return/client-hub session state | sessionStorage records, some token-like | navigate authorised public/client flows | `[TBD explicit expiry/clear]` | necessary/security; never send cross-origin |
 | UI education/dismissal state | first-time, tip, install, beta notice and count keys | prevent repetitive guidance and preserve UI state | until removed/version change `[verify]` | functional |
 | PWA/service-worker/cache | `[TBD runtime names]` | installability, code/assets, performance/offline behaviour | cache policy `[TBD]` | necessary/functional |
@@ -143,6 +149,15 @@ independent services may set/use their own technologies when you intentionally u
 their notices.
 
 `[TBD: vendor/account-level audit and transfer map required.]`
+
+### Paddle Checkout and Buyer Portal
+
+Paid SaaS Billing is planned to use Paddle-hosted Checkout and Buyer Portal rather than a Paddle SDK
+on the landing. When a buyer intentionally follows that handoff, Paddle may use its own necessary,
+fraud-prevention, preference or other technologies under its Privacy Notice and Buyer Terms. Those
+Paddle-hosted technologies are not Perelai first-party cookies and must not be silently copied into
+this table. Before launch, audit the exact app-to-Paddle and Paddle-to-app paths, referrer policy,
+return state and whether any Paddle resource loads on a Perelai origin.
 
 ## 9. Changes
 

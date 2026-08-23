@@ -64,8 +64,9 @@ Do not render an empty or partial representative/DPO sentence.
 
 We determine purposes and essential means for account creation, authentication, owner/staff profiles,
 workspace administration, security, fraud prevention, support, Perelai marketing, referral
-attribution, deliberate product/website analytics, service improvement, billing records and legal
-claims or obligations.
+attribution, deliberate product/website analytics, service improvement, payer/trial
+administration, Company subscription/access records, export security/audit metadata and legal claims
+or obligations.
 
 ### When the business is controller and Perelai is processor
 
@@ -73,6 +74,10 @@ A business customer generally determines why and how it handles End Client conta
 bookings, requests, orders, reservations, notes, imported records, payment-status records and messages
 sent on its behalf. We process that **Customer Personal Data** under the business's instructions and
 our [Data Processing Addendum](/legal/dpa).
+
+When an authorised owner requests a Workspace Data Export, Perelai processes the Customer Personal
+Data in that Company archive on the business's instructions. Perelai separately determines limited
+security, audit, abuse-prevention and legal-compliance processing needed to create and deliver it.
 
 For a request about Customer Personal Data, contact the business you booked with or that collected
 your data first. We will assist it as required. If you cannot identify or reach it, contact
@@ -82,9 +87,10 @@ request according to our role and applicable law.
 ### Other independent controllers
 
 A business remains independently responsible for its services and client relationship. Google,
-payment/Merchant of Record providers if later used, banks, professional advisers and some fraud or
-identity services may process data under their own purposes and notices. Their role must be assessed
-for each flow and must not be hidden under the word `subprocessor`.
+Paddle, banks, professional advisers and some fraud or identity services may process data under their
+own purposes and notices. For a SaaS purchase, the applicable Paddle entity is the authorised
+reseller/Merchant of Record and an independent controller for its buyer Transaction. Any separate
+processor flow must be assessed on its own facts and must not be hidden under the word `subprocessor`.
 
 ## 4. Personal data we handle
 
@@ -113,7 +119,11 @@ until the complete production flow is verified.
 - role, permissions, invitations and workspace relationships;
 - language, country/market, currency, timezone and preference settings;
 - authentication, verification, login, security and audit events;
-- subscription, plan, billing, tax and payment-status data if billing launches;
+- payer relationship, trial eligibility/start/end, requested OfferCode and limited
+  attribution, Company subscription/access projection and billing-management authority if launched;
+- provider customer/subscription/transaction references, checkout/portal status, final currency,
+  subtotal, discounts, applicable tax, total, refund/cancellation/payment-failure status and limited
+  payment-method metadata returned by Paddle `[TBD: verify exact webhook/API fields]`;
 - support messages, feedback and legal-document acceptance evidence.
 
 We do not store your plaintext password. `[TBD: security review must approve any more specific hashing
@@ -134,6 +144,22 @@ or session-storage statement.]`
 The business chooses many fields and may add free text. Although our Terms prohibit unsupported
 sensitive content, a user may enter it. Do not send medical, diagnosis, treatment, full card,
 password, government-ID or similarly high-risk data unless a product flow expressly supports it.
+
+### SaaS Billing through Paddle
+
+SaaS Billing is separate from the Customer's End Client financial records. At Paddle Checkout or the
+Buyer Portal, Paddle receives the identity, contact, billing address, tax/business identifiers and
+payment details the buyer supplies, plus device/transaction information under Paddle's own
+[Privacy Notice](https://www.paddle.com/legal/privacy) and
+[Buyer Terms](https://www.paddle.com/legal/buyer-terms). Perelai should receive only the provider references, commercial/transaction
+amounts, tax/currency/status and limited buyer/payment metadata required to administer Service access,
+support, reconciliation and legal records. `[TBD: reconcile this paragraph with actual Paddle fields,
+fraud tooling and production retention before launch.]`
+
+A landing OfferCode is untrusted commercial intent. It is parsed independently of niche and does not
+create a payer, trial, subscription or entitlement. Company currency, locale or a marketing-region
+preference is not used as authority for the final SaaS transaction currency or tax; Paddle Checkout
+determines presentment from its transaction-location signals and shows the buyer the final amounts.
 
 ### Google Calendar
 
@@ -159,6 +185,40 @@ For CSV/vCard and similar imports we may handle the source file, parsed contacts
 content, mapping choices, errors, job status and import results. `[TBD: verify whether vCard photos are
 ignored, whether temporary files are persisted, and exact deletion periods.]` Google Contacts OAuth
 must not be claimed unless it is actually implemented and enabled.
+
+The import-modernisation release has unresolved acceptance findings as of 2026-08-23. Do not add
+promises about preview scope, destructive cleanup, recovery journals, issue-download completeness or
+retention until IM4-C2 and the IM2/IM4 acceptance review prove those behaviours.
+
+### Workspace Data Export and privacy requests
+
+**This feature is planned, not live. Publish this subsection only after EX1 release evidence.** Where
+enabled, an authorised Company owner may request a Workspace Data Export containing the defined
+operational history for that Company. Planned contents include a manifest and structured JSONL data
+with CSV convenience views for supported Company settings, workspace members/staff, clients/notes,
+catalog, operational finance, requests/orders/instalments/rentals, packages, payment-account/
+allocation records and safe import/communication summaries. The exact manifest at download is the
+scope authority.
+
+The archive intentionally excludes passwords, hashes, tokens and secrets; raw import/staging data;
+worker internals and security/risk signals; other Companies' data; private information a coworker is
+not authorised to receive; and data restricted to protect third-party rights. The planned flow also
+handles Company/actor/action identifiers, job status/timestamps, closed reason codes and minimal audit
+events; separately approved diagnostics must not contain archive contents or bearer URLs.
+
+Creating and downloading are separate sensitive actions. The plan uses fresh confirmation,
+actor/Company/action-bound hashed single-use grants, a private object, notification without an
+attachment or download token and a short-lived signed download URL. The artifact is planned to expire
+24 hours after readiness, action grants after 10 minutes and the signed URL after at most 5 minutes.
+These periods and controls are claims only after production tests/configuration confirm them. Creating,
+expiring or downloading the archive does not delete the underlying Company data.
+
+Workspace Data Export supports business continuity and gives the Company a copy of defined
+operational data. It is not a `GDPR export` and is not necessarily a complete response to an
+individual's access or portability request. A **Privacy Access Export** is a separate verified,
+person-scoped process that may require additional contextual information, legal scope/exemptions and
+protection of other people's rights. Contact {{PRIVACY_EMAIL}} or the relevant business as described
+in §13 rather than treating a Company archive as closure of a privacy request.
 
 ### Operational and financial information
 
@@ -205,7 +265,9 @@ Customer Personal Data.
 | remember requested language/theme/region | preference/browser storage | user request; consent where required by national implementation |
 | referral attribution and beta feedback | referral/campaign, feedback | consent or legitimate interests depending on collection/use |
 | Perelai marketing | contact and preference data | consent or applicable electronic-marketing permission; legitimate interests only where lawful |
-| billing, tax and records if launched | customer/billing/transaction records | contract; legal obligation |
+| administer trial, payer relationship, subscriptions and Service access if launched | account, payer, Company projection, Offer and provider status | contract; legitimate interests in reliable entitlement/security |
+| administer Paddle buyer Transactions and accounting/tax records if launched | buyer, subscription, transaction, tax, currency, refund/payout records | contract; legal obligation; legitimate interests in reconciliation/claims |
+| secure and audit Workspace Data Export if launched | actor/Company/action, job/grant/object status, closed codes, timestamps | processor instruction for archive content; legitimate interests/security and legal obligation for limited controller metadata |
 | enforce Terms and legal claims | account, acceptance and usage records | legitimate interests; legal obligation |
 | comply with law and valid authority requests | relevant records | legal obligation; public interest where applicable |
 
@@ -261,7 +323,8 @@ We disclose personal data only as needed for the purposes above to:
 - Google for sign-in/Calendar at the user's request;
 - analytics and error-monitoring providers when configured;
 - support tools;
-- billing, tax, Merchant of Record or payment providers if launched;
+- Paddle as the planned authorised reseller/Merchant of Record and independent controller for SaaS
+  buyer Transactions, plus any separately assessed billing/tax processors if launched;
 - professional advisers, insurers and auditors under confidentiality;
 - a buyer or successor in a genuine restructuring/transaction, subject to safeguards and notice where
   required; and
@@ -296,11 +359,16 @@ rules, not an indefinite licence.
 | legal acceptance evidence | `[TBD: limitation/legal period]` | restricted archive `[TBD]` |
 | workspace and End Client records | Customer instruction/contract `[TBD]` | `[TBD active + backup]` |
 | imports and previews | `[TBD hours/days]` | source deletion `[TBD]` |
+| Workspace Data Export artifact | planned 24 hours from READY `[verify]` | purge private object; verify storage versions/backups/orphan sweeps |
+| export create/download action grants | planned 10 minutes and single use `[verify]` | revoke/delete hash and associated transient state `[TBD]` |
+| export job and PII-minimised audit metadata | planned default 12 months; legal approval required | deletion/legal hold `[TBD]` |
+| failed/staging export objects | planned immediate cleanup `[verify]` | worker retry/orphan cleanup `[verify]` |
 | Google tokens | until disconnect/expiry `[verify]` | revoke/delete `[verify]` |
 | security/access logs | `[TBD]` | delete/aggregate `[TBD]` |
 | support messages | `[TBD]` | `[TBD]` |
 | notifications and system task records | category-specific env/jobs `[verify]` | `[TBD backups]` |
-| billing/tax records | applicable legal period `[TBD]` | restricted archive |
+| payer/trial/subscription/access records | contract/claims period `[TBD]` | delete or restricted archive `[TBD]` |
+| Paddle transaction/tax/refund and vendor payout records | applicable accounting/tax/claims period `[TBD]` | restricted archive |
 | PostHog events | `[TBD project retention]` | `[TBD]` |
 | public confirmation/status/access tokens | `[TBD]` | invalidate/delete `[TBD]` |
 | backups | `[TBD cycle]` | rotational deletion `[TBD]` |
@@ -332,6 +400,13 @@ unfounded or excessive requests.
 You may complain to the supervisory authority where you live or work or where an alleged infringement
 occurred. `[TBD: after establishment analysis, identify any lead/primary authority and Ukraine contact
 where appropriate without suggesting exclusive jurisdiction.]`
+
+Downloading a Workspace Data Export does not waive, replace or automatically fulfil these rights. In
+particular, access can require a copy plus information about purposes, categories, recipients,
+retention and safeguards, while portability has its own scope and conditions. We verify the requester,
+separate Perelai controller data from business-controlled Customer Personal Data, consider exemptions
+and protect the rights and freedoms of others. Regional laws, including applicable US state laws, may
+create different request categories and response requirements.
 
 Regional laws may provide additional rights. Do not add a California `Do Not Sell or Share` claim or
 other regional section until threshold and practice analysis is complete.
@@ -421,3 +496,7 @@ sensitive information.
 5. Verify public booking first-communication/indirect-collection notice timing.
 6. Review high-risk/regulated verticals and any files/AI feature separately.
 7. Do not publish regional addenda merely for marketing; add only after applicability review.
+8. Paddle/Billing and Workspace Data Export sections are architecture-informed drafts, not live-fact
+   claims. Reconcile exact fields, entities, locations, roles, retention and UI before enabling them.
+9. Keep Workspace Data Export distinct from a Privacy Access Export in product copy, support runbooks,
+   request metrics and legal response evidence.

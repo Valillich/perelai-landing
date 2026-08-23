@@ -15,7 +15,7 @@ to process Customer Personal Data on behalf of business customers. Terms such as
 used according to the [Data Processing Addendum](/legal/dpa).
 
 Some third parties may instead act as independent controllers for a particular flow, such as a user's
-direct relationship with Google or a future Merchant of Record. Those services are identified
+direct relationship with Google or Paddle as Merchant of Record. Those services are identified
 separately and are not mislabelled as subprocessors merely for convenience.
 
 ## Approved Subprocessors
@@ -27,7 +27,7 @@ separately and are not mislabelled as subprocessors merely for convenience.
 |---|---|---|---|---|---|---|
 | `[TBD]` | application/API hosting | account and Customer Data; technical data | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
 | `[TBD]` | PostgreSQL/database hosting | application database records | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | object/file storage, if live | imports/files and metadata | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
+| `[TBD: private object-storage entity]` | object/file storage, if live | imports/files; short-lived Workspace Data Export archives and object metadata | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
 | `[TBD]` | Redis/queue infrastructure, if managed/live | task, notification and limited payload data | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
 | `[TBD: Resend contracted entity]` | transactional email delivery | recipient, sender, message metadata/content, delivery events | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
 | `[TBD: PostHog contracted entity]` | privacy-configured landing analytics | typed events, locale, campaign/referrer-host context | `[TBD: verify EU project]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
@@ -40,10 +40,12 @@ separately and are not mislabelled as subprocessors merely for convenience.
 | Legal entity/service | Function | Role and reason | Data | Locations/transfer information | Last verified |
 |---|---|---|---|---|---|
 | `[TBD: Google entities/services]` | Google sign-in and user-enabled Google Calendar | assess separate sign-in controller relationship and any processor activity for Customer imports | account identifiers, OAuth data, calendar event data | `[TBD]` | `[TBD]` |
-| `[TBD: future billing/MoR]` | checkout, billing, tax/reseller services | likely independent controller/Merchant of Record for buyer relationship; exact split TBD | identity, billing, tax, transaction data | `[TBD]` | NOT LIVE |
+| `Paddle: applicable buyer contracting entity [verify by purchase location]` | SaaS checkout, subscription, billing, indirect tax, invoice/refund and Buyer Portal | authorised reseller/Merchant of Record and independent controller for the buyer Transaction; assess and document any separate processor flow | buyer identity/contact, business/tax details, payment and fraud data, currency/tax/transaction/subscription/refund status | `[TBD Paddle entity, locations and transfer information]` | PLANNED, NOT LIVE |
 | `[TBD: future AI provider]` | AI function | role depends on function/training/retention; separate approval required | `[TBD]` | `[TBD]` | NOT LIVE |
 
 Do not list a provider in both tables without explaining the distinct flows.
+Paddle must not be put in the Approved Subprocessors table merely because Perelai receives webhooks.
+Use the actual data-role analysis, contracts and Privacy Notice for each flow.
 
 ## Subprocessor changes
 

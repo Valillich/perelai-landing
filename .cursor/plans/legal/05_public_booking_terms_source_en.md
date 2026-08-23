@@ -129,8 +129,10 @@ never have a statutory withdrawal right.]`
 
 At the product stage covered by this draft, Perelai does not collect or hold your payment for the
 underlying Business offering and does not ask you to enter full card credentials. Pay only through the
-method the Business lawfully provides. **Re-review and replace this section before any Perelai checkout,
-payment provider or Merchant of Record flow launches.**
+method the Business lawfully provides. Paddle checkout for a Business customer's Perelai SaaS
+subscription is unrelated to an End Client booking/payment. **Re-review and replace this section
+before any End Client checkout, payment-provider or Merchant of Record flow for the Business offering
+launches.**
 
 A Perelai page may show an amount or payment status recorded by the Business. A Perelai **Public
 Receipt** or payment confirmation is an operational record, not a bank statement, fiscal receipt or tax

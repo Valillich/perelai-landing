@@ -32,8 +32,8 @@ must be all-or-nothing. Interpolate escaped text, never raw HTML. Do not populat
 ## Task B — canonical landing pages and redirects (landing only)
 
 ```text
-Implement the six canonical legal pages and navigation using 00_README_execution_plan.md §§1, 4, 6,
-LGL-1 and §10, and the source drafts 02-07. Use the existing localized App Router architecture.
+Implement the seven canonical legal pages and navigation using 00_README_execution_plan.md §§1, 4, 6,
+LGL-1 and §10, and the source drafts 02-07 plus 10. Use the existing localized App Router architecture.
 Create canonical /legal/* routes for all published locales; add /terms and /privacy locale-aware
 redirect aliases; clean canonical metadata, sitemap, print styles, version/date display and archive
 link. Draft preview is noindex with a visible banner; approved production cannot render unresolved
@@ -44,10 +44,12 @@ tests. Do not touch beauty-finance.
 ## Task C — safe cross-domain legal navigation (app + landing, separate commits)
 
 ```text
-Implement 00_README_execution_plan.md §6 and LGL-2 plus 08_ui_copy_and_surface_matrix.md §§1-4, 8-10.
+Implement 00_README_execution_plan.md §6 and LGL-2 plus 08_ui_copy_and_surface_matrix.md §§1-4, 8-12.
 First implement/test landing's allowlisted return component. Then implement/test the app legal URL
 builder and context-specific components. Never accept or forward a full return URL. Preserve only the
-existing clamped registration acquisition allowlist. Standalone, onboarding and token-bearing routes
+existing clamped registration attribution plus independently validated niche and generated public
+PRIMARY OfferCode. Offer intent grants no access and staff signup ignores it. Never forward a Paddle/
+provider ID, price, currency, tax, checkout URL or billing identifier. Standalone, onboarding and token-bearing routes
 open a clean new tab. No reset/invite/booking/status/receipt/preferences/client-hub token or raw
 referrer may reach landing or analytics. Keep app /terms and /privacy as redirect shells; placeholder
 prose is development fallback only and impossible in production.
@@ -92,15 +94,52 @@ withdraw, necessary-only fallback, and verified Cookie Policy inventory. A banne
 loading is a test failure.
 ```
 
-## Task G — release verification (read-only unless fixing a found defect is separately authorised)
+## Task G — SaaS Billing/Paddle legal integration (landing + app, after BILL gates)
+
+```text
+Do not implement Billing architecture from this prompt. First verify BILL0 decisions, generated
+catalog and the relevant BILL1-BILL6 acceptance evidence are approved. Then implement LGL-6 using
+00_README_execution_plan.md, 01_legal_facts_env_contract.md, Terms §13,
+10_billing_cancellation_refund_source_en.md and 08_ui_copy_and_surface_matrix.md §§10 and 12.
+
+Render /legal/billing; add approved Terms/Privacy/Billing/Paddle Buyer Terms links to Pricing,
+Checkout review/return, Settings/Billing and restriction/recovery surfaces. Preserve only public
+PRIMARY OfferCode through landing registration; never expose Paddle IDs or start checkout on landing.
+Keep Plan, Offer, BillingCustomer payer authority, Company subscription/access and End Client finance
+domains distinct. Browser success stays pending until the verified webhook projection activates
+access. Exact prices, renewal, trial conversion, cancellation, refunds, grace and restriction copy
+must come from immutable approvals, not planning hypotheses. Audit Paddle fields/roles/cookies,
+update Privacy/Subprocessor/Cookie evidence and add route/state/accessibility/security tests.
+```
+
+## Task H — Workspace Data Export legal integration (app + landing content, after IM/EX gates)
+
+```text
+Do not implement IM4, IM5, EX1 or IM6 from this prompt and do not mark them complete. Verify IM4-C2
+and IM2/IM4 acceptance, IM5 shared shell and EX1 evidence first. Finish this legal integration before
+the IM6 combined-release gate. Then implement LGL-7 using
+11_workspace_data_export_legal_matrix.md plus the Terms, Privacy, DPA, Subprocessor and UI drafts.
+
+Use `Workspace Data Export` and `Download a copy of your workspace data`; never `GDPR export`, privacy
+access export, backup or reverse import. Keep Export out of onboarding and owner-only at create and
+download. Reconcile the actual archive manifest/formats/exclusions, 24h artifact, 10m single-use
+grants, <=5m signed URL, storage/log controls, notification, audit retention and Company deletion.
+Maintain a separate privacy-request route/process; a Company archive does not close an access or
+portability request. Reconcile Billing restricted-mode behaviour. Add terminology, RBAC, isolation,
+grant/replay, lifecycle, purge/recovery, notification/logging and accessibility tests.
+```
+
+## Task I — release verification (read-only unless fixing a found defect is separately authorised)
 
 ```text
 Run the complete §10 and §11 matrices in 00_README_execution_plan.md. Verify approved hashes and env,
 all clean/localized routes, redirects, return allowlists, auth acceptance, OAuth state, append-only
 evidence, public booking policies/version snapshots, no token leakage, analytics allowlist,
-accessibility, no draft/TBD output, and archived versions. Reconcile the rendered documents against
-the approved source/hash and vendor/retention/security evidence. Report pass/fail per checklist item;
-do not declare legal approval.
+accessibility, no draft/TBD output, and archived versions. Also verify Billing seller roles/catalog/
+Paddle configuration/webhook authority/restriction states, plus Workspace Data Export terminology,
+RBAC, scope, TTLs, purge and the separate Privacy Access Export/request process. Reconcile the rendered
+documents against the approved source/hash and vendor/retention/security evidence. Report pass/fail
+per checklist item; do not declare legal approval.
 ```
 
 ## Human handoff between tasks
@@ -109,7 +148,14 @@ Before B: legal identity env may be filled in preview, but production approval m
 Before D: counsel approves acceptance copy and who may bind a workspace.  
 Before E: counsel decides missing-Business-policy behaviour and contract-formation semantics per mode.  
 Before F implementation: privacy/counsel classifies each technology by launch country.  
-Before G production: counsel/owner supplies all immutable versions, hashes and approval references.
+Before G: BILL0 commercial/legal gates, catalog, Paddle role/configuration and Billing implementation
+evidence are approved.
+
+Before H: IM4-C2/IM acceptance, IM5 and EX1 evidence pass; privacy/counsel approve export metadata
+retention and request-boundary copy.
+
+Before I production: IM6 combined-release evidence passes and counsel/owner supplies all immutable
+versions, hashes and approval references.
 
 ## Definition of a good LLM handoff
 

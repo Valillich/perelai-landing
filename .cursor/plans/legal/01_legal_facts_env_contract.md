@@ -5,6 +5,9 @@ documents.
 **Status:** mixed — code-observed facts plus unresolved business/legal facts.  
 **Rule:** repository evidence proves implementation, not production deployment or legal sufficiency.
 
+**Plan truth checked:** 2026-08-23 against monetization `README`/BILL0, Workspace Data Export EX1 and
+the current IM4 acceptance verdict.
+
 ## 1. Legal identity env contract
 
 Legal identity is public information. Store it in the landing deployment environment as requested,
@@ -85,10 +88,15 @@ changed. Build output or an approval manifest must preserve the exact rendered d
 | Email/password and Google authentication | LIVE IN CODE | Privacy covers credentials, Google identifiers and OAuth state. |
 | Google Calendar integration | LIVE IN CODE | Requested scope is `calendar.events.readonly`; event objects, identifiers, sync data and OAuth tokens must be disclosed accurately. |
 | Clients, visits, public requests/orders/rentals, notes, operational and financial records | LIVE IN CODE / deployment flags vary | Drafts use neutral categories; release owner must mark deployed modes. |
-| CSV/vCard imports | LIVE IN CODE | Rights to import and retention/deletion need explicit operational verification. |
+| CSV/vCard imports | LEGACY/LIVE PATHS; MODERNISATION NOT ACCEPTED | Existing behaviour must be audited separately. IM4 remains open with P1 recovery/destructive-boundary findings; do not publish planned preview/purge guarantees yet. |
 | Public booking/intake and tokenised status/receipt/preferences pages | LIVE IN CODE | Requires end-client terms, layered notice and token-safe legal links. |
 | Payment records/allocations | LIVE IN CODE | Perelai records operational information; no evidence of client-money processing or card vaulting. Do not call records payment processing. |
-| Billing/subscriptions | NOT IMPLEMENTED per reviewed architecture | No auto-renewal/refund prose may be activated. Founding Beta language must remain conditional. |
+| SaaS Billing/subscriptions | ARCHITECTURE FROZEN; NOT IMPLEMENTED | Provider-neutral Billing; Paddle is first production adapter/Merchant of Record. No approved catalog or production configuration yet; no paid/renewal/refund prose may be activated early. |
+| BillingCustomer/Company relationship | PLANNED | One BillingCustomer payer may fund multiple Companies; every Company has its own subscription/access projection. Multi-company is not a PRO feature. |
+| SaaS trial | PLANNED | One 21-day no-card trial per BillingCustomer, shared by eligible Companies in the original window. Trigger/checkout conversion and exact commercial consequences remain implementation/approval gates. |
+| Pricing/tax | DECISION-FROZEN PLAN, NOT LIVE | One USD economic anchor per OfferCode; Paddle may localise currency; `tax_mode=location`; no launch overrides/PPP/custom FX/VAT engine. Hypothetical prices are not publishable. |
+| Workspace Data Export | PLANNED; NOT LIVE | Owner-only Company archive under Settings/Data Transfer; must not be called GDPR/privacy access export or backup. See `11_workspace_data_export_legal_matrix.md`. |
+| Privacy Access Export | FUTURE/MANUAL PROCESS TBD | Verified person-scoped rights response, distinct from tenant archive and requiring supplemental information/third-party protections. |
 | Email delivery via Resend | LIVE IN CODE | Candidate subprocessor; legal entity, regions and transfer mechanism require vendor/account verification. |
 | Web Push via VAPID | LIVE IN CODE / feature flags | Browser permission is separate; endpoint/subscription data and provider path require audit. |
 | BullMQ/Redis | IMPLEMENTED OPTION | Actual managed provider and production use are TBD. |
@@ -122,7 +130,10 @@ Owner must mark one value for every row: `LIVE`, `BETA`, `FEATURE_FLAGGED`, `PLA
 | packages/memberships/instalment tracking | [TBD] | Terms, Privacy |
 | staff/RBAC | [TBD] | Terms, Privacy, DPA |
 | PWA install and Web Push | [TBD] | Privacy, Cookie Policy |
-| billing/subscription/trials | [TBD] | Terms, refund policy |
+| billing/subscription/trials | [TBD] | Terms, Privacy, Billing policy |
+| Paddle-hosted checkout/Buyer Portal | [TBD] | Terms, Privacy, Cookies, Billing policy, third-party roles |
+| Workspace Data Export | [TBD] | Terms, Privacy, DPA, retention, security, subprocessors |
+| Privacy Access Export/request workflow | [TBD] | Privacy, DPA, rights operations |
 | AI functionality | [TBD] | Terms, Privacy, subprocessors, AI Notice |
 
 Security-sensitive storage observed during the follow-up audit:
@@ -144,6 +155,8 @@ never receive, log or analyse these values.
 - registration, authentication, account/workspace administration;
 - owner and staff profiles, roles and security logs;
 - subscriptions/billing records if billing is launched;
+- BillingCustomer payer identity, trial eligibility, Offer intent/attribution, Company subscription
+  projections and access-enforcement records if billing is launched;
 - support, security, fraud prevention, product feedback and legal claims;
 - Perelai's own marketing and referral attribution.
 
@@ -153,6 +166,9 @@ never receive, log or analyse these values.
 - bookings, requests, orders, reservations, notes and business-uploaded content;
 - reminders and operational messages sent on the business's instructions;
 - imported contacts/events and operational/financial records stored for the business.
+- creation and delivery of a Workspace Data Export on an authorised owner instruction, to the extent
+  the archive contains Customer Personal Data. Perelai separately controls limited security, audit
+  and legal-compliance metadata for the export flow.
 
 ### Business customer generally acts as controller for
 
@@ -174,9 +190,15 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | F-05 | Counsel | UK launch status, UK representative and review under current UK data law. |
 | F-06 | Owner + counsel | Launch countries and whether any purported B2B user may legally be a consumer. |
 | F-07 | Counsel | Liability cap, excluded losses, mandatory exceptions, indemnity and confidentiality carve-outs. |
-| F-08 | Owner | Founding Beta price/term, trial, future billing provider/Merchant of Record, renewal, taxes, cancellation and refunds. |
+| F-08 | Owner + counsel | Approve exact PRIMARY/ADDITIONAL Offers, price/billing intervals, founding cohort/deadline/lock, trial-to-paid mechanics, renewal, cancellation, refunds, failed-payment/grace/restriction and post-restriction data actions. Paddle is selected as first adapter/MoR; that point is no longer open. |
 | F-09 | Engineering/ops | Post-termination export window, deletion timing, backup rotation and legal holds. |
 | F-10 | Security | Evidence-backed TOMs, incident procedure and customer notification channel. |
+| F-11 | Finance/tax + counsel | Contracting disclosure between Perelai supplier terms and the applicable Paddle buyer entity; vendor payout accounting/tax for the FOP; launch jurisdictions/currencies. |
+| F-12 | Owner + counsel | Whether checkout during trial charges immediately or only after a further period; exact notices and cancellation deadline before first charge. |
+| F-13 | Engineering/security/privacy | Prove Workspace Data Export owner RBAC, fresh confirmations, grant/URL TTLs, archive isolation, audit events, object purge and Company-deletion interaction. |
+| F-14 | Privacy/counsel/ops | Approve the Privacy Access Export/manual request procedure, identity verification, Art. 15 supplemental information, Art. 20 scope, exceptions and third-party-rights review. |
+| F-15 | Privacy/ops | Approve retention for export job/audit metadata (planned default 12 months), failed/staging cleanup, legal holds and incident evidence. |
+| F-16 | Product/counsel | Define permitted read/export/delete/closure actions in Billing restriction and the neutral public-intake response; reconcile Terms, UI and policy. |
 
 ## 6. Data and retention inventory — red until completed
 
@@ -187,6 +209,10 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | workspace and Customer Data | processor | customer term/instruction [TBD] | [TBD] | deletion jobs |
 | deleted/archived clients | processor | [TBD] | [TBD] | schema/jobs |
 | import source and preview files | processor | [TBD hours/days] | [TBD] | import pipeline |
+| Workspace Data Export artifact | processor | planned: 24 hours from READY | automatic object purge; verify backups/versioning | EX1 tests + storage config |
+| export create/download grants | mixed security/processor | planned: 10 minutes, single use | hash/revocation deletion `[verify]` | EX1 security tests |
+| export job/audit metadata | mixed; designed PII-minimised | planned default 12 months, legal approval required | `[TBD deletion/legal hold]` | privacy + operations |
+| failed/staging export objects | processor | planned immediate cleanup | prove retries/orphan sweeps | worker/storage runbook |
 | Google OAuth tokens | controller/processor depending use | until disconnect [verify] | revoke/delete [verify] | integration code/runbook |
 | OAuth state and verification tokens | controller/security | [TBD actual TTL] | deletion [TBD] | constants/jobs |
 | public booking/status/access tokens | processor/security | [TBD] | [TBD] | public token services |
@@ -197,7 +223,9 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | revoked Web Push data | controller/processor | env currently specifies 30 days | [TBD backups] | env + tasks |
 | system task runs | controller/operations | env currently specifies 30 days | [TBD backups] | env + tasks |
 | support messages | controller | [TBD] | [TBD] | support tooling |
-| billing/tax records | controller | [TBD applicable law] | archive [TBD] | billing/counsel |
+| BillingCustomer/trial/access projection | controller | [TBD contract/claims period] | `[TBD]` | Billing + counsel |
+| Paddle customer/subscription/transaction/webhook records | controller/shared by flow | [TBD applicable law/contract] | restricted archive `[TBD]` | Paddle config + billing/counsel |
+| vendor payout/accounting/tax records | controller/legal obligation | [TBD applicable FOP law] | restricted archive `[TBD]` | finance/tax counsel |
 | PostHog events | controller | [TBD vendor setting] | [TBD] | PostHog project config |
 | landing attribution/session storage | controller | browser session in code | ends with session [verify] | landing audit |
 | language/theme/region preferences | controller | [TBD per key] | browser clear/expiry | landing audit |
@@ -214,14 +242,14 @@ Code proves integration candidates, not the contracted legal entity or processin
 | landing hosting/CDN | [TBD] | [TBD] | request/technical data | [TBD] | processor | [TBD] | BLOCKED |
 | app/API hosting | [TBD] | [TBD] | account + Customer Data | [TBD] | subprocessor | [TBD] | BLOCKED |
 | PostgreSQL | [TBD] | [TBD] | application database | [TBD] | subprocessor | [TBD] | BLOCKED |
-| object storage | [TBD] | [TBD] | imports/files if live | [TBD] | subprocessor | [TBD] | BLOCKED |
+| object storage | private R2-compatible storage planned; vendor TBD | [TBD] | imports/files and short-lived export archives if live | [TBD] | subprocessor | [TBD] | BLOCKED |
 | Redis/queues | [TBD] | [TBD] | task/notification data | [TBD] | subprocessor | [TBD] | BLOCKED |
 | email delivery | Resend observed | [TBD legal entity] | recipients/message metadata/content | [TBD] | subprocessor | [TBD] | VERIFY |
 | authentication/calendar | Google observed | [TBD entities/services] | identifiers, events, tokens | [TBD] | independent controller and/or subprocessor by flow | [TBD] | VERIFY |
 | landing analytics | PostHog observed | [TBD legal entity/project region] | typed events, locale, marketing context | EU endpoint in code; contract verify | processor | [TBD] | VERIFY |
 | error monitoring | [TBD/not observed] | [TBD] | errors/technical data | [TBD] | subprocessor | [TBD] | BLOCKED |
 | support | [TBD] | [TBD] | support content | [TBD] | subprocessor | [TBD] | BLOCKED |
-| billing/MoR | not selected | [TBD] | billing/identity/tax | [TBD] | independent controller/processor | [TBD] | NOT LIVE |
+| billing/MoR | Paddle selected as first production adapter | applicable Paddle buyer entity `[verify by buyer location]` | identity, billing, tax, transaction/subscription data | [TBD] | authorised reseller/Merchant of Record and independent controller for buyer Transaction; assess any processor flows separately | Paddle terms/privacy + transfer assessment `[TBD]` | PLANNED, NOT LIVE |
 | AI | not selected | [TBD] | [TBD] | [TBD] | [TBD] | [TBD] | NOT LIVE |
 
 For each restricted transfer, counsel/privacy owner must select and execute the correct mechanism
@@ -239,7 +267,9 @@ risk assessment. Never publish `provider is GDPR compliant` as a substitute.
 | landing | PostHog memory state | no cookie/localStorage persistence; typed events only; IP disabled in SDK config | analytics processing still disclosed |
 | app | `accessToken` localStorage and auth/session state | observed; exact expiry/rotation/logout audit [TBD] | necessary/security, plus security architecture review |
 | app | onboarding draft/settings | [TBD audit] | functionality [TBD] |
+| app | billing checkout/return state | provider-free pending state only `[TBD audit]`; never persist bearer checkout URL/provider secret | necessary/functional/security |
 | booking | confirmation/preferences/client-hub session state, including token-like records | observed; exact keys/expiry/clearing audit [TBD] | necessary/security [TBD] |
+| Paddle-hosted domains | checkout and Buyer Portal technologies | governed by Paddle's notices/choices for its buyer flow; inventory exact handoff/return behaviour | independent third-party flow `[TBD]` |
 | all | PWA/service worker/cache | [TBD audit] | functionality/security [TBD] |
 
 Audit browser storage, response cookies, service-worker caches and outbound network requests in a
@@ -274,7 +304,8 @@ Counsel/owner must fill and commit an immutable approval record separate from en
   "dpa": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""},
   "bookingTerms": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""},
   "cookies": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""},
-  "subprocessors": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""}
+  "subprocessors": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""},
+  "billing": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""}
 }
 ```
 

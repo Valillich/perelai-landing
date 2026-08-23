@@ -1,6 +1,8 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
 **Prepared:** 2026-08-01  
+**Updated:** 2026-08-23 for provider-agnostic SaaS Billing/Paddle and Workspace Data Export plans.
+
 **Status:** planning and attorney-ready drafting only; no implementation is authorised by this document.  
 **Canonical source language:** English.  
 **Mandatory approval:** owner + qualified counsel for the launch jurisdictions.
@@ -9,6 +11,25 @@ This package supersedes the legal-content and routing decisions in
 `../legal_pages_and_cross_domain_handoff_20260725.md` where they conflict. The old plan remains useful
 for its acquisition-context and open-redirect analysis. The material change here is that Perelai needs
 a connected set of documents, not only `/terms` and `/privacy`.
+
+## 0. Inputs and precedence for implementation LLMs
+
+Read these before taking a Billing or Data Transfer task:
+
+1. `/Users/valery/Sites/beauty-finance/CONTEXT.md` — canonical domain vocabulary;
+2. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/README.md` — authoritative Billing
+   package index and decision summary;
+3. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/00_architecture_and_decision_freeze_20260822.plan.md` — BILL0 architecture and approval gates;
+4. the Billing task document identified by that README; and
+5. `/Users/valery/Sites/beauty-finance/.cursor/plans/import/12_workspace_data_export_mvp_20260823.plan.md` — EX1 Workspace Data Export contract.
+
+The 2026-08-23 IM4 acceptance verdict is incorporated into
+`11_workspace_data_export_legal_matrix.md` §7. If a later committed acceptance report supersedes it,
+use the later evidence but do not silently weaken the destructive/recovery gates.
+
+Precedence is: verified current production behaviour and approved release evidence → accepted ADR/
+domain vocabulary → authoritative feature plan → this legal implementation plan → older landing
+plans. A planning document never proves that a feature is live or that legal copy is approved.
 
 ## 1. Outcome
 
@@ -22,6 +43,7 @@ Implement one canonical legal centre on the landing:
 | `/legal/booking-terms` | End clients using public booking/intake | `05_public_booking_terms_source_en.md` |
 | `/legal/cookies` | Visitors and users of all Perelai surfaces | `06_cookie_policy_source_en.md` |
 | `/legal/subprocessors` | Business customers and data subjects | `07_subprocessor_list_template_en.md` |
+| `/legal/billing` | Buyers/payers of Perelai SaaS subscriptions | `10_billing_cancellation_refund_source_en.md` |
 
 Compatibility aliases:
 
@@ -32,9 +54,16 @@ Compatibility aliases:
 - old app routes retain a non-placeholder failure state only for local development when that env var
   is missing.
 
-Do not publish `/legal/refund-policy` until billing architecture, cancellation and refunds are
-confirmed. Keep Acceptable Use inside Terms for the first release. Add an AI Notice before, not after,
-any production AI processing begins.
+Use `/legal/billing` as the single SaaS billing/cancellation/refund disclosure. Do not create a second,
+potentially contradictory `/legal/refund-policy`. The draft may be implemented behind a preview gate,
+but paid acquisition and checkout remain blocked until every commercial `[TBD]` is approved and its
+rendered version matches Paddle configuration. Keep Acceptable Use inside Terms for the first release.
+Add an AI Notice before, not after, any production AI processing begins.
+
+The data-movement boundary is specified separately in
+`11_workspace_data_export_legal_matrix.md`: Workspace Data Export is an owner-facing operational
+archive, while Privacy Access Export is a verified person-scoped rights workflow. The former must
+never be marketed as the latter.
 
 ## 2. Non-negotiable drafting rules
 
@@ -54,6 +83,11 @@ any production AI processing begins.
 9. Every published document has an effective date, version and archived prior versions.
 10. A production build must fail when required legal identity variables or approved document
     versions are missing.
+11. Keep SaaS Billing separate from a Customer's End Client payments, Payment Accounts, Payment
+    Allocations, Orders, Instalments, Packages and Public Receipts. Paddle's role in selling the
+    Perelai subscription does not make Paddle or Perelai the seller of a Customer's services.
+12. Do not call Workspace Data Export a `GDPR export`, `privacy access export`, `backup` or proof that
+    all access/portability duties are satisfied.
 
 ## 3. Current-state findings that implementation must correct
 
@@ -82,6 +116,14 @@ Verified against code on 2026-08-01:
 - Resend is the implemented email delivery provider. Deployment/hosting/database/object storage/Redis
   vendors and production regions are not established by repository code and remain release-blocking
   facts.
+- provider-neutral SaaS Billing is now architecture-frozen in the monetization plan and Paddle is the
+  first intended production adapter/Merchant of Record, but no billing implementation or approved
+  production catalog exists yet. The `$19/$190` Founding and `$29/$290` Public figures remain
+  approval-gated hypotheses and must not enter approved legal or landing copy.
+- Workspace Data Export is planned, not live. The planned archive is owner-only, short-lived and
+  company-scoped. Import modernisation still has unresolved P1 acceptance findings; do not describe
+  the improved Import or Export controls as available or verified until their respective acceptance
+  gates close.
 
 ## 4. Canonical content architecture
 
@@ -96,6 +138,7 @@ content/legal/
     booking-terms.md
     cookies.md
     subprocessors.md
+    billing.md
   versions.json
 ```
 
@@ -152,22 +195,29 @@ Legal URLs may accept only these allowlisted parameters:
 
 | Parameter | Allowed values | Behaviour |
 |---|---|---|
-| `from` | `login`, `register`, `forgot`, `onboarding` | Selects a hard-coded app destination |
+| `from` | `login`, `register`, `forgot`, `onboarding`, `settings`, `billing`, `data-transfer` | Selects a hard-coded app destination |
 | `locale` | published locale code | Optional display hint; route prefix remains authoritative |
 | `niche` | valid generated catalog slug | Re-emitted only for `register` |
+| `offer` | generated, currently public PRIMARY `OfferCode` | Re-emitted only for `register`; treated as untrusted intent, never as entitlement |
 | `utm_source`, `utm_campaign`, `landing_path` | existing clamped acquisition values | Re-emitted only for `register` |
 
 Destination mapping is code-owned:
 
 ```text
 login      -> {APP_PUBLIC_URL}/login
-register   -> {APP_PUBLIC_URL}/register + validated acquisition query
+register   -> {APP_PUBLIC_URL}/register + validated niche, offer and acquisition query
 forgot     -> {APP_PUBLIC_URL}/forgot-password
 onboarding -> {APP_PUBLIC_URL}/onboarding
+settings   -> {APP_PUBLIC_URL}/settings
+billing    -> {APP_PUBLIC_URL}/settings/billing
+data-transfer -> {APP_PUBLIC_URL}/settings/data-transfer
 ```
 
 Never accept `return_to`, `redirect`, `callback`, an origin or a full URL from query parameters. An
 unknown `from` renders no contextual return button. Canonical metadata strips all query parameters.
+`offer` is parsed independently of `niche`; neither value may validate the other. Never forward a
+Paddle product/price/customer/subscription/transaction ID, checkout URL, price, currency, country or
+tax value through the legal return contract. Staff signup ignores `offer`.
 
 ### 6.2 Routes that may contain secrets
 
@@ -188,6 +238,15 @@ All legal links from an installed/standalone app and from onboarding open in a n
 draft is already persisted by product code; no legal navigation is allowed to mutate or complete it.
 The landing may additionally show a hard-coded `Return to onboarding` button when `from=onboarding`,
 but closing the legal tab remains the primary instruction.
+
+### 6.3.1 Authenticated Settings, Billing and Data Transfer
+
+Legal documents from authenticated Settings open in a new tab and may use only the hard-coded
+`from=settings`, `from=billing` or `from=data-transfer` mappings above. The landing may show the
+corresponding return button, but `Close this tab to return to Perelai` remains available. Never forward
+Company ID, current app path, auth state, export job ID, billing/provider ID, signed URL or any other
+token. A user who is no longer authenticated follows the app's normal login/resume behaviour; legal
+navigation must not encode a session return target.
 
 ### 6.4 Public booking
 
@@ -306,6 +365,11 @@ Each phase is a separate, reviewable task for a simpler LLM.
 - confirm production subprocessors, countries, transfers, retention, backup deletion and security
   claims;
 - decide current beta commercial terms and post-cancellation export window;
+- resolve every approval gate in `10_billing_cancellation_refund_source_en.md`, including payer
+  authority, trial conversion, renewal, cancellation, refunds, failed payment, restricted access and
+  post-cancellation data handling;
+- approve the difference between Workspace Data Export and the manual/future Privacy Access Export,
+  including request verification, third-party rights and response procedure;
 - have counsel approve edited drafts and assign immutable versions.
 
 **Exit gate:** no unresolved blocker token in approved source documents.
@@ -314,7 +378,7 @@ Each phase is a separate, reviewable task for a simpler LLM.
 
 - add typed env validation and legal-identity interpolation;
 - add validated legal document loader/front matter;
-- render the six canonical pages under every published locale path;
+- render the seven canonical pages under every published locale path;
 - add a document navigation rail, print styles, last-updated/version display and archived-version link;
 - implement `/terms` and `/privacy` redirects;
 - add clean canonical URLs, `WebPage` metadata and sitemap entries;
@@ -358,19 +422,74 @@ Each phase is a separate, reviewable task for a simpler LLM.
 - add cookie preferences only when there is something optional to control. A fake banner with no
   effect is prohibited.
 
-### LGL-6 — release and lifecycle
+### LGL-6 — SaaS Billing and Paddle legal integration
 
-- run the tests in §10;
+Dependency: BILL0 business decisions and the provider-neutral billing contract are approved. This
+phase must finish before BILL7 enables paid landing CTAs and before BILL8 production enforcement.
+
+- finalise Terms §13 and the `/legal/billing` draft against the generated public catalog and Paddle
+  account configuration;
+- disclose the two linked contracts accurately: Perelai supplies/licenses the Product under its
+  Terms, while the applicable Paddle entity is the authorised reseller/Merchant of Record for the
+  buyer Transaction under Paddle's Buyer Terms;
+- keep `Plan` (capabilities) separate from `Offer` (commercial terms), and keep each Company's
+  subscription/access projection separate from the single BillingCustomer payer identity;
+- state one 21-day no-card trial per BillingCustomer only if the implemented trigger and checkout
+  behaviour exactly match the approved plan; do not imply a new trial for each Company;
+- disclose automatic local-currency presentment and location-dependent tax treatment without
+  promising a particular display currency or tax inclusion before Paddle Checkout confirms it;
+- link cancellation/refund routes and Paddle Buyer Terms from pricing, checkout review, Billing
+  settings, receipts/confirmation and restricted-access surfaces;
+- update Privacy, Cookies and third-party role tables for billing identities, offer attribution,
+  Paddle-hosted checkout/portal, webhook projections and transaction/tax records;
+- verify that only an authoritative webhook projection activates paid access and that pending or
+  failed checkout copy never promises access;
+- keep regional/PPP pricing and country-specific price overrides off. Any future regional catalog is
+  a separate product, abuse, tax and EU/EEA legal review.
+
+**Exit gate:** approved legal copy, catalog, Paddle configuration and tested product states agree on
+seller roles, exact charges, taxes, renewal, trial, cancellation, refunds and access consequences.
+
+### LGL-7 — Workspace Data Export and privacy-rights boundary
+
+Dependency: IM4-C2/IM2/IM4 acceptance review, IM5 shared Settings shell and EX1 acceptance criteria;
+the combined rollout still waits for IM6. Do not let this legal work declare those product phases
+complete.
+
+- use the product term `Workspace Data Export` and the CTA `Download a copy of your workspace data`;
+- keep the feature under `/settings/data-transfer/exports`, owner-only, and out of onboarding;
+- describe the shipped manifest/JSONL/CSV archive scope and exclusions only after release evidence;
+- disclose the planned 24-hour artifact life, 10-minute single-use action grant, private object
+  storage, audit metadata and download security only after their tests pass;
+- make clear that creating/downloading an archive does not delete source data and does not by itself
+  close an account or satisfy an individual's privacy request;
+- maintain a distinct Privacy Access Export/request workflow that verifies the individual, applies
+  legal scope/exemptions, supplies required contextual information and protects other people;
+- ensure Billing restriction does not silently remove any post-restriction read/export/delete action
+  that product/counsel approved, while new imports and other value-creating writes remain blocked;
+- reconcile export-job/audit retention, object deletion, company deletion and legal holds before
+  publishing fixed periods.
+
+**Exit gate:** `11_workspace_data_export_legal_matrix.md` is fully evidenced, Privacy/DPA/Terms match
+runtime behaviour, and no UI or marketing surface calls the archive a GDPR/privacy access export.
+
+### LGL-8 — combined release and lifecycle
+
+- run the complete tests in §10, including the Billing and Export/privacy-request matrices;
 - publish counsel-approved English source first;
 - publish Ukrainian and Polish only after legal and linguistic review;
 - archive previous versions and schedule annual/event-driven review;
-- subscribe customers to subprocessor-change notices under the approved DPA procedure.
+- subscribe customers to subprocessor-change notices under the approved DPA procedure;
+- keep paid acquisition/checkout off until LGL-6 passes;
+- keep Workspace Data Export off until LGL-7 and IM6 combined-release gates pass; and
+- record separate go/no-go decisions for public booking, Billing enforcement and Workspace Data
+  Export rather than treating one successful legal deploy as approval of every feature.
 
 ## 10. Required test matrix
 
 ### Landing
 
-- all six clean canonical URLs render approved content and correct metadata;
+- all seven clean canonical URLs render approved content and correct metadata;
 - locale-prefixed routes preserve the document and never machine-translate missing content;
 - `/terms` and `/privacy` redirect to the correct locale canonical page;
 - production build fails on missing env, `status: draft`, `[TBD` or unresolved interpolation;
@@ -380,11 +499,14 @@ Each phase is a separate, reviewable task for a simpler LLM.
 ### Auth and PWA
 
 - login -> legal -> login round trip;
-- register -> legal -> register preserves only clamped niche/UTM allowlist;
+- register -> legal -> register preserves only validated niche, public PRIMARY OfferCode and clamped
+  attribution; offer is independent of niche and grants no trial/access;
 - email and Google owner signup cannot proceed without current Terms/DPA versions;
 - staff invite copy omits DPA acceptance;
 - stale/forged versions are rejected by API;
 - standalone/onboarding legal opens a new tab and leaves state untouched;
+- Settings/Billing/Data Transfer legal opens a new tab and returns only through its hard-coded clean
+  app route; no Company/job/provider/session value is forwarded;
 - reset-password and confirmation tokens never appear in a landing URL, referrer, analytics event or
   log assertion.
 
@@ -397,6 +519,31 @@ Each phase is a separate, reviewable task for a simpler LLM.
 - marketing opt-in is separate, unchecked and optional;
 - stored evidence references exact business and Perelai policy versions;
 - no token-bearing public URL is copied to landing.
+
+### SaaS Billing
+
+- landing Pricing uses only generated public PRIMARY offers; app-only ADDITIONAL offers never leak;
+- no Paddle/provider IDs or checkout URLs are embedded in landing or legal handoff query parameters;
+- Company currency, IP, locale and niche never select an Offer or entitlement;
+- checkout shows the final currency, subtotal, discount, tax and total before purchase;
+- redirect/browser success leaves access pending until a verified webhook projection activates it;
+- trial is shared across eligible Companies of one BillingCustomer and cannot be replayed by creating
+  another Company; staff signup receives no BillingCustomer or trial;
+- cancellation, refund and failed-payment copy matches the Paddle portal and approved product policy;
+- restricted mode preserves the approved safe read, billing recovery, closure/deletion and export
+  actions, while new public intake fails neutrally without exposing billing state.
+
+### Workspace Data Export and privacy requests
+
+- export is owner-only, absent from onboarding and not available until its feature flag/release gate;
+- create and download require separate fresh confirmations; grants are actor/company/action-bound,
+  hashed, single-use and expire as configured;
+- notification contains no attachment or bearer URL; download uses a short-lived URL that is neither
+  stored nor logged;
+- manifest/scope/exclusions, CSV formula neutralisation and tenant isolation match the approved plan;
+- artifact expiry purges the object and company deletion handles active/staged/ready jobs safely;
+- archive copy never says `GDPR export`, and privacy requests still have a verified person-scoped
+  workflow with third-party protections and required supplemental information.
 
 ### Accessibility/security
 
@@ -419,6 +566,12 @@ Do not enable public acquisition or public booking until all are true:
 - [ ] Google scopes and disconnect/deletion behaviour match the notice;
 - [ ] cookie/storage audit is signed off for each origin;
 - [ ] billing, renewal, cancellation and refund statements match production, or paid billing is off;
+- [ ] Paddle entity/role, Buyer Terms, catalog, tax mode, currency presentment and webhook authority
+  match the production account; no approval-gated prices are published early;
+- [ ] Workspace Data Export remains off until IM4-C2/IM acceptance, IM5, EX1 and IM6 combined-release
+  gates pass;
+- [ ] Workspace Data Export and Privacy Access Export are labelled, routed and fulfilled as distinct
+  processes; Article 15/20 or regional requests are not closed by a tenant archive alone;
 - [ ] sensitive/medical data restrictions are enforced and communicated;
 - [ ] Terms/DPA acceptance is persisted for email and Google signup;
 - [ ] end-client booking uses the correct legal layer;
@@ -427,7 +580,7 @@ Do not enable public acquisition or public booking until all are true:
 
 ## 12. Source authorities checked for this plan
 
-Primary/official sources, checked 2026-08-01:
+Primary/official sources, checked 2026-08-01 and refreshed/extended 2026-08-23:
 
 - [GDPR, including Articles 13, 14, 27 and 28](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
 - [ePrivacy Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058)
@@ -436,6 +589,13 @@ Primary/official sources, checked 2026-08-01:
 - [European Commission — Consumer Rights Directive overview](https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en)
 - [Verkhovna Rada — Law of Ukraine On Electronic Commerce](https://zakon.rada.gov.ua/laws/show/675-19?lang=en)
 - [ICO — controller/processor contracts](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/contracts-and-liabilities-between-controllers-and-processors-multi/)
+- [GDPR Articles 15 and 20 — access and portability are distinct rights](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
+- [EDPB Guidelines 01/2022 on the right of access](https://www.edpb.europa.eu/documents/guideline/guidelines-012022-on-data-subject-rights-right-of-access_en)
+- [Paddle — automatic localized pricing](https://developer.paddle.com/build/products/offer-localized-pricing/)
+- [Paddle — price `tax_mode`](https://developer.paddle.com/api-reference/prices/create-price/)
+- [Paddle Buyer Terms](https://www.paddle.com/legal/buyer-terms)
+- [Paddle — Merchant of Record and indirect tax](https://www.paddle.com/help/sell/tax/how-paddle-handles-vat-on-your-behalf)
+- [Your Europe — pricing and price discrimination](https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm)
 
 These sources support the design but do not resolve Perelai's entity, establishment, consumer-law,
 transfer, tax or contract-law choices. Those decisions remain counsel-owned.

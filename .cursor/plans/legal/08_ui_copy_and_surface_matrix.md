@@ -22,7 +22,7 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | Surface/current file | Required links/copy | Navigation | Acceptance |
 |---|---|---|---|
 | `LoginScreen.tsx` | Terms · Privacy | landing URL with `from=login`; same tab in normal browser, new tab in standalone | none for an already-current version |
-| `SignupScreen.tsx`, owner/coworker owner | required owner sentence; Terms · DPA · Privacy | landing URL with `from=register`, locale and validated acquisition context; external links must not clear form | required Terms+DPA before email or Google |
+| `SignupScreen.tsx`, owner/coworker owner | required owner sentence; Terms · DPA · Privacy | landing URL with `from=register`, locale, independently validated niche/public PRIMARY OfferCode and clamped attribution; external links must not clear form | required Terms+DPA before email or Google |
 | `SignupScreen.tsx`, staff invite | required staff sentence; Terms · Privacy | `from=register`; preserve validated invite return only inside app, never send invite token/path to landing | Terms only; no DPA representation |
 | `SignupScreen.tsx`, check-email state | Terms · Privacy | `from=login` or safe close/new-tab; never forward verification token | no second acceptance |
 | `ForgotPasswordPage.tsx` | Terms · Privacy | `from=forgot` | none |
@@ -33,7 +33,13 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | `PublicBookingPage.tsx` | Business terms/cancellation · Business privacy · Perelai Booking Terms · Perelai Privacy | new tab for Perelai; business links new tab with safe `noopener`; no auth Terms | Business policy agreement when required; privacy acknowledgement; marketing separate |
 | booking confirmation/proposal/status | same End Client links | new tab; never forward token | no duplicate agreement unless materially new terms/action |
 | receipt/status/preferences/client hub | Booking Terms when relevant · Privacy | new tab; never forward token/path/referrer | none unless the user starts a new contractual action |
-| landing footer | Terms · Privacy · Cookies · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
+| landing footer | Terms · Privacy · Cookies · Billing (when paid launch is live) · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
+| landing Pricing/paid CTA | Terms · Privacy · Billing; final local currency/tax at checkout | registration with untrusted public PRIMARY `offer`; no Paddle ID or direct checkout | none; Offer intent grants no access |
+| app `/settings/billing` | current Plan/Offer, payer authority, trial/subscription state, Terms · Billing · Privacy · Paddle Buyer Terms | Paddle-hosted checkout/Buyer Portal only after backend creates flow | explicit purchase confirmation occurs in Paddle Checkout |
+| app checkout return/pending | pending/confirmed/failed/recovery copy | backend state refresh; browser redirect is never authority | none |
+| app restricted mode | billing recovery + approved read/settings/export/closure actions | keep safe app return; no public billing-state leak | payer authority for billing changes; owner authority remains separate |
+| app `/settings/data-transfer` | separate Import and Workspace Data Export destinations; privacy-request help | in-app routes; legacy `/settings/imports` redirects to `/settings/data-transfer/imports`; legal/privacy links new tab | none |
+| app `/settings/data-transfer/exports` and detail | archive scope/exclusions/expiry/security; Privacy link | authenticated app; no link token in notification | owner-only fresh confirmation separately for create and download |
 
 ## 3. Exact auth copy
 
@@ -81,9 +87,12 @@ Marketing, Web Push and optional analytics do not share the Terms checkbox.
 | `from` | Primary return copy | Destination |
 |---|---|---|
 | `login` | `← Back to log in` | hard-coded app `/login` |
-| `register` | `← Back to sign up` | hard-coded app `/register` + valid acquisition allowlist |
+| `register` | `← Back to sign up` | hard-coded app `/register` + valid niche/public PRIMARY OfferCode/acquisition allowlist |
 | `forgot` | `← Back to password recovery` | hard-coded app `/forgot-password` |
 | `onboarding` | `Return to onboarding →` | hard-coded app `/onboarding` |
+| `settings` | `Return to settings →` | hard-coded app `/settings` |
+| `billing` | `Return to billing →` | hard-coded app `/settings/billing` |
+| `data-transfer` | `Return to data transfer →` | hard-coded app `/settings/data-transfer` |
 | absent/invalid | `Back to Perelai →` | landing home; no app return button |
 
 For a page intentionally opened in a new tab from a token-bearing/public flow, show:
@@ -92,6 +101,10 @@ For a page intentionally opened in a new tab from a token-bearing/public flow, s
 
 Do not use browser history as the only return mechanism for same-tab auth flow. Do not render a link
 from an untrusted query value.
+
+`offer` is validated independently from `niche`, ignored for staff signup and never converted into a
+Paddle/provider ID on the landing/legal origin. Do not preserve price, currency, country, tax, checkout
+URL, payer/customer/subscription/transaction IDs or a return/callback URL.
 
 ## 5. Public booking collection copy
 
@@ -243,7 +256,103 @@ Never include:
   analytics); or
 - raw acquisition values beyond the existing separately approved attribution plan.
 
-## 10. Tests tied to the current call sites
+## 10. SaaS Billing copy and states
+
+### Landing Pricing disclaimer
+
+> Prices shown on this page are based on the listed Offer. Paddle Checkout confirms the final
+> currency, applicable tax and total before purchase.
+
+Do not say `tax included` globally. With location-dependent tax treatment, inclusion depends on the
+transaction country. Do not choose the Offer from Company currency, IP, locale, niche or region.
+
+### Trial
+
+> Start a 21-day trial — no card required.
+
+Adjacent expandable/help copy:
+
+> One trial is available per eligible payer, not per workspace. If that payer creates another eligible
+> workspace during the same trial window, it shares the original end date.
+
+This copy is allowed only after the durable onboarding trigger, BillingCustomer relationship and
+eligibility/replay tests pass. Do not add `then automatically charged` unless an explicit checkout has
+authorised the exact first charge and all `[TBD]` gates in the Billing Policy are approved.
+
+### Billing settings seller disclosure
+
+> Perelai provides the Product under the Perelai Terms. Paddle is the authorised reseller and
+> Merchant of Record for your purchase and handles payment, applicable indirect tax and buyer
+> transaction documents under the Paddle Buyer Terms.
+
+The link target is Paddle's current Buyer Terms. The UI must not hard-code one Paddle entity when the
+applicable buyer entity depends on purchase location.
+
+### Pending checkout return
+
+> **Payment received — confirming access**
+>
+> We are waiting for secure confirmation from Paddle. You can keep this page open or return to Billing
+> settings. Do not start another checkout unless this payment is shown as failed.
+
+On verified webhook projection:
+
+> **Subscription active**
+>
+> Access is active for `[Company Name]`.
+
+Never render `active` from a query string, local storage or browser redirect alone.
+
+### Billing authority
+
+> Billing is managed by `[Payer]`. Company ownership and billing authority are separate. Contact the
+> payer or support to change this subscription.
+
+Do not reveal payer personal details to users who are not authorised to see them. `[TBD: approved
+redaction/contact behaviour.]`
+
+### Restricted mode
+
+> **Workspace access is limited**
+>
+> You can review existing data and update billing. Creating new clients, bookings, requests, orders or
+> imports is temporarily unavailable. Your data has not been deleted.
+
+Show only actions the backend policy actually permits. Public intake uses neutral copy:
+
+> This business is temporarily unable to accept new requests. Please try again later or contact the
+> business directly.
+
+Never mention subscription, trial, failed payment or restriction on a public page.
+
+Billing legal links open a new tab with `from=billing`; only the landing-owned hard-coded return
+button may navigate back to `/settings/billing`. Do not include Company, payer or provider identifiers.
+
+## 11. Workspace Data Export copy
+
+Use the exact content and prohibited-language contract in
+`11_workspace_data_export_legal_matrix.md` §8. Required labels:
+
+```text
+Data transfer
+Import data
+Workspace Data Export
+Download a copy of your workspace data
+Request access to your personal data
+```
+
+The last label is a privacy/support route, not the Workspace export CTA. Export is absent from
+onboarding. The UI must display the actual archive scope, exclusions, readiness/expiry timestamp and
+that create/download/expiry do not change source data.
+
+The ready notification contains only a job/reference and route back to authenticated Settings—never
+an attachment, signed URL or bearer token. Create and download confirmations are separate; both check
+current owner authorization.
+
+Data Transfer legal/privacy links open a new tab with `from=data-transfer`; the clean hard-coded return
+route is `/settings/data-transfer`. Never forward an export job ID, Company ID or source app path.
+
+## 12. Tests tied to the current call sites
 
 - `LoginScreen` emits `from=login`.
 - both `SignupScreen` render branches use the correct owner/staff context and return semantics.
@@ -256,3 +365,12 @@ Never include:
 - all token-bearing public pages open clean legal URLs with `noreferrer` behaviour where needed.
 - standalone PWA retains the original app view.
 - screen-reader tests distinguish Business terms from Perelai Booking Terms.
+- legal return preserves only a generated public PRIMARY OfferCode and does not infer it from niche;
+- Settings/Billing/Data Transfer legal return uses only hard-coded clean routes and never forwards a
+  Company, export job, payer/provider or session identifier;
+- pricing/checkout/settings use the approved Billing disclosure and never expose provider IDs;
+- checkout return stays pending until the webhook projection is authoritative;
+- restricted public intake is neutral and does not reveal billing state;
+- Data Transfer routes separate Import, Workspace Data Export and privacy-request help;
+- Export is absent from onboarding, owner-only, and ready notifications contain no attachment/token;
+- no UI or translation uses `GDPR export`, `privacy access export` for the Company archive or `backup`.
