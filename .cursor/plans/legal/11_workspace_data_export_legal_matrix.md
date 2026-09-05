@@ -2,17 +2,21 @@
 
 **Prepared:** 2026-08-23
 
-**Status:** planning only; Workspace Data Export is not live.
+**Updated:** 2026-09-05.
+
+**Status:** legal planning only; Workspace Data Export is implemented in API/server/worker/web
+according to the current app inventory. Production availability is unverified; SOLO packaging and
+restricted create/download remain PENDING C-10. Do not call it unimplemented or automatically live.
 
 **Authoritative product term:** `Workspace Data Export`.
 
-**Dependencies:** IM4-C2 + IM2/IM4 acceptance review → IM5 Settings shell → EX1 → IM6 → combined
-release.
+**Historical implementation sequence:** IM4-C2/IM acceptance → IM5 → EX1 → IM6.
+Use current accepted release reports to establish which gates have closed; this is not a rebuild order.
 
 This document translates the Workspace Data Export plan into legal copy, privacy operations and
-release evidence. It must not be used to mark IM4/IM5/EX1/IM6 complete. The current IM4 verdict has no P0,
-but unresolved P1 recovery/destructive-boundary issues mean legal drafts may not promise the improved
-Import behaviour or present the combined Data Transfer surface as live.
+release evidence. It must not be used to mark IM4/IM5/EX1/IM6 complete. The old IM4 verdict is
+historical evidence; §7 requires reconciliation against later implementation/acceptance before
+asserting a current defect or publishing verified controls.
 
 ## 1. Non-negotiable terminology
 
@@ -47,7 +51,7 @@ Consequences:
   Customer-controller data; and
 - give the business a separate DPA assistance path for Customer Personal Data.
 
-## 3. Planned product contract — publish only after evidence
+## 3. Product contract to reconcile with implemented code — publish only after release evidence
 
 | Dimension | Plan truth | Publication gate |
 |---|---|---|
@@ -64,8 +68,8 @@ Consequences:
 | Action grant | hashed, one use, actor/Company/action bound; planned 10-minute expiry | security tests |
 | Signed object URL | at most 5 minutes; never persisted or logged | storage/log assertions |
 | Source data | unchanged by create/download/expiry | mutation and deletion tests |
-| Billing restriction | future approved export action may remain available; exact matrix TBD | BILL6/BILL8 + counsel approval |
-| Release state | flags off until combined release | production config assertion |
+| Billing restriction | implemented export; new create/download permission and SOLO packaging PENDING C-10; accepted jobs/cleanup continue | BILL3 effect policy + BILL8 + legal approval |
+| Release state | inspect actual flags and accepted release evidence; no legal review toggles deployment | production config assertion + C-10 |
 
 Do not turn planned values into public guarantees before the indicated gates. Once approved, the
 Terms, Privacy Notice, DPA, UI help, support runbook and operational alerts must use the same values.
@@ -135,11 +139,13 @@ worker retry from recreating an object. Artifact expiry must retain enough owner
 the object after any database pointer/state transition; never clear the only object identifier before
 successful purge or a recoverable cleanup record exists.
 
-## 7. Import dependency and current P1 truth
+## 7. Historical import acceptance findings — current status to verify
 
 The combined release shares only the Settings/Data Transfer shell. Import and Export remain separate
-domains, models and sources of truth. As of the pasted acceptance verdict, IM4 must not close and UI
-IM4/IM5 must not begin until the current P1 findings are resolved, including:
+domains, models and sources of truth. The 2026-08-23 verdict recorded these P1 findings. The newer
+2026-09-05 inventory identifies implemented pipelines but is not a closure report for each finding.
+Retrieve later acceptance evidence; record resolved/current/unverified per item instead of declaring
+IM4/IM5 blocked or complete from this old list:
 
 - preview scope must not widen simply by opening it;
 - destructive locking must cover non-FK writers, not only rows reached by foreign keys;
@@ -149,7 +155,8 @@ IM4/IM5 must not begin until the current P1 findings are resolved, including:
 - V2 GET must not leak a raw persistence row; and
 - `canDownloadIssues` must truthfully represent a downloadable issue artifact.
 
-Legal consequence: keep current Import disclosures conservative. Do not promise a safe preview,
+Legal consequence: retain these as evidence checks, not timeless implementation blockers. Keep
+current Import disclosures consistent with verified runtime. Do not promise a safe preview,
 complete issue download, fixed cleanup period, atomic destructive replacement or recoverability based
 on the planned design alone.
 
@@ -189,7 +196,10 @@ configuration copy.
 
 > This archive may contain confidential business and client information. Download it only to a
 > trusted device, keep it secure and delete copies you no longer need. The link created for this
-> download is short-lived and single use.
+> download is short-lived. Anyone who obtains it may be able to use it until it expires; do not share it.
+
+The create/download action grant is consumed once. That does not make an object-storage signed
+URL single-use; publish that claim only if delivery infrastructure actually enforces it.
 
 ### Expired/failed
 
@@ -238,6 +248,11 @@ requests.
   tests.
 - A public visitor must receive neutral temporary-unavailable copy; no billing state is disclosed.
 - Payer authority is not a substitute for Company-owner authorization to export Customer Data.
+- Mandatory privacy/DPA assistance and any applicable switching/retrieval duties remain available
+  independently of a paid feature entitlement; provide an authenticated or verified assisted route.
+- Resolve F-18/Data Act applicability in document 12. A 24-hour downloadable object can expire
+  while an approved longer retrieval period remains available through regeneration or assisted
+  delivery. Do not delete the source or end the retrieval process merely because an artifact expired.
 
 The final access matrix must be identical in Billing Policy, Terms, UI guards, API policy and worker
 authorization. Never allow a stale grant created before restriction/ownership change to bypass current
@@ -289,17 +304,18 @@ authorization at download.
 
 ## 12. Handoff for simpler LLMs
 
-Split work into independently reviewable tasks:
+Split remaining work into independently reviewable tasks:
 
-1. read-only fact audit and data/role map;
-2. IM4-C2 and acceptance fixes (owned by Import plan, not legal);
-3. IM5 shared shell/routes without claiming Export live;
-4. EX1 domain/API/worker/storage implementation;
-5. Export UI/copy/accessibility after backend acceptance;
-6. Privacy Access Export/manual request operations plan;
-7. legal-document reconciliation and counsel approval before IM6;
-8. IM6 integration/acceptance; and
-9. combined release verification with flags off until the evidence packet passes.
+1. current code/configuration and data/role audit using the 2026-09-05 inventory;
+2. reconcile later acceptance reports against historical IM/EX gaps;
+3. fix only evidenced outstanding implementation issues in their owning product plan;
+4. complete C-10 and F-18 export/retrieval decisions;
+5. verify Privacy Access Export/manual request operations separately;
+6. reconcile legal text and obtain counsel approval; and
+7. verify the evidence packet before any new release or commercial promise.
+
+Implemented Export is not rebuilt from this legal plan. Existing deployment is not disabled by
+this documentation review; any actual runtime change follows the product release procedure.
 
 Every task must report current versus target behaviour, tests, unresolved `[TBD]`, plan drift and the
 statement: `Code completion is not legal approval.`

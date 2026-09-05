@@ -5,8 +5,9 @@ documents.
 **Status:** mixed — code-observed facts plus unresolved business/legal facts.  
 **Rule:** repository evidence proves implementation, not production deployment or legal sufficiency.
 
-**Plan truth checked:** 2026-08-23 against monetization `README`/BILL0, Workspace Data Export EX1 and
-the current IM4 acceptance verdict.
+**Plan truth checked:** 2026-09-05 against monetization inventory/README, ADR-0013 and app CONTEXT.
+See `12_review_and_launch_decisions_20260905.md` for findings, source refresh and decision crosswalk.
+Older code observations below require release verification; no production/vendor audit was performed.
 
 ## 1. Legal identity env contract
 
@@ -24,8 +25,9 @@ NEXT_PUBLIC_LEGAL_REGISTRATION_NUMBER=[TBD]
 NEXT_PUBLIC_LEGAL_TAX_NUMBER=[TBD: confirm whether/how it must be displayed]
 NEXT_PUBLIC_LEGAL_BUSINESS_ADDRESS=[TBD: valid address for legal correspondence]
 NEXT_PUBLIC_LEGAL_SUPPORT_EMAIL=[TBD]
-NEXT_PUBLIC_LEGAL_PRIVACY_EMAIL=privacy@perelai.com
-NEXT_PUBLIC_LEGAL_NOTICES_EMAIL=legal@perelai.com
+NEXT_PUBLIC_LEGAL_PRIVACY_EMAIL=[TBD: monitored privacy mailbox]
+NEXT_PUBLIC_LEGAL_NOTICES_EMAIL=[TBD: monitored legal mailbox]
+NEXT_PUBLIC_LEGAL_SECURITY_EMAIL=[TBD: monitored vulnerability/incident route]
 
 # Optional; render only when the complete block is present and the role actually exists
 NEXT_PUBLIC_LEGAL_EU_REP_NAME=
@@ -52,6 +54,7 @@ Template mapping:
 | `{{SUPPORT_EMAIL}}` | `NEXT_PUBLIC_LEGAL_SUPPORT_EMAIL` |
 | `{{PRIVACY_EMAIL}}` | `NEXT_PUBLIC_LEGAL_PRIVACY_EMAIL` |
 | `{{LEGAL_NOTICES_EMAIL}}` | `NEXT_PUBLIC_LEGAL_NOTICES_EMAIL` |
+| `{{SECURITY_EMAIL}}` | `NEXT_PUBLIC_LEGAL_SECURITY_EMAIL` |
 | `{{EU_REP_NAME}}` | `NEXT_PUBLIC_LEGAL_EU_REP_NAME` |
 | `{{EU_REP_ADDRESS}}` | `NEXT_PUBLIC_LEGAL_EU_REP_ADDRESS` |
 | `{{EU_REP_EMAIL}}` | `NEXT_PUBLIC_LEGAL_EU_REP_EMAIL` |
@@ -69,7 +72,9 @@ omission or invention.
 ### Validation requirements
 
 - trim all values and reject control characters/HTML;
-- validate emails and prohibit `localhost`/example domains in production;
+- validate emails and prohibit `localhost`/example domains in production; verify delivery and a
+  responsible person for support/privacy/legal/security routes (one monitored mailbox may serve
+  multiple roles); assess a public phone/support alternative for launch/Paddle requirements;
 - validate exact document dates as `YYYY-MM-DD` and immutable versions as a conservative slug;
 - optional representative/DPO blocks are all-or-nothing;
 - never provide production fallbacks for name, address, registration or jurisdiction;
@@ -88,23 +93,25 @@ changed. Build output or an approval manifest must preserve the exact rendered d
 | Email/password and Google authentication | LIVE IN CODE | Privacy covers credentials, Google identifiers and OAuth state. |
 | Google Calendar integration | LIVE IN CODE | Requested scope is `calendar.events.readonly`; event objects, identifiers, sync data and OAuth tokens must be disclosed accurately. |
 | Clients, visits, public requests/orders/rentals, notes, operational and financial records | LIVE IN CODE / deployment flags vary | Drafts use neutral categories; release owner must mark deployed modes. |
-| CSV/vCard imports | LEGACY/LIVE PATHS; MODERNISATION NOT ACCEPTED | Existing behaviour must be audited separately. IM4 remains open with P1 recovery/destructive-boundary findings; do not publish planned preview/purge guarantees yet. |
+| CSV/vCard imports | CURRENT CODE; DEPLOYMENT/ACCEPTANCE TO VERIFY | Current inventory includes API/server/worker imports. Reconcile later IM acceptance with historical findings; verify preview/purge/recovery guarantees before publication. |
 | Public booking/intake and tokenised status/receipt/preferences pages | LIVE IN CODE | Requires end-client terms, layered notice and token-safe legal links. |
 | Payment records/allocations | LIVE IN CODE | Perelai records operational information; no evidence of client-money processing or card vaulting. Do not call records payment processing. |
+| Company hard deletion/closure | NOT ESTABLISHED; DELETE STUB IN CURRENT ACTION INVENTORY | Do not promise a self-service erasure button. Approve/test assisted deletion, public link invalidation, storage cleanup and active subscription cancellation before publishing the route. |
 | SaaS Billing/subscriptions | ARCHITECTURE FROZEN; NOT IMPLEMENTED | Provider-neutral Billing; Paddle is first production adapter/Merchant of Record. No approved catalog or production configuration yet; no paid/renewal/refund prose may be activated early. |
 | BillingCustomer/Company relationship | PLANNED | One BillingCustomer payer may fund multiple Companies; every Company has its own subscription/access projection. Multi-company is not a PRO feature. |
 | SaaS trial | PLANNED | One 21-day no-card trial per BillingCustomer, shared by eligible Companies in the original window. Trigger/checkout conversion and exact commercial consequences remain implementation/approval gates. |
 | Pricing/tax | DECISION-FROZEN PLAN, NOT LIVE | One USD economic anchor per OfferCode; Paddle may localise currency; `tax_mode=location`; no launch overrides/PPP/custom FX/VAT engine. Hypothetical prices are not publishable. |
-| Workspace Data Export | PLANNED; NOT LIVE | Owner-only Company archive under Settings/Data Transfer; must not be called GDPR/privacy access export or backup. See `11_workspace_data_export_legal_matrix.md`. |
-| Privacy Access Export | FUTURE/MANUAL PROCESS TBD | Verified person-scoped rights response, distinct from tenant archive and requiring supplemental information/third-party protections. |
+| Workspace Data Export | IMPLEMENTED; PRODUCTION/COMMERCIAL AVAILABILITY UNVERIFIED | Owner-only Company archive under Settings/Data Transfer; C-10 packaging/restricted create/download PENDING. Must not be called GDPR/privacy access export or backup. See `11_workspace_data_export_legal_matrix.md`. |
+| Privacy Access Export | AUTOMATED PRODUCT NOT ESTABLISHED; MANUAL PROCESS REQUIRED WHERE RIGHTS APPLY | Verified person-scoped response, distinct from tenant archive; establish working intake, deadlines and protected delivery before processing subject to these rights. |
 | Email delivery via Resend | LIVE IN CODE | Candidate subprocessor; legal entity, regions and transfer mechanism require vendor/account verification. |
 | Web Push via VAPID | LIVE IN CODE / feature flags | Browser permission is separate; endpoint/subscription data and provider path require audit. |
 | BullMQ/Redis | IMPLEMENTED OPTION | Actual managed provider and production use are TBD. |
 | Landing PostHog | LIVE IN CODE when key configured | In-memory persistence; autocapture/session replay disabled; `ip: false`; intentional typed events still leave the browser. |
 | Landing `NEXT_LOCALE` cookie | LIVE IN CODE | One year, SameSite=Lax, set when language is selected. |
 | Theme, attribution and region browser storage | LIVE IN CODE | Must appear in Cookie Policy after names/durations are verified. |
-| AI functionality | NOT CONFIRMED AS PRODUCTION | Current drafts say no solely automated significant decisions and no Customer Data model training unless explicitly agreed. Re-review before AI launch. |
-| File attachments | repository plans previously describe planned state | Do not describe as live until code/deployment audit confirms. Keep sensitive-data prohibition regardless. |
+| AI functionality | NOT CONFIRMED AS PRODUCTION | No AI provider/production function confirmed. Assess rules-based billing/eligibility under Privacy §18 too; absence of AI is not an Article 22 conclusion. No shared Customer Data model training by default. |
+| File attachments | CURRENT CODE; DEPLOYMENT TO VERIFY | Inventory CORE_WORKSPACE includes files/FileAsset storage. Audit content, metadata, access, retention and sensitive-data handling; do not silently omit deployed attachments from notices. |
+| Coworker availability | CURRENT CODE, ADR-0010 | Linked Companies see opaque occupied intervals plus company name/colour. No foreign client/staff/service/amount/note or resolvable transaction ID; assess identifiability of solo-business data. |
 
 ## 3. Feature truth table to complete at release
 
@@ -127,7 +134,7 @@ Owner must mark one value for every row: `LIVE`, `BETA`, `FEATURE_FLAGGED`, `PLA
 | transactional emails | [TBD] | Privacy, DPA, subprocessors |
 | marketing emails | [TBD] | Privacy, consent UX |
 | public receipts/status/preferences/client hub | [TBD] | Privacy, booking terms, link safety |
-| packages/memberships/instalment tracking | [TBD] | Terms, Privacy |
+| prepaid Packages/instalment tracking | [TBD] | Terms, Privacy |
 | staff/RBAC | [TBD] | Terms, Privacy, DPA |
 | PWA install and Web Push | [TBD] | Privacy, Cookie Policy |
 | billing/subscription/trials | [TBD] | Terms, Privacy, Billing policy |
@@ -199,20 +206,27 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | F-14 | Privacy/counsel/ops | Approve the Privacy Access Export/manual request procedure, identity verification, Art. 15 supplemental information, Art. 20 scope, exceptions and third-party-rights review. |
 | F-15 | Privacy/ops | Approve retention for export job/audit metadata (planned default 12 months), failed/staging cleanup, legal holds and incident evidence. |
 | F-16 | Product/counsel | Define permitted read/export/delete/closure actions in Billing restriction and the neutral public-intake response; reconcile Terms, UI and policy. |
+| F-17 | Launch-country counsel + billing/product | Buyer-status and renewal/withdrawal/remedies matrix, including EU online withdrawal function, US state rules and actual UK commencement; purchase assent/durable confirmation and provider/support responsibility. See document 12 §4. |
+| F-18 | EU counsel + product/data operations | Data Act Chapter VI applicability/exceptions and, if applicable, switching terms, exportable data, retrieval window, charges and deletion. A short archive TTL or SOLO packaging does not override a legal duty. |
+| F-19 | Privacy + engineering | Customer Data licence, staff legal bases, Google Limited Use, coworker sharing, sensitive notes/files, processor-support roles and complete DPA authorisation/audit safeguards. |
 
 ## 6. Data and retention inventory — red until completed
 
 | Category | Purpose/role | Active retention | Deleted/backups | Owner/evidence |
 |---|---|---|---|---|
 | account/profile | controller | [TBD] | [TBD] | auth + DB audit |
-| legal acceptance evidence | controller/legal claims | [TBD] | [TBD legal limitation period] | counsel |
+| legal acceptance and purchase/recurring authorisation evidence | controller/legal claims | [TBD by evidence type] | [TBD legal limitation period] | counsel + billing |
+| refund/cancellation/withdrawal requests and confirmations | controller/contract/claims | [TBD] | [TBD] | support + Paddle reconciliation |
+| coworker link/invite and occupied-time disclosure | mixed by purpose; business instruction | [TBD] | [TBD membership exit/history] | ADR-0010 + privacy |
+| attachments/FileAsset objects, metadata and staging | processor where Customer Data | [TBD] | [TBD object/DB/backups] | files/storage audit |
 | workspace and Customer Data | processor | customer term/instruction [TBD] | [TBD] | deletion jobs |
 | deleted/archived clients | processor | [TBD] | [TBD] | schema/jobs |
 | import source and preview files | processor | [TBD hours/days] | [TBD] | import pipeline |
 | Workspace Data Export artifact | processor | planned: 24 hours from READY | automatic object purge; verify backups/versioning | EX1 tests + storage config |
 | export create/download grants | mixed security/processor | planned: 10 minutes, single use | hash/revocation deletion `[verify]` | EX1 security tests |
-| export job/audit metadata | mixed; designed PII-minimised | planned default 12 months, legal approval required | `[TBD deletion/legal hold]` | privacy + operations |
+| export job/audit metadata | mixed; data-minimised, not necessarily anonymous | planned default 12 months, legal approval required | `[TBD deletion/legal hold]` | privacy + operations |
 | failed/staging export objects | processor | planned immediate cleanup | prove retries/orphan sweeps | worker/storage runbook |
+| Calendar sync state/runs/tombstones | processor with limited security purpose by flow | [TBD] | [TBD disconnect/erasure/backups] | ADR-0005 + Calendar runtime |
 | Google OAuth tokens | controller/processor depending use | until disconnect [verify] | revoke/delete [verify] | integration code/runbook |
 | OAuth state and verification tokens | controller/security | [TBD actual TTL] | deletion [TBD] | constants/jobs |
 | public booking/status/access tokens | processor/security | [TBD] | [TBD] | public token services |
@@ -254,7 +268,9 @@ Code proves integration candidates, not the contracted legal entity or processin
 
 For each restricted transfer, counsel/privacy owner must select and execute the correct mechanism
 (adequacy, SCC module, UK Addendum/IDTA, or another lawful basis) and complete any required transfer
-risk assessment. Never publish `provider is GDPR compliant` as a substitute.
+risk assessment. Never publish `provider is GDPR compliant` as a substitute. Landing analytics providers process
+Perelai-controller data; they are not Customer Data subprocessors merely because they are vendors.
+Review remote access from Ukraine/Poland, not only server location.
 
 ## 8. Cookie/storage/network inventory to complete
 
@@ -308,6 +324,10 @@ Counsel/owner must fill and commit an immutable approval record separate from en
   "billing": {"version": "", "effectiveDate": "", "sha256": "", "approvalRef": ""}
 }
 ```
+
+Archive the submitted Paddle domain list, policy URLs/versions and approved private pricing revision
+separately from production permission. Record B-13 purchase assent and B-14 refund-operation evidence;
+C-13 accountant approval is not implied by a provider-verification result.
 
 The implementation LLM may build schema and validation, but it may not populate approval values or
 change `status` from `draft` to `approved`.

@@ -33,9 +33,9 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | `PublicBookingPage.tsx` | Business terms/cancellation · Business privacy · Perelai Booking Terms · Perelai Privacy | new tab for Perelai; business links new tab with safe `noopener`; no auth Terms | Business policy agreement when required; privacy acknowledgement; marketing separate |
 | booking confirmation/proposal/status | same End Client links | new tab; never forward token | no duplicate agreement unless materially new terms/action |
 | receipt/status/preferences/client hub | Booking Terms when relevant · Privacy | new tab; never forward token/path/referrer | none unless the user starts a new contractual action |
-| landing footer | Terms · Privacy · Cookies · Billing (when paid launch is live) · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
-| landing Pricing/paid CTA | Terms · Privacy · Billing; final local currency/tax at checkout | registration with untrusted public PRIMARY `offer`; no Paddle ID or direct checkout | none; Offer intent grants no access |
-| app `/settings/billing` | current Plan/Offer, payer authority, trial/subscription state, Terms · Billing · Privacy · Paddle Buyer Terms | Paddle-hosted checkout/Buyer Portal only after backend creates flow | explicit purchase confirmation occurs in Paddle Checkout |
+| landing footer | Terms · Privacy · Cookies · **Refund Policy** (approved before Paddle review) · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
+| landing Pricing/paid CTA | Terms · Privacy · Refund & Cancellation Policy; final local currency/tax at checkout | registration with untrusted public PRIMARY `offer`; no Paddle ID or direct checkout | none; Offer intent grants no access |
+| app `/settings/billing` | current Plan/Offer, payer authority, trial/subscription state, Terms · Billing · Privacy · Paddle Buyer Terms | Paddle-hosted checkout/Buyer Portal only after backend creates flow | affirmative Terms/Billing + recurring purchase agreement with immutable evidence; Paddle confirmation audited under README §7.6 |
 | app checkout return/pending | pending/confirmed/failed/recovery copy | backend state refresh; browser redirect is never authority | none |
 | app restricted mode | billing recovery + approved read/settings/export/closure actions | keep safe app return; no public billing-state leak | payer authority for billing changes; owner authority remains separate |
 | app `/settings/data-transfer` | separate Import and Workspace Data Export destinations; privacy-request help | in-app routes; legacy `/settings/imports` redirects to `/settings/data-transfer/imports`; legal/privacy links new tab | none |
@@ -128,6 +128,10 @@ generic policy and do not claim Perelai is sole controller.
 
 If Business terms and cancellation policy are separate, both must be linked from the sentence or
 presented immediately next to it. Snapshot the rendered versions/hash.
+
+Perelai Booking Terms need their own linked contractual statement and affirmative evidence when
+the approved formation model requires it. Business-policy acceptance does not silently incorporate
+Perelai Terms. Do not add a fresh agreement merely to view existing status/privacy information.
 
 ### 5.3 Privacy acknowledgement
 
@@ -275,8 +279,8 @@ Adjacent expandable/help copy:
 > One trial is available per eligible payer, not per workspace. If that payer creates another eligible
 > workspace during the same trial window, it shares the original end date.
 
-This copy is allowed only after the durable onboarding trigger, BillingCustomer relationship and
-eligibility/replay tests pass. Do not add `then automatically charged` unless an explicit checkout has
+This copy is allowed only after C-11 commercial/legal approval and the durable onboarding trigger,
+BillingCustomer relationship and eligibility/replay tests pass. Do not add `then automatically charged` unless an explicit checkout has
 authorised the exact first charge and all `[TBD]` gates in the Billing Policy are approved.
 
 ### Billing settings seller disclosure
@@ -290,10 +294,10 @@ applicable buyer entity depends on purchase location.
 
 ### Pending checkout return
 
-> **Payment received — confirming access**
+> **Confirming your subscription**
 >
-> We are waiting for secure confirmation from Paddle. You can keep this page open or return to Billing
-> settings. Do not start another checkout unless this payment is shown as failed.
+> We are checking the subscription status with Paddle. You can return to Billing settings or contact
+> support if confirmation is delayed. Check the existing purchase before trying to pay again.
 
 On verified webhook projection:
 
@@ -301,7 +305,22 @@ On verified webhook projection:
 >
 > Access is active for `[Company Name]`.
 
-Never render `active` from a query string, local storage or browser redirect alone.
+Never render `active` or `Payment received` from a query string, local storage or browser redirect
+alone. A payment-received label needs authoritative backend transaction evidence. Pending activation
+needs a tested incident/support path; it is not an indefinite fulfilment disclaimer.
+
+### Purchase, cancellation and refund controls
+
+Before checkout, present the exact amounts/dates and approved linked Terms + Refund & Cancellation
+Policy with an affirmative purchase control under README §7.6. Privacy acknowledgement and marketing
+permission remain separate. Do not display proposal R-01 as approved copy until B-07 is signed off.
+
+Provide **Cancel renewal**, **Request a refund**, and any legally required **Withdraw from contract**
+as distinct actions. Show cancellation effective date, paid-through access and confirmation. Test
+Paddle/Perelai support routes when login is unavailable. Do not require a retention survey or a new
+Terms acceptance to reach cancellation. For full/partial/tax-only refunds, show the provider-confirmed
+amount and the separately confirmed subscription/access consequence. Never equate a request with an
+approved refund or a refund adjustment with cancellation of future billing.
 
 ### Billing authority
 
@@ -369,7 +388,10 @@ route is `/settings/data-transfer`. Never forward an export job ID, Company ID o
 - Settings/Billing/Data Transfer legal return uses only hard-coded clean routes and never forwards a
   Company, export job, payer/provider or session identifier;
 - pricing/checkout/settings use the approved Billing disclosure and never expose provider IDs;
-- checkout return stays pending until the webhook projection is authoritative;
+- checkout return stays pending until the provider projection is authoritative; no unverified
+  payment-received claim;
+- pre-purchase Terms/Billing assent and recurring agreement retain exact versions and durable
+  confirmation; cancel/refund/withdrawal and lost-login routes satisfy B-13/B-14;
 - restricted public intake is neutral and does not reveal billing state;
 - Data Transfer routes separate Import, Workspace Data Export and privacy-request help;
 - Export is absent from onboarding, owner-only, and ready notifications contain no attachment/token;

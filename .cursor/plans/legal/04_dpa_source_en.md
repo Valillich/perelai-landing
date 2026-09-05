@@ -47,8 +47,10 @@ The Customer determines the purposes of processing, the Data Subjects and data e
 collected through its workspace. Schedule 1 describes the subject matter, duration, nature, purpose,
 data and Data Subjects.
 
-This DPA does not govern account, billing, security, support, Perelai marketing, legal-claims or other
-data for which Perelai acts as an independent Controller, as described in the Privacy Notice.
+This DPA does not govern processing for which Perelai actually acts as an independent Controller,
+as specifically described in the Privacy Notice. Security, troubleshooting, support and exports
+performed on Customer Personal Data to deliver the instructed Service remain covered; their label
+alone does not turn them into independent-controller processing.
 
 ## 3. Customer instructions and responsibilities
 
@@ -114,9 +116,10 @@ The Customer gives Perelai general written authorisation to use the Subprocessor
 4. provide the name, processing function and location information described in the list.
 
 Perelai will give at least `[TBD: counsel-approved notice period]` advance notice through
-`[TBD: email/account/subscription channel]` before adding or replacing a Subprocessor, except where an
-urgent replacement is reasonably needed for security, continuity or legal compliance. In an urgent
-case, notice will be provided as soon as reasonably practicable.
+`[TBD: email/account/subscription channel]` of intended additions or replacements, allowing the
+Customer a meaningful opportunity to object before the new processing starts. An urgent event does
+not dispense with applicable authorisation requirements: use an already authorised provider, obtain
+specific authorisation where needed, or suspend the affected processing while resolving it.
 
 The Customer may object during the notice period on reasonable data-protection grounds. The parties
 will work in good faith on a commercially reasonable alternative. If no alternative is available,
@@ -167,7 +170,8 @@ archive alone fulfils access, portability or regional privacy duties.
 
 The Customer is responsible for assessing and responding to the request. Material bespoke assistance
 outside standard Service functionality may be charged at reasonable agreed rates unless the need was
-caused by Perelai's breach or law requires otherwise.
+caused by Perelai's breach or law requires otherwise. A fee discussion, unpaid subscription or
+ordinary commercial export limit must not delay mandatory assistance or statutory response deadlines.
 
 ## 9. Personal Data Breaches
 
@@ -203,9 +207,11 @@ Perelai will make available information reasonably necessary to demonstrate comp
 which may include current security documentation, questionnaires and independent reports if they
 exist and can lawfully be shared.
 
-No more than once per 12 months, and additionally following a material Personal Data Breach or a
-Supervisory Authority requirement, the Customer may request an audit of relevant controls. Unless law
-requires otherwise:
+Routine audits are ordinarily coordinated no more than once per 12 months. Additional audits
+remain available where reasonably necessary to demonstrate compliance, including reasonable
+indications of non-compliance, an incident or a regulatory requirement. Scheduling and cost terms
+must not defeat the Customer's applicable Article 28 audit/inspection rights. Unless law requires
+otherwise:
 
 - existing independent reports/documentation are reviewed first;
 - at least `[TBD]` written notice is required;
@@ -216,7 +222,8 @@ requires otherwise:
   and
 - findings are used only for compliance and remediation.
 
-Perelai will contribute to lawful inspections. It may redact information to protect other customers,
+Perelai will contribute to lawful inspections and mandatory assistance without withholding them
+because the Customer is in Billing restriction. It may redact information to protect other customers,
 privilege and system security while providing sufficient evidence. This section does not restrict a
 Supervisory Authority's powers.
 
@@ -225,10 +232,11 @@ Supervisory Authority's powers.
 During the Agreement, the Customer may access/export Customer Personal Data using `[TBD: verified
 tools and formats]`. If Workspace Data Export is enabled, it is an owner-only, Company-scoped archive
 with a defined manifest, formats and exclusions; generating/downloading it does not delete source
-data. Its planned 24-hour artifact retention and short-lived download controls are not contractual
-claims until production evidence is approved. On termination or the Customer's lawful instruction,
-Perelai will, at the
-Customer's choice, delete or return Customer Personal Data and delete copies, unless applicable law
+data. Its code-defined artifact retention and short-lived download controls are not contractual claims
+until production evidence is approved. Artifact expiry does not define the Customer's return or
+retrieval window, and a limited archive manifest does not exhaust the scope of an Article 28 return
+instruction. We provide assistance for in-scope data excluded from self-service export. On termination
+or the Customer's lawful instruction, Perelai will, at the Customer's choice, delete or return Customer Personal Data and delete copies, unless applicable law
 requires storage.
 
 The operational schedule is:
@@ -240,7 +248,9 @@ Workspace artifact/grant/object cleanup: [TBD verified configuration and orphan 
 Active-system deletion: [TBD]
 Backup rotation/deletion: [TBD]
 Public link invalidation: [TBD]
-Legal-hold/tax/security exceptions: [TBD]
+Mandatory storage exceptions: [TBD actual applicable legal duty; no blanket security/tax hold
+over all processor Customer Personal Data]
+Switching/retrieval obligations: [TBD F-18 applicability and operational schedule]
 Deletion confirmation process: [TBD]
 ```
 
@@ -310,7 +320,8 @@ Form. The Customer must keep them current.
 
 Provision, support and security of the Perelai business operations Service as enabled/configured by
 the Customer, including scheduling, client management, public intake, imports, operational records,
-communications, and owner-triggered Workspace Data Export if verified live.
+communications, attachments, owner-triggered Workspace Data Export and coworker occupied-time
+sharing at the Customer's instruction, where these features are deployed.
 
 ## B. Duration
 
@@ -348,14 +359,16 @@ Remove any activity that is not production-enabled. Add any new purpose before p
 - request/order/reservation and fulfilment status;
 - staff assignment and business notes;
 - imported calendar/contact data and identifiers;
-- operational amounts, payment status/method, allocations, balances, packages/memberships/instalments;
+- operational amounts, payment status/method, allocations, balances, prepaid Packages/instalments;
 - consent/policy-version evidence collected for the Customer;
 - `[files/attachments only if verified live]`; and
 - technical/security metadata necessary to provide the processor service.
 
 ## F. Special categories/high-risk data
 
-Not intentionally supported. The Customer must not use Perelai as a medical record or upload the
+Not intentionally supported. Beauty notes, allergies/contraindications and photographs may still
+reveal health data; maintain an operational minimisation/removal process for unexpected receipt.
+The Customer must not use Perelai as a medical record or upload the
 unsupported sensitive data prohibited by the Agreement. If an approved future feature processes a
 special category, this Schedule, security measures, DPIA and legal basis must be updated first.
 

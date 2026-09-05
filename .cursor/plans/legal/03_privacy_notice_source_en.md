@@ -124,7 +124,8 @@ until the complete production flow is verified.
 - provider customer/subscription/transaction references, checkout/portal status, final currency,
   subtotal, discounts, applicable tax, total, refund/cancellation/payment-failure status and limited
   payment-method metadata returned by Paddle `[TBD: verify exact webhook/API fields]`;
-- support messages, feedback and legal-document acceptance evidence.
+- support messages, feedback, legal-document and recurring-purchase acceptance evidence, and
+  refund/cancellation/withdrawal requests and confirmations.
 
 We do not store your plaintext password. `[TBD: security review must approve any more specific hashing
 or session-storage statement.]`
@@ -136,10 +137,14 @@ or session-storage statement.]`
 - requests, orders, reservations and public form submissions;
 - notes, staff assignment and `[files, only if verified live]`;
 - prices, amounts, payment methods/statuses and allocation records;
-- packages, memberships and instalment schedules;
+- prepaid Packages and instalment schedules;
 - booking, confirmation, cancellation and no-show history;
 - versions of business and Perelai terms accepted for a public interaction;
 - records imported from CSV, vCard, calendars or other supported sources.
+
+If attachments are enabled, we process their contents, file metadata and access/storage records
+on the business's instructions. `[TBD: confirm permitted formats, scanning, object location and
+retention against deployed files/FileAsset behaviour.]`
 
 The business chooses many fields and may add free text. Although our Terms prohibit unsupported
 sensitive content, a user may enter it. Do not send medical, diagnosis, treatment, full card,
@@ -172,11 +177,18 @@ responses, we may handle:
 - event title/summary, description, status and timestamps;
 - start/end, recurrence and timezone information;
 - attendees/contact information and location where included in an event;
-- sync tokens, import mappings, last-sync status/errors;
+- sync tokens, import mappings, run/cursor state and safe sync outcomes;
+- limited deletion/tombstone identifiers preventing a deleted imported event from reappearing;
 - OAuth access/refresh tokens and token expiry/scope information.
 
 The Service uses this data to connect, preview/import and synchronise calendar activity as configured
-by the user. `[TBD: verify exact fields persisted, initial sync window, auto-sync frequency, token
+by the user. Our use and transfer of information received from Google APIs must comply with the
+[Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy),
+including its Limited Use requirements. We limit Google API data to permitted user-facing functions
+and permitted security/legal uses; it is not used for advertising, credit assessment or shared-model
+training. Human access and onward transfers are restricted by that policy.
+`[TBD: verify actual compliance and approve this affirmative disclosure before publication; source
+restrictions also apply to derived data and any business transfer.]` `[TBD: verify exact fields persisted, initial sync window, auto-sync frequency, token
 protection and disconnect/deletion behaviour.]`
 
 ### Imports
@@ -186,13 +198,14 @@ content, mapping choices, errors, job status and import results. `[TBD: verify w
 ignored, whether temporary files are persisted, and exact deletion periods.]` Google Contacts OAuth
 must not be claimed unless it is actually implemented and enabled.
 
-The import-modernisation release has unresolved acceptance findings as of 2026-08-23. Do not add
-promises about preview scope, destructive cleanup, recovery journals, issue-download completeness or
-retention until IM4-C2 and the IM2/IM4 acceptance review prove those behaviours.
+The 2026-09-05 inventory identifies implemented import pipelines. Historical 2026-08-23 acceptance
+findings must be reconciled with later evidence before approving preview, cleanup, recovery,
+issue-download or retention claims; their old status is not proof of current deployment.
 
 ### Workspace Data Export and privacy requests
 
-**This feature is planned, not live. Publish this subsection only after EX1 release evidence.** Where
+**Implemented in code; production availability and C-10 packaging remain unverified. Publish the
+verified scope only for enabled processing.** Where
 enabled, an authorised Company owner may request a Workspace Data Export containing the defined
 operational history for that Company. Planned contents include a manifest and structured JSONL data
 with CSV convenience views for supported Company settings, workspace members/staff, clients/notes,
@@ -219,6 +232,16 @@ individual's access or portability request. A **Privacy Access Export** is a sep
 person-scoped process that may require additional contextual information, legal scope/exemptions and
 protection of other people's rights. Contact {{PRIVACY_EMAIL}} or the relevant business as described
 in §13 rather than treating a Company archive as closure of a privacy request.
+
+### Coworker availability sharing
+
+When a business enables a coworker link for shared space, linked businesses receive occupied time
+intervals and the business name/colour needed to coordinate availability. They do not receive
+foreign client names, service details, staff identities, amounts, notes or identifiers that resolve
+to the other workspace's transaction. The link does not grant workspace membership. For a solo
+professional, business identity and occupied time can still be personal data; these blocks are not
+described as anonymous. The business must inform affected people and authorise this sharing.
+`[TBD: verify recipients, link/exit history and retention against ADR-0010 and deployment.]`
 
 ### Operational and financial information
 
@@ -247,8 +270,10 @@ We receive personal data:
 - from authorities or advisers where needed for law, security or claims.
 
 When a business provides your data rather than collecting it from you directly, that business is
-normally responsible for telling you about its processing. Perelai also provides a short notice on
-public collection surfaces.
+normally responsible for telling you about its processing. Perelai provides a short notice on public
+collection surfaces and its own notice for any independent-controller processing of indirectly
+obtained data. `[TBD: Article 14 delivery, source/category information and timing/exceptions for
+invites, imported contacts and first communication; a website link alone is not evidence of delivery.]`
 
 ## 6. Why we process data and our legal bases as controller
 
@@ -257,21 +282,25 @@ Customer Personal Data.
 
 | Purpose | Typical data | EEA/UK legal basis, subject to review |
 |---|---|---|
-| provide and administer an account/Service | account, workspace, settings, essential communications | perform contract; steps requested before contract |
+| provide and administer an account/Service for an individual contracting party | account, workspace, settings, essential communications | contract/steps requested by that person, only where objectively necessary |
+| administer business representatives and staff access | representative/staff profile, roles, invitations | documented legitimate interests in providing the business service; a business contract is not automatically a contract with every staff data subject |
 | authenticate and secure the Service | credentials, tokens, device/security events, logs | legitimate interests in security; contract; legal obligation where applicable |
 | provide support and resolve incidents | account, support content, diagnostic data | contract; legitimate interests |
 | operate public technical surfaces securely | request/network data, abuse signals | legitimate interests; processor instruction for Customer Data |
 | deliberate privacy-hardened website/product analytics | defined interaction/technical data | `[TBD by jurisdiction/tool: consent or legitimate interests after balancing/ePrivacy review]` |
-| remember requested language/theme/region | preference/browser storage | user request; consent where required by national implementation |
+| remember requested language/theme/region | preference/browser storage | `[TBD: select GDPR consent or another valid Art. 6 basis as applicable; separately assess device-storage exemption/consent]` |
 | referral attribution and beta feedback | referral/campaign, feedback | consent or legitimate interests depending on collection/use |
 | Perelai marketing | contact and preference data | consent or applicable electronic-marketing permission; legitimate interests only where lawful |
 | administer trial, payer relationship, subscriptions and Service access if launched | account, payer, Company projection, Offer and provider status | contract; legitimate interests in reliable entitlement/security |
-| administer Paddle buyer Transactions and accounting/tax records if launched | buyer, subscription, transaction, tax, currency, refund/payout records | contract; legal obligation; legitimate interests in reconciliation/claims |
+| administer Paddle purchase records and refund requests if launched | buyer, subscription, transaction, tax, currency, refund records | contract where the data subject is party; legitimate interests in reconciliation/support/claims otherwise; identified legal duties where applicable |
+| retain operator accounting/payout evidence | minimum payment/tax records | `[TBD: identify applicable duty and territorial basis; GDPR Art. 6(1)(c) requires qualifying Union/Member State law under Art. 6(3), not simply any foreign tax obligation]` |
 | secure and audit Workspace Data Export if launched | actor/Company/action, job/grant/object status, closed codes, timestamps | processor instruction for archive content; legitimate interests/security and legal obligation for limited controller metadata |
 | enforce Terms and legal claims | account, acceptance and usage records | legitimate interests; legal obligation |
-| comply with law and valid authority requests | relevant records | legal obligation; public interest where applicable |
+| comply with law and valid authority requests | relevant records | identified applicable legal obligation or other documented lawful basis; no generic public-interest basis for this private SaaS |
 
-Where we rely on legitimate interests, we assess necessity, impact and reasonable expectations. You
+Each purpose must identify the actual applicable basis, required/optional data and consequences of
+not providing it; alternative bases in this draft are not a production menu. Where we rely on
+legitimate interests, we assess necessity, impact and reasonable expectations. You
 may object as described below. Where we rely on consent, you may withdraw it without affecting prior
 lawful processing. Refusing optional processing does not block an unrelated core service.
 
@@ -283,9 +312,10 @@ Customer's documented instructions and law. The Customer is responsible for its 
 notices. The DPA describes instructions, confidentiality, security, subprocessors, assistance,
 transfers, deletion/return and audits.
 
-We may process limited Customer Personal Data as an independent controller when necessary to detect
-abuse, comply with binding law or establish legal claims. We will limit and document such processing
-and update this notice if it becomes material.
+Security, support and legal compliance do not automatically change our processor role. Where we
+act on the business's instructions, the DPA still applies. Any separate processing as controller
+requires its own documented purpose, lawful basis, minimisation, retention and notice before it
+begins; it cannot be created by a broad contractual label.
 
 ## 8. Communications
 
@@ -332,8 +362,8 @@ We disclose personal data only as needed for the purposes above to:
   to protect rights, security and users.
 
 We do not sell Customer Personal Data. We do not share data with unspecified `trusted partners` for
-their unrelated marketing. The current vendor, entity, purpose and processing-location list is at
-[Subprocessors](/legal/subprocessors). `[TBD: list must be completed before release.]`
+their unrelated marketing. Our [provider list](/legal/subprocessors) distinguishes Customer Data subprocessors, processors
+of Perelai-controller data (such as landing analytics), and independent controllers. `[TBD: list must be completed before release.]`
 
 ## 11. International transfers
 
@@ -356,7 +386,8 @@ rules, not an indefinite licence.
 | Category | Active retention | Deletion/backup rule |
 |---|---|---|
 | account/profile | `[TBD]` | `[TBD]` |
-| legal acceptance evidence | `[TBD: limitation/legal period]` | restricted archive `[TBD]` |
+| legal/purchase acceptance and refund/withdrawal evidence | `[TBD: category-specific limitation/legal period]` | restricted archive `[TBD]` |
+| coworker links/availability and attachments | `[TBD: separate category schedules]` | `[TBD]` |
 | workspace and End Client records | Customer instruction/contract `[TBD]` | `[TBD active + backup]` |
 | imports and previews | `[TBD hours/days]` | source deletion `[TBD]` |
 | Workspace Data Export artifact | planned 24 hours from READY `[verify]` | purge private object; verify storage versions/backups/orphan sweeps |
@@ -364,6 +395,7 @@ rules, not an indefinite licence.
 | export job and PII-minimised audit metadata | planned default 12 months; legal approval required | deletion/legal hold `[TBD]` |
 | failed/staging export objects | planned immediate cleanup `[verify]` | worker retry/orphan cleanup `[verify]` |
 | Google tokens | until disconnect/expiry `[verify]` | revoke/delete `[verify]` |
+| Calendar sync runs, cursors and deletion tombstones | `[TBD separate operational/anti-reimport purpose and periods]` | `[TBD minimal retention, disconnect/erasure and backup interaction]` |
 | security/access logs | `[TBD]` | delete/aggregate `[TBD]` |
 | support messages | `[TBD]` | `[TBD]` |
 | notifications and system task records | category-specific env/jobs `[verify]` | `[TBD backups]` |
@@ -420,7 +452,7 @@ approved security schedule will be described in the production notice.
 
 No internet service is completely secure. Do not publish claims of `military-grade`, `bank-level`,
 zero-risk security, encrypted-at-rest tokens or certification without current scope-specific evidence.
-Please report suspected security issues to `[TBD: approved security contact/process]` without including
+Please report suspected security issues to {{SECURITY_EMAIL}} without including
 unnecessary personal data.
 
 ## 15. Personal data breaches
@@ -437,6 +469,10 @@ Perelai is not designed as a medical/clinical records or full payment-card stora
 and users must not intentionally upload diagnoses, treatment records, genetic/biometric data,
 health-insurance details, full card numbers/authentication data, passwords, government identity
 documents or other unsupported high-risk data.
+
+Allergy, contraindication, scalp/skin notes and some client photographs can reveal health
+information even in a beauty workflow. Minimise such information and use a separately appropriate
+system for clinical records.
 
 Because free-text and upload fields may receive unexpected content, we cannot state that we `never
 collect` sensitive data. We may restrict or delete unsupported content consistent with the Terms and
@@ -458,8 +494,11 @@ believe a child provided data contrary to these rules, contact the relevant busi
 
 ## 18. Automated processing and AI
 
-Perelai does not currently make decisions that produce legal or similarly significant effects about a
-person solely through automated processing. `[Owner must reconfirm at each release.]`
+`[TBD: approve the current automated-processing assessment, including rules-based Billing
+restriction, trial anti-repeat, fraud and eligibility decisions; absence of AI does not exclude
+GDPR Article 22. Record whether any decision about a natural person is solely automated and has
+legal or similarly significant effects, its basis, explanation and human-review safeguards where
+required. Publish the resulting factual description, not an unverified blanket denial.]`
 
 Before production AI is enabled, this notice, Terms and Subprocessor List must identify the function,
 provider, input data, purpose, legal basis, retention, model-training policy, human review,
@@ -496,7 +535,7 @@ sensitive information.
 5. Verify public booking first-communication/indirect-collection notice timing.
 6. Review high-risk/regulated verticals and any files/AI feature separately.
 7. Do not publish regional addenda merely for marketing; add only after applicability review.
-8. Paddle/Billing and Workspace Data Export sections are architecture-informed drafts, not live-fact
-   claims. Reconcile exact fields, entities, locations, roles, retention and UI before enabling them.
+8. Paddle/Billing is architecture-informed; Export/import/files have current code evidence but
+   deployment is unverified. These sections are not approved live-fact claims. Reconcile exact fields, entities, locations, roles, retention and UI before enabling them.
 9. Keep Workspace Data Export distinct from a Privacy Access Export in product copy, support runbooks,
    request metrics and legal response evidence.

@@ -32,8 +32,9 @@ business named on the page (the **Business**). Your agreement for that underlyin
 Business. The Business may present separate booking, service, cancellation, refund and privacy terms,
 which also apply to your relationship with it.
 
-By using the Booking Service or submitting information after these Booking Terms are presented, you
-agree to them. If you do not agree, contact the Business by another available method.
+When the interface requests contractual agreement, it presents these Booking Terms before your
+submission and records your affirmative agreement. Merely viewing a status page is not recorded as
+contract acceptance. If you do not agree, contact the Business by another available method.
 
 ## 2. Eligibility and authority
 
@@ -138,8 +139,10 @@ A Perelai page may show an amount or payment status recorded by the Business. A 
 Receipt** or payment confirmation is an operational record, not a bank statement, fiscal receipt or tax
 invoice. Ask the Business for legally required payment/tax documentation.
 
-Packages, memberships or instalment schedules displayed through Perelai are arrangements with the
-Business. Perelai does not provide credit or assess your creditworthiness.
+Prepaid Packages and instalment schedules displayed through Perelai are arrangements with the
+Business. Cancelling a Package stops future redemption; it does not by itself issue a refund or
+reverse past payments. A visit marked paid may have been settled with Package credits rather than
+a new money payment. Perelai does not provide credit or assess your creditworthiness.
 
 ## 8. Privacy
 
@@ -251,6 +254,10 @@ If Business terms/cancellation apply, use an unchecked required checkbox:
 
 > I agree to the booking and cancellation terms of `[Business Name]`.
 
+Present Perelai Booking Terms as a separate linked contractual statement at submit and record
+affirmative acceptance when required by the approved contract-formation model. Keep it distinct from
+the Business policy agreement; a Privacy acknowledgement does not accept either contract.
+
 Use a separate acknowledgement line, not a privacy checkbox:
 
 > By submitting, you acknowledge the Perelai Privacy Notice and `[Business Name]` Privacy Notice.
@@ -281,8 +288,11 @@ never substitute Perelai's identity or policies as though Perelai were the Busin
 
 1. Review each booking mode and service vertical under launch-country consumer/e-commerce law.
 2. Determine when a contract forms: submission, business confirmation, email confirmation or payment.
-3. Determine required pre-contract information and withdrawal/cancellation exceptions.
-4. Replace payment/no-card statement before any checkout architecture launches.
+3. Determine required pre-contract information and withdrawal/cancellation exceptions, including
+   the applicable online withdrawal function under document 12 §4. Resolve missing legally required
+   disclosures by blocking the affected new-contract action; a warning cannot replace required terms.
+4. Replace the End Client payment statement before any End Client checkout launches; SaaS billing
+   through Paddle remains a separate product and refund policy.
 5. Draft appropriate End Client liability/dispute terms; do not copy B2B clauses.
 6. Confirm age/guardian and regulated-service handling.
 7. Ensure the business can present its own identity/policies and version evidence.

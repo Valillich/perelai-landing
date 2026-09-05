@@ -143,8 +143,9 @@ automatically outside privacy law.
 
 ## 8. Third parties and transfers
 
-The verified provider/entity, processing location and transfer mechanism for hosting, analytics,
-notifications and other technologies appear in [Subprocessors](/legal/subprocessors). Google or other
+The verified provider/entity, location and transfer information appears in the
+[provider list](/legal/subprocessors), which distinguishes Customer Data subprocessors,
+Perelai-controller processors and independent services. Google or other
 independent services may set/use their own technologies when you intentionally use their flow; consult
 their notices.
 
@@ -157,7 +158,10 @@ on the landing. When a buyer intentionally follows that handoff, Paddle may use 
 fraud-prevention, preference or other technologies under its Privacy Notice and Buyer Terms. Those
 Paddle-hosted technologies are not Perelai first-party cookies and must not be silently copied into
 this table. Before launch, audit the exact app-to-Paddle and Paddle-to-app paths, referrer policy,
-return state and whether any Paddle resource loads on a Perelai origin.
+return state and whether any Paddle resource loads on a Perelai origin. An app-side Paddle.js
+overlay/iframe is also a third-party resource load even when the payment form is provider-hosted.
+Do not claim that a Perelai banner controls Paddle's independent site; verify the actual pre-load
+choices, necessary payment resources and third-party notices for the implemented integration.
 
 ## 9. Changes
 
@@ -185,6 +189,7 @@ Address: {{BUSINESS_ADDRESS}}
    insufficient.
 4. Threat-model `accessToken` localStorage and token-like public session records before approval.
 5. Decide legal basis/consent by launch country for `perelai_attr` and PostHog events.
-6. If optional technology is introduced, test that reject-before-load and withdrawal actually stop it.
+6. If optional technology is introduced, test that reject-before-load and withdrawal actually stop it;
+   audit existing attribution and memory-only events too. Record necessity/exemptions by jurisdiction.
 7. Update this inventory and Privacy Notice before deploying any pixel, replay, support widget, error
    SDK or A/B testing tool.

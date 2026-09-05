@@ -24,16 +24,18 @@ These Terms of Service (the **Terms**) are an agreement between:
   {{COUNTRY_OF_REGISTRATION}} under registration number {{REGISTRATION_NUMBER}}
   [and tax number {{TAX_NUMBER}}, if counsel confirms publication], with a business address at
   {{BUSINESS_ADDRESS}} (**Perelai**, **we**, **us**, or **our**); and
-- the person or organisation that creates, joins or uses a Perelai business workspace
-  (**Customer**, **you**, or **your**).
+- the business identified when an authorised representative accepts these Terms (**Customer**).
+  A sole proprietor may be that Customer personally. **Authorised Users** are people permitted to
+  use its workspace. References to **you** apply to the Customer and, for individual-use duties,
+  the Authorised User; an invited staff member does not become the contracting business by joining.
 
 Perelai is our trading name. These Terms apply to the Perelai application, business account and the
 related services we identify as covered by them (together, the **Service**).
 
-By creating an owner account, accepting an invitation as an authorised user, using the Service after
-being presented with these Terms, or otherwise accepting them through an identified electronic
-process, you agree to these Terms. If you accept for an organisation, you confirm that you have
-authority to bind it. If you do not agree, do not use the Service.
+You accept these Terms through the affirmative electronic acceptance process presented at signup
+or another identified contract-formation step. If you accept for a business, you confirm your
+authority to bind it and identify that business. Staff acceptance covers individual-use obligations;
+it does not by itself bind the business to a DPA or authorise a subscription purchase. If you do not agree, do not use the Service.
 
 The [Data Processing Addendum](/legal/dpa) (**DPA**) forms part of these Terms whenever we process
 Customer Personal Data on the Customer's behalf. The [Privacy Notice](/legal/privacy) explains
@@ -85,7 +87,7 @@ may fund separate subscriptions for multiple Companies; each Company keeps its o
 Depending on the production configuration, subscription and workspace settings, the Service may
 include account and role management, calendar and scheduling, Google Calendar integration, client
 records, operational Inbox items, imports, public appointment booking or other intake modes,
-operational payment records, reports, packages, memberships, instalment tracking, transactional
+operational payment records, reports, prepaid Packages, instalment tracking, transactional
 communications, notifications, public status or receipt pages and, when released for that Company,
 Workspace Data Export.
 
@@ -96,8 +98,8 @@ agreement says otherwise:
 - we do not promise uninterrupted or error-free availability;
 - maintenance, security work and third-party failures may cause interruptions;
 - beta features have no guaranteed service level; and
-- a feature that is disabled for your account or jurisdiction is not part of the Service promised to
-  you merely because it appears in documentation, marketing material or another environment.
+- the purchase review must identify the features available for your account and jurisdiction. A
+  feature flag or beta label does not remove an express paid promise or mandatory remedy.
 
 We will use reasonable care in operating the Service and will avoid knowingly destroying Customer
 Data through a material feature change without appropriate notice or safeguards, subject to emergency
@@ -156,7 +158,7 @@ Unless a separate written agreement expressly says otherwise:
 End Clients use public pages subject to the [Public Booking Terms](/legal/booking-terms). You must not
 present Perelai as the seller or provider of your underlying offering.
 
-## 8. Payments, receipts, memberships and instalments
+## 8. Payments, receipts, Packages and instalments
 
 At the product stage covered by this draft, Perelai may store operational payment statuses, amounts,
 methods, balances and allocations, but does not receive or hold End Client funds and does not store
@@ -166,9 +168,11 @@ launching any future End Client payment-processing integration.**
 
 Perelai is not a bank, payment institution, money transmitter, accountant or tax adviser. A public
 payment confirmation or **Public Receipt** generated through the Service is not a fiscal receipt or tax
-invoice. You remain responsible for reconciliation and legally required documents.
+invoice. You remain responsible for reconciliation and legally required documents. A visit marked paid
+may be settled through prepaid Package credits without new money received. Cancelling a Package
+stops future redemption; it does not itself refund money or reverse its sale/payment history.
 
-Packages, memberships and instalment schedules are operational records of the Customer's commercial
+Prepaid Packages and instalment schedules are operational records of the Customer's commercial
 arrangements. Perelai does not provide credit, assess creditworthiness or become a lender. Interest,
 lending and buy-now-pay-later functions are not supported unless covered by a separate approved
 product and agreement.
@@ -180,15 +184,17 @@ for the Customer, including End Client data. As between the parties, the Custome
 in Customer Data.
 
 You authorise us to host, copy, transmit, display, transform and otherwise process Customer Data only
-as reasonably necessary to provide, secure, support and improve the Service in accordance with these
-Terms, the DPA and your documented instructions. This limited licence ends when the relevant data is
+as necessary to provide, secure and support the Service under the DPA and your documented
+instructions. This licence does not authorise independent reuse of identifiable client records
+for general product analytics, advertising or model development. This limited licence ends when the relevant data is
 deleted, except for backups, legal retention and other cases expressly described in the DPA.
 
 We do not sell Customer Data. We will not use identifiable Customer Data to train a general-purpose or
 shared machine-learning model unless a separate, explicit agreement approved by the Customer and
 applicable notices/law permit it. We may use genuinely aggregated or de-identified information for
-service operation and analysis only where it cannot reasonably be used to identify a person or
-Customer and we do not attempt to re-identify it.
+service operation and analysis only where lawful, consistent with applicable source/provider
+restrictions, and it cannot reasonably identify a person or Customer. Creating such information
+from personal data must itself have a lawful basis/instruction. We do not attempt re-identification.
 
 For Customer Personal Data, the Customer generally acts as controller and Perelai as processor. The
 DPA governs that processing. Each party remains responsible for processing for which it independently
@@ -213,6 +219,15 @@ Google sign-in and Google Calendar are separate functions. If you connect Google
 - synchronisation may be delayed, incomplete or affected by Google limits/outages; and
 - disconnecting an integration does not necessarily delete business records already created from
   imported events. Use the Service's deletion/export controls or contact support as documented.
+
+Google API data remains subject to the Limited Use restrictions disclosed in the Privacy Notice;
+a general data licence, feedback clause or business-transfer clause does not override those rules.
+
+If you enable a coworker link, linked workspaces may see occupied time intervals and your business
+name/colour to coordinate shared availability. This does not grant access to your clients, service
+details, staff identities, notes or financial records. You are responsible for authorising the link
+and informing affected people as required. Availability information may still identify a solo
+professional; it is not described as anonymous.
 
 Other connected services may have their own terms, fees, limits and availability. We are not
 responsible for a third party's service, but this does not limit our obligations for our own selection
@@ -310,8 +325,11 @@ pending, the app must describe access as pending and provide recovery/support—
 The exact billing interval, renewal date, automatic-renewal disclosure, price-change notice,
 cancellation effective date, failed-payment retries, grace/restricted mode, refund rules and
 post-cancellation access are `[TBD: approved production policy]`. They must be stated in the
-[Billing, Cancellation and Refund Policy](/legal/billing), Paddle Checkout and the Buyer Portal without
-contradiction. Mandatory buyer rights continue to apply where they cannot lawfully be excluded.
+[Refund & Cancellation Policy](/legal/billing), Paddle Checkout and the Buyer Portal without
+contradiction. Mandatory buyer rights continue to apply where they cannot lawfully be excluded. Purchase-time
+assent to recurring billing and this Policy is separate from signup acceptance. Refunds of Paddle
+purchases are processed through Paddle; access, cancellation of future charges and data deletion
+are distinct consequences, as explained in the Policy.
 
 ## 14. Intellectual property and feedback
 
@@ -366,7 +384,10 @@ enforcement.
 
 ## 17. Termination, export and deletion
 
-You may stop using the Service and request workspace closure through `[TBD: verified product path]`.
+You may stop using the Service and request workspace closure through `[TBD: verified product path
+or support-assisted process; do not invent self-service hard deletion]`. Closure must address any
+active subscription explicitly and provide a way to stop future charges and obtain confirmation.
+You can also contact support if account access is unavailable.
 Either party may terminate for material breach not cured within `[TBD: counsel-approved period]`, or
 as an approved Order Form allows. We may terminate beta access on `[TBD]` notice, subject to mandatory
 law and a reasonable opportunity to export data where feasible.
@@ -392,6 +413,11 @@ post-termination availability]`. After termination:
   disaster recovery;
 - data required for legal, tax, security or claims purposes may be retained with restricted use; and
 - public links are disabled according to `[TBD: verified behaviour]`.
+
+`[TBD F-18: determine applicable SaaS switching duties and insert the approved procedure,
+exportable-data scope, assistance, notice/transition/retrieval periods and lawful charges.
+The 24-hour archive life is not the post-termination retrieval window. Neither a Plan limit nor
+subscription cancellation removes mandatory return/deletion/switching rights.]`
 
 Sections intended by their nature to survive do so, including accrued fees, confidentiality,
 intellectual property, liability, dispute and lawful retention provisions.
@@ -495,8 +521,8 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
 3. Provider-neutral SaaS Billing architecture and Paddle as first production Merchant of Record are
    plan-frozen, not implemented. Exact catalog, trial conversion, renewal, cancellation, restriction
    and refunds remain approval-gated.
-4. Workspace Data Export is planned, not live; the 24-hour artifact period and security claims require
-   release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
+4. Workspace Data Export is implemented in the current app inventory; production availability,
+   C-10 packaging and the 24-hour artifact/security claims still require release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
    or forum is approved.
 5. Public booking creates a business/End Client relationship, not a Perelai service contract.
 6. Files, AI and deployment-specific features must be reconciled with the release fact table.

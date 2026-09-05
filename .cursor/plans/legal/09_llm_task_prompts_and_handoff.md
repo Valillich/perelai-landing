@@ -11,8 +11,10 @@ This task implements an approved plan; it does not author or approve law.
 Read every referenced file before editing. Inspect current code rather than assuming plan line numbers
 are current. Preserve unrelated user changes. Do not replace [TBD] or {{...}} with guesses. Do not
 change any draft status to approved. Do not publish placeholder or draft legal content in production.
-Add tests for every security/acceptance rule you touch. Stop and report if a required human-owned fact
-or approval manifest is missing.
+Add appropriate tests for the security/acceptance behaviour you change. Complete independent
+preview/schema work when approvals are absent, and report the specific dependent production step
+that remains blocked. Never infer approval from a completed code task. Read document 12 and the
+current C-01–16 inventory; BILL0B currently authorises disabled BILL1A only.
 ```
 
 ## Task A — legal content loader and env validation (landing only)
@@ -35,7 +37,9 @@ must be all-or-nothing. Interpolate escaped text, never raw HTML. Do not populat
 Implement the seven canonical legal pages and navigation using 00_README_execution_plan.md §§1, 4, 6,
 LGL-1 and §10, and the source drafts 02-07 plus 10. Use the existing localized App Router architecture.
 Create canonical /legal/* routes for all published locales; add /terms and /privacy locale-aware
-redirect aliases; clean canonical metadata, sitemap, print styles, version/date display and archive
+redirect aliases plus /refund-policy and /legal/refund-policy -> /legal/billing; one Billing
+document/version, prominent Refund Policy navigation before Paddle review; clean canonical metadata,
+sitemap, print styles, version/date display and archive
 link. Draft preview is noindex with a visible banner; approved production cannot render unresolved
 content. Do not machine-translate English. Replace footer placeholders. Add route/metadata/build-gate
 tests. Do not touch beauty-finance.
@@ -63,7 +67,8 @@ Create an append-only LegalAcceptance model/migration/service. API is authoritat
 versions and server timestamp; reject missing, stale or forged versions. Gate email and Google signup
 before user/workspace creation; bind OAuth acceptance to short-lived server state. Owner and coworker-
 owner accept Terms+DPA and acknowledge Privacy. Staff invite accepts Terms and acknowledges Privacy,
-not DPA. Store acceptance-copy version, locale and source. Do not store IP/user-agent until separately
+not DPA. Bind the represented-business DPA acceptance to the Company when provisioned without
+rewriting signup evidence. Store acceptance-copy version, locale and source. Do not store IP/user-agent until separately
 approved. Add migration, unit, integration and UI accessibility tests. Do not add initial acceptance to
 OnboardingPage.
 ```
@@ -94,6 +99,17 @@ withdraw, necessary-only fallback, and verified Cookie Policy inventory. A banne
 loading is a test failure.
 ```
 
+## Task G0 — early Paddle review packet (preparation only)
+
+```text
+Follow LGL-0A and document 12 §3 alongside BILL1–BILL2. Prepare truthful, approved Terms/Privacy/Refund
+pages, explicit Refund Policy navigation, verified identity/support and relevant domain list. Prepare
+an owner-approved pricing screenshot for private provider review where the pricing page is not ready.
+No production drafts, guessed prices, KYC documents in Git or activation of live checkout. Record
+provider review status separately from C-11/12/13 approvals. Submitting an application or accepting a
+provider contract requires a separately authorised owner/operator action, not this preparation task.
+```
+
 ## Task G — SaaS Billing/Paddle legal integration (landing + app, after BILL gates)
 
 ```text
@@ -102,29 +118,34 @@ catalog and the relevant BILL1-BILL6 acceptance evidence are approved. Then impl
 00_README_execution_plan.md, 01_legal_facts_env_contract.md, Terms §13,
 10_billing_cancellation_refund_source_en.md and 08_ui_copy_and_surface_matrix.md §§10 and 12.
 
-Render /legal/billing; add approved Terms/Privacy/Billing/Paddle Buyer Terms links to Pricing,
+Render /legal/billing as Refund & Cancellation Policy, with refund aliases; add approved
+Terms/Privacy/Refund Policy/Paddle Buyer Terms links to Pricing,
 Checkout review/return, Settings/Billing and restriction/recovery surfaces. Preserve only public
 PRIMARY OfferCode through landing registration; never expose Paddle IDs or start checkout on landing.
 Keep Plan, Offer, BillingCustomer payer authority, Company subscription/access and End Client finance
 domains distinct. Browser success stays pending until the verified webhook projection activates
 access. Exact prices, renewal, trial conversion, cancellation, refunds, grace and restriction copy
 must come from immutable approvals, not planning hypotheses. Audit Paddle fields/roles/cookies,
-update Privacy/Subprocessor/Cookie evidence and add route/state/accessibility/security tests.
+update Privacy/Subprocessor/Cookie evidence and add route/state/accessibility/security tests. Implement
+README §7.6 purchase-time evidence/durable confirmation and B-13/B-14; test lost-login cancellation,
+withdrawal, annual/renewal, full/partial/tax refunds and separate subscription consequences. R-01 is
+a proposal, not approval. Apply jurisdiction decisions F-17/F-18; never promise payment from a redirect.
 ```
 
 ## Task H — Workspace Data Export legal integration (app + landing content, after IM/EX gates)
 
 ```text
-Do not implement IM4, IM5, EX1 or IM6 from this prompt and do not mark them complete. Verify IM4-C2
-and IM2/IM4 acceptance, IM5 shared shell and EX1 evidence first. Finish this legal integration before
-the IM6 combined-release gate. Then implement LGL-7 using
+Do not rebuild IM4/IM5/EX1/IM6 or mark them complete from this prompt. The 2026-09-05 inventory
+identifies implemented Export/import/files. Reconcile current acceptance evidence with historical
+IM4-C2/IM5/EX1/IM6 criteria and document any still-open gaps before new release claims. Then implement LGL-7 using
 11_workspace_data_export_legal_matrix.md plus the Terms, Privacy, DPA, Subprocessor and UI drafts.
 
 Use `Workspace Data Export` and `Download a copy of your workspace data`; never `GDPR export`, privacy
 access export, backup or reverse import. Keep Export out of onboarding and owner-only at create and
 download. Reconcile the actual archive manifest/formats/exclusions, 24h artifact, 10m single-use
 grants, <=5m signed URL, storage/log controls, notification, audit retention and Company deletion.
-Maintain a separate privacy-request route/process; a Company archive does not close an access or
+Distinguish single-use action grants from potentially reusable short-lived object URLs and artifact
+expiry from F-18 retrieval/switching duties. Maintain a separate privacy-request route/process; a Company archive does not close an access or
 portability request. Reconcile Billing restricted-mode behaviour. Add terminology, RBAC, isolation,
 grant/replay, lifecycle, purge/recovery, notification/logging and accessibility tests.
 ```
@@ -151,7 +172,7 @@ Before F implementation: privacy/counsel classifies each technology by launch co
 Before G: BILL0 commercial/legal gates, catalog, Paddle role/configuration and Billing implementation
 evidence are approved.
 
-Before H: IM4-C2/IM acceptance, IM5 and EX1 evidence pass; privacy/counsel approve export metadata
+Before H: reconcile current IM/EX implementation and acceptance evidence; privacy/counsel approve export metadata
 retention and request-boundary copy.
 
 Before I production: IM6 combined-release evidence passes and counsel/owner supplies all immutable
