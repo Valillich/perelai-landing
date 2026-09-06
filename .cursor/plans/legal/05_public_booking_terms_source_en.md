@@ -73,7 +73,16 @@ and applicable law. The role split does not excuse Perelai from its own legal ob
 
 ## 4. Booking modes and confirmation
 
-The public page must clearly identify the relevant mode and status. In general:
+The public page must clearly identify the relevant mode and status.
+
+Only people the Business makes available to provide the relevant service should be offered as
+performers. Administrative access alone does not make someone bookable. A personnel or subscription
+change is not itself a notice that an existing appointment was cancelled or reassigned; the Business
+must handle affected bookings and communicate changes under its applicable policies.
+`[Internal gate: public performer eligibility and future-work disposition must match TEAM0/TEAM3;
+never disclose internal roles, team capacity or billing status on public booking pages.]`
+
+In general:
 
 - an **Appointment** may be immediately booked or may await confirmation as shown;
 - a **Request** is not a confirmed appointment merely because it was sent;

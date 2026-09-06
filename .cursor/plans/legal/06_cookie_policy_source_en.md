@@ -83,10 +83,16 @@ Legal handoff visits containing `from` must not overwrite first-touch attributio
 parameters must be removed from analytics properties, and full/referrer URLs must not expose app or
 public-flow tokens.
 
-Landing may preserve only a generated public PRIMARY `OfferCode` with registration attribution. It
+Landing may preserve only a generated standard `OfferCode` in the current public release allowlist
+with registration attribution: SOLO_MONTHLY or STUDIO_MONTHLY, with STUDIO subject to TEAM-RELEASE. It
 must not load a Paddle SDK, open checkout, or store Paddle product/price/customer/subscription IDs or
 checkout URLs. `offer` is untrusted intent and must not be inferred from niche, locale, Company
 currency, IP or browser region.
+
+Discard retired FOUNDING_*/ADDITIONAL_*/annual intent codes without aliasing them to new standard
+offers or changing stored historical acquisition evidence. Continue ordinary signup with fresh
+selection. STUDIO+ contact is not Offer intent. Audit any enquiry form storage against its actual
+purpose and retention; the contact block does not authorise a new tracker or marketing enrolment.
 
 ## 5. App and public-page inventory
 
@@ -96,7 +102,7 @@ remains clear. At minimum, disclose these verified high-impact groups:
 
 | Technology/group | Observed examples | Purpose | Duration | Category/review |
 |---|---|---|---|---|
-| authentication token storage | `accessToken` in localStorage | keep an authenticated app session | `[TBD token expiry, rotation and logout clearing]` | necessary/security; security architecture review required |
+| authentication token storage | `accessToken` in localStorage | keep an authenticated app session | `[TBD expiry, rotation, logout and membership/session revocation under TEAM2]` | necessary/security; security architecture review required |
 | language/theme/privacy preferences | i18n localStorage, `bf-theme`, privacy-mode settings | remember requested app settings | until changed/removed `[verify]` | functional |
 | last-login email | first-party localStorage | prefill returning-user email | until replaced/removed | functional; minimise and disclose |
 | onboarding draft | company-scoped sessionStorage | preserve incomplete onboarding in the tab | tab/session or explicit clear `[verify]` | necessary/functional |
@@ -104,6 +110,7 @@ remains clear. At minimum, disclose these verified high-impact groups:
 | public return/client-hub session state | sessionStorage records, some token-like | navigate authorised public/client flows | `[TBD explicit expiry/clear]` | necessary/security; never send cross-origin |
 | UI education/dismissal state | first-time, tip, install, beta notice and count keys | prevent repetitive guidance and preserve UI state | until removed/version change `[verify]` | functional |
 | PWA/service-worker/cache | `[TBD runtime names]` | installability, code/assets, performance/offline behaviour | cache policy `[TBD]` | necessary/functional |
+| Company-scoped cached data/access state | `[TBD runtime inventory]` | render authorised workspace data | `[TBD invalidate on permission/session change, Company switch and logout]` | TEAM2/3 isolation evidence; do not cache protected responses as public assets |
 | Web Push subscription | browser Push API + backend/provider path `[TBD]` | send requested notifications | until revoked/expired; revoked records env says 30 days `[verify]` | separate browser permission; controller/processor purpose review |
 
 Do not publish a 50-row list of obscure UI keys if a clear category gives users equivalent information,

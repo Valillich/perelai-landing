@@ -1,9 +1,10 @@
 # Perelai Refund & Cancellation Policy (including billing) — English source draft
 
-> **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Reviewed 2026-09-05 against ADR-0013 and
-> monetization inventory C-01–16. Public wording below is a proposed contract, not approved terms.
-> Resolve placeholders and approve the refund proposal, catalog, launch countries, exact provider
-> flow and immutable rendered version before publication. All Offers currently have checkout off.
+> **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Updated 2026-09-06 against ADR-0013,
+> `launch-20260906`, inventory C-01–19 and TEAM0–TEAM5. Monthly amounts and performer limits are
+> approved business decisions; public legal wording, refunds and production readiness are separate
+> gates. Resolve placeholders, launch countries, exact provider flow and immutable rendered version
+> before publication. Checkout remains off; STUDIO also requires TEAM-RELEASE.
 
 **Version:** `[TBD: immutable approved version]`
 **Effective date:** `[TBD: YYYY-MM-DD]`
@@ -37,13 +38,27 @@ Billing settings or believe the billing relationship is incorrect, contact {{SUP
 [Paddle buyer support](https://paddle.net). We use proportionate verification; lack of app access
 must not prevent you from making a timely cancellation, refund or statutory request.
 
-`[TBD: publish additional-workspace terms only if C-04/C-05 are approved and the Offer is enabled.
-Explain qualifying primary subscription, successor selection, changed amount/effective date,
-notice/consent, proration and refusal/cancellation choices. Otherwise omit this commercial option.]`
+Each workspace has one billing account with at most one current paid subscription. A payer may fund
+any number of these independent subscriptions at the same standard offers. There is no primary or
+additional subscription, multi-workspace discount or commercial cap on the payer's paid subscriptions.
+A purchase, plan change, cancellation or refund for one workspace does not reprice another workspace
+or give it paid access. This does not promise combined invoices or a bundled contract.
+
+Plan capacity counts active service performers, with or without a login. A working owner counts;
+administrative access alone does not. An invitation reserving a new performer place counts once until
+accepted, expired or revoked; an invitation linked to an already active performer does not add a
+second place. An administrative invitation does not reserve performer capacity. Hiding a profile or
+removing its login does not deactivate the performer. Deactivation releases capacity only when the
+person can no longer receive new appointments; existing/future work must be handled explicitly.
+Reactivation is subject to the current limit. Capacity and permission to invite or access data are
+separate: excluding administrators from this limit does not grant unlimited user access or team
+invitation rights on SOLO. See [Terms §3](/legal/terms) for access responsibilities.
 
 ## 3. Trial and starting a paid subscription
 
-`[TBD: approve C-07/C-08/C-11 and verify the implemented trial before publishing this section.]`
+`[TBD: approve C-07/C-08/C-11/C-19 and verify the implemented trial before publishing this section.
+State the trial Plan and available capabilities; do not infer a STUDIO trial from a landing choice
+or bypass TEAM-RELEASE. Resolve existing-team accommodation explicitly.]`
 
 The proposed trial lasts 21 days without a payment card. It starts when the first eligible workspace
 funded by a payer completes onboarding. Other eligible workspaces joining that payer during the same
@@ -60,13 +75,26 @@ not restart or end another workspace's remaining shared trial.
 
 ## 4. Prices, taxes and purchase confirmation
 
-The purchase review shows the selected workspace, Plan, Offer, monthly or annual period, amount due
-now, future recurring amount or calculation basis, first-charge/renewal date and cancellation terms.
-Annual subscriptions show the amount billed for the entire year; a monthly equivalent is not a
-monthly payment option. Founding eligibility and any price protection must be stated explicitly.
+The launch offers are monthly subscriptions for a single workspace:
 
-`[TBD: approved prices, currency/tax display and founding conditions; C-01/C-03/C-11.]` Launch prices
-use a USD base amount. Paddle may present a supported local currency and determines applicable tax
+| Plan | Monthly USD base price | Active service performers |
+|---|---|---|
+| SOLO | $19 | 1 |
+| STUDIO | $29 | Up to 5 |
+
+`[Internal publication gate: amounts/limits approved in launch-20260906; C-11 currency/tax and
+recurring disclosure still require approval. Publish STUDIO as available only after TEAM-RELEASE
+and the Billing/legal launch gates. STUDIO is a regular paid plan, not a beta release.]`
+
+The purchase review shows the selected workspace, Plan, monthly billing period, amount due now,
+future recurring amount or calculation basis, first-charge/renewal date and cancellation terms.
+These are standard starting prices, without a Founding offer or promised lifetime price lock.
+Annual subscriptions are not offered at launch. STUDIO+ is contact-only: asking about it does not
+purchase a subscription, reserve a price or capacity, or grant access. No price or performer limit
+has been agreed for it.
+
+`[TBD: approve C-11 currency/tax display for each served market.]` Launch prices use a USD base
+amount. Paddle may present a supported local currency and determines applicable tax
 presentation. Review the final currency and total before paying. Your workspace's bookkeeping
 currency does not set your subscription price. Bank conversion or cross-border fees may be separate.
 
@@ -86,7 +114,7 @@ required or agreed. `[TBD: approved activation incident/response target and esca
 
 ## 6. Renewal and changes
 
-`[TBD: approve B-06; insert exact monthly/annual renewal mechanics and notice periods.]`
+`[TBD: approve B-06/C-05; insert exact monthly renewal mechanics and notice periods.]`
 
 A recurring subscription continues on the disclosed schedule until cancelled. The review and
 confirmation identify the renewal date and amount or calculation basis. Material price, plan or
@@ -94,8 +122,19 @@ renewal changes receive the notice and any affirmative agreement required by law
 Offer. You can cancel before the changed terms take effect. We do not retroactively remove an
 accepted price-protection promise through a general policy update.
 
-`[TBD: approved reminder timing, repricing, interval changes, proration/credits, Offer retirement,
-founding duration/exceptions and PRIMARY/ADDITIONAL consequences where enabled.]`
+Moving between SOLO and STUDIO changes the existing subscription for that workspace. It does not
+create a second subscription or change another workspace's terms. Before confirmation, the change
+review must show the effective date, new recurring amount, any immediate charge or credit, and any
+capacity/access consequence. Exceeding capacity does not itself authorise a new charge or STUDIO+.
+
+`[TBD: C-05 reminder/change notice, proration or credits, downgrade effective date, over-limit
+performer/invitation and existing-team handling, required consent, provider failure/recovery and
+Offer retirement. Do not invent immediate changes, automatic staff removal or a prorated refund.
+Any live STUDIO sale or upgrade, including an operator/internal charge, requires TEAM-RELEASE.]`
+
+`[Internal availability rule: C-05 must pass before enabling plan changes. If changes are not yet
+released, omit the offered-change promise above and use approved wording for the actual available
+management/support route. A support enquiry does not guarantee a change, credit or immediate effect.]`
 
 ## 7. Cancel renewal
 
@@ -118,7 +157,7 @@ data deletion must not leave you without a cancellation/support route.
 **[TBD: owner/counsel must accept or replace proposal R-01 below before this section is published.
 It is a recommendation for decision, not a current money-back guarantee.]**
 
-For your first paid Perelai subscription purchase, whether monthly or annual, you may request a full
+For your first paid Perelai monthly subscription purchase, you may request a full
 refund within 14 calendar days of that payment. This voluntary offer is available once per payer
 relationship, not once per workspace. Using the Product during that period does not remove this
 voluntary offer. It is separate from any mandatory or more favourable rights you have.
@@ -128,8 +167,9 @@ renewal alone does not create a prorated refund for an unused period. This does 
 for an incorrect charge, failure to supply the agreed Product, a contractual termination remedy,
 Paddle's applicable terms or mandatory law.
 
-`[TBD: approve or replace the first-purchase scope, 14-day window, renewal/additional-workspace
-handling and annual-plan rule as one coherent policy. Do not publish this proposal piecemeal.]`
+`[TBD: approve or replace the first-purchase scope, 14-day window, renewal and later independent
+workspace purchases as one coherent policy. R-01 remains once per payer, not per Company, unless
+explicitly changed by an owner decision. No annual offer is approved. Do not publish piecemeal.]`
 
 ## 9. Statutory withdrawal and other remedies
 
@@ -170,11 +210,11 @@ through its secure channel. `[TBD: verified B-07 tax-request requirements and ti
 A full subscription refund and its cancellation/access consequence are confirmed for the affected
 workspace. A partial or tax-only refund does not automatically mean the subscription is cancelled.
 `[TBD: approve/test R-02: provider cancellation, paid entitlement end, any remaining lawful trial/grant,
-partial-refund handling and PRIMARY/ADDITIONAL impact; match Paddle's applicable product-access rule.]`
+partial-refund handling and plan-change charges/credits; match Paddle's applicable product-access rule.]`
 
 A refund is not permission to erase workspace data. It must not change an unrelated workspace's
-subscription or disclose its data. Any approved price consequence for additional subscriptions must
-follow the separately disclosed notice and effective-date rules.
+subscription, price, remaining trial window or data access. Paid subscriptions are independent;
+there is no sibling repricing or successor selection.
 
 For failed payment, Paddle may retry according to the disclosed collection arrangements. The app
 shows the approved grace/restriction state and recovery route. `[TBD: C-06 duration, reminders and
@@ -212,13 +252,13 @@ below out of published policy prose.
 
 | Gate | Required evidence/decision | Owner | Blocks |
 |---|---|---|---|
-| B-01 | Approved generated PRIMARY catalog; separate ADDITIONAL prices if enabled; C-01/04 | owner + finance | pricing/checkout |
-| B-02 | Founding cohort, deadline, lock and successor/interval treatment; C-03/05 | owner + counsel | founding copy |
-| B-03 | One shared payer trial, durable completion trigger, exact charge timing and notices; C-07/08 | product + counsel | trial claims/conversion |
+| B-01 | Generate SOLO_MONTHLY 1900 USD / STUDIO_MONTHLY 2900 USD, MONTH, quantity 1 from approved launch-20260906; verify provider mapping and release allowlist | owner + billing | pricing/checkout |
+| B-02 | C-03/04 standard independent subscriptions reflected in copy; retire FOUNDING_* / ADDITIONAL_* and annual intent codes without aliases; reconcile old promises under C-16 | owner + counsel | acquisition/price copy |
+| B-03 | One shared payer trial, durable completion trigger, exact charge timing, trial Plan, existing-team handling and notices; C-07/08/19 | product + counsel | trial claims/conversion |
 | B-04 | Actual Paddle contract/entity/disclosure and policy links | counsel + procurement | provider review/checkout |
 | B-05 | USD anchor, tax_mode=location, conversion, no overrides and supported markets | billing + tax | checkout/pricing |
-| B-06 | Renewal, reminders, cancellation, price changes and proration | owner + counsel | recurring sales |
-| B-07 | R-01, statutory/provider remedies, annual/renewal/tax refund cases and support procedure | counsel + support | refund publication/paid launch |
+| B-06 | Monthly renewal, reminders/cancellation; separately C-05 same-subscription changes, proration, consent, effective date, over-limit handling and provider failures | owner + counsel | renewal/cancel evidence before recurring sales; C-05 before enabling plan changes |
+| B-07 | R-01, statutory/provider remedies, first/later independent purchase, renewal/plan-change/tax refund cases and support procedure | counsel + support | refund publication/paid launch |
 | B-08 | Retry/grace and effect-level restriction matrix; C-06/15 | product + counsel | enforce mode |
 | B-09 | C-10, return/closure/deletion and any F-18 switching duties | privacy + product + ops | restriction/data promises |
 | B-10 | Signed-event normalization/projection, reconciliation and activation incident recovery | security + billing | paid access |
@@ -226,10 +266,11 @@ below out of published policy prose.
 | B-12 | FOP/vendor payout advice; C-12/13 | finance/tax counsel | any real charge |
 | B-13 | Purchase-time Terms/Billing versions, recurring agreement and durable confirmation; README §7.6 | product + legal + billing | checkout |
 | B-14 | R-02 full/partial/tax refunds, provider adjustments/cancellation and resulting access independently reconciled | billing + support + legal | live refund operations |
+| B-15 | TEAM-RELEASE evidence for the deployed revision; 1/5 active-performer counting, invitations and current access enforcement; C-17 and C-19 | security + product + legal | any STUDIO live sale/upgrade and public team onboarding |
 
 ### Recommended decisions, not approvals
 
-- **R-01:** 14 days for the first paid purchase per payer, monthly and annual; usage does not void
+- **R-01:** 14 days for the first paid purchase per payer, monthly launch offers only; usage does not void
   this voluntary offer; later charges considered individually with mandatory/provider remedies
   preserved. A 21-day no-card evaluation reduces the need for a long unconditional refund period.
   The 14-day value is a commercial proposal, not a claim that every B2B buyer has a statutory right.
@@ -254,14 +295,18 @@ Provider wording is not a substitute for classifying this SaaS under local consu
 
 ### Required scenario evidence
 
-No-card expiry without checkout (zero charge); monthly/annual first purchase; later renewal;
+No-card expiry without checkout (zero charge); monthly first purchase; later independent purchase/renewal;
 trial-period purchase at the approved charge date; cancel before renewal; support request after
 loss of login; full, partial, tax-only and duplicate-charge refund; defect/non-delivery; withdrawal
-with/without lawful early-performance consent; provider-initiated refund/chargeback; PRIMARY refund
-with ADDITIONAL subscriptions; account closure with a live subscription; delayed/out-of-order refund
+with/without lawful early-performance consent; provider-initiated refund/chargeback; two SOLO, two STUDIO
+and mixed-workspace subscriptions with independent cancel/refund/plan-change consequences; account
+closure with a live subscription; delayed/out-of-order refund
 and cancellation events; pending payment with zero browser-granted access. Verify amounts, notices,
 receipt, cancellation and data access separately. No fixed refund-to-bank timing without evidence.
 
 Navigation must expose **Refund Policy** before domain review; `/legal/billing` remains canonical.
 Aliases `/refund-policy` and `/legal/refund-policy` serve redirects, not independent documents.
-All prices remain PENDING; do not paste the $19/$190/$29/$290 hypotheses into approved prose.
+Monthly SOLO $19 / STUDIO $29 and 1/5 performer limits are approved business inputs; public legal
+copy and runtime gates remain pending. Annual offers, STUDIO+ price/limit, C-05 and C-19 are not
+approved. Read `13_review_monetization_team_20260906.md` for the current decision crosswalk; document
+12 remains the dated legal-source review. R-01/R-02/R-03 were not approved by launch-20260906.

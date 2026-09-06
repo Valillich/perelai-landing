@@ -27,7 +27,8 @@ This Privacy Notice explains how Perelai handles personal data relating to:
 
 - visitors to perelai.com and related landing pages;
 - people who contact us, join a waitlist, participate in a referral or provide beta feedback;
-- business owners, account holders, staff users and invited users;
+- business owners, account holders, administrative members, invited users and service performers,
+  including performers whose business maintains a profile without giving them a login;
 - people using public booking, request, order, reservation, status, receipt, preference or client-hub
   pages made available through Perelai;
 - End Clients whose information a business imports or enters into Perelai; and
@@ -62,8 +63,8 @@ Do not render an empty or partial representative/DPO sentence.
 
 ### When Perelai is controller
 
-We determine purposes and essential means for account creation, authentication, owner/staff profiles,
-workspace administration, security, fraud prevention, support, Perelai marketing, referral
+We determine purposes and essential means for account creation, authentication, account identities
+and access administration, security, fraud prevention, our own business enquiries/support, Perelai marketing, referral
 attribution, deliberate product/website analytics, service improvement, payer/trial
 administration, Company subscription/access records, export security/audit metadata and legal claims
 or obligations.
@@ -71,7 +72,8 @@ or obligations.
 ### When the business is controller and Perelai is processor
 
 A business customer generally determines why and how it handles End Client contacts, service history,
-bookings, requests, orders, reservations, notes, imported records, payment-status records and messages
+bookings, requests, orders, reservations, notes, imported records, operational performer profiles,
+schedules/assignments, payment-status records and messages
 sent on its behalf. We process that **Customer Personal Data** under the business's instructions and
 our [Data Processing Addendum](/legal/dpa).
 
@@ -102,7 +104,7 @@ The actual data depends on the features used.
 - browser, device, operating system, language, region and technical request data;
 - pages, deliberate product interactions and campaign/referral parameters;
 - language, theme, region, cookie/storage and privacy preferences;
-- contact, waitlist, referral or beta-feedback form content;
+- contact (including STUDIO+ enquiries), waitlist, referral or beta-feedback form content;
 - support or other communications with us.
 
 The current landing analytics integration is configured for deliberately defined events, in-memory
@@ -117,6 +119,8 @@ until the complete production flow is verified.
 - phone number if supplied or supported;
 - workspace/company name, address and settings;
 - role, permissions, invitations and workspace relationships;
+- links between an account, Company membership and any service-performer profile, and invitation
+  acceptance/expiry/revocation and current-access records;
 - language, country/market, currency, timezone and preference settings;
 - authentication, verification, login, security and audit events;
 - payer relationship, trial eligibility/start/end, requested OfferCode and limited
@@ -135,7 +139,7 @@ or session-storage statement.]`
 - End Client name, phone, email, address and communication preferences;
 - services, categories, appointments, visits and service history;
 - requests, orders, reservations and public form submissions;
-- notes, staff assignment and `[files, only if verified live]`;
+- notes, performer profiles with or without login, schedules, staff assignment and `[files, only if verified live]`;
 - prices, amounts, payment methods/statuses and allocation records;
 - prepaid Packages and instalment schedules;
 - booking, confirmation, cancellation and no-show history;
@@ -201,6 +205,26 @@ must not be claimed unless it is actually implemented and enabled.
 The 2026-09-05 inventory identifies implemented import pipelines. Historical 2026-08-23 acceptance
 findings must be reconciled with later evidence before approving preview, cleanup, recovery,
 issue-download or retention claims; their old status is not proof of current deployment.
+
+### Team access and business enquiries
+
+The business decides which people may access its workspace and which may be assigned to provide
+services. Administrative membership and a performer profile are separate. Being the payer, having a
+role in another Company or not consuming performer capacity does not give access to this Company's
+client, staff, financial or export data. Operational performer data remains subject to the business's
+instructions even where the person has no Perelai account. The business must provide appropriate
+information to those people and establish a lawful basis for its use of their data.
+
+Removing access or deactivating a performer does not automatically delete historical records or
+future bookings; the business must resolve assignments and follow the applicable retention and
+privacy-request process. Technical measures and remaining delivery/cache periods must match the
+verified security schedule. Already downloaded copies cannot be recalled by revoking app access.
+
+If you enquire about STUDIO+, we use the contact details and business needs you supply to respond
+and manage that enquiry. It does not enrol you in marketing or create a paid subscription. Please
+do not send client records, health information or payment credentials in an enquiry.
+`[TBD: F-21 actual channel, minimum fields, recipients/tool and enquiry retention. Link this Notice
+at collection; obtain any separate marketing permission required by the served country.]`
 
 ### Workspace Data Export and privacy requests
 
@@ -286,6 +310,7 @@ Customer Personal Data.
 | administer business representatives and staff access | representative/staff profile, roles, invitations | documented legitimate interests in providing the business service; a business contract is not automatically a contract with every staff data subject |
 | authenticate and secure the Service | credentials, tokens, device/security events, logs | legitimate interests in security; contract; legal obligation where applicable |
 | provide support and resolve incidents | account, support content, diagnostic data | contract; legitimate interests |
+| respond to STUDIO+ and other business enquiries | contact details and business needs | steps requested by the individual only if they would be the contracting party; otherwise documented legitimate interests in responding to business representatives; separate marketing basis |
 | operate public technical surfaces securely | request/network data, abuse signals | legitimate interests; processor instruction for Customer Data |
 | deliberate privacy-hardened website/product analytics | defined interaction/technical data | `[TBD by jurisdiction/tool: consent or legitimate interests after balancing/ePrivacy review]` |
 | remember requested language/theme/region | preference/browser storage | `[TBD: select GDPR consent or another valid Art. 6 basis as applicable; separately assess device-storage exemption/consent]` |
@@ -386,6 +411,9 @@ rules, not an indefinite licence.
 | Category | Active retention | Deletion/backup rule |
 |---|---|---|
 | account/profile | `[TBD]` | `[TBD]` |
+| operational performer profiles, membership and invitations | `[TBD by purpose, including no-login profiles and expired/revoked invites]` | business record retention and membership exit are distinct `[TBD]` |
+| session/refresh revocation and access/cache state | `[TBD actual security TTLs]` | invalidate/revoke/clear `[TBD TEAM2 evidence]` |
+| STUDIO+ enquiries and replies | `[TBD enquiry lifecycle]` | mailbox/tool/backups `[TBD]`; marketing records separate |
 | legal/purchase acceptance and refund/withdrawal evidence | `[TBD: category-specific limitation/legal period]` | restricted archive `[TBD]` |
 | coworker links/availability and attachments | `[TBD: separate category schedules]` | `[TBD]` |
 | workspace and End Client records | Customer instruction/contract `[TBD]` | `[TBD active + backup]` |
@@ -449,6 +477,12 @@ We use technical and organisational measures designed to protect data in view of
 risk. These may include access controls, tenant/role permissions, transport security, password hashing,
 backups, monitoring, confidentiality and incident procedures, but only measures verified in the
 approved security schedule will be described in the production notice.
+
+`[Internal release evidence: TEAM0–TEAM5 must demonstrate current Company membership/permissions,
+session and refresh revocation, protected reads and final write effects, cached UI invalidation,
+files/export grants and current notification recipients. Verify bounded already-issued object URLs;
+do not imply immediate recall of downloaded data. TEAM-RELEASE is required before STUDIO sale or
+general team onboarding; price approval or feature flags are not evidence of these controls.]`
 
 No internet service is completely secure. Do not publish claims of `military-grade`, `bank-level`,
 zero-risk security, encrypted-at-rest tokens or certification without current scope-specific evidence.

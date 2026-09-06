@@ -1,7 +1,7 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
 **Prepared:** 2026-08-01  
-**Updated:** 2026-09-05 after app monetization inventory/ADR review and current official-source checks.
+**Updated:** 2026-09-06 after launch-20260906, ADR-0013, commercial/capability catalogs and TEAM review.
 
 **Status:** planning and attorney-ready drafting only; no implementation is authorised by this document.  
 **Canonical source language:** English.  
@@ -21,19 +21,36 @@ Read these before taking a Billing or Data Transfer task:
    package index and decision summary;
 3. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/00_architecture_and_decision_freeze_20260822.plan.md` — BILL0 architecture and approval gates;
 4. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/inventory/README.md` and its
-   sibling `commercial-catalog.v1.md` (C-01–16),
+   sibling `commercial-catalog.v1.md` (C-01–19),
    `capability-catalog.v1.md`, `company-action-catalog.v1.md` and `lifecycle-migration.v1.md`;
 5. `/Users/valery/Sites/beauty-finance/docs/adr/0013-monetization-architecture.md` and the
    relevant domain ADRs (0001/0002/0003/0006/0007/0008/0010);
-6. the Billing task document identified by that README; and
-7. `/Users/valery/Sites/beauty-finance/.cursor/plans/import/12_workspace_data_export_mvp_20260823.plan.md` — EX1 Workspace Data Export contract.
+6. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/inventory/launch-decisions-20260906.md`
+   — approved commercial decisions (`launch-20260906`), separate from implementation/release approval;
+7. `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/10_team_access_and_studio_release_20260906.plan.md`
+   — TEAM0–TEAM5 and mandatory TEAM-RELEASE;
+8. the Billing task document identified by that README, especially
+   `/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/07_landing_handoff_commercial_legal_20260822.plan.md`; and
+9. `/Users/valery/Sites/beauty-finance/.cursor/plans/import/12_workspace_data_export_mvp_20260823.plan.md` — EX1 Workspace Data Export contract.
 
 The 2026-09-05 inventory supersedes older implementation-status assertions: Workspace Data Export,
 imports and files exist in code. Deployment, acceptance closure and commercial availability remain
 separate evidence. `11_workspace_data_export_legal_matrix.md` §7 preserves historical IM4 findings
 for reconciliation, not as a claim that they remain open today. Read the findings and launch decisions
 in [12_review_and_launch_decisions_20260905.md](12_review_and_launch_decisions_20260905.md).
-The current Billing GO is disabled BILL1A only; this legal package does not approve BILL1–6 wholesale.
+The current commercial crosswalk is
+[13_review_monetization_team_20260906.md](13_review_monetization_team_20260906.md); it supersedes
+document 12's older pricing/subscription assertions. The Billing GO is amended disabled BILL1A only;
+TEAM design/security preparation may proceed independently. This package approves no live charge.
+
+The approved launch catalog is SOLO $19/month (1 active service performer) and STUDIO $29/month
+(up to 5), with one independent subscription per Company and no payer-level paid-subscription cap
+or sibling discount. Administrative access alone does not consume performer capacity or grant
+permission. STUDIO is intended as a regular paid launch plan, but any live sale/upgrade (including
+an operator/internal charge), public paid CTA or general team onboarding requires TEAM-RELEASE plus
+the applicable Billing/legal gates. STUDIO+ has only a small contact block; no price, limit or Offer.
+Annual offers and Founding/reference-price promotions are outside the launch catalog. Do not turn
+this approved pricing decision into a claim that checkout, team security or legal text is approved.
 
 For factual feature descriptions, precedence is: verified current production behaviour and approved
 release evidence → accepted ADR/domain vocabulary → authoritative feature plan → this legal plan →
@@ -133,10 +150,10 @@ Billing/export status was reconciled with the 2026-09-05 inventory; this is not 
 - Resend is the implemented email delivery provider. Deployment/hosting/database/object storage/Redis
   vendors and production regions are not established by repository code and remain release-blocking
   facts.
-- provider-neutral SaaS Billing is now architecture-frozen in the monetization plan and Paddle is the
-  first intended production adapter/Merchant of Record, but no billing implementation or approved
-  production catalog exists yet. The `$19/$190` Founding and `$29/$290` Public figures remain
-  approval-gated hypotheses and must not enter approved legal or landing copy.
+- provider-neutral SaaS Billing is architecture-frozen and Paddle is the first intended production
+  adapter/Merchant of Record. Monthly SOLO $19 / STUDIO $29 are approved under launch-20260906;
+  generated catalog/provider setup, implementation, TEAM-RELEASE and C-11 legal/tax wording are
+  separate gates. Retired Founding/additional-workspace/annual offers must not enter launch copy.
 - Workspace Data Export/import/files are implemented according to the current inventory. Export is
   owner-only and Company-scoped; production readiness, SOLO packaging and restricted create/download
   remain unverified/PENDING C-10. Retrieve later acceptance evidence before asserting whether old
@@ -225,7 +242,7 @@ Legal URLs may accept only these allowlisted parameters:
 | `from` | `login`, `register`, `forgot`, `onboarding`, `settings`, `billing`, `data-transfer` | Selects a hard-coded app destination |
 | `locale` | published locale code | Optional display hint; route prefix remains authoritative |
 | `niche` | valid generated catalog slug | Re-emitted only for `register` |
-| `offer` | generated, currently public PRIMARY `OfferCode` | Re-emitted only for `register`; treated as untrusted intent, never as entitlement |
+| `offer` | generated standard `OfferCode` in the current public release allowlist | Re-emitted only for `register`; eligible launch codes are SOLO_MONTHLY/STUDIO_MONTHLY, with STUDIO gated by TEAM-RELEASE; intent never grants access |
 | `utm_source`, `utm_campaign`, `landing_path` | existing clamped acquisition values | Re-emitted only for `register` |
 
 Destination mapping is code-owned:
@@ -373,8 +390,8 @@ Marketing opt-in is separate, optional, unchecked and never required to submit a
 ### 7.6 Purchase-time agreement and confirmation
 
 Signup assent is not recurring-payment authorisation. Before each new paid subscription, present
-current Terms + Refund & Cancellation Policy, the selected Company/Offer, full annual amount where
-relevant, due-now and recurring terms, charge dates and cancellation route. Capture affirmative
+current Terms + Refund & Cancellation Policy, the selected Company/Offer, monthly billing period,
+due-now and recurring terms, charge dates and cancellation route. Capture affirmative
 purchase assent tied to the authorised payer and immutable document/copy/catalog versions. Store
 only necessary provider transaction/confirmation references server-side under approved retention.
 Paddle-hosted acceptance may satisfy part of this only with evidence of the exact text and versions;
@@ -493,17 +510,27 @@ Paddle's minimum document list is smaller.
 
 Dependency: BILL0 business decisions and the provider-neutral billing contract are approved. This
 phase must finish before any live checkout (including an internal charge), BILL7 public commercial
-copy/CTAs and BILL8 enforcement. LGL-0A preparation begins earlier; C-01–16 remain independently gated.
+copy/CTAs and BILL8 enforcement. LGL-0A preparation begins earlier. Use the approved parts of
+C-01–19 without reopening prices; do not treat them as approval of the remaining legal/runtime gates.
 
 - finalise Terms §13 and the `/legal/billing` draft against the generated public catalog and Paddle
   account configuration;
+- snapshot approved commercial values with each immutable legal version; a later catalog edit must
+  not silently change an accepted Terms/Billing document or its rendered hash;
 - disclose the two linked contracts accurately: Perelai supplies/licenses the Product under its
   Terms, while the applicable Paddle entity is the authorised reseller/Merchant of Record for the
   buyer Transaction under Paddle's Buyer Terms;
 - keep `Plan` (capabilities) separate from `Offer` (commercial terms), and keep each Company's
   subscription/access projection separate from the single BillingCustomer payer identity;
+- use only standard monthly SOLO/STUDIO launch offers; remove Founding, reference prices, annual
+  toggles, sibling discounts and payer-level paid-subscription count limits from acquisition copy;
+- approve C-05 account-scoped plan-change timing, charge/credit, consent and over-limit handling;
+  a change reuses the same subscription, never reprices siblings or silently removes staff/data;
+  if changes are not released, keep the feature disabled and state its actual availability instead
+  of publishing unresolved change promises. C-05 gates changes, not a licence to invent sale terms;
 - state one 21-day no-card trial per BillingCustomer only if the implemented trigger and checkout
-  behaviour exactly match the approved plan; do not imply a new trial for each Company;
+  behaviour exactly match the approved plan; do not imply a new trial for each Company or choose a
+  trial Plan from Offer intent. C-19 trial capabilities/existing-team handling remain pending;
 - disclose automatic local-currency presentment and location-dependent tax treatment without
   promising a particular display currency or tax inclusion before Paddle Checkout confirms it;
 - link cancellation/refund routes and Paddle Buyer Terms from pricing, checkout review, Billing
@@ -519,6 +546,32 @@ copy/CTAs and BILL8 enforcement. LGL-0A preparation begins earlier; C-01–16 re
 
 **Exit gate:** approved legal copy, catalog, Paddle configuration and tested product states agree on
 seller roles, exact charges, taxes, renewal, trial, cancellation, refunds and access consequences.
+
+### LGL-6A — performer capacity, team permissions and STUDIO release
+
+Dependency: approved TEAM0 role/capacity contract and TEAM1–TEAM5 release evidence. This is a legal
+integration/evidence task, not a substitute for the app security work.
+
+- align Terms, Billing and UI on active service performers (SOLO 1 / STUDIO 5), including working
+  owners, no-login profiles and capacity-reserving pending invites; management-only access is
+  excluded but never implies unlimited accounts, owner powers or free team invitations on SOLO;
+- separate removing login, changing permissions, deactivating a performer and deleting records;
+  confirm handling of future bookings, recurring assignments and existing client preferences;
+- evidence current Company membership/permissions at protected reads and final write effects,
+  revoked sessions/refresh, cached UI invalidation, data/files/export/notification isolation and
+  bounded already-issued download URLs. Never promise that downloaded copies can be recalled;
+- keep other Companies' membership, data and payer relationship unaffected by a local role change;
+- translate actual safeguards into Privacy/DPA/TOMs only after proof; broad SUPERVISOR rights are
+  not a receptionist default, and an admin role alone cannot bind a DPA or export an owner archive;
+- place STUDIO+ in a small contact-only block, with Privacy notice at enquiry collection, verified
+  mailbox/tool, purpose/retention and separate marketing choice. No sellable Offer, trial grant,
+  price, performer count, launch date or per-seat overage promise.
+
+**Exit gate:** TEAM-RELEASE evidence identifies the shipped commit/schema/role matrix, migration
+dry-run and unskipped security tests, with critical/high findings closed. Any STUDIO live sale or
+upgrade (including operator/internal charges), public paid CTA and general team onboarding also
+require LGL-6 and applicable BILL gates. Modes off/observe and grants do not bypass TEAM security.
+The intended joint SOLO/STUDIO launch must not be silently changed to an earlier partial release.
 
 ### LGL-7 — Workspace Data Export and privacy-rights boundary
 
@@ -551,6 +604,7 @@ runtime behaviour, and no UI or marketing surface calls the archive a GDPR/priva
 - archive previous versions and schedule annual/event-driven review;
 - subscribe customers to subprocessor-change notices under the approved DPA procedure;
 - keep paid acquisition/checkout off until LGL-6 passes;
+- require LGL-6A/TEAM-RELEASE for the STUDIO launch and document its separate security sign-off;
 - gate new Workspace Data Export release/published claims on LGL-7 and accepted current release
   evidence; do not toggle an existing deployment based on this documentation review; and
 - record separate go/no-go decisions for public booking, Billing enforcement and Workspace Data
@@ -572,7 +626,7 @@ runtime behaviour, and no UI or marketing surface calls the archive a GDPR/priva
 ### Auth and PWA
 
 - login -> legal -> login round trip;
-- register -> legal -> register preserves only validated niche, public PRIMARY OfferCode and clamped
+- register -> legal -> register preserves only validated niche, released standard OfferCode and clamped
   attribution; offer is independent of niche and grants no trial/access;
 - email and Google owner signup cannot proceed without current Terms/DPA versions;
 - staff invite copy omits DPA acceptance;
@@ -595,7 +649,15 @@ runtime behaviour, and no UI or marketing surface calls the archive a GDPR/priva
 
 ### SaaS Billing
 
-- landing Pricing uses only generated public PRIMARY offers; app-only ADDITIONAL offers never leak;
+- landing Pricing uses only generated standard monthly offers from the public release allowlist;
+  retired FOUNDING_*/ADDITIONAL_*/annual intent codes are rejected without mapping to a new Offer
+  or rewriting historical acquisition records; continue ordinary signup with fresh selection;
+- no STUDIO live purchase/upgrade or public team onboarding is possible before TEAM-RELEASE;
+- capacity labels/tests cover working owner, admin-only, no-login performer, new-profile vs existing-
+  profile invite, expiry/revoke, deactivate/reactivate and SOLO 1→2 / STUDIO 5→6 boundaries;
+- two SOLO, two STUDIO and mixed Companies preserve independent prices/access on purchase,
+  cancellation, full/partial refund and plan change; no payer-level paid count quota or duplicate
+  subscription from a plan change; STUDIO+ contact never enters signup Offer/checkout/trial;
 - no Paddle/provider IDs or checkout URLs are embedded in landing or legal handoff query parameters;
 - Company currency, IP, locale and niche never select an Offer or entitlement;
 - checkout shows the final currency, subtotal, discount, tax and total before purchase;
@@ -607,11 +669,15 @@ runtime behaviour, and no UI or marketing surface calls the archive a GDPR/priva
   from signup, privacy acknowledgement and optional marketing;
 - refund/withdrawal intake works after loss of login; approved full/partial/tax-only refunds,
   cancellation and access are reconciled independently; no direct Perelai buyer reimbursement;
-- required regional withdrawal/switching paths and annual-renewal notices are tested under F-17/F-18;
+- required regional withdrawal/switching paths and monthly-renewal notices are tested under F-17/F-18;
+  annual sales/renewal/refund copy requires a future approved catalog and separate review;
 - restricted mode preserves the approved safe read, billing recovery, closure/deletion and export
   actions, while new public intake fails neutrally without exposing billing state.
 
 ### Workspace Data Export and privacy requests
+
+- TEAM revocation/isolation tests cover stale JWT/refresh, in-flight effects, caches, file/export
+  grants and queued notification recipients; existing signed URLs have a verified finite lifetime;
 
 - export is owner-only, absent from onboarding and not available until its feature flag/release gate;
 - create and download require separate fresh confirmations; grants are actor/company/action-bound,
@@ -645,7 +711,13 @@ Do not enable public acquisition or public booking until all are true:
 - [ ] cookie/storage audit is signed off for each origin;
 - [ ] billing, renewal, cancellation and refund statements match production, or paid billing is off;
 - [ ] Paddle entity/role, Buyer Terms, catalog, tax mode, currency presentment and webhook authority
-  match the production account; no approval-gated prices are published early;
+  match the production account; use launch-20260906 approved monthly prices only with C-11/public
+  release approval; no Founding/annual/reference-price or sibling scheme;
+- [ ] STUDIO has LGL-6A/TEAM-RELEASE evidence for the deployed revision before any live sale/upgrade
+  (including internal charges), public paid CTA or general team onboarding;
+- [ ] 1/5 active-performer capacity and permissions are correctly distinguished across Terms/Billing/UI;
+  C-05 is resolved before plan changes and C-19 before trial entitlement/onboarding claims;
+- [ ] STUDIO+ is contact-only with F-21 Privacy/retention/channel facts, no price/limit or access promise;
 - [ ] Export implementation and current acceptance/deployment evidence are reconciled, C-10 remains
   separately gated, and no obsolete “not implemented” assertion controls a release;
 - [ ] Workspace Data Export and Privacy Access Export are labelled, routed and fulfilled as distinct
@@ -668,7 +740,8 @@ contract duties for already enabled real-user services remain necessary even in 
 ## 12. Source authorities checked for this plan
 
 Primary/official sources checked in the original 2026-08 drafts; the dated refresh and additional
-2026-09-05 authorities are in document 12. Recheck applicable law/provider terms at release:
+2026-09-05 authorities are in document 12; the 2026-09-06 commercial/team review and source refresh
+are in document 13. Recheck applicable law/provider terms at release:
 
 - [GDPR, including Articles 13, 14, 27 and 28](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
 - [ePrivacy Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058)

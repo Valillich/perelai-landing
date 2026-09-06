@@ -1,5 +1,11 @@
 # Legal plan review and launch decisions
 
+> **Historical review.** The commercial assertions and C-01–16 crosswalk below describe the
+> 2026-09-05 baseline. `launch-20260906` supersedes its primary/additional, Founding, annual and
+> unapproved-price assumptions. Use [document 13](13_review_monetization_team_20260906.md) and the
+> updated source drafts for current pricing, C-01–19 and TEAM-RELEASE. The dated findings and legal
+> sources remain evidence; this record is not authority to restore retired commercial terms.
+
 **Reviewed:** 2026-09-05. **Scope:** plans/drafts only; no site, app, vendor account or
 commercial approval changed. This review improves the drafting package; it is not a legal opinion
 that Perelai may launch in a particular country.

@@ -13,8 +13,12 @@ are current. Preserve unrelated user changes. Do not replace [TBD] or {{...}} wi
 change any draft status to approved. Do not publish placeholder or draft legal content in production.
 Add appropriate tests for the security/acceptance behaviour you change. Complete independent
 preview/schema work when approvals are absent, and report the specific dependent production step
-that remains blocked. Never infer approval from a completed code task. Read document 12 and the
-current C-01–16 inventory; BILL0B currently authorises disabled BILL1A only.
+that remains blocked. Never infer approval from a completed code task. Read documents 12 and 13,
+launch-20260906, the current C-01–19 inventory and TEAM0–TEAM5. Monthly SOLO $19 / STUDIO $29,
+1/5 active performers, independent Company subscriptions and contact-only STUDIO+ are approved
+business decisions; do not reopen them or infer legal/runtime approval. BILL0B authorises amended
+disabled BILL1A; TEAM design/security preparation is independent. No live STUDIO sale/upgrade,
+public paid CTA or general team onboarding before TEAM-RELEASE and the relevant Billing/legal gates.
 ```
 
 ## Task A — legal content loader and env validation (landing only)
@@ -51,8 +55,11 @@ tests. Do not touch beauty-finance.
 Implement 00_README_execution_plan.md §6 and LGL-2 plus 08_ui_copy_and_surface_matrix.md §§1-4, 8-12.
 First implement/test landing's allowlisted return component. Then implement/test the app legal URL
 builder and context-specific components. Never accept or forward a full return URL. Preserve only the
-existing clamped registration attribution plus independently validated niche and generated public
-PRIMARY OfferCode. Offer intent grants no access and staff signup ignores it. Never forward a Paddle/
+existing clamped registration attribution plus independently validated niche and generated
+standard OfferCode in the public release allowlist (SOLO_MONTHLY/STUDIO_MONTHLY, STUDIO gated).
+Offer intent grants no access or trial Plan and staff signup ignores it. Retired FOUNDING_*/
+ADDITIONAL_*/annual codes resume ordinary signup with fresh selection, without aliasing or historical
+record rewriting; STUDIO+ contact has no Offer. Never forward a Paddle/
 provider ID, price, currency, tax, checkout URL or billing identifier. Standalone, onboarding and token-bearing routes
 open a clean new tab. No reset/invite/booking/status/receipt/preferences/client-hub token or raw
 referrer may reach landing or analytics. Keep app /terms and /privacy as redirect shells; placeholder
@@ -67,7 +74,9 @@ Create an append-only LegalAcceptance model/migration/service. API is authoritat
 versions and server timestamp; reject missing, stale or forged versions. Gate email and Google signup
 before user/workspace creation; bind OAuth acceptance to short-lived server state. Owner and coworker-
 owner accept Terms+DPA and acknowledge Privacy. Staff invite accepts Terms and acknowledges Privacy,
-not DPA. Bind the represented-business DPA acceptance to the Company when provisioned without
+not DPA. The same individual-use rule applies to an invited administrative member; the role label
+does not establish authority to bind a DPA, manage a payer or use an owner-only export.
+Bind the represented-business DPA acceptance to the Company when provisioned without
 rewriting signup evidence. Store acceptance-copy version, locale and source. Do not store IP/user-agent until separately
 approved. Add migration, unit, integration and UI accessibility tests. Do not add initial acceptance to
 OnboardingPage.
@@ -114,22 +123,54 @@ provider contract requires a separately authorised owner/operator action, not th
 
 ```text
 Do not implement Billing architecture from this prompt. First verify BILL0 decisions, generated
-catalog and the relevant BILL1-BILL6 acceptance evidence are approved. Then implement LGL-6 using
+catalog and the relevant BILL1-BILL6 acceptance evidence are approved. For STUDIO also verify
+TEAM-RELEASE; never use an internal charge, grants or off/observe mode to bypass it. Then implement LGL-6 using
 00_README_execution_plan.md, 01_legal_facts_env_contract.md, Terms §13,
 10_billing_cancellation_refund_source_en.md and 08_ui_copy_and_surface_matrix.md §§10 and 12.
 
 Render /legal/billing as Refund & Cancellation Policy, with refund aliases; add approved
 Terms/Privacy/Refund Policy/Paddle Buyer Terms links to Pricing,
-Checkout review/return, Settings/Billing and restriction/recovery surfaces. Preserve only public
-PRIMARY OfferCode through landing registration; never expose Paddle IDs or start checkout on landing.
+Checkout review/return, Settings/Billing and restriction/recovery surfaces. Preserve only a standard
+OfferCode in the public release allowlist through registration; never expose Paddle IDs or start
+checkout on landing.
 Keep Plan, Offer, BillingCustomer payer authority, Company subscription/access and End Client finance
 domains distinct. Browser success stays pending until the verified webhook projection activates
-access. Exact prices, renewal, trial conversion, cancellation, refunds, grace and restriction copy
-must come from immutable approvals, not planning hypotheses. Audit Paddle fields/roles/cookies,
+access. Use approved standard monthly prices and active-performer capacity, no Founding/annual/
+sibling offers or paid-count cap. Reconcile generated values with launch-20260906, and use immutable
+approvals for C-11 disclosures, C-05 account plan changes/proration/over-limit handling and C-19 trial
+Plan, conversion, cancellation/refunds, grace and restriction. Audit Paddle fields/roles/cookies,
 update Privacy/Subprocessor/Cookie evidence and add route/state/accessibility/security tests. Implement
 README §7.6 purchase-time evidence/durable confirmation and B-13/B-14; test lost-login cancellation,
-withdrawal, annual/renewal, full/partial/tax refunds and separate subscription consequences. R-01 is
+withdrawal, first/later monthly purchases and renewals, full/partial/tax refunds, same-subscription
+plan changes and isolation of two SOLO/two STUDIO/mixed Companies. Annual offers are deferred. R-01 is
 a proposal, not approval. Apply jurisdiction decisions F-17/F-18; never promise payment from a redirect.
+```
+
+## Task G1 — TEAM legal integration and STUDIO+ contact (after team evidence)
+
+```text
+Implement LGL-6A using document 13, the latest TEAM0–TEAM5 plan, Terms §§3/13, Privacy roles/data/
+retention/security, DPA Schedules 1/2 and UI document 08. Do not implement or declare TEAM-RELEASE
+from this legal task. Read the actual role matrix and accepted deployment evidence first.
+
+Use ACTIVE_SERVICE_PERFORMERS, SOLO 1 / STUDIO 5: working owner and no-login profiles count;
+administrative membership alone does not. Capacity-reserving new-performer invitations count once;
+existing-profile and admin invitations do not add another performer. Verify request-time expiry,
+deactivate/reactivate and future-work handling. Capacity exclusion grants no data, owner, billing,
+DPA-signing or unlimited-user authority. Do not imply additional-member invitations are free on SOLO.
+
+Reconcile current Company permissions, successful-revocation boundary for later requests, refresh,
+in-flight final effects, caches, files/export grants and notification recipients against TEAM2/3.
+Record finite lifetime/limitations of already-issued provider URLs; do not promise recall of copies.
+Migration must preserve IDs/history and explicitly resolve ambiguous admin/performer classification.
+Translate only evidenced controls into approved public safeguards; leave unsupported claims blocked.
+
+STUDIO+ is only a small Contact us block beneath two launch cards: no price, numeric limit, OfferCode,
+checkout, trial/grant, automatic overage or release promise. Complete F-21 minimum fields, channel,
+lawful basis, recipients/tool and retention; link Privacy at collection and separate marketing choice.
+Test capacity labels, token-safe links, current-role access and no subscription/marketing side effects.
+Keep any STUDIO live sale/upgrade, public paid CTA and general team onboarding gated by TEAM-RELEASE
+and LGL-6/BILL approval. Return the deployment/evidence references; legal text cannot close security work.
 ```
 
 ## Task H — Workspace Data Export legal integration (app + landing content, after IM/EX gates)
@@ -144,6 +185,8 @@ Use `Workspace Data Export` and `Download a copy of your workspace data`; never 
 access export, backup or reverse import. Keep Export out of onboarding and owner-only at create and
 download. Reconcile the actual archive manifest/formats/exclusions, 24h artifact, 10m single-use
 grants, <=5m signed URL, storage/log controls, notification, audit retention and Company deletion.
+Apply the TEAM2/3 current-owner/session revocation and notification-recipient tests; an administrative
+role or paid plan does not grant owner export. Check same-user cross-Company isolation.
 Distinguish single-use action grants from potentially reusable short-lived object URLs and artifact
 expiry from F-18 retrieval/switching duties. Maintain a separate privacy-request route/process; a Company archive does not close an access or
 portability request. Reconcile Billing restricted-mode behaviour. Add terminology, RBAC, isolation,
@@ -157,7 +200,8 @@ Run the complete §10 and §11 matrices in 00_README_execution_plan.md. Verify a
 all clean/localized routes, redirects, return allowlists, auth acceptance, OAuth state, append-only
 evidence, public booking policies/version snapshots, no token leakage, analytics allowlist,
 accessibility, no draft/TBD output, and archived versions. Also verify Billing seller roles/catalog/
-Paddle configuration/webhook authority/restriction states, plus Workspace Data Export terminology,
+Paddle configuration/webhook authority/restriction states, LGL-6A/TEAM-RELEASE at the shipped
+commit/schema, correct performer metrics/permissions and contact-only STUDIO+, plus Workspace Data Export terminology,
 RBAC, scope, TTLs, purge and the separate Privacy Access Export/request process. Reconcile the rendered
 documents against the approved source/hash and vendor/retention/security evidence. Report pass/fail
 per checklist item; do not declare legal approval.
@@ -171,6 +215,10 @@ Before E: counsel decides missing-Business-policy behaviour and contract-formati
 Before F implementation: privacy/counsel classifies each technology by launch country.  
 Before G: BILL0 commercial/legal gates, catalog, Paddle role/configuration and Billing implementation
 evidence are approved.
+
+Before STUDIO publication or any live sale/upgrade: TEAM-RELEASE and LGL-6A pass for the deployed
+revision as well as G/BILL gates. Before G1 public contact collection: F-21 channel/privacy facts
+are verified. Approved launch prices do not approve R-01, C-05 or C-19.
 
 Before H: reconcile current IM/EX implementation and acceptance evidence; privacy/counsel approve export metadata
 retention and request-boundary copy.

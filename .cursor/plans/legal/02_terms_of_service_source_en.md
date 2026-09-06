@@ -82,6 +82,24 @@ owner powers merely by being the payer. Likewise, being a Company owner does not
 that person to manage another payer's billing relationship. Where supported, one payer relationship
 may fund separate subscriptions for multiple Companies; each Company keeps its own access state.
 
+Administrative permission and being a service performer are separate. A performer is a person who
+can be assigned to deliver services in the workspace, whether or not they have a login. A person
+with administrative access alone is not a performer. A working owner is both. Access remains limited
+to the current permissions granted within each Company; a role in one Company grants none in another.
+Administrator status does not itself confer owner-only export, purchase or DPA-signing authority.
+The Customer must choose permissions appropriate to each person's work; a broad management role
+should not be used where only limited reception or scheduling access is needed.
+
+Removing login access, changing a role, deactivating a performer and deleting business records are
+different actions. The Customer must review future appointments, recurring assignments and client
+preferences when a person leaves or stops providing services. Existing records are retained under
+the applicable data-return/deletion rules; they are not erased simply to release plan capacity.
+Copies already lawfully downloaded cannot be recalled by changing an app permission.
+
+`[Internal release note: verify TEAM current-membership checks, session/refresh revocation,
+in-flight effects, caches, grants and notification recipients before publishing specific timing or
+security guarantees. Admin-only exclusion is not a promise of unlimited users or team invites on SOLO.]`
+
 ## 4. The Service and product stage
 
 Depending on the production configuration, subscription and workspace settings, the Service may
@@ -268,11 +286,11 @@ opt-out. A Customer is responsible for communications it instructs Perelai to se
 including marketing permission and sender information. Turning off marketing must not suppress a
 necessary booking confirmation or security message.
 
-## 13. Fees, beta access, taxes and refunds
+## 13. Plans, fees, trials, taxes and refunds
 
-**The architecture below is approved for planning; commercial values and consequences remain
-approval-gated. Counsel/owner must resolve all `[TBD]` and reconcile this section with production
-Paddle settings before paid launch.**
+**Monthly SOLO $19 / STUDIO $29 and performer limits 1/5 are approved under launch-20260906.
+Legal wording, implementation and the remaining commercial consequences are separately gated.
+Resolve all `[TBD]`, reconcile Paddle settings and pass TEAM-RELEASE before offering STUDIO.**
 
 ### 13.1 Plans, Offers, Companies and payer relationship
 
@@ -280,6 +298,35 @@ A **Plan** describes product capabilities or limits. An **Offer** identifies app
 terms for a Plan, such as price and billing interval. Creating or using multiple Companies is not by
 itself a premium Plan feature. Each paid Company has a separate subscription and access state even
 when the same payer funds more than one Company.
+
+Each Company has one billing account with at most one current paid subscription. The payer may fund
+any number of independent Company subscriptions at the standard offers. There is no primary or
+additional tier, sibling discount or paid-subscription count cap. Purchasing, changing, cancelling
+or refunding one does not change another's price or grant access to its data. This does not promise
+combined invoices. Operational anti-abuse rules for creating unfunded workspaces, if introduced,
+must be separately disclosed; they must not be presented as a cap on paid subscriptions.
+
+The monthly launch plans are SOLO at a USD base price of $19 for 1 active service performer and
+STUDIO at $29 for up to 5. These are standard starting prices; there is no Founding promotion,
+reference-price discount, lifetime lock or annual offer at launch. Tax/currency and recurring charges
+are disclosed in the [Refund & Cancellation Policy](/legal/billing) and purchase review.
+
+Capacity includes a working owner, active performers without a login and a pending invitation that
+reserves a new performer place. The invitation counts once until accepted, expired or revoked;
+inviting someone to an already active profile does not add a second place. Admin-only access and
+admin invitations do not consume performer capacity. Empty schedules, no recent revenue, hidden
+profiles or removal of a login do not free a place. Deactivation frees capacity only when the person
+can no longer receive new appointments; reactivation is checked against the limit. Plan capacity
+does not expand user permissions or confer additional-member access on SOLO. Linking an independent
+coworker Company is distinct from adding an internal team member and does not share a subscription.
+
+`[TBD: reconcile the final TEAM0 counting/permission implementation and C-05 downgrade/over-limit
+rules with this text. STUDIO is a regular paid plan at release, not a beta; do not publish it as
+available before TEAM-RELEASE and Billing/legal gates.]`
+
+STUDIO+ is an invitation to contact us about future needs. It has no agreed price or performer limit
+and is not a subscription available to buy. An enquiry does not grant access, reserve terms or
+commit either party to a purchase or release date.
 
 A landing-page `OfferCode`, campaign or redirect is only an untrusted request to review an Offer. It
 does not reserve a price, create a subscription, prove eligibility or grant Service access. The app
@@ -292,6 +339,9 @@ trial per Company or user. It starts when the first eligible Company durably com
 Other eligible Companies attached to the same payer during that window share the original end date;
 creating another Company does not restart it. A Company still must complete its own onboarding before
 receiving Company-specific product access. Invited staff do not receive a separate payer trial.
+
+`[TBD: C-19 trial Plan, included capabilities and existing-team accommodation. A selected landing
+Offer does not choose trial entitlements; team trials/onboarding cannot bypass TEAM-RELEASE.]`
 
 The no-card trial does not by itself authorise a charge. The exact checkout-during-trial behaviour,
 first-charge date, cancellation deadline and any eligibility exclusions are `[TBD: owner/counsel and
@@ -322,7 +372,7 @@ A browser redirect or checkout-success screen is not proof that paid access is a
 only after Perelai receives and projects an authenticated provider event. While confirmation is
 pending, the app must describe access as pending and provide recovery/support—not promise activation.
 
-The exact billing interval, renewal date, automatic-renewal disclosure, price-change notice,
+Launch billing is monthly. The renewal date, automatic-renewal disclosure, price-change notice,
 cancellation effective date, failed-payment retries, grace/restricted mode, refund rules and
 post-cancellation access are `[TBD: approved production policy]`. They must be stated in the
 [Refund & Cancellation Policy](/legal/billing), Paddle Checkout and the Buyer Portal without
@@ -330,6 +380,11 @@ contradiction. Mandatory buyer rights continue to apply where they cannot lawful
 assent to recurring billing and this Policy is separate from signup acceptance. Refunds of Paddle
 purchases are processed through Paddle; access, cancellation of future charges and data deletion
 are distinct consequences, as explained in the Policy.
+
+A SOLO/STUDIO change applies to the same workspace subscription and leaves others unchanged. Its
+effective date, any charge/credit and changes to capacity/access must be shown before confirmation.
+`[TBD: C-05 proration, consent, downgrade over-limit handling and failed-change recovery; do not
+invent immediate effect or automatically deactivate staff. STUDIO changes require TEAM-RELEASE.]`
 
 ## 14. Intellectual property and feedback
 
@@ -519,8 +574,10 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
 1. The contracting entity is a Ukrainian FOP; exact identity and address are unknown.
 2. The Service is intended for B2B use, but counsel has not completed consumer-status analysis.
 3. Provider-neutral SaaS Billing architecture and Paddle as first production Merchant of Record are
-   plan-frozen, not implemented. Exact catalog, trial conversion, renewal, cancellation, restriction
-   and refunds remain approval-gated.
+   plan-frozen, not released. launch-20260906 approves monthly SOLO $19 / STUDIO $29, 1/5 performers,
+   independent Company subscriptions and contact-only STUDIO+. Generated catalog/provider evidence,
+   C-05 plan changes, C-19 trial Plan, conversion, renewal, cancellation, restriction and refunds
+   remain gated. TEAM-RELEASE is required for any STUDIO live sale/upgrade and public team onboarding.
 4. Workspace Data Export is implemented in the current app inventory; production availability,
    C-10 packaging and the 24-hour artifact/security claims still require release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
    or forum is approved.

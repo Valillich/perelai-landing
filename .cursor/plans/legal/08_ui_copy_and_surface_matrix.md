@@ -6,6 +6,11 @@ human legal/language approval.
 **Rule:** link destinations, acceptance semantics and token handling are behaviour, not decorative
 copy. Tests must enforce them.
 
+**Commercial baseline:** launch-20260906, C-01–19 and TEAM0–TEAM5; see document 13. Amounts and
+performer limits below are approved business inputs. Public legal translations, tax/renewal wording
+and release gates remain separate. No STUDIO paid CTA, live sale/upgrade or general team onboarding
+before TEAM-RELEASE. STUDIO is a regular paid plan at launch, not a beta.
+
 ## 1. Component boundaries
 
 Do not expand the current generic `AuthLegalLinks` to every use case. Create three conceptual
@@ -22,7 +27,7 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | Surface/current file | Required links/copy | Navigation | Acceptance |
 |---|---|---|---|
 | `LoginScreen.tsx` | Terms · Privacy | landing URL with `from=login`; same tab in normal browser, new tab in standalone | none for an already-current version |
-| `SignupScreen.tsx`, owner/coworker owner | required owner sentence; Terms · DPA · Privacy | landing URL with `from=register`, locale, independently validated niche/public PRIMARY OfferCode and clamped attribution; external links must not clear form | required Terms+DPA before email or Google |
+| `SignupScreen.tsx`, owner/coworker owner | required owner sentence; Terms · DPA · Privacy | landing URL with `from=register`, locale, independently validated niche/released standard OfferCode and clamped attribution; external links must not clear form | required Terms+DPA before email or Google |
 | `SignupScreen.tsx`, staff invite | required staff sentence; Terms · Privacy | `from=register`; preserve validated invite return only inside app, never send invite token/path to landing | Terms only; no DPA representation |
 | `SignupScreen.tsx`, check-email state | Terms · Privacy | `from=login` or safe close/new-tab; never forward verification token | no second acceptance |
 | `ForgotPasswordPage.tsx` | Terms · Privacy | `from=forgot` | none |
@@ -34,7 +39,9 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | booking confirmation/proposal/status | same End Client links | new tab; never forward token | no duplicate agreement unless materially new terms/action |
 | receipt/status/preferences/client hub | Booking Terms when relevant · Privacy | new tab; never forward token/path/referrer | none unless the user starts a new contractual action |
 | landing footer | Terms · Privacy · Cookies · **Refund Policy** (approved before Paddle review) · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
-| landing Pricing/paid CTA | Terms · Privacy · Refund & Cancellation Policy; final local currency/tax at checkout | registration with untrusted public PRIMARY `offer`; no Paddle ID or direct checkout | none; Offer intent grants no access |
+| landing Pricing/paid CTA | Terms · Privacy · Refund & Cancellation Policy; final local currency/tax at checkout | registration with untrusted released standard `offer`; no Paddle ID or direct checkout | none; Offer intent grants no access |
+| landing STUDIO+ small contact block | Contact us · Privacy at enquiry collection; no price/limit/checkout | verified contact route, no Offer intent, provider token or client data | sending an enquiry is not purchase or marketing consent |
+| app team/invitation/offboarding surfaces | current permissions, performer capacity and future-work consequences; Terms · Privacy/DPA help as relevant | authenticated Company-scoped routes; token-safe external legal links | invited admin/staff accepts individual-use Terms; no automatic DPA/purchase authority |
 | app `/settings/billing` | current Plan/Offer, payer authority, trial/subscription state, Terms · Billing · Privacy · Paddle Buyer Terms | Paddle-hosted checkout/Buyer Portal only after backend creates flow | affirmative Terms/Billing + recurring purchase agreement with immutable evidence; Paddle confirmation audited under README §7.6 |
 | app checkout return/pending | pending/confirmed/failed/recovery copy | backend state refresh; browser redirect is never authority | none |
 | app restricted mode | billing recovery + approved read/settings/export/closure actions | keep safe app return; no public billing-state leak | payer authority for billing changes; owner authority remains separate |
@@ -87,7 +94,7 @@ Marketing, Web Push and optional analytics do not share the Terms checkbox.
 | `from` | Primary return copy | Destination |
 |---|---|---|
 | `login` | `← Back to log in` | hard-coded app `/login` |
-| `register` | `← Back to sign up` | hard-coded app `/register` + valid niche/public PRIMARY OfferCode/acquisition allowlist |
+| `register` | `← Back to sign up` | hard-coded app `/register` + valid niche/released standard OfferCode/acquisition allowlist |
 | `forgot` | `← Back to password recovery` | hard-coded app `/forgot-password` |
 | `onboarding` | `Return to onboarding →` | hard-coded app `/onboarding` |
 | `settings` | `Return to settings →` | hard-coded app `/settings` |
@@ -264,7 +271,51 @@ Never include:
 
 ### Landing Pricing disclaimer
 
-> Prices shown on this page are based on the listed Offer. Paddle Checkout confirms the final
+Approved launch design inputs (apply only with BILL7/C-11 and TEAM release gates):
+
+| Card | Price | Capacity label | Offer intent after public release |
+|---|---|---|---|
+| SOLO | US$19/month | 1 active service performer | SOLO_MONTHLY |
+| STUDIO | US$29/month | Up to 5 active service performers | STUDIO_MONTHLY |
+
+No annual toggle/equivalent, Founding badge, crossed-out price, lifetime lock, sibling discount or
+payer-level paid-subscription count limit. Do not describe the 1/5 limits as users/logins or seats.
+Do not add the proposed 14-day refund offer until R-01/B-07 is explicitly approved.
+
+Adjacent capacity help:
+
+> A service performer is someone who provides services in this workspace, with or without a login.
+> A working owner counts. Administrative access alone does not use a performer place. Invitations
+> reserving a new performer place count until accepted, expired or revoked; linking an invitation to
+> an existing active profile does not add another place. User access depends on the plan and permissions.
+
+Extended Terms/Billing help must explain that hiding a profile, an empty schedule or removing login
+does not free capacity; deactivation stops new assignment and requires explicit future-work handling.
+SOLO supports its owner's performer setup/schedule and independent coworker links; do not infer free
+additional-member invitations from the administrator exclusion. No per-seat add-on or automatic overage
+charge is approved. Final feature claims must come from approved capability entries, not job titles.
+
+Adjacent subscription help:
+
+> Each workspace has its own subscription. You can pay for multiple workspaces at the same standard
+> offers. Changing or cancelling one subscription does not change the price or paid access of another.
+
+Small block below the two cards:
+
+> **STUDIO+**
+>
+> Need a larger team? **Contact us**.
+
+Contact destination helper:
+
+> Tell us about your business needs. An enquiry does not start a subscription or reserve a price or
+> capacity. Read our **Privacy Notice**. Please do not include client records or sensitive information.
+
+No third purchase card, $49/10 candidate, other price/limit, launch date, guaranteed feature,
+checkout/upgrade CTA or trial grant. Verify F-21 fields, mailbox/tool and retention; any marketing
+opt-in is separate, unchecked and optional. Do not invent a CRM or a vendor from this layout.
+
+> Prices shown here are in USD. Paddle Checkout confirms the final
 > currency, applicable tax and total before purchase.
 
 Do not say `tax included` globally. With location-dependent tax treatment, inclusion depends on the
@@ -279,9 +330,11 @@ Adjacent expandable/help copy:
 > One trial is available per eligible payer, not per workspace. If that payer creates another eligible
 > workspace during the same trial window, it shares the original end date.
 
-This copy is allowed only after C-11 commercial/legal approval and the durable onboarding trigger,
+This copy is allowed only after C-11/C-19 commercial/legal approval and the durable onboarding trigger,
 BillingCustomer relationship and eligibility/replay tests pass. Do not add `then automatically charged` unless an explicit checkout has
 authorised the exact first charge and all `[TBD]` gates in the Billing Policy are approved.
+Do not label a trial as STUDIO or promise five-performer team access before C-19 and TEAM-RELEASE.
+The 21-day shared trial is unchanged by independent paid subscriptions or removal of a paid-count cap.
 
 ### Billing settings seller disclosure
 
@@ -323,6 +376,12 @@ amount and the separately confirmed subscription/access consequence. Never equat
 approved refund or a refund adjustment with cancellation of future billing.
 
 ### Billing authority
+
+For a SOLO↔STUDIO change, show the selected Company, existing subscription, new Plan/limit,
+effective date, due-now charge/credit, next recurring total, retained/limited capabilities and any
+required consent before confirmation. C-05 must decide over-limit active performers/pending invites,
+existing team access and provider failure/recovery; do not invent immediate effect or automatic staff
+deactivation. Gate every live STUDIO upgrade on TEAM-RELEASE. STUDIO+ contact cannot apply a change.
 
 > Billing is managed by `[Payer]`. Company ownership and billing authority are separate. Contact the
 > payer or support to change this subscription.
@@ -384,7 +443,16 @@ route is `/settings/data-transfer`. Never forward an export job ID, Company ID o
 - all token-bearing public pages open clean legal URLs with `noreferrer` behaviour where needed.
 - standalone PWA retains the original app view.
 - screen-reader tests distinguish Business terms from Perelai Booking Terms.
-- legal return preserves only a generated public PRIMARY OfferCode and does not infer it from niche;
+- legal return preserves only a generated standard OfferCode from the public release allowlist,
+  independently of niche;
+- the allowlist contains only released SOLO_MONTHLY/STUDIO_MONTHLY; retired FOUNDING_*/ADDITIONAL_*
+  and annual codes resume ordinary signup with fresh selection, without aliasing or rewriting history;
+- STUDIO CTA/live upgrade/team onboarding remain unavailable until TEAM-RELEASE; STUDIO+ contact
+  creates no Offer intent, trial entitlement, automatic marketing consent or payment;
+- performer capacity copy and tests include no-login/working-owner/admin-only/new-vs-existing invite,
+  expiry/revoke/deactivate/reactivate and 1→2/5→6 boundaries; no implied unlimited admin access;
+- revocation/offboarding copy matches TEAM2/3: later protected access is denied using current
+  permissions, future-work handling is explicit and unrelated Company membership persists;
 - Settings/Billing/Data Transfer legal return uses only hard-coded clean routes and never forwards a
   Company, export job, payer/provider or session identifier;
 - pricing/checkout/settings use the approved Billing disclosure and never expose provider IDs;

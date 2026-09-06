@@ -74,6 +74,15 @@ Consequences:
 Do not turn planned values into public guarantees before the indicated gates. Once approved, the
 Terms, Privacy Notice, DPA, UI help, support runbook and operational alerts must use the same values.
 
+**2026-09-06 TEAM alignment:** paying for STUDIO or being an administrative member does not grant
+owner-only Workspace Data Export. Exclusion from performer capacity is unrelated to data permissions.
+The same person may belong to several Companies; authorisation and archive scope stay Company-local.
+Revalidate current membership/owner authority at create, grant consumption and download, and final
+protected effects where applicable. TEAM2/3 evidence must cover revoked sessions/refresh, stale UI,
+outstanding grants and queued ready-notification recipients. Already-issued provider URLs may remain
+usable only for their verified bounded lifetime; never promise recall of downloaded copies. C-10
+retrieval/restricted-export decisions remain open despite the approved monthly prices/performer limits.
+
 ## 4. Archive contents and exclusions
 
 ### Planned included domains
@@ -262,9 +271,11 @@ authorization at download.
 
 ### Authorization and isolation
 
-- owner allowed; staff/supervisor/non-member/payer-without-owner-role denied;
+- owner allowed; administrative-only member/staff/supervisor/non-member/payer-without-owner-role denied;
 - actor remains active owner at both create and download;
 - Company switch, membership removal and role downgrade invalidate/reject stale actions;
+- TEAM revocation tests cover old JWT/refresh, in-flight final effects, outstanding grants, cached
+  workspace data and ready-notification recipients; same user's other Company permissions persist;
 - every dataset query and archive entry is tenant-scoped;
 - concurrency cannot mix Companies or overwrite another object's key.
 

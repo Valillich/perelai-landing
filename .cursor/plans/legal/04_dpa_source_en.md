@@ -309,8 +309,9 @@ Processor privacy contact: {{PRIVACY_EMAIL}}
 Legal notices: {{LEGAL_NOTICES_EMAIL}}  
 Address: {{BUSINESS_ADDRESS}}
 
-Customer privacy and security contacts are the owner/admin details recorded in its workspace or Order
-Form. The Customer must keep them current.
+Customer privacy and security contacts are the people expressly designated by the Customer in its
+workspace or Order Form. The Customer must keep them current. An administrative role alone does not
+establish authority to execute this DPA, issue owner-only export instructions or access all records.
 
 ---
 
@@ -345,7 +346,8 @@ Remove any activity that is not production-enabled. Add any new purpose before p
 
 ## D. Data Subjects
 
-- Customer owners, staff, contractors and invited users;
+- Customer owners, staff, contractors, administrative members, invited users and service performers
+  whose operational profile exists without a login;
 - current, prospective and former End Clients;
 - parents/guardians and dependants where lawfully entered for a service;
 - service contacts, attendees or counterparties appearing in imported events/records; and
@@ -357,7 +359,8 @@ Remove any activity that is not production-enabled. Add any new purpose before p
 - business relationship, preferences and communications;
 - appointment/visit/service history and public submissions;
 - request/order/reservation and fulfilment status;
-- staff assignment and business notes;
+- operational performer profiles, schedules, staff assignments and business notes;
+- membership/profile links and invitations handled on the Customer's instructions;
 - imported calendar/contact data and identifiers;
 - operational amounts, payment status/method, allocations, balances, prepaid Packages/instalments;
 - consent/policy-version evidence collected for the Customer;
@@ -389,13 +392,15 @@ Continuous/recurring for active Service use; imports and user-triggered operatio
 | governance and risk | [TBD] | [TBD] |
 | personnel confidentiality/training | [TBD] | [TBD] |
 | identity/authentication | [TBD] | [TBD] |
-| owner/staff RBAC | [TBD] | [TBD] |
-| tenant isolation/authorisation tests | [TBD] | [TBD] |
+| current Company permissions, admin/performer separation and least privilege | [TBD role/field/action scope; management-only does not imply owner export, broad finance access or DPA authority] | [TBD TEAM0/1/3 role matrix] |
+| session/refresh revocation and concurrent effects | [TBD successful revocation commit is enforcement boundary for later protected requests; recheck final in-flight effects; invalidate cached UI] | [TBD TEAM2 stale-session/concurrency evidence] |
+| tenant and staff data isolation | [TBD list/detail/search/aggregate/file/export/notification recipient scope; no cross-Company access from shared payer or user] | [TBD TEAM3 security tests] |
+| performer/membership migration and offboarding | [TBD preserve history/IDs, explicit ambiguous classification, future bookings/recurrence/preferences disposition; no login removal as capacity bypass] | [TBD TEAM1/3 migration dry-run and audit] |
 | encryption in transit | [TBD exact scope] | [TBD] |
 | encryption at rest/key management | [TBD; do not claim from platform assumption] | [TBD] |
 | OAuth token protection/revocation | [TBD] | [TBD] |
-| sensitive-action confirmation and export grants | [TBD actor/Company/action binding, hash, one-time use and TTL] | [TBD EX1 tests] |
-| private export storage and short-lived delivery | [TBD object isolation, signed URL max age, no URL persistence/logging] | [TBD EX1/storage tests] |
+| sensitive-action confirmation and export grants | [TBD actor/Company/action binding, current owner permission, hash, one-time use, TTL and revocation] | [TBD EX1 + TEAM2/3 tests] |
+| private export storage and short-lived delivery | [TBD object isolation, signed URL max age and revocation limitations, no URL persistence/logging; downloaded copies cannot be recalled] | [TBD EX1/storage + TEAM2/3 tests] |
 | CSV formula-injection neutralisation and archive integrity | [TBD] | [TBD EX1 format tests] |
 | secure development/change control | [TBD] | [TBD] |
 | vulnerability/dependency management | [TBD] | [TBD] |
@@ -440,6 +445,8 @@ Execution/incorporation method: [TBD]
    after current UK review.
 4. Complete Subprocessor List, notice/objection remedy and vendor flow-down evidence.
 5. Security Schedule and deletion Schedule are hard blockers, not optional annexes.
+   For STUDIO, verify TEAM-RELEASE against the deployed commit/schema/role matrix and unskipped tests.
+   Approved price/capacity, BILL off/observe modes and grants do not prove or bypass access controls.
 6. Align audit, cost, liability and governing law with Terms and mandatory law.
 7. Establish a reliable electronic incorporation/acceptance record for owners; staff should not accept
    the DPA without authority.
