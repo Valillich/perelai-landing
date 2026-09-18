@@ -2,7 +2,13 @@
 
 **Prepared:** 2026-08-23
 
-**Updated:** 2026-09-05.
+**Updated:** 2026-09-18 for staged legal launch and Drawer data classification.
+
+**Launch boundary:** document 14 controls sequencing. Reuse current export/security acceptance
+evidence. This matrix gates enabled self-service export and its promises, not every legal page or
+paid subscription. Required return/rights/deletion handling may use a verified manual support route;
+no new Privacy Access Export product or Drawer CSV feature is required. Existing enabled exports
+must retain their safeguards; pending commercial packaging cannot remove applicable data duties.
 
 **Status:** legal planning only; Workspace Data Export is implemented in API/server/worker/web
 according to the current app inventory. Production availability is unverified; SOLO packaging and
@@ -95,7 +101,10 @@ retrieval/restricted-export decisions remain open despite the approved monthly p
 - Requests, Orders, Instalments and Rental Reservations;
 - Packages;
 - Payment Accounts and Payment Allocations;
-- safe Import summaries and communication status; and
+- safe Import summaries and communication status;
+- Drawer session/operator references and cash history only where the accepted manifest actually
+  includes them; classify person links/notes and business-history retention under DR6, without
+  inventing a new download format or promising unsupported archive coverage; and
 - manifest metadata needed to understand schema/version/scope.
 
 ### Mandatory exclusions or transformations

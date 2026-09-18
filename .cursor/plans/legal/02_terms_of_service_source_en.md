@@ -107,7 +107,11 @@ include account and role management, calendar and scheduling, Google Calendar in
 records, operational Inbox items, imports, public appointment booking or other intake modes,
 operational payment records, reports, prepaid Packages, instalment tracking, transactional
 communications, notifications, public status or receipt pages and, when released for that Company,
-Workspace Data Export.
+Workspace Data Export. Where enabled, Cash Drawer helps record physical cash custody and compare
+counted cash with recorded movements. It is also available to a SOLO owner; it is not an STUDIO-only
+feature. It does not operate a fiscal cash register, provide a statutory Z-report, process client
+funds or establish tax compliance. Cash discrepancy records do not themselves alter the payment
+ledger or prove an employee's liability. The Customer remains responsible for required fiscal records.
 
 Features may be labelled beta, preview, experimental or controlled by a feature flag. Such features
 may change, be limited by market or account, or be withdrawn. Unless a separate written service level
@@ -234,6 +238,7 @@ Google sign-in and Google Calendar are separate functions. If you connect Google
 - you separately authorise the scopes presented by Google;
 - Google services and account processing are also governed by Google's terms and privacy materials;
 - you can revoke access through Perelai or Google, subject to the documented disconnect procedure;
+- Calendar reads/imports Google events using `calendar.events.readonly`; it does not write Perelai changes back to Google;
 - synchronisation may be delayed, incomplete or affected by Google limits/outages; and
 - disconnecting an integration does not necessarily delete business records already created from
   imported events. Use the Service's deletion/export controls or contact support as documented.
@@ -288,9 +293,9 @@ necessary booking confirmation or security message.
 
 ## 13. Plans, fees, trials, taxes and refunds
 
-**Monthly SOLO $19 / STUDIO $29 and performer limits 1/5 are approved under launch-20260906.
-Legal wording, implementation and the remaining commercial consequences are separately gated.
-Resolve all `[TBD]`, reconcile Paddle settings and pass TEAM-RELEASE before offering STUDIO.**
+**Launch policy updated 2026-09-18:** monthly SOLO $19 / STUDIO $29, 1/5 performers, the
+21-day STUDIO trial and the C-05/C-11 rules below are decided. Final legal wording and runtime
+verification remain separate. Use document 14; this draft is not an approved public contract.
 
 ### 13.1 Plans, Offers, Companies and payer relationship
 
@@ -320,9 +325,9 @@ can no longer receive new appointments; reactivation is checked against the limi
 does not expand user permissions or confer additional-member access on SOLO. Linking an independent
 coworker Company is distinct from adding an internal team member and does not share a subscription.
 
-`[TBD: reconcile the final TEAM0 counting/permission implementation and C-05 downgrade/over-limit
-rules with this text. STUDIO is a regular paid plan at release, not a beta; do not publish it as
-available before TEAM-RELEASE and Billing/legal gates.]`
+`[Release check: use current TEAM evidence and the decided SOLO-readiness rules in Billing §6.
+STUDIO is a regular paid plan and the trial Plan; public trial/team access or purchase requires
+TEAM-RELEASE and the applicable Billing/legal gates.]`
 
 STUDIO+ is an invitation to contact us about future needs. It has no agreed price or performer limit
 and is not a subscription available to buy. An enquiry does not grant access, reserve terms or
@@ -334,18 +339,21 @@ shows the authoritative Offer after the Company exists and before checkout.
 
 ### 13.2 Trial
 
-The planned trial is one 21-day no-card Service trial for each eligible payer relationship, not one
-trial per Company or user. It starts when the first eligible Company durably completes onboarding.
-Other eligible Companies attached to the same payer during that window share the original end date;
-creating another Company does not restart it. A Company still must complete its own onboarding before
-receiving Company-specific product access. Invited staff do not receive a separate payer trial.
+Each eligible payer relationship receives one 21-day STUDIO trial without a payment card, including
+team access and up to five active service performers, subject to current user permissions and
+released features. The first eligible completed onboarding starts the shared window. Other eligible
+Companies enrolled during it share the original end; creating a Company, choosing SOLO for later
+purchase or inviting staff does not restart the trial. The app shows the expiry date and time.
 
-`[TBD: C-19 trial Plan, included capabilities and existing-team accommodation. A selected landing
-Offer does not choose trial entitlements; team trials/onboarding cannot bypass TEAM-RELEASE.]`
+In launch v1 you cannot set up future payment during the trial. After expiry, you actively choose
+and buy SOLO or STUDIO for each Company. The trial does not automatically become a paid subscription
+or charge you on day 22. Without another valid access source, the workspace enters the approved
+restricted state: preserve existing data and the working support/recovery/data-request routes;
+new activity can be unavailable. Data retention/closure is governed by §17 and the Privacy/DPA.
 
-The no-card trial does not by itself authorise a charge. The exact checkout-during-trial behaviour,
-first-charge date, cancellation deadline and any eligibility exclusions are `[TBD: owner/counsel and
-BILL0 approval]` and must be shown before purchase.
+`[Release check: C-19 is STUDIO, independent of Offer intent. Early-card C-07 is unavailable in v1;
+only advertise the selected post-expiry path. Existing beta users need the C-09/C-16 transition
+notice and any necessary re-acceptance, not automatic payment consent or a new trial by default.]`
 
 ### 13.3 Seller roles, checkout and taxes
 
@@ -372,19 +380,26 @@ A browser redirect or checkout-success screen is not proof that paid access is a
 only after Perelai receives and projects an authenticated provider event. While confirmation is
 pending, the app must describe access as pending and provide recovery/support—not promise activation.
 
-Launch billing is monthly. The renewal date, automatic-renewal disclosure, price-change notice,
-cancellation effective date, failed-payment retries, grace/restricted mode, refund rules and
-post-cancellation access are `[TBD: approved production policy]`. They must be stated in the
-[Refund & Cancellation Policy](/legal/billing), Paddle Checkout and the Buyer Portal without
-contradiction. Mandatory buyer rights continue to apply where they cannot lawfully be excluded. Purchase-time
-assent to recurring billing and this Policy is separate from signup acceptance. Refunds of Paddle
-purchases are processed through Paddle; access, cancellation of future charges and data deletion
-are distinct consequences, as explained in the Policy.
+Subscriptions renew monthly after your affirmative purchase. You may cancel renewal; ordinary
+cancellation takes effect at the end of the paid period, with access until then. It does not provide
+a voluntary prorated refund for unused time. There is no separate launch money-back guarantee.
+Mandatory rights and Paddle's applicable remedies remain, including for incorrect charges, defects
+or non-delivery. The [Refund & Cancellation Policy](/legal/billing) explains requests, confirmations
+and data/access consequences. Signup or a free trial is not recurring-payment authorisation.
 
-A SOLO/STUDIO change applies to the same workspace subscription and leaves others unchanged. Its
-effective date, any charge/credit and changes to capacity/access must be shown before confirmation.
-`[TBD: C-05 proration, consent, downgrade over-limit handling and failed-change recovery; do not
-invent immediate effect or automatically deactivate staff. STUDIO changes require TEAM-RELEASE.]`
+Where released, a paid SOLO→STUDIO upgrade takes effect after verified successful payment with
+Paddle-calculated proration and explicit preview consent. A paid STUDIO→SOLO downgrade takes effect
+at the next renewal without proration/refund. Prepare SOLO first: at most one active performer,
+no active non-owner memberships and no live team invitations, including administrative invitations.
+Scheduling the downgrade immediately prevents new team admission/growth beyond SOLO while the
+current paid STUDIO period continues until renewal. An authorised person handles affected work and
+cash custody; Perelai does not choose staff to delete or revoke. Normal cancellation requires no
+SOLO preparation. All changes keep the same subscription/billing anchor and leave siblings unchanged.
+
+`[Release check: verify C-05 preview/readiness/provider recovery before offering changes; otherwise
+omit the offered-change promise and disclose actual availability. Verify cancellation/refund routes,
+final notice requirements, failed-payment grace/restriction and data access before enforcing them.
+A support enquiry is not a promise of an unavailable change. STUDIO requires TEAM-RELEASE.]`
 
 ## 14. Intellectual property and feedback
 
@@ -575,9 +590,10 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
 2. The Service is intended for B2B use, but counsel has not completed consumer-status analysis.
 3. Provider-neutral SaaS Billing architecture and Paddle as first production Merchant of Record are
    plan-frozen, not released. launch-20260906 approves monthly SOLO $19 / STUDIO $29, 1/5 performers,
-   independent Company subscriptions and contact-only STUDIO+. Generated catalog/provider evidence,
-   C-05 plan changes, C-19 trial Plan, conversion, renewal, cancellation, restriction and refunds
-   remain gated. TEAM-RELEASE is required for any STUDIO live sale/upgrade and public team onboarding.
+   independent Company subscriptions and contact-only STUDIO+. The 2026-09-16 supplement decides
+   C-05/C-19 and basic C-11; selected v1 has post-expiry purchase, no early setup. Reuse actual
+   implementation/provider evidence and document 14's stages. TEAM-RELEASE still gates public
+   STUDIO trial/team admission and STUDIO sale/upgrade; local policy approval does not prove release.
 4. Workspace Data Export is implemented in the current app inventory; production availability,
    C-10 packaging and the 24-hour artifact/security claims still require release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
    or forum is approved.

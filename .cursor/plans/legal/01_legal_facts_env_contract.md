@@ -5,11 +5,18 @@ documents.
 **Status:** mixed — code-observed facts plus unresolved business/legal facts.  
 **Rule:** repository evidence proves implementation, not production deployment or legal sufficiency.
 
-**Plan truth checked:** 2026-09-06 against launch-20260906, monetization catalogs/README,
-ADR-0013 and TEAM0–TEAM5, using the previous app CONTEXT/data inventory review.
-See `13_review_monetization_team_20260906.md` for the current commercial/team crosswalk and
-`12_review_and_launch_decisions_20260905.md` for the earlier legal-source review.
-Older code observations below require release verification; no production/vendor audit was performed.
+**Plan truth checked:** 2026-09-18 against the current monetization catalog, 2026-09-16 policy,
+selected v1 trial-conversion path, ADR-0013, CONTEXT and TEAM/Drawer readiness reports.
+Use `14_launch_legal_minimum_20260918.md` for current launch scope; reviews 12/13 are historical.
+This checks plan/evidence references, not production, vendor accounts or a fresh security audit.
+
+**Apply blockers by stage:** finish facts for current processing and the chosen launch country now;
+payment facts before charges; optional-feature facts before enabling/promising that feature.
+F-05 applies if the UK is served; F-13/15 specific archive controls apply to enabled export; F-17/18
+need an applicability decision for actual operations/markets, not all-country implementation.
+A documented manual rights/return/deletion process is acceptable if it meets actual duties.
+Mark irrelevant/deferred items with a reason, never fabricate facts or publish TBDs. Reuse one
+owner/legal review packet rather than a separate approval meeting for every row.
 
 ## 1. Legal identity env contract
 
@@ -98,12 +105,13 @@ changed. Build output or an approval manifest must preserve the exact rendered d
 | CSV/vCard imports | CURRENT CODE; DEPLOYMENT/ACCEPTANCE TO VERIFY | Current inventory includes API/server/worker imports. Reconcile later IM acceptance with historical findings; verify preview/purge/recovery guarantees before publication. |
 | Public booking/intake and tokenised status/receipt/preferences pages | LIVE IN CODE | Requires end-client terms, layered notice and token-safe legal links. |
 | Payment records/allocations | LIVE IN CODE | Perelai records operational information; no evidence of client-money processing or card vaulting. Do not call records payment processing. |
+| Cash Drawer | IMPLEMENTED CORE; OPERATIONAL RELEASE TO VERIFY | Cash custody sessions/counts/movements/discrepancies and actor references; also SOLO owner capability. DR0–6 code exists; use current DR7/readiness evidence. No fiscal register, acquiring, statutory Z-report or STUDIO-only promise. |
 | Company hard deletion/closure | NOT ESTABLISHED; DELETE STUB IN CURRENT ACTION INVENTORY | Do not promise a self-service erasure button. Approve/test assisted deletion, public link invalidation, storage cleanup and active subscription cancellation before publishing the route. |
-| SaaS Billing/subscriptions | ARCHITECTURE + MONTHLY COMMERCIAL DECISIONS APPROVED; RUNTIME NOT RELEASED | Provider-neutral Billing; Paddle is first adapter/MoR. launch-20260906 approves business catalog inputs, not generated provider mapping, legal copy, checkout or deployment. |
+| SaaS Billing/subscriptions | IMPLEMENTATION IN PROGRESS; LIVE READINESS NOT ESTABLISHED HERE | Reuse current BILL1/BILL2 evidence; old BILL1A-only verdict is historical. Paddle remains first MoR. Policy approval/fixture examples do not establish provider account approval or live behavior. |
 | BillingCustomer/Company relationship | APPROVED DESIGN; PLANNED RUNTIME | One BillingAccount per Company with at most one current paid subscription; one payer may fund any number independently at standard offers. No PRIMARY/ADDITIONAL, sibling discount or commercial paid-count cap. Payer identity grants no workspace permissions. |
-| SaaS trial | PLANNED | One 21-day no-card trial per BillingCustomer, shared by eligible Companies in the original window. Trigger/checkout conversion and exact commercial consequences remain implementation/approval gates. |
+| SaaS trial | C-19 APPROVED; RUNTIME RELEASE EVIDENCE REQUIRED | One shared local 21-day STUDIO trial per payer, up to 5 performers/TEAM. No card or provider subscription during trial in v1; choose/pay after expiry. No automatic day-22 charge or permanent free MVP. Drawer subject to operational availability. |
 | Pricing/tax | MONTHLY PRICES APPROVED; C-11 DISCLOSURE/PROVIDER SETUP PENDING | SOLO_MONTHLY 1900 USD / STUDIO_MONTHLY 2900 USD, MONTH, quantity 1. Standard prices, no Founding/reference prices or approved annual offers. Paddle may localise currency; `tax_mode=location`; no launch overrides/PPP/custom FX/VAT engine. |
-| Performer capacity and administrative access | APPROVED 1/5 LIMITS; TEAM RUNTIME/EVIDENCE PENDING | ACTIVE_SERVICE_PERFORMERS replaces TEAM_MEMBERS: SOLO 1 / STUDIO 5, including working owner, no-login profiles and invitations reserving new performer capacity. Admin-only access does not count or grant owner/team rights. |
+| Performer capacity and administrative access | APPROVED; TEAM CORE IMPLEMENTED, COMMERCIAL ADMISSION/RELEASE PENDING | SOLO 1 / STUDIO 5 active performers including working owner/no-login/reserved new-profile invites. ADMINISTRATOR reception differs from SUPERVISOR management. Reuse TEAM/TR evidence; verify TEAM4/5/BILL admission. |
 | STUDIO release | C-17 HARD GATE APPROVED; TEAM-RELEASE NOT PASSED | Regular paid launch plan, not beta. Any live STUDIO sale/upgrade (including internal charges), public paid CTA and general team onboarding require TEAM-RELEASE plus Billing/legal gates. |
 | STUDIO+ | C-18 CONTACT_ONLY APPROVED | Small contact block; no price, numeric limit, OfferCode, checkout, trial grant or launch commitment. Verify enquiry data/retention and actual support/mail provider before publication. |
 | Workspace Data Export | IMPLEMENTED; PRODUCTION/COMMERCIAL AVAILABILITY UNVERIFIED | Owner-only Company archive under Settings/Data Transfer; C-10 packaging/restricted create/download PENDING. Must not be called GDPR/privacy access export or backup. See `11_workspace_data_export_legal_matrix.md`. |
@@ -140,6 +148,7 @@ Owner must mark one value for every row: `LIVE`, `BETA`, `FEATURE_FLAGGED`, `PLA
 | marketing emails | [TBD] | Privacy, consent UX |
 | public receipts/status/preferences/client hub | [TBD] | Privacy, booking terms, link safety |
 | prepaid Packages/instalment tracking | [TBD] | Terms, Privacy |
+| Cash Drawer cash recording/reconciliation | [TBD operational availability, no repeat DR0–6] | Terms/Privacy/DPA and data retention; omit promise if disabled |
 | staff/RBAC, administrative membership and performer profile separation | [TBD: TEAM-RELEASE evidence] | Terms, Privacy, DPA; current permissions, revocation, isolation and explicit migration |
 | STUDIO regular paid team plan | [TBD: TEAM-RELEASE + BILL/legal gates] | Terms, Billing, UI; approved $29/month and 5 performers do not prove release |
 | STUDIO+ contact-only enquiry | [TBD: implemented contact route] | Privacy, retention, UI; not a released subscription |
@@ -197,7 +206,7 @@ never receive, log or analyse these values.
 These are functional conclusions, not labels that override facts. Escalate any Perelai reuse of
 Customer Data for its own analytics, advertising or model training: it may change the role analysis.
 
-## 5. Unresolved legal decisions — red release blockers
+## 5. Legal facts and applicability register — staged launch checks
 
 | ID | Decision owner | Required answer |
 |---|---|---|
@@ -208,22 +217,22 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | F-05 | Counsel | UK launch status, UK representative and review under current UK data law. |
 | F-06 | Owner + counsel | Launch countries and whether any purported B2B user may legally be a consumer. |
 | F-07 | Counsel | Liability cap, excluded losses, mandatory exceptions, indemnity and confidentiality carve-outs. |
-| F-08 | Owner + counsel | Apply approved SOLO $19 / STUDIO $29 monthly and 1/5 performers; no Founding, annual or sibling terms. Approve remaining C-05 plan-change timing/consent/proration/over-limit behaviour, trial conversion, renewal/cancellation/refunds/grace/restriction and C-11 disclosures. Provider identity/configuration still require evidence; Paddle selection is settled. |
+| F-08 | Owner + legal | C-05/C-19 and basic C-11 now decided: monthly renewal, period-end cancellation, no voluntary prorated refund; trial STUDIO, v1 post-expiry purchase. Verify enabled flows/copy, settle actual grace/restriction and served-market wording. No R-01 guarantee approval task. |
 | F-09 | Engineering/ops | Post-termination export window, deletion timing, backup rotation and legal holds. |
 | F-10 | Security | Evidence-backed TOMs, incident procedure and customer notification channel. |
 | F-11 | Finance/tax + counsel | Contracting disclosure between Perelai supplier terms and the applicable Paddle buyer entity; vendor payout accounting/tax for the FOP; launch jurisdictions/currencies. |
-| F-12 | Owner + counsel | C-07 first-charge timing/notices/cancellation; C-19 trial Plan/capabilities and existing-team accommodation. No assumed STUDIO trial from Offer intent and no TEAM-RELEASE bypass. |
+| F-12 | Product + legal | Verify the selected v1 path: no early payment setup/provider trial; 21-day STUDIO expires without charge, then affirmative purchase. C-07 early setup deferred; do not reopen first-charge alternatives or let its absence block ordinary checkout. |
 | F-13 | Engineering/security/privacy | Prove Workspace Data Export owner RBAC, fresh confirmations, grant/URL TTLs, archive isolation, audit events, object purge and Company-deletion interaction. |
 | F-14 | Privacy/counsel/ops | Approve the Privacy Access Export/manual request procedure, identity verification, Art. 15 supplemental information, Art. 20 scope, exceptions and third-party-rights review. |
 | F-15 | Privacy/ops | Approve retention for export job/audit metadata (planned default 12 months), failed/staging cleanup, legal holds and incident evidence. |
 | F-16 | Product/counsel | Define permitted read/export/delete/closure actions in Billing restriction and the neutral public-intake response; reconcile Terms, UI and policy. |
-| F-17 | Launch-country counsel + billing/product | Buyer-status and renewal/withdrawal/remedies matrix, including EU online withdrawal function, US state rules and actual UK commencement; purchase assent/durable confirmation and provider/support responsibility. See document 12 §4. |
+| F-17 | Launch-country legal + billing/product | Review buyer status, renewal/withdrawal/remedies for the first served market; verify purchase assent and confirmation plus Paddle/support responsibility. Use a provider withdrawal route if applicable and sufficient. Other-country annexes/custom automation only when required. Document 14 controls scope. |
 | F-18 | EU counsel + product/data operations | Data Act Chapter VI applicability/exceptions and, if applicable, switching terms, exportable data, retrieval window, charges and deletion. A short archive TTL or SOLO packaging does not override a legal duty. |
 | F-19 | Privacy + engineering | Customer Data licence, staff legal bases, Google Limited Use, coworker sharing, sensitive notes/files, processor-support roles and complete DPA authorisation/audit safeguards. |
-| F-20 | Security + product + privacy | TEAM0–TEAM5 evidence for actual deployment: current membership/permission enforcement, revocation/refresh/in-flight effects, cache/file/export/notification isolation, migration/history/future-work disposition. Reflect verified safeguards in DPA/TOMs; admin label is not owner/export/DPA authority. |
+| F-20 | Security + product + privacy | Reuse current TEAM/TR/Drawer acceptance reports for actual deployment, current sessions/permissions, offboarding and data isolation; TEAM-RELEASE still required for public STUDIO trial/sales. Verify actual ADMINISTRATOR/SUPERVISOR scope and Drawer enabled status; no repeated implementation or invented security claims. |
 | F-21 | Product + privacy + support | STUDIO+ contact channel, minimum fields, lawful basis by purpose, recipient/vendor map and enquiry retention. No automatic marketing enrolment, client-data intake or promise of future paid access. |
 
-## 6. Data and retention inventory — red until completed
+## 6. Data and retention inventory — complete enabled processing before publication
 
 | Category | Purpose/role | Active retention | Deleted/backups | Owner/evidence |
 |---|---|---|---|---|
@@ -235,6 +244,7 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | refund/cancellation/withdrawal requests and confirmations | controller/contract/claims | [TBD] | [TBD] | support + Paddle reconciliation |
 | coworker link/invite and occupied-time disclosure | mixed by purpose; business instruction | [TBD] | [TBD membership exit/history] | ADR-0010 + privacy |
 | attachments/FileAsset objects, metadata and staging | processor where Customer Data | [TBD] | [TBD object/DB/backups] | files/storage audit |
+| cash custody/count/movement/discrepancy records, notes and operator references | processor for business operations; limited security purpose by flow | [TBD cash record vs person-link periods] | [TBD privacy/anonymisation vs business history/holds] | Drawer DR6 + privacy; no new export promise |
 | workspace and Customer Data | processor | customer term/instruction [TBD] | [TBD] | deletion jobs |
 | deleted/archived clients | processor | [TBD] | [TBD] | schema/jobs |
 | import source and preview files | processor | [TBD hours/days] | [TBD] | import pipeline |

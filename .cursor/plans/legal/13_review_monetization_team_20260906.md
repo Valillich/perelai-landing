@@ -1,5 +1,10 @@
 # Legal alignment with monthly plans and TEAM release
 
+> **Historical review — current launch scope is [document 14](14_launch_legal_minimum_20260918.md).**
+> C-05/C-19 and the basic C-11 policy were decided on 2026-09-16; v1 provider evidence selects
+> purchase after expiry with no early card setup. R-01's proposed voluntary guarantee is excluded
+> from launch. Do not reopen these questions or rebuild TEAM/Drawer from this older status snapshot.
+
 **Reviewed:** 2026-09-06. **Scope:** landing legal plans and English source drafts only.
 Commercial authority is `launch-20260906`; this review does not approve public legal versions,
 implement Billing/TEAM, change production pages or authorise a charge.

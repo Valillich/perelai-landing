@@ -1,5 +1,10 @@
 # Legal plan review and launch decisions
 
+> **2026-09-18 execution override:** use [document 14](14_launch_legal_minimum_20260918.md).
+> This dated review's all-country examples and R-01 proposal are background, not additional launch
+> tasks. Current policy is a 21-day STUDIO trial, v1 purchase after expiry and no voluntary prorated
+> refund or separate launch guarantee, preserving mandatory/Paddle rights.
+
 > **Historical review.** The commercial assertions and C-01–16 crosswalk below describe the
 > 2026-09-05 baseline. `launch-20260906` supersedes its primary/additional, Founding, annual and
 > unapproved-price assumptions. Use [document 13](13_review_monetization_team_20260906.md) and the

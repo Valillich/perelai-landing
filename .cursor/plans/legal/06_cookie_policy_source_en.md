@@ -1,5 +1,9 @@
 # Perelai Cookie and Similar Technologies Policy — English source draft
 
+**Launch scope, 2026-09-18:** inventory the technologies actually enabled on each origin. Keep
+optional analytics/marketing disabled until required choice and disclosure work; do not delay
+necessary-only launch to build a full preference centre. Document 14 controls staged release.
+
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Complete a clean-browser audit for every production
 > origin and reconcile provider dashboards before approval. This policy covers cookies, local storage,
 > session storage, SDK memory, service-worker caches and similar device technologies.

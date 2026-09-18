@@ -6,10 +6,11 @@ human legal/language approval.
 **Rule:** link destinations, acceptance semantics and token handling are behaviour, not decorative
 copy. Tests must enforce them.
 
-**Commercial baseline:** launch-20260906, C-01–19 and TEAM0–TEAM5; see document 13. Amounts and
-performer limits below are approved business inputs. Public legal translations, tax/renewal wording
-and release gates remain separate. No STUDIO paid CTA, live sale/upgrade or general team onboarding
-before TEAM-RELEASE. STUDIO is a regular paid plan at launch, not a beta.
+**Launch baseline, 2026-09-18:** document 14; launch-20260906 prices plus decided C-05/C-19 and
+C-11 policy in the 2026-09-16 supplement. Selected v1: 21-day STUDIO without a card, then an active
+post-expiry purchase; no early setup, automatic trial-end charge or separate money-back guarantee.
+TEAM-RELEASE is required for public STUDIO trial/team admission as well as paid STUDIO. Publish
+only actual enabled flows and the first market's reviewed copy; other languages/features can follow.
 
 ## 1. Component boundaries
 
@@ -280,7 +281,7 @@ Approved launch design inputs (apply only with BILL7/C-11 and TEAM release gates
 
 No annual toggle/equivalent, Founding badge, crossed-out price, lifetime lock, sibling discount or
 payer-level paid-subscription count limit. Do not describe the 1/5 limits as users/logins or seats.
-Do not add the proposed 14-day refund offer until R-01/B-07 is explicitly approved.
+The old proposed R-01 14-day voluntary guarantee is excluded from v1; preserve mandatory/Paddle remedies.
 
 Adjacent capacity help:
 
@@ -321,20 +322,45 @@ opt-in is separate, unchecked and optional. Do not invent a CRM or a vendor from
 Do not say `tax included` globally. With location-dependent tax treatment, inclusion depends on the
 transaction country. Do not choose the Offer from Company currency, IP, locale, niche or region.
 
-### Trial
+### Trial and its end
 
-> Start a 21-day trial — no card required.
+> **Try STUDIO for 21 days — no card required.**
+> After your trial, choose SOLO from US$19/month or STUDIO from US$29/month for each workspace.
+> We do not charge you automatically when the trial ends. Paddle shows final currency, tax and total
+> before you confirm a purchase.
 
-Adjacent expandable/help copy:
+Adjacent help:
 
-> One trial is available per eligible payer, not per workspace. If that payer creates another eligible
-> workspace during the same trial window, it shares the original end date.
+> Your trial includes team access for up to five active service performers. One trial is available
+> per eligible payer. Workspaces joining during that window share its original expiry date.
 
-This copy is allowed only after C-11/C-19 commercial/legal approval and the durable onboarding trigger,
-BillingCustomer relationship and eligibility/replay tests pass. Do not add `then automatically charged` unless an explicit checkout has
-authorised the exact first charge and all `[TBD]` gates in the Billing Policy are approved.
-Do not label a trial as STUDIO or promise five-performer team access before C-19 and TEAM-RELEASE.
-The 21-day shared trial is unchanged by independent paid subscriptions or removal of a paid-count cap.
+Only promise Cash Drawer after its operational release/flag checks; it is also a SOLO owner feature.
+Use “cash recording and reconciliation”, not fiscal register, Z-report, acquiring or payroll.
+C-19 already selects STUDIO; verify its actual shared clock, entitlements and TEAM-RELEASE. Offer
+intent never chooses another trial Plan. Do not use “Start free with Solo” or imply a permanent free
+MVP. Price publication still needs the applicable C-11/BILL7 review.
+
+During trial, if the user opens Billing:
+
+> Your STUDIO trial ends on `[date/time]`. You can purchase a subscription after it ends.
+> No payment is scheduled.
+
+After expiry, without another valid source:
+
+> **Your trial has ended.** Choose a subscription to continue creating new records and bookings.
+> Your existing data has not been deleted. You can still use the available read, support and recovery
+> options shown here.
+
+Match actual restricted actions. Link data-return/privacy help even when self-service export is
+unavailable. No automatic “payment configured”, “charge on day 22”, countdown to an unauthorised
+charge or future-paid-choice admission fence in v1. Early setup is a deferred C-07 feature.
+
+### Existing-user transition
+
+Use the actual accepted beta terms and approved C-09 cohort dates. Notify affected owners of the
+prospective terms/trial/restriction change with a readable summary and exact effective date; collect
+any required re-acceptance. Do not silently restart a trial, convert old beta acceptance to recurring
+billing consent or charge someone who never purchased. Preserve records and a support/data route.
 
 ### Billing settings seller disclosure
 
@@ -366,10 +392,15 @@ needs a tested incident/support path; it is not an indefinite fulfilment disclai
 
 Before checkout, present the exact amounts/dates and approved linked Terms + Refund & Cancellation
 Policy with an affirmative purchase control under README §7.6. Privacy acknowledgement and marketing
-permission remain separate. Do not display proposal R-01 as approved copy until B-07 is signed off.
+permission remain separate. R-01 is excluded from launch. Use the decided policy:
 
-Provide **Cancel renewal**, **Request a refund**, and any legally required **Withdraw from contract**
-as distinct actions. Show cancellation effective date, paid-through access and confirmation. Test
+> Your subscription renews monthly. Cancel renewal at any time; ordinary cancellation leaves access
+> until the paid period ends. We do not provide voluntary prorated refunds for unused time. This does
+> not limit your mandatory rights or remedies under Paddle's applicable rules.
+
+Provide **Cancel renewal** and **Request a refund** through verified Paddle/support links; identify
+any legally required withdrawal route separately. A verified provider mechanism may suffice; do not
+build a custom refund/withdrawal engine without a concrete unmet requirement. Show cancellation effective date, paid-through access and confirmation. Test
 Paddle/Perelai support routes when login is unavailable. Do not require a retention survey or a new
 Terms acceptance to reach cancellation. For full/partial/tax-only refunds, show the provider-confirmed
 amount and the separately confirmed subscription/access consequence. Never equate a request with an
@@ -377,11 +408,25 @@ approved refund or a refund adjustment with cancellation of future billing.
 
 ### Billing authority
 
-For a SOLO↔STUDIO change, show the selected Company, existing subscription, new Plan/limit,
-effective date, due-now charge/credit, next recurring total, retained/limited capabilities and any
-required consent before confirmation. C-05 must decide over-limit active performers/pending invites,
-existing team access and provider failure/recovery; do not invent immediate effect or automatic staff
-deactivation. Gate every live STUDIO upgrade on TEAM-RELEASE. STUDIO+ contact cannot apply a change.
+If plan changes are released, present the selected Company, current subscription, provider preview,
+new recurring total and effective date before confirmation. Apply decided C-05:
+
+- **Downgrade:** “SOLO starts at your next renewal on [date]. No refund or credit is issued for the
+  remaining STUDIO period. Scheduling this change stops new team invitations/additional member access
+  and performer growth beyond SOLO immediately.” Show a verified scheduled/pending/failed outcome.
+- **SOLO readiness:** show separate counts for active/reserved performers (maximum one), active
+  non-owner memberships (none) and all live team invitations (none). “Prepare your team for SOLO:
+  keep one active performer, revoke additional access and close pending invitations.” Only authorised
+  users see remediation details; the payer without team permission receives counts/support guidance.
+- **Upgrade:** show Paddle's due-now prorated charge, new monthly total and preserved renewal date.
+  Obtain agreement; display pending until provider-confirmed success, with no entitlement on decline.
+- **Undo:** confirm restored renewal terms only after verified success; uncertainty stays pending.
+
+Current paid STUDIO continues until renewal after a scheduled downgrade, but growth is constrained
+immediately as disclosed. Never select/deactivate/delete staff automatically or bypass cash-custody/
+future-booking disposition. Cancellation needs no readiness checks. Post-trial SOLO purchase uses
+readiness too, without backdating a subscription into the free trial. Keep optional changes disabled
+until the provider/app evidence passes; no STUDIO+ change or early-card setup is offered.
 
 > Billing is managed by `[Payer]`. Company ownership and billing authority are separate. Contact the
 > payer or support to change this subscription.
@@ -447,7 +492,7 @@ route is `/settings/data-transfer`. Never forward an export job ID, Company ID o
   independently of niche;
 - the allowlist contains only released SOLO_MONTHLY/STUDIO_MONTHLY; retired FOUNDING_*/ADDITIONAL_*
   and annual codes resume ordinary signup with fresh selection, without aliasing or rewriting history;
-- STUDIO CTA/live upgrade/team onboarding remain unavailable until TEAM-RELEASE; STUDIO+ contact
+- STUDIO trial/team admission and paid CTA/live upgrade remain unavailable until TEAM-RELEASE; STUDIO+ contact
   creates no Offer intent, trial entitlement, automatic marketing consent or payment;
 - performer capacity copy and tests include no-login/working-owner/admin-only/new-vs-existing invite,
   expiry/revoke/deactivate/reactivate and 1→2/5→6 boundaries; no implied unlimited admin access;
@@ -460,6 +505,11 @@ route is `/settings/data-transfer`. Never forward an export job ID, Company ID o
   payment-received claim;
 - pre-purchase Terms/Billing assent and recurring agreement retain exact versions and durable
   confirmation; cancel/refund/withdrawal and lost-login routes satisfy B-13/B-14;
+- STUDIO trial works without card/provider subscription, retains one original shared end, and
+  expiry alone charges zero; the post-expiry purchase explicitly agrees monthly renewal;
+- no R-01 guarantee, free-MVP/Founding, early-card or automatic day-22-charge claim remains;
+- enabled C-05 downgrade has separate performer/member/invite blockers, immediate growth fence,
+  STUDIO service through renewal and zero downgrade credit; cancellation is never readiness-gated;
 - restricted public intake is neutral and does not reveal billing state;
 - Data Transfer routes separate Import, Workspace Data Export and privacy-request help;
 - Export is absent from onboarding, owner-only, and ready notifications contain no attachment/token;

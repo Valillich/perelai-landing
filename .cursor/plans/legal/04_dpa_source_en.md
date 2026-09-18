@@ -1,5 +1,10 @@
 # Perelai Data Processing Addendum — English source draft
 
+**Launch scope, 2026-09-18:** use document 14. This DPA applies to real Customer Personal Data
+during the trial as well as paid service. Complete the actual Article 28 particulars, vendor/transfer
+and security/return facts; no enterprise certification, custom audit platform or automatic privacy
+export is required. Reuse accepted controls and a working manual assistance process where sufficient.
+
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Counsel must complete the parties, processing details,
 > security measures, subprocessors, transfer mechanism, deletion periods, liability hierarchy and
 > signature/incorporation method. This draft is designed around GDPR Article 28 but is not a completed
@@ -321,7 +326,7 @@ establish authority to execute this DPA, issue owner-only export instructions or
 
 Provision, support and security of the Perelai business operations Service as enabled/configured by
 the Customer, including scheduling, client management, public intake, imports, operational records,
-communications, attachments, owner-triggered Workspace Data Export and coworker occupied-time
+communications, attachments, cash custody/reconciliation records where enabled, owner-triggered Workspace Data Export and coworker occupied-time
 sharing at the Customer's instruction, where these features are deployed.
 
 ## B. Duration
@@ -363,6 +368,7 @@ Remove any activity that is not production-enabled. Add any new purpose before p
 - membership/profile links and invitations handled on the Customer's instructions;
 - imported calendar/contact data and identifiers;
 - operational amounts, payment status/method, allocations, balances, prepaid Packages/instalments;
+- enabled Drawer session/count/movement/discrepancy data, notes and operator references;
 - consent/policy-version evidence collected for the Customer;
 - `[files/attachments only if verified live]`; and
 - technical/security metadata necessary to provide the processor service.
@@ -392,7 +398,7 @@ Continuous/recurring for active Service use; imports and user-triggered operatio
 | governance and risk | [TBD] | [TBD] |
 | personnel confidentiality/training | [TBD] | [TBD] |
 | identity/authentication | [TBD] | [TBD] |
-| current Company permissions, admin/performer separation and least privilege | [TBD role/field/action scope; management-only does not imply owner export, broad finance access or DPA authority] | [TBD TEAM0/1/3 role matrix] |
+| current Company permissions, admin/performer separation and least privilege | [TBD verify ADMINISTRATOR reception/controlled checkout vs SUPERVISOR broader finance; neither is payer/owner by default] | [TBD current TEAM/TR release evidence; no repeat implementation] |
 | session/refresh revocation and concurrent effects | [TBD successful revocation commit is enforcement boundary for later protected requests; recheck final in-flight effects; invalidate cached UI] | [TBD TEAM2 stale-session/concurrency evidence] |
 | tenant and staff data isolation | [TBD list/detail/search/aggregate/file/export/notification recipient scope; no cross-Company access from shared payer or user] | [TBD TEAM3 security tests] |
 | performer/membership migration and offboarding | [TBD preserve history/IDs, explicit ambiguous classification, future bookings/recurrence/preferences disposition; no login removal as capacity bypass] | [TBD TEAM1/3 migration dry-run and audit] |
@@ -405,6 +411,7 @@ Continuous/recurring for active Service use; imports and user-triggered operatio
 | secure development/change control | [TBD] | [TBD] |
 | vulnerability/dependency management | [TBD] | [TBD] |
 | logging/monitoring/access review | [TBD] | [TBD] |
+| Cash Drawer if enabled | [TBD current open/close visibility, manager-note/closed-history restrictions and in-app recipients; separate business-history and operator-data retention] | [TBD existing DR6/DR7 reports and actual operational flag] |
 | incident response | [TBD] | [TBD] |
 | backups, restoration and continuity | [TBD RPO/RTO only if committed] | [TBD] |
 | deletion/retention controls | [TBD] | [TBD] |

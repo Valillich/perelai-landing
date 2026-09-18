@@ -1,5 +1,10 @@
 # Perelai Privacy Notice — English source draft
 
+**Launch scope, 2026-09-18:** document 14 controls sequencing. Complete actual enabled data flows
+and the first served market now; optional integrations remain separately gated. A working manual
+rights/return/deletion procedure is sufficient if it meets the applicable duties; no privacy portal
+is required. Do not publish this internal note or unresolved draft material.
+
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** This working draft must be reconciled with production
 > data flows, retention, vendors and launch jurisdictions, then approved by qualified counsel. It is a
 > privacy notice, not a request for blanket consent.
@@ -142,6 +147,8 @@ or session-storage statement.]`
 - notes, performer profiles with or without login, schedules, staff assignment and `[files, only if verified live]`;
 - prices, amounts, payment methods/statuses and allocation records;
 - prepaid Packages and instalment schedules;
+- where Cash Drawer is enabled: cash-account/session and operator references, opening/closing
+  counts, recorded movements, expected/count differences and related business notes;
 - booking, confirmation, cancellation and no-show history;
 - versions of business and Perelai terms accepted for a public interaction;
 - records imported from CSV, vCard, calendars or other supported sources.
@@ -207,6 +214,16 @@ findings must be reconciled with later evidence before approving preview, cleanu
 issue-download or retention claims; their old status is not proof of current deployment.
 
 ### Team access and business enquiries
+
+Where enabled, Cash Drawer records the business's cash-custody and reconciliation activity under
+its instructions. Operator identities and notes may be personal data; discrepancy records do not
+by themselves determine employee fault, payroll or disciplinary outcomes. The business must inform
+affected people, limit access and avoid unnecessary sensitive information in notes. Restricted
+reception access can include current open-session totals and closing preview; broader finance,
+closed history and manager notes follow the actual role matrix, not a promise that administrators
+see no financial information at all. Any close notification uses the verified in-app recipient flow.
+`[Release facts: verify actual Drawer fields/recipients and record-vs-actor retention under DR6;
+do not promise a new Drawer CSV/export or external notification channel.]`
 
 The business decides which people may access its workspace and which may be assigned to provide
 services. Administrative membership and a performer profile are separate. Being the payer, having a
@@ -412,6 +429,7 @@ rules, not an indefinite licence.
 |---|---|---|
 | account/profile | `[TBD]` | `[TBD]` |
 | operational performer profiles, membership and invitations | `[TBD by purpose, including no-login profiles and expired/revoked invites]` | business record retention and membership exit are distinct `[TBD]` |
+| Cash Drawer business records, discrepancy notes and operator links, where enabled | `[TBD distinguish business history from identifying actor/notes]` | `[TBD deletion/anonymisation, legal holds and backups]`; do not erase accounting history merely by removing access |
 | session/refresh revocation and access/cache state | `[TBD actual security TTLs]` | invalidate/revoke/clear `[TBD TEAM2 evidence]` |
 | STUDIO+ enquiries and replies | `[TBD enquiry lifecycle]` | mailbox/tool/backups `[TBD]`; marketing records separate |
 | legal/purchase acceptance and refund/withdrawal evidence | `[TBD: category-specific limitation/legal period]` | restricted archive `[TBD]` |
@@ -433,7 +451,8 @@ rules, not an indefinite licence.
 | public confirmation/status/access tokens | `[TBD]` | invalidate/delete `[TBD]` |
 | backups | `[TBD cycle]` | rotational deletion `[TBD]` |
 
-This table is a release blocker. Do not publish the draft table or replace it with only `as long as
+Complete this table for actually enabled processing before publishing the notice; mark unused
+categories absent internally and omit them from public claims. Do not publish the draft table or replace it with only `as long as
 necessary`. Legal holds may temporarily override ordinary deletion for specified records, with access
 restricted to that purpose.
 
@@ -478,11 +497,12 @@ risk. These may include access controls, tenant/role permissions, transport secu
 backups, monitoring, confidentiality and incident procedures, but only measures verified in the
 approved security schedule will be described in the production notice.
 
-`[Internal release evidence: TEAM0–TEAM5 must demonstrate current Company membership/permissions,
+`[Internal release evidence: reuse current TEAM/TR reports; the release revision must demonstrate current Company membership/permissions,
 session and refresh revocation, protected reads and final write effects, cached UI invalidation,
 files/export grants and current notification recipients. Verify bounded already-issued object URLs;
 do not imply immediate recall of downloaded data. TEAM-RELEASE is required before STUDIO sale or
-general team onboarding; price approval or feature flags are not evidence of these controls.]`
+general team onboarding, including the STUDIO trial; price approval or internal test admission is
+not evidence of these controls. Drawer operational approval is a separate feature gate.]`
 
 No internet service is completely secure. Do not publish claims of `military-grade`, `bank-level`,
 zero-risk security, encrypted-at-rest tokens or certification without current scope-specific evidence.

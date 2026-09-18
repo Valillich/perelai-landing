@@ -10,6 +10,10 @@
 
 ## About this list
 
+`[Internal launch scope, 2026-09-18: complete vendors actually processing launch data; omit unused
+candidate rows. Google verification, STUDIO trial and Drawer do not themselves add a new contracted
+vendor. Do not invent a CRM, certification or enterprise procurement process. Document 14 applies.]`
+
 {{LEGAL_PROVIDER_FULL_NAME}}, trading as Perelai, uses the entities listed in the approved table below
 to process Customer Personal Data on behalf of business customers. Terms such as `Subprocessor` are
 used according to the [Data Processing Addendum](/legal/dpa).
