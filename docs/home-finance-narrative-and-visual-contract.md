@@ -277,7 +277,7 @@ Reference instant stays `2026-07-15T12:00:00.000Z` (`APP_SCREEN_REFERENCE`, unch
 | 3 | Leo | Root Color | 6 | Visit, Completed | Paid (card) | Yes | $140 |
 | 4 | Leo | Styling Finish (add-on) | 6 | Visit, Completed | Paid (cash) | Yes | $25 |
 | 5 | Ana | Haircut & Finish | 9 | Visit, Completed | Paid (cash) | Yes | $65 |
-| 6 | Noah | Gloss & Toner | 12 | Visit, Completed | Paid (**package redemption**) | **No — $0** | $90 |
+| 6 | Noah | Gloss & Toner | 12 | Visit, Completed | Paid (**package redemption**) | **No — $0** | $0 |
 | 7 | Eva | Corrective Color | 14 | Visit, Completed | **Pending — not settled** | No | $260 |
 | 8 | Ana | Root Color (no-show fee) | 15 | Visit, **No-show** | Paid (card) | Yes | $50 |
 
@@ -338,15 +338,17 @@ category names or amounts into every alt string.
 ### 6.4 Reconciled totals
 
 All figures below sum exactly from §6.2; no percentage, random seed, or independent estimate is used
-anywhere in this table.
+anywhere in this table. The package was sold before this illustrative period: its sale recognised
+revenue once then, while the redemption below is a zero-amount visit line. The paid instalment is real
+cash that reduces an open order, not new revenue.
 
 | Metric | Formula | Value |
 |---|---|---:|
-| Completed work (rows 1–8) | sum of all 8 rows | **$885** |
-| Settled revenue | completed work − row 7 (pending) | **$625** |
-| Cash recorded | settled revenue − row 6 (package redemption, $0 allocation) | **$535** |
+| Completed work (rows 1–8) | sum of the visit line amounts | **$795** |
+| Settled revenue | paid visit lines; redeemed line is $0 | **$535** |
+| Cash recorded | paid visit cash ($535) + paid order instalment ($150) | **$685** |
 | Expenses | E1 + E2 | **$240** |
-| Calculated profit | settled revenue − expenses (label only — no public equation, §6.4.1) | **$385** |
+| Calculated profit | settled revenue − expenses (label only — no public equation, §6.4.1) | **$295** |
 | Open-order balance | $450 order total − $150 paid | **$300** |
 | Overdue instalments | Instalment 2 only | **$100** |
 
@@ -354,9 +356,9 @@ anywhere in this table.
 
 | Category | Completed work | Settled revenue | Cash recorded | Expenses | Calculated profit |
 |---|---:|---:|---:|---:|---:|
-| Color services (rows 1,2,3,6,7,8) | $795 | $535 | $445 | $240 | $295 |
+| Color services (rows 1,2,3,6,7,8) | $705 | $445 | $595 | $240 | $205 |
 | Styling & finishing (rows 4,5) | $90 | $90 | $90 | $0 | $90 |
-| **Total** | **$885** | **$625** | **$535** | **$240** | **$385** |
+| **Total** | **$795** | **$535** | **$685** | **$240** | **$295** |
 
 **By client (settled revenue):**
 
@@ -365,9 +367,9 @@ anywhere in this table.
 | Mia | $255 | $255 | $255 | fully cash-settled |
 | Leo | $165 | $165 | $165 | fully cash-settled |
 | Ana | $115 | $115 | $115 | includes the no-show fee |
-| Noah | $90 | $90 | $0 | settled entirely by package redemption; separately holds the $300 open order above — two independent facts about one client, intentionally, because that is exactly what the Financial-states argument claims |
+| Noah | $0 | $0 | $150 | the package redemption settles a zero-amount visit; the separately recorded paid instalment lowers the $300 open order without adding revenue |
 | Eva | $260 | $0 | $0 | completed, not yet settled |
-| **Total** | **$885** | **$625** | **$535** | matches the top-line table |
+| **Total** | **$795** | **$535** | **$685** | matches the top-line table |
 
 #### 6.4.1 Profit terminology
 
@@ -387,12 +389,12 @@ comparison. Applying the §6.2 dates:
 | 1 | $0 | $0 | $0 |
 | 6 | $420 (rows 1–4) | $180 (E1) | $240 |
 | 11 | $485 (+row 5) | $240 (+E2) | $245 |
-| 16 | $625 (+rows 6, 8; row 7 excluded — pending) | $240 | $385 |
-| 21 | $625 | $240 | $385 |
-| 26 | $625 | $240 | $385 |
-| 31 | $625 | $240 | $385 |
+| 16 | $535 (+row 8; row 6 is a $0 redemption and row 7 is pending) | $240 | $295 |
+| 21 | $535 | $240 | $295 |
+| 26 | $535 | $240 | $295 |
+| 31 | $535 | $240 | $295 |
 
-The line's final value ($385) matches the Profit KPI tile exactly — this is the reconciliation the
+The line's final value ($295) matches the Profit KPI tile exactly — this is the reconciliation the
 current independently-seeded `trend` array does not provide. **Rule for FM4B:** any additional period
 (a second month, a quarter, a year) shown anywhere on the homepage must be built by applying this same
 cumulative-ledger method to that period's own dated records, never by an independent seed. FM3
@@ -406,13 +408,14 @@ ledger, one row per mechanism so the section proves FC7 rather than merely resta
 | Row | Client | Item | Mechanism | Cash |
 |---|---|---|---|---|
 | 1 | Mia | Dimensional Color / Balayage — $220 | Payment recorded against a visit | Yes |
-| 2 | Noah | Gloss & Toner — $90 | Payment recorded against a visit **via package redemption** | **No — $0**, badge "package redemption, no cash movement" |
+| 2 | Noah | Gloss & Toner | **Package redemption** settles a zero-amount visit line | **No — $0**, badge "package redemption, no new payment or revenue" |
 | 3 | Noah | 3-session order, instalment 1 — $150 | Payment recorded against an order/instalment | Yes |
 | 4 | Ana | Root Color no-show fee — $50 | Payment recorded against a visit marked no-show | Yes |
 
 This four-row set is deliberately different from the three-row Hero/Finance-overview feed (§6.7) — its
-job is to span all three mechanisms named in `records.body` (visit, order, instalment), including the
-one case (row 2) that makes FC2/FC7's settled-vs-cash boundary concrete rather than abstract.
+job is to span all three mechanisms named in `records.body` (visit, package, order/instalment), including
+the one case (row 2) that makes the settlement-without-new-cash-or-revenue boundary concrete rather than
+abstract.
 
 ### 6.7 Finance overview (Hero) — compact visual, resolving the alt-text gap
 
@@ -422,9 +425,9 @@ The current `MockFinanceKpis`/`MockFinanceScreen` render only the KPI tiles, the
 unrelated 3-row feed — the category and open-order elements do not exist yet. **FM4B must extend the
 Finance-overview/Hero visual, not merely re-skin it**, to add:
 
-1. KPI tiles — Revenue $625, Cost $240, Profit $385 (§6.4), replacing the `revenue * 0.27` computation.
+1. KPI tiles — Revenue $535, Cost $240, Profit $295 (§6.4), replacing the `revenue * 0.27` computation.
 2. The cumulative trend line from §6.5, replacing the independently seeded one.
-3. One compact category line: "Color services $535 · Styling & finishing $90" (§6.4; labels frozen
+3. One compact category line: "Color services $445 · Styling & finishing $90" (§6.4; labels frozen
    §6.3). Amounts still route through `RegionCurrency` — the `$` forms here are documentation only.
 4. One compact open-orders line: "$300 on open orders" (§6.4).
 5. The existing 3-row feed, now sourced from §6.2 rows 1, 3 (Color Product expense, $180, dated 3
@@ -552,10 +555,10 @@ visual — doing so would break the build-time determinism this whole contract d
 - It does not prove per-service profitability. Aggregation stops at the category level (FC4); the
   fixture's category grouping (§6.3) is illustrative, not a claim about what every workspace's
   categories look like.
-- It does not prove that settled revenue always, or even usually, matches a bank balance — the fixture
-  is deliberately built to prove the **opposite**: row 6 (Noah, package redemption) is settled revenue
-  with zero cash movement, by design, to make FC2/FC7's boundary concrete rather than asserted.
-- It does not prove export, refund, or correction capability (FC8 `BLOCKED`, FC10 not audited) — no row
+- It does not prove that revenue always, or even usually, matches a bank balance — the fixture
+  deliberately separates the zero-amount package redemption (row 6) from the real order payment (row 3).
+  The former adds no cash or revenue; the latter adds cash while reducing debt, not revenue.
+- It does not prove export, refund, or correction capability (FC8 commercial promise unverified, FC10 not audited) — no row
   in §6.2 represents any of those states, and none may be added without a new claim-contract entry.
 - It does not prove TC5 (coworker) capability — `collaboration.tsx` is untouched and still one-zone only.
 - It does not prove real-time or live data — the whole fixture is frozen at one static reference instant

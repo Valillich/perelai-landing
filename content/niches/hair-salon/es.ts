@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Cuando el cliente liquida, el pago se adjunta a esa visita en lugar de a un total anónimo de fin de día, así la cifra conserva su vínculo con el cliente y la categoría de servicio.",
       },
       {
-        title: "Un canje de paquete liquida sin un pago nuevo",
-        body: "Un cliente prepago que canjea un Tratamiento liquida la visita y no mueve dinero ese día. Perelai registra el canje, de modo que pagos registrados e ingresos liquidados siguen siendo dos cifras distintas.",
+        title: "Un canje de paquete liquida sin dinero ni ingresos nuevos",
+        body: "Un cliente prepago que canjea un Tratamiento liquida la visita. La venta del paquete se registra una vez; el canje no añade dinero ni ingresos ese día.",
       },
       {
         title: "El período responde",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Un cliente en un curso prepago de citas",
       perelaiWord: "Paquete",
-      why: "Los créditos se descuentan al usar Visitas. Un canje liquida la visita y no crea movimiento de caja, por eso el trabajo canjeado y los pagos registrados se muestran como cosas distintas.",
+      why: "Los créditos se descuentan al usar Visitas. La venta del paquete se registra una vez; un canje liquida la visita sin añadir dinero ni ingresos.",
     },
     {
       theirWord: "Un curso de tratamientos pagado a plazos",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "A qué puede acceder cada miembro del equipo",
-      perelaiWord: "Acceso Personal o Supervisor",
+      perelaiWord: "Acceso de equipo según el rol",
       why: "Cada persona se invita con un rol, y el acceso sigue ese rol, para que el equipo trabaje en un solo espacio de trabajo sin que cada cuenta se configure igual.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Añade a quienes trabajan en el suelo",
-        body: "Invita a miembros del equipo con acceso Personal o Supervisor, y mantén horarios, ausencias y servicios asignados juntos. El acceso sigue el rol con el que se invita a cada persona.",
+        body: "Invita a miembros del equipo con el acceso adecuado y mantén horarios, ausencias y servicios asignados juntos. El acceso sigue el rol con el que se invita a cada persona.",
       },
       {
         title: "Trae lo que ayuda esta semana",
-        body: "Importa contactos con vCard, conecta Google Calendar y comparte tu enlace de reserva. Empieza por las próximas semanas en lugar de pausar el salón para una migración.",
+        body: "Importa contactos con vCard y comparte tu enlace de reserva. Empieza por las próximas semanas en lugar de pausar el salón para una migración.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "¿Una cita completada cuenta como dinero recibido?",
-      a: "No. Trabajo completado, ingresos liquidados y pagos registrados se siguen por separado. Una cita puede estar terminada y seguir esperando pago, y un paquete prepago puede liquidar una visita sin que ese día se mueva dinero. Mantener los tres aparte es lo que da sentido a la cifra del período.",
+      a: "No. Trabajo completado, ingresos y pagos registrados se siguen por separado. Una cita puede estar terminada y seguir esperando pago; un paquete prepago se registra al venderse y su canje liquida una visita sin añadir dinero ni ingresos. Mantener estos estados aparte es lo que da sentido a la cifra del período.",
     },
     {
       q: "¿Qué incluye la cifra de beneficio?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "¿Puede mi equipo usar el mismo espacio de trabajo?",
-      a: "Sí. Invita a miembros del equipo con acceso Personal o Supervisor. Horarios, ausencias y servicios asignados se quedan en el mismo espacio, con acceso según cada rol.",
+      a: "Sí. Invita a miembros del equipo con el acceso adecuado. Horarios, ausencias y servicios asignados se quedan en el mismo espacio, con acceso según cada rol.",
     },
   ],
 

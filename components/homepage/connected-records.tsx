@@ -41,13 +41,14 @@ export function ConnectedRecords({ locale }: { locale: PublishedLocale }) {
         : resolveProductName(locale, row.nameKey)
     const client = clientDisplayName(locale, row.clientKey)
     const dateLabel = dateFormatter.format(new Date(Date.UTC(year, month, row.day)))
+    const direction = row.kind === "package_redemption" ? "neutral" : "income"
 
     return {
       id: row.sourceId,
       title: `${client} · ${title}`,
       subtitle: dateLabel,
       amount: row.amount,
-      direction: "income" as const,
+      direction,
       badge: kindBadge[row.kind],
     }
   })

@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Traga só o que a segunda precisa",
-        body: "Números do telefone via vCard, Google Calendar conectado se você vive nele, e um link pronto para colar onde as pessoas te encontram. Nove anos de histórico podem vir depois, ou nunca.",
+        body: "Contatos do telefone via vCard e um link pronto para colar onde as pessoas te encontram. Nove anos de histórico podem vir depois, ou nunca.",
       },
     ],
   },

@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Renk Uzmanı Çalışma Alanını Açın", body: "Bu sayfadan geldiğinizde onboarding sırasında bağımsız renk uzmanı şablonu varsayılan olarak seçili gelecektir." },
       { title: "Listeyi Kendinize Göre Düzenleyin", body: "Danışmanlık, Dip Boyası, Balyaj / Boyutlu Renk, Renk Düzeltme, Cila & Tonlama ve Kesim & Fön ile başlayın. İhtiyacınıza göre özelleştirin." },
-      { title: "En Önemli Verilerinizi Getirin", body: "vCard ile kişileri içe aktarın, Google Takvim'i bağlayın ve kendi randevu bağlantınızı paylaşın." },
+      { title: "En Önemli Verilerinizi Getirin", body: "vCard ile kişileri içe aktarın ve kendi randevu bağlantınızı paylaşın." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Müşteriler DM'den yazmadan randevu alabilir mi?", a: "Randevu bağlantınızı profilinizde paylaşın veya mesajla gönderin. Müşteriler hizmet, uzman ve saat seçer." },
     { q: "Biri gelmediğinde (No-show) ne olur?", a: "Perelai e-posta, uygulama içi ve push ile otomatik hatırlatmalar gönderebilir. İş ve gelir ayrı takip edildiği için gelinmeyen randevu gelir sayılmaz." },
     { q: "Bir boya gününün gerçekten karlı olup olmadığını görebilir miyim?", a: "Tahsil edilen miktarı kaydedin, ürün ve malzeme giderlerini bağlayın; gelir, gider ve alacakları tablo tutmadan görün." },
-    { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. Kişilerinizi vCard ile aktararak başlayın ve isteğe bağlı olarak Google Takvim'i bağlayın. Hizmet listenizi zamanla adım adım ayarlayabilirsiniz." },
+    { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. Kişilerinizi vCard ile aktararak başlayın. Hizmet listenizi zamanla adım adım ayarlayabilirsiniz." },
   ],
   labels: {
     terminologyTitle: "Salonunuzdaki terimlerin Perelai'da karşılığı var.",

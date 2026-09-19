@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Nehmen Sie nur mit, was Montag braucht",
-        body: "Nummern vom Telefon per vCard, Google Kalender verbunden, wenn Sie darin leben, und ein Link zum Einfügen, wo Leute Sie finden. Neun Jahre Historie können später folgen — oder nie.",
+        body: "Nummern vom Telefon per vCard und ein Link zum Einfügen, wo Leute Sie finden. Neun Jahre Historie können später folgen — oder nie.",
       },
     ],
   },

@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Abre el espacio de Lash Artist", body: "Llegar desde esta página hace que la plantilla para lash artists independientes salga primero. Tu inicio reflejará los servicios que los clientes ven en tu enlace, en lugar de un inicio genérico pensado para macro-salones." },
       { title: "Adapta el menú a ti", body: "Empieza con Diseño de Cejas, Tinte, Laminado, Lifting y Tinte, Extensiones y Relleno de Pestañas. Cambia las duraciones, pon lo que tú ofreces o quita lo que no. La lista sigue siendo tuya." },
-      { title: "Tráete lo fundamental", body: "Importa los contactos de tu teléfono vía vCard, vincula Google Calendar y después comparte tu enlace. Así empezarás a usar la info útil hoy mismo, sin tener que pausar tus citas para una gran migración." },
+      { title: "Tráete lo fundamental", body: "Importa los contactos de tu teléfono vía vCard y después comparte tu enlace. Así empezarás a usar la info útil hoy mismo, sin tener que pausar tus citas para una gran migración." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "¿Podrán reservar sin pasar por mis DMs?", a: "Comparte tu enlace de reserva en tu bio o en un mensaje. Ellos escogen servicio, persona y hora. Alguien que busca un Tinte de Cejas lo ve claro, y quien busca un Relleno no tiene que esperar a que le pases horarios por texto." },
     { q: "¿Qué pasa si un cliente llega tarde o no aparece?", a: "Perelai envía avisos automáticos por correo, en la app y por push. Como separa el trabajo hecho del dinero ingresado, una Visita a la que no se presentan no cuenta como si lo hubieras cobrado. La decisión pendiente se queda ahí hasta que veas qué hacer con esa reserva." },
     { q: "¿Puedo ver lo que ingresé esta semana en realidad?", a: "Apunta lo cobrado, vincula tus Materiales al trabajo que toque, y mira tus ingresos, costes y lo que falta por pagar sin usar Excel. Te da un punto de partida mejor que andar mirando atrás sumando rellenos y materiales en los chats." },
-    { q: "¿Tengo que mudar todo en un mismo fin de semana?", a: "No. Empieza subiendo contactos con vCard y enganchando tu Google Calendar si quieres. La lista de servicios se puede ir editando. Arranca con las reservas próximas y luego vas trayendo más, sin dejar de atender lo que paga las facturas." },
+    { q: "¿Tengo que mudar todo en un mismo fin de semana?", a: "No. Empieza subiendo contactos con vCard. La lista de servicios se puede ir editando. Arranca con las reservas próximas y luego vas trayendo más, sin dejar de atender lo que paga las facturas." },
   ],
   labels: {
     terminologyTitle: "Las palabras de tu cabina tienen hueco en Perelai.",

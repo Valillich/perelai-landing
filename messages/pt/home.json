@@ -68,7 +68,7 @@
     "step1Title": "Escolha seu segmento",
     "step1Body": "32 tipos de negócios selecionáveis, cada um com uma lista editável de serviços. Modelos relevantes também incluem opcionais e custos vinculados.",
     "step2Title": "Traga seus clientes",
-    "step2Body": "Importe contatos do seu celular via vCard. Conecte seu Google Agenda e mantenha ambos os lados sincronizados.",
+    "step2Body": "Importe contatos do seu celular via vCard. Depois organize sua agenda no Perelai.",
     "step3Title": "Compartilhe seu link de agendamento",
     "step3Body": "Um link na sua bio. Os clientes agendam diretamente no seu próprio link."
   },
@@ -106,8 +106,8 @@
     "a2": "Você confirma seu e-mail e faz uma configuração rápida: seu segmento, seus serviços, sua equipe (se tiver) e importações opcionais.",
     "q3": "Meus serviços já estarão lá?",
     "a3": "Sim: cada tipo de negócio começa com uma lista editável de serviços ou itens. Modelos relevantes também incluem opcionais e custos.",
-    "q4": "Posso trazer meus clientes e minha agenda?",
-    "a4": "Sim: contatos do seu celular (vCard) e sincronização bidirecional com o Google Agenda.",
+    "q4": "Posso importar clientes do meu celular?",
+    "a4": "Sim: importe contatos do seu celular via vCard.",
     "q5": "Posso gerenciar múltiplos serviços e opcionais?",
     "a5": "Sim. Cada modelo inclui serviços selecionáveis e opções relevantes.",
     "q6": "Isso é um software de contabilidade?",
@@ -122,7 +122,7 @@
     },
     "q_bank": {
       "question": "O número vai bater com o meu banco?",
-      "answer": "Nem sempre. A receita do resumo representa trabalho concluído que foi liquidado, e um pacote pré-pago pode liquidar um atendimento sem movimentar dinheiro. Pagamentos registrados e saldos das contas de pagamento mostram a movimentação de dinheiro separadamente."
+      "answer": "Nem sempre. PAID significa que um atendimento está liquidado, não que dinheiro foi recebido. A venda de um pacote é registrada uma vez; resgatar seu crédito não adiciona novo pagamento nem receita. Pagamentos registrados e saldos das contas de pagamento mostram a movimentação de dinheiro separadamente."
     }
   },
   "closing": {
@@ -182,7 +182,7 @@
       "orderInstalment": "Pedido de 3 sessões, 1ª parcela",
       "records": {
         "visitPayment": "Pagamento vinculado a um atendimento",
-        "packageRedemption": "Resgate de pacote, sem movimentação de dinheiro",
+        "packageRedemption": "Resgate de pacote — sem novo pagamento nem receita",
         "orderInstalment": "Pagamento vinculado a um pedido/uma parcela",
         "noShowFee": "Pagamento vinculado a um atendimento marcado como não comparecimento"
       }
@@ -190,7 +190,7 @@
   },
   "states": {
     "title": "Trabalho concluído, receita, pagamentos registrados e saldos de pedidos em aberto não são a mesma coisa.",
-    "body": "Um atendimento pode estar concluído antes de contar para a receita. Um pacote pré-pago pode cobrir um atendimento sem um novo pagamento, enquanto um pedido em aberto pode ainda ter um valor pendente. O Perelai distingue esses estados para que cada número tenha um significado claro."
+    "body": "Um atendimento pode estar concluído antes de contar para a receita. Um pacote pré-pago é registrado como receita quando é vendido; resgatá-lo liquida um atendimento sem novo pagamento nem receita, enquanto um pedido em aberto pode ainda ter um valor pendente. O Perelai distingue esses estados para que cada número tenha um significado claro."
   },
   "drivers": {
     "title": "Veja de onde vem o resultado",
@@ -198,7 +198,7 @@
   },
   "records": {
     "title": "Todo número tem trabalho por trás",
-    "body": "Os pagamentos são vinculados ao atendimento, ao pedido ou à parcela que pagaram, e permanecem conectados ao cliente e à categoria de serviço correspondentes."
+    "body": "Os registros de pagamento e os resgates de pacote permanecem vinculados ao atendimento, pedido ou parcela correspondentes, bem como ao cliente e à categoria de serviço."
   },
   "operations": {
     "title": "Mantenha o controle financeiro atualizado enquanto trabalha",

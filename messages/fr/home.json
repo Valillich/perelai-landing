@@ -68,7 +68,7 @@
     "step1Title": "Choisissez votre activité",
     "step1Body": "32 types d'entreprises sélectionnables, chacun avec une liste de prestations modifiable. Les modèles concernés incluent aussi des options et des coûts reliés.",
     "step2Title": "Importez vos clients",
-    "step2Body": "Importez les contacts de votre téléphone via vCard. Connectez votre Google Agenda et gardez les deux côtés synchronisés.",
+    "step2Body": "Importez les contacts de votre téléphone via vCard. Organisez ensuite votre planning dans Perelai.",
     "step3Title": "Partagez votre lien de réservation",
     "step3Body": "Un lien dans votre bio. Les clients réservent directement sur votre propre lien."
   },
@@ -106,8 +106,8 @@
     "a2": "Vous confirmez votre e-mail, puis vous passez une courte configuration : votre activité, vos prestations, votre équipe (si vous en avez une) et des importations facultatives.",
     "q3": "Mes prestations seront-elles déjà présentes ?",
     "a3": "Oui — chaque type d'entreprise commence avec une liste modifiable de prestations ou d'articles. Les modèles concernés incluent aussi des options et des coûts.",
-    "q4": "Puis-je importer mes clients et mon agenda ?",
-    "a4": "Oui : contacts depuis votre téléphone (vCard) et synchronisation bidirectionnelle avec Google Agenda.",
+    "q4": "Puis-je importer des clients depuis mon téléphone ?",
+    "a4": "Oui : importez les contacts de votre téléphone via vCard.",
     "q5": "Puis-je gérer plusieurs prestations et options ?",
     "a5": "Oui. Chaque modèle inclut des prestations sélectionnables et des options pertinentes.",
     "q6": "Est-ce un logiciel de comptabilité ?",
@@ -122,7 +122,7 @@
     },
     "q_bank": {
       "question": "Le chiffre correspondra-t-il à ma banque ?",
-      "answer": "Pas toujours. Le revenu du résumé représente le travail réalisé qui a été réglé, et un forfait prépayé peut régler une visite sans déplacer d'argent. Les paiements enregistrés et les soldes des comptes de paiement montrent le mouvement d'argent séparément."
+      "answer": "Pas toujours. PAID signifie qu’une visite est réglée, pas que de l’argent a été reçu. La vente d’un forfait est enregistrée une fois ; utiliser son crédit n’ajoute ni paiement ni revenu. Les paiements enregistrés et les soldes des comptes de paiement montrent le mouvement d'argent séparément."
     }
   },
   "closing": {
@@ -182,7 +182,7 @@
       "orderInstalment": "Commande à 3 séances, 1er versement",
       "records": {
         "visitPayment": "Paiement affecté à une visite",
-        "packageRedemption": "Utilisation d'un forfait, sans mouvement d'argent",
+        "packageRedemption": "Utilisation d'un forfait : aucun nouveau paiement ni revenu",
         "orderInstalment": "Paiement affecté à une commande/un versement",
         "noShowFee": "Paiement affecté à une visite marquée absente"
       }
@@ -190,7 +190,7 @@
   },
   "states": {
     "title": "Le travail réalisé, le revenu, les paiements enregistrés et les soldes de commandes ouvertes ne sont pas la même chose.",
-    "body": "Une visite peut être réalisée avant de compter dans le revenu. Un forfait prépayé peut couvrir une prestation sans nouveau paiement, tandis qu’un solde peut rester dû sur une commande ouverte. Perelai distingue clairement ces états afin que chaque chiffre ait une signification précise."
+    "body": "Une visite peut être réalisée avant de compter dans le revenu. Un forfait prépayé est enregistré comme revenu lors de sa vente ; son utilisation règle une visite sans nouveau paiement ni revenu, tandis qu’un solde peut rester dû sur une commande ouverte. Perelai distingue clairement ces états afin que chaque chiffre ait une signification précise."
   },
   "drivers": {
     "title": "Voyez d'où vient le résultat",
@@ -198,7 +198,7 @@
   },
   "records": {
     "title": "Chaque chiffre a du travail derrière lui",
-    "body": "Les paiements sont affectés à la visite, à la commande ou au versement qu'ils ont réglé, et restent reliés au client et à la catégorie de prestation concernés."
+    "body": "Les enregistrements de paiement et les utilisations de forfait restent reliés à la visite, à la commande ou au versement concernés, ainsi qu’au client et à la catégorie de prestation."
   },
   "operations": {
     "title": "Mettez à jour votre suivi financier au fil de votre activité",

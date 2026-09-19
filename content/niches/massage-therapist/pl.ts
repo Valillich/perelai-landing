@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Przenieś tylko to, czego potrzebuje poniedziałek",
-        body: "Kontakty z telefonu przez vCard, Google Calendar, jeśli w nim żyjesz, i link do wklejenia tam, gdzie Cię znajdują. Dziewięć lat historii może przyjść później — albo nigdy.",
+        body: "Kontakty z telefonu przez vCard i link do wklejenia tam, gdzie Cię znajdują. Dziewięć lat historii może przyjść później — albo nigdy.",
       },
     ],
   },

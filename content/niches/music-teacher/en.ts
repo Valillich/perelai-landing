@@ -114,7 +114,7 @@ export const content: NichePageContent = {
   faq: [
     {
       q: "How does Perelai handle semester tuition blocks?",
-      a: "Prepaid term packages act as student credits. When a student attends their scheduled time, a credit is deducted, aligning attendance perfectly with revenue.",
+      a: "Prepaid term packages act as student credits. The package sale is recorded once; when a student attends, a credit is deducted without adding new cash or revenue.",
     },
     {
       q: "Can I log my instrument tuning and maintenance?",

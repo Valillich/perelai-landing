@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Pazartesi'nin ihtiyaç duyduğunu taşıyın",
-        body: "Telefondan vCard ile numaralar, içinde yaşıyorsanız Google Takvim bağlantısı ve sizi buldukları yere yapıştırılacak bir bağlantı. Dokuz yıllık geçmiş sonra gelebilir — ya da hiç.",
+        body: "Telefondan vCard ile kişiler ve sizi buldukları yere yapıştırılacak bir bağlantı. Dokuz yıllık geçmiş sonra gelebilir — ya da hiç.",
       },
     ],
   },

@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Kirpik Uzmanı Çalışma Alanını Açın", body: "Bu sayfadan geldiğinizde onboarding sırasında kirpik uzmanı şablonu varsayılan olarak seçili gelir." },
       { title: "Hizmet Listenizi Özelleştirin", body: "Kaş Tasarımı, Kaş Boyama, Brow Lamination, Lash Lifting & Boyama, İpek Kirpik ve Kirpik Bakımı ile başlayın." },
-      { title: "En Önemli Verileri Getirin", body: "vCard ile kişileri aktarın, Google Takvim'i bağlayın ve randevu bağlantınızı paylaşın." },
+      { title: "En Önemli Verileri Getirin", body: "vCard ile kişileri aktarın ve randevu bağlantınızı paylaşın." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Müşteriler mesaj atmadan randevu alabilir mi?", a: "Randevu bağlantınızı bio'da veya mesajda paylaşın. Müşteriler hizmet, uzman ve saat seçer." },
     { q: "Müşteri geç kalırsa veya gelmezse ne olur?", a: "Perelai otomatik e-posta, push ve uygulama içi hatırlatmalar gönderir. İş ve ödeme ayrı tutulduğu için gelinmeyen randevu gelir sayılmaz." },
     { q: "Haftanın gerçekten ne kazandırdığını görebilir miyim?", a: "Gerçek tahsilatları yazın, yapıştırıcı ve malzeme giderlerini bağlayın; gelir, gider ve alacakları tablo tutmadan görün." },
-    { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. vCard ile kişileri aktararak başlayın ve isteğe bağlı Google Takvim'i bağlayın. Hizmet listenizi zamanla düzenleyebilirsiniz." },
+    { q: "Her şeyi bir hafta sonu içinde mi taşımalıyım?", a: "Hayır. vCard ile kişileri aktararak başlayın. Hizmet listenizi zamanla düzenleyebilirsiniz." },
   ],
   labels: {
     terminologyTitle: "Stüdyonuzdaki terimlerin Perelai'da karşılığı var.",

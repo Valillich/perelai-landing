@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Wenn der Kunde bezahlt, hängt die Zahlung an diesem Termin — nicht an einer anonymen Tagesgesamtsumme. So bleibt die Zahl mit dem Kunden und der Leistungskategorie dahinter verbunden.",
       },
       {
-        title: "Eine Paketeinlösung schließt ab, ohne neue Zahlung",
-        body: "Ein vorausbezahlter Kunde, der eine Behandlung einlöst, schließt den Termin ab und bewegt an diesem Tag kein Geld. Perelai erfasst die Einlösung, sodass erfasste Zahlungen und realisierter Umsatz zwei getrennte Zahlen bleiben statt einer irreführenden.",
+        title: "Eine Paketeinlösung schließt ohne neues Geld oder Umsatz ab",
+        body: "Ein vorausbezahlter Kunde, der eine Behandlung einlöst, schließt den Termin ab. Der Paketverkauf wird einmal erfasst; die Einlösung fügt an diesem Tag weder Geld noch Umsatz hinzu.",
       },
       {
         title: "Der Zeitraum antwortet",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Ein Kunde auf einem vorausbezahlten Kurs von Terminen",
       perelaiWord: "Paket",
-      why: "Guthaben wird abgebucht, wenn Termine genutzt werden. Eine Einlösung schließt den Termin ab und erzeugt keine Geldbewegung — deshalb erscheinen eingelöste Arbeit und erfasste Zahlungen als unterschiedliche Dinge.",
+      why: "Guthaben wird abgebucht, wenn Termine genutzt werden. Der Paketverkauf wird einmal erfasst; eine Einlösung schließt den Termin ohne neues Geld oder Umsatz ab.",
     },
     {
       theirWord: "Ein Behandlungskurs, der über mehrere Termine abgezahlt wird",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "Was jedes Teammitglied sehen und tun kann",
-      perelaiWord: "Zugang als Mitarbeiter oder Supervisor",
+      perelaiWord: "Teamzugang nach Rolle",
       why: "Jede Person wird mit einer Rolle eingeladen, und der Zugang folgt dieser Rolle — so kann ein Team in einem Arbeitsbereich arbeiten, ohne dass jedes Konto gleich eingerichtet ist.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Fügen Sie die Personen hinzu, die den Salon führen",
-        body: "Laden Sie Teammitglieder mit Zugang als Mitarbeiter oder Supervisor ein und halten Sie Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen zusammen. Der Zugang folgt der Rolle, mit der jede Person eingeladen wird.",
+        body: "Laden Sie Teammitglieder mit dem passenden Zugang ein und halten Sie Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen zusammen. Der Zugang folgt der Rolle, mit der jede Person eingeladen wird.",
       },
       {
         title: "Bringen Sie mit, was diese Woche hilft",
-        body: "Importieren Sie Kontakte per vCard, verbinden Sie Google Kalender und teilen Sie Ihren Buchungslink. Beginnen Sie mit den nächsten Wochen, statt den Salon für eine Migration zu pausieren.",
+        body: "Importieren Sie Kontakte per vCard und teilen Sie Ihren Buchungslink. Beginnen Sie mit den nächsten Wochen, statt den Salon für eine Migration zu pausieren.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Zählt ein abgeschlossener Termin als erhaltenes Geld?",
-      a: "Nein. Abgeschlossene Arbeit, realisierter Umsatz und erfasste Zahlungen werden getrennt geführt. Ein Termin kann fertig sein und trotzdem auf Zahlung warten, und ein vorausbezahltes Paket kann einen Termin schließen, ohne dass an diesem Tag Geld bewegt wird. Die drei getrennt zu halten, gibt der Zeitraumzahl eine klare Bedeutung.",
+      a: "Nein. Abgeschlossene Arbeit, Umsatz und erfasste Zahlungen werden getrennt geführt. Ein Termin kann fertig sein und trotzdem auf Zahlung warten; ein vorausbezahltes Paket wird beim Verkauf erfasst, seine Einlösung schließt einen Termin ohne neues Geld oder Umsatz ab. Diese Zustände getrennt zu halten, gibt der Zeitraumzahl eine klare Bedeutung.",
     },
     {
       q: "Was steckt in der Gewinnzahl?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Kann mein Team denselben Arbeitsbereich nutzen?",
-      a: "Ja. Laden Sie Teammitglieder mit Zugang als Mitarbeiter oder Supervisor ein. Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen bleiben im selben Arbeitsbereich, mit Zugang nach Rolle.",
+      a: "Ja. Laden Sie Teammitglieder mit dem passenden Zugang ein. Arbeitszeiten, Abwesenheiten und zugewiesene Leistungen bleiben im selben Arbeitsbereich, mit Zugang nach Rolle.",
     },
   ],
 

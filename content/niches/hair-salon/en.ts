@@ -81,8 +81,8 @@ export const content: NichePageContent = {
         body: "When the client settles, the payment attaches to that visit rather than to an anonymous end-of-day total, so the figure keeps its connection to the client and the service category behind it.",
       },
       {
-        title: "A package redemption settles without a new payment",
-        body: "A prepaid client redeeming a Treatment settles the visit and moves no money that day. Perelai records the redemption, so recorded payments and settled revenue stay two separate numbers instead of one misleading one.",
+        title: "A package redemption settles without new cash or revenue",
+        body: "A prepaid client redeeming a Treatment settles the visit. The package sale was recorded once; the redemption adds neither cash nor revenue that day.",
       },
       {
         title: "The period answers back",
@@ -115,7 +115,7 @@ export const content: NichePageContent = {
     {
       theirWord: "A client on a prepaid course of appointments",
       perelaiWord: "Package",
-      why: "Credits draw down as Visits are used. A redemption settles the visit and creates no cash movement, which is why redeemed work and recorded payments are shown as different things.",
+      why: "Credits draw down as Visits are used. The package sale is recorded once; a redemption settles the visit without new cash or revenue.",
     },
     {
       theirWord: "A course of treatments being paid off across visits",
@@ -129,7 +129,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "What each team member can access",
-      perelaiWord: "Staff or Supervisor access",
+      perelaiWord: "Team access based on role",
       why: "Each person is invited with a role, and access follows that role, so a team can work in one workspace without every account being set up the same way.",
     },
   ],
@@ -148,11 +148,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Add the people who work the floor",
-        body: "Invite team members with Staff or Supervisor access, and keep schedules, time off and assigned services together. Access follows the role each person is invited with.",
+        body: "Invite team members with the appropriate access, and keep schedules, time off and assigned services together. Access follows the role each person is invited with.",
       },
       {
         title: "Bring over what helps this week",
-        body: "Import contacts with vCard, connect Google Calendar, and share your booking link. Start with the next few weeks rather than pausing the salon for a migration.",
+        body: "Import contacts with vCard and share your booking link. Start with the next few weeks rather than pausing the salon for a migration.",
       },
     ],
   },
@@ -172,7 +172,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Does a completed appointment count as money received?",
-      a: "No. Completed work, settled revenue and recorded payments are tracked separately. An appointment can be finished and still be waiting on payment, and a prepaid package can settle a visit without any money moving that day. Keeping the three apart is what makes the period figure mean something.",
+      a: "No. Completed work, revenue and recorded payments are tracked separately. An appointment can be finished and still be waiting on payment; a prepaid package is recorded when sold, then its redemption settles a visit without new cash or revenue. Keeping these states apart is what makes the period figure mean something.",
     },
     {
       q: "What does the profit figure include?",
@@ -180,7 +180,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Can my team use the same workspace?",
-      a: "Yes. Invite team members with Staff or Supervisor access. Schedules, time off and assigned services stay in the same workspace, with access based on each role.",
+      a: "Yes. Invite team members with the appropriate access. Schedules, time off and assigned services stay in the same workspace, with access based on each role.",
     },
   ],
 
@@ -239,7 +239,7 @@ export const content: NichePageContent = {
  *  terminology   "grouped by category … not each individual service"             → FC4 (as a limit)
  *  terminology   "does not measure how much product a single formula used"       → FC4 (as a limit)
  *  terminology   "revenue minus the expenses recorded"                           → FC9
- *  terminology   "Staff or Supervisor access", access follows role               → TC2, TC4
+ *  terminology   role-based team access, access follows role                      → TC2, TC4
  *  setup[2]      schedules, time off, assigned services                          → TC3
  *  faq[1]        category granularity, client history, no per-service P&L        → FC4, FC5
  *  faq[2]        no formula costing, no backbar inventory                        → FC4 boundary

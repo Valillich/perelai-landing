@@ -2,6 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server"
 import { createElement } from "react"
 import { describe, expect, it } from "vitest"
 import { MockCalendarMonth } from "@/components/mock/MockCalendarMonth"
+import { MockConnectedRecordsFeed } from "@/components/mock/MockConnectedRecordsFeed"
 import { MockFinanceKpis } from "@/components/mock/MockFinanceKpis"
 import { MockInboxTriage } from "@/components/mock/MockInboxTriage"
 import { MockVisitCard } from "@/components/mock/MockVisitCard"
@@ -87,12 +88,12 @@ describe("mock components", () => {
 describe("buildAppScreenDataset finance fixture wiring", () => {
   it("derives kpis, trend and feed from the finance fixture — not revenue*0.27", () => {
     const dataset = buildAppScreenDataset("independent_colorist", "en", "US", REFERENCE)
-    expect(dataset.kpis).toEqual({ revenue: 625, cost: 240, profit: 385 })
+    expect(dataset.kpis).toEqual({ revenue: 535, cost: 240, profit: 295 })
     expect(dataset.openOrderBalance).toBe(300)
-    expect(dataset.trend.at(-1)?.profit).toBe(385)
+    expect(dataset.trend.at(-1)?.profit).toBe(295)
     expect(dataset.feed).toHaveLength(3)
     expect(dataset.feed.map((item) => item.amount)).toEqual([220, 180, 140])
-    expect(dataset.categoryBreakdown.map((row) => row.settledRevenue)).toEqual([535, 90])
+    expect(dataset.categoryBreakdown.map((row) => row.settledRevenue)).toEqual([445, 90])
   })
 
   it("stays byte-identical across builds for a fixed reference instant", () => {
@@ -101,5 +102,27 @@ describe("buildAppScreenDataset finance fixture wiring", () => {
     expect(a.kpis).toEqual(b.kpis)
     expect(a.trend).toEqual(b.trend)
     expect(a.feed).toEqual(b.feed)
+  })
+
+  it("renders a package redemption as a neutral record without a money amount", () => {
+    const html = renderToStaticMarkup(
+      createElement(MockConnectedRecordsFeed, {
+        locale: "en",
+        items: [
+          {
+            id: "package-redemption",
+            title: "Noah · Treatment",
+            subtitle: "Jul 12",
+            amount: 90,
+            direction: "neutral",
+            badge: "Package redemption — no new payment or revenue",
+          },
+        ],
+      }),
+    )
+
+    expect(html).toContain("lucide-package-check")
+    expect(html).not.toContain("$90")
+    expect(html).not.toContain("+$90")
   })
 })

@@ -47,6 +47,8 @@ export interface FinanceOrderInstalment {
 export interface FinanceOpenOrder {
   clientKey: "Noah"
   labelKey: "color_correction_package"
+  /** Illustrative category for the order's recorded cash allocation. */
+  categoryId: "color"
   total: number
   instalments: FinanceOrderInstalment[]
 }
@@ -116,7 +118,10 @@ export const FINANCE_VISIT_ROWS: readonly FinanceVisitRow[] = [
     status: "completed",
     paymentStatus: "paid",
     cashAllocation: "package",
-    amount: 90,
+    // ADR-0003: redemption sets the visit line to zero. The prepaid package
+    // sale records its revenue once; applying one credit adds neither money
+    // nor revenue on this visit.
+    amount: 0,
     categoryId: "color",
   },
   {
@@ -163,6 +168,7 @@ export const FINANCE_EXPENSE_ROWS: readonly FinanceExpenseRow[] = [
 export const FINANCE_OPEN_ORDER: FinanceOpenOrder = {
   clientKey: "Noah",
   labelKey: "color_correction_package",
+  categoryId: "color",
   total: 450,
   instalments: [
     { amount: 150, dueDay: 3, paid: true, overdue: false },
@@ -207,6 +213,12 @@ function contributesCash(row: FinanceVisitRow): boolean {
   return isSettled(row) && row.cashAllocation !== "package" && row.cashAllocation !== "none"
 }
 
+function getPaidOrderCash(): number {
+  return FINANCE_OPEN_ORDER.instalments
+    .filter((instalment) => instalment.paid)
+    .reduce((sum, instalment) => sum + instalment.amount, 0)
+}
+
 /** Reconciled page totals (FM3 §6.4). */
 export function getFinanceTotals(): FinanceTotals {
   const completedWork = FINANCE_VISIT_ROWS.reduce((sum, row) => sum + row.amount, 0)
@@ -214,10 +226,13 @@ export function getFinanceTotals(): FinanceTotals {
     (sum, row) => sum + row.amount,
     0,
   )
-  const cashRecorded = FINANCE_VISIT_ROWS.filter(contributesCash).reduce(
+  const visitCash = FINANCE_VISIT_ROWS.filter(contributesCash).reduce(
     (sum, row) => sum + row.amount,
     0,
   )
+  // ADR-0002: real cash is recorded by allocations, including an
+  // ORDER_PAYMENT. It lowers order debt but is not another revenue event.
+  const cashRecorded = visitCash + getPaidOrderCash()
   const expenses = FINANCE_EXPENSE_ROWS.reduce((sum, row) => sum + row.amount, 0)
   const calculatedProfit = settledRevenue - expenses
 
@@ -240,7 +255,9 @@ export function getFinanceTotals(): FinanceTotals {
       categoryId,
       completedWork: visits.reduce((sum, row) => sum + row.amount, 0),
       settledRevenue: settled,
-      cashRecorded: visits.filter(contributesCash).reduce((sum, row) => sum + row.amount, 0),
+      cashRecorded:
+        visits.filter(contributesCash).reduce((sum, row) => sum + row.amount, 0) +
+        (categoryId === FINANCE_OPEN_ORDER.categoryId ? getPaidOrderCash() : 0),
       expenses: categoryExpenses,
       calculatedProfit: settled - categoryExpenses,
     }
@@ -253,7 +270,9 @@ export function getFinanceTotals(): FinanceTotals {
       clientKey,
       completed: visits.reduce((sum, row) => sum + row.amount, 0),
       settled: visits.filter(isSettled).reduce((sum, row) => sum + row.amount, 0),
-      cash: visits.filter(contributesCash).reduce((sum, row) => sum + row.amount, 0),
+      cash:
+        visits.filter(contributesCash).reduce((sum, row) => sum + row.amount, 0) +
+        (clientKey === FINANCE_OPEN_ORDER.clientKey ? getPaidOrderCash() : 0),
     }
   })
 
@@ -353,7 +372,7 @@ export const FINANCE_CONNECTED_RECORDS: readonly ConnectedRecordSpec[] = [
     sourceId: "v6",
     clientKey: "Noah",
     nameKey: "templates.independent_colorist.services.ic5",
-    amount: 90,
+    amount: 0,
     kind: "package_redemption",
     contributesCash: false,
     day: 12,

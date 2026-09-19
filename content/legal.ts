@@ -85,7 +85,7 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
   },
   privacy: {
     title: "Privacy Policy",
-    description: "Draft Privacy Policy for Perelai’s Founding Beta.",
+    description: "Draft Privacy Policy for Perelai.",
     sections: [
       {
         heading: "Who the controller is",
@@ -101,7 +101,7 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
       },
       {
         heading: "Processors",
-        body: "The final policy will name applicable processors, including hosting providers, Resend for email, Google when a user connects Calendar, and the analytics provider selected for the landing.",
+        body: "The final policy will name applicable processors, including hosting providers, Resend for email, the analytics provider selected for the landing, and any separately released user-enabled integration where applicable.",
       },
       {
         heading: "Legal basis",

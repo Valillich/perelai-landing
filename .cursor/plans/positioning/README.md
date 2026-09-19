@@ -1,6 +1,6 @@
 # Обновление landing к запуску Perelai
 
-**19 сентября 2026 · POS0 выполнен в документах; реализация сайта не начата.** Scope: общий Home, Pricing и минимальное исправление общих фактов на доступных страницах. Основание — бизнес-инструкция владельца и `terminology/mvp` приложения. Владелец 19.09.2026 утвердил шесть точных RU-строк hero в [copy-наборе и G1–G8](../../../docs/launch-positioning-checklist.md). RU freeze закрыт; UK/EN hero нужно адаптировать из него в POS2, остальные новые строки сохраняют свой review status. Независимые исправления POS1 можно начинать.
+**19 сентября 2026 · POS0 выполнен в документах; POS1 выполнен в landing source.** Scope: общий Home, Pricing и минимальное исправление общих фактов на доступных страницах. Основание — бизнес-инструкция владельца и `terminology/mvp` приложения. Владелец 19.09.2026 утвердил шесть точных RU-строк hero в [copy-наборе и G1–G8](../../../docs/launch-positioning-checklist.md). RU freeze закрыт; UK/EN hero нужно адаптировать из него в POS2, остальные новые строки сохраняют свой review status.
 
 ## Решение
 
@@ -61,14 +61,14 @@ POS0 добавляет короткие dated supersession notes в два ст
 | Generator требует clean app source и читает labels из HEAD | После M1/M2 брать чистую зафиксированную ревизию; чужой dirty worktree не stash/revert и не `ALLOW_DIRTY_SOURCE` |
 | Тесты защищают старый текст, finance-first order и коммерческие запреты | Обновить затронутые ожидания, сохранив проверки истины, маршрутов и математики |
 
-POS0 повторно сверил источники: app теперь на чистом `6ba23125e08f05935f69d89c34a8d512fdefbf2f`, landing HEAD прежний. Канонические marketing/claim/commercial документы обновлены; технические дефекты public copy/fixture остаются задачами POS1–3. G1–G8 и release-зависимости — в [журнале POS0](../../../docs/launch-positioning-checklist.md). Чистый source не равен завершённым M1/M2 или допуску BILL/TEAM/DR7.
+POS0 повторно сверил источники: app теперь на чистом `6ba23125e08f05935f69d89c34a8d512fdefbf2f`, landing HEAD прежний. Канонические marketing/claim/commercial документы обновлены; POS1 исправил доказанные finance/copy дефекты, а POS2–POS3 остаются отдельными задачами. G1–G8 и release-зависимости — в [журнале POS0](../../../docs/launch-positioning-checklist.md). Чистый source не равен завершённым M1/M2 или допуску BILL/TEAM/DR7.
 
 ## Пять задач
 
 | Задача | Результат | Зависимость |
 | --- | --- | --- |
 | POS0 | Выполнен: новая рамка, copy-набор, G1–G8; шесть RU-строк hero утверждены 19.09.2026 | Не повторять выбор hero; UK/EN адаптация — POS2, прочие новые строки — одна смысловая вычитка |
-| POS1 | Минимальные исправления finance fixture, labels и недостоверных общих claims | POS0; актуальные ADR, для новых UI labels — M1/M2 |
+| POS1 | Выполнен: finance fixture/records, общие Calendar claims, ограниченные factual replacements в нишах и локалях | POS0; новые UI labels отложены до M1/M2, поскольку не зафиксированы |
 | POS2 | Home с утверждённым RU-hero, его UK/EN адаптациями, рабочим сценарием и ограниченными дополнениями preview | RU approval закрыт; POS1 до финансового доказательства; Administrator по G3; Drawer implementation разблокирован, публикационный G4 отдельно |
 | POS3 | Trial/Pricing, CTA и согласованные тексты на опубликованных языках | Подготовка параллельно POS1/POS2; подключение catalog/offer и выпуск — BILL7 |
 | POS4 | Короткая проверка релизного кандидата и публикационного состояния | Собранный scope POS1–POS3, применимые BILL/TEAM/legal gates |

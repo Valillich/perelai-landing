@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Ouvrez l'espace de travail pour coloriste", body: "Si vous arrivez depuis cette page, le modèle pour coloriste indépendant apparaîtra en premier lors de la configuration." },
       { title: "Personnalisez la liste", body: "Commencez avec Diagnostic & Touche d'essai, Couleur de racines, Couleur dimensionnelle / Balayage, Correction de couleur, Gloss & Patine, et Coupe & Coiffage. Adaptez selon vos besoins." },
-      { title: "Importez l'essentiel", body: "Importez vos contacts via vCard depuis votre téléphone, connectez Google Agenda, puis partagez votre propre lien de réservation." },
+      { title: "Importez l'essentiel", body: "Importez vos contacts via vCard depuis votre téléphone, puis partagez votre propre lien de réservation." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Les clients peuvent-ils arrêter de réserver via mes DMs ?", a: "Partagez un lien de réservation dans votre bio ou envoyez-le par message. Les clients choisissent une prestation, un membre de l'équipe et un créneau." },
     { q: "Que se passe-t-il si quelqu'un ne vient pas ?", a: "Perelai peut envoyer des rappels automatiques par e-mail, dans l'application et par notification push. Le travail et l'argent sont suivis séparément, afin qu'un rendez-vous manqué ne soit pas comptabilisé comme un revenu." },
     { q: "Puis-je voir si une journée de couleur a vraiment été rentable ?", a: "Enregistrez les montants réellement encaissés, associez les produits de couleur et consommables à la prestation correspondante, et consultez revenus, coûts et montants dus sans tableur." },
-    { q: "Dois-je tout migrer en un week-end ?", a: "Non. Commencez par importer vos contacts depuis votre téléphone via vCard et connectez éventuellement Google Agenda. La liste de prestations est entièrement modifiable à votre rythme." },
+    { q: "Dois-je tout migrer en un week-end ?", a: "Non. Commencez par importer vos contacts depuis votre téléphone via vCard. La liste de prestations est entièrement modifiable à votre rythme." },
   ],
   labels: {
     terminologyTitle: "Les termes de votre fauteuil ont leur place dans Perelai.",

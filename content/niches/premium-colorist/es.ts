@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Abre el espacio para coloristas", body: "Al llegar desde esta página, la plantilla para coloristas independientes será la primera que veas en la configuración inicial." },
       { title: "Haz tuya la lista", body: "Empieza con Consulta, Color de Raíz, Color Dimensional / Balayage, Corrección de Color, Gloss y Matiz, y Corte y Peinado. Edita lo que necesites." },
-      { title: "Tráete lo esencial", body: "Importa contactos de tu teléfono vía vCard, conecta tu Google Calendar y luego comparte tu propio enlace de reserva." },
+      { title: "Tráete lo esencial", body: "Importa contactos de tu teléfono vía vCard y luego comparte tu propio enlace de reserva." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "¿Pueden los clientes dejar de reservar a través de mis DMs?", a: "Comparte un enlace de reserva en tu bio o mándalo por mensaje. Los clientes eligen un servicio, una persona y una hora." },
     { q: "¿Qué ocurre cuando alguien no aparece?", a: "Perelai puede enviar recordatorios automáticos por email, en la app y notificaciones push. Registra el trabajo y el dinero por separado, de forma que una Visita perdida no cuente como dinero recibido." },
     { q: "¿Puedo ver si un día de color realmente mereció la pena?", a: "Registra lo que ingresaste, asocia los productos de color y materiales al trabajo correspondiente, y ve ingresos, costes y saldos pendientes sin abrir una hoja de cálculo." },
-    { q: "¿Tengo que migrar todo en un fin de semana?", a: "No. Empieza por los contactos de tu teléfono usando vCard y opcionalmente conecta Google Calendar. La lista de servicios ya es editable, así que puedes ir haciéndola tuya a tu ritmo." },
+    { q: "¿Tengo que migrar todo en un fin de semana?", a: "No. Empieza por los contactos de tu teléfono usando vCard. La lista de servicios ya es editable, así que puedes ir haciéndola tuya a tu ritmo." },
   ],
   labels: {
     terminologyTitle: "Las palabras que usas en el salón tienen un lugar en Perelai.",

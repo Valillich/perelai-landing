@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Apri lo spazio di lavoro per coloristi", body: "Arrivando da questa pagina, il modello per coloristi indipendenti sarà il primo selezionato durante la configurazione." },
       { title: "Rendi l'elenco davvero tuo", body: "Inizia con Consulenza & Ciocchetta di prova, Colore radici, Colore dimensionale / Balayage, Correzione colore, Gloss & Tonalizzante e Taglio & Piega. Modifica ciò che desideri." },
-      { title: "Porta ciò che conta", body: "Importa i contatti dal telefono tramite vCard, collega Google Calendar e poi condividi il tuo link di prenotazione." },
+      { title: "Porta ciò che conta", body: "Importa i contatti dal telefono tramite vCard e poi condividi il tuo link di prenotazione." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Le clienti possono smettere di prenotare nei messaggi privati?", a: "Condividi un link di prenotazione nella tua bio o invialo in chat. Le clienti scelgono un servizio, uno specialista e un orario." },
     { q: "Cosa succede se qualcuno non si presenta?", a: "Perelai può inviare promemoria automatici via email, in-app e notifiche push. Lavoro e denaro sono tracciati separatamente, così un appuntamento saltato non viene considerato come incasso." },
     { q: "Posso vedere se una giornata di colore è stata davvero redditizia?", a: "Registra ciò che è stato davvero incassato, collega prodotti colore e consumabili al lavoro corrispondente e vedi entrate, costi e saldi in sospeso senza fogli di calcolo." },
-    { q: "Devo spostare tutto in un solo fine settimana?", a: "No. Inizia dai contatti del telefono tramite vCard e opzionalmente collega Google Calendar. L'elenco servizi è modificabile, così puoi adattarlo passo dopo passo." },
+    { q: "Devo spostare tutto in un solo fine settimana?", a: "No. Inizia dai contatti del telefono tramite vCard. L'elenco servizi è modificabile, così puoi adattarlo passo dopo passo." },
   ],
   labels: {
     terminologyTitle: "Le parole del tuo salone trovano posto in Perelai.",

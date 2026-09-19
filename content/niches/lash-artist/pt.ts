@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Abra o espaço de trabalho para lash artists", body: "Ao acessar por esta página, o modelo para lash artists independentes virá selecionado por padrão na configuração." },
       { title: "Deixe sua lista de serviços com a sua cara", body: "Comece com Design de Sobrancelhas, Tintura de Sobrancelhas, Brow Lamination, Lash Lifting & Tinta, Extensão de Cílios e Manutenção de Cílios. Altere tempos e preços conforme necessário." },
-      { title: "Traga o que é mais importante", body: "Importe contatos do celular via vCard, conecte o Google Agenda e compartilhe seu link de agendamento." },
+      { title: "Traga o que é mais importante", body: "Importe contatos do celular via vCard e compartilhe seu link de agendamento." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Os clientes podem agendar sem mandar mensagem?", a: "Compartilhe um link de agendamento na bio ou no WhatsApp. As clientes escolhem o serviço, profissional e horário." },
     { q: "O que acontece se uma cliente atrasar ou faltar?", a: "O Perelai pode enviar lembretes automáticos por e-mail, in-app e push. O atendimento e a receita são separados, então um atendimento cancelado não conta como dinheiro recebido." },
     { q: "Consigo ver quanto a semana realmente rendeu?", a: "Registre os recebimentos reais, vincule materiais e cola ao serviço feito e veja receitas, custos e pendências sem usar planilhas." },
-    { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard e conecte o Google Agenda se desejar. A lista de serviços pode ser personalizada aos poucos no seu tempo." },
+    { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard. A lista de serviços pode ser personalizada aos poucos no seu tempo." },
   ],
   labels: {
     terminologyTitle: "Os termos da sua sala de atendimento têm espaço no Perelai.",

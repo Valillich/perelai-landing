@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Apri lo spazio di lavoro per lash artist", body: "Arrivando da questa pagina, il modello per lash artist indipendenti sarà il primo selezionato durante l'onboarding." },
       { title: "Rendi il listino servizi davvero tuo", body: "Inizia con Definizione sopracciglia, Tinta sopracciglia, Brow Lamination, Laminazione ciglia & tinta, Extension ciglia e Ritocco ciglia. Modifica durate e offerte." },
-      { title: "Porta ciò che serve", body: "Importa i contatti dal telefono tramite vCard, collega Google Calendar e condividi il tuo link di prenotazione." },
+      { title: "Porta ciò che serve", body: "Importa i contatti dal telefono tramite vCard e condividi il tuo link di prenotazione." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Le clienti possono prenotare senza passare dai messaggi privati?", a: "Condividi un link di prenotazione nella bio o in chat. Le clienti scelgono servizio, specialista e orario." },
     { q: "Cosa succede se una cliente è in ritardo o non si presenta?", a: "Perelai invia promemoria automatici via email, in-app e notifiche push. Lavoro e incassi sono separati, perciò una visita saltata non conta come incasso." },
     { q: "Posso vedere quanto ha reso davvero la settimana?", a: "Registra gli incassi reali, collega materiali e colla al lavoro svolto e vedi entrate, costi e sospesi senza fogli di calcolo." },
-    { q: "Devo spostare tutto in un solo fine settimana?", a: "No. Inizia dai contatti del telefono via vCard e collega opzionalmente Google Calendar. L'elenco servizi si adatta man mano al tuo ritmo." },
+    { q: "Devo spostare tutto in un solo fine settimana?", a: "No. Inizia dai contatti del telefono via vCard. L'elenco servizi si adatta man mano al tuo ritmo." },
   ],
   labels: {
     terminologyTitle: "Le parole della tua cabina ciglia hanno un posto in Perelai.",

@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Quando o cliente liquida, o pagamento se vincula a essa visita, não a um total anônimo do fim do dia — o número mantém a ligação com o cliente e a categoria de serviço.",
       },
       {
-        title: "Um resgate de pacote liquida sem novo pagamento",
-        body: "Um cliente pré-pago que resgata um Tratamento liquida a visita e não move dinheiro naquele dia. Perelai registra o resgate, então pagamentos registrados e faturamento liquidado continuam sendo dois números distintos.",
+        title: "Um resgate de pacote liquida sem novo dinheiro ou receita",
+        body: "Um cliente pré-pago que resgata um Tratamento liquida a visita. A venda do pacote é registrada uma vez; o resgate não adiciona dinheiro nem receita naquele dia.",
       },
       {
         title: "O período responde",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Um cliente num curso pré-pago de atendimentos",
       perelaiWord: "Pacote",
-      why: "Os créditos baixam conforme as Visitas são usadas. Um resgate liquida a visita e não cria movimento de caixa — por isso trabalho resgatado e pagamentos registrados aparecem como coisas diferentes.",
+      why: "Os créditos baixam conforme as Visitas são usadas. A venda do pacote é registrada uma vez; um resgate liquida a visita sem adicionar dinheiro nem receita.",
     },
     {
       theirWord: "Um curso de tratamentos pago em parcelas",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "O que cada membro da equipe pode acessar",
-      perelaiWord: "Acesso Equipe ou Supervisor(a)",
+      perelaiWord: "Acesso da equipe por função",
       why: "Cada pessoa é convidada com um papel, e o acesso segue esse papel — a equipe trabalha num só espaço de trabalho sem que cada conta seja configurada do mesmo jeito.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Adicione quem trabalha no salão",
-        body: "Convide membros da equipe com acesso Equipe ou Supervisor(a) e mantenha horários, folgas e serviços atribuídos juntos. O acesso segue o papel com que cada pessoa é convidada.",
+        body: "Convide membros da equipe com o acesso adequado e mantenha horários, folgas e serviços atribuídos juntos. O acesso segue o papel com que cada pessoa é convidada.",
       },
       {
         title: "Traga o que ajuda nesta semana",
-        body: "Importe contatos com vCard, conecte o Google Calendar e compartilhe seu link de agendamento. Comece pelas próximas semanas em vez de pausar o salão para uma migração.",
+        body: "Importe contatos com vCard e compartilhe seu link de agendamento. Comece pelas próximas semanas em vez de pausar o salão para uma migração.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Um atendimento concluído conta como dinheiro recebido?",
-      a: "Não. Trabalho concluído, faturamento liquidado e pagamentos registrados são acompanhados separadamente. Um atendimento pode estar pronto e ainda aguardar pagamento, e um pacote pré-pago pode liquidar uma visita sem que dinheiro se mova naquele dia. Manter os três apartados é o que dá sentido ao número do período.",
+      a: "Não. Trabalho concluído, receita e pagamentos registrados são acompanhados separadamente. Um atendimento pode estar pronto e ainda aguardar pagamento; um pacote pré-pago é registrado quando vendido, e seu resgate liquida uma visita sem adicionar dinheiro nem receita. Manter esses estados separados é o que dá sentido ao número do período.",
     },
     {
       q: "O que a cifra de lucro inclui?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Minha equipe pode usar o mesmo espaço de trabalho?",
-      a: "Sim. Convide membros da equipe com acesso Equipe ou Supervisor(a). Horários, folgas e serviços atribuídos ficam no mesmo espaço, com acesso conforme cada papel.",
+      a: "Sim. Convide membros da equipe com o acesso adequado. Horários, folgas e serviços atribuídos ficam no mesmo espaço, com acesso conforme cada papel.",
     },
   ],
 

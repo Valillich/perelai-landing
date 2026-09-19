@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Müşteri ödediğinde ödeme, gün sonu anonim toplamına değil o ziyarete bağlanır — rakam müşteri ve hizmet kategorisiyle bağlantısını korur.",
       },
       {
-        title: "Paket kullanımı yeni ödeme olmadan kapatır",
-        body: "Ön ödemeli bir müşteri Tedavi kullandığında ziyaret kapanır ve o gün para hareket etmez. Perelai kullanımı kaydeder; kaydedilen ödemeler ile tahsil edilmiş ciro yanıltıcı tek rakam yerine iki ayrı sayı olarak kalır.",
+        title: "Paket kullanımı yeni para veya gelir oluşturmadan kapatır",
+        body: "Ön ödemeli bir müşteri Tedavi kullandığında ziyaret kapanır. Paket satışı bir kez kaydedilir; kullanım o gün yeni para veya gelir eklemez.",
       },
       {
         title: "Dönem yanıt verir",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Ön ödemeli randevu kursundaki müşteri",
       perelaiWord: "Paket",
-      why: "Krediler Ziyaretler kullanıldıkça düşer. Kullanım ziyareti kapatır ve nakit hareketi oluşturmaz — bu yüzden kullanılan iş ile kaydedilen ödemeler farklı şeyler olarak gösterilir.",
+      why: "Krediler Ziyaretler kullanıldıkça düşer. Paket satışı bir kez kaydedilir; kullanım ziyareti yeni para veya gelir oluşturmadan kapatır.",
     },
     {
       theirWord: "Taksitle ödenen tedavi kursu",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "Her ekip üyesinin erişebildiği",
-      perelaiWord: "Personel veya Süpervizör erişimi",
+      perelaiWord: "Role göre ekip erişimi",
       why: "Herkes bir rolle davet edilir ve erişim o rolü izler — ekip, her hesabın aynı şekilde kurulmasına gerek kalmadan tek çalışma alanında çalışabilir.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Salonda çalışanları ekleyin",
-        body: "Ekip üyelerini Personel veya Süpervizör erişimiyle davet edin; çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun. Erişim, her kişinin davet edildiği rolü izler.",
+        body: "Ekip üyelerini uygun erişimle davet edin; çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun. Erişim, her kişinin davet edildiği rolü izler.",
       },
       {
         title: "Bu haftaya yarayanı getirin",
-        body: "vCard ile kişileri içe aktarın, Google Takvim'i bağlayın ve rezervasyon bağlantınızı paylaşın. Migrasyon için salonu durdurmak yerine önümüzdeki haftalardan başlayın.",
+        body: "vCard ile kişileri içe aktarın ve rezervasyon bağlantınızı paylaşın. Migrasyon için salonu durdurmak yerine önümüzdeki haftalardan başlayın.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Tamamlanan randevu alınan para sayılır mı?",
-      a: "Hayır. Tamamlanan iş, tahsil edilmiş ciro ve kaydedilen ödemeler ayrı izlenir. Bir randevu bitmiş ve hâlâ ödeme bekliyor olabilir; ön ödemeli paket o gün para hareket etmeden ziyareti kapatabilir. Üçünü ayrı tutmak, dönem rakamına anlam verir.",
+      a: "Hayır. Tamamlanan iş, gelir ve kaydedilen ödemeler ayrı izlenir. Bir randevu bitmiş ve hâlâ ödeme bekliyor olabilir; ön ödemeli paket satıldığında kaydedilir, kullanımı ise ziyareti yeni para veya gelir oluşturmadan kapatır. Bu durumları ayrı tutmak dönem rakamına anlam verir.",
     },
     {
       q: "Kâr rakamı neyi kapsar?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Ekibim aynı çalışma alanını kullanabilir mi?",
-      a: "Evet. Ekip üyelerini Personel veya Süpervizör erişimiyle davet edin. Çalışma saatleri, izinler ve atanan hizmetler aynı alanda kalır; erişim role göredir.",
+      a: "Evet. Ekip üyelerini uygun erişimle davet edin. Çalışma saatleri, izinler ve atanan hizmetler aynı alanda kalır; erişim role göredir.",
     },
   ],
 

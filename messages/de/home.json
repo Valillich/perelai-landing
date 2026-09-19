@@ -68,7 +68,7 @@
     "step1Title": "Wählen Sie Ihr Gewerbe",
     "step1Body": "32 wählbare Geschäftstypen, jeweils mit einer bearbeitbaren Leistungsliste. Relevante Vorlagen enthalten auch Zusatzleistungen und verknüpfte Kosten.",
     "step2Title": "Bringen Sie Ihre Kunden mit",
-    "step2Body": "Importieren Sie Kontakte von Ihrem Telefon per vCard. Verbinden Sie Ihren Google Kalender und halten Sie beide Seiten synchron.",
+    "step2Body": "Importieren Sie Kontakte von Ihrem Telefon per vCard. Planen Sie Ihre Termine anschließend in Perelai.",
     "step3Title": "Teilen Sie Ihren Buchungslink",
     "step3Body": "Ein Link in Ihrer Bio. Kunden buchen direkt über Ihren eigenen Link."
   },
@@ -106,8 +106,8 @@
     "a2": "Sie bestätigen Ihre E-Mail, dann folgt eine kurze Einrichtung: Ihr Gewerbe, Ihre Leistungen, Ihr Team (falls vorhanden) und optionale Importe.",
     "q3": "Sind meine Leistungen bereits vorhanden?",
     "a3": "Ja — jeder wählbare Geschäftstyp beginnt mit einer bearbeitbaren Leistungs- oder Artikelliste. Relevante Vorlagen enthalten auch Zusatzleistungen und verknüpfte Kosten.",
-    "q4": "Kann ich meine Kunden und meinen Kalender übernehmen?",
-    "a4": "Ja: Kontakte von Ihrem Telefon (vCard) und Zwei-Wege-Synchronisierung mit Google Kalender.",
+    "q4": "Kann ich Kunden von meinem Telefon importieren?",
+    "a4": "Ja: Importieren Sie Kontakte von Ihrem Telefon per vCard.",
     "q5": "Kann ich mehrere Leistungen und Zusatzleistungen verwalten?",
     "a5": "Ja. Jede Vorlage enthält wählbare Leistungen und relevante Optionen für Zusatzleistungen.",
     "q6": "Ist dies eine Buchhaltungssoftware?",
@@ -122,7 +122,7 @@
     },
     "q_bank": {
       "question": "Stimmt die Zahl mit meiner Bank überein?",
-      "answer": "Nicht immer. Der ausgewiesene Umsatz umfasst abgeschlossene Arbeit, die realisiert wurde — und ein Paket kann einen Termin abrechnen, ohne dass Geld bewegt wird. Erfasste Zahlungen und Salden der Zahlungskonten zeigen Geldbewegungen separat."
+      "answer": "Nicht immer. PAID bedeutet, dass ein Termin beglichen ist, nicht dass Geld eingegangen ist. Ein Paketverkauf wird einmal erfasst; seine Einlösung erzeugt keine neue Zahlung oder keinen neuen Umsatz. Erfasste Zahlungen und Salden der Zahlungskonten zeigen Geldbewegungen separat."
     }
   },
   "closing": {
@@ -182,7 +182,7 @@
       "orderInstalment": "3er-Serienauftrag, 1. Rate",
       "records": {
         "visitPayment": "Zahlung, zugeordnet zu einem Termin",
-        "packageRedemption": "Paketeinlösung, keine Zahlungsbewegung",
+        "packageRedemption": "Paketeinlösung — keine neue Zahlung oder kein neuer Umsatz",
         "orderInstalment": "Zahlung, zugeordnet zu einem Auftrag/einer Rate",
         "noShowFee": "Zahlung, zugeordnet zu einem als „nicht erschienen\" markierten Termin"
       }
@@ -190,7 +190,7 @@
   },
   "states": {
     "title": "Abgeschlossene Arbeit, Umsatz, erfasste Zahlungen und offene Auftragssalden sind nicht dasselbe.",
-    "body": "Ein Termin kann abgeschlossen sein, bevor er zum Umsatz zählt. Ein vorausbezahltes Paket kann einen Termin abdecken, ohne dass eine neue Zahlung erfolgt, während ein offener Auftrag noch einen ausstehenden Betrag aufweisen kann. Perelai weist diese Zustände getrennt aus, sodass jede Zahl eine klare Bedeutung hat."
+    "body": "Ein Termin kann abgeschlossen sein, bevor er zum Umsatz zählt. Ein vorausbezahltes Paket wird beim Verkauf einmal als Umsatz erfasst; seine Einlösung deckt einen Termin ohne neue Zahlung oder neuen Umsatz ab, während ein offener Auftrag noch einen ausstehenden Betrag aufweisen kann. Perelai weist diese Zustände getrennt aus, sodass jede Zahl eine klare Bedeutung hat."
   },
   "drivers": {
     "title": "Sehen Sie, woher das Ergebnis kommt",
@@ -198,7 +198,7 @@
   },
   "records": {
     "title": "Jede Zahl hat Arbeit dahinter",
-    "body": "Zahlungen werden dem jeweiligen Termin, Auftrag oder der Rate zugeordnet, für die sie bezahlt wurden, und bleiben mit dem jeweiligen Kunden und der Leistungskategorie verbunden."
+    "body": "Zahlungsaufzeichnungen und Paketeinlösungen bleiben mit dem betreffenden Termin, Auftrag oder der Rate sowie dem jeweiligen Kunden und der Leistungskategorie verbunden."
   },
   "operations": {
     "title": "Erfassen Sie Ihre Finanzdaten direkt im Arbeitsalltag",

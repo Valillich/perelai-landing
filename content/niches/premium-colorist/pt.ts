@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Abra o espaço de trabalho para coloristas", body: "Ao chegar por esta página, o modelo para coloristas independentes estará selecionado por padrão na configuração." },
       { title: "Deixe a lista com a sua cara", body: "Comece com Consultoria & Teste de Mecha, Retoque de Raiz, Cor Dimensional / Balayage, Correção de Cor, Matrização & Gloss, e Corte & Escova. Edite o que precisar." },
-      { title: "Traga o que é essencial", body: "Importe contatos do celular via vCard, conecte o Google Agenda e compartilhe seu link de agendamento." },
+      { title: "Traga o que é essencial", body: "Importe contatos do celular via vCard e compartilhe seu link de agendamento." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Os clientes podem parar de agendar por mensagem direta?", a: "Compartilhe seu link de agendamento na bio ou envie no WhatsApp. Os clientes escolhem o serviço, o profissional e o horário." },
     { q: "O que acontece quando alguém não aparece?", a: "O Perelai pode enviar lembretes automáticos por e-mail, in-app e notificações push. O atendimento e o dinheiro são registrados separadamente, assim uma falta não conta como receita." },
     { q: "Consigo ver se um dia de coloração foi realmente lucrativo?", a: "Registre o que foi realmente recebido, vincule produtos e descartáveis ao serviço e veja receitas, custos e pendências sem planilhas." },
-    { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard e conecte o Google Agenda se quiser. A lista de serviços pode ser ajustada gradualmente no seu ritmo." },
+    { q: "Preciso migrar tudo em um único fim de semana?", a: "Não. Comece importando contatos do celular via vCard. A lista de serviços pode ser ajustada gradualmente no seu ritmo." },
   ],
   labels: {
     terminologyTitle: "Os termos da sua cadeira têm espaço no Perelai.",

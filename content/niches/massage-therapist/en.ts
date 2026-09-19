@@ -149,7 +149,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Carry across only what Monday needs",
-        body: "Numbers off your phone via vCard, Google Calendar joined up if you live in it, and a link ready to paste wherever people find you. Nine years of history can follow later, or never.",
+        body: "Numbers off your phone via vCard and a booking link ready to paste wherever people find you. Nine years of history can follow later, or never.",
       },
     ],
   },

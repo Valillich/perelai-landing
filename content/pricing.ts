@@ -8,7 +8,6 @@ export const PRICING_CAPABILITY_KEYS = [
   "orders",
   "packages",
   "onboarding",
-  "googleCalendar",
   "contactImport",
   "languages",
   "mobile",

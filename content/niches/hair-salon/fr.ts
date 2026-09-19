@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Quand le client règle, le paiement s'attache à cette visite plutôt qu'à un total anonyme de fin de journée, ainsi le chiffre garde son lien avec le client et la catégorie de prestation.",
       },
       {
-        title: "Un forfait utiliséé règle sans nouveau paiement",
-        body: "Un client prépayé qui utilise un Soin règle la visite et ne déplace pas d'argent ce jour-là. Perelai enregistre l'utilisation, donc paiements enregistrés et revenu réglé restent deux chiffres distincts.",
+        title: "Un forfait utilisé règle sans nouvel argent ni revenu",
+        body: "Un client prépayé qui utilise un Soin règle la visite. La vente du forfait est enregistrée une fois ; son utilisation n'ajoute ni argent ni revenu ce jour-là.",
       },
       {
         title: "La période répond",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Un client sur un parcours de rendez-vous prépayé",
       perelaiWord: "Forfait",
-      why: "Les crédits diminuent à mesure que les Visites sont utilisées. Une utilisation règle la visite et ne crée aucun mouvement d'argent — c'est pourquoi le travail utiliséé et les paiements enregistrés sont montrés comme des choses différentes.",
+      why: "Les crédits diminuent à mesure que les Visites sont utilisées. La vente du forfait est enregistrée une fois ; une utilisation règle la visite sans nouvel argent ni revenu.",
     },
     {
       theirWord: "Une cure de soins payée en plusieurs fois",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "Ce à quoi chaque membre de l'équipe peut accéder",
-      perelaiWord: "Accès Personnel ou Superviseur",
+      perelaiWord: "Accès d'équipe selon le rôle",
       why: "Chaque personne est invitée avec un rôle, et l'accès suit ce rôle, pour qu'une équipe travaille dans un seul espace de travail sans que chaque compte soit configuré de la même façon.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Ajoutez les personnes qui travaillent au sol",
-        body: "Invitez des membres d'équipe avec un accès Personnel ou Superviseur, et gardez plannings, congés et prestations assignées ensemble. L'accès suit le rôle avec lequel chaque personne est invitée.",
+        body: "Invitez des membres d'équipe avec l'accès adapté, et gardez plannings, congés et prestations assignées ensemble. L'accès suit le rôle avec lequel chaque personne est invitée.",
       },
       {
         title: "Apportez ce qui aide cette semaine",
-        body: "Importez les contacts via vCard, connectez Google Agenda et partagez votre lien de réservation. Commencez par les prochaines semaines plutôt que de mettre le salon en pause pour une migration.",
+        body: "Importez les contacts via vCard et partagez votre lien de réservation. Commencez par les prochaines semaines plutôt que de mettre le salon en pause pour une migration.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Un rendez-vous terminé compte-t-il comme de l'argent reçu ?",
-      a: "Non. Travail terminé, revenu réglé et paiements enregistrés sont suivis séparément. Un rendez-vous peut être fini et encore en attente de paiement, et un forfait prépayé peut régler une visite sans qu'aucun argent ne bouge ce jour-là. Garder les trois à part, c'est ce qui donne un sens au chiffre de période.",
+      a: "Non. Travail terminé, revenu et paiements enregistrés sont suivis séparément. Un rendez-vous peut être fini et encore en attente de paiement ; un forfait prépayé est enregistré lors de sa vente, puis son utilisation règle une visite sans nouvel argent ni revenu. Garder ces états à part donne un sens au chiffre de période.",
     },
     {
       q: "Que contient le chiffre de profit ?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Mon équipe peut-elle utiliser le même espace de travail ?",
-      a: "Oui. Invitez des membres d'équipe avec un accès Personnel ou Superviseur. Plannings, congés et prestations assignées restent dans le même espace, avec un accès selon chaque rôle.",
+      a: "Oui. Invitez des membres d'équipe avec l'accès adapté. Plannings, congés et prestations assignées restent dans le même espace, avec un accès selon chaque rôle.",
     },
   ],
 

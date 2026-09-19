@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Öffnen Sie den Coloristen-Arbeitsbereich", body: "Wenn Sie über diese Seite kommen, steht die Vorlage für unabhängige Coloristen beim Onboarding an erster Stelle." },
       { title: "Machen Sie die Liste zu Ihrer eigenen", body: "Beginnen Sie mit Beratung & Probesträhne, Ansatzfarbe, Dimensionale Farbe / Balayage, Farbkorrektur, Gloss & Toner und Haarschnitt & Styling. Passen Sie an, was Sie brauchen." },
-      { title: "Bringen Sie das Wichtigste mit", body: "Importieren Sie Kontakte per vCard von Ihrem Telefon, verbinden Sie den Google Kalender und teilen Sie dann Ihren eigenen Buchungslink." },
+      { title: "Bringen Sie das Wichtigste mit", body: "Importieren Sie Kontakte per vCard von Ihrem Telefon und teilen Sie dann Ihren eigenen Buchungslink." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Können Kunden aufhören, über meine DMs zu buchen?", a: "Teilen Sie einen Buchungslink in Ihrer Bio oder senden Sie ihn in einer Nachricht. Kunden wählen eine Leistung, eine Person und eine Zeit." },
     { q: "Was passiert, wenn jemand nicht erscheint?", a: "Perelai kann automatische Erinnerungen per E-Mail, in der App und als Push-Benachrichtigung senden. Arbeit und Einnahmen werden getrennt erfasst, sodass ein verpasster Termin nicht als eingenommenes Geld behandelt wird." },
     { q: "Kann ich sehen, ob sich ein Farbtag tatsächlich gelohnt hat?", a: "Erfassen Sie, was tatsächlich eingenommen wurde, verknüpfen Sie Farbprodukte und Einwegmaterialien mit der entsprechenden Arbeit und sehen Sie Einnahmen, Kosten und ausstehende Beträge ohne Tabellenkalkulation." },
-    { q: "Muss ich alles an einem Wochenende umziehen?", a: "Nein. Starten Sie mit Kontakten von Ihrem Telefon per vCard und verbinden Sie optional den Google Kalender. Die Leistungsliste ist bereits bearbeitbar, sodass Sie sie Schritt für Schritt anpassen können." },
+    { q: "Muss ich alles an einem Wochenende umziehen?", a: "Nein. Starten Sie mit Kontakten von Ihrem Telefon per vCard. Die Leistungsliste ist bereits bearbeitbar, sodass Sie sie Schritt für Schritt anpassen können." },
   ],
   labels: {
     terminologyTitle: "Die Begriffe an Ihrem Arbeitsplatz haben einen Platz in Perelai.",

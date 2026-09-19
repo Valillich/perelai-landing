@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Otwórz przestrzeń pracy kolorysty", body: "Wejście z tej strony ustawia szablon niezależnego kolorysty jako pierwszy podczas wdrożenia." },
       { title: "Dopasuj listę do siebie", body: "Zacznij od konsultacji i testu pasemka, farbowania odrostów, balayage, korekty koloru, tonera oraz strzyżenia z modelowaniem. Edytuj według potrzeb." },
-      { title: "Przenieś podstawy", body: "Zaimportuj kontakty z telefonu przez vCard, połącz Google Calendar, a potem udostępnij własny link do rezerwacji." },
+      { title: "Przenieś podstawy", body: "Zaimportuj kontakty z telefonu przez vCard, a potem udostępnij własny link do rezerwacji." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Czy klienci mogą przestać rezerwować przez moje DM-y?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klient wybiera usługę, osobę i czas." },
     { q: "Co się dzieje, gdy klientka nie przyjdzie?", a: "Perelai może wysyłać automatyczne przypomnienia przez e-mail, w aplikacji i jako push. Praca i pieniądze są rejestrowane osobno, więc opuszczona Wizyta nie jest traktowana jako otrzymane pieniądze." },
     { q: "Czy zobaczę, czy dzień koloryzacji naprawdę się opłacił?", a: "Zapisuj faktycznie otrzymane pieniądze, przypisuj farby, rozjaśniacze i materiały jednorazowe do właściwej pracy, a potem zobacz przychody, koszty i otwarte należności bez arkusza." },
-    { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard i opcjonalnie połącz Google Calendar. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
+    { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
   ],
   labels: {
     terminologyTitle: "Słowa z Twojego fotela mają swoje miejsce w Perelai.",
@@ -74,7 +74,7 @@ export const content: NichePageContent = {
   cta: {
     title: "Prowadź pracę z kolorem dalej bez wieczornego odtwarzania dnia.",
     body: "Utwórz przestrzeń pracy, która zaczyna się od Twoich usług i trzyma Wizyty, pieniądze oraz kolejne sprawy w jednym miejscu.",
-    label: "Utwórz bezpłatną przestrzeń pracy",
+    label: "Utwórz przestrzeń pracy",
     microcopy: "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
   },
   research: independentColoristResearch,

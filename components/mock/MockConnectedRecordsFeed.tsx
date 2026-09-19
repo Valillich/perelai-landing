@@ -1,4 +1,4 @@
-import { ArrowDownLeft, ArrowUpRight } from "lucide-react"
+import { ArrowDownLeft, ArrowUpRight, PackageCheck } from "lucide-react"
 import { RegionCurrency } from "@/components/mock/region-currency"
 import { cn } from "@/lib/cn"
 import type { AppLocale } from "@/i18n/locales"
@@ -8,8 +8,8 @@ export interface ConnectedFeedItem {
   id: string
   title: string
   subtitle: string
-  amount: number
-  direction: "income" | "expense"
+  amount?: number
+  direction: "income" | "expense" | "neutral"
   /** Optional mechanism badge (Connected records section). */
   badge?: string
 }
@@ -37,7 +37,8 @@ export function MockConnectedRecordsFeed({
     <div className={cn("space-y-2", className)}>
       {items.map((item) => {
         const isIncome = item.direction === "income"
-        const Icon = isIncome ? ArrowDownLeft : ArrowUpRight
+        const isExpense = item.direction === "expense"
+        const Icon = isIncome ? ArrowDownLeft : isExpense ? ArrowUpRight : PackageCheck
 
         return (
           <div
@@ -49,7 +50,9 @@ export function MockConnectedRecordsFeed({
                 "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl",
                 isIncome
                   ? "bg-success/10 text-success"
-                  : "bg-badge-danger-text/10 text-badge-danger-text",
+                  : isExpense
+                    ? "bg-badge-danger-text/10 text-badge-danger-text"
+                    : "bg-muted text-muted-foreground",
               )}
             >
               <Icon className="h-4 w-4" />
@@ -69,14 +72,16 @@ export function MockConnectedRecordsFeed({
               ) : null}
             </div>
 
-            <RegionCurrency
-              amount={isIncome ? item.amount : -item.amount}
-              locale={locale}
-              className={cn(
-                "mock-money shrink-0 text-[14px] font-semibold",
-                isIncome ? "text-success" : "text-badge-danger-text",
-              )}
-            />
+            {item.direction === "neutral" ? null : (
+              <RegionCurrency
+                amount={isIncome ? item.amount ?? 0 : -(item.amount ?? 0)}
+                locale={locale}
+                className={cn(
+                  "mock-money shrink-0 text-[14px] font-semibold",
+                  isIncome ? "text-success" : "text-badge-danger-text",
+                )}
+              />
+            )}
           </div>
         )
       })}

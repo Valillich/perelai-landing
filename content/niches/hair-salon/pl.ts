@@ -46,8 +46,8 @@ export const content: NichePageContent = {
         body: "Gdy klient się rozlicza, płatność trafia do tej wizyty, a nie do anonimowej sumy dnia — liczba zachowuje związek z klientem i kategorią usług.",
       },
       {
-        title: "Rozliczenie karnetu zamyka wizytę bez nowej płatności",
-        body: "Klient z przedpłatą, który wykorzystuje Zabieg Pielęgnacyjny, zamyka wizytę i tego dnia nie rusza pieniędzy. Perelai rejestruje rozliczenie, więc zarejestrowane płatności i zrealizowany przychód zostają dwiema osobnymi liczbami.",
+        title: "Rozliczenie karnetu zamyka wizytę bez nowych pieniędzy i przychodu",
+        body: "Klient z przedpłatą, który wykorzystuje Zabieg Pielęgnacyjny, zamyka wizytę. Sprzedaż karnetu jest rejestrowana raz; rozliczenie nie dodaje tego dnia ani pieniędzy, ani przychodu.",
       },
       {
         title: "Okres odpowiada",
@@ -80,7 +80,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Klient na przedpłaconym cyklu wizyt",
       perelaiWord: "Karnet",
-      why: "Kredyty schodzą, gdy Wizyty są wykorzystywane. Rozliczenie zamyka wizytę i nie tworzy ruchu gotówki — dlatego wykorzystana praca i zarejestrowane płatności są pokazywane osobno.",
+      why: "Kredyty schodzą, gdy Wizyty są wykorzystywane. Sprzedaż karnetu jest rejestrowana raz; rozliczenie zamyka wizytę bez nowych pieniędzy i przychodu.",
     },
     {
       theirWord: "Kurs zabiegów spłacany w ratach",
@@ -94,7 +94,7 @@ export const content: NichePageContent = {
     },
     {
       theirWord: "Do czego ma dostęp każdy członek zespołu",
-      perelaiWord: "Dostęp Pracownik lub Supervisor",
+      perelaiWord: "Dostęp zespołu według roli",
       why: "Każda osoba jest zapraszana z rolą, a dostęp idzie za tą rolą — zespół może pracować w jednym obszarze roboczym bez jednakowej konfiguracji każdego konta.",
     },
   ],
@@ -113,11 +113,11 @@ export const content: NichePageContent = {
       },
       {
         title: "Dodaj osoby pracujące na sali",
-        body: "Zaproś członków zespołu z dostępem Pracownik lub Supervisor i trzymaj grafiki, urlopy oraz przypisane usługi razem. Dostęp wynika z roli zaproszenia.",
+        body: "Zaproś członków zespołu z odpowiednim dostępem i trzymaj grafiki, urlopy oraz przypisane usługi razem. Dostęp wynika z roli zaproszenia.",
       },
       {
         title: "Przenieś to, co pomoże w tym tygodniu",
-        body: "Zaimportuj kontakty przez vCard, połącz Google Calendar i udostępnij link do rezerwacji. Zacznij od najbliższych tygodni, zamiast zatrzymywać salon na migrację.",
+        body: "Zaimportuj kontakty przez vCard i udostępnij link do rezerwacji. Zacznij od najbliższych tygodni, zamiast zatrzymywać salon na migrację.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Czy ukończona wizyta liczy się jako otrzymane pieniądze?",
-      a: "Nie. Ukończona praca, zrealizowany przychód i zarejestrowane płatności są prowadzone osobno. Wizyta może być gotowa i nadal czekać na płatność, a przedpłacony karnet może zamknąć wizytę bez ruchu pieniędzy tego dnia. Trzymanie trzech stanów osobno nadaje sens liczbie okresu.",
+      a: "Nie. Ukończona praca, przychód i zarejestrowane płatności są prowadzone osobno. Wizyta może być gotowa i nadal czekać na płatność; przedpłacony karnet jest rejestrowany przy sprzedaży, a jego rozliczenie zamyka wizytę bez nowych pieniędzy i przychodu. Rozdzielenie tych stanów nadaje sens liczbie okresu.",
     },
     {
       q: "Co obejmuje liczba zysku?",
@@ -145,7 +145,7 @@ export const content: NichePageContent = {
     },
     {
       q: "Czy zespół może korzystać z tej samej przestrzeni?",
-      a: "Tak. Zaproś członków zespołu z dostępem Pracownik lub Supervisor. Grafiki, urlopy i przypisane usługi zostają w tej samej przestrzeni, z dostępem według roli.",
+      a: "Tak. Zaproś członków zespołu z odpowiednim dostępem. Grafiki, urlopy i przypisane usługi zostają w tej samej przestrzeni, z dostępem według roli.",
     },
   ],
 

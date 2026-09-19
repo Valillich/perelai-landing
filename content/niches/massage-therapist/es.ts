@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "Trae solo lo que el lunes necesita",
-        body: "Números del teléfono vía vCard, Google Calendar conectado si vives en él, y un enlace listo para pegar donde te encuentran. Nueve años de historial pueden venir después, o nunca.",
+        body: "Contactos del teléfono vía vCard y un enlace listo para pegar donde te encuentran. Nueve años de historial pueden venir después, o nunca.",
       },
     ],
   },

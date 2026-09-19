@@ -49,7 +49,7 @@
       "orderInstalment": "3-session order, instalment 1",
       "records": {
         "visitPayment": "Payment recorded against a visit",
-        "packageRedemption": "Package redemption, no cash movement",
+        "packageRedemption": "Package redemption — no new payment or revenue",
         "orderInstalment": "Payment recorded against an order/instalment",
         "noShowFee": "Payment recorded against a visit marked no-show"
       }
@@ -57,7 +57,7 @@
   },
   "states": {
     "title": "Completed work, revenue, payments and open-order balances are tracked separately.",
-    "body": "A visit can be completed before it counts toward revenue. A prepaid package can cover a visit without a new payment, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
+    "body": "A visit can be completed before it counts toward revenue. A prepaid package is recorded as revenue when it is sold; redeeming it settles a visit without a new payment or revenue, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
   },
   "drivers": {
     "title": "See where the result comes from",
@@ -65,7 +65,7 @@
   },
   "records": {
     "title": "Every figure has work behind it",
-    "body": "Payments are recorded against the visit, order or instalment they paid for, and stay connected to the relevant client and service category."
+    "body": "Payment records and package redemptions stay connected to the visit, order or instalment they concern, and to the relevant client and service category."
   },
   "operations": {
     "title": "Build the financial record as you work",
@@ -127,7 +127,7 @@
     "step1Title": "Pick your trade",
     "step1Body": "32 selectable business types, each with an editable service list. Relevant templates also include add-ons and linked costs.",
     "step2Title": "Bring your clients across",
-    "step2Body": "Import contacts from your phone with vCard. Connect your Google Calendar and keep both sides in step.",
+    "step2Body": "Import contacts from your phone with vCard, then manage your working schedule in Perelai.",
     "step3Title": "Share your booking link",
     "step3Body": "One link in your bio. Clients book directly on your own link."
   },
@@ -165,7 +165,7 @@
     },
     "q_bank": {
       "question": "Will the number match my bank?",
-      "answer": "Not always. Summary revenue represents completed work that has been settled, and a prepaid package can settle a visit without moving money. Recorded payments and payment-account balances show money movement separately."
+      "answer": "Not always. PAID means a visit is settled, not that cash was received. A package sale is recorded once; redeeming its credit adds no new payment or revenue. Recorded payments and payment-account balances show money movement separately."
     },
     "q1": "How do clients book with me?",
     "a1": "Share your direct booking link. Clients choose a service and time directly on your page.",
@@ -173,8 +173,8 @@
     "a2": "You confirm your email, then a short setup: your trade, your services, your team if you have one, and optional imports.",
     "q3": "Will my services already be there?",
     "a3": "Yes — each selectable business type starts with an editable service or item list. Relevant templates also include add-ons and linked costs.",
-    "q4": "Can I bring my clients and calendar across?",
-    "a4": "Yes: contacts from your phone (vCard) and two-way Google Calendar sync.",
+    "q4": "Can I import clients from my phone?",
+    "a4": "Yes: import contacts from your phone with vCard.",
     "q5": "Can I manage multiple services and add-ons?",
     "a5": "Yes. Each template includes selectable services and relevant add-on options.",
     "q6": "Is this accounting software?",

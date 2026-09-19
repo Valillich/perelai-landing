@@ -113,7 +113,7 @@ export const content: NichePageContent = {
       },
       {
         title: "N'apportez que ce dont lundi a besoin",
-        body: "Numéros du téléphone via vCard, Google Agenda branché si vous y vivez, et un lien prêt à coller là où l'on vous trouve. Neuf ans d'historique peuvent suivre plus tard, ou jamais.",
+        body: "Contacts du téléphone via vCard et un lien prêt à coller là où l'on vous trouve. Neuf ans d'historique peuvent suivre plus tard, ou jamais.",
       },
     ],
   },

@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Open the lash artist workspace", body: "Arriving from this page puts the lash artist template first in onboarding. You begin with a trade choice that reflects the services a client sees on your booking link, rather than choosing from a salon-first blank setup." },
       { title: "Make the service list yours", body: "Start with Brow Shaping, Brow Tint, Brow Lamination, Lash Lift & Tint, Lash Extensions and Lash Refill. Edit a duration, add what you offer, or remove a service that is not part of your work. The list remains yours when your menu changes." },
-      { title: "Bring over the essentials", body: "Import contacts from your phone with vCard, connect Google Calendar, then share your own booking link. You can start with the information that helps you work this week instead of moving everything at once or pausing bookings for a migration project." },
+      { title: "Bring over the essentials", body: "Import contacts from your phone with vCard, then share your own booking link. You can start with the information that helps you work this week instead of moving everything at once or pausing bookings for a migration project." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Can clients book without a DM exchange?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time. Someone looking for Brow Tint can start with that named service, while a Lash Refill client can see the same clear route without asking you to type out available times." },
     { q: "What happens when a client is late or does not show?", a: "Perelai can send automatic reminders by email, in-app and push. Work and money are recorded separately, so a missed Visit is not treated as money received. You decide how to handle a future booking request while the unfinished decision stays visible." },
     { q: "Can I see what the week actually brought in?", a: "Record what was actually received, link Supplies & Adhesive to the relevant work, and see revenue, costs and what is still outstanding without a spreadsheet. That gives you a clearer starting point than trying to reconstruct refills, brow work, fresh sets and materials from messages after the week is over. A completed extension set is work done, not automatically money received, so the number does not hide a balance that still needs attention." },
-    { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard and optionally connect Google Calendar. Your service list is editable, so you can make it yours as you go. Begin with the next few bookings, then decide what else is useful to bring across without pausing the work that pays the bills." },
+    { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard. Your service list is editable, so you can make it yours as you go. Begin with the next few bookings, then decide what else is useful to bring across without pausing the work that pays the bills." },
   ],
   labels: {
     terminologyTitle: "The words in your lash room have a place in Perelai.",

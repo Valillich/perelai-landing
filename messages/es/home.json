@@ -68,7 +68,7 @@
     "step1Title": "Elige tu sector",
     "step1Body": "32 tipos de negocio seleccionables, cada uno con una lista editable de servicios. Las plantillas relevantes también incluyen opciones y costes vinculados.",
     "step2Title": "Trae a tus clientes",
-    "step2Body": "Importa contactos de tu teléfono mediante vCard. Conecta tu Google Calendar y mantén ambos lados sincronizados.",
+    "step2Body": "Importa contactos de tu teléfono mediante vCard. Después organiza tu agenda en Perelai.",
     "step3Title": "Comparte tu enlace de reserva",
     "step3Body": "Un enlace en tu bio. Los clientes reservan directamente en tu propio enlace."
   },
@@ -106,8 +106,8 @@
     "a2": "Confirmas tu correo y luego una configuración rápida: tu sector, tus servicios, tu equipo (si lo tienes) e importaciones opcionales.",
     "q3": "¿Mis servicios ya estarán ahí?",
     "a3": "Sí: cada tipo de negocio empieza con una lista editable de servicios o artículos. Las plantillas relevantes también incluyen opciones y costes.",
-    "q4": "¿Puedo traer mis clientes y mi calendario?",
-    "a4": "Sí: contactos de tu teléfono (vCard) y sincronización bidireccional con Google Calendar.",
+    "q4": "¿Puedo importar clientes desde mi teléfono?",
+    "a4": "Sí: importa contactos de tu teléfono mediante vCard.",
     "q5": "¿Puedo gestionar múltiples servicios y opciones?",
     "a5": "Sí. Cada plantilla incluye servicios seleccionables y opciones relevantes.",
     "q6": "¿Esto es software de contabilidad?",
@@ -122,7 +122,7 @@
     },
     "q_bank": {
       "question": "¿La cifra coincidirá con mi banco?",
-      "answer": "No siempre. El ingreso del resumen representa trabajo completado que se ha liquidado, y un paquete prepagado puede liquidar una visita sin mover dinero. Los pagos registrados y los saldos de las cuentas de pago muestran el movimiento de dinero por separado."
+      "answer": "No siempre. PAID significa que una visita está liquidada, no que se recibió dinero. La venta de un paquete se registra una vez; canjear su crédito no añade un nuevo pago ni ingreso. Los pagos registrados y los saldos de las cuentas de pago muestran el movimiento de dinero por separado."
     }
   },
   "closing": {
@@ -182,7 +182,7 @@
       "orderInstalment": "Pedido de 3 sesiones, primera cuota",
       "records": {
         "visitPayment": "Pago vinculado a una visita",
-        "packageRedemption": "Canje de paquete, sin movimiento de dinero",
+        "packageRedemption": "Canje de paquete: sin nuevo pago ni ingreso",
         "orderInstalment": "Pago vinculado a un pedido/cuota",
         "noShowFee": "Pago vinculado a una visita marcada como no presentada"
       }
@@ -190,7 +190,7 @@
   },
   "states": {
     "title": "El trabajo completado, los ingresos, los pagos registrados y los saldos de pedidos abiertos no son lo mismo.",
-    "body": "Una visita puede estar completada antes de contar como ingreso. Un paquete prepagado puede cubrir una visita sin un nuevo pago, mientras que un pedido abierto puede seguir teniendo un importe pendiente. Perelai distingue estos estados para que cada cifra tenga un significado claro."
+    "body": "Una visita puede estar completada antes de contar como ingreso. Un paquete prepagado se registra como ingreso al venderse; canjearlo liquida una visita sin un nuevo pago ni ingreso, mientras que un pedido abierto puede seguir teniendo un importe pendiente. Perelai distingue estos estados para que cada cifra tenga un significado claro."
   },
   "drivers": {
     "title": "Mira de dónde viene el resultado",
@@ -198,7 +198,7 @@
   },
   "records": {
     "title": "Cada cifra tiene trabajo detrás",
-    "body": "Los pagos se vinculan a la visita, el pedido o la cuota que abonaron, y quedan conectados con el cliente y la categoría de servicio correspondientes."
+    "body": "Los registros de pago y los canjes de paquetes quedan vinculados a la visita, el pedido o la cuota correspondientes, así como al cliente y la categoría de servicio."
   },
   "operations": {
     "title": "Actualiza tus finanzas mientras trabajas",

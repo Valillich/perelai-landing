@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Ouvrez l'espace de travail pour lash artist", body: "Si vous venez depuis cette page, le modèle pour lash artist indépendant sera sélectionné par défaut lors de la configuration." },
       { title: "Faites de la liste de prestations la vôtre", body: "Commencez avec Restructuration des sourcils, Teinture des sourcils, Brow lift, Rehaussement de cils & teinture, Pose complète d'extensions et Remplissage de cils. Modifiez les durées ou ajustez selon votre carte." },
-      { title: "Importez l'essentiel", body: "Importez les contacts de votre téléphone via vCard, connectez Google Agenda, puis partagez votre propre lien de réservation." },
+      { title: "Importez l'essentiel", body: "Importez les contacts de votre téléphone via vCard, puis partagez votre propre lien de réservation." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Les clients peuvent-ils réserver sans passer par les DMs ?", a: "Partagez un lien de réservation dans votre bio ou par message. Les clients choisissent la prestation, le membre de l'équipe et l'horaire." },
     { q: "Que se passe-t-il si un client est en retard ou ne vient pas ?", a: "Perelai peut envoyer des rappels automatiques par e-mail, notification push et dans l'application. Le travail et l'argent sont suivis séparément pour qu'un rendez-vous manqué ne soit pas comptabilisé comme revenu." },
     { q: "Puis-je voir ce que la semaine a réellement rapporté ?", a: "Consignez les montants encaissés, associez le matériel & la colle au travail réalisé, et visualisez revenus, coûts et montants dus sans tableur." },
-    { q: "Dois-je tout migrer en un week-end ?", a: "Non. Incorporez vos contacts depuis votre téléphone via vCard et connectez optionnellement Google Agenda. La liste de prestations est entièrement adaptable à votre rythme." },
+    { q: "Dois-je tout migrer en un week-end ?", a: "Non. Incorporez vos contacts depuis votre téléphone via vCard. La liste de prestations est entièrement adaptable à votre rythme." },
   ],
   labels: {
     terminologyTitle: "Les termes de votre studio de cils ont leur place dans Perelai.",

@@ -68,7 +68,7 @@
     "step1Title": "İş kolunuzu seçin",
     "step1Body": "Seçilebilir 32 işletme türü, her biri düzenlenebilir bir hizmet listesiyle. İlgili şablonlar ayrıca ek seçenekler ve bağlı maliyetler içerir.",
     "step2Title": "Müşterilerinizi getirin",
-    "step2Body": "Kişileri telefonunuzdan vCard ile aktarın. Google Takvim'inizi bağlayın ve her iki tarafı senkronize tutun.",
+    "step2Body": "Kişileri telefonunuzdan vCard ile aktarın. Ardından programınızı Perelai'de yönetin.",
     "step3Title": "Randevu bağlantınızı paylaşın",
     "step3Body": "Biyografinizde tek bir bağlantı. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır."
   },
@@ -106,8 +106,8 @@
     "a2": "E-postanızı onaylarsınız, ardından kısa bir kurulum gelir: iş kolunuz, hizmetleriniz, ekibiniz (varsa) ve isteğe bağlı aktarımlar.",
     "q3": "Hizmetlerim zaten hazır olacak mı?",
     "a3": "Evet — her işletme türü düzenlenebilir bir hizmet veya ürün listesiyle başlar. İlgili şablonlar ayrıca ek seçenekler ve maliyetler içerir.",
-    "q4": "Müşterilerimi ve takvimimi getirebilir miyim?",
-    "a4": "Evet: telefonunuzdaki kişiler (vCard) ve Google Takvim ile iki yönlü senkronizasyon.",
+    "q4": "Müşterileri telefonumdan aktarabilir miyim?",
+    "a4": "Evet: kişileri telefonunuzdan vCard ile aktarın.",
     "q5": "Birden fazla hizmet ve ek seçeneği yönetebilir miyim?",
     "a5": "Evet. Her şablon seçilebilir hizmetler ve ilgili seçenekler içerir.",
     "q6": "Bu bir muhasebe yazılımı mı?",
@@ -122,7 +122,7 @@
     },
     "q_bank": {
       "question": "Bu rakam bankamla eşleşir mi?",
-      "answer": "Her zaman değil. Özet cirosu, kesinleşmiş tamamlanan işi yansıtır ve önceden ödenmiş bir paket, para hareketi olmadan bir randevuyu kesinleştirebilir. Kaydedilen ödemeler ve ödeme hesabı bakiyeleri para hareketini ayrı olarak gösterir."
+      "answer": "Her zaman değil. PAID, bir randevunun kapatıldığı anlamına gelir; para alındığının kanıtı değildir. Paket satışı bir kez kaydedilir; kredi kullanımı yeni ödeme veya gelir eklemez. Kaydedilen ödemeler ve ödeme hesabı bakiyeleri para hareketini ayrı olarak gösterir."
     }
   },
   "closing": {
@@ -182,7 +182,7 @@
       "orderInstalment": "3 seanslık sipariş, 1. taksit",
       "records": {
         "visitPayment": "Bir randevuyla ilişkilendirilen ödeme",
-        "packageRedemption": "Paket kullanımı, para hareketi yok",
+        "packageRedemption": "Paket kullanımı — yeni ödeme veya gelir yok",
         "orderInstalment": "Bir siparişle/taksitle ilişkilendirilen ödeme",
         "noShowFee": "Gelinmedi olarak işaretlenen bir randevuyla ilişkilendirilen ödeme"
       }
@@ -190,7 +190,7 @@
   },
   "states": {
     "title": "Tamamlanan iş, ciro, kaydedilen ödemeler ve açık sipariş bakiyeleri aynı şey değildir.",
-    "body": "Bir randevu, ciroya yansımadan önce tamamlanmış olabilir. Önceden ödenmiş bir paket, yeni bir ödeme yapılmadan bir randevuyu karşılayabilirken, açık bir siparişte ödenmemiş bakiye kalabilir. Perelai bu durumları ayrı gösterir; böylece her rakamın anlamı nettir."
+    "body": "Bir randevu, ciroya yansımadan önce tamamlanmış olabilir. Önceden ödenmiş bir paket satıldığında gelir olarak kaydedilir; paketin kullanılması bir randevuyu yeni ödeme veya gelir oluşturmadan kapatır, açık bir siparişte ise ödenmemiş bakiye kalabilir. Perelai bu durumları ayrı gösterir; böylece her rakamın anlamı nettir."
   },
   "drivers": {
     "title": "Sonucun nereden geldiğini görün",
@@ -198,7 +198,7 @@
   },
   "records": {
     "title": "Her rakamın arkasında bir iş var",
-    "body": "Ödemeler, karşılığında yapıldıkları randevu, sipariş veya taksitle ilişkilendirilir ve ilgili müşteri ile hizmet kategorisiyle bağlantılı kalır."
+    "body": "Ödeme kayıtları ve paket kullanımları ilgili randevu, sipariş veya taksitle; ayrıca müşteri ve hizmet kategorisiyle bağlantılı kalır."
   },
   "operations": {
     "title": "Çalışırken finansal verilerinizi güncel tutun",

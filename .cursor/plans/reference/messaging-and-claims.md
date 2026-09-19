@@ -148,10 +148,10 @@ Exact phrase-to-evidence/role/plan/locale/revision register: [launch checklist](
 | Gate | Allowed meaning / source | Publication condition |
 |---|---|---|
 | G1 / F1–F4 | Schedule appointments, retain client history; app Calendar/Clients, ADR-0001 | Actual APPOINTMENT journey |
-| G2 / F5/F8 | Record payments and use prepaid packages; ADR-0002/0003/0006 | Payment vs redemption proof; POS1 fixture correction; no card acquiring |
+| G2 / F5/F8 | Record payments; recognise a prepaid package at sale and redeem its credits without new cash or revenue; ADR-0002/0003/0006 | Payment vs redemption proof; POS1 fixture correction; no card acquiring |
 | G3 / F15 | Administrator scheduling/permitted checkout without general reports; ADR-0014 and access UI | Real STUDIO trial/paid admission, current role boundaries and TEAM-RELEASE |
 | G4 | Reconcile expected and counted cash; ADR-0015, CashDrawer UI, implemented DR0–DR6 | IMPLEMENTATION READY, included in POS2. Public release evidence unresolved: report still says NO-GO; reconcile actual acceptance/enablement in POS4. Also SOLO owner, not STUDIO-only |
-| G5 / F6 | Revenue, costs and calculated profit by supported period/category/client; Finance API/UI | Metric scope and zero duplicate package revenue verified; POS1 |
+| G5 / F6 | Revenue, costs and calculated profit by supported period/category/client; Finance API/UI | Metric scope and zero duplicate package revenue are fixed in the POS1 fixture; no cash=Revenue claim |
 | G6 | One 21-day STUDIO trial without a card, explicit purchase after expiry in v1 | Accepted decisions 16.09 + v1 limitation; BILL1/3/4/8, TEAM and applicable legal release |
 | G7 | SOLO USD19/STUDIO USD29 monthly per workspace; 1/5 active performers; STUDIO+ contact-only | Decisions 06.09, catalog, BILL7 display artifact + purchase/release gates |
 | G8 / F11 | Read Google Calendar events, only if released | Read-only scope and actual flow verified; omit by default |

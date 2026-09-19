@@ -53,7 +53,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Otwórz przestrzeń pracy stylistki rzęs", body: "Wejście z tej strony ustawia szablon stylistki rzęs jako pierwszy podczas wdrożenia." },
       { title: "Dopasuj listę do siebie", body: "Zacznij od regulacji brwi, henny brwi, laminacji brwi, liftingu i henny rzęs, przedłużania rzęs oraz uzupełnienia rzęs. Edytuj według potrzeb." },
-      { title: "Przenieś podstawy", body: "Zaimportuj kontakty z telefonu przez vCard, połącz Google Calendar, a potem udostępnij własny link do rezerwacji." },
+      { title: "Przenieś podstawy", body: "Zaimportuj kontakty z telefonu przez vCard, a potem udostępnij własny link do rezerwacji." },
     ],
   },
   faq: [
@@ -61,7 +61,7 @@ export const content: NichePageContent = {
     { q: "Czy klientki mogą rezerwować bez wymiany DM-ów?", a: "Udostępnij jeden link do rezerwacji w bio lub wyślij go w wiadomości. Klientka wybiera usługę, osobę i czas. Osoba szukająca Henny Brwi zaczyna od nazwanej usługi, a klientka na Uzupełnienie Rzęs ma jasną drogę bez pytania Cię w wiadomości o każdy wolny termin." },
     { q: "Co się dzieje, gdy klientka się spóźnia lub nie przychodzi?", a: "Perelai może wysyłać automatyczne przypomnienia przez e-mail, w aplikacji i jako push. Praca i pieniądze są rejestrowane osobno, więc opuszczona Wizyta nie jest traktowana jako otrzymane pieniądze." },
     { q: "Czy zobaczę, co tydzień naprawdę przyniósł?", a: "Zapisuj faktycznie otrzymane pieniądze, przypisuj kleje i akcesoria do właściwej pracy, a potem zobacz przychody, koszty i otwarte należności bez arkusza. Wykonane Przedłużanie Rzęs to zrealizowana praca, a nie automatycznie otrzymane pieniądze, więc liczba nie ukrywa należności wymagającej dalszej decyzji." },
-    { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard i opcjonalnie połącz Google Calendar. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
+    { q: "Czy muszę przenosić wszystko w jeden weekend?", a: "Nie. Zacznij od kontaktów z telefonu przez vCard. Lista usług jest edytowalna, więc możesz dopasowywać ją stopniowo." },
   ],
   labels: {
     terminologyTitle: "Słowa z Twojej pracy z rzęsami mają miejsce w Perelai.",
@@ -84,7 +84,7 @@ export const content: NichePageContent = {
   cta: {
     title: "Trzymaj dzień z rzęsami na widoku po ostatniej klientce.",
     body: "Utwórz przestrzeń pracy, która zaczyna się od Twoich usług i trzyma Wizyty, pieniądze oraz kolejne decyzje w jednym miejscu.",
-    label: "Utwórz bezpłatną przestrzeń pracy",
+    label: "Utwórz przestrzeń pracy",
     microcopy: "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
   },
   research: lashArtistResearch,

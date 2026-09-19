@@ -43,7 +43,7 @@ export const content: NichePageContent = {
     steps: [
       { title: "Open the colorist workspace", body: "Your arrival from this page puts the independent colorist template first in onboarding." },
       { title: "Make the list yours", body: "Begin with Consultation & Strand Test, Root Color, Dimensional Color / Balayage, Corrective Color, Gloss & Toner, and Haircut & Finish. Edit what you need." },
-      { title: "Bring over the essentials", body: "Import contacts from your phone with vCard, connect Google Calendar, then share your own booking link." },
+      { title: "Bring over the essentials", body: "Import contacts from your phone with vCard, then share your own booking link." },
     ],
   },
   faq: [
@@ -51,7 +51,7 @@ export const content: NichePageContent = {
     { q: "Can clients stop booking through my DMs?", a: "Share one booking link in your bio or send it in a message. Clients pick a service, a person and a time." },
     { q: "What happens when someone does not show?", a: "Perelai can send automatic reminders by email, in-app and push. It records work and money separately, so a missed Visit is not treated as money received." },
     { q: "Can I see whether a color day actually paid off?", a: "Record what was actually received, link Color Product and Disposable Supplies to the relevant work, and see revenue, costs and what is still outstanding without a spreadsheet." },
-    { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard and optionally connect Google Calendar. The service list is already editable, so you can make it yours as you go." },
+    { q: "Do I have to move everything in one weekend?", a: "No. Start with contacts from your phone using vCard. The service list is already editable, so you can make it yours as you go." },
   ],
   labels: {
     terminologyTitle: "The words in your chair have a place in Perelai.",
