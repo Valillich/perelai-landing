@@ -1,5 +1,7 @@
 # Finance-first homepage positioning, narrative migration, and experiment plan
 
+> **Superseded for launch — 2026-09-19 (POS0).** The current [launch-positioning plan](../positioning/README.md) replaces this document's finance-first category, commercial bans and FM execution sequence. Current wording and evidence: [launch copy checklist](../../../docs/launch-positioning-checklist.md). Preserve the financial, device and claim-honesty boundaries; do not restart FM phases. The remainder is a dated historical record, not current launch instructions.
+
 **Repository:** `/Users/valery/Sites/perelai-landing`
 
 **Product evidence source:** `/Users/valery/Sites/beauty-finance`

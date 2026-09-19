@@ -1,5 +1,7 @@
 # Finance-first homepage migration — phase prompts for smaller LLMs
 
+> **Superseded for launch — 2026-09-19 (POS0).** Use [POS0–POS4](../positioning/02_execution_prompts.md), not these FM prompts, for the current launch. Category, trial and pricing now follow the [launch-positioning plan](../positioning/README.md) and [copy checklist](../../../docs/launch-positioning-checklist.md). Keep this library as historical evidence; previous approvals do not approve newly drafted strings.
+
 **Binding plan:** `00_home_hero_positioning_and_experiment_plan_20260802.md`
 
 **Repository:** `/Users/valery/Sites/perelai-landing`

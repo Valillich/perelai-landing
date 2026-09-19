@@ -1,163 +1,74 @@
 # Messaging, Claims and Copy Rails
 
-**Purpose:** the single source of truth for *what the landing may say*. Every headline, feature card,
-FAQ answer and meta description produced in Phases LP6–LP8 must be traceable to §2 of this file.
-**Verified against:** `beauty-finance` source and `docs/releases/*` on 2026-07-25, plus workspace
-`CONTEXT.md` §10 (financial invariants), §16 (messaging) and §17 (legal boundaries).
+**Purpose:** current source of truth for landing claims, together with the applicable evidence contracts.
+**Current launch authority:** owner brief, [positioning plan](../positioning/README.md), [MVP definitions](/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/01-launch-definitions.md), [commercial policy](../../../docs/commercial-policy.md).
+**Updated:** 2026-09-19 (POS0 + owner RU hero freeze), documentation only. Six Russian hero strings are OWNER APPROVED in the [launch checklist](../../../docs/launch-positioning-checklist.md) §2. New UK/EN H1/body adaptations and other new copy retain their separate pending status.
 
-**Rule for every agent working on copy:** if a claim is not in §2, you may not write it. If you
-believe it should be, add it to §2 with a source file path first, in a separate change.
+A public claim must appear in §2 **and** satisfy its current evidence/publication gate. “Found in source”, approved business policy, editor-reviewed copy and released availability are distinct statuses.
 
-**Amended 2026-08-02 (TEAM1, team collaboration).** F4 gained the notes supporting line and its
-never-say list; F15 gained the narrow team shapes; F25 (coworker shared availability) was added and is
-**held** on TC5; a Collaboration gate was added after §2.2; §4.1 gained eight collaboration bans;
-§4.2 gained the team/coworker terminology rows; §7 inserted **Collaboration** as row 7 and the former
-rows 7–11 shifted to 8–12. Nothing in §1 (positioning/ICP) or §6 (CTA policy) changed.
-
-**Amended 2026-08-03 (MSG1, homepage hero message; SUPERSEDED BY FM0–FM11).** §1 replaced the retired one-liner and gained the
-frozen homepage message with its clause-to-claim map; §4.1 gained one rejected-hero-pattern row
-("finally" / "in one place"); §7 row 1 replaced the retired Hero key line. **No claim row changed
-status.** §2 (the whole feature inventory), the Collaboration gate, TC5's `HOLD`, F4's notes decision,
-the Device gate, §5 (proof strategy), §6 (CTA policy) and §8–§10 are untouched. The former MSG0–MSG7 execution sequence is superseded by FM0–FM11. The frozen English is **`AWAITING OWNER APPROVAL`** — it is provisional positioning in the worktree, not published copy.
+**Supersession:** September launch direction replaces August finance-first/category, solo-US-only, commercial bans and FM ordering rules. The ledger IDs, device boundaries, coworker HOLD, notes restraint and financial honesty survive. August approvals belong to their exact old strings; they do not approve POS0 drafts. Historical audits/plans remain available but are not current execution instructions.
 
 ---
 
-## 1. Positioning (use this, don't re-derive it)
+## 1. Positioning
 
-**Category (the shelf) — changed 2026-08-03 by owner direction:** **financial tracking and analytics
-software for small service businesses.** Plain form: *simple finance software for independent service
-businesses.* Not accounting, not bookkeeping, not a marketplace, not payment processing, not a CRM.
+**Category:** Appointment, client and payment-tracking software for independent beauty professionals and small studios. Financial overview is a strong supporting capability, not the entire reason to buy.
 
-**Booking, Calendar and CRM are no longer the category.** They are the mechanism that keeps each
-financial record connected to the work behind it:
+**Core story:** appointment → visit completed → payment recorded **or** prepaid package applied. Show the links through one client/work example; do not sell feature-count uniqueness. Appointment and visit describe scheduling and fulfilment of the same event, not two entities.
 
-```text
-booking / order → completed work → payment or debt → financial analytics
-```
+**Primary RU hero — OWNER APPROVED, 2026-09-19:** «Порядок в записях.» + «Ясность в оплатах.» in one H1. Body: «Планируйте визиты, ведите историю клиентов и отмечайте оплаты.» Primary CTA: «Попробовать 21 день». Secondary: «Посмотреть, как это работает». Trial helper: «21 день STUDIO без карты. После пробного периода оформите подписку.» These six strings are frozen verbatim; the owner's approval does not cover all other copy or publication readiness.
 
-Booking is a *source of financial data*, never the reason to buy. Do not lead any page, meta description
-or ad with it.
+**Message rule:** benefit-led H1, immediately grounded by the three actions in body. G1/G2 support the product scope, not a guarantee of error-free records, automatic collection or increased income. Do not add team, packages or another promise to hero body. Explain package creation, recorded sale and remaining units below; optional «абонемент» at the first RU/UK explanation is not a new entity. The descriptive category remains valid for metadata/footer, not as an alternative H1.
 
-**Automation absolutes are banned (R13).** Never write "without manual entry", "automatic bookkeeping",
-"finance that fills itself in" or any equivalent. Expenses, corrections and manually added work all
-require the owner to enter them. The honest form is *"connected to the work behind it."*
+**Translation status:** new UK/EN H1/body must be adapted from the approved RU in POS2; their old descriptive drafts are retired. Existing CTA/helper translation candidates and remaining new copy are not automatically approved. Full source and scoped status: [launch checklist](../../../docs/launch-positioning-checklist.md). Do not reopen RU selection or create experiment variants.
 
-**One-liner:** *Perelai is financial tracking and analytics software that connects the money of a service
-business to its clients, services and daily work.* (Internal line, not a public headline.)
+**Audience:** Independent beauty professionals and small beauty studios, including a team of up to five active performers under STUDIO. Solo work leads; team access is a supported progression, not an enterprise pitch. Review languages do not choose launch markets. Do not promise adaptation to every profession or rewrite all niche pages.
 
-**Short tagline:** *Clear work. Clear money.*
+**Value hierarchy:**
 
-**Homepage message — OWNER-APPROVED 2026-08-03 (FM2).** Full set + approval record:
-[`docs/home-hero-copy-audit.md`](../../../docs/home-hero-copy-audit.md) §II.7. Claim gate:
-[`docs/finance-claim-contract.md`](../../../docs/finance-claim-contract.md). Approved as **English source
-only** — not implemented, not translated, not deployed. The strings currently in `messages/` are the
-superseded pre-approval draft; FM4A/FM5 replace them.
+1. Manage the working day: appointments and client context.
+2. Record a payment or use an eligible package; show the remaining units without another money receipt.
+3. Give team access when needed; explain Administrator scope precisely.
+4. Review revenue, costs and calculated profit by the supported period/category/client views.
+5. Include the implemented cash-reconciliation preview in POS2. G4 implementation is READY; public acceptance/enablement is checked separately before publishing.
 
-| Surface | Approved English | Claim rows |
-|---|---|---|
-| Hero `eyebrow` | Simple finance software for independent service businesses | category line |
-| Hero `title` | Revenue, costs and profit | FC1, FC9 |
-| Hero `accent` | — connected to the work behind them. | FC4, FC5, FC7 |
-| Hero `body` | Track revenue, costs and profit for any period. Break the result down by service category and client, while completed work, settled revenue and recorded payments stay separate. | FC1, FC4, FC5, FC2, FC7 |
-| `meta.title` | Perelai — Simple Finance Software for Service Businesses | category line |
-| `meta.description` | Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them. | FC1, FC4, FC5 |
-| `closing.title` | Your financial result, connected to the work behind it. | mechanism restatement |
+**JTBD / Four Forces** *(editorial hypotheses, not VOC)*: keep appointment/context/payment records connected; reduce rechecking; preserve a familiar solo start; answer setup effort, access scope and later price. No new interview or competitor evidence exists in POS0. Do not claim all booking tools blur finance or that users necessarily abandon spreadsheets.
 
-### Binding finance vocabulary (owner-set, 2026-08-03)
+### Financial vocabulary and invariant
 
-| Term | Meaning | Rule |
-|---|---|---|
-| **Revenue / Cost / Profit** | Primary analytics metrics | Use as the metric names |
-| **Income / Expense** | Additional *transaction types* | **Never use Income as a synonym for Revenue** |
-| **Payment** | Recorded receipt / allocation | — |
-| **Account Balance** | Balance of a **payment account** | **Never use Balance as a synonym for customer debt** |
-| **Outstanding / Overdue** | Scoped to **orders and instalments** | Never unscoped |
-
-Always qualify debt wording — *"open-order balance"*, never a bare *"balance"*.
-**Profit:** say "calculated profit"; **do not publish an equation** until FC9 is amended.
-
-Clause-by-clause:
-
-| Phrase | Ledger | Basis |
-|---|---|---|
-| Track revenue, costs and profit for any period | **FC1**, **FC9** | `getSummary`; period enum day/week/month/quarter/year. Profit is the UI label only — never "accounting", "bookkeeping", "tax", "P&L", and no public equation. |
-| by service category | **FC4** | `getRevenueByCategory` / `getCostByCategory` group on `categoryId`. Category granularity — never "by service". |
-| and client | **FC5** | `getClientSummary`, `getClientRevenueByCategory`, `getClientSummaryOverTime`. |
-| completed work, settled revenue and recorded payments stay separate | **FC2** + **FC7** | `REVENUE_FILTER` = `COMPLETED\|NO_SHOW` **and** `paymentStatus: PAID`; `PaymentAllocation` is the cash ledger; package redemption settles without an allocation. |
-| what is still owed on open orders *(sections/FAQ)* | **FC3** (+ existing **F7**) | `getDebtSummary`. **Scoped** to open orders and overdue instalments. |
-| connected to the work behind them | **FC4 + FC5 + FC7** | Payments recorded against the visit/order/instalment; totals break down by client and category. |
-
-**The boundary that must never blur.** Summary revenue = *settled* completed work
-(`paymentStatus: PAID`, which includes non-cash package redemption). Cash actually received =
-`PaymentAllocation`. ADR-0002 §5 is explicit that `PAID` **is not proof cash was received**. Never attach
-"what came in", "money received" or "cash in hand" to the summary/analytics total — that language belongs
-to payments and payment accounts only.
-
-No published phrase depends on **F25/TC5**, on any device row, or on any `HOLD`/`BLOCKED` row.
-**FC8 (export) is `BLOCKED`** and **FC10 (refunds/corrections) is not audited** — neither may be claimed.
-
-**What makes it different (in priority order — rewritten finance-first 2026-08-03, FM2):**
-
-1. **Every number is traceable to the work behind it.** Payments are recorded against the visit, order
-   or instalment they paid for, and totals break down by client and service category. A generic expense
-   tracker records an amount; Perelai records what it was for. This is the differentiator; lead with it.
-   (FC4, FC5, FC7)
-2. **Completed, settled and recorded cash stay separate states.** A completed visit enters summary
-   revenue only once it is settled — and settlement may be a package redemption, which moves no cash.
-   Competitors collapse these into one figure and produce numbers owners do not trust. (FC2, FC7)
-3. **Financial records are a by-product of the day's normal work.** Finishing a visit, recording a
-   payment, adding a cost and redeeming a package are what build the period summary — there is no
-   separate month-end finance exercise. *Not an automation claim; see the R13 ban above.*
-4. **Analytics without accounting vocabulary.** Period, category and client breakdowns with no chart of
-   accounts, no debits and credits, no reconciliation. (FC1, FC4, FC5, FC6, FC9)
-
-**Supporting mechanisms — never the lead:** operational Inbox (F1), public booking link with no take
-rate (F3), clients and history (F4), niche-aware onboarding (F10). These earn their place by keeping the
-financial record connected to real work.
-
-**ICP (initial GTM, do not broaden):** independent colorists and premium solo beauty professionals in
-the **United States**. `APPOINTMENT` mode. Everything else is Wave 2+.
-
-**Jobs to be done (finance-first, FM2):**
-- "Tell me what my result actually is this month, without rebuilding it from memory."
-- "Show me which service categories and which clients my revenue comes from."
-- "Show me what is still owed on open orders and instalments, and what is overdue."
-
-**Four forces (JTBD) — the spine of every niche page:**
-
-| Force | Content |
+| Term | Meaning / rule |
 |---|---|
-| **Push** | The month-end reconstruction. Money arrived in several places, costs sit in receipts, and no figure traces back to the visit that produced it — so the owner does not trust their own number. |
-| **Pull** | A period result you can open — completed work, expenses, payments, what is still owed on open orders — broken down by client and service category, each figure traceable to the work behind it. |
-| **Habit** | The notes app, the paper book and a mental estimate. Free, familiar, "good enough" until a pricing or drop-a-service decision. |
-| **Anxiety** | "Migrating my clients will take a weekend." "It'll be built for salons with 12 chairs, not me." "I'll set it up and then abandon it." Plus the finance-specific one: *"will this number match my bank?"* — answer it honestly with the settled-vs-cash distinction, never by implying they will always agree. |
+| Revenue / Cost / Profit | Actual analytics metrics; preserve names and verified report scope |
+| Income / Expense | Transaction types; never substitute Income for Revenue |
+| Payment | Recorded receipt/allocation, not card acquiring |
+| Account Balance | Payment-account balance, not customer debt |
+| Outstanding / Overdue | Always qualify as order/instalment amounts |
+| Cash expected / counted / difference | Physical cash reconciliation, not Revenue/Profit or overall account balance |
 
-Anxiety is the one the current landing does nothing about. Each niche page must answer all three
-anxieties explicitly — that is what the vCard/Google Calendar import section, the solo-vs-team framing
-and the terminology table are *for*.
+**ADR-0003 governs packages:** sale revenue is recognized once; redemption reduces units and sets the covered line amount to zero, creating no additional revenue or cash. PAID means settled, not proof of fresh money. The inherited FC2 wording that includes a package's face value in Revenue and the current landing fixture are stale; POS1 repairs them. Do not use their historical PASS to override this invariant. Use “calculated profit” without a public equation until its specific calculation contract is checked.
 
-**Anti-persona:** businesses that need real accounting, tax filing, payroll, clinical records, or
-consumer lending. Say so plainly rather than trying to convert them.
+**Never:** automatic bookkeeping, no manual entry, every booking becomes revenue, guaranteed bank matching, unsupported per-service profit, statutory reporting or acquiring. Expenses/corrections still need entry.
+
+**Anti-persona:** accounting/tax/payroll/clinical/lending/enterprise-permission needs. A short limitation is enough; no fear-based lecture.
 
 ---
 
-## 2. Shippable feature inventory
+## 2. Claim inventory and publication gates
 
-Every row is implemented in code today. Use the **Say** column verbatim or as a base; never upgrade
-the claim.
+F1–F26 preserve the earlier capability inventory, with September corrections below. They are not a blanket current-release attestation. Use the **Say** column as a ceiling, then the applicable G/TC/device/commercial gate. G1–G8 in §2.5 govern the new launch set.
 
 ### 2.1 Core loop
 
 | # | Capability | Say | Never say | Source |
 |---|---|---|---|---|
 | F1 | Operational Inbox | "One list of what still needs your decision — it stays there until you resolve it, not until you read it." | "AI triage", "smart inbox", "automatically handles" | `apps/api/src/inbox/`, `components/inbox/`, ADR-0009 |
-| F2 | Mode-aware Calendar | "A calendar that shows the kind of work you actually do — appointments, orders, requests or reservations." | Do not promise REQUEST/ORDER/RENTAL **public intake** — see §4 | `CalendarPage.tsx`, `calendar-projection/`, ADR-0008 |
-| F3 | Public booking page | "Share one link. Clients pick a service, a person and a time. No commission." | "Marketplace", "get discovered", "new clients from Perelai" | `apps/api/src/public-booking/`, `PublicBookingPage.tsx` |
+| F2 | Mode-aware Calendar | "Plan appointments and keep track of visits." | Do not promise REQUEST/ORDER/RENTAL **public intake** — see §4 | `CalendarPage.tsx`, `calendar-projection/`, ADR-0008 |
+| F3 | Public booking page | "Share your booking link. Clients choose a service and time on your page." | "Marketplace", "get discovered", "new clients from Perelai" | `apps/api/src/public-booking/`, `PublicBookingPage.tsx` |
 | F4 | Clients + history (incl. notes) | "Every client's visits, notes and payments in one place." Supporting line, when client context needs proof: "Pinned client notes and visit notes stay with the client history." | "CRM", "360° customer view", "lifetime value prediction". For the notes half: attachments, files, tags, mentions, note search, rich text, AI summaries, a global/company-wide notes feed, or notes visible to a linked coworker company | `apps/api/src/clients/`, `notes/`, `ClientDetailsPage.tsx`, `PinnedClientNoteCard.tsx`; supporting line gated by TC8 in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) (`PASS` 2026-08-02) |
 | F5 | Payment recording & allocation | "Record what was actually received and see exactly what it paid for." | "Payment processing", "we handle payments", "get paid instantly" — Perelai **records**, it does not process | `payment-accounts/`, ADR-0002 |
-| F6 | Finance overview | "Revenue, costs and what's still outstanding — without a spreadsheet." | "Accounting", "bookkeeping", "tax", "P&L", "financial advice" | `apps/api/src/finance/`, `FinancePage.tsx` |
+| F6 | Finance overview | "Review revenue, costs and calculated profit for a selected period." Qualify any separate debt figure as open-order/instalment debt; G5/ADR-0003 apply. | "Accounting", "bookkeeping", "tax", "P&L", "financial advice" | `apps/api/src/finance/`, `FinancePage.tsx` |
 | F7 | Orders + instalments | "Agree a payment schedule and track what's still owed." | "Financing", "BNPL", "credit", "lending", "invoice", "bill" | `apps/api/src/orders/`, ADR-0006 |
-| F8 | Packages (prepaid credits) | "Sell a package of visits and let it draw down automatically." | "Membership", "subscription", "loyalty program" | `apps/api/src/memberships/`, ADR-0003 |
+| F8 | Packages (prepaid credits) | "Create prepaid service packages and record their sale to clients. Track usage and what remains in each package." Redemption adds no new payment or revenue; G2 applies. | Membership/subscription as the product entity, online acquiring/storefront, guaranteed sales uplift | `MembershipTemplateEditorSheet.tsx` → `createPackageTemplate`; `SellMembershipSheet.tsx` → `sellClientPackage`; `apps/api/src/memberships/`, ADR-0003 |
 | F9 | Recurring visits | "Set a client's regular slot once." | "Automatic rebooking" | `apps/api/src/recurring/` |
 
 ### 2.2 Setup and integrations
@@ -165,33 +76,23 @@ the claim.
 | # | Capability | Say | Never say | Source |
 |---|---|---|---|---|
 | F10 | Niche-aware onboarding | "Pick your trade and start with an editable service or item list — 32 selectable business types. Relevant templates also include add-ons and linked costs." | "AI-generated setup", "instant migration"; do not imply every template has non-empty add-on/expense lists | `libs/core/src/templates/`, `OnboardingPage.tsx` |
-| F11 | Google Calendar sync | "Connect your Google Calendar and keep both sides in step." | Do not merge with Google sign-in — they are **separate** integrations | `apps/api/src/integrations/`, plan `google_oauth_calendar_sync_20260620` |
+| F11 | Google Calendar event reading | **Omit from launch story by default.** Describe a specific read/import flow only after G8 verification. | Two-way sync, “keep both sides in step”, writing changes back to Google; Google sign-in is separate | `libs/server/calendar-sync/src/lib/contracts/google-calendar-scopes.ts` (`calendar.events.readonly`); G8 |
 | F12 | Google sign-in | "Sign in with Google." | "Perelai reads your contacts" — the Contacts scope is **deliberately not requested** | `auth/google-auth.guard.ts` |
 | F13 | vCard contact import | "Bring your contacts across from your phone." | "One-click migration from [competitor]" | `apps/api/src/imports/`, `ob14-vcard-preview-company-estimate.md` |
 | F14 | Market-aware defaults | "Currency and country are set from your market; time-based service templates start with editable durations." | Do **not** promise suggested *prices* — the curated price catalog is intentionally empty (`ob13`). Do not promise durations for ORDER/REQUEST/non-time-based items. Durations come from the template, not from the market. | `supported-markets.ts`, `price-packs-catalog.ts` |
-| F15 | Staff & multi-company | "Add your team with roles, or run more than one business from one login." Narrow homepage shapes: "Invite team members with Staff or Supervisor access." · "Keep schedules, time off and assigned services together." · "Give each person the access their role allows." | "Enterprise permissions", "SSO", "granular permissions", "custom roles", "roles you define", "payroll", "timesheets", "commissions", "HR management", "built for salons", "requires a team", "enterprise workforce management". Never restate a role scope as an absolute ("Staff can never see another client", "everyone sees everything") | `staff/`, `invites/`, `memberships/`, `common/utils/staff-scope.util.ts`; narrow shapes gated by TC1–TC4 in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) (`PASS` 2026-08-02) |
+| F15 | Team access and performers | “Work solo or bring in your team.” Under G3: “Give your administrator access to scheduling and client checkout, without general financial reports.” | Unlimited users, team access in SOLO, administrator sees no money at all, invented/custom roles, payroll/commissions/HR; do not infer public release from internal TEAM mode | ADR-0014; `WorkspaceAccessSheet.tsx`, `WorkspaceAccessFormFields.tsx`; launch G3 and TEAM/BILL evidence. Multi-company marketing remains outside this launch story |
 | F25 | Coworker shared availability (separate businesses) | "Link a separate business that shares your space." · "You each see the other company's occupied times — not client, service, staff, money or note details." · "Coworker occupied times are checked when a visit is saved and excluded from public booking availability." | "Shared calendar", "calendar sharing", "sync your calendars with your coworkers"; "nothing is shared"; "complete privacy", "private by default", "anonymous"; "no double-booking ever", "real-time locking"; "shared account", "shared client list", "one shared workspace", "collaborate with anyone"; coworker described as a role, seat, membership, or team member | `apps/api/src/coworkers/`, `coworker-busy.service.ts` (returns `id`, `startAt`, `endAt`, `companyName`, `companyColor` only), `apps/api/prisma/schema.prisma` (`CoworkerGroup`, `CoworkerMembership`, `CoworkerInvite`), `apps/api/src/public-booking/public-booking.service.ts`; **publication gated by TC5–TC7** in [`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md) |
 
-**Collaboration gate (added 2026-08-02, TEAM1).** F25 takes the next free ledger number after F24 but
-lives here in §2.2, beside F15, because the two mechanisms have to be read together. F15 and F25
-describe mechanisms that must never
-be merged. A **team member** has workspace access inside *one* company (`CompanyMembership`, Staff or
-Supervisor). A **coworker** is a *separate business* linked to yours; accepting a coworker invite
-creates no membership and shares no client list. Like the device rows, a collaboration sentence needs
-**two** approvals: it must appear here *and* its matching row in
-[`docs/team-collaboration-claim-contract.md`](../../../docs/team-collaboration-claim-contract.md)
-must read `PASS`.
+**Collaboration gate — updated 2026-09-19.** Workspace access and linked separate companies remain distinct. A team member has access inside one company; performer profile and login/role are independent. Administrator and Business manager/SUPERVISOR are not synonyms.
 
-| Ledger | Claim-contract rows | Status on 2026-08-02 | Consequence |
-|---|---|---|---|
-| **F15** narrow shapes | TC1, TC2, TC3, TC4 | `PASS` | The team half of the collaboration section may ship. |
-| **F4** notes supporting line | TC8 | `PASS` | One supporting line, inside the workspace side only. Never a standalone Notes section, never in a coworker surface. |
-| **F25** | TC5 `HOLD`, TC6 `PASS`, TC7 `PASS` | **Held on TC5** | No coworker sentence, key, label, panel, or visual may ship. TC6/TC7 describe the boundary *of* a link that TC5 has not yet cleared, so they cannot carry it alone. |
-| **F15** multi-company half | TC9 `HOLD` | Held **for this section only** | "Run more than one business from one login" stays exactly where it is today. Do not import it into collaboration copy. |
+| Scope | Evidence status | Current rule |
+|---|---|---|
+| F15 / former TC1–TC4 | Historical August role evidence, not September commercial release proof | New Administrator, plan capacity and STUDIO access claims use G3/G6/G7 plus current TEAM release evidence |
+| F4 / TC8 | Existing notes evidence retained; not re-executed by POS0 | One supporting client-history line, never a standalone Notes section |
+| F25 / TC5–TC7 | TC5 remains HOLD in landing contract | No coworker copy, panel, label, sr-only summary or implied release. TC6/TC7 cannot independently clear the link |
+| Multi-company / TC9 | Historical HOLD for this section | No launch collaboration expansion; separate subscription per workspace is a commercial fact, not a new collaboration promise |
 
-TC5 is held because its focused integration evidence could not be executed (no `TEST_DATABASE_URL`),
-not because the mechanism was found absent. Clearing it requires a new dated verification entry in the
-claim contract — not a reading of this table.
+Use [team-collaboration-claim-contract.md](../../../docs/team-collaboration-claim-contract.md) for earlier scope and evidence. POS1/POS2 update affected current mappings without retroactively upgrading historical PASS. Clearing a hold requires dated evidence, not a copy edit.
 
 ### 2.3 Communication
 
@@ -219,7 +120,7 @@ collaboration row and sits here in §2.4 because it is a platform fact, not a te
 *and* its matching row in [`docs/device-claim-contract.md`](../../../docs/device-claim-contract.md)
 must read `PASS`. Audit prose cannot override a `BLOCKED` contract row.
 
-**Shippable today (mechanically `PASS` in both places):**
+**Previously verified scope (matching contract PASS required at publication; not re-tested by POS0):**
 
 | Ledger | Claim-contract row that must be `PASS` | Allowed public shape |
 |---|---|---|
@@ -240,21 +141,37 @@ must read `PASS`. Audit prose cannot override a `BLOCKED` contract row.
   automated captures at 1024 / 1360 / 1600 with DOM pane asserts). Do not upgrade that into
   unqualified "use it on iPad" without the cross-device row.
 
+### 2.5 Launch G1–G8 overlay (2026-09-19)
+
+Exact phrase-to-evidence/role/plan/locale/revision register: [launch checklist](../../../docs/launch-positioning-checklist.md), §6. These add the new launch meanings to the ledger; they do not mark the release ready.
+
+| Gate | Allowed meaning / source | Publication condition |
+|---|---|---|
+| G1 / F1–F4 | Schedule appointments, retain client history; app Calendar/Clients, ADR-0001 | Actual APPOINTMENT journey |
+| G2 / F5/F8 | Record payments and use prepaid packages; ADR-0002/0003/0006 | Payment vs redemption proof; POS1 fixture correction; no card acquiring |
+| G3 / F15 | Administrator scheduling/permitted checkout without general reports; ADR-0014 and access UI | Real STUDIO trial/paid admission, current role boundaries and TEAM-RELEASE |
+| G4 | Reconcile expected and counted cash; ADR-0015, CashDrawer UI, implemented DR0–DR6 | IMPLEMENTATION READY, included in POS2. Public release evidence unresolved: report still says NO-GO; reconcile actual acceptance/enablement in POS4. Also SOLO owner, not STUDIO-only |
+| G5 / F6 | Revenue, costs and calculated profit by supported period/category/client; Finance API/UI | Metric scope and zero duplicate package revenue verified; POS1 |
+| G6 | One 21-day STUDIO trial without a card, explicit purchase after expiry in v1 | Accepted decisions 16.09 + v1 limitation; BILL1/3/4/8, TEAM and applicable legal release |
+| G7 | SOLO USD19/STUDIO USD29 monthly per workspace; 1/5 active performers; STUDIO+ contact-only | Decisions 06.09, catalog, BILL7 display artifact + purchase/release gates |
+| G8 / F11 | Read Google Calendar events, only if released | Read-only scope and actual flow verified; omit by default |
+
 ---
 
-## 3. Not shippable — planned, not built
+## 3. Not part of the current launch promise
 
-Do not reference these in any tense that implies availability. "Coming soon" is also a promise; prefer
-silence unless there is a dated commitment.
-
-| Area | State | Source |
-|---|---|---|
-| AI / NLP magic input, smart insights, marketing broadcasts, cohorts, RFM, churn prediction | plan exists, **all todos pending** | `intelligence_core_analytics_marketing_nlp_20260717.plan.md` |
-| File attachments / media on notes | plan exists, **all todos pending** | `file_storage_media_attachments_20260620.plan.md` |
-| SaaS billing, subscriptions, free trials, plan entitlement | **no code at all** — no Stripe, no billing module in `apps/api/src` | verified 2026-07-25 |
-| Public REQUEST / ORDER / RENTAL intake | implemented but **disabled by default** | `publicBookingFeatureFlags.ts`, `.env.example:31-40` |
-| Curated market price suggestions | catalog **intentionally empty** | `ob13-market-price-provenance.md` |
-| SMS, WhatsApp, Telegram, Slack, Discord | explicitly out of scope | `email_verification_client_system_notifications_20260620.plan.md` |
+| Area | Rule |
+|---|---|
+| AI/NLP, smart insights, marketing broadcasts/cohorts/RFM/churn prediction | No availability claim |
+| File/media attachments on notes | No availability claim; notes remain a small client-history detail |
+| SaaS subscriptions/trial | **No longer “no code”.** Approved launch policy exists; publication follows G6/G7/BILL/TEAM/legal evidence |
+| Cash reconciliation | Implemented and included in POS2; no implementation HOLD. Public promise still needs current acceptance/enablement because DR7 records NO-GO |
+| Google Calendar | G8 verification required; two-way is false under current scope |
+| Public REQUEST/ORDER/RENTAL intake | Do not broaden APPOINTMENT launch into disabled public flows |
+| Curated market price suggestions | Do not promise automatic service pricing |
+| SMS/WhatsApp/Telegram/Slack/Discord | Do not add channel claims |
+| Workspace Data Export | Code exists; packaging, restricted access and retention guarantees remain commercial/legal questions. Do not claim “no export code” or promise access based solely on code |
+| STUDIO+ | Contact-only; no capacity, price, checkout or rollout date |
 
 ---
 
@@ -264,8 +181,8 @@ silence unless there is a dated commitment.
 
 | Banned | Why |
 |---|---|
-| "personal CFO" | CONTEXT §16 do-not-use list. Currently on the live site 4×. |
-| "14-day free trial", "no credit card required", any trial length | No billing system exists. |
+| "personal CFO" | Implies advisory capabilities outside the product boundary. |
+| Unapproved trial length, free forever, automatic charge when the cardless trial ends | Approved launch is 21-day STUDIO without a card, followed by explicit purchase in v1. Publication is gated, not categorically forbidden. |
 | "+38% repeat bookings", any un-sourced statistic | Fabricated. Every number needs a source or it goes. |
 | "Every booking automatically becomes revenue" | Violates the fulfilment/payment separation (CONTEXT §10). |
 | "Save thousands on marketplace fees" | Unverifiable savings claim. |
@@ -275,11 +192,11 @@ silence unless there is a dated commitment.
 | "fiscal receipt", "tax invoice", "official cash receipt" | CONTEXT §17. Use "payment confirmation". |
 | "lending", "credit", "BNPL", "financing" | CONTEXT §17. Instalments = tracking an agreed schedule. |
 | "PWA" | CONTEXT §17 wording rule. |
-| Fake testimonials, fake logos, fake counts ("Join 10,000+ pros") | Pre-commercial beta. There are no customers to cite yet. |
-| "Built for teams", "Manage your salon team", "Salon team management", "built for salons" | Added 2026-08-02 (TEAM1). Destroys message match with the flagship solo ICP, whose documented anxiety is *"It'll be built for salons with 12 chairs, not me."* Collaboration is a progression the visitor opts into, never the frame. |
+| Fake testimonials, fake logos, fake counts ("Join 10,000+ pros") | No verified publishable customer proof has been supplied. A beta or launch label does not authorize invented evidence. |
+| Team-only / enterprise positioning; “requires a team” | Solo professionals and small studios are both in scope. Mentioning a small studio is no longer banned; replacing the homepage with salon workforce management is outside launch scope. |
 | "Payroll", "timesheets", "commissions", "clock in/out", "HR" | Added 2026-08-02. Perelai stores staff schedules, time-off blocks and assigned services. It calculates no wage, hour total, or commission. Also an anti-persona boundary (§1). |
-| "Granular permissions", "custom roles", "define your own roles", "permission matrix" | Added 2026-08-02. There are exactly three role semantics — Owner, Supervisor, Staff. Vagueness here reads as enterprise software to a solo buyer and overstates the product. |
-| "Shared calendar", "share your calendar with your coworkers", "calendar sharing" (coworker sense) | Added 2026-08-02. Only occupied intervals cross a coworker boundary. F11 Google Calendar **sync** is a separate, real integration — do not let this ban shadow it, and do not let F11's wording leak into coworker copy. |
+| "Granular permissions", "custom roles", "define your own roles", "permission matrix" | Added 2026-08-02. Roles have explicit product scopes, now including Administrator; role and performer link are independent. Vagueness here reads as enterprise software to a solo buyer and overstates the product. |
+| "Shared calendar", "share your calendar with your coworkers", "calendar sharing" (coworker sense) | Added 2026-08-02. Only occupied intervals cross a coworker boundary. F11 reads Google events and is separate from coworker availability; neither permits a two-way or shared-calendar promise. |
 | "Nothing is shared", "complete privacy", "private by default", "anonymous" (coworker sense) | Added 2026-08-02. Company name, colour and occupied intervals *are* shared. Overclaiming privacy is the fastest way to be caught being wrong; state the precise visible and hidden fields instead. |
 | "No double-booking ever", "never double-book", "real-time locking" | Added 2026-08-02. Coworker occupied times are checked on save and excluded from public booking availability. That is a check, not a guarantee. |
 | "Streamline collaboration", "work better together", "one shared workspace", "collaborate with anyone" | Added 2026-08-02. §4.3 already bans "streamline". These phrases also hide *which* of the two mechanisms is meant, which is the exact ambiguity this section exists to remove. |
@@ -289,17 +206,17 @@ silence unless there is a dated commitment.
 
 | Use | Not |
 |---|---|
-| Visit | transaction, appointment record |
+| Appointment / visit (scheduling / fulfilment of the same event) | transaction; two separate entities invented for the demo |
 | Order | invoice, bill |
-| Package (prepaid credits) | membership, subscription |
+| Prepaid package; RU «Пакет услуг», UK «Пакет послуг» | membership, Perelai subscription, automatic recurring charge |
 | Workspace access | membership |
 | Payment confirmation | receipt (fiscal sense) |
 | Instalment | payment plan (in UI labels), installment (spelling) |
 | Public service request | booking, visit |
 | Rental reservation | visit, booking |
 | Operational Inbox item | notification |
-| Team member *(marketing prose)* | employee, seat, user, headcount, "your staff" as a mass noun |
-| Staff, Supervisor *(product role labels — take the English from the generated app string catalog, never hand-typed)* | `STAFF` / `SUPERVISOR` enum names in prose; invented role names |
+| Team member with access; active service professional for plan capacity | login count as performer count; unlimited users; administrative role treated as a performer |
+| Administrator / Business manager semantics; exact UI roles from the generated app catalog | Administrator = Supervisor; unshipped translated control labels; custom roles |
 | Coworker — **a linked separate business** | coworker as a person, a colleague inside your workspace, a role, or a seat |
 | Occupied times | shared calendar, busy calendar sharing, their schedule |
 
@@ -310,149 +227,81 @@ No exclamation points. No "streamline", "optimize", "innovative", "seamless", "l
 
 ---
 
-## 5. Proof strategy when you have no customers
+## 5. Proof without invented social proof
 
-The hardest constraint: pre-commercial beta ⇒ **no testimonials, no logos, no usage counts.** The
-usual trust block is unavailable, and faking it is banned (§4.1). Substitute, in this order:
+No new verified testimonials, logos, usage counts or conversion lift were supplied. Do not manufacture them.
 
-1. **Product transparency as proof.** *(Narrowed 2026-07-28 by
-   [`../product_mock_kit_20260728.md`](../product_mock_kit_20260728.md) §5 — LP5b.)*
-   **At least one real screenshot per page family**, on the homepage hero, unedited and captioned.
-   Every other product visual is a **rendered mock** built from the app's own template catalog and the
-   app's own translated UI strings — which makes it localized, themed, region-aware, and provably the
-   product's data, where a screenshot would be an English still life re-shot 168 times.
-   Caption every mock and every screenshot: *"Example data."*
-   The rule this replaces — *"real screenshots, not stylised mockups"* — was aimed at invented
-   interfaces. A mock whose service names, labels and currency come from generated files and whose
-   build fails when they stop matching is not an invented interface; a hand-drawn illustration is,
-   and those are still banned.
-2. **Specificity as proof.** "6 services, 3 add-ons and 2 linked costs, pre-filled for colorists" beats
-   "get set up in minutes". Specific claims read as true because only someone who built it would know them.
-3. **Founder-led credibility.** A short, signed "why we built this" with a real name and a way to reply.
-   Founder-led outreach is the documented distribution channel — the page should match the voice of the
-   DMs that drive traffic to it.
-4. **Risk reversal that is actually real.** Use only product-backed, dated owner-approved facts.
-   “No card” is currently code-backed because there is no billing. Do not promise data export; no
-   export capability was found. Do not say closing a tab cancels anything. A founding-price lock,
-   beta duration or scarcity is a commercial obligation and ships only when recorded with approver
-   and date in `docs/commercial-policy.md`.
-5. **Honesty as differentiation.** A short "what Perelai is not" block — not accounting, not a
-   marketplace, not a medical record system. It disqualifies bad fits, and it is the most credible thing
-   on a page with no customers.
-6. **Public roadmap / changelog** once one exists. A dated changelog is third-party-verifiable proof of
-   momentum.
-
-**Replace the trust block with these. Do not leave an empty "as seen in" strip.**
+1. Preserve the existing interactive product previews and their established screenshot/evidence anchors. No new screenshot campaign, shell redesign or visual system is required for this launch.
+2. Keep exact app control labels generated from a clean source revision; factual fixture values must satisfy ADRs. A mock is “Example data”, not a live account or proof of production availability.
+3. Correct the existing package/Revenue error before using finance previews as proof. New package/admin fragments remain small; Drawer is separate and optional.
+4. Trial/no-card and prices use accepted business policy **and** release checks—not absence of billing code. No export, refund, price-lock or scarcity guarantee without its own authority.
+5. Show the product boundary plainly. Do not turn “not accounting” into the leading message or add empty “as seen in” strips.
 
 ---
 
-## 6. CTA policy (stage-gated)
+## 6. CTA policy
 
-The CTA must never promise a mechanism that does not exist. There is no trial, and registration ends in
-an email-verification screen, not in the app.
+One primary action. RU hero CTA/helper are frozen in §1 and the launch checklist. English candidates below still need adaptation review; actual public use requires G6/G7 release clearance:
 
-**Current stage — no billing, founding beta:**
-
-| Position | Copy | Destination |
+| Position | Copy | Destination / rule |
 |---|---|---|
-| Primary | **Create workspace** — commercially neutral by owner decision 2026-08-03. **"Create your free workspace" and "Join the Founding Beta" are both retired**: *free* depends on `CF-04` and the Founding Beta programme has no approved row. | `buildAppSignupUrl({ niche, source, campaign, landingPath, locale })` |
-| Secondary | **See how it works** | `#how` on the same page |
-| Header, logged-out | **Log in** | `${NEXT_PUBLIC_APP_URL}/login` |
-| Micro-copy under primary | **"You'll get a verification email to finish setting up."** — the "No card." prefix is **retired** (depends on `CF-01`, `PENDING`). Banned alongside it: *free*, *Founding Beta*, *trial*, future pricing, price lock, seat scarcity. | — |
+| Primary | **Start 21-day trial** | Existing `buildAppSignupUrl`, then registration, email verification and eligible setup |
+| Secondary | **See how it works** | Existing #how |
+| Login | **Log in** | Configured app login |
+| Trial helper | **21 days of STUDIO, no card required. Subscribe when your trial ends.** | V1 explicit post-expiry purchase; no early card setup |
+| Price helper | **After the trial: SOLO {soloPrice}/month or STUDIO {studioPrice}/month per workspace.** | Approved USD anchors from BILL7 display catalog; final checkout currency/tax disclosed |
+| Verification helper | **You'll get a verification email to finish setting up.** | Preserve the actual email-verification handoff |
 
-That micro-copy is not decoration: `AuthRegisterResult` is `{ verificationRequired: true }`, so the
-user *will* hit an inbox step. Saying so ahead of time is the cheapest activation win available.
+Full source and per-scope status: [launch checklist](../../../docs/launch-positioning-checklist.md). Six RU hero strings are approved, translations and other new strings remain pending. Approved business facts and the RU freeze are not reopened.
 
-**After self-service billing ships** (only then):
-
-| Position | Copy |
-|---|---|
-| Primary | **Start free trial** |
-| Secondary | **View demo** |
-
-Banned CTA copy: "Submit", "Sign Up", "Learn More", "Click Here", "Get Started" (generic).
+No landing checkout or provider IDs. `offer` only through completed BILL7 handoff. Home does not invent `niche`. Keep price/trial disclosure near hero/final/Pricing CTAs; do not repeat a paragraph under every header button. Generic **Create workspace** is a fallback only for a verified available signup, not a workaround to advertise an unready STUDIO trial.
 
 ---
 
 ## 7. Homepage message hierarchy
 
-One idea per section, in this order. Each section advances one argument.
+The [launch specification](../positioning/01_home_pricing_copy_and_previews.md) replaces FM/DVC/TEAM historical placement instructions where they conflict. Preserve the previews themselves.
 
-| # | Section | Job | Key line |
-|---|---|---|---|
-| 1 | Hero | State the category and the promise for a cold visitor in 5 seconds | Eyebrow *Simple finance software for independent service businesses* + H1 *Revenue, costs and profit — connected to the work behind them.* (owner-approved 2026-08-03; the eyebrow carries the shelf so the H1 can carry the metrics — see §1) |
-| 2 | Finance overview | Show the period result as the first product proof | *Revenue, costs and profit for any period* — review revenue, costs and calculated profit for a day, week, month, quarter or year (FC1, FC9) |
-| 3 | Financial states | The honesty argument, and the one competitors get wrong | *Completed, settled, recorded and owed are different states* — a visit can be completed and not yet settled; a package redemption settles without moving money; an open order can still be owed months later (FC2, FC3, FC7) |
-| 4 | Drivers | Answer "where does the result come from?" | *See where the result comes from* — revenue by service category, costs by category, a client's revenue history, and how the result changes over time (FC4, FC5, FC6) |
-| 5 | Connected records | The mechanism behind every number | *Every figure has work behind it* — payments recorded against the visit, order or instalment they paid for, connected to client and service category (FC7) |
-| 6 | Daily operations | Show *how* the records get created, without leading with it | *Build the financial record as you work* — complete a visit, record a payment, add a cost, redeem a package; Booking, Calendar and Inbox keep these connected (F1, F3, F4) — supporting mechanism only, never the purchase argument |
-| 7 | Device fit | Answer "will this fit how I work?" before migration anxiety starts | *Perelai runs in a web browser. Installing it is optional, and there is no App Store or Google Play listing.* (F21 + F23) |
-| 8 | Collaboration | Answer "can I use this alone, and what happens if I add someone?" | *Work solo. Add people when you need them.* (F15 narrow shapes; F4 notes line as the one supporting proof) |
-| 9 | Set-up in an evening | Kills the migration anxiety | Templates, Google Calendar, contacts import |
-| 10 | What Perelai is not | Disqualify + build trust | Not accounting, not bookkeeping, not a marketplace, not a medical record system; no export |
-| 11 | Niche router | Send visitors to their page | Links to every live niche page — this is also the internal-linking hub |
-| 12 | FAQ | Objection handling | §8 below |
-| 13 | Final CTA | Recap + risk reversal | Repeat primary CTA — **CTA/commercial wording is `HOLD`**, see the CTA section in `.agents/product-marketing.md` |
+| Order | Section | One job |
+|---|---|---|
+| 1 | Hero | Order in appointments / clarity about recorded payments, one concrete action sentence, audience eyebrow, CTA and trial/next price |
+| 2 | Operations (#features) | Schedule → complete visit → record payment/apply package; existing Inbox preview |
+| 3 | Connected records + package fragment | Explain payment vs package and remaining units |
+| 4 | Drawer, **POS2 implementation READY** | Expected/count/difference; build preview now, reconcile public G4 before publication |
+| 5 | Collaboration + access fragment | Work solo or with a team; precise Administrator scope; no separate CTA |
+| 6 | Finance overview | Revenue/costs/calculated profit for the selected period |
+| 7 | Drivers | Category/client breakdown, without repeating the hero |
+| 8 | Devices | Browser access and already-verified optional-install boundaries |
+| 9 | Setup (#how) | Editable services, vCard clients, direct booking link |
+| 10 | Not | Short accounting/marketplace/clinical boundaries |
+| 11 | Niche router | Preserve current links; no new niche programme |
+| 12 | FAQ | Six short launch objections |
+| 13 | Final CTA | Repeat the same primary action and commercial facts |
 
-**Order (FM2 narrative rewrite — bound by FM3 2026-08-03).**
+Calendar first, Finance second in the existing HeroShowcase; retain its controls/animation/accessibility. Remove only the standalone text-only FinancialStates section, carrying its necessary explanation into Package/Finance. Notes remains one client-history line. Move #features to Operations; leave #how in Setup. Remove Find your trade from both header versions, not the footer or route registry.
 
-```text
-Hero → Finance overview → Financial states → Drivers → Connected records → Daily operations →
-Devices → Collaboration → Setup → Not → Niche router → FAQ → Final CTA
-```
-
-This replaces the retired booking-first order
-(`Hero → Problem → Inbox → Booking → Money → Devices → …`), which was FM0 defect **R2**: the top of this
-document was finance-first while the hierarchy still argued Inbox and Booking first. FM2 set the
-narrative order; **FM3 bound it** against the real component tree — component-by-component disposition
-(reuse/revise/split/move/merge/retire), the HeroShowcase reorder, and the deterministic fixture are
-specified in
-[`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md).
-Do not implement this order before FM4A/FM4B.
-
-- **Device fit stays immediately after the last product-argument section.** In the retired order that
-  section was Money; in the finance-first order it is *Daily operations*. The DVC decision (device plan
-  §6.3) is that Devices directly follows the product argument and precedes Collaboration — that
-  adjacency is preserved, and Collaboration is still inserted *after* Devices. **Re-confirmed by FM3
-  (2026-08-03)** against the DVC plan — see
-  [`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md)
-  §4.
-- **Collaboration sits between Devices and Setup** because it is objection handling, not a new
-  purchase argument: the finance sections must land first, and the section then hands the visitor
-  straight to Setup's existing "your team if you have one" step (§8 FAQ 2).
-- **Collaboration adds no CTA.** The page keeps exactly one primary action. It also adds no route, no
-  header/footer item, no anchor target, no FAQ row, no metadata, OG/Twitter, JSON-LD or `llms.txt`
-  claim, and no niche-page block. **Bound by FM3 (2026-08-03):** `#features` moves from `Inbox` to
-  `Finance overview` (the renamed `money.tsx`/`finance-overview.tsx`, position 2, the first product-proof
-  section below the hero). Full component map, disposition, and fixture specification:
-  [`docs/home-finance-narrative-and-visual-contract.md`](../../../docs/home-finance-narrative-and-visual-contract.md).
-- **Notes is not a section.** It appears once, as a supporting line inside Collaboration's workspace
-  side (F4 + TC8). See `docs/team-collaboration-copy-audit.md` §8 for the recorded rationale.
+This is narrative/wording work, not approval to rebuild app previews. Exact fixtures/labels and summaries must match what is actually rendered.
 
 ---
 
-## 8. FAQ bank (objection handling)
+## 8. FAQ bank
 
-Six for the homepage; each niche page swaps 3–5 of them for niche-specific ones.
+Current source copy and RU/UK/EN answers: [launch checklist](../../../docs/launch-positioning-checklist.md). Home uses six questions:
 
-1. **Do I need a card to start?** **RETIRED as a published FAQ row (owner decision 2026-08-03).** The
-   answer depends on `CF-01`, which is still `PENDING` with no owner, so no card, price, commission,
-   beta-duration or price-lock claim may be published. Do not restore this row — or any *free* / *No
-   card* / *Founding Beta* / *trial* wording — until `docs/commercial-policy.md` records a dated owner
-   approval. The approved homepage copy deliberately makes no commercial claim at all.
-2. **What happens right after I sign up?** You confirm your email, then a short setup: your trade,
-   your services, your team if you have one, and optional imports.
-3. **Will my services already be there?** Yes — each selectable business type starts with an
-   editable service or item list. Relevant templates also include add-ons and linked costs.
-4. **Can I bring my clients and calendar across?** Yes: contacts from your phone (vCard) and two-way
-   Google Calendar sync.
-5. **Do you take a cut of my bookings?** No. Your booking link is yours; Perelai takes no commission.
-6. **Is this accounting software?** No. Perelai tracks what was booked, completed and paid so you can
-   see your cash flow. It is not accounting, tax filing, or financial advice.
+1. How do clients book? — Direct link; service/time choice, no marketplace or commission promise.
+2. Is there a trial and do I need a card? — 21-day STUDIO, no card, starts after eligible setup; actual expiry in app.
+3. What happens after the trial? — Explicit subscription purchase; otherwise work restricted absent another valid source. Expiry itself does not delete data; no retention/export guarantee.
+4. Can I work with a team? — STUDIO; distinguish active service professionals and administrative access.
+5. Is a package a subscription? — Prepaid client services, not recurring card charges or a Perelai subscription.
+6. Is this accounting software? — No; actual operational/financial tracking scope, not tax reporting or card acquiring.
+
+Pricing FAQ expands only the trial clock, 1/5 counting, SOLO preparation, price currency/tax and paid renewal. Setup covers verification/vCard; no false two-way sync or migration-time claim. Do not preserve old “no billing”, pending-price, unapproved no-commission answers because they once passed a test.
 
 ---
 
 ## 9. Niche page copy contract
+
+**Launch-scope note (2026-09-19):** preserve existing routes. The creation rules below apply to future niche work, not a requirement to redo niches before launch. POS1/POS3 make only a finite list of shared factual corrections (trial/price, two-way sync, package/roles); no new niche research programme. §1/§6 and commercial gates override older niche commercial strings.
 
 A niche page is **not** the homepage with a swapped headline. The pSEO uniqueness rule and the CRO
 message-match rule both apply: **≥60% of body text must be niche-specific.**
@@ -467,11 +316,10 @@ message-match rule both apply: **≥60% of body text must be niche-specific.**
 | Setup steps | ✅ | 3 steps, or **4 if `requiresStaff: true`** |
 | FAQ (5) | ✅ | niche objections |
 | CTA + micro-copy | mode-specific | §6 |
-| "What Perelai is not" | shared | §7 row 7 |
+| "What Perelai is not" | shared | §7 |
 | Footer / nav | shared | — |
 
-**The terminology table is the highest-value block.** It is product-derived proprietary data — the
-strongest category in the pSEO defensibility hierarchy — and no competitor can copy it. Example for
+**The terminology table is product-derived proof.** Keep its labels/data tied to the actual template; do not claim competitors cannot reproduce a similar table. Example for
 `independent_colorist` (`terminologyProfile: beauty`):
 
 | In your chair | In Perelai |
@@ -488,9 +336,9 @@ invent a term the app does not use — cross-check against §4.2.
 
 ---
 
-## 10. Customer research before writing (do not skip)
+## 10. Customer research for future niche creation
 
-Copy written from the product's point of view will underperform. Before drafting any niche page, spend
+POS0 uses explicit founder-led hypotheses and does not claim research-backed uplift. New research is not a blocker for this compact general launch set. For future new niche pages, spend
 30 minutes gathering **verbatim** language:
 
 - Reddit: `r/Hairstylist`, `r/beauty`, `r/smallbusiness`, `r/freelance` — search "double booked",
