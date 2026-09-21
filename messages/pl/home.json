@@ -1,39 +1,200 @@
 {
   "meta": {
-    "title": "Perelai — proste oprogramowanie finansowe dla usługodawców",
-    "description": "Śledź przychód, koszty i zysk za dowolny okres, z podziałem według kategorii usług i klientów."
+    "title": "Perelai — wizyty, klienci i rejestracja płatności",
+    "description": "Terminarz, historia klienta, rejestracja płatności i przedpłaconych pakietów usług dla niezależnych specjalistów i małych zespołów."
   },
   "nav": {
     "features": "Funkcje",
     "how": "Jak to działa",
     "pricing": "Cennik",
     "login": "Zaloguj się",
-    "start": "Utwórz przestrzeń pracy",
-    "start_short": "Utwórz przestrzeń",
+    "start": "Wypróbuj przez 21 dni",
+    "start_short": "Wypróbuj",
     "primaryLabel": "Nawigacja główna",
     "menuLabel": "Otwórz menu",
     "devices": "Jak otworzyć Perelai?"
   },
   "hero": {
-    "eyebrow": "Proste oprogramowanie finansowe dla niezależnych firm usługowych",
-    "title": "Jasny obraz finansów firmy",
-    "accent": "Bez skomplikowanych arkuszy",
-    "body": "Zarządzaj terminarzem i finansami w jednym miejscu. Śledź przychód według klientów, analizuj wynik w podziale na kategorie usług i podejmuj świadome decyzje dzięki przejrzystym danym dostępnym w każdej chwili.",
-    "signup": "Utwórz przestrzeń pracy",
+    "eyebrow": "Dla niezależnych specjalistów i małych zespołów",
+    "title": "Porządek w terminarzu.",
+    "accent": "Jasny obraz płatności.",
+    "body": "Planuj wizyty, prowadź historię klientów i rejestruj płatności.",
+    "signup": "Wypróbuj przez 21 dni",
     "how": "Zobacz, jak to działa",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
-    "imageAlt": "Przegląd finansów Perelai z przychodem, kosztami i obliczonym zyskiem za okres, podziałem na kategorię usług i saldem otwartych zamówień — przykładowe dane.",
+    "imageAlt": "Przykład Perelai: terminarz wizyt i przegląd finansów.",
     "imageCaption": "Przykładowe dane",
     "showcase": {
       "ariaLabel": "Podgląd aplikacji Perelai",
       "calendarTab": "Kalendarz",
-      "financeTab": "Pieniądze",
-      "paid": "Opłacone",
-      "pending": "Nieopłacone",
-      "pauseAutoplay": "Pause automatic rotation",
-      "resumeAutoplay": "Resume automatic rotation"
+      "financeTab": "Finanse",
+      "paid": "Rozliczone",
+      "pending": "Otwarte zamówienie",
+      "pauseAutoplay": "Wstrzymaj automatyczne przewijanie",
+      "resumeAutoplay": "Wznów automatyczne przewijanie"
     },
-    "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna."
+    "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna.",
+    "trialMicro": "21 dni STUDIO bez karty. Po okresie próbnym wykup subskrypcję."
+  },
+  "operations": {
+    "title": "Od zapisu do zrealizowanej wizyty.",
+    "body": "Zapisz klienta, zrealizuj wizytę, a następnie zarejestruj płatność lub wykorzystaj pakiet. Sprawy wymagające decyzji czekają w Skrzynce."
+  },
+  "records": {
+    "title": "Widać, za co zarejestrowano płatność.",
+    "body": "Zapisy płatności pozostają powiązane z wizytami lub zamówieniami klientów. Wykorzystanie pakietu jest pokazywane oddzielnie od nowych wpłat."
+  },
+  "packages": {
+    "title": "Pozostałość pakietu — zawsze pod ręką.",
+    "body": "Twórz przedpłacone pakiety usług i rejestruj ich sprzedaż klientom. Śledź wykorzystanie i to, co pozostało w każdym pakiecie.",
+    "summary": "Przykład wykorzystania pakietu: z trzech wizyt wykorzystano jedną, pozostały dwie. Nowa płatność nie wpływa.",
+    "caption": "Przykładowe dane"
+  },
+  "drawer": {
+    "title": "Sprawdzaj gotówkę na koniec dnia.",
+    "body": "Otwórz sesję kasową przed przyjęciem gotówki. Na koniec sesji wprowadź przeliczoną kwotę i porównaj ją z oczekiwaną.",
+    "summary": "Przykład sesji kasowej w USD: stan początkowy — 100, przyjęto w gotówce — 50, oczekiwano — 150, przeliczono — 145, różnica — −5.",
+    "caption": "Przykładowe dane"
+  },
+  "collaboration": {
+    "title": "Pracuj samodzielnie lub z zespołem.",
+    "body": "Zapraszaj członków zespołu z odpowiednim dostępem. Zarządzaj grafikami, nieobecnościami i przypisanymi usługami dla osób świadczących usługi.",
+    "teamTitle": "Twój zespół",
+    "teamBody": "Zapraszaj członków zespołu z odpowiednim dostępem. Zarządzaj grafikami, nieobecnościami i przypisanymi usługami dla osób świadczących usługi.",
+    "notesDetail": "Przypięte notatki o kliencie i notatki z wizyt pozostają w historii klienta.",
+    "summary": "Przykład przestrzeni pracy Perelai z rolami zespołu, grafikami i przypiętą notatką o kliencie w ramach jednej firmy.",
+    "caption": "Przykładowe dane",
+    "mock": {
+      "pinnedNote": "Preferuje spokojne poranki przed koloryzacją.",
+      "visitNote": "Potwierdzono dopasowanie odcienia na ostatniej wizycie.",
+      "hours1": "Pon–Pt · 09:00–17:00",
+      "hours2": "Wt–Sob · 10:00–18:00",
+      "hours3": "Śr–Niedz · 11:00–19:00"
+    },
+    "accessTitle": "Pomoc w terminarzu i rejestracji płatności.",
+    "accessBody": "Administrator pomaga w umawianiu wizyt i dozwolonych czynnościach płatniczych klientów, bez dostępu do całościowych raportów finansowych.",
+    "accessSummary": "Przykład dostępu do przestrzeni: Administrator, bez profilu osoby świadczącej usługi.",
+    "planNote": "Dostęp dla zespołu jest częścią STUDIO. Administrator, który nie świadczy usług, nie wlicza się do limitu osób świadczących usługi."
+  },
+  "finance": {
+    "title": "Przychód, koszty i zysk za wybrany okres.",
+    "body": "Sprawdzaj przychód, zarejestrowane koszty i obliczony zysk. Wykorzystanie przedpłaconego pakietu nie dodaje nowego przychodu.",
+    "caption": "Przykładowe dane",
+    "summary": "Przykładowy przegląd finansów Perelai z miesięcznym przychodem, kosztami i obliczonym zyskiem, podziałem na kategorię usług i saldem otwartych zamówień.",
+    "fixture": {
+      "category": {
+        "color": "Usługi kolorystyczne",
+        "styling": "Stylizacja i wykończenie"
+      },
+      "openOrders": "z otwartych zamówień",
+      "orderInstalment": "Zamówienie na 3 sesje, 1. rata",
+      "records": {
+        "visitPayment": "Płatność przypisana do wizyty",
+        "packageRedemption": "Rozliczenie pakietu — bez nowej płatności ani przychodu",
+        "orderInstalment": "Płatność przypisana do zamówienia/raty",
+        "noShowFee": "Płatność przypisana do wizyty oznaczonej jako niestawiennictwo"
+      }
+    }
+  },
+  "states": {
+    "title": "Wykonana praca, przychód, zarejestrowane płatności i salda otwartych zamówień są rozliczane oddzielnie.",
+    "body": "Wizyta może zostać zrealizowana, zanim zostanie zaliczona do przychodu. Przedpłacony pakiet jest ujmowany jako przychód w momencie sprzedaży; jego wykorzystanie rozlicza wizytę bez nowej wpłaty czy przychodu, podczas gdy w otwartym zamówieniu może nadal pozostawać nieuregulowana kwota. Perelai rozróżnia te stany, dzięki czemu każda liczba ma jednoznaczne znaczenie."
+  },
+  "drivers": {
+    "title": "Zobacz, z czego składa się Twój wynik.",
+    "body": "Przychód według kategorii usług i klientów, koszty według kategorii oraz porównanie okresów."
+  },
+  "setup": {
+    "eyebrow": "Jak to działa",
+    "title": "Zacznij od swoich usług i klientów.",
+    "body": "Skonfiguruj usługi, zaimportuj kontakty i udostępnij link do rezerwacji.",
+    "step1Title": "Skonfiguruj usługi.",
+    "step1Body": "Wybierz odpowiedni szablon i edytuj listę usług.",
+    "step2Title": "Przenieś kontakty.",
+    "step2Body": "Zaimportuj kontakty z telefonu przez vCard.",
+    "step3Title": "Udostępnij link.",
+    "step3Body": "Klienci wybierają usługę i termin na Twojej stronie rezerwacji."
+  },
+  "not": {
+    "title": "Czym Perelai NIE jest",
+    "body": "Jeśli potrzebujesz czegoś z tej listy — nie będziemy dobrym wyborem i mówimy o tym wprost.",
+    "item1Title": "To nie jest program księgowy",
+    "item1Body": "Rejestracja pracy i płatności — nie księgowość ani sprawozdawczość podatkowa.",
+    "item2Title": "To nie jest marketplace",
+    "item2Body": "Klienci rezerwują bezpośrednio przez Twój link — bez pośrednika-marketplace.",
+    "item3Title": "To nie jest system dokumentacji medycznej",
+    "item3Body": "Perelai nie służy do prowadzenia dokumentacji klinicznej, diagnoz ani zarządzania leczeniem pacjentów."
+  },
+  "nicheRouter": {
+    "title": "Znajdź swoją branżę",
+    "body": "Strony dostosowane do tego, jak naprawdę pracujesz.",
+    "coloristsLabel": "Dla niezależnych kolorystów",
+    "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach.",
+    "lashArtistsLabel": "Dla niezależnych stylistek rzęs",
+    "lashArtistsDescription": "Rezerwacje, praca z klientkami i widoczność pieniędzy dla stylistek rzęs pracujących na własnych zasadach.",
+    "salonsLabel": "Dla właścicieli salonów fryzjerskich",
+    "salonsDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla salonu — z podziałem według kategorii usług i klienta.",
+    "massageLabel": "Dla masażystów",
+    "massageDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla praktyki solo — z przedpłaconymi karnetami i otwartymi saldami osobno.",
+    "personalTrainerLabel": "Dla trenerów personalnych",
+    "personalTrainerDescription": "Przychód z sesji, zarejestrowane koszty i wyliczony zysk — z rozliczeniami karnetów i historią klienta osobno.",
+    "musicTeacherLabel": "Dla nauczycieli muzyki",
+    "musicTeacherDescription": "Przychód z lekcji, zarejestrowane koszty i wyliczony zysk dla prywatnego studia — z rozliczeniami karnetów osobno."
+  },
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "q1": "Jak klienci rezerwują wizyty?",
+    "a1": "Udostępnij swój link. Klienci wybierają usługę i termin na Twojej stronie rezerwacji.",
+    "q2": "Czy jest okres próbny i czy potrzebna jest karta?",
+    "a2": "21 dni STUDIO bez karty. Okres próbny rozpoczyna się po konfiguracji firmy. Data zakończenia jest widoczna w aplikacji.",
+    "q3": "Co się stanie po zakończeniu okresu próbnego?",
+    "a3": "Aby kontynuować pracę, wykup subskrypcję. Bez subskrypcji lub innego ważnego dostępu funkcje zostaną ograniczone. Samo zakończenie okresu próbnego nie usuwa Twoich danych.",
+    "q4": "Czy mogę pracować z zespołem?",
+    "a4": "Tak, w STUDIO: do 5 aktywnych osób świadczących usługi i dostęp dla zespołu. Administrator, który nie świadczy usług, nie zajmuje miejsca w tym limicie.",
+    "q5": "Czy przedpłacony pakiet to subskrypcja?",
+    "a5": "Nie. Klient płaci z góry za określoną liczbę usług do wykorzystania podczas wizyt. To nie jest opłata cykliczna ani subskrypcja Perelai.",
+    "q6": "Czy to jest księgowość albo bramka płatności?",
+    "a6": "Nie. Perelai pomaga zarządzać wizytami, klientami i rejestracją płatności. To nie jest księgowość ani rozliczenia podatkowe, ani obsługa płatności kartą.",
+    "q7": "Czy Perelai ma aplikację na iPhone lub Android?",
+    "a7": "Perelai to aplikacja webowa. Do korzystania z Perelai potrzebujesz tylko przeglądarki i połączenia z internetem. Nie jest dostępny w App Store ani Google Play. Niektóre przeglądarki pozwalają dodać Perelai do ekranu głównego lub otworzyć go w osobnym oknie, co może przypominać działanie natywnej aplikacji.",
+    "q8": "Czy mogę używać Perelai na laptopie lub iPadzie?",
+    "a8": "Otwórz perelai.app w obsługiwanej przeglądarce na laptopie lub iPadzie i zaloguj się tym samym loginem, co na telefonie. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem.",
+    "q_category": {
+      "question": "Czy to jest oprogramowanie księgowe?",
+      "answer": "Nie. Perelai to operacyjne oprogramowanie finansowe. Śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych."
+    },
+    "q_bank": {
+      "question": "Czy ta liczba będzie zgodna z moim bankiem?",
+      "answer": "Nie zawsze. PAID oznacza, że wizyta jest rozliczona, a nie że pieniądze wpłynęły. Sprzedaż pakietu jest ujmowana raz; wykorzystanie kredytu nie dodaje nowej płatności ani przychodu. Zarejestrowane płatności i salda kont płatności pokazują ruch środków osobno."
+    }
+  },
+  "closing": {
+    "title": "Wypróbuj Perelai w swoim kolejnym tygodniu pracy.",
+    "body": "Zacznij od własnego terminarza i klientów.",
+    "cta": "Wypróbuj przez 21 dni",
+    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+  },
+  "footer": {
+    "description": "Wizyty, klienci i rejestracja płatności dla niezależnych specjalistów i małych zespołów.",
+    "product": "Produkt",
+    "company": "Prawne",
+    "forColorists": "Dla niezależnych kolorystów",
+    "forLashArtists": "Dla niezależnych stylistek rzęs",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki korzystania",
+    "forSalons": "Dla właścicieli salonów fryzjerskich",
+    "forMassageTherapists": "Dla masażystów",
+    "forPersonalTrainers": "Dla trenerów personalnych",
+    "forMusicTeachers": "Dla nauczycieli muzyki",
+    "devices": "Jak otworzyć Perelai?"
+  },
+  "devices": {
+    "title": "Jeden adres, jedno logowanie",
+    "body": "Perelai działa w przeglądarce internetowej. Zaloguj się na perelai.app z dowolnego miejsca pracy — to ta sama przestrzeń robocza. Na iPhonie możesz dodać go do ekranu początkowego, gdzie otworzy się z własnej ikony we własnym oknie. Instalacja jest opcjonalna, a w App Store ani Google Play go nie ma.",
+    "caption": "Przykładowe dane",
+    "summary": "Jedna przestrzeń pracy Perelai, otwarta z obsługiwanej przeglądarki na telefonie, tablecie lub komputerze.",
+    "link": "Jak otworzyć Perelai"
   },
   "problem": {
     "title": "Znasz już ten dzień",
@@ -60,148 +221,5 @@
     "body": "Wykonana praca i otrzymane pieniądze są śledzone oddzielnie — dzięki temu liczba jest prawdziwa. Zakończona wizyta to nie przychód, dopóki ktoś nie zapłaci. Perelai ich nie myli.",
     "caption": "Przykładowe dane",
     "detail": "Przychody, koszty i otwarte pozycje — bez arkusza."
-  },
-  "setup": {
-    "eyebrow": "Jak to działa",
-    "title": "Konfiguracja w jeden wieczór",
-    "body": "Bez migracji w weekend. Wybierz branżę, zaimportuj klientów, udostępnij link.",
-    "step1Title": "Wybierz branżę",
-    "step1Body": "32 typy firm z edytowalną listą usług. Odpowiednie szablony zawierają również dodatki i powiązane koszty.",
-    "step2Title": "Przenieś swoich klientów",
-    "step2Body": "Zaimportuj kontakty z telefonu przez vCard. Następnie układaj grafik w Perelai.",
-    "step3Title": "Udostępnij link do rezerwacji",
-    "step3Body": "Jeden link w bio. Klienci rezerwują bezpośrednio przez Twój link."
-  },
-  "not": {
-    "title": "Czym Perelai nie jest",
-    "body": "Jeśli potrzebujesz którejś z tych rzeczy, nie jesteśmy właściwym wyborem — i wolimy to powiedzieć wprost.",
-    "item1Title": "To nie jest oprogramowanie księgowe",
-    "item1Body": "Perelai śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych.",
-    "item2Title": "To nie jest marketplace",
-    "item2Body": "Twój link należy do Ciebie. Klienci rezerwują bezpośrednio bez pośredników.",
-    "item3Title": "To nie jest system dokumentacji medycznej",
-    "item3Body": "Brak historii leczenia, diagnoz czy zarządzania kartami pacjentów."
-  },
-  "nicheRouter": {
-    "title": "Znajdź swoją branżę",
-    "body": "Strony dostosowane do tego, jak naprawdę pracujesz.",
-    "coloristsLabel": "Dla niezależnych kolorystów",
-    "coloristsDescription": "Rezerwacje, klienci i finanse dla kolorystów pracujących na własnych zasadach.",
-    "lashArtistsLabel": "Dla niezależnych stylistek rzęs",
-    "lashArtistsDescription": "Rezerwacje, praca z klientkami i widoczność pieniędzy dla stylistek rzęs pracujących na własnych zasadach.",
-    "salonsLabel": "Dla właścicieli salonów fryzjerskich",
-    "salonsDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla salonu — z podziałem według kategorii usług i klienta.",
-    "massageLabel": "Dla masażystów",
-    "massageDescription": "Przychód, zarejestrowane koszty i wyliczony zysk dla praktyki solo — z przedpłaconymi karnetami i otwartymi saldami osobno.",
-    "personalTrainerLabel": "Dla trenerów personalnych",
-    "personalTrainerDescription": "Przychód z sesji, zarejestrowane koszty i wyliczony zysk — z rozliczeniami karnetów i historią klienta osobno.",
-    "musicTeacherLabel": "Dla nauczycieli muzyki",
-    "musicTeacherDescription": "Przychód z lekcji, zarejestrowane koszty i wyliczony zysk dla prywatnego studia — z rozliczeniami karnetów osobno."
-  },
-  "faq": {
-    "title": "Pytania",
-    "q1": "Jak klienci rezerwują u mnie wizyty?",
-    "a1": "Udostępnij swój link. Klienci wybierają usługę i termin bezpośrednio na Twojej stronie.",
-    "q2": "Co dzieje się zaraz po rejestracji?",
-    "a2": "Potwierdzasz e-mail, a potem przechodzisz krótką konfigurację: branża, usługi, zespół (jeśli masz) i opcjonalny import.",
-    "q3": "Czy moje usługi będą już w systemie?",
-    "a3": "Tak — każdy typ firmy zaczyna się od edytowalnej listy usług lub produktów. Szablony zawierają też dodatki i koszty.",
-    "q4": "Czy mogę importować klientów z telefonu?",
-    "a4": "Tak: zaimportuj kontakty z telefonu przez vCard.",
-    "q5": "Czy mogę zarządzać wieloma usługami?",
-    "a5": "Tak. Każdy szablon zawiera wybór usług oraz opcje dodatków.",
-    "q6": "Czy to jest oprogramowanie księgowe?",
-    "a6": "Nie. Perelai to operacyjne oprogramowanie finansowe. Śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych.",
-    "q7": "Czy Perelai ma aplikację na iPhone lub Android?",
-    "a7": "Perelai to aplikacja webowa. Do korzystania z Perelai potrzebujesz tylko przeglądarki i połączenia z internetem. Nie jest dostępny w App Store ani Google Play. Niektóre przeglądarki pozwalają dodać Perelai do ekranu głównego lub otworzyć go w osobnym oknie, co może przypominać działanie natywnej aplikacji.",
-    "q8": "Czy mogę używać Perelai na laptopie lub iPadzie?",
-    "a8": "Otwórz perelai.app w obsługiwanej przeglądarce na laptopie lub iPadzie i zaloguj się tym samym loginem, co na telefonie. Jedno logowanie, jedna przestrzeń pracy. Wymagane jest połączenie z internetem.",
-    "q_category": {
-      "question": "Czy to jest oprogramowanie księgowe?",
-      "answer": "Nie. Perelai to operacyjne oprogramowanie finansowe. Śledzi przychód, koszty, obliczony zysk, zarejestrowane płatności i to, co wciąż jest należne na otwartych zamówieniach, z podziałem na kategorię i klienta. Nie składa deklaracji podatkowych, nie uzgadnia kont bankowych, nie tworzy sprawozdań ustawowych ani nie udziela porad finansowych."
-    },
-    "q_bank": {
-      "question": "Czy ta liczba będzie zgodna z moim bankiem?",
-      "answer": "Nie zawsze. PAID oznacza, że wizyta jest rozliczona, a nie że pieniądze wpłynęły. Sprzedaż pakietu jest ujmowana raz; wykorzystanie kredytu nie dodaje nowej płatności ani przychodu. Zarejestrowane płatności i salda kont płatności pokazują ruch środków osobno."
-    }
-  },
-  "closing": {
-    "title": "Jasny wynik finansowy, z podziałem według klientów i kategorii usług.",
-    "body": "Konfiguracja w jeden wieczór.",
-    "cta": "Utwórz przestrzeń pracy",
-    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
-  },
-  "footer": {
-    "description": "Proste oprogramowanie finansowe dla niezależnych firm usługowych.",
-    "product": "Produkt",
-    "company": "Prawne",
-    "forColorists": "Dla niezależnych kolorystów",
-    "forLashArtists": "Dla niezależnych stylistek rzęs",
-    "rights": "Wszelkie prawa zastrzeżone.",
-    "privacy": "Polityka prywatności",
-    "terms": "Warunki korzystania",
-    "forSalons": "Dla właścicieli salonów fryzjerskich",
-    "forMassageTherapists": "Dla masażystów",
-    "forPersonalTrainers": "Dla trenerów personalnych",
-    "forMusicTeachers": "Dla nauczycieli muzyki"
-  },
-  "devices": {
-    "title": "Jedna przestrzeń pracy. Widok zmienia się z ekranem.",
-    "body": "Perelai działa w przeglądarce internetowej. Zaloguj się na perelai.app tam, gdzie pracujesz — to ta sama przestrzeń robocza. Na iPhonie możesz dodać go do ekranu początkowego, gdzie otworzy się z własnej ikony we własnym oknie. Instalacja jest opcjonalna, a w App Store ani Google Play go nie ma.",
-    "caption": "Przykładowe dane",
-    "summary": "Jedna przestrzeń pracy Perelai, otwarty z obsługiwanej przeglądarki na telefonie, tablecie lub komputerze.",
-    "link": "Jak otworzyć Perelai"
-  },
-  "collaboration": {
-    "title": "Pracuj solo. Dodawaj ludzi, gdy ich potrzebujesz.",
-    "body": "Zacznij od własnej przestrzeni roboczej. Dodaj dostęp zespołowy tylko wtedy, gdy stanie się przydatny.",
-    "teamTitle": "Twój zespół",
-    "teamBody": "Zapraszaj członków zespołu z dostępem Personel lub Przełożony. Trzymaj grafiki, urlopy i przypisane usługi w jednym miejscu.",
-    "notesDetail": "Przypięte notatki o kliencie i notatki z wizyt pozostają w historii klienta.",
-    "summary": "Przykład przestrzeni roboczej Perelai pokazujący role w zespole, grafiki i przypiętą notatkę o kliencie w ramach jednej firmy.",
-    "caption": "Przykładowe dane",
-    "mock": {
-      "pinnedNote": "Preferuje spokojne poranki przed koloryzacją.",
-      "visitNote": "Potwierdzono dopasowanie odcienia na ostatniej wizycie.",
-      "hours1": "Pon–Pt · 09:00–17:00",
-      "hours2": "Wt–Sob · 10:00–18:00",
-      "hours3": "Śr–Niedz · 11:00–19:00"
-    }
-  },
-  "finance": {
-    "title": "Przychód, koszty i zysk za dowolny okres",
-    "body": "Sprawdź przychód, koszty i obliczony zysk za dzień, tydzień, miesiąc, kwartał lub rok.",
-    "caption": "Przykładowe dane",
-    "summary": "Przykładowy przegląd finansów Perelai z miesięcznym przychodem, kosztami i obliczonym zyskiem, podziałem na kategorię usług i saldem otwartych zamówień.",
-    "fixture": {
-      "category": {
-        "color": "Usługi kolorystyczne",
-        "styling": "Stylizacja i wykończenie"
-      },
-      "openOrders": "z otwartych zamówień",
-      "orderInstalment": "Zamówienie na 3 sesje, 1. rata",
-      "records": {
-        "visitPayment": "Płatność przypisana do wizyty",
-        "packageRedemption": "Wykorzystanie pakietu — bez nowej płatności ani przychodu",
-        "orderInstalment": "Płatność przypisana do zamówienia/raty",
-        "noShowFee": "Płatność przypisana do wizyty oznaczonej jako niestawiennictwo"
-      }
-    }
-  },
-  "states": {
-    "title": "Wykonana praca, przychód, zarejestrowane płatności i salda otwartych zamówień to nie to samo.",
-    "body": "Wizyta może być wykonana, zanim zostanie wliczona do przychodu. Przedpłacony pakiet jest ujmowany jako przychód przy sprzedaży; jego wykorzystanie rozlicza wizytę bez nowej płatności ani przychodu, podczas gdy w otwartym zamówieniu może nadal pozostawać nieuregulowana kwota. Perelai rozróżnia te stany, dzięki czemu każda liczba ma jasne znaczenie."
-  },
-  "drivers": {
-    "title": "Zobacz, skąd bierze się wynik",
-    "body": "Sprawdź przychód według kategorii usług, koszty według kategorii, historię przychodu klienta i to, jak wynik zmienia się w czasie."
-  },
-  "records": {
-    "title": "Za każdą liczbą stoi praca",
-    "body": "Zapisy płatności i wykorzystania pakietów pozostają powiązane z odpowiednią wizytą, zamówieniem lub ratą, a także z klientem i kategorią usług."
-  },
-  "operations": {
-    "title": "Zapisuj dane finansowe w trakcie pracy",
-    "body": "Zakończ wizytę, zarejestruj płatność, dodaj koszt albo wykorzystaj pakiet. Rezerwacje, Kalendarz i Skrzynka utrzymują te działania powiązane z klientami i usługami. Klienci mogą też rezerwować przez Twój własny link."
   }
 }

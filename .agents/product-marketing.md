@@ -1,14 +1,14 @@
 # Product Marketing Context
 
-**Document version:** v11
-**Last updated:** 2026-09-19
-**Scope:** POS0 documentation. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. New UK/EN headline/body adaptations are pending POS2; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
+**Document version:** v12
+**Last updated:** 2026-09-21
+**Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
 ## Product Overview
 
-**One-liner:** Perelai is a workspace for independent beauty professionals and small studios to manage appointments, clients, payment records and prepaid packages.
+**One-liner:** Perelai is a workspace for independent professionals and small teams to manage appointments, clients, payment records and prepaid service packages.
 
-**Product category:** Appointment, client and payment-tracking software for beauty professionals and small studios. Financial overview is a supporting strength, not the entire category. Not accounting software, a marketplace or client payment processing.
+**Product category:** Appointment, client and payment-tracking software for independent professionals and small teams working by appointment. Financial overview is a supporting strength, not the entire category. Not accounting software, a marketplace or client payment processing.
 
 **What it does:** Plan an appointment, carry out the visit, then record the payment or apply a prepaid package. Client history keeps the context; financial views help review revenue, costs and calculated profit. Team access is available under the STUDIO launch policy, subject to commercial/security release checks. Cash reconciliation is implemented (DR0–DR6/UI) and its landing preview is included in POS2 at the owner's request. Public availability still needs reconciliation with the DR7 report, which currently records NO-GO; do not repeat implementation or invent acceptance.
 
@@ -51,11 +51,11 @@ Current code includes Billing. “No card because there is no billing” and “
 
 ## Target Audience
 
-**Primary:** Independent beauty professionals who manage their own clients and appointments.
-**Secondary, in the same launch story:** Small beauty studios with up to five active service professionals, including studios needing a non-performing administrator.
+**Primary:** Independent professionals who manage their own clients and appointments (e.g. massage therapists, tutors, beauty professionals).
+**Secondary, in the same launch story:** Small teams with up to five active service professionals, including teams needing a non-performing administrator.
 **Decision-maker:** Owner/operator; the SaaS payer may be a different person and is not automatically a workspace administrator.
 
-This replaces the prior solo-colorist/US-only restriction for the general Home. RU/UK/EN are copy-review languages, not a decision about launch jurisdictions, ad targeting or willingness to pay. Colorist examples may remain. Existing non-beauty niche URLs remain available, but developing their positioning is outside POS0–POS4.
+This replaces the prior solo-colorist/US-only restriction for the general Home. RU/UK/EN are copy-review languages, not a decision about launch jurisdictions, ad targeting or willingness to pay. Colorist examples remain valid illustration datasets, not a product category restriction. Existing non-beauty niche URLs remain available, but developing their positioning is outside POS0–POS4.
 
 **Primary use case:** Carry a client's appointment through the working day, retain their history, and know whether payment was recorded or a package was used.
 
@@ -201,6 +201,7 @@ The [launch checklist](../docs/launch-positioning-checklist.md) records exact so
 
 *Newest first. One line per revision: what changed and why.*
 
+- v12 (2026-09-21) — **POS2 owner general framing update:** widened target audience from beauty-only to independent professionals and small teams working by appointment (e.g. massage therapists, tutors, beauty professionals); updated category line, one-liner, personas, and site/doc descriptions accordingly; preserved owner RU hero freeze verbatim, commercial pricing/trial policies, colorist preview dataset as an example, and separate publication/release gates.
 - v11 (2026-09-19) — **Owner-approved RU hero freeze:** replaced the descriptive feature-list draft with «Порядок в записях. Ясность в оплатах.», the exact action-led body, two CTAs and trial helper supplied by the owner; updated message strategy and translation status, retired launch alternatives and kept all commercial/claim/publication gates separate. Documentation only; v1–v10 history preserved.
 - v10 (2026-09-19) — **POS0 owner-feedback follow-up:** clarified RU/UK hero as payment tracking, moved packages from the general hero body into a creation/sale/use feature story, and included the implemented Drawer preview in POS2; kept public-release evidence distinct because the current DR7 report still records NO-GO. New strings remain candidates; previous history preserved.
 - v9 (2026-09-19) — **POS0 launch repositioning:** replaced finance-only/US-solo-only framing with daily appointment, client and payment/package work for independent beauty professionals and small studios; updated JTBD, personas, objections, CTA, glossary, evidence and goals; incorporated approved 21-day STUDIO/no-card and SOLO USD 19/STUDIO USD 29 policy with separate release gates, Administrator/performer boundaries and ADR-0003 correction; removed unsupported comparative/automation claims. Exact RU/UK/EN launch strings await owner review; public messages/previews unchanged.

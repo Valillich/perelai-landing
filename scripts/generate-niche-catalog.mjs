@@ -10,6 +10,7 @@ import {
   mkdirSync,
   readFileSync,
   renameSync,
+  unlinkSync,
   writeFileSync,
 } from "node:fs"
 import path from "node:path"
@@ -92,6 +93,33 @@ const FIXED_UI_KEYS = [
   "calendar.desktop_create_title",
   "calendar.desktop_create_description",
   "calendar.fab_add_visit",
+
+  // POS2 — Cash drawer session preview (common namespace)
+  "cash_drawer.open",
+  "cash_drawer.summary_opening",
+  "cash_drawer.summary_receipts",
+  "cash_drawer.summary_expected",
+  "cash_drawer.close_preview_title",
+  "cash_drawer.preview_expected",
+  "cash_drawer.preview_counted",
+  "cash_drawer.shortage",
+  "cash_drawer.surplus",
+  "cash_drawer.counts_match",
+
+  // POS2 — Workspace access (administrator role in profile namespace)
+  "staff_management.access_role",
+  "staff_management.role_administrator_title",
+  "staff_management.role_administrator_desc",
+  "staff_management.service_provision_label",
+  "staff_management.service_mode_none",
+  "staff_management.service_mode_none_desc",
+
+  // POS2 — Package checkout preview (profile namespace)
+  "memberships.package_credit_applied",
+  "memberships.package_credit_available",
+  "memberships.apply_from_package",
+  "calendar_create.checkout_pay_now",
+  "calendar_create.checkout_total",
 ]
 
 /**
@@ -110,7 +138,7 @@ const COMMON_NS_KEYS = new Set([
   "notes.pinned_title",
   "notes.visit_note",
 ])
-const COMMON_NS_PREFIXES = ["templates.", "desktop_navigation."]
+const COMMON_NS_PREFIXES = ["templates.", "desktop_navigation.", "cash_drawer."]
 
 function fail(message) {
   console.error(`generate-niche-catalog: ${message}`)
@@ -236,16 +264,25 @@ fs.writeFileSync(${JSON.stringify(tmpDumpFile)}, JSON.stringify({
     return JSON.parse(raw)
   } catch (error) {
     fail(`tsx dump returned invalid JSON: ${error.message}`)
+  } finally {
+    try {
+      if (existsSync(tmpDumpFile)) unlinkSync(tmpDumpFile)
+    } catch {}
   }
 }
 
+const jsonHeadCache = new Map()
 function readJsonFromHead(appRepo, relPath) {
+  const cacheKey = `${appRepo}:${relPath}`
+  if (jsonHeadCache.has(cacheKey)) return jsonHeadCache.get(cacheKey)
   const res = spawnSync("git", ["-C", appRepo, "show", `HEAD:${relPath}`], {
     encoding: "utf8",
     maxBuffer: 20 * 1024 * 1024,
   })
   if (res.status !== 0) fail(`cannot read git HEAD:${relPath} from ${appRepo}`)
-  return JSON.parse(res.stdout)
+  const parsed = JSON.parse(res.stdout)
+  jsonHeadCache.set(cacheKey, parsed)
+  return parsed
 }
 
 function lookupPath(obj, dotted) {
@@ -329,19 +366,18 @@ function main() {
   const { sourceCommit, generatedAt } = getSourceCommitMeta(APP_REPO)
   const dumped = dumpCatalogViaTsx(APP_REPO)
 
-  if (
-    !Array.isArray(dumped.supportedLocales) ||
-    dumped.supportedLocales.join(",") !== LOCALES.join(",")
-  ) {
+  const sortedDumped = [...(dumped.supportedLocales ?? [])].sort().join(",")
+  const sortedExpected = [...LOCALES].sort().join(",")
+  if (sortedDumped !== sortedExpected) {
     fail(
-      `supported locales drifted: expected ${LOCALES.join(",")} got ${(dumped.supportedLocales ?? []).join(",")}`,
+      `supported locales drifted: expected set ${LOCALES.join(",")} got ${(dumped.supportedLocales ?? []).join(",")}`,
     )
   }
 
   const catalog = {
     sourceCommit,
     generatedAt,
-    supportedLocales: dumped.supportedLocales,
+    supportedLocales: LOCALES,
     markets: dumped.markets,
     groups: dumped.groups,
     templates: dumped.templates,

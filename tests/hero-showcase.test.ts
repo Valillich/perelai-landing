@@ -78,7 +78,7 @@ function createShowcaseStateHarness(options: {
   }
 }
 
-describe("HeroShowcase finance-first order and accessibility contract (FM3 / Remediation)", () => {
+describe("HeroShowcase calendar-first order and accessibility contract (POS2)", () => {
   beforeEach(() => {
     vi.useFakeTimers()
   })
@@ -87,7 +87,7 @@ describe("HeroShowcase finance-first order and accessibility contract (FM3 / Rem
     vi.useRealTimers()
   })
 
-  it("renders Finance before Calendar in the sr-only summary and initial markup", () => {
+  it("renders Calendar before Finance in the sr-only summary and initial markup", () => {
     const html = renderToStaticMarkup(
       createElement(NextIntlClientProvider, {
         locale: "en",
@@ -97,19 +97,19 @@ describe("HeroShowcase finance-first order and accessibility contract (FM3 / Rem
     )
 
     const srOnlyMatch = html.match(/sr-only[^>]*>([^<]+)/)
-    expect(srOnlyMatch?.[1]).toContain(`${labels.financeTab}, ${labels.calendarTab}`)
+    expect(srOnlyMatch?.[1]).toContain(`${labels.calendarTab}, ${labels.financeTab}`)
 
     const financeTabIndex = html.indexOf(labels.financeTab)
     const calendarTabIndex = html.indexOf(labels.calendarTab)
-    expect(financeTabIndex).toBeGreaterThan(-1)
-    expect(calendarTabIndex).toBeGreaterThan(financeTabIndex)
+    expect(calendarTabIndex).toBeGreaterThan(-1)
+    expect(financeTabIndex).toBeGreaterThan(calendarTabIndex)
 
-    // KPI tiles from the finance fixture are present on first paint (Finance is index 0).
-    expect(html).toContain(dataset.base.labels["chart_labels.revenue"])
-    expect(html).toContain(dataset.base.labels["chart_labels.profit"])
+    // Calendar indicators are present on first paint (Calendar is index 0).
+    expect(html).toContain(labels.paid)
+    expect(html).toContain(labels.pending)
   })
 
-  it("a. renders Finance as the first active state and includes keyboard-accessible pause control", () => {
+  it("a. renders Calendar as the first active state and includes keyboard-accessible pause control", () => {
     const html = renderToStaticMarkup(
       createElement(NextIntlClientProvider, {
         locale: "en",
@@ -118,9 +118,9 @@ describe("HeroShowcase finance-first order and accessibility contract (FM3 / Rem
       }),
     )
 
-    // Finance tab is selected on initial render
-    expect(html).toMatch(new RegExp(`aria-current="true"[^>]*>${labels.financeTab}</button>`))
-    expect(html).toMatch(new RegExp(`aria-current="false"[^>]*>${labels.calendarTab}</button>`))
+    // Calendar tab is selected on initial render
+    expect(html).toMatch(new RegExp(`aria-current="true"[^>]*>${labels.calendarTab}</button>`))
+    expect(html).toMatch(new RegExp(`aria-current="false"[^>]*>${labels.financeTab}</button>`))
 
     // Explicit pause button exists with aria-pressed="false" and accessible label
     expect(html).toContain(`aria-pressed="false"`)
@@ -133,11 +133,11 @@ describe("HeroShowcase finance-first order and accessibility contract (FM3 / Rem
     expect(harness.getIndex()).toBe(0)
     expect(harness.isPaused()).toBe(false)
 
-    // Advance 7000ms -> Calendar (index 1)
+    // Advance 7000ms -> Finance (index 1)
     vi.advanceTimersByTime(7000)
     expect(harness.getIndex()).toBe(1)
 
-    // Advance another 7000ms -> Finance (index 0)
+    // Advance another 7000ms -> Calendar (index 0)
     vi.advanceTimersByTime(7000)
     expect(harness.getIndex()).toBe(0)
 
@@ -147,7 +147,7 @@ describe("HeroShowcase finance-first order and accessibility contract (FM3 / Rem
   it("c. stops automatic rotation permanently upon click or keyboard tab selection", () => {
     const harness = createShowcaseStateHarness()
 
-    // User selects Calendar tab
+    // User selects Finance tab (index 1)
     harness.selectTab(1)
     expect(harness.getIndex()).toBe(1)
     expect(harness.isPaused()).toBe(true)

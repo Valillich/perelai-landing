@@ -49,6 +49,24 @@ const DECLARED_KEY_SOURCES = [
     exportName: "TEAM_COLLABORATION_UI_KEYS",
     emptyMessage: "the collaboration mock would render hand-typed labels",
   },
+  {
+    component: "MockCashDrawerSummary",
+    file: path.join(ROOT, "components/mock/MockCashDrawerSummary.tsx"),
+    exportName: "CASH_DRAWER_UI_KEYS",
+    emptyMessage: "the cash drawer mock would render hand-typed labels",
+  },
+  {
+    component: "MockWorkspaceAccessSummary",
+    file: path.join(ROOT, "components/mock/MockWorkspaceAccessSummary.tsx"),
+    exportName: "WORKSPACE_ACCESS_UI_KEYS",
+    emptyMessage: "the workspace access mock would render hand-typed labels",
+  },
+  {
+    component: "MockPackageCheckout",
+    file: path.join(ROOT, "components/mock/MockPackageCheckout.tsx"),
+    exportName: "PACKAGE_CHECKOUT_UI_KEYS",
+    emptyMessage: "the package checkout mock would render hand-typed labels",
+  },
 ]
 
 const errors = []
@@ -234,6 +252,18 @@ function main() {
 
   const catalog = readJson(CATALOG_PATH)
   const strings = readJson(STRINGS_PATH)
+
+  // Provenance equality guard (POS2 R2): both generated artifacts must share identical sourceCommit and timestamp
+  if (catalog.sourceCommit !== strings.sourceCommit) {
+    fail(
+      `provenance mismatch: catalog.sourceCommit (${catalog.sourceCommit}) differs from strings.sourceCommit (${strings.sourceCommit})`,
+    )
+  }
+  if (catalog.generatedAt !== strings.generatedAt) {
+    fail(
+      `provenance mismatch: catalog.generatedAt (${catalog.generatedAt}) differs from strings.generatedAt (${strings.generatedAt})`,
+    )
+  }
 
   verifyRegistry(catalog, NICHE_PAGES, PRODUCTION_BOOKING_FLAGS)
 

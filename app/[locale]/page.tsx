@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/json-ld"
 import { isPublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { buildLocalizedPageMetadata, toAbsoluteLandingUrl } from "@/lib/seo"
+import { HOME_FAQ_ITEMS } from "@/config/home-faq"
 import {
   getFaqPageJsonLd,
   getSoftwareApplicationJsonLd,
@@ -35,23 +36,17 @@ export default async function HomePage({ params }: PageProps) {
 
   const t = await getTranslations({ locale, namespace: "home" })
   const pageUrl = toAbsoluteLandingUrl(localizePath(locale, "/"))
-  const visibleFaqs = [
-    { question: t("faq.q1"), answer: t("faq.a1") },
-    { question: t("faq.q2"), answer: t("faq.a2") },
-    { question: t("faq.q3"), answer: t("faq.a3") },
-    { question: t("faq.q4"), answer: t("faq.a4") },
-    { question: t("faq.q5"), answer: t("faq.a5") },
-    { question: t("faq.q6"), answer: t("faq.a6") },
-    { question: t("faq.q7"), answer: t("faq.a7") },
-    { question: t("faq.q8"), answer: t("faq.a8") },
-  ]
+  const visibleFaqs = HOME_FAQ_ITEMS.map((item) => ({
+    question: t(item.qKey),
+    answer: t(item.aKey),
+  }))
 
   const schema = toJsonLdDocument([
     getSoftwareApplicationJsonLd({
       locale,
       url: pageUrl,
       description: t("meta.description"),
-      featureList: [t("money.detail"), t("inbox.detail"), t("booking.detail")],
+      featureList: [t("operations.body"), t("records.body"), t("finance.body")],
     }),
     getFaqPageJsonLd(visibleFaqs),
   ])

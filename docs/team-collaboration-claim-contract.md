@@ -83,3 +83,11 @@ The two collaboration mechanisms are deliberately separate:
 ## Required implementation consequence
 
 TEAM1 may preserve the solo-first title and the PASS team/notes boundaries in documentation, but it must not freeze, translate, or promote any TC5-dependent coworker wording. Under the binding visual contract, TEAM3 must use a one-zone team version if TC5 remains HOLD. TC8 does **not** justify a standalone Notes section: it remains workspace-side client-context proof only.
+
+## POS2 update — Administrator access and performer decoupling (2026-09-20)
+
+In POS2, an Administrator access fragment (`MockWorkspaceAccessSummary`) is added to the Collaboration section:
+- **Role and Performer independence:** An Administrator role does not mandate a service-professional (performer) profile (`isPerformer: false`). An administrator who does not provide services does not count against the service-professional limit.
+- **Scope limitation:** Administrator handles appointments and permitted checkout, without access to general financial reporting.
+- **Coworker restrictions preserved:** TC5 remains `HOLD`. No coworker links, cross-company calendar views, or shared equipment wording are restored.
+- **Evidence status:** Administrator role and performer decoupling are verified in app source (`WorkspaceAccessSheet`, `FormFields`). Not declared as arbitrary custom permissions or enterprise SSO.

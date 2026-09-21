@@ -1,13 +1,14 @@
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Hero } from "./hero"
+import { Operations } from "./operations"
+import { ConnectedRecords } from "./connected-records"
+import { CashReconciliation } from "./cash-reconciliation"
+import { Collaboration } from "./collaboration"
 import { FinanceOverview } from "./finance-overview"
 import { FinancialStates } from "./financial-states"
 import { Drivers } from "./drivers"
-import { ConnectedRecords } from "./connected-records"
-import { Operations } from "./operations"
 import { Devices } from "./devices"
-import { Collaboration } from "./collaboration"
 import { Setup } from "./setup"
 import { Not } from "./not"
 import { NicheRouter } from "./niche-router"
@@ -23,13 +24,14 @@ export function Homepage({ locale }: { locale: PublishedLocale }) {
       <LandingHeader locale={locale} sectionAnchors />
       <div className="flex-1">
         <Hero locale={locale} />
+        <Operations locale={locale} />
+        <ConnectedRecords locale={locale} />
+        <CashReconciliation />
+        <Collaboration locale={locale} />
         <FinanceOverview locale={locale} />
         <FinancialStates />
         <Drivers locale={locale} />
-        <ConnectedRecords locale={locale} />
-        <Operations locale={locale} />
         <Devices locale={locale} />
-        <Collaboration locale={locale} />
         <Setup />
         <Not />
         <NicheRouter />

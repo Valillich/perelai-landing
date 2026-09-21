@@ -2,7 +2,7 @@
 
 **Status:** PostHog event collection is enabled. Cloudflare Web Analytics RUM is recorded as a second analytics recipient, but remains disabled until its separate privacy and consent decision is approved and the activation checks below are complete.
 **Reviewed:** 2026-08-05
-**Owner/legal decision:** PostHog EU Cloud is approved. The owner has requested broader performance analytics through Cloudflare Web Analytics; Cloudflare’s distinct recipient, processing, and disclosure decision is **pending privacy/legal approval**.
+**Owner/legal decision: approved** for PostHog EU Cloud. The owner has requested broader performance analytics through Cloudflare Web Analytics; Cloudflare’s distinct recipient, processing, and disclosure decision is **pending privacy/legal approval**.
 
 ## Current configuration
 

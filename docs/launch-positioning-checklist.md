@@ -266,8 +266,73 @@ M1/M2.
 
 **Approval · 2026-09-19:** Valery явно принял шесть RU-строк из §2 — **OWNER APPROVED / RU SOURCE FROZEN**. Источник — ответ в текущей задаче «принимаю твой итоговый вариант. обнови планы» с этими строками. UK/EN H1/body — **ADAPTATION PENDING**; UK/EN CTA/helper, eyebrow, остальные новые секции, metadata и Pricing — **CANDIDATE / REVIEW PENDING**. Одобрение текста не устанавливает фактическую доступность trial/ролей/кассы и не является native review или результатом исследования. Для оставшихся строк достаточно одной смысловой вычитки, без нового комитета и повторного утверждения RU/цены.
 
-**Граница выполнения:** POS0 обновил product-marketing v9, rails, commercial policy, указатели CONTEXT и старых MSG/FM plans; добавил этот журнал. Follow-up довёл context до v10, уточнил hero/пакеты и разблокировал Drawer в плане POS2. Принятие финального RU hero довело context до v11: `product-marketing` использован для единого freeze/status в плане, prompts и канонических документах; история v1–v10 сохранена. Public messages, components, fixtures, generated JSON, app code и flags не менялись. Builds/unit/browser/provider tests не запускались: это документация, не runtime-приёмка.
+**Граница выполнения:** POS0 обновил product-marketing v9, rails, commercial policy, указатели контекста и старых MSG/FM plans; добавил этот журнал. Follow-up довёл context до v10, уточнил hero/пакеты и разблокировал Drawer в плане POS2. Принятие финального RU hero довело context до v11: `product-marketing` использован для единого freeze/status в плане, prompts и канонических документах; история v1–v10 сохранена. Public messages, components, fixtures, generated JSON, app code и flags не менялись. Builds/unit/browser/provider tests не запускались: это документация, не runtime-приёмка.
 
 **Проверки документации:** `git diff --check`, существование локальных Markdown targets, парность code fences, отсутствие trailing whitespace; сохранение прежней истории marketing context. Итоговый список изменений ограничен `.md`, package fixture и false two-way остаются POS1, не выданы за исправленные.
 
 **Далее:** POS1 можно начать сейчас — исправления package arithmetic и two-way claims независимы. В POS2 переносить утверждённый RU hero и адаптировать UK/EN без повторного approval RU; остальные строки сохраняют свой review status. POS3 завершает смысловую вычитку новых адаптаций/оставшихся строк, остальные локали и получает BILL7 commercial artifact. Drawer теперь в основном scope POS2, без ожидания повторной реализации кассы; его public статус сверяется в POS4. G3/G6/G7 также нельзя превратить в PASS одним текстом. Новые marketing keys — только в рамках плана, утверждённые strings из этого журнала имеют приоритет над начальными кандидатами `positioning/01`.
+
+## 9. POS2 Corrective Pass Evidence · 2026-09-21
+
+- **R1 fixed (App Previews & Product Labels):**
+  - `MockCashDrawerSummary`: Replaced mock with app UI labels from generated export across all 9 locales; separated into OPEN session summary (with `CircleDot`, expected float + receipts) and close preview (counted minus expected shortage preview) without autoplay. Amounts formatted via `formatDrawerAmount` with locale-aware currency (fixed demo USD), using Unicode minus `−` (U+2212, verified absence of literal `\u2212`).
+  - `MockWorkspaceAccessSummary`: Aligned with `WorkspaceAccessFormFields` structure (Administrator role ChoiceCard + `service_mode_none` "Does not provide services"). Accessible `planNote` is NOT enclosed inside `aria-hidden="true"`.
+  - `MockPackageCheckout`: Reproduces `PackageCreditBadge` pattern with explicit unit count (`2 / 3 visits`), `memberships.package_credit_applied`, and explicit new payment `$0` (`calendar_create.checkout_pay_now`). No misleading `≈ $0` approximation.
+  - Declared UI keys (`CASH_DRAWER_UI_KEYS` [10], `WORKSPACE_ACCESS_UI_KEYS` [6], `PACKAGE_CHECKOUT_UI_KEYS` [5]) registered in `verify-niches.mjs` `DECLARED_KEY_SOURCES` and covered across all 9 published locales.
+- **R2 fixed (Generated Catalog & UI Strings Provenance):**
+  - Re-exported from clean checkout at commit `3986975504543976f730776da50e90ce986c1969` (BILL3).
+  - Provenance equality verified: `niche-catalog.generated.json` and `app-ui-strings.generated.json` share identical `sourceCommit` (`3986975504543976f730776da50e90ce986c1969`) and `generatedAt` (`2026-09-21T12:39:10+02:00`).
+  - Generator idempotency and cache optimization verified; no untracked temp files left behind.
+- **R3 status (6 Published Locales):**
+  - `pl/es/fr/de/pt/tr` await full semantic localization pass from vocabulary in POS3. Home is NOT marked ready for publication until POS3 completes.
+- **Owner Framing & Messaging Alignment:**
+  - Audience widened to independent professionals and small teams working by appointment (e.g. massage therapists, tutors, beauty professionals; not beauty-only and not any profession/CRM).
+  - RU hero frozen strings preserved verbatim with terminal periods in H1 (`title` and `accent`).
+  - Secondary CTA anchor verified linking to `#how`.
+  - Hero trial helper and verification email helper both retained.
+  - `messages/ru/home.json`, `messages/en/home.json`, and `lib/site.ts` aligned with vocabulary.
+  - `.agents/product-marketing.md` bumped to v12 with dated changelog entry preserving full history.
+- **Release gates:**
+  - DR7 (Cash drawer public release) and commercial/conversion gates remain untouched and separate from landing copy implementation.
+- **Verification commands:**
+  - `pnpm typecheck`: PASS (clean)
+  - `pnpm lint`: PASS (clean)
+  - `pnpm test`: PASS (23 files passed, 331/331 tests passed)
+  - `pnpm verify:niches`: PASS (32 pages, 17 mock keys, 43 declared product labels, 9 locales, uniqueness checked)
+  - `pnpm build`: PASS (108 static routes generated, exit code 0)
+  - `git diff --check`: PASS (clean)
+
+## 10. POS3 Localization Part Handoff Evidence · 2026-09-21
+
+- **Scope & Sources:**
+  - Basis: `.cursor/plans/positioning/04_home_copy_vocabulary_ru_en_20260921.md` (§§1–7), landing HEAD `9bb41fa` + POS2 corrective pass diff.
+  - Manifest scope: 80 key pairs from §2 + controls/summaries from §§6–7 (`hero.showcase.pauseAutoplay`, `hero.showcase.resumeAutoplay`, `meta.title`, `meta.description`, `footer.description`, `footer.devices`).
+  - Target locales: all 9 published locales (`en`, `ru`, `uk`, `pl`, `es`, `fr`, `de`, `pt`, `tr`).
+- **Locale Status & Tone Conventions:**
+  - **RU:** 6 hero strings preserved verbatim as OWNER APPROVED / FROZEN (terminal periods in `hero.title` and `hero.accent`, exact `trialMicro`).
+  - **EN / UK / PL / ES / FR / DE / PT / TR:** Editorial candidates / natural adaptations based on vocabulary §4 and §5:
+    - UK: polite plural (`ви`).
+    - PL: informal / direct singular (`Ty`), e.g. "Twój terminarz", "Planuj wizyty", "Wypróbuj przez 21 dni".
+    - ES: informal / direct singular (`tú`), e.g. "Tu agenda, en orden.", "Planifica citas", "Probar durante 21 días".
+    - FR: polite plural / formal (`vous`), e.g. "Des rendez-vous bien organisés.", "Planifiez vos rendez-vous", "Essayer pendant 21 jours".
+    - DE: formal (`Sie`), e.g. "Ordnung im Terminplan.", "Planen Sie Termine", "21 Tage testen".
+    - PT: Brazilian convention matching existing site (`você`), e.g. "Sua agenda em ordem.", "Agende atendimentos", "Testar por 21 dias".
+    - TR: polite suffix (`-in`/`-ın`), e.g. "Randevularınızda düzen.", "Randevuları planlayın", "21 gün deneyin".
+  - **Review Status:** Editorial candidate / draft. Native review and final production release remain pending POS4. No claims of native-reviewed or production-ready status.
+- **Data & Contract Invariants Verified (Raw JSON Before Merge):**
+  - All 80 manifest scope keys + controls present in raw `messages/<locale>/home.json` across all 9 locales (0 missing keys, 0 empty strings).
+  - No untranslated English paragraphs leaked into non-English locales (brands `Perelai`, `SOLO`, `STUDIO`, `STUDIO+`, `vCard`, and demo currency `USD` preserved).
+  - Proper next-intl interpolation (`{count}`) preserved without i18next `{{count}}` corruption.
+  - Unicode minus `−` (U+2212) verified in `drawer.summary` (`−5`) across all locales; absence of literal `\u2212` confirmed.
+  - Hero showcase controls `pauseAutoplay` and `resumeAutoplay` fully localized in all 9 locales.
+  - App UI mocks in landing remain sourced from clean app export commit `3986975504543976f730776da50e90ce986c1969` (BILL3); no arbitrary app UI translations invented in JSX.
+- **Verification Commands & Gates:**
+  - `pnpm typecheck`: PASS (clean)
+  - `pnpm lint`: PASS (clean)
+  - `pnpm test`: PASS (24 test files, 394/394 tests passed, including new `tests/locale-raw-coverage.test.ts`)
+  - `pnpm verify:niches`: PASS (32 pages, 17 mock keys, 43 declared product labels, 9 locales, uniqueness checked)
+  - `pnpm build`: PASS (108 static routes generated, exit code 0)
+  - `git diff --check`: PASS (clean)
+- **Pending Follow-ups (Separate Scopes):**
+  - POS3 commercial scope: Pricing / BILL7 commercial artifact sync.
+  - POS4: Native copy review, live verification journey on release revision, release gates (DR7, billing/conversion).

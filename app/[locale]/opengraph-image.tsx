@@ -28,6 +28,6 @@ export default async function OpenGraphImage({ params }: Props) {
     title: `${home.hero.title} ${home.hero.accent}`,
     body: home.hero.body,
     localeLabel: locale,
-    featureLines: [home.money.detail, home.inbox.detail, home.booking.detail],
+    featureLines: [home.operations.body, home.records.body, home.finance.body],
   })
 }

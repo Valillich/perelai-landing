@@ -29,7 +29,7 @@ const ROTATE_MS = 7000
 
 /**
  * Hero product preview: two app-screen replicas that auto-advance and can be
- * switched by hand. Finance renders first on load (FM3 §5 / defect R7).
+ * switched by hand. Calendar renders first on load (POS2).
  */
 export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
   const [index, setIndex] = useState(0)
@@ -43,8 +43,8 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
   const resumeLabel = labels.resumeAutoplay ?? "Resume automatic rotation"
 
   const screens = [
-    { key: "finance", tab: labels.financeTab },
     { key: "calendar", tab: labels.calendarTab },
+    { key: "finance", tab: labels.financeTab },
   ] as const
 
   const advance = useCallback(() => {

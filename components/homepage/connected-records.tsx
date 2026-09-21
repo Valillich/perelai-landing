@@ -2,6 +2,7 @@ import uiStrings from "@/data/app-ui-strings.generated.json"
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/landing/reveal"
 import { MockConnectedRecordsFeed } from "@/components/mock/MockConnectedRecordsFeed"
+import { MockPackageCheckout } from "@/components/mock/MockPackageCheckout"
 import { FINANCE_CONNECTED_RECORDS } from "@/lib/finance-fixture"
 import { APP_SCREEN_REFERENCE } from "@/lib/app-screen-mock"
 import { clientDisplayName } from "@/lib/mock-data"
@@ -41,7 +42,9 @@ export function ConnectedRecords({ locale }: { locale: PublishedLocale }) {
         : resolveProductName(locale, row.nameKey)
     const client = clientDisplayName(locale, row.clientKey)
     const dateLabel = dateFormatter.format(new Date(Date.UTC(year, month, row.day)))
-    const direction = row.kind === "package_redemption" ? "neutral" : "income"
+    const direction = (row.kind === "package_redemption" ? "neutral" : "income") as
+      | "income"
+      | "neutral"
 
     return {
       id: row.sourceId,
@@ -68,14 +71,28 @@ export function ConnectedRecords({ locale }: { locale: PublishedLocale }) {
             </Reveal>
           </div>
 
-          <Reveal delay={0.1}>
-            <figure className="mock-surface-elevated-shadow overflow-hidden rounded-[24px] border border-border bg-card p-4 sm:p-5">
-              <MockConnectedRecordsFeed items={items} locale={locale} />
-              <figcaption className="mt-4 text-center text-[12px] font-medium text-subtle-text">
-                {t("finance.caption")}
-              </figcaption>
-            </figure>
-          </Reveal>
+          <div className="space-y-6">
+            <Reveal delay={0.1}>
+              <figure className="mock-surface-elevated-shadow overflow-hidden rounded-[24px] border border-border bg-card p-4 sm:p-5">
+                <MockConnectedRecordsFeed items={items} locale={locale} />
+                <figcaption className="mt-4 text-center text-[12px] font-medium text-subtle-text">
+                  {t("finance.caption")}
+                </figcaption>
+              </figure>
+            </Reveal>
+
+            <Reveal delay={0.16}>
+              <MockPackageCheckout
+                locale={locale}
+                labels={{
+                  title: t("packages.title"),
+                  body: t("packages.body"),
+                  summary: t("packages.summary"),
+                  caption: t("packages.caption"),
+                }}
+              />
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>

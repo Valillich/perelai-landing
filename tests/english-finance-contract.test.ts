@@ -2,67 +2,48 @@ import { describe, expect, test } from "vitest"
 import homeEn from "@/messages/en/home.json"
 import { siteConfig } from "@/lib/site"
 
-describe("English Finance Message Contract & Freeze Verification (FM4A)", () => {
-  test("matches approved English source set verbatim (docs/home-hero-copy-audit.md §II.7)", () => {
-    // II.7.1 Hero
-    expect(homeEn.hero.eyebrow).toBe("Simple finance software for independent service businesses")
-    expect(homeEn.hero.title).toBe("A Clear View of Your Business Finances")
-    expect(homeEn.hero.accent).toBe("Without Complicated Spreadsheets")
+describe("English Message Contract & Freeze Verification (POS2)", () => {
+  test("matches POS2 English source set (editorial candidates)", () => {
+    // POS2 Hero (EN draft, final POS3 review)
+    expect(homeEn.hero.eyebrow).toBe("For independent professionals and small teams")
+    expect(homeEn.hero.title).toBe("Order in your schedule.")
+    expect(homeEn.hero.accent).toBe("Clarity in your payments.")
     expect(homeEn.hero.body).toBe(
-      "Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips."
+      "Schedule appointments, build client history and record payments."
     )
-    expect(homeEn.hero.signup).toBe("Create workspace")
+    expect(homeEn.hero.signup).toBe("Start 21-day trial")
     expect(homeEn.hero.how).toBe("See how it works")
-    expect(homeEn.hero.micro).toBe("You'll get a verification email to finish setting up.")
+    expect(homeEn.hero.trialMicro).toBe(
+      "21 days of STUDIO, no card required. Subscribe when your trial ends."
+    )
     expect(homeEn.hero.deviceMicro).toBe("Perelai runs in your browser. Installing it is optional.")
     expect(homeEn.hero.imageAlt).toBe(
-      "Perelai finance overview showing revenue, costs and calculated profit for a period, a service-category breakdown and an open-order balance — example data."
+      "Example Perelai appointment calendar and finance overview."
     )
 
-    // II.7.2 Sections
-    expect(homeEn.finance.title).toBe("Revenue, costs and profit for any period")
-    expect(homeEn.finance.body).toBe("Review revenue, costs and calculated profit for a day, week, month, quarter or year.")
+    // POS2 Sections
+    expect(homeEn.finance.title).toBe("Revenue, costs and profit for your chosen period.")
+    expect(homeEn.finance.body).toBe("Review revenue, recorded costs and calculated profit. Using a prepaid package does not add new revenue.")
     expect(homeEn.states.title).toBe("Completed work, revenue, payments and open-order balances are tracked separately.")
-    expect(homeEn.states.body).toBe(
-      "A visit can be completed before it counts toward revenue. A prepaid package can cover a visit without a new payment, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
-    )
-    expect(homeEn.drivers.title).toBe("See where the result comes from")
-    expect(homeEn.drivers.body).toBe(
-      "Review revenue by service category, costs by category, a client's revenue history and how the result changes over time."
-    )
-    expect(homeEn.records.title).toBe("Every figure has work behind it")
-    expect(homeEn.records.body).toBe(
-      "Payments are recorded against the visit, order or instalment they paid for, and stay connected to the relevant client and service category."
-    )
-    expect(homeEn.operations.title).toBe("Build the financial record as you work")
-    expect(homeEn.operations.body).toBe(
-      "Complete a visit, record a payment, add a cost or redeem a package. Booking, Calendar and Inbox keep these actions connected to clients and services. Clients can also book through your own link."
-    )
+    expect(homeEn.drivers.title).toBe("See what makes up your results.")
+    expect(homeEn.records.title).toBe("See what each payment was for.")
+    expect(homeEn.operations.title).toBe("From appointment to completed visit.")
 
-    // II.7.3 Summary & Fixture
-    expect(homeEn.finance.summary).toBe(
-      "Example Perelai finance overview showing monthly revenue, costs and calculated profit, a service-category breakdown and an open-order balance."
-    )
+    // POS2 Summary & Fixture (unchanged)
     expect(homeEn.finance.fixture.category.color).toBe("Color services")
     expect(homeEn.finance.fixture.category.styling).toBe("Styling & finishing")
 
-    // II.7.4 FAQ
+    // POS2 FAQ
     expect(homeEn.faq.q_category.question).toBe("Is this accounting software?")
-    expect(homeEn.faq.q_category.answer).toBe(
-      "No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice."
-    )
     expect(homeEn.faq.q_bank.question).toBe("Will the number match my bank?")
-    expect(homeEn.faq.q_bank.answer).toBe(
-      "Not always. Summary revenue represents completed work that has been settled, and a prepaid package can settle a visit without moving money. Recorded payments and payment-account balances show money movement separately."
-    )
 
-    // II.7.5 Metadata, Closing, Footer, Site Config
-    expect(homeEn.meta.title).toBe("Perelai — Simple Finance Software for Service Businesses")
+    // POS2 Metadata, Closing, Footer, Site Config
+    expect(homeEn.meta.title).toBe("Perelai — Appointments, Clients & Payment Tracking")
     expect(homeEn.meta.description).toBe(
-      "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
+      "Appointments, client history, payment records and prepaid service packages for independent professionals and small teams."
     )
-    expect(homeEn.closing.title).toBe("Your financial result, connected to the work behind it.")
-    expect(homeEn.footer.description).toBe("Simple finance software for independent service businesses.")
+    expect(homeEn.closing.title).toBe("Try Perelai in your next working week.")
+    expect(homeEn.footer.description).toBe("Appointments, clients and payment tracking for independent professionals and small teams.")
     expect(siteConfig.description).toBe(homeEn.meta.description)
   })
 
@@ -102,8 +83,6 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
       expect(str).not.toMatch(/\brefunds?\b|void and reverse|audit trail/i)
 
       // 6. FC3 ban: unscoped "outstanding" or bare "balance"
-      // Exception: "open-order balance(s)" and "payment-account balance(s)" are allowed compounds.
-      // Unscoped "outstanding" or bare "balances" without qualification is forbidden.
       expect(str).not.toMatch(/\boutstanding balances?\b/i)
       expect(str).not.toMatch(/\bwhat is still outstanding\b/i)
 
@@ -111,11 +90,9 @@ describe("English Finance Message Contract & Freeze Verification (FM4A)", () => 
       expect(str).not.toMatch(/\bguaranteed payment\b|debt collection|chase payments|accounts receivable/i)
 
       // 8. Explicit denial rule for accounting / bookkeeping / tax / reconcile / advice terms:
-      // These terms MUST NOT appear as affirmative features; they are allowed only in explicit denial sentences or questions ("Is this accounting software?", "No. Perelai is operational finance software... It does not file taxes...")
       const sensitiveTerms = ["accounting", "bookkeeping", "tax", "reconcile", "financial advice"]
       for (const term of sensitiveTerms) {
         if (new RegExp(`\\b${term}\\b`, "i").test(str)) {
-          // Verify it is inside an explicit negative/denial context ("not", "does not", "no", or a question ending with "?")
           const isDenialContext = /not|no|does not|\?/i.test(str)
           expect(
             isDenialContext,

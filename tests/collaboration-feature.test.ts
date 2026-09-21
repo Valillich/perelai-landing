@@ -7,6 +7,8 @@ import { NextIntlClientProvider } from "next-intl"
 import { Collaboration } from "@/components/homepage/collaboration"
 import { PUBLISHED_LOCALES } from "@/i18n/locales"
 
+import { messagesByLocale } from "@/i18n/messages"
+
 const ROOT = process.cwd()
 const HOMEPAGE_PATH = resolve(ROOT, "components/homepage/homepage.tsx")
 const COLLABORATION_PATH = resolve(ROOT, "components/homepage/collaboration.tsx")
@@ -22,21 +24,21 @@ const REQUIRED_COLLABORATION_KEYS = [
 ] as const
 
 describe("Homepage section order contract", () => {
-  it("places Collaboration exactly after Devices and before Setup", () => {
+  it("places Collaboration exactly after CashReconciliation and before FinanceOverview", () => {
     const source = readFileSync(HOMEPAGE_PATH, "utf8")
-    const devicesIndex = source.indexOf("<Devices")
+    const cashIndex = source.indexOf("<CashReconciliation")
     const collabIndex = source.indexOf("<Collaboration")
-    const setupIndex = source.indexOf("<Setup")
+    const financeIndex = source.indexOf("<FinanceOverview")
     const operationsIndex = source.indexOf("<Operations")
 
     expect(operationsIndex).toBeGreaterThan(-1)
-    expect(devicesIndex).toBeGreaterThan(operationsIndex)
-    expect(collabIndex).toBeGreaterThan(devicesIndex)
-    expect(setupIndex).toBeGreaterThan(collabIndex)
+    expect(cashIndex).toBeGreaterThan(operationsIndex)
+    expect(collabIndex).toBeGreaterThan(cashIndex)
+    expect(financeIndex).toBeGreaterThan(collabIndex)
 
-    // Verify Devices immediately precedes Collaboration and Collaboration immediately precedes Setup
-    const renderSection = source.slice(devicesIndex, setupIndex)
-    expect(renderSection).toContain("<Devices")
+    // Verify CashReconciliation immediately precedes Collaboration and Collaboration immediately precedes FinanceOverview
+    const renderSection = source.slice(cashIndex, financeIndex)
+    expect(renderSection).toContain("<CashReconciliation")
     expect(renderSection).toContain("<Collaboration")
     expect(renderSection).not.toContain("<Problem")
     expect(renderSection).not.toContain("<Inbox")
@@ -108,9 +110,7 @@ const decodeEntities = (markup: string) =>
 describe("All-locale Collaboration render test", () => {
   for (const locale of PUBLISHED_LOCALES) {
     it(`renders Collaboration cleanly in ${locale}`, () => {
-      const messages = JSON.parse(
-        readFileSync(resolve(ROOT, `messages/${locale}/home.json`), "utf8"),
-      )
+      const messages = messagesByLocale[locale].home as typeof import("@/messages/en/home.json")
 
       const markup = decodeEntities(
         renderToStaticMarkup(

@@ -55,7 +55,7 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </CtaButton>
                 <a
-                  href="#features"
+                  href="#how"
                   className="inline-flex w-full items-center justify-center rounded-full border border-border bg-card/70 px-6 py-3.5 text-[15px] font-semibold text-foreground shadow-[0_4px_12px_rgba(16,24,40,0.04)] backdrop-blur-xl transition-colors hover:bg-card sm:w-auto"
                 >
                   {t("hero.how")}
@@ -65,9 +65,12 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
 
             <Reveal delay={0.24}>
               <p className="mt-4 text-[13px] text-subtle-text">
+                {t("hero.trialMicro")}
+              </p>
+              <p className="mt-1 text-[13px] text-subtle-text">
                 {t("hero.micro")}
               </p>
-              <p className="mt-1.5 text-[13px] text-subtle-text">
+              <p className="mt-1 text-[13px] text-subtle-text">
                 {t("hero.deviceMicro")}
               </p>
             </Reveal>

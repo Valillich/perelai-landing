@@ -9,13 +9,14 @@ const OPERATIONS_PATH = resolve(ROOT, "components/homepage/operations.tsx")
 
 const EXPECTED_ORDER = [
   "<Hero",
+  "<Operations",
+  "<ConnectedRecords",
+  "<CashReconciliation",
+  "<Collaboration",
   "<FinanceOverview",
   "<FinancialStates",
   "<Drivers",
-  "<ConnectedRecords",
-  "<Operations",
   "<Devices",
-  "<Collaboration",
   "<Setup",
   "<Not",
   "<NicheRouter",
@@ -23,8 +24,8 @@ const EXPECTED_ORDER = [
   "<FinalCta",
 ] as const
 
-describe("Homepage section order (FM3 §3)", () => {
-  it("renders sections in the binding finance-first order", () => {
+describe("Homepage section order (POS2)", () => {
+  it("renders sections in the binding order", () => {
     const source = readFileSync(HOMEPAGE_PATH, "utf8")
     let cursor = -1
     for (const token of EXPECTED_ORDER) {
@@ -42,10 +43,10 @@ describe("Homepage section order (FM3 §3)", () => {
     expect(source).not.toContain("<Money")
   })
 
-  it("puts #features on Finance overview, not Operations", () => {
+  it("puts #features on Operations, not Finance overview", () => {
     const finance = readFileSync(FINANCE_OVERVIEW_PATH, "utf8")
     const operations = readFileSync(OPERATIONS_PATH, "utf8")
-    expect(finance).toContain('id="features"')
-    expect(operations).not.toContain('id="features"')
+    expect(operations).toContain('id="features"')
+    expect(finance).not.toContain('id="features"')
   })
 })

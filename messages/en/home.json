@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Perelai — Simple Finance Software for Service Businesses",
-    "description": "Track revenue, costs and profit for any period, with category and client breakdowns connected to the work behind them."
+    "title": "Perelai — Appointments, Clients & Payment Tracking",
+    "description": "Appointments, client history, payment records and prepaid service packages for independent professionals and small teams."
   },
   "nav": {
     "features": "Features",
@@ -9,21 +9,22 @@
     "pricing": "Pricing",
     "devices": "Devices",
     "login": "Log in",
-    "start": "Create workspace",
-    "start_short": "Create workspace",
+    "start": "Start 21-day trial",
+    "start_short": "Start trial",
     "primaryLabel": "Primary",
     "menuLabel": "Open menu"
   },
   "hero": {
-    "eyebrow": "Simple finance software for independent service businesses",
-    "title": "A Clear View of Your Business Finances",
-    "accent": "Without Complicated Spreadsheets",
-    "body": "Manage your schedule and finances in one place. Track revenue from every client, break down profit by service category, and make informed decisions with clear insights that are always at your fingertips.",
-    "signup": "Create workspace",
+    "eyebrow": "For independent professionals and small teams",
+    "title": "Order in your schedule.",
+    "accent": "Clarity in your payments.",
+    "body": "Schedule appointments, build client history and record payments.",
+    "signup": "Start 21-day trial",
     "how": "See how it works",
+    "trialMicro": "21 days of STUDIO, no card required. Subscribe when your trial ends.",
     "micro": "You'll get a verification email to finish setting up.",
     "deviceMicro": "Perelai runs in your browser. Installing it is optional.",
-    "imageAlt": "Perelai finance overview showing revenue, costs and calculated profit for a period, a service-category breakdown and an open-order balance — example data.",
+    "imageAlt": "Example Perelai appointment calendar and finance overview.",
     "imageCaption": "Example data",
     "showcase": {
       "ariaLabel": "Perelai interactive app preview",
@@ -36,8 +37,8 @@
     }
   },
   "finance": {
-    "title": "Revenue, costs and profit for any period",
-    "body": "Review revenue, costs and calculated profit for a day, week, month, quarter or year.",
+    "title": "Revenue, costs and profit for your chosen period.",
+    "body": "Review revenue, recorded costs and calculated profit. Using a prepaid package does not add new revenue.",
     "caption": "Example data",
     "summary": "Example Perelai finance overview showing monthly revenue, costs and calculated profit, a service-category breakdown and an open-order balance.",
     "fixture": {
@@ -60,16 +61,16 @@
     "body": "A visit can be completed before it counts toward revenue. A prepaid package is recorded as revenue when it is sold; redeeming it settles a visit without a new payment or revenue, while an open order may still have an outstanding amount. Perelai keeps these states separate so each figure has a clear meaning."
   },
   "drivers": {
-    "title": "See where the result comes from",
-    "body": "Review revenue by service category, costs by category, a client's revenue history and how the result changes over time."
+    "title": "See what makes up your results.",
+    "body": "Explore revenue by service category and client, costs by category, and changes between periods."
   },
   "records": {
-    "title": "Every figure has work behind it",
-    "body": "Payment records and package redemptions stay connected to the visit, order or instalment they concern, and to the relevant client and service category."
+    "title": "See what each payment was for.",
+    "body": "Payment records stay connected to the client visits or orders they relate to. Package use stays separate from new money received."
   },
   "operations": {
-    "title": "Build the financial record as you work",
-    "body": "Complete a visit, record a payment, add a cost or redeem a package. Booking, Calendar and Inbox keep these actions connected to clients and services. Clients can also book through your own link."
+    "title": "From appointment to completed visit.",
+    "body": "Schedule the client, complete the visit, then record a payment or apply a package. Items needing a decision stay in your Inbox."
   },
   "problem": {
     "title": "You already know this day",
@@ -105,13 +106,17 @@
     "link": "How you open Perelai"
   },
   "collaboration": {
-    "title": "Work solo. Add people when you need them.",
-    "body": "Start with your own workspace. Add team access only when it becomes useful.",
+    "title": "Work solo or bring in your team.",
+    "body": "Invite people with the appropriate access. Manage schedules, time off and assigned services for your service professionals.",
     "teamTitle": "Your team",
-    "teamBody": "Invite team members with Staff or Supervisor access. Keep schedules, time off and assigned services together.",
+    "teamBody": "Invite people with the appropriate access. Manage schedules, time off and assigned services for your service professionals.",
     "notesDetail": "Pinned client notes and visit notes stay with the client history.",
     "summary": "Example Perelai workspace showing team roles, schedules and a pinned client note inside one business.",
     "caption": "Example data",
+    "accessTitle": "Help with appointments and payment records.",
+    "accessBody": "An administrator helps with appointments and permitted client payment actions, without access to overall financial reports.",
+    "accessSummary": "Example workspace access: Administrator, with no service-professional profile.",
+    "planNote": "Team access is part of STUDIO. An administrator who does not provide services does not count toward the service-professional limit.",
     "mock": {
       "pinnedNote": "Prefers quiet mornings before colour.",
       "visitNote": "Confirmed shade match on last visit.",
@@ -122,22 +127,22 @@
   },
   "setup": {
     "eyebrow": "How it works",
-    "title": "Set up in an evening",
-    "body": "No weekend migration. Pick your trade, import your clients, share your link.",
-    "step1Title": "Pick your trade",
-    "step1Body": "32 selectable business types, each with an editable service list. Relevant templates also include add-ons and linked costs.",
-    "step2Title": "Bring your clients across",
-    "step2Body": "Import contacts from your phone with vCard, then manage your working schedule in Perelai.",
-    "step3Title": "Share your booking link",
-    "step3Body": "One link in your bio. Clients book directly on your own link."
+    "title": "Start with your services and clients.",
+    "body": "Set up your services, import contacts and share your booking link.",
+    "step1Title": "Set up your services.",
+    "step1Body": "Choose a suitable template and edit the service list.",
+    "step2Title": "Import your contacts.",
+    "step2Body": "Bring contacts from your phone using vCard.",
+    "step3Title": "Share your booking link.",
+    "step3Body": "Clients choose a service and time on your booking page."
   },
   "not": {
     "title": "What Perelai is not",
     "body": "If you need any of these, we are not the right fit — and we would rather say so.",
     "item1Title": "Not accounting software",
-    "item1Body": "Perelai tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice.",
+    "item1Body": "Work and payment tracking, not accounting or tax reporting.",
     "item2Title": "Not a marketplace",
-    "item2Body": "Your booking link is yours. Clients book directly without a marketplace intermediary.",
+    "item2Body": "Clients book directly through your link, without a marketplace intermediary.",
     "item3Title": "Not a medical record system",
     "item3Body": "No clinical records, no diagnosis tracking, no patient treatment management."
   },
@@ -167,31 +172,43 @@
       "question": "Will the number match my bank?",
       "answer": "Not always. PAID means a visit is settled, not that cash was received. A package sale is recorded once; redeeming its credit adds no new payment or revenue. Recorded payments and payment-account balances show money movement separately."
     },
-    "q1": "How do clients book with me?",
-    "a1": "Share your direct booking link. Clients choose a service and time directly on your page.",
-    "q2": "What happens right after I sign up?",
-    "a2": "You confirm your email, then a short setup: your trade, your services, your team if you have one, and optional imports.",
-    "q3": "Will my services already be there?",
-    "a3": "Yes — each selectable business type starts with an editable service or item list. Relevant templates also include add-ons and linked costs.",
-    "q4": "Can I import clients from my phone?",
-    "a4": "Yes: import contacts from your phone with vCard.",
-    "q5": "Can I manage multiple services and add-ons?",
-    "a5": "Yes. Each template includes selectable services and relevant add-on options.",
-    "q6": "Is this accounting software?",
-    "a6": "No. Perelai is operational finance software. It tracks revenue, costs, calculated profit, recorded payments and what is still owed on open orders, with category and client breakdowns. It does not file taxes, reconcile bank accounts, produce statutory reports or give financial advice.",
+    "q1": "How do clients book?",
+    "a1": "Share your booking link. Clients choose a service and time on your booking page.",
+    "q2": "Is there a trial, and do I need a card?",
+    "a2": "Try STUDIO for 21 days without a card. Your trial starts after business setup. The app shows your end date.",
+    "q3": "What happens when the trial ends?",
+    "a3": "Subscribe to keep working. Without a subscription or another valid source of access, work is restricted. Trial expiry itself does not delete your data.",
+    "q4": "Can I work with a team?",
+    "a4": "Yes. STUDIO supports up to 5 active service professionals and team access. An administrator who does not provide services does not count toward that limit.",
+    "q5": "Is a prepaid package a subscription?",
+    "a5": "No. A client prepays for services to use on eligible visits. It is not a recurring charge or a Perelai subscription.",
+    "q6": "Is this accounting software or a payment processor?",
+    "a6": "No. Perelai helps manage appointments, clients and payment records. It does not provide accounting or tax reporting, or process your clients' card payments.",
     "q7": "Does Perelai have an iPhone or Android app?",
-    "a7": "Perelai is a web app. To use Perelai, you only need a browser and an internet connection. It is not listed on the App Store or Google Play. Some browsers let you add Perelai to your Home Screen or open it in a separate window, which can feel close to a native app.",
-    "q8": "Can I use Perelai on a laptop or an iPad?",
-    "a8": "Open perelai.app in a supported browser and sign in with the same login you use on your phone. One login, one workspace. An internet connection is required."
+    "a7": "Perelai is a web app. All you need is a browser and an internet connection. There is no App Store or Google Play listing. Some browsers offer an 'Add to Home Screen' or standalone window option that gives an experience close to a native app.",
+    "q8": "Can I use Perelai on my laptop or iPad?",
+    "a8": "Open perelai.app in any supported browser on your laptop or iPad and log in with the same account. One login, one workspace. An internet connection is required."
   },
   "closing": {
-    "title": "Your financial result, connected to the work behind it.",
-    "body": "Set up in an evening.",
-    "cta": "Create workspace",
+    "title": "Try Perelai in your next working week.",
+    "body": "Start with your own schedule and clients.",
+    "cta": "Start 21-day trial",
     "micro": "You'll get a verification email to finish setting up."
   },
+  "packages": {
+    "title": "Keep track of what's left in a package.",
+    "body": "Create prepaid service packages and record their sale to clients. Track usage and what remains in each package.",
+    "summary": "Example package use: one of three visits is used, leaving two. No new payment is received.",
+    "caption": "Example data"
+  },
+  "drawer": {
+    "title": "Check your cash at the end of the day.",
+    "body": "Open a cash drawer session before receiving cash. At closing, enter your cash count and compare it with the expected amount.",
+    "summary": "Example cash drawer session in USD: opening count 100, cash received 50, expected 150, counted 145, difference −5.",
+    "caption": "Example data"
+  },
   "footer": {
-    "description": "Simple finance software for independent service businesses.",
+    "description": "Appointments, clients and payment tracking for independent professionals and small teams.",
     "product": "Product",
     "company": "Legal",
     "forColorists": "For independent colorists",

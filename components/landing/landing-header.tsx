@@ -6,14 +6,11 @@ import { useTranslations } from "next-intl"
 import { CtaButton } from "@/components/cta-button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { MobileNav, type MobileNavItem } from "@/components/landing/mobile-nav"
-import { NicheMenu, type NicheMenuItem } from "@/components/landing/niche-menu"
-import { getEnabledNichePagesForLocale } from "@/config/niche-pages"
 import { Link } from "@/i18n/navigation"
 import { localizePath } from "@/i18n/paths"
 import type { PublishedLocale } from "@/i18n/locales"
 import { analytics } from "@/lib/analytics"
 import { cn } from "@/lib/cn"
-import { labelledNichePages } from "@/lib/niche-labels"
 import { ThemeToggle } from "../theme-toggle"
 
 const navLinkClass = "relative text-[14px] font-medium transition-colors"
@@ -34,7 +31,6 @@ export function LandingHeader({
   sectionAnchors?: boolean
 }) {
   const t = useTranslations("home.nav")
-  const tNiche = useTranslations("home")
   // Reuses the reviewed `/install` label from the devices namespace instead of
   // duplicating it under `home.nav`, so the two can never disagree.
   const tDevices = useTranslations("devices.nav")
@@ -59,16 +55,6 @@ export function LandingHeader({
     { href: localizePath(locale, "/install"), label: tDevices("label"), current: isInstall },
   ]
 
-  const nicheItems: NicheMenuItem[] = labelledNichePages(getEnabledNichePagesForLocale(locale)).map(
-    ({ page, keys }) => ({
-      href: localizePath(locale, page.path),
-      label: tNiche(keys.label),
-      description: tNiche(keys.description),
-      current: canonicalPath === page.path,
-    }),
-  )
-  const nicheMenuLabel = tNiche("nicheRouter.title")
-
   return (
     <header className="sticky top-0 z-50 w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -88,9 +74,6 @@ export function LandingHeader({
           {/* Nav links. The niche menu leads: self-identification is the first
               decision a visitor makes, and it is what the niche pages sell. */}
           <nav aria-label={t("primaryLabel")} className="hidden items-center gap-6 lg:flex">
-            {nicheItems.length > 0 ? (
-              <NicheMenu triggerLabel={nicheMenuLabel} items={nicheItems} />
-            ) : null}
             {navItems.map((item) => {
               const isInstallLink = item.href.includes("/install")
               return (
@@ -152,11 +135,6 @@ export function LandingHeader({
               triggerLabel={t("menuLabel")}
               navLabel={t("primaryLabel")}
               items={navItems}
-              group={
-                nicheItems.length > 0
-                  ? { label: nicheMenuLabel, items: nicheItems }
-                  : undefined
-              }
             >
               <ThemeToggle />
               <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />

@@ -1,39 +1,200 @@
 {
   "meta": {
-    "title": "Perelai — Hizmet işletmeleri için basit finans yazılımı",
-    "description": "Her dönem için ciroyu, maliyetleri ve kârı müşteri ve hizmet kategorisi bazında takip edin."
+    "title": "Perelai — Randevular, müşteriler ve ödeme takibi",
+    "description": "Bağımsız profesyoneller ve küçük ekipler için randevu takvimi, müşteri geçmişi, ödeme kayıtları ve ön ödemeli hizmet paketleri."
   },
   "nav": {
     "features": "Özellikler",
     "how": "Nasıl çalışır",
     "pricing": "Fiyatlandırma",
     "login": "Giriş yap",
-    "start": "Çalışma alanı oluştur",
-    "start_short": "Oluştur",
+    "start": "21 gün deneyin",
+    "start_short": "Deneyin",
     "primaryLabel": "Ana menü",
     "menuLabel": "Menüyü aç",
-    "devices": "Perelai’yi nasıl açarsınız"
+    "devices": "Perelai nasıl açılır?"
   },
   "hero": {
-    "eyebrow": "Bağımsız hizmet işletmeleri için basit finans yazılımı",
-    "title": "İşletme finansınıza net bir bakış",
-    "accent": "Karmaşık e-tablolar olmadan",
-    "body": "Programınızı ve finansınızı tek bir yerden yönetin. Müşteri bazında geliri takip edin, sonucu hizmet kategorisine göre ayırın ve her an elinizin altındaki net verilerle bilinçli kararlar alın.",
-    "signup": "Çalışma alanı oluştur",
+    "eyebrow": "Bağımsız profesyoneller ve küçük ekipler için",
+    "title": "Randevularınızda düzen.",
+    "accent": "Ödemelerinizde netlik.",
+    "body": "Randevuları planlayın, müşteri geçmişini tutun ve ödemeleri kaydedin.",
+    "signup": "21 gün deneyin",
     "how": "Nasıl çalıştığını görün",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
-    "imageAlt": "Perelai finans genel görünümü — bir dönem için ciro, maliyet ve hesaplanan kâr, hizmet kategorisine göre döküm ve açık sipariş bakiyesi ile — örnek veriler.",
+    "imageAlt": "Örnek Perelai: randevu takvimi ve finansal genel bakış.",
     "imageCaption": "Örnek veriler",
     "showcase": {
       "ariaLabel": "Perelai uygulama önizlemesi",
       "calendarTab": "Takvim",
       "financeTab": "Finans",
-      "paid": "Ödendi",
-      "pending": "Ödenmedi",
-      "pauseAutoplay": "Pause automatic rotation",
-      "resumeAutoplay": "Resume automatic rotation"
+      "paid": "Kapatıldı",
+      "pending": "Açık sipariş",
+      "pauseAutoplay": "Otomatik geçişi duraklat",
+      "resumeAutoplay": "Otomatik geçişi sürdür"
     },
-    "deviceMicro": "Perelai tarayıcınızda çalışır. Kurulum isteğe bağlıdır."
+    "deviceMicro": "Perelai tarayıcınızda çalışır. Yüklemek isteğe bağlıdır.",
+    "trialMicro": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süresi sonunda abonelik satın alın."
+  },
+  "operations": {
+    "title": "Randevudan tamamlanan ziyarete.",
+    "body": "Müşteriyi kaydedin, ziyareti gerçekleştirin, ardından ödemeyi işleyin veya paket kullanın. Karar bekleyen işlemler Gelen Kutunuzda kalır."
+  },
+  "records": {
+    "title": "Hangi ödemenin ne için yapıldığını görün.",
+    "body": "Ödeme kayıtları ilgili müşteri ziyaretleri veya siparişleriyle bağlantılı kalır. Paket kullanımı yeni nakit girişlerinden ayrı olarak gösterilir."
+  },
+  "packages": {
+    "title": "Paket bakiyeniz daima elinizin altında.",
+    "body": "Ön ödemeli hizmet paketleri oluşturun ve satışlarını kaydedin. Her paketin kullanımını ve kalan seanslarını kolayca takip edin.",
+    "summary": "Örnek paket kullanımı: üç ziyaretten biri kullanıldı, iki bakiye kaldı. Yeni bir ödeme girişi olmaz.",
+    "caption": "Örnek veriler"
+  },
+  "drawer": {
+    "title": "Günün sonunda kasanızı sayın ve karşılaştırın.",
+    "body": "Nakit ödeme kabul etmeden önce kasa oturumu açın. Kapanışta sayılan tutarı girip beklenen tutarla karşılaştırın.",
+    "summary": "USD cinsinden örnek kasa oturumu: açılış 100, alınan nakit 50, beklenen 150, sayılan 145, fark −5.",
+    "caption": "Örnek veriler"
+  },
+  "collaboration": {
+    "title": "Tek başınıza çalışın veya ekibinizi dahil edin.",
+    "body": "Ekip üyelerini uygun yetkilerle davet edin. Hizmet sunan uzmanlarınız için çalışma saatlerini, izinleri ve atanmış hizmetleri yönetin.",
+    "teamTitle": "Ekibiniz",
+    "teamBody": "Ekip üyelerini uygun yetkilerle davet edin. Hizmet sunan uzmanlarınız için çalışma saatlerini, izinleri ve atanmış hizmetleri yönetin.",
+    "notesDetail": "Sabitlenmiş müşteri notları ve ziyaret notları müşteri geçmişinde kalır.",
+    "summary": "Tek bir işletme içinde ekip rolleri, çalışma saatleri ve sabitlenmiş müşteri notunu gösteren örnek Perelai çalışma alanı.",
+    "caption": "Örnek veriler",
+    "mock": {
+      "pinnedNote": "Boya öncesi sakin sabahları tercih eder.",
+      "visitNote": "Son ziyarette renk tonu onaylandı.",
+      "hours1": "Pzt–Cum · 09:00–17:00",
+      "hours2": "Sal–Cmt · 10:00–18:00",
+      "hours3": "Çar–Paz · 11:00–19:00"
+    },
+    "accessTitle": "Randevular ve ödeme kayıtlarında destek.",
+    "accessBody": "Bir yönetici, genel finansal raporlara erişimi olmadan randevuları düzenler ve izin verilen müşteri ödeme işlemlerine yardımcı olur.",
+    "accessSummary": "Örnek çalışma alanı erişimi: Yönetici, hizmet sunan uzman profili olmadan.",
+    "planNote": "Ekip erişimi STUDIO paketine dahildir. Hizmet sunmayan bir yönetici, tarifenin hizmet sunan kişi sınırına dahil edilmez."
+  },
+  "finance": {
+    "title": "Seçilen dönem için ciro, giderler ve kâr.",
+    "body": "Cironuzu, kaydedilen giderleri ve hesaplanan kârı inceleyin. Önceden ödenmiş bir paketin kullanılması yeni bir ciro eklemez.",
+    "caption": "Örnek veriler",
+    "summary": "Aylık ciro, giderler, hesaplanan kâr, hizmet kategorisi dökümü ve açık sipariş bakiyesini gösteren örnek Perelai finansal genel bakışı.",
+    "fixture": {
+      "category": {
+        "color": "Renklendirme hizmetleri",
+        "styling": "Şekillendirme ve son işlem"
+      },
+      "openOrders": "açık siparişlerden",
+      "orderInstalment": "3 seanslık sipariş, 1. taksit",
+      "records": {
+        "visitPayment": "Bir randevuyla ilişkilendirilen ödeme",
+        "packageRedemption": "Paket kullanımı — yeni bir ödeme veya ciro girişi yok",
+        "orderInstalment": "Bir siparişle/taksitle ilişkilendirilen ödeme",
+        "noShowFee": "Gelinmedi olarak işaretlenen bir randevuyla ilişkilendirilen ödeme"
+      }
+    }
+  },
+  "states": {
+    "title": "Tamamlanan iş, ciro, ödemeler ve açık sipariş bakiyeleri ayrı ayrı takip edilir.",
+    "body": "Bir ziyaret, ciroya dahil edilmeden önce tamamlanabilir. Ön ödemeli paket satıldığında ciro olarak kaydedilir; kullanımı ziyareti yeni bir ödeme veya ciro oluşturmadan kapatır; açık bir siparişte ise hâlâ ödenmemiş bir tutar bulunabilir. Perelai bu durumları ayrı tutar, böylece her rakam net bir anlam taşır."
+  },
+  "drivers": {
+    "title": "Sonuçlarınızı neyin oluşturduğunu görün.",
+    "body": "Hizmet kategorisine ve müşteriye göre ciro, kategoriye göre giderler ve dönem karşılaştırmaları."
+  },
+  "setup": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Hizmetleriniz ve müşterilerinizle başlayın.",
+    "body": "Hizmetlerinizi ayarlayın, kişilerinizi içe aktarın ve randevu bağlantınızı paylaşın.",
+    "step1Title": "Hizmetlerinizi belirleyin.",
+    "step1Body": "Uygun bir şablon seçin ve hizmet listesini düzenleyin.",
+    "step2Title": "Kişilerinizi aktarın.",
+    "step2Body": "vCard kullanarak telefonunuzdaki kişileri kolayca içe aktarın.",
+    "step3Title": "Bağlantınızı paylaşın.",
+    "step3Body": "Müşteriler randevu sayfanızdan hizmet ve saat seçimi yapsın."
+  },
+  "not": {
+    "title": "Perelai NE DEĞİLDİR",
+    "body": "Bu listedekilerden birine ihtiyacınız varsa, doğru tercih değiliz — ve bunu en baştan açıkça belirtmek isteriz.",
+    "item1Title": "Muhasebe yazılımı değildir",
+    "item1Body": "İş ve ödeme takibidir; yasal muhasebe veya vergi beyannamesi değildir.",
+    "item2Title": "Pazaryeri değildir",
+    "item2Body": "Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır — arada bir pazaryeri komisyoncusu olmadan.",
+    "item3Title": "Tıbbi kayıt sistemi değildir",
+    "item3Body": "Klinik kayıt, teşhis takibi veya hasta tedavi yönetimi içermez."
+  },
+  "nicheRouter": {
+    "title": "İş kolunuzu bulun",
+    "body": "Gerçekte nasıl çalıştığınız için tasarlanmış sayfalar.",
+    "coloristsLabel": "Bağımsız renklendirme uzmanları için",
+    "coloristsDescription": "Kendi kurallarıyla çalışan renklendirme uzmanları için randevular, müşteriler ve nakit akışı.",
+    "lashArtistsLabel": "Bağımsız kirpik tasarımcıları için",
+    "lashArtistsDescription": "Kendi kurallarıyla çalışan kirpik tasarımcıları için randevular, müşteri çalışmaları ve finansal görünürlük.",
+    "salonsLabel": "Kuaför salonu sahipleri için",
+    "salonsDescription": "Bir salon için ciro, kaydedilen maliyetler ve hesaplanan kâr — hizmet kategorisi ve müşteriye göre gruplanır.",
+    "massageLabel": "Masaj terapistleri için",
+    "massageDescription": "Solo bir pratik için ciro, kaydedilen maliyetler ve hesaplanan kâr — ön ödemeli paketler ve açık bakiyeler ayrı tutulur.",
+    "personalTrainerLabel": "Kişisel antrenörler için",
+    "personalTrainerDescription": "Seans cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ve müşteri geçmişi ayrı okunaklı.",
+    "musicTeacherLabel": "Müzik öğretmenleri için",
+    "musicTeacherDescription": "Özel stüdyo için ders cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ayrı okunaklı."
+  },
+  "faq": {
+    "title": "Sıkça sorulan sorular",
+    "q1": "Müşteriler nasıl randevu alır?",
+    "a1": "Randevu bağlantınızı paylaşın. Müşteriler sayfanızdan hizmet ve saat seçsin.",
+    "q2": "Deneme süresi var mı ve kart gerekli mi?",
+    "a2": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süreniz işletme kurulumundan sonra başlar. Bitiş tarihi uygulama içinde gösterilir.",
+    "q3": "Deneme süresi bittiğinde ne olur?",
+    "a3": "Çalışmaya devam etmek için abonelik satın alın. Abonelik veya geçerli başka bir erişim olmadan kullanım kısıtlanır. Deneme süresinin dolması verilerinizi silmez.",
+    "q4": "Ekip ile çalışabilir miyim?",
+    "a4": "Evet. STUDIO, hizmet sunan 5 aktif uzmana kadar destek ve ekip erişimi sunar. Hizmet sunmayan bir yönetici bu sınıra dahil edilmez.",
+    "q5": "Ön ödemeli paket bir abonelik midir?",
+    "a5": "Hayır. Müşteri uygun ziyaretlerde kullanmak üzere belirli bir hizmet miktarını peşin öder. Bu düzenli bir çekim veya Perelai aboneliği değildir.",
+    "q6": "Bu bir muhasebe programı veya ödeme işlemcisi midir?",
+    "a6": "Hayır. Perelai randevuları, müşterileri ve ödeme kayıtlarını yönetmeye yardımcı olur. Muhasebe veya vergi raporlaması sunmaz ve müşterilerinizin kart ödemelerini işlemez.",
+    "q7": "Perelai'nin iPhone veya Android uygulaması var mı?",
+    "a7": "Perelai bir web uygulamasıdır. Perelai'yi kullanmak için yalnızca bir tarayıcı ve internet bağlantısı gerekir. App Store veya Google Play'de yer almaz. Bazı tarayıcılar Perelai'yi ana ekrana eklemeyi veya ayrı bir pencerede açmayı sunar; bu da yerel bir uygulama davranışına yakın olabilir.",
+    "q8": "Perelai'yi dizüstü bilgisayarda veya iPad'de kullanabilir miyim?",
+    "a8": "Dizüstü bilgisayarınızda veya iPad'inizde desteklenen bir tarayıcıda perelai.app adresini açın ve telefonunuzda kullandığınız aynı giriş bilgileriyle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gereklidir.",
+    "q_category": {
+      "question": "Bu bir muhasebe yazılımı mı?",
+      "answer": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez."
+    },
+    "q_bank": {
+      "question": "Bu rakam bankamla eşleşir mi?",
+      "answer": "Her zaman değil. PAID, bir randevunun kapatıldığı anlamına gelir; para alındığının kanıtı değildir. Paket satışı bir kez kaydedilir; kredi kullanımı yeni ödeme veya gelir eklemez. Kaydedilen ödemeler ve ödeme hesabı bakiyeleri para hareketini ayrı olarak gösterir."
+    }
+  },
+  "closing": {
+    "title": "Perelai’yi bir sonraki çalışma haftanızda deneyin.",
+    "body": "Kendi randevu takviminiz ve müşterilerinizle başlayın.",
+    "cta": "21 gün deneyin",
+    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+  },
+  "footer": {
+    "description": "Bağımsız profesyoneller ve küçük ekipler için randevular, müşteriler ve ödeme takibi.",
+    "product": "Ürün",
+    "company": "Yasal",
+    "forColorists": "Bağımsız renklendirme uzmanları için",
+    "forLashArtists": "Bağımsız kirpik tasarımcıları için",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "forSalons": "Kuaför salonu sahipleri için",
+    "forMassageTherapists": "Masaj terapistleri için",
+    "forPersonalTrainers": "Kişisel antrenörler için",
+    "forMusicTeachers": "Müzik öğretmenleri için",
+    "devices": "Perelai nasıl açılır?"
+  },
+  "devices": {
+    "title": "Tek adres, tek giriş",
+    "body": "Perelai web tarayıcısında çalışır. Nerede çalışıyor olursanız olun perelai.app adresinden giriş yaptığınızda aynı çalışma alanına ulaşırsınız. iPhone’da Ana Ekrana ekleyerek bağımsız bir pencerede kendi simgesinden açabilirsiniz. Yükleme isteğe bağlıdır; App Store veya Google Play’de yer almaz.",
+    "caption": "Örnek veriler",
+    "summary": "Telefon, tablet veya bilgisayarda desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
+    "link": "Perelai nasıl açılır?"
   },
   "problem": {
     "title": "Bu günü zaten biliyorsunuz",
@@ -60,148 +221,5 @@
     "body": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin.",
     "caption": "Örnek veriler",
     "detail": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin."
-  },
-  "setup": {
-    "eyebrow": "Nasıl çalışır",
-    "title": "Tek bir akşamda kurulur",
-    "body": "Hafta sonu taşıması yok. İş kolunuzu seçin, müşterilerinizi aktarın, bağlantınızı paylaşın.",
-    "step1Title": "İş kolunuzu seçin",
-    "step1Body": "Seçilebilir 32 işletme türü, her biri düzenlenebilir bir hizmet listesiyle. İlgili şablonlar ayrıca ek seçenekler ve bağlı maliyetler içerir.",
-    "step2Title": "Müşterilerinizi getirin",
-    "step2Body": "Kişileri telefonunuzdan vCard ile aktarın. Ardından programınızı Perelai'de yönetin.",
-    "step3Title": "Randevu bağlantınızı paylaşın",
-    "step3Body": "Biyografinizde tek bir bağlantı. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır."
-  },
-  "not": {
-    "title": "Perelai ne değildir",
-    "body": "Aşağıdakilerden herhangi birine ihtiyacınız varsa doğru seçenek değiliz — ve bunu açıkça söylemeyi tercih ederiz.",
-    "item1Title": "Muhasebe yazılımı değildir",
-    "item1Body": "Perelai; ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez.",
-    "item2Title": "Bir pazar yeri değildir",
-    "item2Body": "Randevu bağlantınız size aittir. Müşteriler aracı olmadan doğrudan randevu alır.",
-    "item3Title": "Tıbbi kayıt sistemi değildir",
-    "item3Body": "Klinik kayıtlar, tanı takibi veya hasta yönetimi yoktur."
-  },
-  "nicheRouter": {
-    "title": "İş kolunuzu bulun",
-    "body": "Gerçekte nasıl çalıştığınız için tasarlanmış sayfalar.",
-    "coloristsLabel": "Bağımsız renklendirme uzmanları için",
-    "coloristsDescription": "Kendi kurallarıyla çalışan renklendirme uzmanları için randevular, müşteriler ve nakit akışı.",
-    "lashArtistsLabel": "Bağımsız kirpik tasarımcıları için",
-    "lashArtistsDescription": "Kendi kurallarıyla çalışan kirpik tasarımcıları için randevular, müşteri çalışmaları ve finansal görünürlük.",
-    "salonsLabel": "Kuaför salonu sahipleri için",
-    "salonsDescription": "Bir salon için ciro, kaydedilen maliyetler ve hesaplanan kâr — hizmet kategorisi ve müşteriye göre gruplanır.",
-    "massageLabel": "Masaj terapistleri için",
-    "massageDescription": "Solo bir pratik için ciro, kaydedilen maliyetler ve hesaplanan kâr — ön ödemeli paketler ve açık bakiyeler ayrı tutulur.",
-    "personalTrainerLabel": "Kişisel antrenörler için",
-    "personalTrainerDescription": "Seans cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ve müşteri geçmişi ayrı okunaklı.",
-    "musicTeacherLabel": "Müzik öğretmenleri için",
-    "musicTeacherDescription": "Özel stüdyo için ders cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ayrı okunaklı."
-  },
-  "faq": {
-    "title": "Sorular",
-    "q1": "Müşteriler benden nasıl randevu alır?",
-    "a1": "Doğrudan randevu bağlantınızı paylaşın. Müşteriler doğrudan sayfanızdan hizmet ve zaman seçsin.",
-    "q2": "Kaydolduktan hemen sonra ne olur?",
-    "a2": "E-postanızı onaylarsınız, ardından kısa bir kurulum gelir: iş kolunuz, hizmetleriniz, ekibiniz (varsa) ve isteğe bağlı aktarımlar.",
-    "q3": "Hizmetlerim zaten hazır olacak mı?",
-    "a3": "Evet — her işletme türü düzenlenebilir bir hizmet veya ürün listesiyle başlar. İlgili şablonlar ayrıca ek seçenekler ve maliyetler içerir.",
-    "q4": "Müşterileri telefonumdan aktarabilir miyim?",
-    "a4": "Evet: kişileri telefonunuzdan vCard ile aktarın.",
-    "q5": "Birden fazla hizmet ve ek seçeneği yönetebilir miyim?",
-    "a5": "Evet. Her şablon seçilebilir hizmetler ve ilgili seçenekler içerir.",
-    "q6": "Bu bir muhasebe yazılımı mı?",
-    "a6": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez.",
-    "q7": "Perelai'nin iPhone veya Android uygulaması var mı?",
-    "a7": "Perelai bir web uygulamasıdır. Perelai'yi kullanmak için yalnızca bir tarayıcı ve internet bağlantısı gerekir. App Store veya Google Play'de yer almaz. Bazı tarayıcılar Perelai'yi ana ekrana eklemeyi veya ayrı bir pencerede açmayı sunar; bu da yerel bir uygulama davranışına yakın olabilir.",
-    "q8": "Perelai'yi dizüstü bilgisayarda veya iPad'de kullanabilir miyim?",
-    "a8": "Dizüstü bilgisayarınızda veya iPad'inizde desteklenen bir tarayıcıda perelai.app adresini açın ve telefonunuzda kullandığınız aynı giriş bilgileriyle oturum açın. Tek giriş, tek çalışma alanı. İnternet bağlantısı gereklidir.",
-    "q_category": {
-      "question": "Bu bir muhasebe yazılımı mı?",
-      "answer": "Hayır. Perelai operasyonel bir finans yazılımıdır. Ciroyu, maliyetleri, hesaplanan kârı, kaydedilen ödemeleri ve açık siparişlerde hâlâ ödenmemiş olanı, kategori ve müşteriye göre dökümlerle takip eder. Vergi beyannamesi vermez, banka hesabı mutabakatı yapmaz, resmi rapor üretmez veya finansal danışmanlık vermez."
-    },
-    "q_bank": {
-      "question": "Bu rakam bankamla eşleşir mi?",
-      "answer": "Her zaman değil. PAID, bir randevunun kapatıldığı anlamına gelir; para alındığının kanıtı değildir. Paket satışı bir kez kaydedilir; kredi kullanımı yeni ödeme veya gelir eklemez. Kaydedilen ödemeler ve ödeme hesabı bakiyeleri para hareketini ayrı olarak gösterir."
-    }
-  },
-  "closing": {
-    "title": "Müşteri ve hizmet kategorisi bazında ayrılmış, anlaşılır bir finansal sonuç.",
-    "body": "Tek bir akşamda kurulur.",
-    "cta": "Çalışma alanı oluştur",
-    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
-  },
-  "footer": {
-    "description": "Bağımsız hizmet işletmeleri için basit finans yazılımı.",
-    "product": "Ürün",
-    "company": "Yasal",
-    "forColorists": "Bağımsız renklendirme uzmanları için",
-    "forLashArtists": "Bağımsız kirpik tasarımcıları için",
-    "rights": "Tüm hakları saklıdır.",
-    "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Koşulları",
-    "forSalons": "Kuaför salonu sahipleri için",
-    "forMassageTherapists": "Masaj terapistleri için",
-    "forPersonalTrainers": "Kişisel antrenörler için",
-    "forMusicTeachers": "Müzik öğretmenleri için"
-  },
-  "devices": {
-    "title": "Tek bir çalışma alanı. Görünüm ekranla değişir.",
-    "body": "Perelai bir web tarayıcısında çalışır. Nerede çalışıyorsanız perelai.app'te oturum açın, aynı çalışma alanında olursunuz. iPhone'da ana ekrana ekleyebilirsiniz; orada kendi simgesinden, kendi penceresinde açılır. Kurulum isteğe bağlıdır ve App Store veya Google Play'de bir kaydı yoktur.",
-    "caption": "Örnek veriler",
-    "summary": "Telefon, tablet veya bilgisayardaki desteklenen bir tarayıcıdan açılan tek bir Perelai çalışma alanı.",
-    "link": "Perelai nasıl açılır"
-  },
-  "collaboration": {
-    "title": "Solo çalışın. İhtiyacınız olduğunda kişi ekleyin.",
-    "body": "Kendi çalışma alanınızla başlayın. Ekip erişimini yalnızca faydalı hale geldiğinde ekleyin.",
-    "teamTitle": "Ekibiniz",
-    "teamBody": "Ekip üyelerini Personel veya Süpervizör erişimiyle davet edin. Çalışma saatlerini, izinleri ve atanan hizmetleri bir arada tutun.",
-    "notesDetail": "Sabitlenmiş müşteri notları ve ziyaret notları müşteri geçmişinde kalır.",
-    "summary": "Bir işletme içinde ekip rollerini, çalışma saatlerini ve sabitlenmiş bir müşteri notunu gösteren Perelai çalışma alanı örneği.",
-    "caption": "Örnek veriler",
-    "mock": {
-      "pinnedNote": "Boya öncesi sakin sabahları tercih eder.",
-      "visitNote": "Son ziyarette renk tonu onaylandı.",
-      "hours1": "Pzt–Cum · 09:00–17:00",
-      "hours2": "Sal–Cmt · 10:00–18:00",
-      "hours3": "Çar–Paz · 11:00–19:00"
-    }
-  },
-  "finance": {
-    "title": "Herhangi bir dönem için ciro, maliyet ve kâr",
-    "body": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin.",
-    "caption": "Örnek veriler",
-    "summary": "Aylık ciroyu, maliyeti ve hesaplanan kârı, hizmet kategorisine göre dökümü ve açık sipariş bakiyesini gösteren örnek Perelai finans genel görünümü.",
-    "fixture": {
-      "category": {
-        "color": "Renklendirme hizmetleri",
-        "styling": "Şekillendirme ve son işlem"
-      },
-      "openOrders": "açık siparişlerden",
-      "orderInstalment": "3 seanslık sipariş, 1. taksit",
-      "records": {
-        "visitPayment": "Bir randevuyla ilişkilendirilen ödeme",
-        "packageRedemption": "Paket kullanımı — yeni ödeme veya gelir yok",
-        "orderInstalment": "Bir siparişle/taksitle ilişkilendirilen ödeme",
-        "noShowFee": "Gelinmedi olarak işaretlenen bir randevuyla ilişkilendirilen ödeme"
-      }
-    }
-  },
-  "states": {
-    "title": "Tamamlanan iş, ciro, kaydedilen ödemeler ve açık sipariş bakiyeleri aynı şey değildir.",
-    "body": "Bir randevu, ciroya yansımadan önce tamamlanmış olabilir. Önceden ödenmiş bir paket satıldığında gelir olarak kaydedilir; paketin kullanılması bir randevuyu yeni ödeme veya gelir oluşturmadan kapatır, açık bir siparişte ise ödenmemiş bakiye kalabilir. Perelai bu durumları ayrı gösterir; böylece her rakamın anlamı nettir."
-  },
-  "drivers": {
-    "title": "Sonucun nereden geldiğini görün",
-    "body": "Hizmet kategorisine göre ciroyu, kategoriye göre maliyetleri, bir müşterinin ciro geçmişini ve sonucun zaman içinde nasıl değiştiğini inceleyin."
-  },
-  "records": {
-    "title": "Her rakamın arkasında bir iş var",
-    "body": "Ödeme kayıtları ve paket kullanımları ilgili randevu, sipariş veya taksitle; ayrıca müşteri ve hizmet kategorisiyle bağlantılı kalır."
-  },
-  "operations": {
-    "title": "Çalışırken finansal verilerinizi güncel tutun",
-    "body": "Bir randevuyu tamamlayın, bir ödeme kaydedin, bir maliyet ekleyin veya bir paket kullanın. Randevu, Takvim ve Gelen Kutusu bu işlemleri müşteriler ve hizmetlerle bağlantılı tutar. Müşteriler ayrıca kendi bağlantınız üzerinden de randevu alabilir."
   }
 }

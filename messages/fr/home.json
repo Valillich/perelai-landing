@@ -1,39 +1,200 @@
 {
   "meta": {
-    "title": "Perelai — Logiciel de finances simple pour les services",
-    "description": "Suivez le revenu, les coûts et le profit pour toute période, avec des répartitions par catégorie de prestation et par client."
+    "title": "Perelai — Rendez-vous, clients et suivi des paiements",
+    "description": "Planning, historique client, suivi des paiements et forfaits prépayés pour professionnels indépendants et petites équipes."
   },
   "nav": {
     "features": "Fonctionnalités",
     "how": "Comment ça marche",
     "pricing": "Tarifs",
     "login": "Connexion",
-    "start": "Créer un espace de travail",
-    "start_short": "Créer",
+    "start": "Essayer pendant 21 jours",
+    "start_short": "Essayer",
     "primaryLabel": "Menu principal",
     "menuLabel": "Ouvrir le menu",
-    "devices": "Comment ouvrir Perelai?"
+    "devices": "Comment ouvrir Perelai ?"
   },
   "hero": {
-    "eyebrow": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services",
-    "title": "Une vision claire des finances de votre activité",
-    "accent": "Sans tableurs complexes",
-    "body": "Gérez votre emploi du temps et vos finances au même endroit. Suivez les revenus par client, ventilez le résultat par catégorie de prestation et prenez des décisions éclairées grâce à une vue claire, toujours accessible.",
-    "signup": "Créer un espace de travail",
-    "how": "Voir comment ça marche",
-    "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration.",
-    "imageAlt": "Aperçu financier Perelai montrant le revenu, les coûts et le profit calculé pour une période, une répartition par catégorie de prestation et un solde de commandes ouvertes — données d'exemple.",
-    "imageCaption": "Données d'exemple",
+    "eyebrow": "Pour les professionnels indépendants et les petites équipes",
+    "title": "Des rendez-vous bien organisés.",
+    "accent": "Des paiements bien suivis.",
+    "body": "Planifiez vos rendez-vous, conservez l’historique de vos clients et enregistrez les paiements.",
+    "signup": "Essayer pendant 21 jours",
+    "how": "Voir comment ça fonctionne",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
+    "imageAlt": "Exemple Perelai : calendrier des rendez-vous et aperçu financier.",
+    "imageCaption": "Données d’exemple",
     "showcase": {
       "ariaLabel": "Aperçu de l'application Perelai",
       "calendarTab": "Calendrier",
       "financeTab": "Finances",
-      "paid": "Payé",
-      "pending": "Non payé",
-      "pauseAutoplay": "Pause automatic rotation",
-      "resumeAutoplay": "Resume automatic rotation"
+      "paid": "Régler",
+      "pending": "Commande en cours",
+      "pauseAutoplay": "Mettre en pause la rotation automatique",
+      "resumeAutoplay": "Reprendre la rotation automatique"
     },
-    "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative."
+    "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative.",
+    "trialMicro": "21 jours de STUDIO sans carte bancaire. Souscrivez un abonnement à la fin de l’essai."
+  },
+  "operations": {
+    "title": "Du rendez-vous à la prestation terminée.",
+    "body": "Planifiez le client, réalisez la séance, puis enregistrez le paiement ou appliquez un forfait. Les éléments nécessitant une décision restent dans votre boîte de réception."
+  },
+  "records": {
+    "title": "Voyez exactement à quoi correspond chaque paiement.",
+    "body": "Les enregistrements de paiement restent reliés aux rendez-vous ou commandes du client. L’utilisation d'un forfait reste séparée des nouvelles rentrées d'argent."
+  },
+  "packages": {
+    "title": "Le solde du forfait, toujours à portée de main.",
+    "body": "Créez des forfaits de prestations prépayés et enregistrez leur vente auprès de vos clients. Suivez les séances utilisées et celles qui restent dans chaque forfait.",
+    "summary": "Exemple d'utilisation de forfait : sur trois séances, une est utilisée, il en reste deux. Aucun nouveau paiement n'est encaissé.",
+    "caption": "Données d’exemple"
+  },
+  "drawer": {
+    "title": "Rapprochez vos espèces en fin de journée.",
+    "body": "Ouvrez une session de caisse avant d'encaisser des espèces. À la fermeture, saisissez le montant compté et comparez-le au montant attendu.",
+    "summary": "Exemple de session de caisse en USD : fond de caisse 100, espèces reçues 50, attendu 150, compté 145, écart −5.",
+    "caption": "Données d’exemple"
+  },
+  "collaboration": {
+    "title": "Travaillez seul ou intégrez votre équipe.",
+    "body": "Invitez des collaborateurs avec l'accès adapté. Gérez les plannings, les absences et les prestations attribuées à vos professionnels.",
+    "teamTitle": "Votre équipe",
+    "teamBody": "Invitez des collaborateurs avec l'accès adapté. Gérez les plannings, les absences et les prestations attribuées à vos professionnels.",
+    "notesDetail": "Les notes client épinglées et les notes de rendez-vous restent associées à l'historique client.",
+    "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note client épinglée au sein d'une même entreprise.",
+    "caption": "Données d’exemple",
+    "mock": {
+      "pinnedNote": "Préfère les matins calmes avant la coloration.",
+      "visitNote": "Nuance confirmée lors de la dernière visite.",
+      "hours1": "Lun–Ven · 09:00–17:00",
+      "hours2": "Mar–Sam · 10:00–18:00",
+      "hours3": "Mer–Dim · 11:00–19:00"
+    },
+    "accessTitle": "Une aide pour les rendez-vous et le suivi des paiements.",
+    "accessBody": "Un administrateur aide à la prise de rendez-vous et aux actions autorisées sur les paiements clients, sans accès aux rapports financiers globaux.",
+    "accessSummary": "Exemple d'accès : Administrateur, sans profil de prestataire de services.",
+    "planNote": "L'accès en équipe fait partie de STUDIO. Un administrateur qui n'assure pas de prestations ne compte pas dans la limite de professionnels du forfait."
+  },
+  "finance": {
+    "title": "Chiffre d’affaires, dépenses et bénéfice sur la période choisie.",
+    "body": "Consultez votre chiffre d’affaires, vos dépenses enregistrées et votre bénéfice calculé. L'utilisation d'un forfait prépayé n'ajoute pas de nouveau chiffre d’affaires.",
+    "caption": "Données d’exemple",
+    "summary": "Exemple d'aperçu financier Perelai montrant le chiffre d’affaires mensuel, les dépenses et le bénéfice calculé, la répartition par catégorie et le solde des commandes ouvertes.",
+    "fixture": {
+      "category": {
+        "color": "Prestations couleur",
+        "styling": "Coiffage & finitions"
+      },
+      "openOrders": "sur commandes ouvertes",
+      "orderInstalment": "Commande à 3 séances, 1er versement",
+      "records": {
+        "visitPayment": "Paiement affecté à une visite",
+        "packageRedemption": "Utilisation d'un forfait — aucun nouveau paiement ni chiffre d'affaires",
+        "orderInstalment": "Paiement affecté à une commande/un versement",
+        "noShowFee": "Paiement affecté à une visite marquée absente"
+      }
+    }
+  },
+  "states": {
+    "title": "Travail réalisé, chiffre d’affaires, paiements et soldes des commandes ouvertes sont suivis séparément.",
+    "body": "Un rendez-vous peut être terminé avant d'être comptabilisé dans le chiffre d’affaires. Un forfait prépayé est enregistré comme chiffre d’affaires lors de sa vente ; son utilisation clôt un rendez-vous sans nouveau paiement ni chiffre d’affaires, tandis qu'une commande ouverte peut encore avoir un solde restant dû. Perelai sépare ces états pour que chaque montant ait une signification précise."
+  },
+  "drivers": {
+    "title": "Comprenez d'où viennent vos résultats.",
+    "body": "Explorez le chiffre d’affaires par catégorie de prestations et par client, les dépenses par catégorie et les évolutions d'une période à l'autre."
+  },
+  "setup": {
+    "eyebrow": "Comment ça fonctionne",
+    "title": "Commencez par vos prestations et vos clients.",
+    "body": "Configurez vos prestations, importez vos contacts et partagez votre lien de réservation.",
+    "step1Title": "Configurez vos prestations.",
+    "step1Body": "Choisissez un modèle adapté et personnalisez la liste de vos prestations.",
+    "step2Title": "Importez vos contacts.",
+    "step2Body": "Transférez les contacts de votre téléphone via un fichier vCard.",
+    "step3Title": "Partagez votre lien.",
+    "step3Body": "Vos clients choisissent leur prestation et leur horaire directement sur votre page de réservation."
+  },
+  "not": {
+    "title": "Ce que Perelai N’EST PAS",
+    "body": "Si vous avez besoin de l'un de ces éléments, notre solution n'est pas adaptée — et nous préférons vous le dire en toute transparence.",
+    "item1Title": "Pas un logiciel de comptabilité",
+    "item1Body": "Suivi de l'activité et des paiements, pas de comptabilité légale ni de déclarations fiscales.",
+    "item2Title": "Pas une marketplace",
+    "item2Body": "Les clients réservent directement via votre lien, sans intermédiaire de marketplace.",
+    "item3Title": "Pas un dossier médical informatisé",
+    "item3Body": "Aucun dossier clinique, aucun suivi de diagnostic ni gestion de traitement médical."
+  },
+  "nicheRouter": {
+    "title": "Trouvez votre activité",
+    "body": "Des pages conçues pour votre manière de travailler.",
+    "coloristsLabel": "Pour les coloristes indépendants",
+    "coloristsDescription": "Réservations, clients et gestion financière pour les coloristes qui travaillent selon leurs propres règles.",
+    "lashArtistsLabel": "Pour les lash artists indépendantes",
+    "lashArtistsDescription": "Réservations, suivi des clientes et visibilité financière pour les lash artists qui travaillent selon leurs propres règles.",
+    "salonsLabel": "Pour les propriétaires de salons de coiffure",
+    "salonsDescription": "Revenu, coûts enregistrés et profit calculé pour un salon, regroupés par catégorie de prestation et client.",
+    "massageLabel": "Pour les masseurs",
+    "massageDescription": "Revenu, coûts enregistrés et profit calculé pour une pratique solo, avec forfaits prépayés et soldes ouverts tenus séparément.",
+    "personalTrainerLabel": "Pour les coachs sportifs",
+    "personalTrainerDescription": "Revenu des séances, coûts enregistrés et profit calculé — avec utilisations de forfait et historique client séparés.",
+    "musicTeacherLabel": "Pour les professeurs de musique",
+    "musicTeacherDescription": "Revenu des cours, coûts enregistrés et profit calculé pour un studio privé — avec utilisations de forfait séparées."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "q1": "Comment les clients réservent-ils ?",
+    "a1": "Partagez votre lien de réservation. Les clients choisissent une prestation et un créneau sur votre page.",
+    "q2": "Y a-t-il un essai gratuit et faut-il une carte bancaire ?",
+    "a2": "Essayez STUDIO pendant 21 jours sans carte bancaire. Votre essai commence dès la configuration de votre activité. La date de fin est indiquée dans l'application.",
+    "q3": "Que se passe-t-il à la fin de la période d’essai ?",
+    "a3": "Souscrivez un abonnement pour continuer à travailler. Sans abonnement ou autre accès valide, l'utilisation est restreinte. L'expiration de l'essai ne supprime pas vos données.",
+    "q4": "Puis-je travailler avec une équipe ?",
+    "a4": "Oui. STUDIO permet d'accueillir jusqu'à 5 professionnels actifs assurant des prestations et inclut l'accès en équipe. Un administrateur qui n'assure pas de prestations ne compte pas dans cette limite.",
+    "q5": "Un forfait prépayé est-il un abonnement ?",
+    "a5": "Non. Le client règle à l'avance un ensemble de séances à utiliser lors de ses visites. Il ne s'agit pas d'un prélèvement récurrent ni d'un abonnement Perelai.",
+    "q6": "Est-ce un logiciel de comptabilité ou un terminal de paiement ?",
+    "a6": "Non. Perelai facilite la gestion des rendez-vous, des clients et des paiements. Il ne fournit pas de déclarations comptables ou fiscales et ne traite pas les paiements par carte de vos clients.",
+    "q7": "Perelai a-t-il une application iPhone ou Android ?",
+    "a7": "Perelai est une application web. Pour utiliser Perelai, vous avez seulement besoin d'un navigateur et d'une connexion internet. Il n'est pas présent sur l'App Store ni sur Google Play. Certains navigateurs permettent d'ajouter Perelai à l'écran d'accueil ou de l'ouvrir dans une fenêtre séparée, ce qui peut se rapprocher du comportement d'une application native.",
+    "q8": "Puis-je utiliser Perelai sur un ordinateur portable ou un iPad ?",
+    "a8": "Ouvrez perelai.app dans un navigateur compatible sur votre ordinateur ou iPad et connectez-vous avec les mêmes identifiants que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise.",
+    "q_category": {
+      "question": "Est-ce un logiciel de comptabilité ?",
+      "answer": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier."
+    },
+    "q_bank": {
+      "question": "Le chiffre correspondra-t-il à ma banque ?",
+      "answer": "Pas toujours. PAID signifie qu’une visite est réglée, pas que de l’argent a été reçu. La vente d’un forfait est enregistrée une fois ; utiliser son crédit n’ajoute ni paiement ni revenu. Les paiements enregistrés et les soldes des comptes de paiement montrent le mouvement d'argent séparément."
+    }
+  },
+  "closing": {
+    "title": "Essayez Perelai dès votre prochaine semaine de travail.",
+    "body": "Commencez avec votre propre planning et vos clients.",
+    "cta": "Essayer pendant 21 jours",
+    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration."
+  },
+  "footer": {
+    "description": "Rendez-vous, clients et suivi des paiements pour professionnels indépendants et petites équipes.",
+    "product": "Produit",
+    "company": "Mentions légales",
+    "forColorists": "Pour les coloristes indépendants",
+    "forLashArtists": "Pour les lash artists indépendantes",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "forSalons": "Pour les propriétaires de salons de coiffure",
+    "forMassageTherapists": "Pour les masseurs",
+    "forPersonalTrainers": "Pour les coachs sportifs",
+    "forMusicTeachers": "Pour les professeurs de musique",
+    "devices": "Comment ouvrir Perelai ?"
+  },
+  "devices": {
+    "title": "Une seule adresse, un seul compte",
+    "body": "Perelai fonctionne dans un navigateur web. Connectez-vous sur perelai.app où que vous soyez et retrouvez le même espace de travail. Sur iPhone, vous pouvez l'ajouter à l'écran d'accueil pour l'ouvrir via sa propre icône dans une fenêtre dédiée. L'installation est facultative et l'application n'est pas répertoriée sur l'App Store ou Google Play.",
+    "caption": "Données d’exemple",
+    "summary": "Un espace de travail Perelai unique, ouvert depuis un navigateur compatible sur smartphone, tablette ou ordinateur.",
+    "link": "Comment ouvrir Perelai ?"
   },
   "problem": {
     "title": "Vous connaissez déjà cette journée",
@@ -60,148 +221,5 @@
     "body": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année.",
     "caption": "Données d'exemple",
     "detail": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année."
-  },
-  "setup": {
-    "eyebrow": "Comment ça marche",
-    "title": "Configuré en une soirée",
-    "body": "Pas de migration le week-end. Choisissez votre activité, importez vos clients, partagez votre lien.",
-    "step1Title": "Choisissez votre activité",
-    "step1Body": "32 types d'entreprises sélectionnables, chacun avec une liste de prestations modifiable. Les modèles concernés incluent aussi des options et des coûts reliés.",
-    "step2Title": "Importez vos clients",
-    "step2Body": "Importez les contacts de votre téléphone via vCard. Organisez ensuite votre planning dans Perelai.",
-    "step3Title": "Partagez votre lien de réservation",
-    "step3Body": "Un lien dans votre bio. Les clients réservent directement sur votre propre lien."
-  },
-  "not": {
-    "title": "Ce que Perelai n'est pas",
-    "body": "Si vous avez besoin de l'une de ces choses, nous ne sommes pas la bonne solution — et nous préférons le dire clairement.",
-    "item1Title": "Pas un logiciel de comptabilité",
-    "item1Body": "Perelai suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier.",
-    "item2Title": "Pas une plateforme d'intermédiaire",
-    "item2Body": "Votre lien vous appartient. Les clients réservent directement sans intermédiaire.",
-    "item3Title": "Pas un système de dossiers médicaux",
-    "item3Body": "Pas de dossiers cliniques, pas de suivi des diagnostics, pas de gestion des soins des patients."
-  },
-  "nicheRouter": {
-    "title": "Trouvez votre activité",
-    "body": "Des pages conçues pour votre manière de travailler.",
-    "coloristsLabel": "Pour les coloristes indépendants",
-    "coloristsDescription": "Réservations, clients et gestion financière pour les coloristes qui travaillent selon leurs propres règles.",
-    "lashArtistsLabel": "Pour les lash artists indépendantes",
-    "lashArtistsDescription": "Réservations, suivi des clientes et visibilité financière pour les lash artists qui travaillent selon leurs propres règles.",
-    "salonsLabel": "Pour les propriétaires de salons de coiffure",
-    "salonsDescription": "Revenu, coûts enregistrés et profit calculé pour un salon, regroupés par catégorie de prestation et client.",
-    "massageLabel": "Pour les masseurs",
-    "massageDescription": "Revenu, coûts enregistrés et profit calculé pour une pratique solo, avec forfaits prépayés et soldes ouverts tenus séparément.",
-    "personalTrainerLabel": "Pour les coachs sportifs",
-    "personalTrainerDescription": "Revenu des séances, coûts enregistrés et profit calculé — avec utilisations de forfait et historique client séparés.",
-    "musicTeacherLabel": "Pour les professeurs de musique",
-    "musicTeacherDescription": "Revenu des cours, coûts enregistrés et profit calculé pour un studio privé — avec utilisations de forfait séparées."
-  },
-  "faq": {
-    "title": "Questions",
-    "q1": "Comment les clients réservent-ils avec moi ?",
-    "a1": "Partagez votre lien de réservation direct. Les clients choisissent une prestation et un créneau directement sur votre page.",
-    "q2": "Que se passe-t-il juste après mon inscription ?",
-    "a2": "Vous confirmez votre e-mail, puis vous passez une courte configuration : votre activité, vos prestations, votre équipe (si vous en avez une) et des importations facultatives.",
-    "q3": "Mes prestations seront-elles déjà présentes ?",
-    "a3": "Oui — chaque type d'entreprise commence avec une liste modifiable de prestations ou d'articles. Les modèles concernés incluent aussi des options et des coûts.",
-    "q4": "Puis-je importer des clients depuis mon téléphone ?",
-    "a4": "Oui : importez les contacts de votre téléphone via vCard.",
-    "q5": "Puis-je gérer plusieurs prestations et options ?",
-    "a5": "Oui. Chaque modèle inclut des prestations sélectionnables et des options pertinentes.",
-    "q6": "Est-ce un logiciel de comptabilité ?",
-    "a6": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier.",
-    "q7": "Perelai a-t-il une application iPhone ou Android ?",
-    "a7": "Perelai est une application web. Pour utiliser Perelai, vous avez seulement besoin d'un navigateur et d'une connexion internet. Il n'est pas présent sur l'App Store ni sur Google Play. Certains navigateurs permettent d'ajouter Perelai à l'écran d'accueil ou de l'ouvrir dans une fenêtre séparée, ce qui peut se rapprocher du comportement d'une application native.",
-    "q8": "Puis-je utiliser Perelai sur un ordinateur portable ou un iPad ?",
-    "a8": "Ouvrez perelai.app dans un navigateur compatible sur votre ordinateur ou iPad et connectez-vous avec les mêmes identifiants que sur votre téléphone. Une connexion, un espace de travail. Une connexion internet est requise.",
-    "q_category": {
-      "question": "Est-ce un logiciel de comptabilité ?",
-      "answer": "Non. Perelai est un logiciel de finances opérationnel. Il suit le revenu, les coûts, le profit calculé, les paiements enregistrés et ce qui reste dû sur les commandes ouvertes, avec des répartitions par catégorie et par client. Il ne fait ni déclaration fiscale, ni rapprochement bancaire, ni rapports réglementaires, ni conseil financier."
-    },
-    "q_bank": {
-      "question": "Le chiffre correspondra-t-il à ma banque ?",
-      "answer": "Pas toujours. PAID signifie qu’une visite est réglée, pas que de l’argent a été reçu. La vente d’un forfait est enregistrée une fois ; utiliser son crédit n’ajoute ni paiement ni revenu. Les paiements enregistrés et les soldes des comptes de paiement montrent le mouvement d'argent séparément."
-    }
-  },
-  "closing": {
-    "title": "Un résultat financier clair, ventilé par client et par catégorie de prestation.",
-    "body": "Configuré en une soirée.",
-    "cta": "Créer un espace de travail",
-    "micro": "Vous recevrez un e-mail de vérification pour finaliser la configuration."
-  },
-  "footer": {
-    "description": "Logiciel simple de suivi financier pour les indépendants et les petites entreprises de services.",
-    "product": "Produit",
-    "company": "Mentions légales",
-    "forColorists": "Pour les coloristes indépendants",
-    "forLashArtists": "Pour les lash artists indépendantes",
-    "rights": "Tous droits réservés.",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
-    "forSalons": "Pour les propriétaires de salons de coiffure",
-    "forMassageTherapists": "Pour les masseurs",
-    "forPersonalTrainers": "Pour les coachs sportifs",
-    "forMusicTeachers": "Pour les professeurs de musique"
-  },
-  "devices": {
-    "title": "Un espace de travail. L'affichage s'adapte à l'écran.",
-    "body": "Perelai fonctionne dans un navigateur web. Connectez-vous sur perelai.app où que vous travailliez, et vous retrouvez le même espace de travail. Sur iPhone, vous pouvez l'ajouter à l'écran d'accueil, où il s'ouvre depuis sa propre icône dans sa propre fenêtre. L'installation est facultative, et il n'existe aucune fiche App Store ou Google Play.",
-    "caption": "Données d'exemple",
-    "summary": "Un espace de travail Perelai, ouvert depuis un navigateur compatible sur téléphone, tablette ou ordinateur.",
-    "link": "Comment ouvrir Perelai"
-  },
-  "collaboration": {
-    "title": "Travaillez en solo. Ajoutez du monde quand vous en avez besoin.",
-    "body": "Commencez avec votre propre espace de travail. Ajoutez des accès d'équipe seulement quand cela devient utile.",
-    "teamTitle": "Votre équipe",
-    "teamBody": "Invitez des membres d'équipe avec un accès Personnel ou Supervisor. Conservez les plannings, les congés et les prestations attribuées ensemble.",
-    "notesDetail": "Les notes de clients épinglées et les notes de visites restent dans l'historique du client.",
-    "summary": "Exemple d'espace de travail Perelai montrant les rôles d'équipe, les plannings et une note de client épinglée au sein d'une entreprise.",
-    "caption": "Données d'exemple",
-    "mock": {
-      "pinnedNote": "Préfère les matins calmes avant la coloration.",
-      "visitNote": "Nuance confirmée lors de la dernière visite.",
-      "hours1": "Lun–Ven · 09:00–17:00",
-      "hours2": "Mar–Sam · 10:00–18:00",
-      "hours3": "Mer–Dim · 11:00–19:00"
-    }
-  },
-  "finance": {
-    "title": "Revenu, coûts et profit pour toute période",
-    "body": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année.",
-    "caption": "Données d'exemple",
-    "summary": "Exemple d'aperçu financier Perelai avec le revenu, les coûts et le profit calculé du mois, une répartition par catégorie de prestation et un solde de commandes ouvertes.",
-    "fixture": {
-      "category": {
-        "color": "Prestations couleur",
-        "styling": "Coiffage & finitions"
-      },
-      "openOrders": "sur commandes ouvertes",
-      "orderInstalment": "Commande à 3 séances, 1er versement",
-      "records": {
-        "visitPayment": "Paiement affecté à une visite",
-        "packageRedemption": "Utilisation d'un forfait : aucun nouveau paiement ni revenu",
-        "orderInstalment": "Paiement affecté à une commande/un versement",
-        "noShowFee": "Paiement affecté à une visite marquée absente"
-      }
-    }
-  },
-  "states": {
-    "title": "Le travail réalisé, le revenu, les paiements enregistrés et les soldes de commandes ouvertes ne sont pas la même chose.",
-    "body": "Une visite peut être réalisée avant de compter dans le revenu. Un forfait prépayé est enregistré comme revenu lors de sa vente ; son utilisation règle une visite sans nouveau paiement ni revenu, tandis qu’un solde peut rester dû sur une commande ouverte. Perelai distingue clairement ces états afin que chaque chiffre ait une signification précise."
-  },
-  "drivers": {
-    "title": "Voyez d'où vient le résultat",
-    "body": "Consultez le revenu par catégorie de prestation, les coûts par catégorie, l'historique de revenu d'un client et l'évolution du résultat dans le temps."
-  },
-  "records": {
-    "title": "Chaque chiffre a du travail derrière lui",
-    "body": "Les enregistrements de paiement et les utilisations de forfait restent reliés à la visite, à la commande ou au versement concernés, ainsi qu’au client et à la catégorie de prestation."
-  },
-  "operations": {
-    "title": "Mettez à jour votre suivi financier au fil de votre activité",
-    "body": "Terminez une visite, enregistrez un paiement, ajoutez un coût ou utilisez un forfait. Réservation, Calendrier et Boîte de réception gardent ces actions reliées aux clients et aux prestations. Les clients peuvent aussi réserver via votre propre lien."
   }
 }

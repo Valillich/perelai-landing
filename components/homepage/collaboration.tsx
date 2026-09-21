@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl"
 import { MockCollaborationWorkspace } from "@/components/mock/MockCollaborationWorkspace"
+import { MockWorkspaceAccessSummary } from "@/components/mock/MockWorkspaceAccessSummary"
 import { CollaborationSectionTracker } from "@/components/analytics/collaboration-section-tracker"
 import type { PublishedLocale } from "@/i18n/locales"
 
@@ -40,18 +41,31 @@ export function Collaboration({ locale }: CollaborationProps) {
             </div>
           </div>
 
-          <MockCollaborationWorkspace
-            locale={locale}
-            summary={t("collaboration.summary")}
-            exampleCaption={t("collaboration.caption")}
-            mockData={{
-              pinnedNote: t("collaboration.mock.pinnedNote"),
-              visitNote: t("collaboration.mock.visitNote"),
-              hours1: t("collaboration.mock.hours1"),
-              hours2: t("collaboration.mock.hours2"),
-              hours3: t("collaboration.mock.hours3"),
-            }}
-          />
+          <div className="space-y-6">
+            <MockCollaborationWorkspace
+              locale={locale}
+              summary={t("collaboration.summary")}
+              exampleCaption={t("collaboration.caption")}
+              mockData={{
+                pinnedNote: t("collaboration.mock.pinnedNote"),
+                visitNote: t("collaboration.mock.visitNote"),
+                hours1: t("collaboration.mock.hours1"),
+                hours2: t("collaboration.mock.hours2"),
+                hours3: t("collaboration.mock.hours3"),
+              }}
+            />
+
+            <MockWorkspaceAccessSummary
+              locale={locale}
+              labels={{
+                accessTitle: t("collaboration.accessTitle"),
+                accessBody: t("collaboration.accessBody"),
+                accessSummary: t("collaboration.accessSummary"),
+                planNote: t("collaboration.planNote"),
+                caption: t("collaboration.caption"),
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

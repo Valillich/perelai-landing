@@ -285,12 +285,12 @@ describe("finance-first machine-readable order and FM6 contract", () => {
     })
   })
 
-  test("homepage page.tsx and opengraph-image.tsx enforce finance-first feature order", () => {
+  test("homepage page.tsx and opengraph-image.tsx enforce product feature order", () => {
     const pageTsx = fs.readFileSync("app/[locale]/page.tsx", "utf-8")
     const ogTsx = fs.readFileSync("app/[locale]/opengraph-image.tsx", "utf-8")
 
-    expect(pageTsx).toContain('featureList: [t("money.detail"), t("inbox.detail"), t("booking.detail")]')
-    expect(ogTsx).toContain('featureLines: [home.money.detail, home.inbox.detail, home.booking.detail]')
+    expect(pageTsx).toContain('featureList: [t("operations.body"), t("records.body"), t("finance.body")]')
+    expect(ogTsx).toContain('featureLines: [home.operations.body, home.records.body, home.finance.body]')
   })
 
   test("experiment backlog states no A/B test is running and registers control and dormant candidates", () => {
