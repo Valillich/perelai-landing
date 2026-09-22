@@ -28,14 +28,15 @@ const labels = {
   forgot: "Back to password reset",
 }
 
-test("an external from value renders no return button and has no return destination", async () => {
+test("an external from value renders only the safe landing-home fallback", async () => {
   const { ReturnToApp, buildLegalReturnDestination } = await loadReturnToApp()
   const input = { from: "https://evil.example", page: "terms" as const, locale: "en" as const }
   const html = renderToStaticMarkup(createElement(ReturnToApp, { ...input, labels }))
 
   expect(buildLegalReturnDestination(input)).toBeUndefined()
-  expect(html).not.toContain("href=")
-  expect(html).not.toContain("Back to")
+  expect(html).toContain('href="/"')
+  expect(html).toContain("Back to Perelai")
+  expect(html).not.toContain("evil.example")
 })
 
 test("a register return drops an unresolvable niche before rendering its URL", async () => {
@@ -56,4 +57,55 @@ test("a register return drops an unresolvable niche before rendering its URL", a
   expect(new URL(destination!.href).pathname).toBe("/register")
   expect(new URL(destination!.href).searchParams.get("niche")).toBeNull()
   expect(new URL(renderedHref!).searchParams.get("niche")).toBeNull()
+})
+
+test("a register return forwards only a release-allowlisted offer and registration attribution", async () => {
+  const { buildLegalReturnDestination } = await loadReturnToApp()
+  const destination = buildLegalReturnDestination({
+    from: "register",
+    niche: "premium-colorist",
+    offer: "SOLO_MONTHLY",
+    source: "google",
+    campaign: "autumn_launch",
+    landingPath: "/for-independent-colorists",
+    page: "terms",
+    locale: "en",
+    offerRelease: {
+      codes: ["SOLO_MONTHLY", "STUDIO_MONTHLY"],
+      studioReleased: false,
+    },
+  })
+
+  const search = new URL(destination!.href).searchParams
+  expect(destination?.href).toMatch(/^https:\/\/app\.example\.test\/register\?/)
+  expect([...search.entries()]).toEqual([
+    ["niche", "premium-colorist"],
+    ["utm_source", "google"],
+    ["utm_campaign", "autumn_launch"],
+    ["landing_path", "/for-independent-colorists"],
+    ["offer", "SOLO_MONTHLY"],
+  ])
+})
+
+test("a gated, retired, annual, or provider-shaped offer never reaches app registration", async () => {
+  const { buildLegalReturnDestination } = await loadReturnToApp()
+  const release = { codes: ["SOLO_MONTHLY", "STUDIO_MONTHLY"], studioReleased: false }
+
+  for (const offer of [
+    "STUDIO_MONTHLY",
+    "FOUNDING_SOLO",
+    "ADDITIONAL_MONTHLY",
+    "SOLO_ANNUAL",
+    "pri_01h_provider_price",
+  ]) {
+    const destination = buildLegalReturnDestination({
+      from: "register",
+      offer,
+      page: "privacy",
+      locale: "en",
+      offerRelease: release,
+    })
+
+    expect(new URL(destination!.href).searchParams.get("offer"), offer).toBeNull()
+  }
 })

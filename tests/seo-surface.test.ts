@@ -96,7 +96,20 @@ describe("sitemap", () => {
     const entries = sitemap()
 
     for (const locale of PUBLISHED_LOCALES) {
-      const paths = ["/", "/install", "/pricing", "/for-independent-colorists", "/for-lash-artists", "/terms", "/privacy"]
+      const paths = [
+        "/",
+        "/install",
+        "/pricing",
+        "/for-independent-colorists",
+        "/for-lash-artists",
+        "/legal/terms",
+        "/legal/privacy",
+        "/legal/dpa",
+        "/legal/booking-terms",
+        "/legal/cookies",
+        "/legal/subprocessors",
+        "/legal/billing",
+      ]
 
       for (const path of paths) {
         const url = toAbsoluteLandingUrl(localizePath(locale, path))

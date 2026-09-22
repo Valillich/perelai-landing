@@ -1,6 +1,6 @@
 import type { PublishedLocale } from "@/i18n/locales"
 
-export type LandingPageType = "home" | "pricing" | "niche" | "terms" | "privacy" | "install"
+export type LandingPageType = "home" | "pricing" | "niche" | "install"
 export type CtaPosition =
   | "header_login"
   | "header_signup"
@@ -115,9 +115,10 @@ export interface InstallHelpClickedEvent {
 export interface LegalViewedEvent {
   name: "legal_viewed"
   properties: {
-    page: "terms" | "privacy"
+    document: "terms" | "privacy" | "dpa" | "booking-terms" | "cookies" | "subprocessors" | "billing"
+    version: string
     locale: string
-    from?: "login" | "register" | "forgot"
+    from: "login" | "register" | "forgot" | "onboarding" | "settings" | "billing" | "data-transfer" | null
   }
 }
 
@@ -125,8 +126,9 @@ export interface LegalViewedEvent {
 export interface LegalReturnClickedEvent {
   name: "legal_return_clicked"
   properties: {
-    from: "login" | "register" | "forgot"
-    destination: "login" | "register" | "forgot"
+    document: "terms" | "privacy" | "dpa" | "booking-terms" | "cookies" | "subprocessors" | "billing"
+    from: "login" | "register" | "forgot" | "onboarding" | "settings" | "billing" | "data-transfer"
+    destination: "login" | "register" | "forgot" | "onboarding" | "settings" | "billing" | "data-transfer"
   }
 }
 

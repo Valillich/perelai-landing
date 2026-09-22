@@ -10,9 +10,9 @@ export function generateStaticParams() {
   return PUBLISHED_LOCALES.map((locale) => ({ locale }))
 }
 
-export default async function PrivacyRedirectPage({ params }: PageProps) {
+export default async function RefundPolicyRedirectPage({ params }: PageProps) {
   const { locale } = await params
   if (!isPublishedLocale(locale)) notFound()
 
-  permanentRedirect(localizePath(locale as PublishedLocale, "/legal/privacy"))
+  permanentRedirect(localizePath(locale as PublishedLocale, "/legal/billing"))
 }

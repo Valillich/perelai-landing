@@ -122,12 +122,18 @@ export function LandingFooter({
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-[13px] text-subtle-text">© {new Date().getFullYear()} Perelai. {t("rights")}</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
+            <Link href="/legal/privacy" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
               {t("privacy")}
             </Link>
-            <Link href="/terms" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
+            <Link href="/legal/terms" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
               {t("terms")}
+            </Link>
+            <Link href="/legal/billing" className="text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700">
+              Refund Policy
+            </Link>
+            <Link href="/legal/cookies" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
+              Cookie Policy
             </Link>
             <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />
           </div>

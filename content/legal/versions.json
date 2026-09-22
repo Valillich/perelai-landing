@@ -1,0 +1,44 @@
+{
+  "terms": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "privacy": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "dpa": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "bookingTerms": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "cookies": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "subprocessors": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  },
+  "billing": {
+    "version": "",
+    "effectiveDate": "",
+    "sha256": "",
+    "approvalRef": ""
+  }
+}

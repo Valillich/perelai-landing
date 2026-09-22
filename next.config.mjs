@@ -12,13 +12,31 @@ const nextConfig = {
     // English is the unprefixed "" route.
     const prefixes = ["", "/uk", "/pl", "/ru", "/es", "/fr", "/de", "/pt", "/tr"]
 
-    return prefixes.flatMap((prefix) =>
+    const nicheRedirects = prefixes.flatMap((prefix) =>
       aliases.map((alias) => ({
         source: `${prefix}/${alias}`,
         destination: `${prefix}/for-independent-colorists`,
         permanent: true,
       })),
     )
+
+    // Legal compatibility aliases per 00_README_execution_plan.md §1
+    const legalRedirectMappings = [
+      { source: "terms", destination: "legal/terms" },
+      { source: "privacy", destination: "legal/privacy" },
+      { source: "refund-policy", destination: "legal/billing" },
+      { source: "legal/refund-policy", destination: "legal/billing" },
+    ]
+
+    const legalRedirects = prefixes.flatMap((prefix) =>
+      legalRedirectMappings.map((mapping) => ({
+        source: `${prefix}/${mapping.source}`,
+        destination: `${prefix}/${mapping.destination}`,
+        permanent: true,
+      })),
+    )
+
+    return [...nicheRedirects, ...legalRedirects]
   },
 }
 

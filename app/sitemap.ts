@@ -4,7 +4,15 @@ import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
 import { toAbsoluteLandingUrl } from "@/lib/seo"
 
-const legalPaths = ["/terms", "/privacy"] as const
+const legalPaths = [
+  "/legal/terms",
+  "/legal/privacy",
+  "/legal/dpa",
+  "/legal/booking-terms",
+  "/legal/cookies",
+  "/legal/subprocessors",
+  "/legal/billing",
+] as const
 const machineReadablePaths = ["/llms.txt", "/pricing.md"] as const
 
 function localizedEntries(

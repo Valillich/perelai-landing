@@ -442,3 +442,9 @@ html {
     transition: none !important;
   }
 }
+
+/* Hide marketing chrome (header, footer, marketing links) when viewed with an app context */
+html.legal-from-app .legal-marketing-chrome {
+  display: none !important;
+}
+

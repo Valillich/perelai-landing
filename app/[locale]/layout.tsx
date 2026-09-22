@@ -22,6 +22,11 @@ const themeInlineScript = `(function() {
   } catch (e) {}
 })();`
 
+// This must run in the document head: legal pages are statically rendered, so
+// their `from` context is unavailable on the server. The strict allowlist
+// matches validReturnFrom() without accepting a full return URL.
+const legalChromeInlineScript = `(function(){try{var from=new URLSearchParams(window.location.search).get("from");if(from === "login" || from === "register" || from === "forgot" || from === "onboarding" || from === "settings" || from === "billing" || from === "data-transfer"){document.documentElement.classList.add("legal-from-app")}}catch(e){}})();`
+
 export function generateStaticParams() {
   return PUBLISHED_LOCALES.map((locale) => ({ locale }))
 }
@@ -59,6 +64,7 @@ export default async function LocaleLayout({
     <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInlineScript }} />
+        <script dangerouslySetInnerHTML={{ __html: legalChromeInlineScript }} />
       </head>
       <body>
         <JsonLd data={baseSchema} />
