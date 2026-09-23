@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs"
 import { join } from "node:path"
-import { describe, expect, it } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import nextConfig from "@/next.config.mjs"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
@@ -250,5 +250,126 @@ describe("Safe Return Destination Builder (§6.1)", () => {
         from: "return_to",
       })
     ).toBeUndefined()
+  })
+})
+
+vi.mock("next/navigation", () => ({
+  notFound: () => {
+    throw new Error("NEXT_NOT_FOUND")
+  },
+  permanentRedirect: (url: string) => {
+    throw new Error(`NEXT_REDIRECT:${url}`)
+  },
+  redirect: (url: string) => {
+    throw new Error(`NEXT_REDIRECT:${url}`)
+  },
+}))
+
+// The page component tree pulls next-intl navigation, which is not
+// resolvable under vitest — only generateMetadata is exercised here.
+vi.mock("@/components/legal/legal-document-page", () => ({
+  LegalDocumentPage: () => null,
+}))
+
+describe("Production publication gate on canonical routes (R1)", () => {
+  const PREVIEW_ROUTE = "app/[locale]/legal-preview/[document]/page.tsx"
+
+  const withEnv = async (
+    overrides: Record<string, string | undefined>,
+    run: () => Promise<unknown>
+  ) => {
+    const prev = {
+      NODE_ENV: process.env.NODE_ENV,
+      LEGAL_DRAFT_PREVIEW: process.env.LEGAL_DRAFT_PREVIEW,
+    }
+    Object.assign(process.env, overrides)
+    if (overrides.LEGAL_DRAFT_PREVIEW === undefined) {
+      delete process.env.LEGAL_DRAFT_PREVIEW
+    }
+    try {
+      await run()
+    } finally {
+      process.env.NODE_ENV = prev.NODE_ENV
+      if (prev.LEGAL_DRAFT_PREVIEW === undefined) {
+        delete process.env.LEGAL_DRAFT_PREVIEW
+      } else {
+        process.env.LEGAL_DRAFT_PREVIEW = prev.LEGAL_DRAFT_PREVIEW
+      }
+    }
+  }
+
+  it("route source wires the real production gate instead of a forced preview", () => {
+    const route = source(LEGAL_ROUTE)
+    expect(route).toContain("isLegalProductionGateEnabled()")
+    expect(route).not.toContain("isProduction: false")
+  })
+
+  it("generateMetadata rejects unapproved documents when the production gate is active", async () => {
+    const { generateMetadata } = await import(
+      "@/app/[locale]/legal/[document]/page"
+    )
+    await withEnv({ NODE_ENV: "production" }, async () => {
+      await expect(
+        generateMetadata({
+          params: Promise.resolve({ locale: "en", document: "terms" }),
+        })
+      ).rejects.toThrow()
+    })
+  })
+
+  it("canonical route stays fail-closed even when LEGAL_DRAFT_PREVIEW leaks to production", async () => {
+    const { generateMetadata } = await import(
+      "@/app/[locale]/legal/[document]/page"
+    )
+    await withEnv(
+      { NODE_ENV: "production", LEGAL_DRAFT_PREVIEW: "true" },
+      async () => {
+        await expect(
+          generateMetadata({
+            params: Promise.resolve({ locale: "en", document: "terms" }),
+          })
+        ).rejects.toThrow()
+      }
+    )
+  })
+
+  it("draft preview is isolated to the dedicated legal-preview route", () => {
+    const preview = source(PREVIEW_ROUTE)
+    expect(preview).toContain("isLegalDraftPreviewEnabled()")
+    expect(preview).toContain("isProduction: false")
+    expect(preview).toContain("notFound()")
+    expect(preview).toContain("index: false")
+    // The isolated surface never claims the canonical URL.
+    expect(preview).toContain("/legal-preview/")
+    expect(preview).not.toContain("isLegalProductionGateEnabled")
+  })
+
+  it("preview route renders a draft only when LEGAL_DRAFT_PREVIEW=true", async () => {
+    const { default: PreviewPage, generateMetadata } = await import(
+      "@/app/[locale]/legal-preview/[document]/page"
+    )
+
+    await withEnv(
+      { NODE_ENV: "production", LEGAL_DRAFT_PREVIEW: "true" },
+      async () => {
+        const metadata = await generateMetadata({
+          params: Promise.resolve({ locale: "en", document: "terms" }),
+        })
+        expect(metadata.title).toBe("[Draft preview] terms — Perelai")
+        await expect(
+          PreviewPage({
+            params: Promise.resolve({ locale: "en", document: "terms" }),
+          })
+        ).resolves.toBeTruthy()
+      }
+    )
+
+    await withEnv({ NODE_ENV: "production" }, async () => {
+      await expect(
+        PreviewPage({
+          params: Promise.resolve({ locale: "en", document: "terms" }),
+        })
+      ).rejects.toThrow("NEXT_NOT_FOUND")
+    })
   })
 })

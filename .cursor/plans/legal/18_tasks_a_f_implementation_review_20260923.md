@@ -198,3 +198,119 @@ catalog. Полный production build и DB integration/migration execution в 
 не выполнялись. Provider dashboards, deployment, approval и отправка заявок не выполнялись.
 Проходящие unit/UI-тесты не закрывают описанные пробелы: для них нужны указанные
 поведенческие regression tests.
+
+## 5. Разрешение R1–R7 — 2026-09-23 (второй проход)
+
+Все семь находок исправлены в коде. Это исправление реализации, не юридическое
+утверждение, не deployment-подтверждение и не provider-верификация.
+
+| Находка | Статус | Что сделано |
+|---|---|---|
+| R1 route gate | Исправлено | `app/[locale]/legal/[document]/page.tsx` и `generateMetadata` вызывают production-валидацию (`loadLegalDocument` с реальным `isProduction`); draft preview остаётся отдельным opt-in режимом. `tests/legal-routes.test.ts` покрывает production-отказ и preview-исключение. |
+| R7 interpolation | Исправлено | `lib/legal/interpolate.ts` заменяет markdown-активные символы на безопасные full-width варианты вместо HTML entities; финальное экранирование — слой React. DOM-тест подтверждает `O'Connor & Partners` без видимых entities. |
+| R2 revision binding | Исправлено | `GET info` отдаёт серверный `legal.revisionId` из точного snapshot проекции; `POST book()` требует `legalRevision`, пересчитывает текущую редакцию и отклоняет stale/unknown до любых записей. Evidence хранит `legalRevision` + `disclosureSnapshot` (миграция `20260923140000_public_booking_legal_revision`). |
+| R3 readiness gate | Исправлено | Гейт до записей: Perelai booking/copy versions обязательны; business agreement требуется только когда оба документа реально опубликованы (согласовано с копией «booking AND cancellation terms»); missing → прозрачный warning, не выдуманное согласие. Тесты: отклонения не создают booking/client/token/evidence. |
+| R4 provisioning | Исправлено | `bindCompanyScope` проверяет весь набор evidence (Terms rep-basis, DPA rep-basis, Privacy personal); `recordWorkspaceProvisioningAcceptance` записывает только недостающие документы в той же транзакции, scope-линк идемпотентен (unique key + findFirst). Покрыты: новый owner, legacy user без records, staff→owner (personal Terms не считается business-rep), дубликат submission → Conflict. |
+| R5 invite links | Исправлено | `cleanLinks`-режим в `OwnerLegalAcceptanceField` и `AuthLegalLinks`: чистый URL без `from`/registration в новой вкладке `noopener noreferrer`; `SignupScreen.cleanLegalLinks` включается `isInviteFlow` (staff + coworker) из `RegisterPage`. Invite-токен/returnTo на landing не передаются — исходная вкладка держит контекст. |
+| R6 disclosures | Исправлено | `PublicBookingLegalSection` рендерит traderAddress, contactEmail, privacyContactEmail (structured `<dl>`), refundPolicy text + url, cancellation text + url, business privacy/terms links. Незаполненные поля не выдумываются; privacy acknowledgement без business notice сводится к Perelai-only формулировке. |
+
+### Проверки второго прохода
+
+| Проверка | Результат |
+|---|---|
+| Landing legal tests | 7 files, 66/66 passed |
+| API unit: legal + public-booking + companies | 318/319 (1 fail — `locale-persistence`, pre-existing billing-mock, воспроизводится на HEAD) |
+| Web: 16 suites (pages + components + services) | 88/88, два подряд чистых параллельных прогона |
+| API `tsc --noEmit` | чисто |
+| Web `tsc --noEmit` | только pre-existing ошибки вне legal (ClientsPage/FinancePage/ServicesEditorPage/TransactionDetailsPage/inboxMutationCommitted) |
+| Prisma | миграции применены на dev+test БД, Client и zod-схемы регенерированы |
+
+### Исправление тестовой инфраструктуры (web jest)
+
+Параллельный запуск page-спеков давал недетерминированные падения: `fireEvent`
+попадал в DOM-узел, заменённый в полёте рендером, и дефолтный `waitFor` (1 с)
+истекал под нагрузкой. Исправлено:
+
+- `src/test/polyfills.ts`: `configure({asyncUtilTimeout: 5000})` через
+  `@testing-library/dom` — НЕ `@testing-library/react` (импорт RTL в
+  `setupFiles` до установки jest-глобалов отключает auto-cleanup и утечка DOM
+  давала «multiple elements» между тестами одного файла).
+- `jest.config.ts`: `testTimeout: 15000` для тяжёлых page-спеков.
+- `ob9`/`rental`/`quantity`/`proposal` спеки: ожидание применённого состояния
+  (`checked`, `booking-quantity-*`, live re-query input) между зависимыми
+  событиями вместо последовательных `fireEvent` без подтверждения.
+
+### Оставшиеся production-блокеры (не код)
+
+- Counsel-утверждённые финальные документы с реальными реквизитами и
+  version/date/hash в approval manifest (все семь `en`-документов — drafts).
+- `LEGAL_BOOKING_TERMS_VERSION` / `LEGAL_BOOKING_ACCEPTANCE_COPY_VERSION` —
+  `[TBD]`; до их заполнения public booking contractual intake остаётся
+  заблокированным серверным readiness-гейтом (fail-closed, не записывает).
+- Реальная business/legal identity + контакты для `NEXT_PUBLIC_LEGAL_*` env.
+- Переводы legal-копии на не-EN локали — решение counsel (EN — canonical,
+  `fallbackLng` покрывает).
+- Provider/domain verification (Paddle, Google) — зависит от опубликованных
+  финальных документов.
+- Фактическая проверка deployment для Task F (analytics отключён в коде;
+  production-аудит браузером не проводился).
+
+## 6. Разрешение R1–R4 — 2026-09-23 (третий проход, P1-re-review)
+
+Повторный review нашёл четыре P1 в исправлениях второго прохода. Исправлено
+в коде; это по-прежнему не юридическое утверждение и не deployment-подтверждение.
+
+| Находка | Статус | Что сделано |
+|---|---|---|
+| R1 draft на canonical URL | Исправлено | `isLegalProductionGateEnabled` больше не читает `LEGAL_DRAFT_PREVIEW` — canonical `/legal/*` и его `generateMetadata` всегда fail-closed в production. Preview перенесён в изолированный маршрут `/[locale]/legal-preview/[document]`: `noindex`/`nofollow`, self-canonical (не указывает на `/legal/*`), отсутствует в sitemap, fail-closed в обе стороны (нет build-флага → нет статических страниц; нет runtime-флага → `notFound()`). `.env.example` описывает флаг как preview-only. Тесты: canonical отклоняет draft и без флага, и с `LEGAL_DRAFT_PREVIEW=true`; preview рендерится только через свой маршрут. |
+| R2 revision ≠ внешний контент | Исправлено (ограниченная семантика) | Принято решение №3 из разрешённых: evidence честно фиксирует «показан этот URL», а не «точный текст по URL». `disclosureSnapshot` получил структуру `documents.*`: `capturedText` (inline-текст, захвачен побайтово) vs `externalUrl` + `contentCaptured: false` (контент за URL не захватывается). Комментарии в `public-booking-legal.ts` и `schema.prisma` прямо заявляют: подмена документа по тому же URL без смены настроек даёт тот же revision — это вне гарантии evidence. Тест фиксирует: same-URL → same revision, смена URL → новый revision. Серверный fetch внешних документов или immutable business-supplied hash остаются опциональным усилением — до выбора формулировка «точный текст» из evidence исключена. |
+| R3 недостоверное evidence при отсутствующих политиках | Исправлено | При отсутствии booking/cancellation документов вместо `BOOKING_AGREEMENT` пишется `PERELAI_TERMS_ACCEPTANCE` (новое значение enum, миграция `20260923150000_public_booking_evidence_kind_perelai_terms`); snapshot фиксирует `businessAgreement: NOT_PRESENTED` и список `missing`. `BOOKING_AGREEMENT` пишется только когда оба документа реально показаны (`businessAgreement: COLLECTED`). Privacy-сторона: `privacyContactEmail` больше не считается notice — `missing` включает `privacyNotice` без реального `privacyNoticeUrl`, а UI fallback'ит к Perelai-only acknowledgement. **Выбор «warning vs блокировка» (08 §8, `[TBD]`) не утверждён кодом**: по умолчанию intake при неполных business-документах отклоняет submission (`BLOCKED`, `BOOKING_LEGAL_UNAVAILABLE`, без записей); warning-path включается только явным `LEGAL_BOOKING_MISSING_POLICY_WARNING_ENABLED=true` — это release gate до решения counsel. Состояние `businessAgreement: REQUIRED|WARNING|BLOCKED` отдаётся в проекции, входит в revision и управляет UI (blocked-нотис вместо warning-копии). |
+| R4 старые версии при provisioning | Исправлено | `bindCompanyScope` теперь выбирает `documentVersion` и требует совпадения с текущими `termsVersion`/`dpaVersion`/`privacyVersion` конфигурации. Superseded-версии трактуются как missing: без свежей submission provisioning отклоняется (Forbidden), со свежей — все три документа записываются в той же транзакции на текущих версиях, scope привязывается к новому DPA. Тест `treats evidence at a superseded document version as missing` покрывает оба пути. Это точечная проверка текущих версий, не material-change flow. |
+
+### Проверки третьего прохода
+
+| Проверка | Результат |
+|---|---|
+| Landing `tests/legal-routes.test.ts` + interpolate | 27/27 |
+| API `legal-acceptance.service.spec.ts` | 15/15 (вкл. stale-version provisioning) |
+| API `public-booking-legal.spec.ts` + `public-booking.service.spec.ts` | 144/144 |
+| Web `PublicBookingLegalSection.spec.tsx` | 20/20 (вкл. contact-only privacy) |
+| API `tsc --noEmit` | чисто |
+| Web `tsc --noEmit` | без новых ошибок в legal/public-booking |
+| Prisma | миграция `20260923150000` применена на dev+test БД, Client регенерирован |
+
+### Известные границы после третьего прохода
+
+- **R2 остаётся URL-only evidence**: замена внешнего документа по тому же URL без
+  смены настроек не детектируется. Evidence честно не заявляет захват внешнего
+  текста; если требуется детекция — нужен отдельный механизм (server-fetch
+  snapshot с контролируемой fetch-политикой или immutable business-supplied
+  revision/hash). Решение — за counsel/планом, реализация не выбрана.
+- **Warning-path (R3)** — НЕ активен по умолчанию: public intake при
+  неполных business-документах отклоняет submissions до явного
+  `LEGAL_BOOKING_MISSING_POLICY_WARNING_ENABLED=true`. Установка флага —
+  release gate, требующий решения counsel по 08 §8. Public intake не считать
+  готовым к включению до этого решения (в дополнение к `[TBD]` версиям).
+
+### Четвёртый проход (тот же день) — уточнения evidence
+
+- Версии/хеши business policies теперь `null`, когда документ не представлен:
+  `businessPolicyVersion`/`businessPolicyHash` записываются только при наличии
+  booking terms URL, `businessCancellationVersion`/`businessCancellationHash` —
+  только при наличии cancellation text/URL. Warning-path тест фиксирует null.
+- `disclosureSnapshot.documents.*` разделяет сигналы: `inlineTextCaptured`
+  (inline-текст захвачен побайтово) и `externalContentCaptured: false`
+  (внешний документ за URL не захвачен — даже при наличии inline-текста).
+- `LEGAL_BOOKING_MISSING_POLICY_WARNING_ENABLED` задокументирован в
+  `.env.example` как release gate; canonical `/legal-preview/*` — только на
+  контролируемом preview-развёртывании (noindex не ограничивает доступ,
+  preview-enabled артефакт нельзя выкладывать на публичный production origin).
+- Business Privacy Notice (08 §5.1): при полном наборе terms/cancellation, но
+  без `privacyNoticeUrl`, intake раньше оставался доступен. Добавлено
+  `businessPrivacyNotice: 'PRESENTED' | 'BLOCKED'` в проекцию и revision
+  basis; `book()` отклоняет `BOOKING_LEGAL_UNAVAILABLE` при `BLOCKED`
+  **безусловно** — warning-флаг касается только agreement-блока, так как
+  approved short-notice fallback требует counsel-текста и полей настроек,
+  которых пока нет. UI показывает unavailability-нотис; `canBook` = false.
+  Тесты: projection (флаг не разблокирует privacy), service (отказ без
+  записей), web (blocked-нотис + contact-only acknowledgement).

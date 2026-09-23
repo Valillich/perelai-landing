@@ -1,16 +1,26 @@
 import type { LegalIdentity } from "./types"
 
 /**
- * Escapes characters that could be interpreted as raw HTML markup.
- * Ensures interpolated values are always treated as plain text.
+ * Sanitizes an operator-provided identity value for markdown interpolation.
+ *
+ * The legal renderer emits React text nodes only — it never produces raw
+ * HTML — so plain text must NOT be HTML-entity escaped here (React escapes
+ * exactly once at render; pre-escaping shows literal `&amp;`/`&#39;` to
+ * visitors). What must be neutralised is the markdown syntax the renderer
+ * actually interprets: code spans, emphasis, link syntax, table pipes,
+ * and block markers that a newline could introduce.
+ *
+ * Apostrophes, ampersands, quotes and angle brackets pass through unchanged —
+ * env validation already rejects `<`/`>` for identity values.
  */
-export function escapeTextForInterpolation(str: string): string {
+export function sanitizeTextForMarkdown(str: string): string {
   return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;")
+    .replace(/[\r\n]+/g, " ")
+    .replace(/\*/g, "∗")
+    .replace(/\[/g, "［")
+    .replace(/\]/g, "］")
+    .replace(/\|/g, "｜")
+    .replace(/`/g, "'")
 }
 
 const EU_REP_BLOCK_REGEX =
@@ -37,21 +47,21 @@ export function interpolateLegalTokens(markdown: string, identity: LegalIdentity
 
   // 1. Process optional blocks first
   if (identity.euRep) {
-    const replacement = `Our EU representative is ${escapeTextForInterpolation(identity.euRep.name)}, ${escapeTextForInterpolation(identity.euRep.address)}, ${escapeTextForInterpolation(identity.euRep.email)}.\n`
+    const replacement = `Our EU representative is ${sanitizeTextForMarkdown(identity.euRep.name)}, ${sanitizeTextForMarkdown(identity.euRep.address)}, ${sanitizeTextForMarkdown(identity.euRep.email)}.\n`
     result = result.replace(EU_REP_BLOCK_REGEX, replacement)
   } else {
     result = result.replace(EU_REP_BLOCK_REGEX, "")
   }
 
   if (identity.ukRep) {
-    const replacement = `Our UK representative is ${escapeTextForInterpolation(identity.ukRep.name)}, ${escapeTextForInterpolation(identity.ukRep.address)}, ${escapeTextForInterpolation(identity.ukRep.email)}.\n`
+    const replacement = `Our UK representative is ${sanitizeTextForMarkdown(identity.ukRep.name)}, ${sanitizeTextForMarkdown(identity.ukRep.address)}, ${sanitizeTextForMarkdown(identity.ukRep.email)}.\n`
     result = result.replace(UK_REP_BLOCK_REGEX, replacement)
   } else {
     result = result.replace(UK_REP_BLOCK_REGEX, "")
   }
 
   if (identity.dpo) {
-    const replacement = `Our data protection officer is ${escapeTextForInterpolation(identity.dpo.name)}, ${escapeTextForInterpolation(identity.dpo.email)}.\n`
+    const replacement = `Our data protection officer is ${sanitizeTextForMarkdown(identity.dpo.name)}, ${sanitizeTextForMarkdown(identity.dpo.email)}.\n`
     result = result.replace(DPO_BLOCK_REGEX, replacement)
   } else {
     result = result.replace(DPO_BLOCK_REGEX, "")
@@ -59,25 +69,25 @@ export function interpolateLegalTokens(markdown: string, identity: LegalIdentity
 
   // 2. Token mapping per 01_legal_facts_env_contract.md §1
   const tokenMap: Record<string, string> = {
-    "{{LEGAL_PROVIDER_FULL_NAME}}": escapeTextForInterpolation(identity.providerFullName),
-    "{{LEGAL_PROVIDER_FORM}}": escapeTextForInterpolation(identity.providerForm),
-    "{{TRADING_NAME}}": escapeTextForInterpolation(identity.tradingName),
-    "{{COUNTRY_OF_REGISTRATION}}": escapeTextForInterpolation(identity.countryOfRegistration),
-    "{{REGISTRATION_NUMBER}}": escapeTextForInterpolation(identity.registrationNumber),
-    "{{TAX_NUMBER}}": escapeTextForInterpolation(identity.taxNumber),
-    "{{BUSINESS_ADDRESS}}": escapeTextForInterpolation(identity.businessAddress),
-    "{{SUPPORT_EMAIL}}": escapeTextForInterpolation(identity.supportEmail),
-    "{{PRIVACY_EMAIL}}": escapeTextForInterpolation(identity.privacyEmail),
-    "{{LEGAL_NOTICES_EMAIL}}": escapeTextForInterpolation(identity.legalNoticesEmail),
-    "{{SECURITY_EMAIL}}": escapeTextForInterpolation(identity.securityEmail),
-    "{{EU_REP_NAME}}": identity.euRep ? escapeTextForInterpolation(identity.euRep.name) : "",
-    "{{EU_REP_ADDRESS}}": identity.euRep ? escapeTextForInterpolation(identity.euRep.address) : "",
-    "{{EU_REP_EMAIL}}": identity.euRep ? escapeTextForInterpolation(identity.euRep.email) : "",
-    "{{UK_REP_NAME}}": identity.ukRep ? escapeTextForInterpolation(identity.ukRep.name) : "",
-    "{{UK_REP_ADDRESS}}": identity.ukRep ? escapeTextForInterpolation(identity.ukRep.address) : "",
-    "{{UK_REP_EMAIL}}": identity.ukRep ? escapeTextForInterpolation(identity.ukRep.email) : "",
-    "{{DPO_NAME}}": identity.dpo ? escapeTextForInterpolation(identity.dpo.name) : "",
-    "{{DPO_EMAIL}}": identity.dpo ? escapeTextForInterpolation(identity.dpo.email) : "",
+    "{{LEGAL_PROVIDER_FULL_NAME}}": sanitizeTextForMarkdown(identity.providerFullName),
+    "{{LEGAL_PROVIDER_FORM}}": sanitizeTextForMarkdown(identity.providerForm),
+    "{{TRADING_NAME}}": sanitizeTextForMarkdown(identity.tradingName),
+    "{{COUNTRY_OF_REGISTRATION}}": sanitizeTextForMarkdown(identity.countryOfRegistration),
+    "{{REGISTRATION_NUMBER}}": sanitizeTextForMarkdown(identity.registrationNumber),
+    "{{TAX_NUMBER}}": sanitizeTextForMarkdown(identity.taxNumber),
+    "{{BUSINESS_ADDRESS}}": sanitizeTextForMarkdown(identity.businessAddress),
+    "{{SUPPORT_EMAIL}}": sanitizeTextForMarkdown(identity.supportEmail),
+    "{{PRIVACY_EMAIL}}": sanitizeTextForMarkdown(identity.privacyEmail),
+    "{{LEGAL_NOTICES_EMAIL}}": sanitizeTextForMarkdown(identity.legalNoticesEmail),
+    "{{SECURITY_EMAIL}}": sanitizeTextForMarkdown(identity.securityEmail),
+    "{{EU_REP_NAME}}": identity.euRep ? sanitizeTextForMarkdown(identity.euRep.name) : "",
+    "{{EU_REP_ADDRESS}}": identity.euRep ? sanitizeTextForMarkdown(identity.euRep.address) : "",
+    "{{EU_REP_EMAIL}}": identity.euRep ? sanitizeTextForMarkdown(identity.euRep.email) : "",
+    "{{UK_REP_NAME}}": identity.ukRep ? sanitizeTextForMarkdown(identity.ukRep.name) : "",
+    "{{UK_REP_ADDRESS}}": identity.ukRep ? sanitizeTextForMarkdown(identity.ukRep.address) : "",
+    "{{UK_REP_EMAIL}}": identity.ukRep ? sanitizeTextForMarkdown(identity.ukRep.email) : "",
+    "{{DPO_NAME}}": identity.dpo ? sanitizeTextForMarkdown(identity.dpo.name) : "",
+    "{{DPO_EMAIL}}": identity.dpo ? sanitizeTextForMarkdown(identity.dpo.email) : "",
   }
 
   for (const [token, value] of Object.entries(tokenMap)) {

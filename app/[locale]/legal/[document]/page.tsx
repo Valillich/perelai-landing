@@ -5,6 +5,7 @@ import { isPublishedLocale, PUBLISHED_LOCALES, type PublishedLocale } from "@/i1
 import { getLocalizedAlternates, localizePath } from "@/i18n/paths"
 import {
   LEGAL_DOCUMENT_SLUGS,
+  isLegalProductionGateEnabled,
   loadLegalDocument,
   type LegalDocumentSlug,
 } from "@/lib/legal"
@@ -61,7 +62,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const slug = document as LegalDocumentSlug
   const meta = DOCUMENT_TITLES[slug]
-  const doc = loadLegalDocument(slug, { isProduction: false })
+  const doc = loadLegalDocument(slug, {
+    isProduction: isLegalProductionGateEnabled(),
+  })
   const canonicalUrl = toAbsoluteLandingUrl(localizePath(locale as PublishedLocale, `/legal/${slug}`))
   const isDraft = doc.frontMatter.status === "draft"
 
@@ -98,7 +101,9 @@ export default async function LegalCanonicalPage({ params }: PageProps) {
 
   const slug = document as LegalDocumentSlug
   const canonicalUrl = toAbsoluteLandingUrl(localizePath(locale as PublishedLocale, `/legal/${slug}`))
-  const doc = loadLegalDocument(slug, { isProduction: false })
+  const doc = loadLegalDocument(slug, {
+    isProduction: isLegalProductionGateEnabled(),
+  })
 
   return <LegalDocumentPage document={doc} locale={locale as PublishedLocale} canonicalUrl={canonicalUrl} />
 }

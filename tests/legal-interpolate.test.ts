@@ -1,9 +1,12 @@
+import { createElement } from "react"
+import { renderToStaticMarkup } from "react-dom/server"
 import { describe, expect, it } from "vitest"
+import { LegalMarkdownRenderer } from "@/components/legal/legal-markdown-renderer"
 import {
-  escapeTextForInterpolation,
   findUnresolvedTbdMarkers,
   findUnresolvedTokens,
   interpolateLegalTokens,
+  sanitizeTextForMarkdown,
 } from "@/lib/legal/interpolate"
 import type { LegalIdentity } from "@/lib/legal/types"
 
@@ -25,12 +28,43 @@ describe("Legal Token Interpolation", () => {
     dpo: null,
   }
 
-  describe("escapeTextForInterpolation", () => {
-    it("escapes dangerous HTML characters", () => {
-      expect(escapeTextForInterpolation('<script>alert("xss")</script>')).toBe(
-        "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;"
+  describe("sanitizeTextForMarkdown", () => {
+    it("preserves apostrophes, ampersands and quotes as plain text", () => {
+      // The renderer emits React text nodes; React escapes HTML exactly once.
+      // Pre-escaping here produced visible `&amp;`/`&#39;` artifacts (R7).
+      expect(sanitizeTextForMarkdown("O'Connor & Partners")).toBe(
+        "O'Connor & Partners"
       )
-      expect(escapeTextForInterpolation("A & B 'C'")).toBe("A &amp; B &#39;C&#39;")
+      expect(sanitizeTextForMarkdown('A "quoted" <value>')).toBe(
+        'A "quoted" <value>'
+      )
+    })
+
+    it("neutralises markdown-active characters without visible escapes", () => {
+      expect(sanitizeTextForMarkdown("*bold* `code` [link](x)")).toBe(
+        "∗bold∗ 'code' ［link］(x)"
+      )
+      expect(sanitizeTextForMarkdown("cell | break")).toBe("cell ｜ break")
+    })
+
+    it("collapses newlines so a value cannot inject block syntax", () => {
+      expect(sanitizeTextForMarkdown("line one\n## injected heading")).toBe(
+        "line one ## injected heading"
+      )
+    })
+
+    it("renders identity with apostrophe/ampersand correctly in the final DOM", () => {
+      // R7: visitors must see the real characters, not HTML entities.
+      const markdown = interpolateLegalTokens(
+        "Provider: {{LEGAL_PROVIDER_FULL_NAME}}",
+        { ...baseIdentity, providerFullName: "O'Connor & Partners" }
+      )
+      const html = renderToStaticMarkup(
+        createElement(LegalMarkdownRenderer, { content: markdown })
+      )
+      expect(html).toContain("O&#x27;Connor &amp; Partners")
+      expect(html).not.toContain("&amp;#39;")
+      expect(html).not.toContain("&amp;amp;")
     })
   })
 

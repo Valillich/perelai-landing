@@ -25,6 +25,29 @@ export function getDefaultLegalContentDir(): string {
   return path.join(process.cwd(), "content/legal")
 }
 
+/**
+ * Canonical legal routes must run the full production document gate (identity,
+ * draft/TBD, approval manifest/hash) with no environment escape: a leaked
+ * `LEGAL_DRAFT_PREVIEW` flag must never weaken the public canonical URL.
+ * Draft documents are served only from the isolated `legal-preview` route,
+ * which is the sole consumer of `isLegalDraftPreviewEnabled`.
+ */
+export function isLegalProductionGateEnabled(
+  env: NodeJS.ProcessEnv = process.env
+): boolean {
+  return env.NODE_ENV === "production"
+}
+
+/**
+ * `LEGAL_DRAFT_PREVIEW=true` enables ONLY the dedicated `/legal-preview/*`
+ * surface (always noindex). It has no effect on canonical legal routes.
+ */
+export function isLegalDraftPreviewEnabled(
+  env: NodeJS.ProcessEnv = process.env
+): boolean {
+  return env.LEGAL_DRAFT_PREVIEW === "true"
+}
+
 export function loadApprovalManifest(contentDir = getDefaultLegalContentDir()): LegalApprovalManifest {
   const manifestPath = path.join(contentDir, "versions.json")
   if (!existsSync(manifestPath)) {
