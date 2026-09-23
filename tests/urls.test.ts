@@ -4,7 +4,6 @@ const validEnvironment = {
   NEXT_PUBLIC_APP_URL: "https://app.example.test",
   NEXT_PUBLIC_BOOKING_URL: "https://book.example.test",
   NEXT_PUBLIC_LANDING_URL: "https://landing.example.test",
-  NEXT_PUBLIC_DEFAULT_CAMPAIGN: "founding-beta",
 }
 
 async function loadUrls() {
@@ -22,18 +21,16 @@ afterEach(() => {
 })
 
 describe("buildAppSignupUrl", () => {
-  test("creates the allowlisted acquisition handoff for a valid slug", async () => {
+  test("forwards only the validated product niche and language", async () => {
     const { buildAppSignupUrl } = await loadUrls()
 
     expect(
       buildAppSignupUrl({
         niche: "premium-colorist",
-        source: "instagram",
-        campaign: "founding-beta",
-        landingPath: "/for-independent-colorists",
+        locale: "uk",
       }),
     ).toBe(
-      "https://app.example.test/register?niche=premium-colorist&utm_source=instagram&utm_campaign=founding-beta&landing_path=%2Ffor-independent-colorists",
+      "https://app.example.test/register?niche=premium-colorist&lng=uk",
     )
   })
 
@@ -43,27 +40,27 @@ describe("buildAppSignupUrl", () => {
     const url = new URL(
       buildAppSignupUrl({
         niche: "not-a-real-template",
-        source: "newsletter",
-        campaign: "launch",
       }),
     )
 
     expect(url.searchParams.get("niche")).toBeNull()
-    expect(url.searchParams.get("utm_source")).toBe("newsletter")
-    expect(url.searchParams.get("utm_campaign")).toBe("launch")
+    expect([...url.searchParams]).toEqual([])
   })
 
-  test("clamps an over-length landing path without losing a valid niche", async () => {
+  test("drops legacy marketing fields even if a caller passes them", async () => {
     const { buildAppSignupUrl } = await loadUrls()
     const url = new URL(
       buildAppSignupUrl({
         niche: "premium-colorist",
-        landingPath: `/${"a".repeat(300)}`,
-      }),
+        source: "instagram",
+        campaign: "launch",
+        landingPath: "/for-independent-colorists",
+        gclid: "click-id",
+      } as Parameters<typeof buildAppSignupUrl>[0] & Record<string, string>),
     )
 
     expect(url.searchParams.get("niche")).toBe("premium-colorist")
-    expect(url.searchParams.get("landing_path")).toHaveLength(240)
+    expect([...url.searchParams.entries()]).toEqual([["niche", "premium-colorist"]])
   })
 
   test("drops an over-length niche rather than sending a context the app will reject", async () => {
@@ -71,12 +68,11 @@ describe("buildAppSignupUrl", () => {
     const url = new URL(
       buildAppSignupUrl({
         niche: `premium-${"colorist".repeat(20)}`,
-        landingPath: "/for-independent-colorists",
       }),
     )
 
     expect(url.searchParams.get("niche")).toBeNull()
-    expect(url.searchParams.get("landing_path")).toBe("/for-independent-colorists")
+    expect([...url.searchParams]).toEqual([])
   })
 
   test("uses the supported locale as a language hint and rejects unsupported locales", async () => {
@@ -86,23 +82,11 @@ describe("buildAppSignupUrl", () => {
     expect(new URL(buildAppSignupUrl({ locale: "zz" })).searchParams.get("lng")).toBeNull()
   })
 
-  test("normalizes a localized path to its English canonical handoff path", async () => {
-    const { buildAppSignupUrl } = await loadUrls()
-    const url = new URL(
-      buildAppSignupUrl({ landingPath: "/uk/for-independent-colorists?preview=true" }),
-    )
-
-    expect(url.searchParams.get("landing_path")).toBe("/for-independent-colorists")
-  })
-
   test("does not forward arbitrary query or click-id fields", async () => {
     const { buildAppSignupUrl } = await loadUrls()
     const url = new URL(
       buildAppSignupUrl({
         niche: "premium-colorist",
-        source: "instagram",
-        campaign: "launch",
-        landingPath: "/for-independent-colorists",
         locale: "pl",
         gclid: "click-id",
       } as Parameters<typeof buildAppSignupUrl>[0] & { gclid: string }),
@@ -110,9 +94,6 @@ describe("buildAppSignupUrl", () => {
 
     expect([...url.searchParams.keys()]).toEqual([
       "niche",
-      "utm_source",
-      "utm_campaign",
-      "landing_path",
       "lng",
     ])
   })

@@ -129,27 +129,26 @@ describe("the /install route", () => {
 })
 
 describe("the /install cross-origin handoff", () => {
-  test("routes the primary action through the signup helper with the page's own path", () => {
-    const url = new URL(buildAppSignupUrl({ landingPath: INSTALL_PATH, locale: "uk" }))
+  test("routes the primary action through the signup helper without marketing attribution", () => {
+    const url = new URL(buildAppSignupUrl({ locale: "uk" }))
 
     expect(url.origin).toBe("https://app.perelai.com")
     expect(url.pathname).toBe("/register")
-    expect(url.searchParams.get("landing_path")).toBe(INSTALL_PATH)
+    expect(url.searchParams.get("landing_path")).toBeNull()
     // Language continuity across the domain hop — a UX hint, not authority.
     expect(url.searchParams.get("lng")).toBe("uk")
     // `/install` is not a niche page, so it must not fabricate attribution.
     expect(url.searchParams.get("niche")).toBeNull()
   })
 
-  test("strips the locale prefix so every locale reports one canonical path", () => {
+  test("does not report the landing path for any locale", () => {
     for (const locale of PUBLISHED_LOCALES) {
       const url = new URL(
         buildAppSignupUrl({
-          landingPath: localizePath(locale, INSTALL_PATH),
           locale,
         }),
       )
-      expect(url.searchParams.get("landing_path"), locale).toBe(INSTALL_PATH)
+      expect(url.searchParams.get("landing_path"), locale).toBeNull()
     }
   })
 

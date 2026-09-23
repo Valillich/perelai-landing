@@ -32,9 +32,6 @@ export interface LandingCtaClickedEvent {
     cta_text: CtaText
     destination: CtaDestination
     niche?: string
-    utm_source?: string
-    utm_campaign?: string
-    landing_path?: string
   }
 }
 
@@ -50,8 +47,6 @@ export interface SignupStartedEvent {
   name: "signup_started"
   properties: {
     niche?: string
-    utm_source?: string
-    utm_campaign?: string
   }
 }
 
@@ -191,47 +186,26 @@ export function configureAnalyticsAdapter(nextAdapter: AnalyticsAdapter = noOpAd
   adapter = nextAdapter
 }
 
-type AcquisitionProperties = Pick<
-  SignupStartedEvent["properties"],
-  "niche" | "utm_source" | "utm_campaign"
->
+type SignupContextProperties = SignupStartedEvent["properties"]
 
-type CtaAcquisitionProperties = AcquisitionProperties &
-  Pick<LandingCtaClickedEvent["properties"], "landing_path">
+function safeNicheValue(value: string | null): string | undefined {
+  if (!value || value.length > 80) return undefined
 
-function safeAcquisitionValue(value: string | null, maximumLength: number): string | undefined {
-  if (!value || value.length > maximumLength) return undefined
-
-  // URL values are not free text: only bounded campaign identifiers can leave the page.
+  // A niche is a bounded product-selection hint, not a campaign identifier.
   if (!/^[a-z0-9][a-z0-9_-]*$/i.test(value)) return undefined
   if (/\d{7,}/.test(value)) return undefined
 
   return value
 }
 
-function acquisitionPropertiesFromHref(href: string): AcquisitionProperties {
+function signupContextFromHref(href: string): SignupContextProperties {
   try {
     const url = new URL(href)
-    const niche = safeAcquisitionValue(url.searchParams.get("niche"), 80)
-    const source = safeAcquisitionValue(url.searchParams.get("utm_source"), 80)
-    const campaign = safeAcquisitionValue(url.searchParams.get("utm_campaign"), 120)
+    const niche = safeNicheValue(url.searchParams.get("niche"))
 
     return {
       ...(niche ? { niche } : {}),
-      ...(source ? { utm_source: source } : {}),
-      ...(campaign ? { utm_campaign: campaign } : {}),
     }
-  } catch {
-    return {}
-  }
-}
-
-function landingPathPropertyFromHref(href: string): Pick<CtaAcquisitionProperties, "landing_path"> {
-  try {
-    const path = new URL(href).searchParams.get("landing_path")
-    if (!path || path.length > 240 || !/^\/[a-z0-9/-]*$/i.test(path)) return {}
-
-    return { landing_path: path }
   } catch {
     return {}
   }
@@ -255,8 +229,7 @@ export function buildLandingCtaClickedEvent({
       cta_position: ctaPosition,
       cta_text: ctaText,
       destination,
-      ...acquisitionPropertiesFromHref(href),
-      ...landingPathPropertyFromHref(href),
+      ...signupContextFromHref(href),
     },
   }
 }
@@ -269,5 +242,5 @@ export function buildSignupStartedEvent(href: string): SignupStartedEvent | unde
     return undefined
   }
 
-  return { name: "signup_started", properties: acquisitionPropertiesFromHref(href) }
+  return { name: "signup_started", properties: signupContextFromHref(href) }
 }

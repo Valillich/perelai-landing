@@ -15,7 +15,7 @@ approvedBy: "[TBD: internal approval reference]"
 Perelai handles personal data in two different ways:
 
 1. We generally act as a **controller** when we decide why and how to process data for our website,
-   accounts, authentication, security, support, product analytics, billing (if launched), our own
+   accounts, authentication, security, support, product analytics if separately enabled, billing (if launched), our own
    communications and legal obligations.
 2. We generally act as a **processor** when a business uses Perelai to manage its own clients,
    bookings, requests, operational records and communications. In that case, the business decides why
@@ -67,7 +67,7 @@ Do not render an empty or partial representative/DPO sentence.
 
 We determine purposes and essential means for account creation, authentication, account identities
 and access administration, security, fraud prevention, our own business enquiries/support, Perelai marketing, referral
-attribution, deliberate product/website analytics, service improvement, payer/trial
+programmes and analytics if separately enabled, service improvement, payer/trial
 administration, Company subscription/access records, export security/audit metadata and legal claims
 or obligations.
 
@@ -104,15 +104,17 @@ The actual data depends on the features used.
 
 - IP/network and approximate location as available to hosting/security infrastructure;
 - browser, device, operating system, language, region and technical request data;
-- pages, deliberate product interactions and campaign/referral parameters;
+- page/request data; campaign/referral parameters may appear in a requested URL but Launch v1 does not
+  store them in landing browser storage or forward them in app signup links;
 - language, theme, region, cookie/storage and privacy preferences;
 - contact (including STUDIO+ enquiries), waitlist, referral or beta-feedback form content;
 - support or other communications with us.
 
-The current landing analytics integration is configured for deliberately defined events, in-memory
-SDK persistence, no autocapture, no session replay and SDK-level IP capture disabled. Hosting and
-network providers may still receive request IP addresses. Do not interpret this as anonymous browsing
-until the complete production flow is verified.
+Launch v1 disables the landing PostHog adapter even if a project key is configured. Its dormant
+configuration uses in-memory SDK persistence with autocapture and session replay off. Hosting and
+network providers may still receive request IP addresses. The 2026-09-23 production build still
+requested PostHog configuration; deployment and a fresh network audit must precede publication of
+this Launch v1 statement.
 
 ### Account owners, staff and invited users
 
@@ -326,7 +328,7 @@ Customer Personal Data.
 | provide support and resolve incidents | account, support content, diagnostic data | contract; legitimate interests |
 | respond to STUDIO+ and other business enquiries | contact details and business needs | steps requested by the individual only if they would be the contracting party; otherwise documented legitimate interests in responding to business representatives; separate marketing basis |
 | operate public technical surfaces securely | request/network data, abuse signals | legitimate interests; processor instruction for Customer Data |
-| deliberate privacy-hardened website/product analytics | defined interaction/technical data | `[TBD by jurisdiction/tool: consent or legitimate interests after balancing/ePrivacy review]` |
+| website/product analytics if enabled in a later release | defined interaction/technical data | `[TBD by jurisdiction/tool: consent or legitimate interests after balancing/ePrivacy review]`; disabled on the Launch v1 landing |
 | remember requested language/theme/region | preference/browser storage | `[TBD: select GDPR consent or another valid Art. 6 basis as applicable; separately assess device-storage exemption/consent]` |
 | referral attribution and beta feedback | referral/campaign, feedback | consent or legitimate interests depending on collection/use |
 | Perelai marketing | contact and preference data | consent or applicable electronic-marketing permission; legitimate interests only where lawful |
@@ -374,14 +376,16 @@ necessary transaction messages.
 
 ## 9. Cookies, local storage and analytics
 
-We use cookies and similar browser storage for requested preferences, session/security functions,
-short-lived acquisition context and, where configured and lawfully enabled, analytics. The current
-verified landing examples include a language cookie, theme local storage, session attribution storage,
-region preference storage and privacy-hardened PostHog event delivery.
+The intended Launch v1 landing uses cookies and similar browser storage for requested preferences
+and service/security functions. It clears a legacy `perelai_attr` session record and does not create
+another one. PostHog does not initialise or send events even with a project key. The current-source
+examples include a language cookie and requested theme/region local storage. The previous production
+build had attribution storage and a PostHog configuration request; verify their absence after deploy.
 
 See the [Cookie and Similar Technologies Policy](/legal/cookies) for names, purposes, providers and
-durations. Non-essential storage or access is not enabled before the required choice in jurisdictions
-that require consent. `[TBD: complete audit for app and booking origins before approving this claim.]`
+durations. Optional analytics and marketing remain disabled for Launch v1. If introduced later,
+required choices must control loading before the first request. `[TBD: verify the new production
+build, the app/booking inventory and served-country classification before approving this claim.]`
 
 ## 10. Sharing and recipients
 
@@ -390,7 +394,7 @@ We disclose personal data only as needed for the purposes above to:
 - hosting, CDN, database, object-storage and queue/infrastructure providers;
 - email and notification delivery providers;
 - Google for sign-in/Calendar at the user's request;
-- analytics and error-monitoring providers when configured;
+- analytics and error-monitoring providers only if separately enabled;
 - support tools;
 - Paddle as the planned authorised reseller/Merchant of Record and independent controller for SaaS
   buyer Transactions, plus any separately assessed billing/tax processors if launched;
@@ -402,7 +406,7 @@ We disclose personal data only as needed for the purposes above to:
 
 We do not sell Customer Personal Data. We do not share data with unspecified `trusted partners` for
 their unrelated marketing. Our [provider list](/legal/subprocessors) distinguishes Customer Data subprocessors, processors
-of Perelai-controller data (such as landing analytics), and independent controllers. `[TBD: list must be completed before release.]`
+of Perelai-controller data if enabled, and independent controllers. `[TBD: list must be completed before release.]`
 
 ## 11. International transfers
 
@@ -444,7 +448,7 @@ rules, not an indefinite licence.
 | notifications and system task records | category-specific env/jobs `[verify]` | `[TBD backups]` |
 | payer/trial/subscription/access records | contract/claims period `[TBD]` | delete or restricted archive `[TBD]` |
 | Paddle transaction/tax/refund and vendor payout records | applicable accounting/tax/claims period `[TBD]` | restricted archive |
-| PostHog events | `[TBD project retention]` | `[TBD]` |
+| historical PostHog events, if any | `[TBD project retention]` | `[TBD]`; Launch v1 source disables new event collection |
 | public confirmation/status/access tokens | `[TBD]` | invalidate/delete `[TBD]` |
 | backups | `[TBD cycle]` | rotational deletion `[TBD]` |
 

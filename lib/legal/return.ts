@@ -85,7 +85,8 @@ export function validReleasedOfferCode(
 /**
  * Reconstructs the app destination from the allowlisted from parameter per
  * 00_README_execution_plan.md §6.1.
- * Query input can only supply narrow acquisition fields to register; it can never supply an arbitrary href.
+ * Query input can only supply the validated niche and released OfferCode to
+ * registration; it can never supply an arbitrary href or marketing attribution.
  */
 export function buildLegalReturnDestination(
   input: LegalReturnInput
@@ -100,9 +101,6 @@ export function buildLegalReturnDestination(
     case "register": {
       const signupUrl = buildAppSignupUrl({
         niche: input.niche ?? undefined,
-        source: input.source ?? undefined,
-        campaign: input.campaign ?? undefined,
-        landingPath: input.landingPath ?? undefined,
       })
       const offer = validReleasedOfferCode(input.offer, input.offerRelease)
       if (offer) {

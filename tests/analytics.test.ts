@@ -21,8 +21,8 @@ afterEach(() => {
   resetAnalyticsEventDeduplication()
 })
 
-describe("signup acquisition events", () => {
-  test("uses only the allowlisted destination parameters and mirrors signup_started", () => {
+describe("signup context events", () => {
+  test("omits marketing parameters even if present in a destination URL", () => {
     expect(
       buildLandingCtaClickedEvent({
         href: destinationUrl,
@@ -37,9 +37,6 @@ describe("signup acquisition events", () => {
         cta_text: "create_workspace",
         destination: "signup",
         niche: "premium-colorist",
-        utm_source: "instagram",
-        utm_campaign: "founding-beta",
-        landing_path: "/for-independent-colorists",
       },
     })
 
@@ -47,8 +44,6 @@ describe("signup acquisition events", () => {
       name: "signup_started",
       properties: {
         niche: "premium-colorist",
-        utm_source: "instagram",
-        utm_campaign: "founding-beta",
       },
     })
   })
@@ -207,15 +202,13 @@ test("deduplicates pricing views independently for page and section surfaces", (
   expect(events).toEqual([pageEvent, sectionEvent])
 })
 
-test("the tracking plan records the approved privacy decision while replay and click IDs remain off", async () => {
+test("the tracking plan records the Launch v1 deferral while replay and click IDs remain off", async () => {
   const plan = await readFile(new URL("../docs/tracking-plan.md", import.meta.url), "utf8")
 
-  expect(plan).toMatch(/Owner\/legal decision: approved/i)
+  expect(plan).toMatch(/Launch v1 status: disabled/i)
   expect(plan).toMatch(/session replay.*off/i)
-  expect(plan).toMatch(/click IDs.*off/i)
-  expect(plan).toMatch(/full referrer.*off/i)
-  expect(plan).toMatch(/device_message_viewed/)
-  expect(plan).toMatch(/collaboration_message_viewed/)
-  expect(plan).toMatch(/install_guide_opened/)
-  expect(plan).toMatch(/install_help_clicked/)
+  expect(plan).toMatch(/click IDs and full referrer are not forwarded/i)
+  expect(plan).toMatch(/NEXT_PUBLIC_POSTHOG_KEY/)
+  expect(plan).toMatch(/perelai_attr/)
+  expect(plan).toMatch(/Cloudflare Web Analytics RUM/)
 })

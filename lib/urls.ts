@@ -3,9 +3,6 @@ import { env } from "@/lib/env"
 
 export interface SignupUrlParams {
   niche?: string
-  source?: string
-  campaign?: string
-  landingPath?: string
   /** A validated app locale, forwarded only as the app's language UX hint. */
   locale?: string
 }
@@ -23,20 +20,12 @@ const validNicheSlugs = new Set(
   (catalogData.templates ?? []).flatMap((template) => template.nicheSlugs ?? []),
 )
 const supportedLocales = new Set(catalogData.supportedLocales ?? [])
-const localePrefix = new RegExp(
-  `^/(${[...supportedLocales].map((locale) => locale.replace(/[.*+?^${}()|[\\]\\]/g, "\\$&")).join("|")})(?=/|$)`,
-  "i",
-)
 
 function normalizedString(value: unknown): string | undefined {
   if (typeof value !== "string") return undefined
 
   const trimmed = value.trim()
   return trimmed || undefined
-}
-
-function clampedString(value: unknown, maximumLength: number): string | undefined {
-  return normalizedString(value)?.slice(0, maximumLength)
 }
 
 function validNiche(value: unknown): string | undefined {
@@ -47,16 +36,6 @@ function validNiche(value: unknown): string | undefined {
   }
 
   return normalized
-}
-
-function canonicalLandingPath(value: unknown): string | undefined {
-  const clamped = clampedString(value, 240)
-  if (!clamped || !clamped.startsWith("/")) return undefined
-
-  const pathname = clamped.split(/[?#]/, 1)[0]
-  const withoutLocale = pathname.replace(localePrefix, "")
-
-  return withoutLocale || "/"
 }
 
 function validLocale(value: unknown): string | undefined {
@@ -72,15 +51,9 @@ export function buildAppSignupUrl(params: SignupUrlParams): string {
   try {
     const url = new URL(signupUrl)
     const niche = validNiche(params?.niche)
-    const source = clampedString(params?.source, 80)
-    const campaign = clampedString(params?.campaign, 120)
-    const landingPath = canonicalLandingPath(params?.landingPath)
     const locale = validLocale(params?.locale)
 
     if (niche) url.searchParams.set("niche", niche)
-    if (source) url.searchParams.set("utm_source", source)
-    if (campaign) url.searchParams.set("utm_campaign", campaign)
-    if (landingPath) url.searchParams.set("landing_path", landingPath)
     if (locale) url.searchParams.set("lng", locale)
 
     return url.toString()

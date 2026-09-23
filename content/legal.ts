@@ -97,11 +97,11 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
       },
       {
         heading: "What we never collect in landing analytics",
-        body: "Landing analytics must not include client personally identifiable information. The landing records only a narrow, allowlisted acquisition context and never captures form inputs.",
+        body: "Launch v1 landing analytics is disabled. The landing does not keep campaign or referrer attribution in browser storage and does not capture form inputs.",
       },
       {
         heading: "Processors",
-        body: "The final policy will name applicable processors, including hosting providers, Resend for email, the analytics provider selected for the landing, and any separately released user-enabled integration where applicable.",
+        body: "The final policy will name applicable processors, including hosting providers, Resend for email, and any separately released analytics or user-enabled integration where applicable.",
       },
       {
         heading: "Legal basis",
@@ -117,7 +117,7 @@ export const LEGAL_DRAFTS: Record<LegalPageName, LegalDraftContent> = {
       },
       {
         heading: "Cookies and storage",
-        body: "The landing does not set tracking cookies. It may use limited browser storage for functional preferences and first-touch attribution; this does not by itself determine consent obligations.",
+        body: "The intended Launch v1 landing uses browser storage for requested preferences and security. It removes legacy first-touch attribution and keeps optional analytics disabled; production behaviour must be verified before approval.",
       },
       {
         heading: "International transfers",

@@ -6,7 +6,6 @@ const validEnvironment = {
   NEXT_PUBLIC_APP_URL: "https://app.example.test",
   NEXT_PUBLIC_BOOKING_URL: "https://book.example.test",
   NEXT_PUBLIC_LANDING_URL: "https://landing.example.test",
-  NEXT_PUBLIC_DEFAULT_CAMPAIGN: "founding-beta",
 }
 
 async function loadReturnToApp() {
@@ -59,7 +58,7 @@ test("a register return drops an unresolvable niche before rendering its URL", a
   expect(new URL(renderedHref!).searchParams.get("niche")).toBeNull()
 })
 
-test("a register return forwards only a release-allowlisted offer and registration attribution", async () => {
+test("a register return keeps a released offer and niche but drops marketing context", async () => {
   const { buildLegalReturnDestination } = await loadReturnToApp()
   const destination = buildLegalReturnDestination({
     from: "register",
@@ -80,9 +79,6 @@ test("a register return forwards only a release-allowlisted offer and registrati
   expect(destination?.href).toMatch(/^https:\/\/app\.example\.test\/register\?/)
   expect([...search.entries()]).toEqual([
     ["niche", "premium-colorist"],
-    ["utm_source", "google"],
-    ["utm_campaign", "autumn_launch"],
-    ["landing_path", "/for-independent-colorists"],
     ["offer", "SOLO_MONTHLY"],
   ])
 })

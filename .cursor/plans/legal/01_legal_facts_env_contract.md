@@ -5,10 +5,13 @@ documents.
 **Status:** mixed — code-observed facts plus unresolved business/legal facts.  
 **Rule:** repository evidence proves implementation, not production deployment or legal sufficiency.
 
-**Plan truth checked:** 2026-09-18 against the current monetization catalog, 2026-09-16 policy,
+**Plan truth checked:** 2026-09-23 against the current monetization catalog, 2026-09-16 policy,
 selected v1 trial-conversion path, ADR-0013, CONTEXT and TEAM/Drawer readiness reports.
 Use `14_launch_legal_minimum_20260918.md` for current launch scope; reviews 12/13 are historical.
-This checks plan/evidence references, not production, vendor accounts or a fresh security audit.
+The clean-browser/source evidence in `17_cookie_storage_runtime_audit_20260923.md` supplements this
+inventory. It does not establish provider-account facts, legal classification or release approval.
+The later Launch v1 source change removes stored landing attribution and disables PostHog; the
+2026-09-23 production observations remain historical until a new build is deployed and audited.
 
 **Apply blockers by stage:** finish facts for current processing and the chosen launch country now;
 payment facts before charges; optional-feature facts before enabling/promising that feature.
@@ -119,9 +122,9 @@ changed. Build output or an approval manifest must preserve the exact rendered d
 | Email delivery via Resend | LIVE IN CODE | Candidate subprocessor; legal entity, regions and transfer mechanism require vendor/account verification. |
 | Web Push via VAPID | LIVE IN CODE / feature flags | Browser permission is separate; endpoint/subscription data and provider path require audit. |
 | BullMQ/Redis | IMPLEMENTED OPTION | Actual managed provider and production use are TBD. |
-| Landing PostHog | LIVE IN CODE when key configured | In-memory persistence; autocapture/session replay disabled; `ip: false`; intentional typed events still leave the browser. |
-| Landing `NEXT_LOCALE` cookie | LIVE IN CODE | One year, SameSite=Lax, set when language is selected. |
-| Theme, attribution and region browser storage | LIVE IN CODE | Must appear in Cookie Policy after names/durations are verified. |
+| Landing PostHog | DISABLED IN LAUNCH V1 SOURCE; 2026-09-23 PRODUCTION CONFIG REQUEST OBSERVED | Root layout no longer mounts the SDK and the retained adapter ignores even a configured key. Dormant settings retain memory persistence and disabled autocapture/replay. Verify zero requests after deployment; previous production events and provider retention remain subject to the historical audit. |
+| Landing `NEXT_LOCALE` cookie | LIVE IN CODE AND OBSERVED IN PRODUCTION | One year, SameSite=Lax. The production entry path set it without an explicit language-button click in the audited session; final copy must reflect actual middleware behaviour. |
+| Theme and region browser storage; prior attribution | CURRENT SOURCE RETAINS REQUESTED PREFERENCES AND CLEARS LEGACY `perelai_attr` | No new landing UTM/referrer storage or cross-domain marketing handoff in Launch v1. Verify the new build and disclose still-enabled preferences. |
 | AI functionality | NOT CONFIRMED AS PRODUCTION | No AI provider/production function confirmed. Assess rules-based billing/eligibility under Privacy §18 too; absence of AI is not an Article 22 conclusion. No shared Customer Data model training by default. |
 | File attachments | CURRENT CODE; DEPLOYMENT TO VERIFY | Inventory CORE_WORKSPACE includes files/FileAsset storage. Audit content, metadata, access, retention and sensitive-data handling; do not silently omit deployed attachments from notices. |
 | Coworker availability | CURRENT CODE, ADR-0010 | Linked Companies see opaque occupied intervals plus company name/colour. No foreign client/staff/service/amount/note or resolvable transaction ID; assess identifiability of solo-business data. |
@@ -266,9 +269,17 @@ Customer Data for its own analytics, advertising or model training: it may chang
 | BillingCustomer/trial/access projection | controller | [TBD contract/claims period] | `[TBD]` | Billing + counsel |
 | Paddle customer/subscription/transaction/webhook records | controller/shared by flow | [TBD applicable law/contract] | restricted archive `[TBD]` | Paddle config + billing/counsel |
 | vendor payout/accounting/tax records | controller/legal obligation | [TBD applicable FOP law] | restricted archive `[TBD]` | finance/tax counsel |
-| PostHog events | controller | [TBD vendor setting] | [TBD] | PostHog project config |
-| landing attribution/session storage | controller | browser session in code | ends with session [verify] | landing audit |
-| language/theme/region preferences | controller | [TBD per key] | browser clear/expiry | landing audit |
+| historical PostHog events/config requests | controller | [TBD vendor setting] | [TBD] | 2026-09-23 production config request; Launch v1 source disables SDK; prior provider records/dashboard still require review |
+| historical landing attribution/session storage | controller | browser tab/session in prior production build | new source removes legacy key on page load and creates no replacement; prior server/app acquisition records are separate | production audit 2026-09-23; post-deploy verification pending |
+| language cookie | controller | `NEXT_LOCALE`: 1 year | cookie clear/expiry | production `Set-Cookie` audit 2026-09-23 |
+| theme/region preferences | controller | localStorage until changed/removed | browser/site-data clear | source audit; absent in clean runtime profile |
+| app bearer access token | controller/security | localStorage record; JWT lifetime 1 day | logout or 401 removes record; expired value may remain until a clear path | auth source audit; security acceptance required |
+| onboarding draft | mixed business data/functionality | sessionStorage; completion clear or tab/session end | browser session clear; explicit logout did not clear in reviewed path | app source audit 2026-09-23 |
+| billing checkout attempt | controller/security/functionality | sessionStorage; 120-second polling deadline, terminal clear or tab/session end | timeout does not itself prove immediate record deletion | current source only; production checkout not established |
+| public hub/personal-return session records | processor/security | sessionStorage; logical 2-hour freshness checked on read | stale/error/mismatch clear or tab/session end; physical timer not established | public-routing source/tests; raw token-like data threat model in document 17 |
+| public booking return path | processor/functionality | sessionStorage with no explicit TTL found | overwrite or tab/session end | public-routing source/runtime audit |
+| Cloudflare challenge cookie/request logs | controller/security by purpose `[confirm role]` | `cf_clearance` observed with about 1-year expiry | account/log deletion and backups `[TBD]` | production runtime proves cookie, not dashboard configuration |
+| Google OAuth binding cookie | controller/security | 10 minutes | browser expiry; server binding deletion `[TBD]` | production API `Set-Cookie` plus auth source/tests |
 
 Published prose must use verified periods. Where a fixed period is not possible, publish precise
 criteria plus examples; do not substitute `as long as necessary` for an operational schedule.
@@ -298,24 +309,44 @@ risk assessment. Never publish `provider is GDPR compliant` as a substitute. Lan
 Perelai-controller data; they are not Customer Data subprocessors merely because they are vendors.
 Review remote access from Ukraine/Poland, not only server location.
 
-## 8. Cookie/storage/network inventory to complete
+## 8. Cookie/storage/network inventory — runtime/source evidence completed 2026-09-23
 
-| Origin | Technology | Observed behaviour | Classification pending |
-|---|---|---|---|
-| landing | `NEXT_LOCALE` cookie | set on language selection; one year; SameSite=Lax | preference/requested by user |
-| landing | `perelai-theme` localStorage | stores theme selection | preference |
-| landing | attribution sessionStorage | first-touch marketing context | analytics/attribution — jurisdiction review |
-| landing | region localStorage | presentation region hint | preference — verify key/duration |
-| landing | PostHog memory state | no cookie/localStorage persistence; typed events only; IP disabled in SDK config | analytics processing still disclosed |
-| app | `accessToken` localStorage and auth/session state | observed; exact expiry/rotation/logout audit [TBD] | necessary/security, plus security architecture review |
-| app | onboarding draft/settings | [TBD audit] | functionality [TBD] |
-| app | billing checkout/return state | provider-free pending state only `[TBD audit]`; never persist bearer checkout URL/provider secret | necessary/functional/security |
-| booking | confirmation/preferences/client-hub session state, including token-like records | observed; exact keys/expiry/clearing audit [TBD] | necessary/security [TBD] |
-| Paddle-hosted domains | checkout and Buyer Portal technologies | governed by Paddle's notices/choices for its buyer flow; inventory exact handoff/return behaviour | independent third-party flow `[TBD]` |
-| all | PWA/service worker/cache | [TBD audit] | functionality/security [TBD] |
+Full method, per-surface results, outbound hosts, provider-retention gaps and threat models are in
+`17_cookie_storage_runtime_audit_20260923.md`. `None in clean profile` means none was observed before
+the audited interaction; it is not a claim about every later user action.
 
-Audit browser storage, response cookies, service-worker caches and outbound network requests in a
-clean browser for each origin. A library comment is evidence, not the completed audit.
+| Origin/surface | Technology | Runtime/source evidence | Retention/clearing evidence | Classification/remaining evidence |
+|---|---|---|---|---|
+| production landing home | `NEXT_LOCALE` cookie | present on entry; `Path=/`, `SameSite=Lax`, JavaScript-readable | `Max-Age=31536000` (1 year) | owner/counsel classification by launch country; copy must not say only explicit selection |
+| production landing | `cf_clearance` cookie | Cloudflare challenge cookie; `HttpOnly`, `Secure`, `SameSite=None`, `Partitioned` | observed expiry about 1 year | security/ops must reconcile dashboard setting, purpose and Cloudflare account/log retention |
+| landing | `perelai-theme` localStorage | source-confirmed explicit theme preference; absent in clean audited profiles | until replaced/removed/site-data clear | functional classification by launch country |
+| landing | `perelai-market` localStorage | source-confirmed explicit `?market` display override; absent in clean audited profiles | until replaced/removed/site-data clear | functional classification by launch country |
+| production landing home, 2026-09-23 baseline | `perelai_attr` sessionStorage | stored first-touch source/campaign/referrer-host/niche; production clean home stored direct/founding-beta | tab/browser session; browser restore behaviour varies | new source removes legacy key and creates no replacement; verify deployed result |
+| production landing home, 2026-09-23 baseline | PostHog SDK memory/network | no SDK cookie/localStorage; production fetched `eu-assets.i.posthog.com` project config before choice | memory ends on unload; provider event/config retention `[TBD vendor setting]` | new source removes bootstrap and adds hard disable; verify deployed network result and old provider retention |
+| production Cookie Policy | landing cookie/storage/network | only `cf_clearance` observed; no PostHog host, localStorage, sessionStorage, IndexedDB, Cache Storage or service worker | cookie as above | route result does not cure home-page behaviour |
+| app login/register | `i18nextLng` localStorage | observed in production and current local source | until replaced/removed/site-data clear | functional classification |
+| app auth | `accessToken` localStorage | bearer JWT; current source lifetime 1 day; API checks membership ID/access version; logout/401 removes token | may persist across restart and remain after expiry until a clear path | necessary/security; explicit XSS, CSP, cross-tab logout and residual-state security acceptance required |
+| app login | `lastLoginEmail` localStorage | source-confirmed login prefill | until replaced/removed/site-data clear | functional/minimisation review |
+| app preferences/UI | `bf-theme`, `bf-privacy-modes`, education/install/counter/entity-ID groups | source-confirmed; privacy modes mask UI amounts/statistics and are not tracking consent | until changed/removed/version/site-data clear depending key | group only where purpose/retention remain clear; stable identifiers are not generic preferences |
+| onboarding | `bf_onboarding_draft_${companyId}` sessionStorage | business/location/timezone/template, services/prices/expenses, staff and Calendar/import run/job state | completion clear or tab/session end; explicit logout clear not found | necessary/functional plus Customer Data/security review |
+| app billing | `billing_checkout_attempt` sessionStorage | attempt/OfferCode/Company/payer/idempotency/deadline; no provider secret/checkout URL | terminal clear or tab/session end; polling deadline 120 seconds | current source only; production route redirected to login; necessary/security classification |
+| public booking | `bf_public_booking_return_path` sessionStorage | pathname/search observed for fake-slug booking in production/current source | overwrite or tab/session end; no explicit TTL found | necessary/functional; query/token and log-redaction review |
+| public hub | `bf_public_hub_session` sessionStorage | raw token + verified time only after successful load; no record created by fake-token runtime probe | 2-hour logical freshness on read; stale/error/mismatch clear; physical timer not established | necessary/security; threat model and backend token/log evidence required |
+| personal booking | `bf_public_personal_booking_return_path` sessionStorage | return path may contain raw path/query token, Company slug and verified time | same 2-hour read-time check/removal | necessary/security; do not send to legal pages, analytics or cross-origin referrers |
+| Google OAuth start | `google_oauth_bind` cookie | production API set `HttpOnly`, `Secure`, `SameSite=Lax`, `Path=/api/auth`, then redirected to Google | `Max-Age=600` (10 minutes) | Google redirect cookies were not audited; server deletion/log retention `[TBD]` |
+| Web Push | `/notification-sw.js`, Push API subscription | source registers worker only from user-initiated enable flow; worker uses an in-memory Map, not Cache Storage/IndexedDB | subscription until revoked/expired; revoked backend records 30 days from env evidence; backups `[TBD]` | separate browser permission and purpose/role/provider review |
+| all clean audited surfaces | IndexedDB / Cache Storage / service-worker registration | none observed; no app/landing browser IndexedDB or Cache Storage source use found | not applicable to clean state | rerun after material actions and production changes; Web Push worker remains conditional |
+| production app/public | outbound app/API hosts | app assets on `app.perelai.app`; public pages on `book.perelai.app`; public data from `api.perelai.app` | provider/request/security-log retention `[TBD]` | contracted entities, regions, headers and logs still require account evidence |
+| current-source checkout | Paddle.js | local route attempted `cdn.paddle.com`; production checkout probe redirected to login and made no Paddle request | Paddle/provider retention `[TBD]` | exact live Checkout/Portal inventory and production release evidence absent |
+| current source | conditional third parties | Google redirect, browser-selected push endpoint and `images.unsplash.com` cover images occur only on their trigger paths | provider-specific `[TBD]` | verify enabled production actions and provider settings before publication |
+
+The owner has selected a Launch v1 build with no optional landing analytics or marketing integration.
+The source removes attribution storage and disables PostHog even with a key; it carries no CMP.
+LGL-5 is complete for the deployed build only after a clean-browser check proves no optional SDK,
+config/event request, pixel or attribution write across routes, plus a Cloudflare dashboard injection
+check. The remaining service/security and requested-preference technologies still need the recorded
+served-country classification and verified provider facts before this draft can be approved. A banner
+that records a choice while an optional SDK still loads is a test failure for any future release.
 
 ## 9. Security statements allowed only after evidence
 

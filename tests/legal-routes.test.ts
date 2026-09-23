@@ -210,7 +210,7 @@ describe("Safe Return Destination Builder (§6.1)", () => {
     expect(dataTransfer?.showCloseInstruction).toBe(true)
   })
 
-  it("re-emits validated acquisition context for register", () => {
+  it("returns to register with released product context and no marketing context", () => {
     const destination = buildLegalReturnDestination({
       page: "terms",
       locale: "en",
@@ -229,8 +229,9 @@ describe("Safe Return Destination Builder (§6.1)", () => {
     expect(destination?.href).toContain("https://app.perelai.com/register")
     expect(destination?.href).toContain("niche=premium-colorist")
     expect(destination?.href).toContain("offer=STUDIO_MONTHLY")
-    expect(destination?.href).toContain("utm_source=google")
-    expect(destination?.href).toContain("utm_campaign=launch")
+    expect(destination?.href).not.toContain("utm_source")
+    expect(destination?.href).not.toContain("utm_campaign")
+    expect(destination?.href).not.toContain("landing_path")
   })
 
   it("rejects untrusted or arbitrary URLs in from parameter", () => {

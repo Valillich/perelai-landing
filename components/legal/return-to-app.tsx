@@ -113,9 +113,6 @@ export function LegalReturnToApp({
       from={from}
       niche={searchParams.get("niche")}
       offer={searchParams.get("offer")}
-      source={searchParams.get("utm_source")}
-      campaign={searchParams.get("utm_campaign")}
-      landingPath={searchParams.get("landing_path")}
     />
   )
 }

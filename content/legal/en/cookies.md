@@ -25,14 +25,14 @@ transfers, retention and rights.
 - **Local storage** remains on a device until code or the user removes it.
 - **Session storage** normally remains for the life of a browser tab/session.
 - **In-memory SDK state** exists only in the loaded page but may still be used to send events to a
-  provider.
+  provider if such an SDK is enabled in a future release.
 - **Service workers and caches** support PWA/offline/performance behaviour and may store code or
   responses according to configured cache rules.
 - **Pixels, APIs and device signals** can transmit request or interaction data without setting a
   cookie.
 
-Blocking cookies alone may not block equivalent storage or outbound requests. Browser controls and
-Perelai preferences should be used together where available.
+Blocking cookies alone may not block equivalent storage or outbound requests. Launch v1 therefore
+keeps optional measurement integrations disabled at the application entry point.
 
 ## 3. Categories
 
@@ -50,49 +50,46 @@ but the preference may be lost.
 
 ### Analytics and attribution
 
-These help us understand deliberate page/product interactions, campaign attribution and reliability.
-Where applicable law requires consent for storage/access or related processing, we do not enable the
-optional technology before that choice. Analytics is not described as necessary merely because it is
-useful.
+Launch v1 does not initialise landing analytics, store campaign/referrer attribution or forward
+marketing parameters with signup links. The retained PostHog configuration uses memory persistence,
+but PostHog is disabled even if a project key is present. A future analytics release needs a fresh
+technology inventory, applicable legal review and working controls before activation.
 
 ### Marketing
 
-Marketing/advertising pixels or cross-site profiles are not confirmed as part of the reviewed
-production code. If added, they require a new inventory, updated notice and consent controls before
-activation where required.
+Launch v1 does not enable marketing/advertising pixels or cross-site profiles. If added, they require
+a new inventory, updated notice and consent controls before activation where required.
 
 ## 4. Current landing inventory
 
-The table reflects code reviewed on 2026-08-01. Production network/provider settings still need
-verification.
+The table describes the intended Launch v1 build. A 2026-09-23 production audit found the prior
+`perelai_attr` record and a pre-choice PostHog configuration request; the new build must be deployed
+and audited before this draft can describe production. Provider account settings still need review.
 
 | Name/technology | Type/provider | Purpose | Data | Duration | Category |
 |---|---|---|---|---|---|
-| `NEXT_LOCALE` | first-party cookie | remember the language explicitly selected | locale code | 1 year; SameSite=Lax | functional preference |
+| `NEXT_LOCALE` | first-party cookie | remember/serve the landing language | locale code | 1 year; SameSite=Lax | requested language/service preference |
+| `cf_clearance` | Cloudflare security cookie when a challenge is served | preserve successful security challenge clearance | clearance/security value | observed production expiry about 1 year; `HttpOnly`, `Secure`, `SameSite=None`, `Partitioned`; account setting `[TBD]` | security; provider setting and served-country review |
 | `perelai-theme` | first-party localStorage | remember light/dark theme | theme value | until removed/replaced | functional preference |
 | `perelai-market` | first-party localStorage | remember a requested display-market override | market code | until removed/replaced | functional preference |
-| `perelai_attr` | first-party sessionStorage | preserve first-touch source/campaign/referrer host during a landing session | clamped UTM source/campaign and referrer hostname | browser tab/session | attribution; legal basis/consent review by launch country |
-| PostHog SDK memory | PostHog `[TBD entity/project]` | send deliberately defined page/product events when a project key is configured | event/property allowlist and locale; SDK IP capture disabled | page memory; vendor event retention `[TBD]` | analytics |
 | browser/server request data | hosting/CDN `[TBD]` | deliver and protect pages | IP, request headers, path, timing/security data | provider/log retention `[TBD]` | necessary/security |
 
-The landing PostHog configuration reviewed for this draft uses `persistence: memory`, disables
-autocapture and session recording, does not automatically capture pageviews, disables external bundle
-loading and sets SDK `ip: false`. Typed events are still transmitted. Hosting/CDN providers can still
-receive IP/request data independently. A code comment saying no banner is needed is not a legal
-determination for every launch country.
+The earlier landing build wrote `perelai_attr` to sessionStorage. Launch v1 removes that record on
+page load and creates no replacement. The retained PostHog adapter has `persistence: memory`, with
+autocapture, session recording and automatic pageviews off. Launch v1 does not initialise the SDK or
+send its typed events. Hosting/CDN providers still receive request data independently.
 
-Legal handoff visits containing `from` must not overwrite first-touch attribution. Legal return
-parameters must be removed from analytics properties, and full/referrer URLs must not expose app or
-public-flow tokens.
+Legal handoff visits containing `from` must not create attribution. Legal return parameters must not
+expose app or public-flow tokens to analytics or cross-origin referrers.
 
 Landing may preserve only a generated standard `OfferCode` in the current public release allowlist
-with registration attribution: SOLO_MONTHLY or STUDIO_MONTHLY, with STUDIO subject to TEAM-RELEASE. It
+with registration context: SOLO_MONTHLY or STUDIO_MONTHLY, with STUDIO subject to TEAM-RELEASE. It
 must not load a Paddle SDK, open checkout, or store Paddle product/price/customer/subscription IDs or
 checkout URLs. `offer` is untrusted intent and must not be inferred from niche, locale, Company
 currency, IP or browser region.
 
 Discard retired FOUNDING_*/ADDITIONAL_*/annual intent codes without aliasing them to new standard
-offers or changing stored historical acquisition evidence. Continue ordinary signup with fresh
+offers or changing stored historical business records. Continue ordinary signup with fresh
 selection. STUDIO+ contact is not Offer intent. Audit any enquiry form storage against its actual
 purpose and retention; the contact block does not authorise a new tracker or marketing enrolment.
 
@@ -123,8 +120,6 @@ an `other` category.
 
 You can:
 
-- use Perelai's cookie/privacy preferences when optional technologies are available;
-- decline or later disable optional analytics/marketing where the applicable control is offered;
 - change language, theme and other functional preferences in the product;
 - withdraw Web Push permission in browser/device settings;
 - clear cookies, local storage, session storage and site data in browser settings; and
@@ -133,11 +128,9 @@ You can:
 Clearing necessary/security storage may sign you out, remove an onboarding draft or break an
 authorised public flow. Clearing a preference means the Service may ask or detect it again.
 
-Where optional consent is required, controls must be as easy to withdraw as to give. Rejecting
-optional technology must not block the core Service. We do not use pre-ticked boxes or a banner that
-pretends to control SDKs while they load regardless.
-
-`[TBD: add exact preference-panel path and per-category behaviour only after implemented/tested.]`
+Launch v1 has no optional landing analytics or marketing technology to choose in a cookie banner.
+Before any such technology is enabled later, Perelai will assess the served countries and provide
+effective choices where required. A preference display without load control is insufficient.
 
 ## 7. Legal basis and regional differences
 

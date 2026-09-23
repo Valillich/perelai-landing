@@ -8,7 +8,6 @@ import {
   buildSignupStartedEvent,
   type CtaPosition,
 } from "@/lib/analytics"
-import { useAttribution } from "@/lib/attribution"
 import { buildAppLoginUrl, buildAppSignupUrl } from "@/lib/urls"
 
 type CtaDestination = "signup" | "login"
@@ -30,7 +29,7 @@ export function CtaButton({
   variant: _variant,
   destination = "signup",
   niche,
-  landingPath,
+  landingPath: _landingPath,
   locale,
   location,
   children,
@@ -38,12 +37,10 @@ export function CtaButton({
   ...anchorProps
 }: CtaButtonProps) {
   const t = useTranslations("common")
-  const attribution = useAttribution(niche)
   const href =
     destination === "signup"
       ? buildAppSignupUrl({
-          ...attribution,
-          landingPath,
+          niche,
           locale,
         })
       : buildAppLoginUrl()

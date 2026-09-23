@@ -2,6 +2,9 @@
 
 **Prepared:** 2026-08-01  
 **Updated:** 2026-09-18 for the launch brief, decided STUDIO trial/C-05/C-11 and selected v1 post-trial checkout.
+**Launch v1 privacy update, 2026-09-23:** landing attribution storage/handoff and PostHog loading
+are disabled in current source. See documents 06 and 17 plus `docs/tracking-plan.md`; the baseline
+production audit predates deployment of this change.
 
 **Status:** planning and attorney-ready drafting only; no implementation is authorised by this document.  
 **Canonical source language:** English.  
@@ -162,10 +165,11 @@ Billing/export status was reconciled with the 2026-09-05 inventory; this is not 
 - `PublicBookingPage.tsx` incorrectly renders `AuthLegalLinks`, so an end client is sent to the B2B
   Terms. Replace that use with a dedicated public-booking legal component and point it to Public
   Booking Terms plus Privacy Notice.
-- the landing uses PostHog with in-memory persistence, autocapture and session replay disabled, and
-  `ip: false`; it still sends deliberately emitted events when a key exists and must be disclosed.
-- the landing writes `NEXT_LOCALE`, `perelai-theme`, first-touch session storage and region preference
-  storage. The Cookie Policy must cover cookies and equivalent browser storage.
+- the 2026-09-23 production landing fetched PostHog config and wrote first-touch session storage.
+  Launch v1 source now disables PostHog even with a key, removes that legacy storage and sends no
+  UTM/referrer or landing-path context to app signup. Production must be re-audited after deployment.
+- the landing still uses `NEXT_LOCALE`, requested theme and region preferences, and security/network
+  technologies. The Cookie Policy must cover cookies and equivalent browser storage.
 - Google Calendar requests `calendar.events.readonly`; the code reads event objects and stores OAuth
   tokens. Do not narrow the Privacy Notice to calendar titles/dates only.
 - Resend is the implemented email delivery provider. Deployment/hosting/database/object storage/Redis
@@ -264,13 +268,13 @@ Legal URLs may accept only these allowlisted parameters:
 | `locale` | published locale code | Optional display hint; route prefix remains authoritative |
 | `niche` | valid generated catalog slug | Re-emitted only for `register` |
 | `offer` | generated standard `OfferCode` in the current public release allowlist | Re-emitted only for `register`; eligible launch codes are SOLO_MONTHLY/STUDIO_MONTHLY, with STUDIO gated by TEAM-RELEASE; intent never grants access |
-| `utm_source`, `utm_campaign`, `landing_path` | existing clamped acquisition values | Re-emitted only for `register` |
+| `utm_source`, `utm_campaign`, `landing_path` | legacy marketing context | Ignored for Launch v1; not re-emitted |
 
 Destination mapping is code-owned:
 
 ```text
 login      -> {APP_PUBLIC_URL}/login
-register   -> {APP_PUBLIC_URL}/register + validated niche, offer and acquisition query
+register   -> {APP_PUBLIC_URL}/register + validated niche and released offer only
 forgot     -> {APP_PUBLIC_URL}/forgot-password
 onboarding -> {APP_PUBLIC_URL}/onboarding
 settings   -> {APP_PUBLIC_URL}/settings
@@ -506,7 +510,7 @@ Provider submissions remain separately authorised operator actions; no guarantee
 - implement one landing legal URL builder in app code;
 - add required surface context to auth links;
 - implement hard-coded return mappings and parameter allowlists;
-- suppress landing attribution capture for legal handoff visits;
+- remove legacy landing attribution storage across all landing routes;
 - exclude all legal query parameters and referrers from analytics payloads;
 - apply new-tab rules for standalone, onboarding and token-bearing public routes.
 
@@ -532,11 +536,12 @@ Provider submissions remain separately authorised operator actions; no guarantee
 
 - complete a storage/network audit across landing, app and booking origins;
 - render the verified inventory in Cookie Policy;
-- keep non-essential SDKs disabled before consent where applicable;
-- if the privacy-hardened current PostHog mode is retained, document it accurately; do not infer that
-  memory persistence automatically resolves all national ePrivacy questions;
-- add cookie preferences only when there is something optional to control. A fake banner with no
-  effect is prohibited.
+- keep PostHog and optional marketing/analytics disabled for Launch v1 even when keys exist;
+- remove `perelai_attr` and UTM/referrer/landing-path registration handoff while preserving validated
+  niche, language and release-gated OfferCode;
+- verify zero optional network/storage activity on the deployed build and Cloudflare edge settings;
+- keep a CMP out of this no-optional-tracker release. If optional technology is introduced later,
+  classify it and test real load control. A fake banner with no effect is prohibited.
 
 ### LGL-6 — SaaS Billing and Paddle legal integration
 
@@ -660,14 +665,14 @@ of any already-enabled export remain mandatory. Do not rebuild an export/privacy
   canonical page; refund aliases resolve to one document/version and footer discovery works before
   paid launch;
 - production build fails on missing env, `status: draft`, `[TBD` or unresolved interpolation;
-- legal query variants canonicalise to the clean URL and are excluded from attribution capture;
+- legal query variants canonicalise to the clean URL and cannot create attribution storage;
 - malicious `from=https://evil.example`, encoded URLs and unknown values yield no return link.
 
 ### Auth and PWA
 
 - login -> legal -> login round trip;
-- register -> legal -> register preserves only validated niche, released standard OfferCode and clamped
-  attribution; offer is independent of niche and grants no trial/access;
+- register -> legal -> register preserves only validated niche and released standard OfferCode;
+  marketing attribution is not re-emitted, and offer grants no trial/access;
 - email and Google owner signup cannot proceed without current Terms/DPA versions;
 - staff invite copy omits DPA acceptance;
 - stale/forged versions are rejected by API;

@@ -100,18 +100,17 @@ describe("the published niche pages", () => {
     expect(coloristWords.indexOf("Bond Treatment")).toBeLessThan(coloristWords.indexOf("Color Product"))
   })
 
-  test("hands the app the colorist niche and the English canonical landing path", () => {
+  test("hands the app the colorist niche and language without marketing attribution", () => {
     const url = new URL(
       buildAppSignupUrl({
         niche: getEnabledNichePageBySlug("for-independent-colorists")?.niche,
-        landingPath: "/for-independent-colorists",
         locale: "uk",
       }),
     )
 
     expect(url.pathname).toBe("/register")
     expect(url.searchParams.get("niche")).toBe("premium-colorist")
-    expect(url.searchParams.get("landing_path")).toBe("/for-independent-colorists")
+    expect(url.searchParams.get("landing_path")).toBeNull()
     expect(url.searchParams.get("lng")).toBe("uk")
   })
 
@@ -142,14 +141,13 @@ describe("the published niche pages", () => {
     const url = new URL(
       buildAppSignupUrl({
         niche: getEnabledNichePageBySlug("for-lash-artists")?.niche,
-        landingPath: "/for-lash-artists",
         locale: "pl",
       }),
     )
 
     expect(url.pathname).toBe("/register")
     expect(url.searchParams.get("niche")).toBe("lash-artist")
-    expect(url.searchParams.get("landing_path")).toBe("/for-lash-artists")
+    expect(url.searchParams.get("landing_path")).toBeNull()
     expect(url.searchParams.get("lng")).toBe("pl")
   })
 })

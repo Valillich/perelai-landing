@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { setRequestLocale } from "next-intl/server"
 import { JsonLd } from "@/components/seo/json-ld"
-import { PostHogBootstrap } from "@/components/analytics/posthog-provider"
+import { LegacyAttributionCleanup } from "@/lib/attribution"
 import { isPublishedLocale, PUBLISHED_LOCALES } from "@/i18n/locales"
 import { env } from "@/lib/env"
 import {
@@ -68,7 +68,7 @@ export default async function LocaleLayout({
       </head>
       <body>
         <JsonLd data={baseSchema} />
-        <PostHogBootstrap locale={locale} />
+        <LegacyAttributionCleanup />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
