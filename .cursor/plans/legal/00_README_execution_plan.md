@@ -398,7 +398,10 @@ Do not infer a business contract merely from an email address or payer relations
 ### 7.5 End-client booking evidence
 
 Present and record the appropriate affirmative Perelai Booking Terms agreement separately from
-Business terms where the approved formation model requires it. For a contractual submission, snapshot:
+Business terms where the approved formation model requires it. In the standard no-prepayment/no-fee
+flow in document 19, the cancellation reminder and Business privacy notice are presented information,
+not an additional required Business-policy checkbox. Do not fabricate Business contractual acceptance.
+For a contractual submission, snapshot:
 
 ```text
 booking entity id
@@ -428,24 +431,28 @@ never pre-check a waiver or reuse the general Terms checkbox as one. Send durabl
 cancellation confirmations through the verified Perelai/Paddle channel. Reacceptance must not block
 cancellation, privacy requests or legally required data retrieval.
 
-## 8. Business legal settings required before booking rollout
+## 8. Simple Business information setup before public booking
 
-Add validated workspace settings for:
+Implement [19_simple_booking_legal_setup_20260923.md](19_simple_booking_legal_setup_20260923.md).
+At `/settings/booking-card` → settings, replace the raw legal-field form with “Информация для клиентов”:
+confirm provider identity/contact, select standard no-prepayment/no-cancellation-fee terms and an
+optional cancellation reminder, then preview/confirm the generated Business Privacy Notice.
 
-```text
-Legal business name
-Trader/business address or legally sufficient contact details
-Business contact email
-Privacy contact email
-Privacy notice URL
-Booking terms URL
-Cancellation policy text or URL
-Refund policy text or URL
-Policy version / last updated timestamp
-```
+SOLO and STUDIO share the same simple path. Use existing profile facts only as suggestions for
+confirmation; legal name/address/contact requirements depend on the served market. A single monitored
+contact can initially handle both service and privacy enquiries. Do not require a separate website,
+policy URL, manual version identifier, refund document or checkbox for a polite reminder.
 
-Requirements vary by service and jurisdiction. The product must offer the fields and block or warn on
-missing launch-critical disclosures; Perelai must not invent policies for the business.
+The generated notice uses a centrally reviewed template and real privacy/retention facts. The owner
+does not write legal prose. Keep custom text/URLs under “У меня другие условия”; retain existing
+custom policies, without inventing business facts or silently replacing them. Refund disclosures are
+conditional on actual money/prepayment/fee arrangements, including arrangements outside Perelai.
+Their absence never blocks the standard no-money booking flow. SaaS Refund Policy is separate.
+
+API and UI must recognise both a valid generated Business notice and an adequate external notice.
+Missing required identity/contact, an unusable notice or unapproved platform terms blocks new public
+intake with a concrete setup action; it does not block the internal calendar. Missing optional URLs
+or non-applicable refund fields do not. Generate versions server-side and retain the presented text.
 
 ## 9. Implementation phases
 
@@ -528,7 +535,9 @@ Provider submissions remain separately authorised operator actions; no guarantee
 - add workspace legal settings and public API fields;
 - render layered notice at the point of collection using copy in
   `08_ui_copy_and_surface_matrix.md`;
-- add business policy agreement and separate marketing opt-in;
+- implement document 19's simple SOLO/STUDIO setup and generated Business notice;
+- require Business agreement only for applicable contractual terms, not a standard no-fee reminder;
+- keep any supported marketing opt-in separate and optional;
 - snapshot versions with the booking/request/order/reservation record;
 - repeat on confirmation, proposal, status, receipt, preference and client-hub surfaces as relevant.
 
@@ -686,8 +695,11 @@ of any already-enabled export remain mandatory. Do not rebuild an export/privacy
 
 - footer shows Public Booking Terms, not B2B Terms;
 - layered notice identifies the business as controller and Perelai as processor for Customer Data;
-- missing business policies use approved fallback/warning behaviour, never invented prose;
-- required business-policy checkbox is unchecked and blocks submission where enabled;
+- standard setup works with confirmed facts and a reviewed generated Business notice, without
+  external policy URLs, refund text or manual policy versions (document 19);
+- optional/non-applicable missing fields never trigger a blanket publication gate; actual missing
+  identity/notice/platform approval produces a specific setup error, never invented prose;
+- any applicable Business-policy checkbox is unchecked; the standard no-fee reminder needs none;
 - marketing opt-in is separate, unchecked and optional;
 - stored evidence references exact business and Perelai policy versions;
 - no token-bearing public URL is copied to landing.

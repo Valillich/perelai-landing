@@ -126,16 +126,31 @@ Dynamic terms in square brackets are escaped text from validated public Business
 > provide the booking service and uses limited technical data to operate and protect the platform.
 > **Business privacy notice** · **Perelai Privacy Notice**
 
-If the Business has no approved external privacy URL, show only a counsel-approved generated short
-notice populated from structured business identity/contact/purpose/retention fields. Do not invent a
-generic policy and do not claim Perelai is sole controller.
+An external privacy URL is optional. Implement document 19's generated Business notice: concise first
+layer plus accessible complete information, populated from confirmed identity/contact and reviewed
+purpose/retention/provider facts. Review the reusable template centrally for the launch market; do
+not require each owner to author a policy. A short paragraph alone or a privacy email alone is not
+the full notice. Do not invent facts or claim Perelai is sole controller.
 
-### 5.2 Required Business agreement
+### 5.2 Conditional Business agreement and simple cancellation reminder
+
+For document 19's standard no-prepayment/no-cancellation-fee flow, display the owner-selected reminder
+without a required Business-policy checkbox. No custom Booking Terms or Cancellation Policy URL is
+required. Example for the reviewed standard template:
+
+> Если планы изменились, сообщите об отмене или переносе как можно раньше: `[контакт]`.
+> Для этой записи предоплата и плата за отмену не предусмотрены.
+
+The owner must confirm those facts. An optional “желательно за 12/24 часа” preference creates no
+penalty. No timing selection means no invented deadline. Keep statutory/service rights intact.
+
+For custom material terms, when the approved formation model requires contractual acceptance:
 
 > [ ] I agree to the booking and cancellation terms of `[Business Name]`.
 
-If Business terms and cancellation policy are separate, both must be linked from the sentence or
-presented immediately next to it. Snapshot the rendered versions/hash.
+Present the actual applicable terms next to the statement or as linked documents. Do not demand two
+separate documents when one contains the relevant information. Snapshot the shown versions/text;
+external URL evidence must not claim to capture the remote document contents.
 
 Perelai Booking Terms need their own linked contractual statement and affirmative evidence when
 the approved formation model requires it. Business-policy acceptance does not silently incorporate
@@ -172,10 +187,25 @@ Exact formation/copy remains counsel-owned and must match backend status transit
 
 ## 6. Business legal settings copy
 
-Settings intro:
+Use `/settings/booking-card` → settings → **“Информация для клиентов”**, detailed in document 19.
+The main flow is identical for SOLO and STUDIO: confirm provider/contact → choose standard terms and
+optional cancellation reminder → preview the prepared Business Privacy Notice → save/enable.
+Reuse profile values for confirmation, hide machine versions and derive the common privacy contact
+from the business contact unless the owner wants a separate address.
+
+Simple-flow intro:
+
+> Проверьте, кто оказывает услугу и как с вами связаться. Мы подготовим информацию для клиентов
+> по вашим ответам. Писать юридические документы самостоятельно не нужно.
+
+Offer the reviewed generated notice in-place with a full details view, not a required external URL.
+Do not publish before the owner confirms that its facts match the business. Preview identifies both
+the short first layer and the complete notice; this is not a guarantee of universal legal compliance.
+
+“У меня другие условия” reveals the existing custom fields. Advanced-settings intro:
 
 > Add the legal and policy information your clients should see before they submit. Perelai provides the
-> page technology but does not create or approve your legal terms. Requirements depend on your
+> page technology and reviewed standard templates, but does not approve your custom legal terms. Requirements depend on your
 > business and location; obtain professional advice where needed.
 
 Field help:
@@ -191,16 +221,16 @@ Privacy contact email
   Where clients can ask how you use their personal data.
 
 Privacy notice URL
-  Link to your current client-facing privacy notice.
+  Optional alternative to the prepared Business notice; your own current client-facing notice.
 
 Booking terms URL
-  Link to the terms that govern the underlying service or booking.
+  Your own service/booking terms, when using the custom path.
 
 Cancellation policy
-  Explain deadlines, no-shows, fees and how to cancel or reschedule.
+  Custom deadlines/fees and how to cancel; the standard path uses a simple no-fee reminder.
 
 Refund policy
-  Explain eligibility and process when payment/refunds apply.
+  Only when relevant to payment, deposit or fee arrangements. Not required for standard unpaid booking.
 ```
 
 Validation must block `javascript:`, `data:`, credential-bearing URLs and non-HTTPS production links
@@ -243,11 +273,24 @@ Blocked external navigation:
 
 Never fall back to placeholder legal prose.
 
-Missing Business policy on public booking:
+Apply document 19's readiness matrix instead of a blanket missing-policy rule. Empty optional URLs,
+refund fields and cancellation timing do not block the standard flow. Required identity/contact facts,
+a usable generated or external Business notice and approved Perelai terms/copy still matter.
 
-> `[TBD: counsel-approved launch-block or transparent warning]`
+Owner needs required facts:
 
-Do not write `By booking, you agree to the business's policies` when no policy was presented.
+> Чтобы включить онлайн-запись, укажите `[конкретное поле]`. **Заполнить**.
+
+Platform template/approval is not ready:
+
+> Информация для клиентов ещё готовится. Ваши настройки сохранены; пока можно вести записи вручную.
+
+End client, only while intake is actually unavailable:
+
+> Онлайн-запись временно недоступна. Свяжитесь с `[бизнес / подтверждённый контакт]`.
+
+Do not claim agreement to an absent policy. Do not use a general warning flag to bypass the Business
+notice. The standard reviewed/generated path is a complete supported path, not a missing-policy exception.
 
 ## 9. Analytics allowlist
 

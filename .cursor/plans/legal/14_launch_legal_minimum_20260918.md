@@ -4,6 +4,13 @@
 the unresolved C-05/C-07/C-19 and voluntary-refund recommendations in dated reviews 12/13.
 Scope: plans and drafts only; no publication, provider submission or production activation.
 
+**Public-booking UX supplement, 2026-09-23:**
+[document 19](19_simple_booking_legal_setup_20260923.md) defines the simple SOLO/STUDIO path:
+confirmed identity/contact, selected no-prepayment/no-fee information and a prepared layered Business
+Privacy Notice. No mandatory external policy URLs, Refund Policy or reminder checkbox for that path.
+Review the reusable template within this existing launch packet; individual masters need not write
+legal documents. Actual payment/service obligations and the SaaS Refund Policy remain separate.
+
 ## 1. Launch contract to use
 
 Read the [2026-09-16 policy, updated through 2026-09-18](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/inventory/launch-decisions-20260916.md),

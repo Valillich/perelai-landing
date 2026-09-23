@@ -9,6 +9,13 @@
 **Effective date:** `[TBD: YYYY-MM-DD]`  
 **Last updated:** `[TBD: YYYY-MM-DD]`
 
+**Internal implementation note — not public copy:** document 19 supplies the simple no-payment
+booking setup. A master/studio may publish a reviewed generated Business notice and selected standard
+no-prepayment/no-cancellation-fee information without a separate website or custom policy URLs.
+Refund disclosures are conditional on actual money arrangements; a cancellation reminder alone
+needs no required checkbox. Do not turn the list in §6 into universally required fields. Review the
+reusable first-market template once; never claim a single consent paragraph is the full privacy notice.
+
 ## At a glance
 
 - Perelai provides the booking/request technology.
@@ -114,18 +121,19 @@ marketing permission through the method supplied by the Business.
 
 ## 6. Business terms, cancellation and refunds
 
-Before submitting, review the Business's displayed:
+Before submitting, review the Business's displayed information, as applicable to your request:
 
 - legal/business identity and contact details;
 - description and total price or method of calculating it;
 - confirmation process;
-- cancellation, rescheduling and no-show policy;
+- cancellation and rescheduling instructions, and any applicable no-show terms;
 - refund policy where payment is involved; and
 - other material service or consumer terms.
 
 Where the interface asks you to agree to Business terms, that agreement is between you and the
-Business. Perelai records the version/timestamp for the Booking Service but does not author, approve or
-guarantee the Business's policy.
+Business. Perelai records the version/timestamp for the Booking Service. Where a standard template is
+available, the Business chooses it and confirms its facts. Perelai does not approve or guarantee the
+Business's custom terms or its compliance with obligations for the underlying service.
 
 Contact the Business first to cancel, reschedule, obtain a refund or resolve an underlying-service
 dispute. Perelai support may help with a technical issue but cannot order the Business to provide a

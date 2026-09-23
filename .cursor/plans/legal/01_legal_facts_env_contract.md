@@ -129,6 +129,29 @@ changed. Build output or an approval manifest must preserve the exact rendered d
 | File attachments | CURRENT CODE; DEPLOYMENT TO VERIFY | Inventory CORE_WORKSPACE includes files/FileAsset storage. Audit content, metadata, access, retention and sensitive-data handling; do not silently omit deployed attachments from notices. |
 | Coworker availability | CURRENT CODE, ADR-0010 | Linked Companies see opaque occupied intervals plus company name/colour. No foreign client/staff/service/amount/note or resolvable transaction ID; assess identifiability of solo-business data. |
 
+### Public booking legal setup — 2026-09-23 decision
+
+See [document 19](19_simple_booking_legal_setup_20260923.md) for the current product contract.
+Observed source has no end-client card collection/acquiring/automatic charge in the booking form.
+This does not establish whether the Business separately takes prepayments or sells prepaid packages.
+
+- Current UI: `/settings/booking-card` → settings → `PublicBookingSettingsSheet`, 11 legal fields.
+  Current readiness uses custom booking/cancellation disclosures and a privacy URL; refund absence
+  alone does not block. The simplified/generated-notice path is **planned, not implemented** here.
+- Standard eligibility: the owner confirms no prepayment/deposit/cancellation fee for this flow.
+  No required refund text, custom policy URL, manually entered version or cancellation-reminder
+  checkbox. Both SOLO and STUDIO use the same setup.
+- Confirm actual provider identity and monitored contact; do not treat Company display name or
+  account email as verified public legal identity. Collect additional facts only when applicable.
+- Platform-supplied template inputs: approved first-market/language wording, actual purposes/legal
+  bases, recipient/transfer facts and retention/rights procedures from §§4–7. Review these once for
+  the supported template; do not delegate legal drafting or unknown provider facts to each master.
+- A generated layered Business notice satisfies the product's notice-presence requirement when
+  approved, populated, owner-confirmed and presented. An adequate external notice is an alternative.
+  Privacy acknowledgement is not consent; do not derive consent from booking submission.
+- Preserve legacy/custom agreements and capture selected template/path/version plus rendered text
+  in server-validated revision/evidence. Optional/non-applicable fields stay out of blocking errors.
+
 ## 3. Feature truth table to complete at release
 
 Owner must mark one value for every row: `LIVE`, `BETA`, `FEATURE_FLAGGED`, `PLANNED`, or

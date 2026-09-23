@@ -4,6 +4,12 @@ Date: 2026-09-23. Repo: beauty-finance, branch `bill`. Status: code complete,
 not legally approved. This task implements the approved plan (00 §§6.4, 7.5, 8;
 LGL-4); it does not author or approve law.
 
+**Later product decision:** [document 19](19_simple_booking_legal_setup_20260923.md) replaces the
+interim custom-URL/default-block UX with a planned standard SOLO/STUDIO setup and a reviewed generated
+Business notice. This record describes the implementation before that new UX. Do not interpret its
+11 fields as universally mandatory: refund absence does not itself block current intake, and the
+standard no-prepayment/no-fee path must not require it. No deployment/implementation of 19 is claimed.
+
 ## What was implemented
 
 ### API
@@ -92,8 +98,9 @@ LGL-4); it does not author or approve law.
 - `.env.example`: `LEGAL_BOOKING_TERMS_VERSION` and
   `LEGAL_BOOKING_ACCEPTANCE_COPY_VERSION` (+ `VITE_LEGAL_BOOKING_TERMS_VERSION`)
   remain `[TBD: counsel-approved immutable version]` — unusable values are
-  rejected by `usableVersion`, so evidence records `null` rather than a
-  placeholder.
+  rejected by `usableVersion`. The initial pass recorded `null`; the later
+  correction rejects new submissions before writes until usable approved
+  versions are configured. Do not use the initial-pass behaviour as the contract.
 
 ## Tests
 
@@ -138,13 +145,13 @@ LGL-4); it does not author or approve law.
 
 ## Blocked production dependency
 
-Production launch of the public booking legal layer remains blocked on
-counsel/owner deliverables, not code:
+The implemented interim layer still requires the following publication facts.
+Document 19 separately adds the pending engineering work for simple setup:
 
 1. Approved immutable `LEGAL_BOOKING_TERMS_VERSION` and
    `LEGAL_BOOKING_ACCEPTANCE_COPY_VERSION` (plus landing publication of the
    Perelai Booking Terms document — 05 is still draft with `[TBD]`/`{{...}}`).
-   Until configured, evidence rows record `null` for these versions.
+   Until configured, new submissions are rejected before any evidence row is created.
 2. Business-side disclosures are self-service settings; launch comms should
    tell businesses that Perelai does not create their policies. Since the
    second pass (review R3) the intake is fail-closed server-side: without

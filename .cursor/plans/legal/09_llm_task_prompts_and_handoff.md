@@ -90,11 +90,17 @@ OnboardingPage.
 
 ```text
 Implement 00_README_execution_plan.md §§6.4, 7.5, 8 and LGL-4; use
-05_public_booking_terms_source_en.md and 08_ui_copy_and_surface_matrix.md §§2 and 5-6.
+05_public_booking_terms_source_en.md, 08_ui_copy_and_surface_matrix.md §§2 and 5-6,
+and 19_simple_booking_legal_setup_20260923.md (current simple-setup/readiness decision).
 Replace PublicBookingPage's AuthLegalLinks with PublicBookingLegalNotice. Add structured Business legal
 settings, safe public DTO fields and version/hash snapshots. Show Business policies + Perelai Booking
-Terms/Privacy at collection. Keep required Business agreement, privacy acknowledgement and optional
-marketing permission semantically separate. Never invent a missing Business policy. Do not forward
+Terms/Privacy at collection. Replace the 11-field wall with confirmed identity/contact, standard
+no-prepayment/no-cancellation-fee settings and a reviewed generated Business notice. SOLO and STUDIO
+use the same path: no external policy URLs, refund text or manual versions required. Keep custom
+policies available and preserve legacy settings. Do not require a checkbox for the standard reminder
+or for Privacy; keep applicable contractual Business agreement, Privacy presentation and optional
+marketing permission separate. Use the scoped readiness matrix, not a blanket missing-URL gate.
+Never invent business facts, legal approval or retention promises. Do not forward
 token-bearing paths to landing. Apply appropriate links to confirmation/status/receipt/preferences/
 client-hub pages. Add per-mode, missing-policy, XSS/URL, evidence and accessibility tests.
 ```
