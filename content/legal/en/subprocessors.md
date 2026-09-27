@@ -1,88 +1,58 @@
 ---
 document: subprocessors
-version: "[TBD: counsel-approved immutable version]"
-effectiveDate: "[TBD: YYYY-MM-DD]"
-lastReviewedDate: "[TBD: YYYY-MM-DD]"
-status: draft
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
+status: approved
 sourceLocale: en
-approvedBy: "[TBD: internal approval reference]"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Subprocessor List
 
 ## About this list
 
-`[Internal launch scope, 2026-09-18: complete vendors actually processing launch data; omit unused
-candidate rows. Google verification, STUDIO trial and Drawer do not themselves add a new contracted
-vendor. Do not invent a CRM, certification or enterprise procurement process. Document 14 applies.]`
+{{LEGAL_PROVIDER_FULL_NAME}}, trading as {{TRADING_NAME}}, uses the providers below to process Customer
+Personal Data on behalf of business customers under our [Data Processing Addendum](/legal/dpa). The
+same providers also process data for which Perelai is controller, such as account emails, website
+delivery and support correspondence, as described in our [Privacy Notice](/legal/privacy).
 
-{{LEGAL_PROVIDER_FULL_NAME}}, trading as Perelai, uses the entities listed in the approved table below
-to process Customer Personal Data on behalf of business customers. Terms such as `Subprocessor` are
-used according to the [Data Processing Addendum](/legal/dpa).
+The Perelai operator, based in Ukraine, administers the Service and provides support remotely using
+encrypted connections. The operator is Perelai itself, not a subprocessor.
 
-Some third parties may instead act as independent controllers for a particular flow, such as a user's
-direct relationship with Google or Paddle as Merchant of Record. Those services are identified
-separately and are not mislabelled as subprocessors merely for convenience.
+## Subprocessors
 
-## Approved Subprocessors
-
-> Production publication must contain only verified rows. Do not display `[TBD]`, candidates, or an
-> empty table with the words `complete list`.
-
-| Legal entity | Service/function | Personal data/categories | Processing locations | Transfer mechanism/safeguards | Controller context | Last verified |
-|---|---|---|---|---|---|---|
-| `[TBD]` | application/API hosting | account and Customer Data; technical data | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | PostgreSQL/database hosting | application database records | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD: private object-storage entity]` | object/file storage, if live | imports/files; short-lived Workspace Data Export archives and object metadata | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | Redis/queue infrastructure, if managed/live | task, notification and limited payload data | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD: Resend contracted entity]` | transactional email delivery | recipient, sender, message metadata/content, delivery events | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | error monitoring, if configured | errors, request/user/technical context per scrub rules | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | customer support tooling, if configured | support contact/content and attachments | `[TBD]` | `[TBD]` | Perelai subprocessor | `[TBD]` |
-| `[TBD]` | Web Push/notification delivery beyond direct browser protocol, if any | subscription endpoint/keys, message/delivery data | `[TBD]` | `[TBD]` | assess by flow | `[TBD]` |
-
-## Processors of Perelai-controller data
-
-These providers are not Customer Data subprocessors for the listed flows. A separate Customer Data
-flow, if introduced, needs its own classification and DPA authorisation.
-
-| Legal entity/service | Function and data | Role | Locations/transfer safeguards | Last verified |
+| Provider | Function | Personal data | Location | Safeguards |
 |---|---|---|---|---|
-| `[TBD: PostHog contracted entity]` | landing analytics; typed events and approved attribution | processor for Perelai-controller analytics; no client content | `[TBD account region/contract]` | `[TBD]` |
-| `[TBD landing hosting/CDN]` | landing request and security data | processor for Perelai-controller website operation | `[TBD]` | `[TBD]` |
+| Hetzner Online GmbH, Germany | hosting of the application and API, PostgreSQL database, Redis job queues, file storage and on-server database backups | all Customer Data stored in the Service; technical data | Falkenstein, Germany (EU) | data processing agreement under Article 28 GDPR |
+| Cloudflare, Inc., United States | network delivery, DNS, TLS and security protection for Perelai websites, app, API and booking pages; object storage for off-site database backups | request and connection data and content passing through the network; database backup copies | global network; backup storage located in the EU | Cloudflare data processing addendum including the EU standard contractual clauses |
+| Plus Five Five, Inc. (Resend), United States | delivery of transactional and booking emails | recipient address, sender, message content and delivery events | United States | Resend data processing agreement including the EU standard contractual clauses |
+| Zoho Corporation, United States | support mailbox for {{SUPPORT_EMAIL}} | support correspondence and any Customer Data a customer chooses to send us | United States | Zoho data processing agreement including the EU standard contractual clauses |
 
-## Other material third-party services / independent-controller contexts
+## Independent services
 
-| Legal entity/service | Function | Role and reason | Data | Locations/transfer information | Last verified |
-|---|---|---|---|---|---|
-| `[TBD: Google entities/services]` | Google sign-in and user-enabled Google Calendar | assess separate sign-in controller relationship and any processor activity for Customer imports | account identifiers, OAuth data, calendar event data | `[TBD]` | `[TBD]` |
-| `Paddle: applicable buyer contracting entity [verify by purchase location]` | SaaS checkout, subscription, billing, indirect tax, invoice/refund and Buyer Portal | authorised reseller/Merchant of Record and independent controller for the buyer Transaction; assess and document any separate processor flow | buyer identity/contact, business/tax details, payment and fraud data, currency/tax/transaction/subscription/refund status | `[TBD Paddle entity, locations and transfer information]` | PLANNED, NOT LIVE |
-| `[TBD: future AI provider]` | AI function | role depends on function/training/retention; separate approval required | `[TBD]` | `[TBD]` | NOT LIVE |
+These organisations are not our subprocessors. They process data under their own terms and privacy
+notices when you choose to use them.
 
-Do not list a provider in multiple tables without explaining the distinct flows. Customer Data
-subprocessor notices follow the DPA; a controller-only vendor change instead follows the applicable
-Privacy Notice/consent obligations. One brand may serve different roles under different contracts.
-Paddle must not be put in the Approved Subprocessors table merely because Perelai receives webhooks.
-Use the actual data-role analysis, contracts and Privacy Notice for each flow.
+| Organisation | Function | Role |
+|---|---|---|
+| Paddle (the Paddle entity shown at checkout) | checkout, subscription billing, indirect tax, invoices and refunds for Perelai subscriptions | Merchant of Record and independent controller for the purchase |
+| Google | Google sign-in and, if a workspace connects it, read-only Google Calendar import | independent controller for the user's Google account; source of imported calendar data |
+| Browser push services (for example Google, Mozilla, Apple, Microsoft) | relaying encrypted Web Push notifications if a user enables them | operated by the user's browser vendor |
 
-## Subprocessor changes
+## Changes
 
-Business customers may subscribe to change notices at `[TBD: verified subscription mechanism]`.
-Perelai gives the notice period and objection/remedy stated in the approved DPA. The production page
-must show scheduled changes separately:
-
-| Proposed entity | Function | Intended date | Locations/transfer | Notice date | Objection deadline/contact |
-|---|---|---|---|---|---|
-| None currently announced / `[TBD]` | | | | | |
-
-Do not use `None` until procurement/deployment audit confirms it.
+We give business customers at least 30 days' notice of an intended new or replacement subprocessor by
+email to the workspace owner's account email and by updating this page, as described in section 6 of
+the [Data Processing Addendum](/legal/dpa). No changes are currently announced.
 
 ## Contact
 
-Questions or a reasonable data-protection objection: {{PRIVACY_EMAIL}}  
-Legal notices: {{LEGAL_NOTICES_EMAIL}}
+- Questions or a data protection objection: {{PRIVACY_EMAIL}}
+- Legal notices: {{LEGAL_NOTICES_EMAIL}}
 
 ## Change history
 
-| Effective date | Version | Change | Notice reference |
-|---|---|---|---|
-| `[TBD]` | `[TBD]` | initial approved publication | `[TBD]` |
+| Effective date | Version | Change |
+|---|---|---|
+| 2026-10-01 | 2026-10-01.1 | initial publication |

@@ -245,6 +245,13 @@ paths. New business activity may become unavailable; the exact limits must be sh
 ## 12. Data, closure and support
 
 Cancellation, refund, trial expiry and failed payment do not themselves delete workspace data.
+
+`[Internal policy update, 2026-09-24: decision 21 accepts deletion within 30 days of a confirmed
+Company-deletion instruction and residual backup expiry within 30 days after active deletion;
+verify execution before publication. Perelai/FOP invoices and payout/tax evidence need their own
+accountant-reviewed category/start-event/period/extension table. Do not insert “all billing data:
+7 years”, or extend the FOP's retention duties to the salon's entire CRM/financial history.]`
+
 [Terms §17](/legal/terms), [Privacy §12](/legal/privacy) and [DPA §12](/legal/dpa) govern return,
 retention, deletion and legal holds. `[TBD: C-10/F-09/F-18 read/retrieval window, closure process,
 restricted export and applicable switching terms.]`

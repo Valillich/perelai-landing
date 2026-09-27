@@ -6,6 +6,10 @@ packets in parallel; conditional features stay scoped to their own release. Give
 repository `CONTEXT.md`/`AGENTS.md`. Do not ask one small model to implement landing, app, API and public
 booking in one change.
 
+Use [decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) for the owner-accepted common
+privacy baseline, regional additions and Company-deletion/backup policy. This is shared preparation,
+not a new country-by-country approval project.
+
 ## Global preamble for every task
 
 ```text
@@ -22,6 +26,15 @@ capacity stay $19/$29 and 1/5. Trial is 21-day STUDIO with no card; launch v1 ac
 after expiry, never automatic trial-end billing. C-05/C-11 policy is decided; verify implementation.
 No separate free-MVP contract, voluntary R-01 guarantee, new privacy/refund portal, all-country
 annexes or optional-feature rebuild is needed. Do not weaken TEAM-RELEASE or current data duties.
+Apply decision 21: one common GDPR-based operational baseline, small applicable regional additions,
+and one shared review/evidence packet. GDPR does not automatically satisfy other laws. Company
+deletion is within 30 calendar days of a confirmed authorised instruction; residual backups within
+30 days after active deletion (ordinary total at most 60). These are accepted policy requirements,
+not verified live behaviour. Verify execution; do not reopen the numeric policy or invent a blanket
+seven-year billing rule. Complete the active-client retention profile and separate FOP accounting
+schedule. Manual support-assisted procedures are acceptable if they actually meet the duties.
+Do not require a lawyer certificate per country/template/salon. Preserve profile eligibility,
+language suitability, exact-country references and immutable publication/approval checks.
 ```
 
 ## Task A — legal content loader and env validation (landing only)
@@ -120,8 +133,16 @@ loading is a test failure.
 
 ## Task G0 — early Paddle review packet (preparation only)
 
+**Status 2026-09-26:** the legal-page part is done — Terms, Privacy and Refund & Cancellation Policy
+(plus DPA, Booking Terms, Cookies, Subprocessors) are approved v1 `2026-10-01.1`, effective
+2026-10-01, with `/legal/billing` as the Refund Policy and identity/support in register 01. Remaining
+owner actions: deploy the landing with the exact `NEXT_PUBLIC_LEGAL_*` build variables, confirm
+`https://perelai.com/legal/terms|privacy|billing` render, prepare the Paddle domain list
+(`perelai.com`, `app.perelai.app` and any real checkout origin) and pricing screenshot, then submit.
+
 ```text
-Follow LGL-0A and document 14 alongside BILL2B and later BILL work. Prepare truthful, approved Terms/Privacy/Refund
+Follow LGL-0A and documents 14/21 alongside BILL2B and later BILL work. Reuse the common packet;
+unused countries and an unneeded privacy portal do not block preparation. Prepare truthful, approved Terms/Privacy/Refund
 pages, explicit Refund Policy navigation, verified identity/support and relevant domain list. Prepare
 an owner-approved pricing screenshot for private provider review where the pricing page is not ready.
 No production drafts, guessed prices, KYC documents in Git or activation of live checkout. Record
@@ -131,8 +152,16 @@ provider contract requires a separately authorised owner/operator action, not th
 
 ## Task G0b — Google legal/verification packet (parallel preparation)
 
+**Status 2026-09-26:** the approved Privacy Notice §4 now states Google sign-in data
+(`openid email profile`: ID, email, name), Calendar `calendar.events.readonly` data, use, human-access
+limits, disconnect behaviour (local token/sync-state deletion; revoke in Google Account) and Google's
+recommended Limited Use sentence; Terms §10 states read-only import. Remaining owner actions: OAuth
+consent screen brand/domain verification with `https://perelai.com/legal/privacy`, scope
+justification text and the Calendar read-only demo video, then submission.
+
 ```text
-Follow LGL-0B and document 14. Prepare accurate brand/domain/home/Privacy/support facts, Google-data
+Follow LGL-0B and documents 14/21. Reuse the common packet, completed FOP identity and shared support
+contact. Prepare accurate brand/domain/home/Privacy/support facts, Google-data
 scope/use/storage/sharing/retention/deletion and Limited Use, and a Calendar read-only demonstration.
 Distinguish basic sign-in from calendar.events.readonly verification. Remove two-way Calendar claims;
 do not wait for BILL completion. A pending optional integration stays unavailable with honest copy

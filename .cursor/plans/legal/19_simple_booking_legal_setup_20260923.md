@@ -8,6 +8,21 @@ flag, or declare the UX implemented. Country/language, provider and retention fa
 the existing launch packet; review one reusable template there, not a separate legal project for
 each SOLO owner.
 
+**Implementation follow-up, 2026-09-23:** see
+[review 20](20_booking_setup_review_and_market_templates_20260923.md) for the source-reviewed
+implementation, open corrections and verified focused tests. The [market template package](templates/business-notice/README.md)
+contains proposed Polish and Ukrainian client text, plus US English and common EU English variants
+added on 2026-09-24.
+It is still DRAFT; it does not change the reviewed registry or approve production. The rules below
+remain the specification.
+
+**Owner-accepted simplification, 2026-09-24:**
+[decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) provides one shared operational/data
+foundation and small applicable regional additions. Country/language variants reuse this preparation;
+they do not require a legal project for each master or country. The 30-day Company active-deletion
+and subsequent 30-day backup limits are accepted requirements awaiting execution evidence, not
+active-client retention periods or a promise of immediate erasure. Keep the standard owner UI simple.
+
 ## 1. Decision and limits
 
 - **An empty Business Refund Policy must not block a booking with no prepayment, deposit or
@@ -113,6 +128,12 @@ not choose legal bases or invent durations in a free-text box. Retention criteri
 business instructions and deletion/return operations, including any approved manual procedure.
 Do not fill unresolved platform facts with guessed defaults.
 
+Present the prepared ordinary-client retention rule in plain language; a SOLO/STUDIO owner confirms
+its factual fit rather than entering legal periods or designing a deletion process. Use the custom
+path for materially different purposes. Company closure, deleting one staff login and deleting one
+client record remain distinct. Do not add a required Refund Policy or a legal-certification checkbox
+as part of retention setup. Perelai's own billing/tax evidence is not the salon's retention policy.
+
 Render the full generated Business notice on the public booking origin in an accessible expandable
 section or document view. Give it a stable, token-free address usable without login or a booking token;
 retain its exact versioned text for evidence. An existing adequate external notice remains an option.
@@ -164,6 +185,22 @@ booking/client/token/evidence writes and show the changed information for review
    presentation; no required reminder/privacy checkbox; applicable custom-deposit disclosures;
    partial template/identity refusal before writes; stale revision; tenant permissions; each enabled
    booking mode; legacy custom-policy preservation. Review mobile, keyboard and screen-reader flows.
+
+Bind “Save and enable” to the exact complete draft reviewed/saved by that action. Validate its server
+revision under the publication lock and reject a competing edit, rather than publishing whatever
+draft happens to be current. A confirmed privacy preview alone does not identify the full draft.
+Keep active templates pinned to immutable country/language/version references; selecting a newer
+default for previews must not implicitly withdraw a still-valid active version. Explicitly retire
+an old version if its facts become inaccurate. Enforce the approved processing/mode scope server-side;
+the EU/PL/UA/US appointment/request drafts do not authorise ORDER/RENTAL wording. The US variant also
+needs the actual state/business profile and matching privacy disclosures described in its notes.
+
+For new eligible EU setups, use a more specific approved country default first (PL/pl for Poland),
+then the common EU English source where its country/profile and client-language suitability are
+confirmed. Follow the explicit EU-country/default rules in the template package. Reuse common prose
+through exact-country registry entries; keep existing published versions and own notices until the
+owner explicitly changes them. An interface-locale change must not replace the legal notice, and
+an English-comprehension checkbox is not a substitute for information clients can understand.
 
 No payment integration, automated refunds, separate salon website, new consent-management service,
 policy version editor, general-purpose legal chatbot or full document editor is required.

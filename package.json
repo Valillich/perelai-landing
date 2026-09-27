@@ -12,7 +12,8 @@
     "test": "vitest run",
     "generate:niches": "node scripts/generate-niche-catalog.mjs",
     "check:uniqueness": "tsx scripts/check-uniqueness.mjs",
-    "verify:niches": "tsx scripts/verify-niches.mjs && pnpm check:uniqueness"
+    "verify:niches": "tsx scripts/verify-niches.mjs && pnpm check:uniqueness",
+    "legal:manifest": "tsx scripts/legal-manifest.ts"
   },
   "dependencies": {
     "framer-motion": "12.23.26",

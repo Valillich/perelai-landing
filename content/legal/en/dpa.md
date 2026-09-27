@@ -1,81 +1,85 @@
 ---
 document: dpa
-version: "[TBD: counsel-approved immutable version]"
-effectiveDate: "[TBD: YYYY-MM-DD]"
-lastReviewedDate: "[TBD: YYYY-MM-DD]"
-status: draft
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
+status: approved
 sourceLocale: en
-approvedBy: "[TBD: internal approval reference]"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Data Processing Addendum
 
-This Data Processing Addendum (**DPA**) forms part of the [Perelai Terms of Service](/legal/terms), an
-Order Form or another written agreement that incorporates it (the **Agreement**) between:
+This Data Processing Addendum (**DPA**) forms part of the [Perelai Terms of Service](/legal/terms) or
+another written agreement that incorporates it (the **Agreement**) between:
 
-- the Customer identified in the Agreement (**Customer** or **Controller**); and
-- {{LEGAL_PROVIDER_FULL_NAME}}, {{LEGAL_PROVIDER_FORM}}, trading as Perelai, of
-  {{BUSINESS_ADDRESS}} (**Perelai** or **Processor**).
+- the Customer identified in the Agreement (**Customer**); and
+- {{LEGAL_PROVIDER_FULL_NAME}}, an {{LEGAL_PROVIDER_FORM}} registered in {{COUNTRY_OF_REGISTRATION}},
+  trading as {{TRADING_NAME}}, of {{BUSINESS_ADDRESS}} (**Perelai**).
 
-It applies when Perelai processes Customer Personal Data on behalf of the Customer. Capitalised terms
-not defined here have the meaning in the Agreement.
+It applies when Perelai processes Customer Personal Data on behalf of the Customer. The Customer
+accepts this DPA electronically when its authorised representative accepts the Terms and this DPA.
+Capitalised terms not defined here have the meaning in the Agreement.
 
 ## 1. Definitions
 
-For this DPA:
-
-- **Applicable Data Protection Law** means the privacy/data-protection law that applies to the
-  relevant processing, including the GDPR and, where applicable, UK data protection law.
+- **Applicable Data Protection Law** means the privacy and data protection laws that apply to the
+  relevant processing, which may include the GDPR, the UK GDPR, the Law of Ukraine "On Personal Data
+  Protection", US state privacy laws, the Personal Information Protection and Electronic Documents
+  Act (Canada) and applicable provincial laws, and the Privacy Act 1988 (Australia).
 - **Controller**, **Processor**, **Personal Data**, **Processing**, **Data Subject**, **Personal Data
-  Breach** and **Supervisory Authority** have the meanings in Applicable Data Protection Law.
+  Breach** and **Supervisory Authority** have the meanings in Applicable Data Protection Law, and
+  include equivalent terms such as business, service provider, owner and manager of personal data.
 - **Customer Personal Data** means Personal Data contained in Customer Data that Perelai processes on
   behalf of the Customer under the Agreement.
 - **Subprocessor** means another processor engaged by Perelai to process Customer Personal Data.
-- **EEA** means the European Economic Area.
-- **Restricted Transfer** means a transfer of Personal Data subject to transfer restrictions under
-  Applicable Data Protection Law.
-- **SCCs** means the applicable European Commission standard contractual clauses for international
-  transfers, as completed and incorporated by the parties.
-- **UK Transfer Mechanism** means the then-valid UK Addendum, IDTA or other approved transfer tool
-  selected and completed by the parties.
+- **Restricted Transfer** means a transfer of Customer Personal Data that is subject to transfer
+  restrictions under Applicable Data Protection Law, including a transfer from the European Economic
+  Area or the United Kingdom to a country without an adequacy decision.
+- **SCCs** means the standard contractual clauses approved by European Commission Implementing
+  Decision (EU) 2021/914.
+- **UK Addendum** means the International Data Transfer Addendum to the SCCs issued by the UK
+  Information Commissioner, version B1.0.
 
 ## 2. Roles and scope
 
-The Customer is Controller and Perelai is Processor for Customer Personal Data, except to the extent
-the parties' actual roles differ for a specific processing activity. Each party is responsible for
+The Customer is Controller and Perelai is Processor for Customer Personal Data. Where the Customer
+itself acts as a processor for another controller, Perelai is its Subprocessor and the Customer
+confirms that its instructions are authorised by that controller. Each party is responsible for
 processing for which it independently determines purposes and essential means.
 
-The Customer determines the purposes of processing, the Data Subjects and data entered, imported or
-collected through its workspace. Schedule 1 describes the subject matter, duration, nature, purpose,
-data and Data Subjects.
+The Customer determines the purposes of processing, the Data Subjects and the data entered, imported
+or collected through its workspace. Schedule 1 describes the subject matter, duration, nature,
+purpose, data and Data Subjects.
 
-This DPA does not govern processing for which Perelai actually acts as an independent Controller,
-as specifically described in the Privacy Notice. Security, troubleshooting, support and exports
-performed on Customer Personal Data to deliver the instructed Service remain covered; their label
-alone does not turn them into independent-controller processing.
+This DPA does not govern processing for which Perelai acts as an independent Controller, as described
+in the [Privacy Notice](/legal/privacy), such as account administration, sign-in security,
+subscriptions and Perelai's own legal obligations. Security, troubleshooting, support and exports
+performed on Customer Personal Data to deliver the Service remain covered by this DPA.
 
 ## 3. Customer instructions and responsibilities
 
-The Agreement, Customer configuration and authorised use of Service features are the Customer's
-documented instructions to Perelai. Perelai will:
+The Agreement, the Customer's configuration and authorised use of Service features, and any
+additional written instructions accepted by Perelai are the Customer's documented instructions.
+Perelai will:
 
 1. process Customer Personal Data only on documented instructions, including for Restricted
    Transfers, unless applicable law requires otherwise;
 2. if legally permitted, tell the Customer before processing required by law; and
-3. immediately inform the Customer if, in Perelai's opinion, an instruction infringes Applicable Data
+3. promptly inform the Customer if, in Perelai's opinion, an instruction infringes Applicable Data
    Protection Law.
 
 Additional instructions must be consistent with the Agreement, technically feasible and lawful. If
 they require material work outside the Service, the parties will agree scope, timing and reasonable
-fees before work begins, unless law requires faster action.
+fees before work begins, unless law requires Perelai to act without charge.
 
 The Customer warrants that:
 
 - it has a lawful basis and provides required notices for Customer Personal Data;
 - its instructions and use comply with Applicable Data Protection Law;
-- it has authority to disclose/import the data and instruct Perelai;
+- it has authority to disclose or import the data and instruct Perelai;
 - it minimises data and does not use Perelai for unsupported sensitive or regulated records; and
-- its owners/staff are authorised and appropriately permissioned.
+- its owners and staff are authorised and appropriately permissioned.
 
 Nothing in this DPA transfers the Customer's controller obligations to Perelai.
 
@@ -85,235 +89,212 @@ Perelai will ensure that people authorised to process Customer Personal Data:
 
 - are bound by contractual or statutory confidentiality obligations;
 - access data only as needed for their duties and the documented instructions; and
-- receive data-protection/security awareness appropriate to their role.
+- receive data protection and security guidance appropriate to their role.
 
+At the effective date of this DPA, Customer Personal Data is accessed only by the Perelai operator.
 Perelai remains responsible for its personnel's compliance with this DPA.
 
 ## 5. Security
 
-Perelai will implement and maintain appropriate technical and organisational measures designed to
-protect Customer Personal Data against accidental or unlawful destruction, loss, alteration,
-unauthorised disclosure or access. The approved measures are set out in Schedule 2.
-
-Measures will take account of the state of the art, implementation cost, and the nature, scope,
-context and purposes of processing, as well as risk to individuals. Perelai may update measures to
-reflect technical development provided the overall level of protection does not materially decrease.
-
-**Schedule 2 is intentionally incomplete in this draft.** Do not publish claims about encryption at
-rest, tenant isolation, certification, recovery objectives or audit reports until production evidence
-supports them.
+Perelai will implement and maintain the technical and organisational measures described in
+Schedule 2, designed to protect Customer Personal Data against accidental or unlawful destruction,
+loss, alteration, unauthorised disclosure or access. Perelai may update the measures to reflect
+technical development provided the overall level of protection does not decrease.
 
 The Customer is responsible for secure configuration within its control, including role assignments,
-credentials, devices, exports, connected services and the content it uploads.
+credentials, devices, downloaded exports, connected services and the content it uploads.
 
 ## 6. Subprocessors
 
-The Customer gives Perelai general written authorisation to use the Subprocessors listed at
-[Subprocessors](/legal/subprocessors), subject to this section. Perelai will:
+The Customer gives Perelai general written authorisation to use the Subprocessors listed on the
+[Subprocessor List](/legal/subprocessors). Perelai will:
 
-1. enter a written contract imposing data-protection obligations materially equivalent to those
-   required for the Subprocessor's processing;
+1. enter a written contract with each Subprocessor imposing data protection obligations that provide
+   at least the same level of protection as this DPA for the Subprocessor's processing;
 2. remain responsible to the Customer for the Subprocessor's performance of those obligations;
-3. conduct reasonable due diligence appropriate to risk; and
-4. provide the name, processing function and location information described in the list.
+3. carry out due diligence appropriate to the risk; and
+4. keep the list current with each Subprocessor's name, function and location.
 
-Perelai will give at least `[TBD: counsel-approved notice period]` advance notice through
-`[TBD: email/account/subscription channel]` of intended additions or replacements, allowing the
-Customer a meaningful opportunity to object before the new processing starts. An urgent event does
-not dispense with applicable authorisation requirements: use an already authorised provider, obtain
-specific authorisation where needed, or suspend the affected processing while resolving it.
-
-The Customer may object during the notice period on reasonable data-protection grounds. The parties
-will work in good faith on a commercially reasonable alternative. If no alternative is available,
-`[TBD: counsel must define whether the affected feature or Agreement may be terminated and any refund
-effect]`.
-
-The public list is not complete until every production infrastructure, email, analytics, monitoring,
-support and integration provider handling Customer Personal Data is verified.
+Perelai will give at least 30 days' notice of an intended addition or replacement of a Subprocessor by
+email to the Company owner's account email and by updating the Subprocessor List. The Customer may
+object on reasonable data protection grounds by writing to {{PRIVACY_EMAIL}} within that period. The
+parties will discuss a reasonable alternative in good faith. If none is available, the Customer may
+terminate the affected subscription before the change takes effect, and Perelai will refund through
+Paddle any prepaid fees for the period after termination. In an emergency affecting security or
+continuity, Perelai may replace a Subprocessor with shorter notice, will notify the Customer as soon as
+possible and the same objection right applies.
 
 ## 7. International transfers
 
-Perelai will not make a Restricted Transfer except on the Customer's documented instructions and using
-a lawful transfer mechanism. Schedule 3 must identify the relevant parties, countries, data and
-mechanism.
+Perelai is established in Ukraine and hosts Customer Personal Data in Germany. Perelai will not make a
+Restricted Transfer except in accordance with the Customer's instructions and a lawful transfer
+mechanism. Where the Customer's transfer of Customer Personal Data to Perelai is a Restricted Transfer
+under the GDPR or UK GDPR, the SCCs and, for the UK, the UK Addendum apply as completed in Schedule 3
+and are incorporated by reference. Onward transfers to Subprocessors outside the European Economic
+Area rely on the Subprocessor's data processing agreement incorporating the SCCs or on an adequacy
+decision.
 
-Where required and applicable:
-
-- the parties will incorporate and complete the correct SCC modules and annexes;
-- the parties will incorporate a completed UK Transfer Mechanism for UK restricted transfers;
-- Perelai will provide information reasonably necessary for the Customer's transfer assessment;
-- the parties will apply supplementary safeguards identified by the assessment; and
-- Perelai will notify the Customer if it can no longer comply with the selected mechanism and will
-  suspend affected transfers or take agreed remediation.
-
-**This DPA does not itself complete the SCCs.** The exporter/importer roles, modules, docking clause,
-optional clauses, competent authority, governing law, data/transfer annexes and security measures must
-be selected and filled without altering protected SCC text. Do not claim Data Privacy Framework
-coverage without verifying the specific recipient's active certification and covered data.
+Perelai will provide information reasonably necessary for the Customer's transfer assessment and will
+notify the Customer if it can no longer comply with the selected mechanism, in which case the affected
+transfer will be suspended or remediated. For data collected in Ukraine, cross-border transfers take
+place in accordance with Article 29 of the Law of Ukraine "On Personal Data Protection".
 
 ## 8. Data Subject requests
 
 Taking account of the nature of processing, Perelai will assist the Customer through appropriate
-technical and organisational measures, insofar as possible, to respond to Data Subject rights.
+technical and organisational measures, insofar as possible, to respond to Data Subject requests.
 
-If Perelai receives a request relating primarily to Customer Personal Data, Perelai will:
+If Perelai receives a request relating to Customer Personal Data, Perelai will not respond as
+Controller unless authorised or legally required, will promptly direct the requester to the Customer
+or notify the Customer, and will protect other Customers, individuals and security when verifying or
+exporting data.
 
-- not respond as Controller unless authorised or legally required;
-- promptly direct the requester to the Customer or notify the Customer;
-- provide available self-service tools and reasonable assistance; and
-- protect other Customers, individuals and security when verifying or exporting data.
-
-Where enabled, Workspace Data Export is a Company-wide operational archive created on an authorised
-owner's instruction. It may assist the Customer with continuity or some rights-response work, but it
-is not designed as a complete verified response to an individual Data Subject. The Customer and
-Perelai must still apply request-specific identity verification, scope, contextual disclosures,
-exceptions and protection of third-party rights. Perelai will not represent that downloading a tenant
-archive alone fulfils access, portability or regional privacy duties.
-
-The Customer is responsible for assessing and responding to the request. Material bespoke assistance
-outside standard Service functionality may be charged at reasonable agreed rates unless the need was
-caused by Perelai's breach or law requires otherwise. A fee discussion, unpaid subscription or
-ordinary commercial export limit must not delay mandatory assistance or statutory response deadlines.
+The Service allows the Customer to view, correct, export and delete client records. Workspace Data
+Export is a Company-wide archive and is not a complete response to an individual Data Subject. Perelai
+will provide reasonable additional assistance by email at {{PRIVACY_EMAIL}}. Assistance required by law
+is not delayed because a subscription is unpaid or restricted. Material bespoke work outside standard
+functionality may be charged at reasonable agreed rates unless caused by Perelai's breach or required
+by law without charge.
 
 ## 9. Personal Data Breaches
 
 Perelai will notify the Customer without undue delay after becoming aware of a Personal Data Breach
-affecting Customer Personal Data. Notice will use `[TBD: verified security/contact channel]` and,
-insofar as information is available, describe:
+affecting Customer Personal Data, and aims to do so within 48 hours. Notice is sent by email to the
+Company owner's account email and, insofar as information is available, describes:
 
-- the nature of the breach, categories and approximate number of affected Data Subjects/records;
+- the nature of the breach, categories and approximate number of affected Data Subjects and records;
 - likely consequences;
 - measures taken or proposed to address and mitigate it; and
 - a contact point for follow-up.
 
 Information may be provided in phases without undue further delay. Perelai will take reasonable steps
-to contain, investigate, mitigate and document the breach and assist the Customer's notification duties.
+to contain, investigate, mitigate and document the breach and assist the Customer's notification
+duties. Notice is not an admission of fault. The Customer decides whether and how to notify authorities
+and Data Subjects, except where Perelai has its own legal notification duty.
 
-Notice is not an admission of fault or liability. The Customer is responsible for deciding whether and
-how to notify authorities and Data Subjects, except for processing where Perelai independently has a
-legal notification duty.
+## 10. Impact assessments and regulatory consultation
 
-`[TBD: incident runbook must set internal targets capable of supporting the Customer's statutory
-deadlines; do not promise a public fixed-hour SLA until operations can meet it.]`
-
-## 10. DPIAs and regulatory consultation
-
-Taking account of the nature of processing and information available, Perelai will provide reasonable
-assistance with the Customer's data-protection impact assessments and prior consultation obligations
-relating to the Service. The Customer remains responsible for determining whether a DPIA or
-consultation is required and for its contents.
+Taking account of the nature of processing and the information available, Perelai will provide
+reasonable assistance with the Customer's data protection impact assessments and prior consultations
+relating to the Service.
 
 ## 11. Information and audits
 
 Perelai will make available information reasonably necessary to demonstrate compliance with this DPA,
-which may include current security documentation, questionnaires and independent reports if they
-exist and can lawfully be shared.
+including this DPA, Schedule 2, the Subprocessor List and written answers to reasonable security
+questionnaires.
 
-Routine audits are ordinarily coordinated no more than once per 12 months. Additional audits
-remain available where reasonably necessary to demonstrate compliance, including reasonable
-indications of non-compliance, an incident or a regulatory requirement. Scheduling and cost terms
-must not defeat the Customer's applicable Article 28 audit/inspection rights. Unless law requires
-otherwise:
-
-- existing independent reports/documentation are reviewed first;
-- at least `[TBD]` written notice is required;
-- scope, timing and auditor are agreed and must avoid disruption and exposure of other customers'
-  data or confidential/security information;
-- the auditor is independent, qualified and bound by confidentiality;
-- the Customer bears reasonable audit costs, except where the audit reveals Perelai's material breach;
-  and
-- findings are used only for compliance and remediation.
-
-Perelai will contribute to lawful inspections and mandatory assistance without withholding them
-because the Customer is in Billing restriction. It may redact information to protect other customers,
-privilege and system security while providing sufficient evidence. This section does not restrict a
-Supervisory Authority's powers.
+If that information is not sufficient, the Customer may audit Perelai's compliance with this DPA once
+in any 12-month period, and additionally after a Personal Data Breach, where a Supervisory Authority
+requires it, or where there are reasonable indications of non-compliance. The Customer must give at
+least 30 days' written notice, except where a shorter period is required by a Supervisory Authority or
+by a Personal Data Breach. The scope, timing and auditor are agreed in advance; the auditor must be
+independent, qualified and bound by confidentiality, and the audit must avoid disruption and exposure
+of other customers' data or security information. The Customer bears its own audit costs unless the
+audit reveals a material breach by Perelai. Audits of Subprocessors rely on their own reports and
+contractual audit rights. This section does not restrict a Supervisory Authority's powers.
 
 ## 12. Return and deletion
 
-During the Agreement, the Customer may access/export Customer Personal Data using `[TBD: verified
-tools and formats]`. If Workspace Data Export is enabled, it is an owner-only, Company-scoped archive
-with a defined manifest, formats and exclusions; generating/downloading it does not delete source
-data. Its code-defined artifact retention and short-lived download controls are not contractual claims
-until production evidence is approved. Artifact expiry does not define the Customer's return or
-retrieval window, and a limited archive manifest does not exhaust the scope of an Article 28 return
-instruction. We provide assistance for in-scope data excluded from self-service export. On termination
-or the Customer's lawful instruction, Perelai will, at the Customer's choice, delete or return Customer Personal Data and delete copies, unless applicable law
-requires storage.
+During the Agreement, the Customer can access and export Customer Personal Data through the Service and
+Workspace Data Export where available, and can ask {{SUPPORT_EMAIL}} for a copy in a commonly used
+machine-readable format. Perelai provides it within 30 days of a verified request, without charge.
 
-The operational schedule is:
+On termination, workspace closure or the Customer's confirmed instruction to delete a workspace,
+Perelai will, at the Customer's choice, return and then delete, or delete, Customer Personal Data, as
+follows:
 
-```text
-Export availability after termination: [TBD]
-Workspace Data Export scope/formats: [TBD verified release manifest]
-Workspace artifact/grant/object cleanup: [TBD verified configuration and orphan sweep]
-Active-system deletion: [TBD]
-Backup rotation/deletion: [TBD]
-Public link invalidation: [TBD]
-Mandatory storage exceptions: [TBD actual applicable legal duty; no blanket security/tax hold
-over all processor Customer Personal Data]
-Switching/retrieval obligations: [TBD F-18 applicability and operational schedule]
-Deletion confirmation process: [TBD]
-```
+- **Return:** available on request until active deletion is completed.
+- **Public access:** public booking pages and links for the workspace are disabled when closure is
+  confirmed.
+- **Active systems:** Customer Personal Data is deleted from the database, file storage and job queues
+  without undue delay and within 30 days of the confirmed instruction.
+- **Backups:** database backups are made daily and kept for up to 7 days in off-site storage and up to
+  10 days on the hosting server. Residual copies are excluded from ordinary use and deleted within 30
+  days after active deletion. If a backup is restored, deletion instructions are applied again before
+  the data returns to use.
+- **Inactive workspaces:** a workspace that remains in restricted mode without a subscription for six
+  consecutive months may be closed after at least 30 days' email notice to the Company owner, and is
+  then deleted on the schedule above.
+- **Confirmation:** Perelai confirms completion of active deletion by email to the Company owner on
+  request.
 
-Backups retained during a documented rotation are isolated from ordinary use and deleted on schedule.
-If restored for disaster recovery, deletion instructions are re-applied. Any legally required retained
-data remains protected and is processed only for that requirement.
+Perelai may retain, with restricted access and only for the stated purpose: evidence of acceptance of
+the Terms, this DPA and other Perelai documents for 1095 days after deletion; a minimal record of the
+deletion request and its completion, without workspace content, for 1095 days; and any Customer
+Personal Data that applicable law requires Perelai to keep, for the period required. Such data is not
+used for any other purpose.
 
-This section is a production blocker until it matches actual jobs, database behaviour and recovery
-operations.
+During the Agreement, Perelai applies the retention settings of the Customer's workspace. In the
+standard booking profile, requests that do not lead to a completed service are deleted no later than
+90 days after closure, and client history no later than 24 months after the last completed visit. The
+Customer can delete individual records earlier.
 
 ## 13. Records and cooperation
 
 Each party will maintain records required for its role and cooperate in good faith with competent
-Supervisory Authorities. Perelai will provide processing categories and transfer/security information
-reasonably needed for the Customer's records. The Customer will provide accurate contact and
-instruction information.
+Supervisory Authorities. Perelai will provide processing categories and transfer and security
+information reasonably needed for the Customer's records.
 
 ## 14. Government and third-party demands
 
 Unless legally prohibited, Perelai will notify the Customer of a binding demand seeking Customer
-Personal Data and will reasonably redirect the requester to the Customer where appropriate. Perelai
-will review the demand for validity, disclose only what is legally required and document requests in
-accordance with applicable law and security needs.
-
-`[TBD: counsel must align this clause with Ukrainian law, transfer instruments and actual request
-handling.]`
+Personal Data and will redirect the requester to the Customer where appropriate. Perelai will review
+the legality of the demand, challenge it where there are reasonable grounds, disclose only what is
+legally required and keep a record of the request.
 
 ## 15. Liability and order of precedence
 
-The liability provisions and caps in the Agreement apply to this DPA except where Applicable Data
-Protection Law requires otherwise. **[TBD: counsel must approve the Agreement's liability section and
-decide any separate data-protection cap or exclusions.]**
+The liability provisions in the Agreement apply to this DPA, except where Applicable Data Protection Law
+or the SCCs require otherwise. Nothing in this DPA limits either party's liability to Data Subjects or
+the powers of a Supervisory Authority.
 
-If documents conflict concerning Customer Personal Data, the order is:
+If documents conflict concerning Customer Personal Data, the order of precedence is: (1) the SCCs and
+UK Addendum, solely for the relevant Restricted Transfer; (2) this DPA; (3) the Agreement.
 
-1. a mandatorily controlling completed transfer mechanism, solely for the relevant transfer;
-2. this DPA;
-3. the Agreement; and
-4. other incorporated policies.
+## 16. Regional terms
 
-Nothing in this DPA reduces a Data Subject's or authority's rights under mandatory law.
+### United States
 
-## 16. Term and changes
+To the extent US state privacy laws apply, Perelai acts as the Customer's service provider, contractor
+or processor. Perelai will not: sell or share Customer Personal Data, including for cross-context
+behavioural advertising; retain, use or disclose it for any purpose other than the business purposes
+specified in the Agreement, or outside the direct business relationship with the Customer; or combine
+it with personal data received from other sources, except as permitted by those laws. Perelai will
+comply with applicable obligations, provide the same level of privacy protection required of the
+Customer, and notify the Customer if it can no longer meet its obligations. The Customer may take
+reasonable steps to stop and remediate unauthorised use of Customer Personal Data. Perelai certifies
+that it understands and will comply with these restrictions.
 
-This DPA begins when incorporated and continues while Perelai processes Customer Personal Data.
-Obligations that by nature continue after termination remain until the data is returned/deleted.
+### Ukraine
 
-Perelai may update this DPA for legal, security or operational changes. Material changes require the
-notice/re-acceptance process in the Agreement and may not reduce mandatory rights. A Subprocessor
-change follows section 6 rather than being hidden in a general DPA update. Prior versions remain
-archived at `[TBD: archive URL]`.
+For the purposes of the Law of Ukraine "On Personal Data Protection", the Customer is the owner of
+personal data and Perelai is the manager of personal data acting on the Customer's instructions.
 
-## 17. Contact
+### Canada and Australia
 
-Processor privacy contact: {{PRIVACY_EMAIL}}  
-Legal notices: {{LEGAL_NOTICES_EMAIL}}  
-Address: {{BUSINESS_ADDRESS}}
+Perelai processes Customer Personal Data only to provide the Service on the Customer's behalf and will
+assist the Customer, taking account of the information available, with access and correction requests
+and with assessing and notifying breaches of security safeguards or eligible data breaches.
 
-Customer privacy and security contacts are the people expressly designated by the Customer in its
-workspace or Order Form. The Customer must keep them current. An administrative role alone does not
-establish authority to execute this DPA, issue owner-only export instructions or access all records.
+## 17. Term and changes
+
+This DPA applies while Perelai processes Customer Personal Data and continues until that data is
+returned or deleted under section 12.
+
+Perelai may update this DPA for legal, security or operational reasons. Material changes follow the
+notice process in the Agreement and may not reduce mandatory protections. Subprocessor changes follow
+section 6. Prior versions are available on request from {{SUPPORT_EMAIL}}.
+
+## 18. Contact
+
+- Perelai privacy contact: {{PRIVACY_EMAIL}}
+- Legal notices: {{LEGAL_NOTICES_EMAIL}}
+- Address: {{BUSINESS_ADDRESS}}
+
+Perelai sends notices under this DPA to the Company owner's account email. The Customer must keep it
+current. An administrative role alone does not establish authority to accept this DPA or give
+owner-only instructions.
 
 ---
 
@@ -321,119 +302,129 @@ establish authority to execute this DPA, issue owner-only export instructions or
 
 ## A. Subject matter
 
-Provision, support and security of the Perelai business operations Service as enabled/configured by
-the Customer, including scheduling, client management, public intake, imports, operational records,
-communications, attachments, cash custody/reconciliation records where enabled, owner-triggered Workspace Data Export and coworker occupied-time
-sharing at the Customer's instruction, where these features are deployed.
+Provision, support and security of the Perelai Service as configured by the Customer, including
+scheduling, client management, public booking and intake, imports, operational and payment records,
+booking communications, files, Cash Drawer records where enabled, Workspace Data Export and coworker
+occupied-time sharing at the Customer's instruction.
 
 ## B. Duration
 
-For the term of the Agreement plus the approved export/deletion/backup period in section 12, subject to
-lawful retention.
+For the term of the Agreement plus the return, deletion and backup periods in section 12.
 
 ## C. Nature and purpose
 
-- collect/receive Customer Personal Data from Customer users, imports, integrations and public pages;
-- organise, store, retrieve, display and update client/business operational records;
-- create and manage bookings, requests, orders or reservations as configured;
-- import/synchronise calendar events and supported files/data;
-- send transactional/service messages on Customer instructions;
-- generate operational reports/status/receipt views;
-- create and securely deliver a defined Company operational archive on an authorised owner request,
-  if Workspace Data Export is enabled;
-- back up, secure, troubleshoot and support the Service; and
-- delete, return or de-identify data on instruction and schedule.
-
-Remove any activity that is not production-enabled. Add any new purpose before processing starts.
+- collecting and receiving Customer Personal Data from Customer users, imports, Google Calendar and
+  public pages;
+- organising, storing, retrieving, displaying and updating client and operational records;
+- creating and managing bookings, requests, orders and reservations as configured;
+- importing and synchronising calendar events and supported files;
+- sending booking and service messages on the Customer's instructions;
+- generating operational reports, status and receipt views;
+- creating and securely delivering Company archives on an authorised owner's request;
+- backing up, securing, troubleshooting and supporting the Service; and
+- deleting or returning data on instruction and schedule.
 
 ## D. Data Subjects
 
-- Customer owners, staff, contractors, administrative members, invited users and service performers
-  whose operational profile exists without a login;
+- the Customer's owners, staff, contractors, administrative members, invited users and service
+  performers, including performers without a login;
 - current, prospective and former End Clients;
-- parents/guardians and dependants where lawfully entered for a service;
-- service contacts, attendees or counterparties appearing in imported events/records; and
+- parents or guardians and dependants where lawfully entered for a service;
+- contacts, attendees or counterparties appearing in imported events or records; and
 - other persons whose data the Customer lawfully instructs Perelai to process.
 
-## E. Personal Data categories
+## E. Categories of Personal Data
 
 - identity and contact information;
-- business relationship, preferences and communications;
-- appointment/visit/service history and public submissions;
-- request/order/reservation and fulfilment status;
-- operational performer profiles, schedules, staff assignments and business notes;
-- membership/profile links and invitations handled on the Customer's instructions;
-- imported calendar/contact data and identifiers;
-- operational amounts, payment status/method, allocations, balances, prepaid Packages/instalments;
-- enabled Drawer session/count/movement/discrepancy data, notes and operator references;
-- consent/policy-version evidence collected for the Customer;
-- `[files/attachments only if verified live]`; and
-- technical/security metadata necessary to provide the processor service.
+- relationship, preferences and communications;
+- appointment, visit and service history and public submissions;
+- request, order and reservation status;
+- performer profiles, schedules, staff assignments and business notes;
+- imported calendar and contact data;
+- operational amounts, payment statuses and methods, allocations, balances, prepaid Packages and
+  instalments;
+- Cash Drawer session, count, movement and difference data, notes and staff references where enabled;
+- versions of terms and notices presented to End Clients and acceptance records collected for the
+  Customer;
+- files and attachments the Customer uploads; and
+- technical and security metadata necessary to provide the Service.
 
-## F. Special categories/high-risk data
+## F. Special categories and sensitive data
 
-Not intentionally supported. Beauty notes, allergies/contraindications and photographs may still
-reveal health data; maintain an operational minimisation/removal process for unexpected receipt.
-The Customer must not use Perelai as a medical record or upload the
-unsupported sensitive data prohibited by the Agreement. If an approved future feature processes a
-special category, this Schedule, security measures, DPIA and legal basis must be updated first.
+Not intended or supported. The Customer must not use Perelai as a medical record or upload the
+sensitive data prohibited by the Agreement. Beauty-related notes, allergy information and photographs
+may nevertheless reveal health data; the Customer should minimise such content and remove it when
+not needed.
 
-## G. Processing frequency
+## G. Frequency
 
-Continuous/recurring for active Service use; imports and user-triggered operations occur as requested.
+Continuous while the Customer uses the Service; imports and user-triggered operations occur on request.
+
+## H. Retention
+
+As set out in section 12.
 
 ---
 
 # Schedule 2 — Technical and organisational measures
 
-> **Release-blocking evidence schedule.** Security/engineering must replace `[TBD]` with controls that
-> exist in production and supply an internal evidence reference. Counsel/security approve the public
-> level of detail.
-
-| Control area | Approved measure | Evidence owner/reference |
-|---|---|---|
-| governance and risk | [TBD] | [TBD] |
-| personnel confidentiality/training | [TBD] | [TBD] |
-| identity/authentication | [TBD] | [TBD] |
-| current Company permissions, admin/performer separation and least privilege | [TBD verify ADMINISTRATOR reception/controlled checkout vs SUPERVISOR broader finance; neither is payer/owner by default] | [TBD current TEAM/TR release evidence; no repeat implementation] |
-| session/refresh revocation and concurrent effects | [TBD successful revocation commit is enforcement boundary for later protected requests; recheck final in-flight effects; invalidate cached UI] | [TBD TEAM2 stale-session/concurrency evidence] |
-| tenant and staff data isolation | [TBD list/detail/search/aggregate/file/export/notification recipient scope; no cross-Company access from shared payer or user] | [TBD TEAM3 security tests] |
-| performer/membership migration and offboarding | [TBD preserve history/IDs, explicit ambiguous classification, future bookings/recurrence/preferences disposition; no login removal as capacity bypass] | [TBD TEAM1/3 migration dry-run and audit] |
-| encryption in transit | [TBD exact scope] | [TBD] |
-| encryption at rest/key management | [TBD; do not claim from platform assumption] | [TBD] |
-| OAuth token protection/revocation | [TBD] | [TBD] |
-| sensitive-action confirmation and export grants | [TBD actor/Company/action binding, current owner permission, hash, one-time use, TTL and revocation] | [TBD EX1 + TEAM2/3 tests] |
-| private export storage and short-lived delivery | [TBD object isolation, signed URL max age and revocation limitations, no URL persistence/logging; downloaded copies cannot be recalled] | [TBD EX1/storage + TEAM2/3 tests] |
-| CSV formula-injection neutralisation and archive integrity | [TBD] | [TBD EX1 format tests] |
-| secure development/change control | [TBD] | [TBD] |
-| vulnerability/dependency management | [TBD] | [TBD] |
-| logging/monitoring/access review | [TBD] | [TBD] |
-| Cash Drawer if enabled | [TBD current open/close visibility, manager-note/closed-history restrictions and in-app recipients; separate business-history and operator-data retention] | [TBD existing DR6/DR7 reports and actual operational flag] |
-| incident response | [TBD] | [TBD] |
-| backups, restoration and continuity | [TBD RPO/RTO only if committed] | [TBD] |
-| deletion/retention controls | [TBD] | [TBD] |
-| subprocessor/vendor management | [TBD] | [TBD] |
-| physical/data-centre security | inherited provider controls [TBD] | [TBD] |
-| testing/evaluation cadence | [TBD] | [TBD] |
+| Area | Measures |
+|---|---|
+| Governance | The Perelai operator is responsible for data protection and security. Written operating procedures cover workspace deletion, retention clean-up, backup restore and incident handling. |
+| Personnel | Customer Personal Data is accessed only by the operator, who is bound by confidentiality. Any future personnel will be bound by confidentiality and given access only as needed. |
+| Authentication | Individual user accounts; passwords stored as salted bcrypt hashes; signed session tokens valid for 1 day; optional Google sign-in with short-lived, bound OAuth state. |
+| Access control and isolation | Role-based permissions within each Company; server-side authorisation on each request; data queries scoped to the current Company and current membership; a role in one Company grants no access to another. |
+| Administrative access | Limited to the operator, using encrypted connections; production data is not copied to personal devices except as strictly necessary for a specific support or recovery task and deleted afterwards. |
+| Encryption in transit | Web, app and API traffic is served over HTTPS (TLS). |
+| Sensitive actions | Workspace Data Export requires fresh confirmation and single-use, Company-bound approvals that expire after 10 minutes; archives are stored privately and deleted 24 hours after they become available. |
+| Data minimisation | Uploaded import files and previews are deleted after the import finishes or after 24 hours without activity; delivery logs and notifications are deleted on fixed schedules. |
+| Development and change management | Source code is version-controlled; changes are tested before deployment; dependencies and hosting components receive security updates. |
+| Logging | Security-relevant events such as sign-in, legal acceptance and exports are recorded; server logs are normally kept for no longer than 90 days. |
+| Backups and recovery | Daily database backups, kept for up to 7 days in access-controlled off-site storage in the European Union and up to 10 days on the hosting server; documented restore procedure that re-applies deletion instructions before restored data is used. |
+| Deletion | Documented operator procedure for workspace deletion with verification of completion; scheduled deletion of expired tokens and records. |
+| Incident response | Documented process to contain, investigate and document incidents and notify Customers as described in section 9. |
+| Subprocessor management | Written data processing agreements with each Subprocessor; review before adding a new Subprocessor. |
+| Physical security | Provided by Hetzner's ISO/IEC 27001-certified data centres in Germany and by Cloudflare's infrastructure. |
+| Review | Measures are reviewed at least once a year and after significant changes to the Service. |
 
 ---
 
-# Schedule 3 — Restricted transfer details
+# Schedule 3 — Restricted transfers
 
-Complete separately for each transfer chain. Do not publish an empty schedule as if it were an
-executed transfer mechanism.
+This Schedule applies only where the Customer's transfer of Customer Personal Data to Perelai is a
+Restricted Transfer under the GDPR or the UK GDPR.
 
-```text
-Data exporter(s): [TBD]
-Data importer(s): [TBD]
-Exporter/importer role and SCC module: [TBD]
-Countries and processing locations: [TBD]
-Data Subjects/categories/frequency/purpose: [TBD]
-Competent Supervisory Authority: [TBD]
-SCC governing law/forum: [TBD]
-UK Addendum/IDTA selections: [TBD if applicable]
-Subprocessors/onward transfers: [TBD]
-Transfer assessment reference/date: [TBD]
-Supplementary measures: [TBD]
-Execution/incorporation method: [TBD]
-```
+## A. SCCs
+
+- **Modules:** Module Two (controller to processor) where the Customer is a controller; Module Three
+  (processor to processor) where the Customer is a processor.
+- **Parties:** the Customer as data exporter; Perelai, established in Ukraine, as data importer. The
+  contact details are those in the Agreement and section 18.
+- **Clause 7 (docking clause):** applies.
+- **Clause 9(a):** Option 2, general written authorisation, with the notice period in section 6.
+- **Clause 11(a):** the optional independent dispute resolution language does not apply.
+- **Clause 13:** the competent Supervisory Authority is determined in accordance with Clause 13(a):
+  that of the Member State where the data exporter is established or, if it is not established in the
+  European Union, where its representative is established or, if it has none, where the Data Subjects
+  concerned are located.
+- **Clause 17:** Option 1; the SCCs are governed by the law of Ireland.
+- **Clause 18(b):** disputes are resolved by the courts of Ireland.
+- **Annex I.A:** as stated above. **Annex I.B:** Schedule 1 of this DPA; transfers are continuous.
+  **Annex I.C:** as determined under Clause 13 above. **Annex II:** Schedule 2 of this DPA.
+  **Annex III:** the [Subprocessor List](/legal/subprocessors).
+
+## B. UK Addendum
+
+For Restricted Transfers under the UK GDPR, the UK Addendum applies. Table 1: the parties are as in
+section A. Table 2: the SCCs as completed in section A. Table 3: the appendix information is set out
+in Schedules 1 and 2 and the Subprocessor List. Table 4: neither party may end the UK Addendum under
+its Section 19.
+
+## C. Supplementary measures
+
+Encryption of data in transit, access restricted to the operator, data minimisation, the handling of
+government demands in section 14, and the hosting of Customer Personal Data in Germany.
+
+## D. Execution
+
+The SCCs and UK Addendum are entered into by the parties' acceptance of this DPA and form part of it.

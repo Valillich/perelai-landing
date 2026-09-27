@@ -1,5 +1,37 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
+**Platform documents v1 approved — 2026-09-26:** Terms, Privacy, DPA, Booking Terms, Cookies,
+Subprocessors and Refund & Cancellation Policy are final and `approved` (`2026-10-01.1`, effective
+2026-10-01, `owner-platform-legal-v1-20260926`) with populated `content/legal/versions.json`. The
+owner decisions and deployment prerequisites are recorded at the top of
+[register 01](01_legal_facts_env_contract.md). Source drafts 02–07 and 10 are historical; edit
+`content/legal/en/*.md` and run `pnpm legal:manifest --write` for any new version. Older statements
+below that the manifest must stay empty or that counsel must draft each section are superseded.
+
+**CA/en scoped code activation — 2026-09-26:** the owner explicitly requested
+“разблокируй Канаду оставив QC/AB/BC закрытыми” (`owner-ca-en-release-20260926`).
+`business-booking-CA-en-v1` is now the reviewed CA default; Canada is PUBLIC in code
+only with server-enforced subdivision admission: **MB, NB, NL, NS, NT, NU, ON, PE, SK, YT**.
+**QC, AB and BC remain closed.** A valid full province code and current owner declaration
+`ca-operating-scope-v1` / `OUTSIDE_QUEBEC` are required; country-only selection is insufficient.
+Status: **ACTIVE_IN_CODE_NOT_DEPLOYED**. See the [release record](templates/business-notice/CA.en.standard.v1.release-record.md)
+and [handoff 27](27_ca_notice_preparation_and_activation_20260926.md) for evidence and deployment work.
+This supersedes older CA CLOSED/preparation-only status statements; it does not prove live inbox,
+incident, retention or backup operations and does not publish any salon's settings.
+
+**AU/en status reconciled — 2026-09-26:** app code and the [AU release record](templates/business-notice/AU.en.standard.v1.release-record.md)
+now show AU registry/default integrated and AU PUBLIC. The earlier preparation-only note is
+superseded by that separate integration. UA/US/AU text and digests are unchanged by CA preparation;
+no deployment is inferred. [Handoff 26](26_au_notice_preparation_and_nz_next_market_20260925.md)
+remains the historical AU instruction and NZ recommendation; NZ has not been opened here.
+
+**US/en update — 2026-09-25:** the owner requested final `business-booking-US-en-v1` and
+its integration alongside UA/uk. The [US release record](templates/business-notice/US.en.standard.v1.release-record.md) contains the final
+baseline, applicability distinctions, digest and verification status. Older statements that
+US factual slots remain unfilled are superseded by this packet. Other profiles remain separate.
+See [handoff 25](25_us_notice_release_and_next_markets_20260925.md) for the release steps and the AU/en recommendation; no
+additional country is opened by this update. Registry code and production deployment are distinct.
+
 **Prepared:** 2026-08-01  
 **Updated:** 2026-09-18 for the launch brief, decided STUDIO trial/C-05/C-11 and selected v1 post-trial checkout.
 **Launch v1 privacy update, 2026-09-23:** landing attribution storage/handoff and PostHog loading
@@ -11,7 +43,35 @@ production audit predates deployment of this change.
 **Review:** owner confirms facts and commercial policy; qualified advice resolves the legal questions
 applicable to the actual launch country/operations. Not every future country or feature is a gate.
 
+**Identity update, 2026-09-24:** the Ukrainian FOP's name, EDR entry, RNOKPP, registered address and
+shared `support@perelai.app` contact are completed in [fact register 01](01_legal_facts_env_contract.md#operator-identity-completed-on-2026-09-24).
+The four Business notice drafts now identify that operator. Recipient/transfer, retention and other
+processing facts remain separate; this update does not activate the reviewed-template registry.
+
+**Market-scope review, 2026-09-25:** the owner reports the Polish pilot ended and zero active
+EU users; the former account remains a closure/retention case. [Decision 22](22_market_access_and_existing_pl_pilot_20260925.md)
+records UA/US PUBLIC and other catalog countries CLOSED in admission code.
+[Review 23](23_market_gate_review_and_release_unblocking_20260925.md) identifies provisional-Company
+API and legal-publication setup gaps, verifies the deletion manifest/DR wording fixes, and gives
+the minimum ordinary-Company deletion and template-release sequence. Production is not verified;
+At that review stage UA/uk and US/en were inactive; their later code releases are recorded above. Earlier PL-first and US invitation-only proposals are historical.
+
+**UA/uk preparation completed, 2026-09-25:** [release packet](templates/business-notice/UA.uk.standard.v1.release-record.md)
+contains completed text, a renderer-compatible JSON candidate, synthetic preview, version/date,
+content-authority reference and digest. Agent prose preparation is unblocked. Registry activation
+still follows the packet's operational/deployment checks; no production entry was added.
+
+**Current sprint / date update, 2026-09-25:** [handoff 24](24_mvp_deletion_retention_and_ua_activation_sprint_20260925.md)
+replaces the proposed shortcut of removing deletion blockers. It covers ordinary-Company deletion,
+manual retention CLI, restore evidence and UA activation after concrete checks. The unreleased UA
+effective date is now 2026-09-25; the digest was recomputed and the generic date guard retained.
+
 **Start here:** [14_launch_legal_minimum_20260918.md](14_launch_legal_minimum_20260918.md).
+Apply [owner-accepted decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) for the common
+GDPR-based foundation, regional additions and 30-day active / subsequent 30-day backup deletion
+limits. Policy is decided; production execution is not verified. Reuse one review record for
+covered profiles, with focused legal/accounting input where needed. Older blanket counsel-per-
+document/country requirements do not create extra approval stages.
 It defines the small launch package and when each requirement applies. This README retains technical
 contracts for implementation; a later phase or optional feature must not hold current legal repair.
 Prepare legal, landing, BILL and provider applications in parallel. Use one set of standard Terms
@@ -209,7 +269,7 @@ Each file must have validated front matter equivalent to:
 
 ```yaml
 document: terms
-version: "[TBD: counsel-approved immutable version]"
+version: "[TBD: internally approved immutable version for the completed reviewed text]"
 effectiveDate: "[TBD: YYYY-MM-DD]"
 lastReviewedDate: "[TBD: YYYY-MM-DD]"
 status: draft # draft | approved
@@ -434,6 +494,16 @@ cancellation, privacy requests or legally required data retrieval.
 ## 8. Simple Business information setup before public booking
 
 Implement [19_simple_booking_legal_setup_20260923.md](19_simple_booking_legal_setup_20260923.md).
+The implementation review and remaining release corrections are in
+[20_booking_setup_review_and_market_templates_20260923.md](20_booking_setup_review_and_market_templates_20260923.md).
+Proposed EU/en, PL/pl, UA/uk and US/en client texts are in
+[the Business notice package](templates/business-notice/README.md). The 2026-09-24 EU English source
+is the proposed default for eligible EU countries without a more specific approved country default;
+PL/pl retains priority for Poland. Check the intended audience's language and any applicable country
+variation centrally. Preserve existing owner selections and exact country/version references.
+They remain drafts until shared facts and the selected market's review are complete; do not insert
+them into the reviewed registry unchanged. Verify resolution of review 20's draft-publication and
+template-version findings before activation. Additional markets need not delay the chosen first market.
 At `/settings/booking-card` → settings, replace the raw legal-field form with “Информация для клиентов”:
 confirm provider identity/contact, select standard no-prepayment/no-cancellation-fee terms and an
 optional cancellation reminder, then preview/confirm the generated Business Privacy Notice.
@@ -653,7 +723,8 @@ of any already-enabled export remain mandatory. Do not rebuild an export/privacy
 ### LGL-8 — combined release and lifecycle
 
 - run §10 checks for published surfaces/enabled flows; reuse current release evidence and record disabled/deferred items with reasons;
-- publish counsel-approved English source first;
+- publish the completed internally approved source with the required client-readable translations;
+  reuse focused legal review for common clauses and record actual regional differences under decision 21;
 - publish additional Ukrainian/Polish or other locales only when actually served and legally/linguistically reviewed; do not hold the first market for unused translations;
 - archive previous versions and schedule annual/event-driven review;
 - subscribe customers to subprocessor-change notices under the approved DPA procedure;

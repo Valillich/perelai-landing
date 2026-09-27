@@ -1,11 +1,11 @@
 ---
 document: booking-terms
-version: "[TBD: counsel-approved immutable version]"
-effectiveDate: "[TBD: YYYY-MM-DD]"
-lastReviewedDate: "[TBD: YYYY-MM-DD]"
-status: draft
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
+status: approved
 sourceLocale: en
-approvedBy: "[TBD: internal approval reference]"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Public Booking Terms
@@ -23,8 +23,9 @@ The detailed terms below control if this summary is incomplete.
 
 ## 1. Who these terms are between
 
-These Public Booking Terms (**Booking Terms**) are between you and {{LEGAL_PROVIDER_FULL_NAME}},
-{{LEGAL_PROVIDER_FORM}}, trading as **Perelai**, of {{BUSINESS_ADDRESS}} (**Perelai**, **we**, **us**).
+These Public Booking Terms (**Booking Terms**) are between you and {{LEGAL_PROVIDER_FULL_NAME}}, an
+{{LEGAL_PROVIDER_FORM}} registered in {{COUNTRY_OF_REGISTRATION}}, trading as **{{TRADING_NAME}}**, of
+{{BUSINESS_ADDRESS}} (**Perelai**, **we**, **us**).
 They govern your use of a Perelai-powered public page to submit, view, confirm, change or manage an
 appointment, request, order, reservation or related record (the **Booking Service**).
 
@@ -80,8 +81,6 @@ Only people the Business makes available to provide the relevant service should 
 performers. Administrative access alone does not make someone bookable. A personnel or subscription
 change is not itself a notice that an existing appointment was cancelled or reassigned; the Business
 must handle affected bookings and communicate changes under its applicable policies.
-`[Internal gate: public performer eligibility and future-work disposition must match TEAM0/TEAM3;
-never disclose internal roles, team capacity or billing status on public booking pages.]`
 
 In general:
 
@@ -105,13 +104,24 @@ Business's disclosed terms and applicable law allow.
 Provide current contact information so the Business can confirm or update your request. Review the
 details before submitting and promptly contact the Business about errors.
 
-The Booking Service or Business may send necessary messages about confirmation, proposed times,
-changes, reminders, cancellations, payment status or security. These are not marketing merely because
-they use email or another electronic channel.
+In the current release, messages sent to you through the Booking Service are limited to handling
+your booking, such as confirmations, proposed times, changes, reminders and cancellations. These
+messages must not be used to deliver promotional offers or advertising. Applicable communication
+rules still govern them; a booking-related label alone does not establish a legal exemption.
 
-Marketing permission must be requested separately, remain optional and be unchecked by default where
-required. Refusing marketing does not prevent a booking or necessary messages. You can withdraw
-marketing permission through the method supplied by the Business.
+Submitting a booking, providing contact details or accepting these Booking Terms does not give
+permission to send you advertising. Perelai does not provide a feature to collect or verify marketing
+consent in the current release. Under Perelai's Terms of Service, the Business must separately obtain
+and document your optional consent outside Perelai before using contact details collected through
+Perelai for marketing outside the platform. Such consent must cover the Business, purpose and
+communication channel concerned. The Business must provide and honour a withdrawal or unsubscribe
+route and comply with applicable law.
+
+You do not have to agree to marketing to book or receive the requested service. Refusing or
+withdrawing marketing consent does not itself cancel a booking or prevent lawful service messages.
+Contact the Business about your booking communication preferences. These Terms do not restrict any
+right under applicable law to stop particular messages. A new booking does not reinstate withdrawn
+marketing consent.
 
 ## 6. Business terms, cancellation and refunds
 
@@ -132,18 +142,16 @@ Contact the Business first to cancel, reschedule, obtain a refund or resolve an 
 dispute. Perelai support may help with a technical issue but cannot order the Business to provide a
 service or refund unless a separate payment/product architecture expressly gives Perelai that role.
 
-`[TBD: counsel must add mode/country-specific withdrawal and cancellation disclosures or require the
-Business to provide them before launch. Do not imply that beauty/leisure appointments always have or
-never have a statutory withdrawal right.]`
+Whether you have a statutory right to cancel or withdraw depends on the law that applies to your
+contract with the Business and on the type of service; the Business is responsible for telling you
+about it. When a Business uses Perelai's standard booking setup, no prepayment is collected through the
+booking page and the page states that the Business does not charge cancellation or no-show fees.
 
 ## 7. Payments and public receipts
 
-At the product stage covered by this draft, Perelai does not collect or hold your payment for the
-underlying Business offering and does not ask you to enter full card credentials. Pay only through the
-method the Business lawfully provides. Paddle checkout for a Business customer's Perelai SaaS
-subscription is unrelated to an End Client booking/payment. **Re-review and replace this section
-before any End Client checkout, payment-provider or Merchant of Record flow for the Business offering
-launches.**
+Perelai does not collect or hold your payment for the underlying Business offering and does not ask
+you to enter card details on a booking page. Pay only through the method the Business lawfully
+provides.
 
 A Perelai page may show an amount or payment status recorded by the Business. A Perelai **Public
 Receipt** or payment confirmation is an operational record, not a bank statement, fiscal receipt or tax
@@ -211,16 +219,17 @@ Perelai's responsibility for its own fraud, wilful misconduct or other non-exclu
 
 ## 12. Liability
 
-**[TBD: counsel must draft an End Client-appropriate liability section for each launch jurisdiction.]**
-It must distinguish:
+Perelai provides the Booking Service to you free of charge. Perelai is responsible for its own Booking
+Service, not for the Business's underlying offering or its acts, and the Business is responsible for
+the service it provides to you.
 
-- Perelai's Booking Service from the Business's underlying offering;
-- direct loss caused by Perelai's breach from Business/service disputes;
-- free technical-service limitations from mandatory consumer/digital-service rights; and
-- non-excludable liability.
+Nothing in these Booking Terms excludes or limits Perelai's liability for death or personal injury
+caused by negligence, for fraud, for intentional misconduct, or any other liability, or any consumer
+right or guarantee, that cannot be excluded or limited under the law that applies to you.
 
-Do not reuse the B2B liability cap or publish a total waiver against End Clients without consumer-law
-review.
+Subject to that, and to the extent the applicable law allows, Perelai is not liable for indirect or
+unforeseeable loss arising from your use of the Booking Service, and Perelai's total liability to you
+arising from the Booking Service is limited to USD 100.
 
 ## 13. Complaints and disputes
 
@@ -228,22 +237,25 @@ For price, quality, fulfilment, cancellation, refund, injury or professional-ser
 the Business using the details on its page. For a technical Booking Service or Perelai privacy issue,
 contact {{SUPPORT_EMAIL}} or {{PRIVACY_EMAIL}}.
 
-**Governing law/forum: [TBD counsel review].** These Booking Terms do not deprive you of protections or
-courts available under mandatory law in your country of residence.
+These Booking Terms are governed by the law of Ukraine. If you are a consumer, this does not deprive you
+of the protection of mandatory provisions of the law of your country of residence, and you may bring
+proceedings in the courts of your country of residence where that law allows. Otherwise, the competent
+courts of Ukraine in the city of Lviv have jurisdiction. Your contract with the Business is governed by
+the law that applies to it, not by this section.
 
 ## 14. Changes to these Booking Terms
 
 We show the version and effective date. Material changes apply prospectively and are notified through
 the public page or relevant communication as appropriate. The version presented for a submission may
-be recorded with it. Prior versions are available at `[TBD: archive URL]`.
+be recorded with it. Prior versions are available on request from {{SUPPORT_EMAIL}}.
 
 A change to these Booking Terms does not silently change the Business terms version you accepted.
 
 ## 15. Contact
 
-Perelai technical support: {{SUPPORT_EMAIL}}  
-Perelai privacy: {{PRIVACY_EMAIL}}  
-Perelai address: {{BUSINESS_ADDRESS}}
+- Perelai technical support: {{SUPPORT_EMAIL}}
+- Perelai privacy: {{PRIVACY_EMAIL}}
+- Perelai address: {{BUSINESS_ADDRESS}}
 
 For the underlying offering, use the Business contact information shown on its public page or
 confirmation.

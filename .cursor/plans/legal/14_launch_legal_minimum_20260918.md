@@ -4,6 +4,14 @@
 the unresolved C-05/C-07/C-19 and voluntary-refund recommendations in dated reviews 12/13.
 Scope: plans and drafts only; no publication, provider submission or production activation.
 
+**Owner-accepted simplification, 2026-09-24:**
+[decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) is the current common privacy/retention
+policy: one GDPR-based operational foundation, small applicable regional additions, one shared
+review packet and support-assisted rights/return/deletion. Company active-data deletion is due
+within 30 days of the confirmed instruction; residual backups within 30 days of active deletion
+(ordinary total at most 60 days). These are accepted implementation requirements, not verified
+production behaviour. No universal seven-year billing or one-year-after-closure retention rule.
+
 **Public-booking UX supplement, 2026-09-23:**
 [document 19](19_simple_booking_legal_setup_20260923.md) defines the simple SOLO/STUDIO path:
 confirmed identity/contact, selected no-prepayment/no-fee information and a prepared layered Business
@@ -55,10 +63,10 @@ approved pricing or reimplement completed TEAM/Drawer work.
 
 | Deliverable | Minimum completion evidence |
 |---|---|
-| Supplier and first market | Actual FOP/legal name, identifiers, valid contact address, monitored support/privacy route; selected launch country/language and buyer type; focused advice on applicable law/establishment/representative, liability and tax facts |
+| Supplier and first market | FOP identity/address completed in register 01; verify shared support@perelai.app handling. Record selected profile/countries/languages and buyer type in one matrix; resolve applicable law/establishment/representative, liability and tax questions without a new sign-off per fact or country |
 | Terms + Privacy | Final text for enabled processing, explicit 21-day STUDIO/no-card/no-auto-charge model, accurate Google/data/vendor disclosures, version/date and retained exact copy; no public draft/TBD/free-beta promise |
 | DPA + provider list | DPA incorporated for businesses' client/staff data; actual hosting/email/storage entities, locations, agreements/transfers and concise evidenced security/return terms; same documentation applies during a real-data trial |
-| Practical data handling | One monitored contact and recorded manual procedure for rights requests, identity verification, secure return, closure/deletion, retention/backups and incidents; real deadlines/owners and a walkthrough, not a new privacy portal |
+| Practical data handling | One monitored contact and recorded manual procedure for rights requests, verification, secure return, closure/deletion, retention/backups and incidents; verify decision 21's 30-day active + 30-day backup limits and restore handling. Complete the active-client profile and separate FOP accounting schedule; no new privacy portal |
 | Signup acceptance | Owner Terms+DPA; invited users' individual-use Terms; linked Privacy notice, server timestamp/versions/actor and represented Company binding. Email and enabled Google signup use the same rule; marketing stays separate |
 | Existing users | Identify actual accepted beta terms/cohorts, notify the prospective change and record any needed re-acceptance. No automatic billing consent, retroactive charge, arbitrary trial reset or deletion of old records |
 
@@ -73,6 +81,22 @@ Booking Terms/business policies are needed when public intake is enabled. Cookie
 covers what actually runs; leave optional analytics/marketing off until required choice works.
 No extra free-MVP, trial, Drawer, AI, security-certification or standalone retention policy is needed
 for this launch scope. No AI processing is introduced by this plan.
+
+### Common baseline and proportionate review
+
+Reuse the same product/data/provider facts and operating procedures across EU/PL, UA and US
+variants. Compose local rights/grounds/authority/request information only where it actually differs.
+GDPR is the common protection baseline, not a claim of automatic worldwide compliance. Existing
+country-specific registry references preserve selection/version evidence; they do not require
+independent country policies or separate legal projects. One applicability record may cover several
+countries with the same profile. Client-readable language and actual local duties still apply.
+
+The owner confirms facts/policy, engineering verifies behaviour, and focused legal/accounting
+advice resolves remaining applicable questions. No external counsel certificate for every template,
+translation or salon is required by this plan. Reuse current checks and perform one practical
+deletion/rights walkthrough; build extra automation only when the manual procedure cannot meet
+the actual duties. Standard no-money booking needs no salon Refund Policy; SaaS billing remains
+covered by the existing separate policy. See decision 21 for clocks, exceptions and evidence.
 
 ## 3. Before promoting the standard trial and taking payment
 

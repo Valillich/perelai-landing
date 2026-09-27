@@ -1,5 +1,11 @@
 # Workspace Data Export — legal/product boundary and implementation matrix
 
+**2026-09-24 policy supplement:** [decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md)
+accepts Company active-data deletion within 30 days of a confirmed authorised instruction and
+residual-backup deletion within 30 days afterwards. Verify the support-assisted return/deletion and
+restore procedure; this does not set the archive TTL, erase applicable retrieval/switching duties or
+extend individual-rights deadlines. Reuse one shared review packet and current export evidence.
+
 **Prepared:** 2026-08-23
 
 **Updated:** 2026-09-18 for staged legal launch and Drawer data classification.
@@ -331,7 +337,7 @@ Split remaining work into independently reviewable tasks:
 3. fix only evidenced outstanding implementation issues in their owning product plan;
 4. complete C-10 and F-18 export/retrieval decisions;
 5. verify Privacy Access Export/manual request operations separately;
-6. reconcile legal text and obtain counsel approval; and
+6. reconcile legal text in the shared packet, resolving actual legal questions with focused advice; and
 7. verify the evidence packet before any new release or commercial promise.
 
 Implemented Export is not rebuilt from this legal plan. Existing deployment is not disabled by

@@ -11,6 +11,7 @@ import {
   loadLegalDocument,
   type LegalDocumentSlug,
 } from "@/lib/legal"
+import { PRODUCTION_LEGAL_IDENTITY_ENV } from "@/lib/legal/production-identity"
 import { toAbsoluteLandingUrl } from "@/lib/seo"
 
 const ROOT = process.cwd()
@@ -135,11 +136,11 @@ describe("Redirect Aliases (/terms, /privacy, /refund-policy, /legal/refund-poli
   })
 })
 
-describe("Canonical Metadata & Draft Noindex Gate", () => {
-  it("enforces that all 7 draft legal documents have noindex robots metadata", () => {
+describe("Canonical Metadata", () => {
+  it("builds canonical and alternate URLs for all 7 approved legal documents", () => {
     for (const slug of LEGAL_DOCUMENT_SLUGS) {
       const doc = loadLegalDocument(slug, { isProduction: false })
-      expect(doc.frontMatter.status).toBe("draft")
+      expect(doc.frontMatter.status).toBe("approved")
 
       // Check canonical URL generation across locales
       for (const locale of PUBLISHED_LOCALES) {
@@ -278,23 +279,19 @@ describe("Production publication gate on canonical routes (R1)", () => {
     overrides: Record<string, string | undefined>,
     run: () => Promise<unknown>
   ) => {
-    const prev = {
-      NODE_ENV: process.env.NODE_ENV,
-      LEGAL_DRAFT_PREVIEW: process.env.LEGAL_DRAFT_PREVIEW,
+    const keys = new Set(["NODE_ENV", "LEGAL_DRAFT_PREVIEW", ...Object.keys(overrides)])
+    const prev = Object.fromEntries([...keys].map((key) => [key, process.env[key]]))
+    const apply = (values: Record<string, string | undefined>) => {
+      for (const key of keys) {
+        if (values[key] === undefined) delete process.env[key]
+        else process.env[key] = values[key]
+      }
     }
-    Object.assign(process.env, overrides)
-    if (overrides.LEGAL_DRAFT_PREVIEW === undefined) {
-      delete process.env.LEGAL_DRAFT_PREVIEW
-    }
+    apply({ NODE_ENV: prev.NODE_ENV, ...overrides })
     try {
       await run()
     } finally {
-      process.env.NODE_ENV = prev.NODE_ENV
-      if (prev.LEGAL_DRAFT_PREVIEW === undefined) {
-        delete process.env.LEGAL_DRAFT_PREVIEW
-      } else {
-        process.env.LEGAL_DRAFT_PREVIEW = prev.LEGAL_DRAFT_PREVIEW
-      }
+      apply(prev)
     }
   }
 
@@ -304,7 +301,7 @@ describe("Production publication gate on canonical routes (R1)", () => {
     expect(route).not.toContain("isProduction: false")
   })
 
-  it("generateMetadata rejects unapproved documents when the production gate is active", async () => {
+  it("generateMetadata fails closed when the production identity env is missing", async () => {
     const { generateMetadata } = await import(
       "@/app/[locale]/legal/[document]/page"
     )
@@ -314,6 +311,40 @@ describe("Production publication gate on canonical routes (R1)", () => {
           params: Promise.resolve({ locale: "en", document: "terms" }),
         })
       ).rejects.toThrow()
+    })
+  })
+
+  it("generateMetadata fails closed when the production identity differs from the approved snapshot", async () => {
+    const { generateMetadata } = await import(
+      "@/app/[locale]/legal/[document]/page"
+    )
+    await withEnv(
+      {
+        ...PRODUCTION_LEGAL_IDENTITY_ENV,
+        NODE_ENV: "production",
+        NEXT_PUBLIC_LEGAL_BUSINESS_ADDRESS: "Kyiv, Ukraine",
+      },
+      async () => {
+        await expect(
+          generateMetadata({
+            params: Promise.resolve({ locale: "en", document: "terms" }),
+          })
+        ).rejects.toThrow(/APPROVAL_HASH_MISMATCH/)
+      }
+    )
+  })
+
+  it("publishes every approved document as indexable with the approved production identity", async () => {
+    const { generateMetadata } = await import(
+      "@/app/[locale]/legal/[document]/page"
+    )
+    await withEnv({ ...PRODUCTION_LEGAL_IDENTITY_ENV, NODE_ENV: "production" }, async () => {
+      for (const document of LEGAL_DOCUMENT_SLUGS) {
+        const metadata = await generateMetadata({
+          params: Promise.resolve({ locale: "en", document }),
+        })
+        expect(metadata.robots).toEqual({ index: true, follow: true })
+      }
     })
   })
 

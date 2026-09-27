@@ -2,8 +2,9 @@
 
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** These terms govern an End Client's use of Perelai's
 > public technology surface. They do not replace the business's own service, booking, cancellation,
-> refund, consumer or privacy terms. Counsel must review launch countries and each supported booking
-> mode before approval.
+> refund, consumer or privacy terms. Complete the supported profiles and any applicable regional
+> differences in the shared packet under decision 21; obtain focused advice for actual open legal
+> questions before approval, without a separate counsel certificate for every country or salon.
 
 **Version:** `[TBD: immutable approved version]`  
 **Effective date:** `[TBD: YYYY-MM-DD]`  
@@ -111,13 +112,24 @@ Business's disclosed terms and applicable law allow.
 Provide current contact information so the Business can confirm or update your request. Review the
 details before submitting and promptly contact the Business about errors.
 
-The Booking Service or Business may send necessary messages about confirmation, proposed times,
-changes, reminders, cancellations, payment status or security. These are not marketing merely because
-they use email or another electronic channel.
+In the current release, messages sent to you through the Booking Service are limited to handling
+your booking, such as confirmations, proposed times, changes, reminders and cancellations. These
+messages must not be used to deliver promotional offers or advertising. Applicable communication
+rules still govern them; a booking-related label alone does not establish a legal exemption.
 
-Marketing permission must be requested separately, remain optional and be unchecked by default where
-required. Refusing marketing does not prevent a booking or necessary messages. You can withdraw
-marketing permission through the method supplied by the Business.
+Submitting a booking, providing contact details or accepting these Booking Terms does not give
+permission to send you advertising. Perelai does not provide a feature to collect or verify marketing
+consent in the current release. Under Perelai's Terms of Service, the Business must separately obtain
+and document your optional consent outside Perelai before using contact details collected through
+Perelai for marketing outside the platform. Such consent must cover the Business, purpose and
+communication channel concerned. The Business must provide and honour a withdrawal or unsubscribe
+route and comply with applicable law.
+
+You do not have to agree to marketing to book or receive the requested service. Refusing or
+withdrawing marketing consent does not itself cancel a booking or prevent lawful service messages.
+Contact the Business about your booking communication preferences. These Terms do not restrict any
+right under applicable law to stop particular messages. A new booking does not reinstate withdrawn
+marketing consent.
 
 ## 6. Business terms, cancellation and refunds
 
@@ -218,7 +230,8 @@ Perelai's responsibility for its own fraud, wilful misconduct or other non-exclu
 
 ## 12. Liability
 
-**[TBD: counsel must draft an End Client-appropriate liability section for each launch jurisdiction.]**
+**[TBD: resolve the End Client-appropriate common liability clause and applicable mandatory local
+exceptions in the shared launch packet; use focused legal advice, not a new clause per country.]**
 It must distinguish:
 
 - Perelai's Booking Service from the Business's underlying offering;

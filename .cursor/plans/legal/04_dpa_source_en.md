@@ -5,10 +5,10 @@ during the trial as well as paid service. Complete the actual Article 28 particu
 and security/return facts; no enterprise certification, custom audit platform or automatic privacy
 export is required. Reuse accepted controls and a working manual assistance process where sufficient.
 
-> **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Counsel must complete the parties, processing details,
-> security measures, subprocessors, transfer mechanism, deletion periods, liability hierarchy and
-> signature/incorporation method. This draft is designed around GDPR Article 28 but is not a completed
-> SCC or UK transfer instrument.
+> **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** Complete applicable processing details, evidenced
+> security/return measures, subprocessors, transfers and incorporation in one shared launch packet.
+> Resolve actual legal questions with focused advice under decision 21. The accepted deletion limits
+> require execution evidence. This draft is not a completed SCC or UK transfer instrument.
 
 **Version:** `[TBD: immutable approved version]`  
 **Effective date:** `[TBD: YYYY-MM-DD]`
@@ -244,27 +244,45 @@ instruction. We provide assistance for in-scope data excluded from self-service 
 or the Customer's lawful instruction, Perelai will, at the Customer's choice, delete or return Customer Personal Data and delete copies, unless applicable law
 requires storage.
 
-The operational schedule is:
+The policy schedule below was accepted on 2026-09-24 under decision 21. Remaining evidence is not
+another policy-approval step. Verify that the actual operating procedure meets the limits before
+publishing this DPA:
 
 ```text
 Export availability after termination: [TBD]
 Workspace Data Export scope/formats: [TBD verified release manifest]
 Workspace artifact/grant/object cleanup: [TBD verified configuration and orphan sweep]
-Active-system deletion: [TBD]
-Backup rotation/deletion: [TBD]
-Public link invalidation: [TBD]
+Active-system deletion: without undue delay and within 30 calendar days of receipt of an
+authorised, confirmed Company-deletion instruction (D0); [TBD execution evidence]
+Residual backups: excluded from ordinary use; delete within 30 calendar days after active deletion,
+ordinarily no later than D0 + 60 days; [TBD actual backup/snapshot/object-version rotation]
+Public link invalidation: on confirmed closure, remove ordinary public access;
+[TBD verified token/session/link procedure]
 Mandatory storage exceptions: [TBD actual applicable legal duty; no blanket security/tax hold
 over all processor Customer Personal Data]
 Switching/retrieval obligations: [TBD F-18 applicability and operational schedule]
-Deletion confirmation process: [TBD]
+Deletion confirmation: support@perelai.app sends/records active-deletion completion and final backup
+expiry/completion separately; [TBD walkthrough evidence and minimal record-retention rule]
 ```
 
 Backups retained during a documented rotation are isolated from ordinary use and deleted on schedule.
-If restored for disaster recovery, deletion instructions are re-applied. Any legally required retained
+Before restored data returns to ordinary use, deletion instructions are re-applied. Any legally required retained
 data remains protected and is processed only for that requirement.
 
-This section is a production blocker until it matches actual jobs, database behaviour and recovery
-operations.
+Verify requester authority promptly. Internal queues/approvals do not reset a valid instruction's
+clock. Preserve the Customer's return/deletion choice and applicable retrieval duties; an archive
+download TTL is not the contractual retrieval period. Individual data-subject requests retain their
+own applicable deadlines. Subscription cancellation, trial expiry or deleting an individual login
+does not itself instruct Company deletion. Ordinary active-client retention follows purpose-based
+Customer instructions, not an unlimited “until manually deleted” rule.
+
+Record-specific lawful exceptions require the records, basis, restricted use and end/review condition.
+Perelai's own accounting obligations do not justify retaining the whole salon database. Where GDPR
+applies, the exception to processor deletion must meet Article 28(3)(g), not merely an unrelated
+platform purpose.
+
+This section may be completed with a verified support-assisted procedure for MVP. Publication waits
+for evidence of database/file/provider cleanup and recovery handling, not a new automated portal.
 
 ## 13. Records and cooperation
 
@@ -414,7 +432,7 @@ Continuous/recurring for active Service use; imports and user-triggered operatio
 | Cash Drawer if enabled | [TBD current open/close visibility, manager-note/closed-history restrictions and in-app recipients; separate business-history and operator-data retention] | [TBD existing DR6/DR7 reports and actual operational flag] |
 | incident response | [TBD] | [TBD] |
 | backups, restoration and continuity | [TBD RPO/RTO only if committed] | [TBD] |
-| deletion/retention controls | [TBD] | [TBD] |
+| deletion/retention controls | decision 21's accepted 30-day active / subsequent 30-day residual-backup limits; purpose-based active retention; verified assisted procedure acceptable | [TBD actual stores, authority/return handling, rotation and restoration walkthrough] |
 | subprocessor/vendor management | [TBD] | [TBD] |
 | physical/data-centre security | inherited provider controls [TBD] | [TBD] |
 | testing/evaluation cadence | [TBD] | [TBD] |

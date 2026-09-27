@@ -6,8 +6,9 @@ rights/return/deletion procedure is sufficient if it meets the applicable duties
 is required. Do not publish this internal note or unresolved draft material.
 
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** This working draft must be reconciled with production
-> data flows, retention, vendors and launch jurisdictions, then approved by qualified counsel. It is a
-> privacy notice, not a request for blanket consent.
+> data flows, retention, vendors and actual launch profiles, then approved in the shared launch
+> packet. Use focused legal advice for unresolved applicable questions under decision 21; a separate
+> counsel sign-off per translation/country is not a blanket requirement. This is not blanket consent.
 
 **Version:** `[TBD: immutable approved version]`  
 **Effective date:** `[TBD: YYYY-MM-DD]`  
@@ -47,8 +48,9 @@ business customer's own privacy notice for its clients or staff.
 For processing where Perelai is controller, the controller is:
 
 **{{LEGAL_PROVIDER_FULL_NAME}}**, {{LEGAL_PROVIDER_FORM}}, trading as **{{TRADING_NAME}}**, registered
-in {{COUNTRY_OF_REGISTRATION}} under registration number {{REGISTRATION_NUMBER}}, with an address at
-{{BUSINESS_ADDRESS}}.
+in {{COUNTRY_OF_REGISTRATION}}, Ukrainian Unified State Register (EDR) entry number
+{{REGISTRATION_NUMBER}}, Ukrainian tax identification number (RNOKPP) {{TAX_NUMBER}}, with a registered
+business address at {{BUSINESS_ADDRESS}}.
 
 Privacy enquiries and requests: {{PRIVACY_EMAIL}}  
 Support: {{SUPPORT_EMAIL}}  
@@ -429,6 +431,27 @@ We keep data for the shortest period reasonably needed for its purpose, contract
 requirements, then delete or de-identify it. That principle is implemented through category-specific
 rules, not an indefinite licence.
 
+`[Internal policy update, 2026-09-24: decision 21 accepts the closure and backup limits below as
+requirements. Runtime verification remains pending. Use one common operational schedule and only
+applicable regional additions; resolve active-client and accounting rows before publication.]`
+
+For an authorised, confirmed instruction to delete a Company and its Customer Personal Data, we arrange
+any requested return and complete deletion from active systems without undue delay and within
+30 calendar days of the instruction. Residual backup copies are excluded from ordinary use and
+deleted within 30 calendar days after active deletion, ordinarily at most 60 days after that
+instruction. Before a backup is returned to ordinary use, applicable deletion instructions are
+reapplied. Required retention exceptions are limited to identified records and their lawful purpose.
+
+An active subscription does not justify keeping unnecessary client records indefinitely. The
+Business determines purpose-based retention instructions for its client data; those instructions
+and our operating procedures must support its applicable obligations. Cancellation, nonpayment
+or removal of an individual login is not itself a Company-deletion request. Individual privacy
+requests retain their applicable deadlines and exceptions rather than the Company closure clock.
+
+Perelai's own subscription/payout/accounting evidence is separate from a Business's service and
+financial records. We do not retain an entire salon database to meet the Perelai operator's tax
+obligations, and we do not apply a universal seven-year period to every billing-related record.
+
 | Category | Active retention | Deletion/backup rule |
 |---|---|---|
 | account/profile | `[TBD]` | `[TBD]` |
@@ -438,7 +461,7 @@ rules, not an indefinite licence.
 | STUDIO+ enquiries and replies | `[TBD enquiry lifecycle]` | mailbox/tool/backups `[TBD]`; marketing records separate |
 | legal/purchase acceptance and refund/withdrawal evidence | `[TBD: category-specific limitation/legal period]` | restricted archive `[TBD]` |
 | coworker links/availability and attachments | `[TBD: separate category schedules]` | `[TBD]` |
-| workspace and End Client records | Customer instruction/contract `[TBD]` | `[TBD active + backup]` |
+| workspace and End Client records | purpose-based Customer instructions `[TBD first supported profile's active periods/criteria]` | confirmed Company deletion: active within 30 days; residual backups within 30 days thereafter, ordinary total at most 60; `[TBD execution evidence]` |
 | imports and previews | `[TBD hours/days]` | source deletion `[TBD]` |
 | Workspace Data Export artifact | planned 24 hours from READY `[verify]` | purge private object; verify storage versions/backups/orphan sweeps |
 | export create/download action grants | planned 10 minutes and single use `[verify]` | revoke/delete hash and associated transient state `[TBD]` |
@@ -450,10 +473,10 @@ rules, not an indefinite licence.
 | support messages | `[TBD]` | `[TBD]` |
 | notifications and system task records | category-specific env/jobs `[verify]` | `[TBD backups]` |
 | payer/trial/subscription/access records | contract/claims period `[TBD]` | delete or restricted archive `[TBD]` |
-| Paddle transaction/tax/refund and vendor payout records | applicable accounting/tax/claims period `[TBD]` | restricted archive |
+| Paddle transaction/tax/refund and vendor payout records | `[TBD category/start-event/period/extension table; applicable FOP accounting rules and separate claims purposes]`; no blanket seven years | restricted necessary evidence; distinct from salon client/financial records |
 | historical PostHog events, if any | `[TBD project retention]` | `[TBD]`; Launch v1 source disables new event collection |
 | public confirmation/status/access tokens | `[TBD]` | invalidate/delete `[TBD]` |
-| backups | `[TBD cycle]` | rotational deletion `[TBD]` |
+| residual backups of deleted Company data | excluded from ordinary use; at most 30 days after active-system deletion | expiry/deletion across backups, snapshots and retained object versions; reapply deletions before restoration to ordinary use `[TBD execution evidence]` |
 
 Complete this table for actually enabled processing before publishing the notice; mark unused
 categories absent internally and omit them from public claims. Do not publish the draft table or replace it with only `as long as

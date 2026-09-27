@@ -1,8 +1,9 @@
 # Perelai Terms of Service — English source draft
 
 > **DRAFT — NOT FOR PRODUCTION OR RELIANCE.** This is an attorney-ready working draft, not legal
-> advice. Counsel must resolve every `[TBD: ...]`, confirm enforceability in each launch jurisdiction,
-> and approve the rendered document and immutable version before publication.
+> advice. Complete applicable facts and focused legal questions in the shared launch packet, then
+> approve the rendered document and immutable version before publication. Decision 21 replaces
+> blanket per-country/per-version counsel sign-offs; it does not establish missing legal facts.
 
 **Version:** `[TBD: immutable approved version]`  
 **Effective date:** `[TBD: YYYY-MM-DD]`  
@@ -21,8 +22,9 @@ contract. The detailed clauses below control if this summary conflicts with them
 These Terms of Service (the **Terms**) are an agreement between:
 
 - **Provider:** {{LEGAL_PROVIDER_FULL_NAME}}, {{LEGAL_PROVIDER_FORM}}, registered in
-  {{COUNTRY_OF_REGISTRATION}} under registration number {{REGISTRATION_NUMBER}}
-  [and tax number {{TAX_NUMBER}}, if counsel confirms publication], with a business address at
+  {{COUNTRY_OF_REGISTRATION}}, trading as **{{TRADING_NAME}}**, Ukrainian Unified State Register
+  (EDR) entry number {{REGISTRATION_NUMBER}}, Ukrainian tax identification number (RNOKPP)
+  {{TAX_NUMBER}}, with a registered business address at
   {{BUSINESS_ADDRESS}} (**Perelai**, **we**, **us**, or **our**); and
 - the business identified when an authorised representative accepts these Terms (**Customer**).
   A sole proprietor may be that Customer personally. **Authorised Users** are people permitted to
@@ -155,7 +157,8 @@ includes:
 - booking, confirmation, cancellation, no-show and refund policies;
 - invoices, fiscal receipts, tax filings, bookkeeping and regulatory records;
 - deciding the lawful basis, content and recipients of your client communications;
-- obtaining any consent required for marketing and keeping it separate from transactional messages;
+- complying with the marketing restrictions in section 12, including separate documented consent
+  for external marketing using contacts collected through Perelai and honouring withdrawals;
 - your privacy notice, retention choices and responses to data-subject requests;
 - ensuring that staff access is appropriate;
 - the legality, accuracy and quality of Customer Data, notes, files, imports and instructions; and
@@ -261,7 +264,8 @@ and use of subprocessors under the DPA.
 You must not use the Service to:
 
 1. break the law, infringe rights or facilitate fraud, harassment or discrimination;
-2. send spam or marketing without required permission and opt-out mechanisms;
+2. send spam, use the current Service for promotional campaigns, insert advertising into booking
+   notifications, or use contacts collected through Perelai for external marketing contrary to section 12;
 3. upload malware, scrape or probe the Service, steal credentials, bypass security or limits, or use
    abusive automation;
 4. resell accounts, impersonate another person or conceal unauthorised access;
@@ -279,17 +283,53 @@ users and minimising data. We may remove, quarantine or restrict unsupported con
 reasonably necessary for security, legal compliance or protection of others, while following notice
 and return procedures where appropriate.
 
-## 12. Communications
+## 12. Communications and marketing restrictions
 
-We may send service communications needed for account verification, authentication, security,
-support, bookings, operational notifications, imports, integration status, legal notices and Service
-administration. Some are necessary to provide the Service and cannot be opted out of while the
-relevant account/function remains active.
+### 12.1 Service communications
 
-Perelai marketing is separate. Where required, we send it only with a valid legal basis and provide an
-opt-out. A Customer is responsible for communications it instructs Perelai to send to its End Clients,
-including marketing permission and sender information. Turning off marketing must not suppress a
-necessary booking confirmation or security message.
+We may send communications needed for account verification, authentication, security, support,
+legal notices and Service administration. In the current release, messages sent through Perelai to
+End Clients are limited to handling their bookings, including confirmations, proposed times, changes,
+reminders and cancellations. Promotional campaigns, advertising and automated marketing journeys
+are outside the current Service. You must not insert promotional offers or advertising into booking
+notifications or use their templates, links or sending functions to run marketing campaigns.
+
+### 12.2 A booking does not grant marketing permission
+
+Providing contact details, submitting a booking, accepting these Terms or the Public Booking Terms,
+or receiving a booking notification does not grant marketing consent. The current Service does not
+provide a feature to collect or verify marketing consent. A contact record, import, export or record
+of acceptance of booking terms is not evidence of permission to send advertising.
+
+### 12.3 Marketing outside Perelai
+
+As a condition of using the Service, before using End Client contact details collected through
+Perelai for marketing outside Perelai, you must separately obtain and document that individual's
+freely given, informed and specific consent covering your business, the marketing purpose and the
+communication channel concerned. Consent must be optional and must not be a condition of booking
+or receiving the requested service. This is a contractual restriction on use of these contacts;
+it does not assert that every jurisdiction imposes identical consent requirements.
+
+You are responsible for obtaining that consent outside Perelai, keeping evidence of its scope,
+wording, date and source, and providing and honouring an effective withdrawal or unsubscribe route.
+You must keep your external sending systems and any reused or exported contact lists consistent
+with withdrawals. An import, export or new booking does not reinstate withdrawn marketing consent.
+External consent does not enable marketing through Perelai or override applicable law, privacy
+notices or restrictions attached to data obtained from another provider or source.
+
+### 12.4 Applicable communication rules
+
+Each party remains responsible for the communication obligations that apply to its own conduct,
+including applicable consent, sender-identification and unsubscribe requirements. Describing a
+message as transactional or booking-related does not itself establish an exemption from those
+requirements. The content, purpose, sending circumstances and applicable law determine which rules
+or exceptions apply. These Terms do not waive recipients' rights or transfer Perelai's own legal
+obligations to the Customer.
+
+Refusing or withdrawing marketing consent does not itself cancel a booking or prevent necessary
+service communications where their sending is lawful. Contact the Business about booking
+communication preferences, or {{SUPPORT_EMAIL}} about Perelai account communications. This does not
+restrict any right under applicable law to stop particular messages.
 
 ## 13. Plans, fees, trials, taxes and refunds
 
@@ -454,6 +494,10 @@ enforcement.
 
 ## 17. Termination, export and deletion
 
+`[Internal policy update, 2026-09-24: decision 21 accepts the 30-day active / subsequent 30-day
+backup limits below. Verify the assisted workflow and all relevant stores before publishing the
+promise. Do not describe policy acceptance as implemented immediate erasure.]`
+
 You may stop using the Service and request workspace closure through `[TBD: verified product path
 or support-assisted process; do not invent self-service hard deletion]`. Closure must address any
 active subscription explicitly and provide a way to stop future charges and obtain confirmation.
@@ -478,16 +522,25 @@ post-termination availability]`. After termination:
 
 - authorised access remains available for `[TBD: export window]` unless security/law requires earlier
   restriction;
-- active Customer Data is deleted or returned according to the DPA and verified deletion schedule;
-- backups age out within `[TBD: rotation period]` and are not restored to production except for
-  disaster recovery;
-- data required for legal, tax, security or claims purposes may be retained with restricted use; and
+- following an authorised, confirmed instruction to delete the Company, in-scope active Customer
+  Personal Data is deleted without undue delay and within 30 calendar days of that instruction,
+  with any requested return arranged in accordance with the DPA and applicable retrieval duties;
+- residual backup copies are excluded from ordinary use and deleted within 30 calendar days after
+  active deletion, ordinarily no later than 60 days after the confirmed instruction. Deletion
+  instructions are reapplied before restored data returns to ordinary use;
+- only identified records with a lawful retention exception are kept with restricted use. Perelai's
+  own necessary accounting/security/claims evidence has separate purpose-specific rules; it is not
+  a basis for keeping the entire Customer database; and
 - public links are disabled according to `[TBD: verified behaviour]`.
 
 `[TBD F-18: determine applicable SaaS switching duties and insert the approved procedure,
 exportable-data scope, assistance, notice/transition/retrieval periods and lawful charges.
 The 24-hour archive life is not the post-termination retrieval window. Neither a Plan limit nor
 subscription cancellation removes mandatory return/deletion/switching rights.]`
+
+Cancellation, trial expiry, nonpayment, removal of a staff login or performer deactivation does not
+itself instruct deletion of a Company. Individual privacy requests follow their own applicable
+procedure and deadlines; the Company closure schedule does not extend those deadlines.
 
 Sections intended by their nature to survive do so, including accrued fees, confidentiality,
 intellectual property, liability, dispute and lawful retention provisions.
@@ -586,7 +639,8 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
 
 ## Assumptions and mandatory legal review notes — do not publish this section as Terms
 
-1. The contracting entity is a Ukrainian FOP; exact identity and address are unknown.
+1. The contracting entity is the Ukrainian FOP identified in register 01; name, identifiers and
+   registered address were completed from the extract and owner confirmation on 2026-09-24.
 2. The Service is intended for B2B use, but counsel has not completed consumer-status analysis.
 3. Provider-neutral SaaS Billing architecture and Paddle as first production Merchant of Record are
    plan-frozen, not released. launch-20260906 approves monthly SOLO $19 / STUDIO $29, 1/5 performers,
@@ -595,9 +649,11 @@ Formal notices must use `[TBD: approved notice method and deemed-receipt rule]`.
    implementation/provider evidence and document 14's stages. TEAM-RELEASE still gates public
    STUDIO trial/team admission and STUDIO sale/upgrade; local policy approval does not prove release.
 4. Workspace Data Export is implemented in the current app inventory; production availability,
-   C-10 packaging and the 24-hour artifact/security claims still require release evidence. No post-termination window, deletion schedule, SLA, liability cap, governing law
-   or forum is approved.
+   C-10 packaging and the 24-hour artifact/security claims still require release evidence. Decision 21
+   accepts the Company deletion/backup policy; execution, any post-termination retrieval window,
+   SLA, liability cap, governing law and forum are not established by that decision.
 5. Public booking creates a business/End Client relationship, not a Perelai service contract.
 6. Files, AI and deployment-specific features must be reconciled with the release fact table.
-7. Counsel should review Ukrainian electronic-contract formation, Polish/EU establishment, each
-   target country's mandatory B2B/consumer rules, sanctions, limitations and language requirements.
+7. Resolve applicable Ukrainian electronic-contract formation, actual EU establishment and served-
+   profile mandatory B2B/consumer/language questions with focused advice. Reuse the common result
+   and document relevant country differences under decision 21; do not require all-country review.

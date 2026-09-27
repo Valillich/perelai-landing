@@ -97,7 +97,7 @@ export function LegalDocumentPage({
             <div className="mt-3 text-[13px] text-muted-foreground print:hidden">
               <span>Prior versions: </span>
               <span className="text-subtle-text">
-                Prior immutable versions are archived and available on request from legal@perelai.app.
+                Prior versions are archived and available on request from support@perelai.app.
               </span>
             </div>
           </header>
@@ -106,8 +106,8 @@ export function LegalDocumentPage({
           {locale !== "en" && (
             <div className="my-6 rounded-xl border border-border bg-muted/30 p-4 text-[14px] text-muted-foreground print:hidden">
               <p>
-                <strong>Notice:</strong> The English text below is the authoritative legal source draft.
-                Reviewed translations for other languages will be published as they are approved by counsel.
+                <strong>Notice:</strong> This document is available in English. The English text below is the
+                authoritative version.
               </p>
             </div>
           )}

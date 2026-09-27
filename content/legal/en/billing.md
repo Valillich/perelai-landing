@@ -1,30 +1,30 @@
 ---
 document: billing
-version: "[TBD: counsel-approved immutable version]"
-effectiveDate: "[TBD: YYYY-MM-DD]"
-lastReviewedDate: "[TBD: YYYY-MM-DD]"
-status: draft
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
+status: approved
 sourceLocale: en
-approvedBy: "[TBD: internal approval reference]"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Refund & Cancellation Policy
 
-This Policy forms part of the [Perelai Terms of Service](/legal/terms). It covers a subscription
-for use of Perelai. It does not cover payments, prepaid Packages, cancellations or refunds between
-a business using Perelai and that business's clients. Contact that business about its services.
+This Policy forms part of the [Perelai Terms of Service](/legal/terms). It covers subscriptions for
+use of Perelai. It does not cover payments, prepaid Packages, cancellations or refunds between a
+business using Perelai and that business's clients. Contact that business about its services.
 
 ## 1. Perelai and Paddle
 
-{{LEGAL_PROVIDER_FULL_NAME}}, trading as Perelai, operates and licenses the Perelai Product under
-our Terms. When you buy a subscription through Paddle, the Paddle entity identified in your
-checkout and transaction documents is the authorised reseller and Merchant of Record. Your purchase
-is also governed by the [Paddle Buyer Terms](https://www.paddle.com/legal/buyer-terms) and
+{{LEGAL_PROVIDER_FULL_NAME}}, trading as {{TRADING_NAME}}, operates and licenses Perelai under our
+Terms. Subscriptions are sold through Paddle. The Paddle entity identified at checkout and in your
+transaction documents is the authorised reseller and Merchant of Record. Your purchase is also
+governed by the [Paddle Buyer Terms](https://www.paddle.com/legal/buyer-terms) and the
 [Paddle Refund Policy](https://www.paddle.com/legal/refund-policy).
 
-Paddle handles the buyer payment, applicable indirect taxes and transaction documents. Perelai
-provides product access and product support. Applicable mandatory rights and any more favourable
-refund promise made to you remain protected. Our Terms do not amend your contract with Paddle.
+Paddle handles the payment, applicable sales tax or VAT, invoices and receipts. Perelai provides
+product access and product support. Mandatory rights and any more favourable refund promise made to
+you remain protected. Our Terms do not amend your contract with Paddle.
 
 ## 2. What you subscribe to and who may manage it
 
@@ -33,234 +33,176 @@ billing period and any eligibility conditions. Each Company (workspace) has its 
 even if one payer funds several workspaces. Paying does not itself give access to workspace data,
 and workspace ownership does not itself give authority to manage someone else's billing.
 
-Only a verified payer or authorised representative may manage a subscription. If you cannot access
+Only the payer or an authorised representative may manage a subscription. If you cannot access
 Billing settings or believe the billing relationship is incorrect, contact {{SUPPORT_EMAIL}} or
-[Paddle buyer support](https://paddle.net). We use proportionate verification; lack of app access
-must not prevent you from making a timely cancellation, refund or statutory request.
+[Paddle buyer support](https://paddle.net). Lack of app access does not prevent you from making a
+timely cancellation, refund or statutory request.
 
 Each workspace has one billing account with at most one current paid subscription. A payer may fund
 any number of these independent subscriptions at the same standard offers. There is no primary or
-additional subscription, multi-workspace discount or commercial cap on the payer's paid subscriptions.
-A purchase, plan change, cancellation or refund for one workspace does not reprice another workspace
-or give it paid access. This does not promise combined invoices or a bundled contract.
+additional subscription, multi-workspace discount or cap on the payer's paid subscriptions. A
+purchase, plan change, cancellation or refund for one workspace does not reprice another workspace or
+give it paid access.
 
 Plan capacity counts active service performers, with or without a login. A working owner counts;
 administrative access alone does not. An invitation reserving a new performer place counts once until
 accepted, expired or revoked; an invitation linked to an already active performer does not add a
-second place. An administrative invitation does not reserve performer capacity. Hiding a profile or
-removing its login does not deactivate the performer. Deactivation releases capacity only when the
-person can no longer receive new appointments; existing/future work must be handled explicitly.
-Reactivation is subject to the current limit. Capacity and permission to invite or access data are
-separate: excluding administrators from this limit does not grant unlimited user access or team
-invitation rights on SOLO. See [Terms §3](/legal/terms) for access responsibilities.
+second place. Hiding a profile or removing its login does not deactivate the performer. Deactivation
+releases capacity only when the person can no longer receive new appointments. Reactivation is subject
+to the current limit. Excluding administrators from this limit does not grant unlimited user access or
+team invitation rights on SOLO. See [Terms section 3](/legal/terms) for access responsibilities.
 
 ## 3. Your 21-day STUDIO trial and first purchase
 
-The trial gives each eligible payer relationship one 21-day STUDIO evaluation without a payment
-card, including up to five active service performers and team access. It starts when the first
-eligible workspace completes onboarding. Other eligible workspaces enrolled during that window
-share the original expiry; another workspace or a future SOLO choice does not restart it. Invited
-staff do not receive another payer trial. The app shows your expiry date and time.
+Each eligible payer relationship gets one 21-day STUDIO trial without a payment card, including up to
+five active service performers and team access. It starts when the first eligible workspace completes
+setup. Other eligible workspaces enrolled during that window share the original expiry; another
+workspace or a future SOLO choice does not restart it. Invited staff do not receive another trial. The
+app shows your expiry date and time.
 
-No payment method or future subscription is set up during the trial in launch v1. After expiry,
-you can actively purchase SOLO or STUDIO for each workspace. There is no automatic charge at trial
-expiry and no paid subscription to cancel merely because you started a trial. The purchase review
-shows the amount due, monthly renewal and when the paid period begins; your card details and billing
-address are collected by Paddle. A later purchase does not restart or retroactively bill the trial.
+No payment method or future subscription is set up during the trial. After expiry, you can actively
+purchase SOLO or STUDIO for each workspace. There is no automatic charge at the end of the trial and
+nothing to cancel merely because you started a trial. A later purchase does not restart or
+retroactively bill the trial.
 
-Without a paid subscription or another valid access source, the workspace becomes restricted at
-expiry. Existing records are retained under the data policy; approved reading, billing recovery,
-support and data-request routes remain available. New business activity may be unavailable.
-`[TBD: final enabled read/recovery/export/closure details under C-06/C-10/C-15; do not promise
-permanent free access, immediate erasure or an unsupported self-service export.]`
+Without a paid subscription, the workspace enters restricted mode at expiry. Existing records are kept.
+You can still sign in, view existing data, buy a subscription, contact support, get a copy of your data
+and request closure; new business activity may be unavailable. A workspace that stays restricted for six
+consecutive months may be closed after 30 days' email notice, as described in
+[Terms section 17](/legal/terms).
 
-The trial includes only released features and does not override user permissions or workspace
-configuration. Cash Drawer, when released and enabled, supports recording and reconciling cash;
-it is also available to a SOLO owner and is not a fiscal cash register or payment processor.
-
-`[Internal release gate: C-19 selects STUDIO. Public team trial requires TEAM-RELEASE/BILL admission;
-Drawer promises require its own operational gate. C-07 early setup is UNSUPPORTED in the selected
-v1 path, so remove early-card/first-charge-at-expiry promises. Do not block post-expiry checkout
-waiting for that deferred feature. Existing beta cohorts follow a separately notified transition.]`
+The trial includes only features available for STUDIO in the app and does not override user
+permissions or workspace configuration.
 
 ## 4. Prices, taxes and purchase confirmation
 
-The launch offers are monthly subscriptions for a single workspace:
+The plans are monthly subscriptions for a single workspace:
 
 | Plan | Monthly USD base price | Active service performers |
 |---|---|---|
 | SOLO | $19 | 1 |
 | STUDIO | $29 | Up to 5 |
 
-`[Internal publication gate: amounts/limits approved in launch-20260906; C-11 currency/tax and
-recurring disclosure still require approval. Publish STUDIO as available only after TEAM-RELEASE
-and the Billing/legal launch gates. STUDIO is a regular paid plan, not a beta release.]`
+There are no annual plans, introductory discounts or lifetime price locks. STUDIO+ is contact-only:
+asking about it does not purchase a subscription, reserve a price or capacity, or grant access.
 
-The purchase review shows the selected workspace, Plan, monthly billing period, amount due now,
-future recurring amount or calculation basis, first-charge/renewal date and cancellation terms.
-These are standard starting prices, without a Founding offer or promised lifetime price lock.
-Annual subscriptions are not offered at launch. STUDIO+ is contact-only: asking about it does not
-purchase a subscription, reserve a price or capacity, or grant access. No price or performer limit
-has been agreed for it.
+Prices are set in US dollars. Paddle may present a supported local currency and determines the tax
+that applies to your location; tax may be included in or added to the price. The purchase review shows
+the selected workspace, plan, amount due now, recurring amount, currency, tax, billing date and
+cancellation terms. Review the final currency and total before paying. Your workspace's bookkeeping
+currency does not set your subscription price. Your bank may charge conversion or cross-border fees.
 
-`[TBD: approve C-11 currency/tax display for each served market.]` Launch prices use a USD base
-amount. Paddle may present a supported local currency and determines applicable tax
-presentation. Review the final currency and total before paying. Your workspace's bookkeeping
-currency does not set your subscription price. Bank conversion or cross-border fees may be separate.
-
-Choosing an Offer on a landing page or opening checkout does not itself reserve eligibility or
-create a subscription. Before purchase you can review and correct details, access the Terms and this
-Policy, and explicitly agree to the recurring purchase. A confirmation provides the subscription
-terms, policy versions or durable copies, receipt and cancellation/support route.
+Choosing an offer on a landing page does not reserve eligibility or create a subscription. Before
+purchase you can review your details, read the Terms and this Policy, and explicitly agree to the
+recurring purchase. Paddle sends a confirmation and receipt with the subscription terms and a link to
+manage or cancel your subscription.
 
 ## 5. Access after purchase
 
-We activate paid access after secure payment/subscription confirmation. If confirmation is delayed,
-the app shows that it is pending and offers support. Do not pay again simply because a browser return
-page has not refreshed. Contact {{SUPPORT_EMAIL}} if access is missing after purchase.
-
-We will investigate non-delivery and coordinate the appropriate remedy, including a refund where
-required or agreed. `[TBD: approved activation incident/response target and escalation process.]`
+We activate paid access after Paddle confirms the payment. If confirmation is delayed, the app shows
+that it is pending. Do not pay again simply because a page has not refreshed. Contact {{SUPPORT_EMAIL}}
+if access is missing after purchase; we aim to respond within two business days and will arrange the
+appropriate remedy, including a refund where access cannot be provided.
 
 ## 6. Monthly renewal and plan changes
 
-After your affirmative purchase, the subscription renews monthly on the disclosed schedule until
-cancelled. The purchase review and confirmation show the renewal date and amount or calculation
-basis. Material price or contractual changes receive the notice and any agreement required by
-applicable law and the accepted terms. You can cancel before changed renewal terms apply.
-`[TBD: final served-market notice/reminder wording and working delivery route.]`
+After your purchase, the subscription renews monthly on the same date until cancelled. The purchase
+review and confirmation show the renewal date and amount. If we change the price or other material
+subscription terms, we will notify you by email at least 30 days before the change applies to your
+next renewal, and you can cancel before it applies.
 
-Where plan changes are enabled, they affect the existing subscription for the selected workspace,
-not a new or sibling subscription:
+Where plan changes are available in the app, they apply to the existing subscription for the selected
+workspace:
 
 - **STUDIO to SOLO:** prepare the workspace first. It must have at most one active performer,
   including any reserved new-performer place, no active non-owner members and no live team
-  invitations (including administrative or existing-profile invites). An authorised owner/member
-  resolves access, future bookings and open cash custody; Perelai does not choose whom to remove
-  or erase history. The payer sees safe blocker counts if they lack permission to manage the team.
-- Once the downgrade is confirmed as scheduled, new non-owner access, team invitations and performer
-  growth beyond SOLO are prevented. Your current paid STUDIO service period remains until the next
-  renewal, when SOLO and its disclosed recurring amount take effect. There is no prorated credit,
-  refund or additional downgrade fee. Review the date and immediate admission restrictions before
-  agreeing. Undo is effective only once its restored renewal terms are verified and confirmed.
-- **SOLO to STUDIO:** review and accept Paddle's prorated charge and new recurring total. The upgrade
-  takes effect after successful provider confirmation, keeping the existing billing anniversary.
-  If payment fails or the result is uncertain, the app shows the prior confirmed state and recovery
-  status; do not pay again simply because confirmation is delayed.
+  invitations, including administrative or existing-profile invitations. An authorised owner or member
+  resolves access, future bookings and open cash custody; Perelai does not choose whom to remove or
+  erase history. Once the downgrade is scheduled, new team access and growth beyond SOLO are prevented.
+  Your paid STUDIO period continues until the next renewal, when SOLO and its recurring amount take
+  effect. There is no prorated credit, refund or downgrade fee.
+- **SOLO to STUDIO:** review and accept the prorated charge calculated by Paddle and the new recurring
+  total. The upgrade takes effect after Paddle confirms payment and keeps your billing date. If payment
+  fails or the result is uncertain, the app shows the prior confirmed plan and recovery status.
 
-These paid-plan changes do not charge a trial user for STUDIO: the trial already supplies it until
-its original end. Choosing SOLO after trial expiry requires the same SOLO readiness checks; its
-first paid period begins with the new purchase, not a retroactive trial downgrade. Ordinary
-cancellation requires no SOLO preparation. Exceeding capacity never authorises an automatic
-STUDIO+ purchase, extra-performer fee, staff deletion or another Company's repricing.
-
-`[Internal availability gate: C-05 policy is decided, but publish offered-change wording only for
-released BILL2E/BILL3/UI flows, with TEAM-RELEASE for STUDIO. Otherwise disclose that plan changes
-are not yet available, keep cancellation/support working and omit unsupported controls/promises.
-Do not hold initial sales merely to implement an optional plan-change interface.]`
+Choosing SOLO after the trial requires the same SOLO readiness checks; its first paid period begins with
+the purchase. Ordinary cancellation requires no SOLO preparation. Exceeding capacity never triggers an
+automatic purchase, extra-performer fee, staff deletion or repricing of another workspace.
 
 ## 7. Cancel renewal
 
-You can cancel through the subscription-management link in your Paddle confirmation email, the
-verified management route in Perelai Billing settings, or [Paddle buyer support](https://paddle.net).
-If those routes fail, contact {{SUPPORT_EMAIL}} so we can help route and record your request.
+You can cancel through the subscription-management link in your Paddle confirmation email, through
+Billing settings in Perelai where available, or through [Paddle buyer support](https://paddle.net). If
+those routes do not work, contact {{SUPPORT_EMAIL}} and we will help record and route your request.
 
-For ordinary cancellation of renewal, access continues to the end of the current paid billing
-period and that subscription does not renew. The confirmation shows the effective date. This
-ordinary rule differs from statutory withdrawal, a refund decision or a lawful security suspension.
-`[Release check: verify period-end cancellation and confirmation against B-06.]`
-
-Cancelling renewal is different from requesting a refund or deleting a workspace. Closing a browser,
-uninstalling the PWA or stopping use does not cancel a recurring subscription. Workspace closure must
-show any active subscription and provide an explicit, verified way to stop future charges; requesting
-data deletion must not leave you without a cancellation/support route.
+When you cancel renewal, access continues to the end of the current paid period and the subscription
+does not renew. The confirmation shows the effective date. Closing a browser, uninstalling the app or
+stopping use does not cancel a subscription. Cancelling renewal is different from requesting a refund or
+deleting a workspace.
 
 ## 8. Refunds
 
-Ordinary cancellation or a downgrade does not entitle you to a voluntary prorated refund for unused
-subscription time. Perelai does not offer a separate first-purchase money-back guarantee at launch.
+Cancelling or downgrading does not entitle you to a prorated refund for unused subscription time, and
+Perelai does not offer a separate money-back guarantee.
 
-This does not limit mandatory withdrawal or other rights, remedies for incorrect charges,
-misdescription, defects or failure to supply, or refunds available under Paddle's applicable terms.
-You can submit a request through [Paddle buyer support](https://paddle.net) or {{SUPPORT_EMAIL}}.
-Requests are assessed on their facts; a request is not automatically refused because the product
-is intended for businesses or because you used a trial. No survey or new purchase is required.
-Any agreed or legally required refund of a Paddle transaction is processed through Paddle.
+This does not limit mandatory withdrawal or other statutory rights, remedies for incorrect or duplicate
+charges, misdescription, defects or failure to supply, or refunds available under Paddle's terms.
+Requests are assessed on their facts; a request is not refused merely because the product is intended
+for businesses or because you used a trial. Any agreed or legally required refund of a Paddle
+transaction is processed through Paddle to the original payment method.
 
-`[Internal note: the former R-01 proposed 14-day voluntary guarantee is excluded from launch v1.
-Do not resurrect it as a required owner decision or confuse it with statutory/provider remedies.]`
+## 9. Statutory withdrawal and other rights
 
-## 9. Statutory withdrawal and other remedies
+Perelai is intended for business use, and statutory consumer withdrawal rights generally do not apply to
+business purchases. If you are a consumer entitled by law to withdraw from a distance contract or to
+another remedy, you can exercise it through [Paddle buyer support](https://paddle.net) or by contacting
+{{SUPPORT_EMAIL}}; the Paddle Buyer Terms describe how withdrawal is handled. Using the service or
+starting a subscription does not waive a right the law does not allow you to waive.
 
-Mandatory rights depend on the applicable law and your circumstances. A business-use statement does
-not remove consumer rights that legally apply. This Policy does not shorten a statutory
-period or exclude remedies for defective, misdescribed or undelivered services.
+You may use any legally valid method of exercising a mandatory right. A dispute with a workspace owner or
+an internal process does not override it.
 
-`[TBD: complete the first served market's applicable disclosures under F-17: trigger,
-period, request channels, model form/online withdrawal function where required, early-performance
-request, durable confirmation and reimbursement rules. Distinguish SaaS/digital services from
-immediately delivered digital content; do not say login or use automatically waives withdrawal.
-Verify Paddle's actual eligible-buyer withdrawal route before adding custom functionality; no
-all-country annex or duplicate in-app engine is required by this drafting task.]`
+## 10. Requesting a refund
 
-You may use any legally valid method of exercising a mandatory right. An internal support process,
-a required form field or a dispute with the workspace owner does not override that right. Contact
-Paddle for purchase remedies and Perelai for product issues; we will cooperate on the request.
+Use [Paddle buyer support](https://paddle.net), the support link in your receipt or {{SUPPORT_EMAIL}}.
+Provide the purchase email, date, workspace and transaction reference if available; a missing reference
+is not by itself a reason to reject a request we can otherwise identify. Do not send card numbers,
+passwords, identity documents or client records by email.
 
-## 10. Requesting and receiving a refund
+We aim to acknowledge refund requests within two business days and to tell you the outcome and next
+steps. Refunds of Paddle purchases are executed through Paddle, not by direct bank transfer from
+Perelai. Processing and bank posting times depend on your payment method.
 
-Use [Paddle buyer support](https://paddle.net), your receipt's support route or {{SUPPORT_EMAIL}}.
-Provide the purchase email, date, relevant workspace and transaction reference if available. A
-missing reference is not by itself grounds to reject a request we can otherwise identify. Do not
-send card numbers, passwords, identity-document images or client records by email.
+Report duplicate, incorrect or suspected unauthorised charges promptly. We coordinate with Paddle
+without requiring you to pay again or give up your rights with your bank or card provider. For a tax
+correction, such as adding a tax identification number, use Paddle's buyer support.
 
-Perelai may investigate product issues and agree a remedy, but refunds of Paddle purchases are
-executed through Paddle. We do not replace them with a direct bank transfer or a separate Perelai
-buyer invoice. We communicate the decision, scope and status; processing and bank posting times
-are explained for the actual payment method, subject to mandatory deadlines.
+## 11. Effect of refunds and failed payments
 
-`[TBD: verified support acknowledgement/decision targets, provider status tracking and escalation.]`
+A full refund of a subscription payment normally ends the paid access it covered, and the confirmation
+shows the result. A partial or tax-only refund does not by itself cancel the subscription. A refund does
+not delete workspace data and does not affect another workspace's subscription, price or trial.
 
-Report duplicate, incorrect or suspected unauthorised charges promptly. We coordinate investigation
-with Paddle without requiring you to pay again or forgo lawful bank/payment-provider dispute rights.
-For a tax correction/refund, use Paddle's tax support process and supply the evidence it requests
-through its secure channel. `[TBD: verified B-07 tax-request requirements and timing.]`
-
-## 11. Effect of refunds, failed payments and restriction
-
-A full subscription refund and its cancellation/access consequence are confirmed for the affected
-workspace. A partial or tax-only refund does not automatically mean the subscription is cancelled.
-`[Release check R-02: confirm the provider refund/cancellation and resulting paid coverage, any
-remaining valid source and partial/tax-only treatment. A refund adjustment alone is not proof that
-future renewal stopped. Explain the actual result to the payer and reconcile the provider events.]`
-
-A refund is not permission to erase workspace data. It must not change an unrelated workspace's
-subscription, price, remaining trial window or data access. Paid subscriptions are independent;
-there is no sibling repricing or successor selection.
-
-For failed payment, Paddle may retry according to the disclosed collection arrangements. The app
-shows the approved grace/restriction state and recovery route. `[TBD: C-06 duration, reminders and
-retry/end rules.]` Billing restriction preserves the approved existing-data, support and recovery
-paths. New business activity may become unavailable; the exact limits must be shown accurately.
+If a renewal payment fails, Paddle may retry the payment and notify you. While payment is outstanding,
+the workspace may be placed in restricted mode; the app shows the status and how to update your payment
+method. If the subscription ends because payment is not recovered, the workspace remains in restricted
+mode as described in section 3.
 
 ## 12. Data, closure and support
 
-Cancellation, refund, trial expiry and failed payment do not themselves delete workspace data.
-[Terms §17](/legal/terms), [Privacy §12](/legal/privacy) and [DPA §12](/legal/dpa) govern return,
-retention, deletion and legal holds. `[TBD: C-10/F-09/F-18 read/retrieval window, closure process,
-restricted export and applicable switching terms.]`
+Cancellation, refunds, trial expiry and failed payments do not themselves delete workspace data.
+[Terms section 17](/legal/terms), the [Privacy Notice](/legal/privacy) and the
+[Data Processing Addendum](/legal/dpa) explain data copies, retention, closure and deletion. You can get
+a copy of your workspace data without charge, including in restricted mode. Individual privacy rights do
+not require a paid plan.
 
-Where enabled, Workspace Data Export provides an authorised owner a defined operational archive.
-Its download expiry is separate from the period in which you may request retrieval of your data.
-Individual privacy rights use the Privacy Notice contact process and do not require a paid Plan.
-
-Product/billing assistance: {{SUPPORT_EMAIL}}
-Privacy requests: {{PRIVACY_EMAIL}}
-Legal notices: {{LEGAL_NOTICES_EMAIL}}
-Paddle purchase support: [Paddle.net](https://paddle.net)
+- Product and billing help: {{SUPPORT_EMAIL}}
+- Privacy requests: {{PRIVACY_EMAIL}}
+- Legal notices: {{LEGAL_NOTICES_EMAIL}}
+- Paddle purchase support: [paddle.net](https://paddle.net)
 
 ## 13. Changes and records
 
-We show this Policy's effective date and retain prior versions at `[TBD: archive URL]`. Applicable
-accepted promises continue to govern the relevant purchase. Material changes require the notice and
-agreement called for by law and the Terms. Save the purchase confirmation and policy for your records.
+We show this Policy's version and effective date at the top. Prior versions are available on request
+from {{SUPPORT_EMAIL}}. Changes do not apply retroactively to a completed purchase, and material changes
+follow the notice process in the Terms. Keep your purchase confirmation for your records.
