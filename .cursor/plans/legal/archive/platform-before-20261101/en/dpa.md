@@ -1,11 +1,11 @@
 ---
 document: dpa
-version: "2026-11-01.1"
-effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Data Processing Addendum
@@ -37,9 +37,9 @@ Capitalised terms not defined here have the meaning in the Agreement.
   restrictions under Applicable Data Protection Law, including a transfer from the European Economic
   Area or the United Kingdom to a country without an adequacy decision.
 - **SCCs** means the standard contractual clauses approved by European Commission Implementing
-  [Decision (EU) 2021/914](https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj/eng).
-- **UK Addendum** means the [International Data Transfer Addendum to the SCCs](https://ico.org.uk/media2/migrated/4019539/international-data-transfer-addendum.pdf)
-  issued by the UK Information Commissioner, version B1.0.
+  Decision (EU) 2021/914.
+- **UK Addendum** means the International Data Transfer Addendum to the SCCs issued by the UK
+  Information Commissioner, version B1.0.
 
 ## 2. Roles and scope
 
@@ -149,12 +149,9 @@ Controller unless authorised or legally required, will promptly direct the reque
 or notify the Customer, and will protect other Customers, individuals and security when verifying or
 exporting data.
 
-The Service provides controls to view, correct, export and archive records and to delete eligible
-individual records. Archiving does not erase Personal Data, and a workspace cannot be fully erased
-through the archive control. Full workspace deletion and erasure that cannot be completed through
-available controls are handled by the operator on request to {{PRIVACY_EMAIL}}. Workspace Data Export
-is a Company-wide archive and is not a complete response to an individual Data Subject. Perelai
-will provide reasonable additional assistance by email. Assistance required by law
+The Service allows the Customer to view, correct, export and delete client records. Workspace Data
+Export is a Company-wide archive and is not a complete response to an individual Data Subject. Perelai
+will provide reasonable additional assistance by email at {{PRIVACY_EMAIL}}. Assistance required by law
 is not delayed because a subscription is unpaid or restricted. Material bespoke work outside standard
 functionality may be charged at reasonable agreed rates unless caused by Perelai's breach or required
 by law without charge.
@@ -162,8 +159,7 @@ by law without charge.
 ## 9. Personal Data Breaches
 
 Perelai will notify the Customer without undue delay after becoming aware of a Personal Data Breach
-affecting Customer Personal Data. The ordinary support response target does not apply to breach
-notifications. Notice is sent by email to the
+affecting Customer Personal Data, and aims to do so within 48 hours. Notice is sent by email to the
 Company owner's account email and, insofar as information is available, describes:
 
 - the nature of the breach, categories and approximate number of affected Data Subjects and records;
@@ -211,54 +207,28 @@ follows:
 - **Return:** available on request until active deletion is completed.
 - **Public access:** public booking pages and links for the workspace are disabled when closure is
   confirmed.
-- **Active systems:** the operator deletes Customer Personal Data from the database, file storage
-  and job queues through a controlled cleanup process without undue delay and no later than
-  30 calendar days after the confirmed instruction. This is not an instant self-service operation;
-  an earlier deadline required by Applicable Data Protection Law takes priority.
+- **Active systems:** Customer Personal Data is deleted from the database, file storage and job queues
+  without undue delay and within 30 days of the confirmed instruction.
 - **Backups:** database backups are made daily and kept for up to 7 days in off-site storage and up to
   10 days on the hosting server. Residual copies are excluded from ordinary use and deleted within 30
   days after active deletion. If a backup is restored, deletion instructions are applied again before
   the data returns to use.
-  These backups cover the database only; uploaded files and attachments are not backed up and may
-  be unrecoverable if the file-storage server or disk is lost. The Customer should keep their originals.
-- **Inactive workspaces:** a workspace that remains in restricted mode without a paid subscription
-  or other valid access for six consecutive months may be closed after at least 30 days' email
-  notice to the Company owner. Closure is discretionary, not automatic on the six-month anniversary;
-  ordinary retention still applies while the workspace remains open. If closed, it is deleted on
-  the schedule above, counted from the closure date.
+- **Inactive workspaces:** a workspace that remains in restricted mode without a subscription for six
+  consecutive months may be closed after at least 30 days' email notice to the Company owner, and is
+  then deleted on the schedule above.
 - **Confirmation:** Perelai confirms completion of active deletion by email to the Company owner on
   request.
 
 Perelai may retain, with restricted access and only for the stated purpose: evidence of acceptance of
-the Terms, this DPA and other Perelai documents for 1095 calendar days after active deletion of the
-relevant account or workspace; a minimal record of the deletion request and its completion, without
-workspace content, for 1095 calendar days after completion; and any Customer
+the Terms, this DPA and other Perelai documents for 1095 days after deletion; a minimal record of the
+deletion request and its completion, without workspace content, for 1095 days; and any Customer
 Personal Data that applicable law requires Perelai to keep, for the period required. Such data is not
 used for any other purpose.
 
-During the Agreement, the standard booking profile uses operator-led cleanup cycles rather than
-instant expiry. Subject to the specific continuing purposes below:
-
-- Uncompleted booking requests that have not been converted into a service record become eligible
-  for cleanup after 90 calendar days from creation, or from the latest status update for a declined
-  request. They are deleted within the next 30 calendar days, no later than 120 calendar days from
-  that starting point. Contacts with no completed visit follow the same 90-day eligibility period
-  from creation and the next 30-day cleanup window.
-- Ordinary client contact data and visit history become eligible after 24 calendar months from the
-  last completed visit. They are deleted or irreversibly anonymised within the following 30 calendar
-  days. This is not a promise that accounting or other separately necessary records expire at the
-  same time.
-- If a record is still needed for an outstanding booking, order, prepaid entitlement or another
-  documented lawful purpose, only the necessary data is retained for that purpose and reviewed
-  during cleanup. Once that purpose ends, data already past its ordinary retention period is
-  removed within 30 calendar days, unless a specific legal retention duty or a justified hold applies.
-  A technical dependency or failed cleanup alone is not a reason to extend retention.
-
-These cycles do not postpone a valid erasure instruction or any earlier legal deadline. A shorter
-retention period already agreed with the Customer or stated in an applicable booking privacy notice
-continues to apply until lawfully changed; this DPA does not automatically extend it. The Customer
-can ask {{PRIVACY_EMAIL}} for earlier deletion or assistance with related records; available in-app
-deletion controls do not cover every record or replace this process. Archiving is not deletion.
+During the Agreement, Perelai applies the retention settings of the Customer's workspace. In the
+standard booking profile, requests that do not lead to a completed service are deleted no later than
+90 days after closure, and client history no later than 24 months after the last completed visit. The
+Customer can delete individual records earlier.
 
 ## 13. Records and cooperation
 
@@ -400,7 +370,7 @@ As set out in section 12.
 
 | Area | Measures |
 |---|---|
-| Governance | The Perelai operator is responsible for data protection and security and handles deletion, retention, recovery and incident decisions. These activities may be performed manually; this DPA does not promise a dedicated compliance team or fully automated operations. |
+| Governance | The Perelai operator is responsible for data protection and security. Written operating procedures cover workspace deletion, retention clean-up, backup restore and incident handling. |
 | Personnel | Customer Personal Data is accessed only by the operator, who is bound by confidentiality. Any future personnel will be bound by confidentiality and given access only as needed. |
 | Authentication | Individual user accounts; passwords stored as salted bcrypt hashes; signed session tokens valid for 1 day; optional Google sign-in with short-lived, bound OAuth state. |
 | Access control and isolation | Role-based permissions within each Company; server-side authorisation on each request; data queries scoped to the current Company and current membership; a role in one Company grants no access to another. |
@@ -410,10 +380,10 @@ As set out in section 12.
 | Data minimisation | Uploaded import files and previews are deleted after the import finishes or after 24 hours without activity; delivery logs and notifications are deleted on fixed schedules. |
 | Development and change management | Source code is version-controlled; changes are tested before deployment; dependencies and hosting components receive security updates. |
 | Logging | Security-relevant events such as sign-in, legal acceptance and exports are recorded; server logs are normally kept for no longer than 90 days. |
-| Backups and recovery | Daily database backups, kept for up to 7 days in access-controlled off-site storage in the European Union and up to 10 days on the hosting server. Uploaded files and attachments are excluded. Before returning restored data to use, the operator must reconcile deletion instructions and verify that erased data is not reintroduced. No guaranteed recovery time or uninterrupted availability is promised. |
-| Deletion | Full workspace deletion is operator-led following a verified request, with completion checks. Ordinary record cleanup follows section 12 and includes review of skipped records; expiring tokens and other scheduled housekeeping have separate controls. Archiving alone does not erase data. |
-| Incident response | The operator must assess reports, contain and investigate incidents, record the findings and notify affected Customers under section 9. Notification may be completed in phases without undue further delay. |
-| Subprocessor management | Perelai must review a new Subprocessor and enter the written processing terms required by section 6 before entrusting Customer Personal Data to it. |
+| Backups and recovery | Daily database backups, kept for up to 7 days in access-controlled off-site storage in the European Union and up to 10 days on the hosting server; documented restore procedure that re-applies deletion instructions before restored data is used. |
+| Deletion | Documented operator procedure for workspace deletion with verification of completion; scheduled deletion of expired tokens and records. |
+| Incident response | Documented process to contain, investigate and document incidents and notify Customers as described in section 9. |
+| Subprocessor management | Written data processing agreements with each Subprocessor; review before adding a new Subprocessor. |
 | Physical security | Provided by Hetzner's ISO/IEC 27001-certified data centres in Germany and by Cloudflare's infrastructure. |
 | Review | Measures are reviewed at least once a year and after significant changes to the Service. |
 

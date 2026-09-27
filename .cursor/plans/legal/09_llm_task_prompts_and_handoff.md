@@ -133,9 +133,11 @@ loading is a test failure.
 
 ## Task G0 — early Paddle review packet (preparation only)
 
-**Status 2026-09-26:** the legal-page part is done — Terms, Privacy and Refund & Cancellation Policy
-(plus DPA, Booking Terms, Cookies, Subprocessors) are approved v1 `2026-10-01.1`, effective
-2026-10-01, with `/legal/billing` as the Refund Policy and identity/support in register 01. Remaining
+**Status 2026-09-27:** all seven legal texts are owner-approved as `2026-11-01.1`, effective
+**2026-11-01**; the public launch has been postponed. [Release 30](30_platform_legal_mvp_postponement_20260927.md)
+records applied review fixes, configuration and remaining operations. Artifact approval does not verify
+operational readiness; use the forthcoming date honestly in any provider packet. Use `/legal/billing`
+as the Refund Policy and identity/support in register 01. Remaining
 owner actions: deploy the landing with the exact `NEXT_PUBLIC_LEGAL_*` build variables, confirm
 `https://perelai.com/legal/terms|privacy|billing` render, prepare the Paddle domain list
 (`perelai.com`, `app.perelai.app` and any real checkout origin) and pricing screenshot, then submit.
@@ -152,7 +154,7 @@ provider contract requires a separately authorised owner/operator action, not th
 
 ## Task G0b — Google legal/verification packet (parallel preparation)
 
-**Status 2026-09-26:** the approved Privacy Notice §4 now states Google sign-in data
+**Status 2026-09-27:** use Privacy `2026-11-01.1`, effective 2026-11-01. Its §4 states Google sign-in data
 (`openid email profile`: ID, email, name), Calendar `calendar.events.readonly` data, use, human-access
 limits, disconnect behaviour (local token/sync-state deletion; revoke in Google Account) and Google's
 recommended Limited Use sentence; Terms §10 states read-only import. Remaining owner actions: OAuth

@@ -1,26 +1,53 @@
 # Perelai legal facts inventory and env contract
 
-**Platform documents v1 approved — 2026-09-26 (`owner-platform-legal-v1-20260926`):** all seven
-`content/legal/en/*.md` documents are `approved`, version `2026-10-01.1`, effective `2026-10-01`;
-hashes are in `content/legal/versions.json` and are computed against
-`lib/legal/production-identity.ts` (`pnpm legal:manifest` verifies, `--write` recomputes). Owner
-decisions recorded in this task supersede the corresponding `[TBD]` rows below:
+**Current platform release — 2026-09-27:** all seven documents are **`2026-11-01.1`**,
+effective **`2026-11-01`**. Approval: `owner-platform-legal-mvp-postponement-20260927`.
+The owner asked to postpone by two weeks or one month; 1 November is the selected month-buffer
+release date, not evidence of deployment. The owner authorised the recommendations from
+[review 29](29_platform_legal_review_and_zoho_eu_correction_20260927.md), implemented and qualified in
+[release 30](30_platform_legal_mvp_postponement_20260927.md). These entries supersede conflicting
+historical decisions below for this new platform packet only. Hashes are in `content/legal/versions.json`
+and use `lib/legal/production-identity.ts` (`pnpm legal:manifest`; `--write` recomputes).
 
-| Fact | Decision |
+| Fact | Current decision |
 |---|---|
 | Forum | Ukrainian law; competent courts of Ukraine in Lviv; 30-day pre-action notice; mandatory local/consumer protections preserved; no arbitration |
-| Liability cap | greater of fees paid in the preceding 12 months and USD 100; carve-outs for death/injury, fraud, intentional breach, non-excludable liability; mutual indirect-loss exclusion; limited mutual indemnities outside the cap |
-| Inactive workspaces (C-10/C-14 retention part) | restricted 6 consecutive months without subscription → 30 days' email notice → closure and 30 + 30 deletion |
-| Support mailbox | `support@perelai.app` hosted on Zoho Mail, US data centre (Zoho Corporation); Customer Data subprocessor. Owner must accept Zoho's DPA |
-| Off-site DB backups | Coolify → Cloudflare R2 bucket with EU jurisdiction, 7-day retention; on-server Coolify copies ≤10 days. Supersedes "Hetzner-only backups"; DB only, files are not in these backups |
-| Analytics | owner deletes the historical PostHog project; documents state no analytics |
-| FOP tax status | owner reports single-tax group 3; adding KVED 63.11 (F-11 tax part still needs accountant confirmation of the full schedule) |
-| Defaults chosen in drafting (owner may change with a new version) | 30-day notice for material Terms/price changes, subprocessor changes, audits and Perelai termination for convenience (with refund of prepaid fees); 30-day breach cure; support target 2 business days; breach notice target 48 h; data return within 30 days without charge; logs normally ≤90 days; support mail ≤24 months; acceptance/deletion evidence and subscription records 1095 days |
+| Liability cap | greater of fees paid in the preceding 12 months and USD 100; both parties' contractual indemnities, defence costs, settlements and awards are inside the same aggregate cap; non-excludable liability and applicable DPA/SCC precedence preserved |
+| Ordinary retention | 90 calendar days to eligibility + at most 30 calendar days for cleanup (maximum 120 from the applicable clock); ordinary client history 24 calendar months + at most 30 calendar days. Operator-led cycles; technical skips are not legal exceptions. Specific continuing purposes and legal holds require separate classification. This does not silently amend existing salon notices |
+| Workspace deletion | verified support request; archive UI is not erasure. Operator-led active deletion without undue delay and within 30 calendar days; residual backups within another 30; earlier legal deadlines prevail. This remains a commitment requiring operational execution, not a completed production test |
+| Inactivity | after six consecutive months restricted without a paid subscription **or other valid access**, Perelai **may** close after at least 30 days' email notice. No automatic six-month deletion promise; ordinary retention continues |
+| Support | initial response target 3–5 Ukrainian business days; no guaranteed resolution SLA; no extension of privacy, incident or mandatory refund deadlines |
+| Incidents | notify the Customer **without undue delay** after awareness; removed voluntary 48-hour target. Manual operator handling is allowed; applicable notification duties remain |
+| Support mailbox | Zoho Mail EU (`zoho.eu`) for `support@perelai.app`; owner correction, not evidence of a migration. Verify the contracting entity and executed DPA in the account. EU hosting does not establish exclusively EU support/onward processing |
+| DB backups / files | owner-selected Coolify → Cloudflare R2 EU jurisdiction, ≤7 days off-site, ≤10 days on-server. DB only: uploaded files/attachments are not backed up and may be unrecoverable on storage loss. Actual settings and restore/deletion reconciliation remain to be verified |
+| Trial | one 21-day STUDIO trial per eligible payer relationship; later eligible workspaces share the original end. TEAM-RELEASE and actual feature availability remain separate |
+| Evidence | 1095 **calendar days**, with category-specific clocks: acceptance from active deletion of the relevant account/workspace; deletion record from completion; necessary subscription evidence from end of the subscription relationship. No blanket retention of whole CRM records |
+| Tax/accounting | statutory category-specific periods, starting points and extensions; removed unsupported blanket “generally 1095 days”. Accountant confirmation of the FOP schedule remains open |
+| Other defaults | kept 30-day notice/cure/audit framework and free data return within 30 days; logs normally ≤90 days; support mail ≤24 months, with narrow justified exceptions |
+| Analytics | no analytics in Launch v1 text; owner still needs to verify deployed behaviour and remove the historical PostHog project |
 
-Deployment prerequisites: set the exact `NEXT_PUBLIC_LEGAL_*` values from `.env.example` as landing
-build-time variables; set app `LEGAL_TERMS_VERSION`, `LEGAL_DPA_VERSION`, `LEGAL_PRIVACY_VERSION`
-and `LEGAL_BOOKING_TERMS_VERSION` to `2026-10-01.1`. Owner approval is not a lawyer's opinion; the
-operational promises listed above must actually run from the effective date.
+Deployment configuration: landing identity uses exact `NEXT_PUBLIC_LEGAL_*` values from `.env.example`.
+Date/version come from Markdown + manifest, not ENV overrides. API `LEGAL_TERMS_VERSION`,
+`LEGAL_DPA_VERSION`, `LEGAL_PRIVACY_VERSION`, `LEGAL_BOOKING_TERMS_VERSION` and Web
+`VITE_LEGAL_TERMS_VERSION`, `VITE_LEGAL_DPA_VERSION`, `VITE_LEGAL_PRIVACY_VERSION`,
+`VITE_LEGAL_BOOKING_TERMS_VERSION`, `VITE_LEGAL_BILLING_VERSION` all use **`2026-11-01.1`**.
+Signup/booking acceptance-copy versions are separate. No production deployment, acceptance-evidence
+rewrite or automatic switch on the calendar date is authorised or performed by this document edit.
+Future dating does not defer obligations for existing users or data.
+
+The preceding `.1`/Zoho `.2` packet and exact manifest are preserved in
+[archive](archive/platform-before-20261101/README.md). The original `.1` also remains in Git commit
+`38776d614a002b73e36f5895a024bbc94f713d68`. Text approval is not operational completion or a lawyer's opinion.
+
+**Salon notice v2 — Cloudflare backup disclosure, 2026-09-27:** UA/uk, US/en, AU/en and CA/en
+now have immutable `business-booking-<country>-<language>-v2` entries, effective **2026-11-01**,
+under `owner-booking-notice-cloudflare-v2-20260927`. State: **REGISTERED_FUTURE_NOT_DEFAULT**.
+Their source/JSON/preview/release packets match between repositories. They disclose Cloudflare R2
+EU database-backup storage, daily backups with ≤7 days off-site / ≤10 days on-server, exclusion
+of uploaded files, and read-only Calendar import. All v1 artifacts/digests and current defaults
+are preserved; no salon settings or evidence were republished. This backup correction keeps the
+salon notices' existing ordinary retention commitments; the platform cleanup window does not
+silently extend them. See [handoff 31](31_booking_notice_v2_cloudflare_backups_20260927.md).
 
 **CA/en scoped code activation — 2026-09-26:** the owner explicitly requested
 “разблокируй Канаду оставив QC/AB/BC закрытыми” (`owner-ca-en-release-20260926`).

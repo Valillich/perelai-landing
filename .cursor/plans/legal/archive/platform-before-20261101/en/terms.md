@@ -1,11 +1,11 @@
 ---
 document: terms
-version: "2026-11-01.1"
-effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Terms of Service
@@ -19,9 +19,8 @@ record system or the provider of services offered by a Perelai customer.
 
 - These Terms are a business contract between you and the Ukrainian individual entrepreneur who
   operates Perelai. Ukrainian law applies, subject to mandatory protections of your local law.
-- Each eligible payer relationship receives one 21-day STUDIO trial without a payment card.
-  Eligible workspaces added during that trial share its original end date. After the trial you choose
-  and buy a monthly subscription; nothing is charged automatically at the end of the trial.
+- New workspaces get one 21-day STUDIO trial without a payment card. After the trial you choose and
+  buy a monthly subscription; nothing is charged automatically at the end of the trial.
 - Subscriptions are sold through Paddle, our Merchant of Record. You can cancel at any time; access
   continues until the end of the paid month.
 - Your business data remains yours. We process your clients' data on your instructions under our
@@ -500,17 +499,13 @@ export, data return or switching to another provider.
 
 ### 17.3 Closing a workspace and deletion
 
-Full workspace deletion is handled by the Perelai operator on request to {{SUPPORT_EMAIL}} from the
-account email registered as Company owner. The workspace control in the app archives the workspace;
-it does not permanently erase its data or submit a full deletion request. We verify authority,
-tell you about any active subscription and how to stop future charges, and offer a copy of the data
-before deletion. Verification is limited to what is reasonably necessary and is not used to delay
-an applicable legal deadline.
+The Company owner can request closure and deletion of a workspace from the account email registered
+as owner, by writing to {{SUPPORT_EMAIL}} or through a closure function where the app provides one. We
+verify authority, tell you about any active subscription and how to stop future charges, and offer a
+copy of the data before deletion.
 
 After we receive the owner's confirmed deletion instruction, we disable the workspace's public pages
-and links. The operator deletes its Customer Data from active systems through a controlled cleanup
-process without undue delay and no later than 30 calendar days after that instruction. Deletion is
-not an instant self-service operation. An earlier deadline required by applicable law takes priority.
+and links and delete its Customer Data from active systems without undue delay and within 30 days.
 Residual copies in backups are kept out of ordinary use and deleted within the following 30 days, so
 ordinarily no later than 60 days after the confirmed instruction. If a backup is ever restored, earlier
 deletion instructions are applied again before the data returns to use.
@@ -525,9 +520,7 @@ individual login or deactivating a performer is not a deletion instruction.
 If a workspace remains in restricted mode without a paid subscription or other valid access for six
 consecutive months, we may close it. We will email the Company owner at least 30 days before closure.
 You can prevent closure by purchasing a subscription or ask for a copy of the data during that
-period. This is a discretionary closure process, not automatic deletion on the six-month anniversary.
-The ordinary retention rules in the DPA continue to apply while a workspace remains open. Closure
-then follows the deletion schedule in section 17.3, counted from the closure date.
+period. Closure then follows the deletion schedule in section 17.3, counted from the closure date.
 
 ### 17.5 Termination
 
@@ -556,11 +549,9 @@ intellectual property, data return and deletion, liability, indemnity and disput
 
 ## 18. Support and changes to the Service
 
-Support is provided by email at {{SUPPORT_EMAIL}}. We aim to provide an initial response within
-3–5 business days
+Support is provided by email at {{SUPPORT_EMAIL}}. We aim to respond within two business days
 (Monday to Friday, excluding public holidays in Ukraine). Response times are targets, not
-guarantees of resolution or a service-level agreement. This support target does not extend applicable
-deadlines for privacy requests, incident notifications or mandatory remedies.
+guarantees, unless a signed service-level agreement says otherwise.
 
 We may improve, modify or discontinue features. For a change that significantly reduces core paid
 functionality, we will give at least 30 days' notice, and you may cancel before it takes effect.
@@ -601,22 +592,14 @@ in any 12-month period is limited to the greater of:
    rise to the claim; and
 2. USD 100.
 
-This is one aggregate cap, including both parties' contractual indemnity obligations under section 21
-and the associated defence costs, settlements and awards; it is not a separate allowance for each
-claim or obligation. The cap does not limit the Customer's obligation to pay fees due. The mandatory
-exceptions in section 20.1 and the precedence rules in the DPA continue to apply.
+This cap does not apply to the Customer's obligation to pay fees due, or to either party's liability
+under section 21.
 
 ### 20.4 Data loss
 
-Perelai's current backup scope is the database, as described in the DPA. Uploaded files and attachments
-are not included in those backups. If the file-storage server or its disk is lost, those files may
-not be recoverable. The Customer should retain originals of uploaded files and independent copies
-of data it cannot afford to lose.
-
-If Customer Data is lost or damaged because of our breach, we will use reasonable efforts to recover
-it from available sources, including the most recent usable database backup. This does not promise
-that a backup exists for uploaded files, exclude our security obligations, or replace a remedy or
-liability that cannot lawfully be excluded.
+Perelai maintains backups as described in the DPA. If Customer Data is lost or damaged because of our
+breach, our primary responsibility is to use reasonable efforts to restore it from the most recent
+available backup. The Customer should keep copies of data it cannot afford to lose.
 
 ### 20.5 Statutory guarantees
 
@@ -636,10 +619,8 @@ arising from Customer Data, third-party services or use contrary to these Terms.
 
 The indemnified party must promptly notify the other of the claim, allow it to control the defence
 and settlement, and provide reasonable cooperation. No settlement may admit fault or impose an
-obligation on the indemnified party without its consent. The defence and indemnity obligations,
-including defence costs, settlements and awards, are subject to sections 20.1, 20.2 and the aggregate
-cap in section 20.3. Nothing in this section transfers a regulatory penalty where doing so is unlawful
-or limits a third party's statutory rights.
+obligation on the indemnified party without its consent. Liability under this section is subject to
+section 20.1 and 20.2 but not the cap in section 20.3.
 
 ## 22. Changes to these Terms
 

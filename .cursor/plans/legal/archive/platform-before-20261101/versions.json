@@ -1,0 +1,44 @@
+{
+  "terms": {
+    "version": "2026-10-01.1",
+    "effectiveDate": "2026-10-01",
+    "sha256": "c26e34ef500dc57c4d9ff4890718c3774cf13fb84edaf475a4568681bb09cc3d",
+    "approvalRef": "owner-platform-legal-v1-20260926"
+  },
+  "privacy": {
+    "version": "2026-10-01.2",
+    "effectiveDate": "2026-10-01",
+    "sha256": "1d45a0ffe1a62ad7a231f7906ee678b4c6a2ba1b7915b42cc5d71082db68ec67",
+    "approvalRef": "owner-platform-legal-zoho-eu-correction-20260927"
+  },
+  "dpa": {
+    "version": "2026-10-01.1",
+    "effectiveDate": "2026-10-01",
+    "sha256": "7fd571b09c54a7c0348ea1cf0804aefcbcedb134d6dc4438e7a0b7519a869cf8",
+    "approvalRef": "owner-platform-legal-v1-20260926"
+  },
+  "bookingTerms": {
+    "version": "2026-10-01.1",
+    "effectiveDate": "2026-10-01",
+    "sha256": "c691c19f2016af5679d1ac5d87eb31724bddaa22f7f6895686e53253215d06e7",
+    "approvalRef": "owner-platform-legal-v1-20260926"
+  },
+  "cookies": {
+    "version": "2026-10-01.1",
+    "effectiveDate": "2026-10-01",
+    "sha256": "dc9820abeeb5a02f65ff449336ed76997a3806c3546a1903beba6c7ec83821b5",
+    "approvalRef": "owner-platform-legal-v1-20260926"
+  },
+  "subprocessors": {
+    "version": "2026-10-01.2",
+    "effectiveDate": "2026-10-01",
+    "sha256": "93c84df1c0b2d8f3e9fd329ff0108acb3f5609be7e52d30f7402166e9528a6d4",
+    "approvalRef": "owner-platform-legal-zoho-eu-correction-20260927"
+  },
+  "billing": {
+    "version": "2026-10-01.1",
+    "effectiveDate": "2026-10-01",
+    "sha256": "2f009de891590bb1bd7cd2b8f12c96854d04580850e26460aed6b4849ca9148a",
+    "approvalRef": "owner-platform-legal-v1-20260926"
+  }
+}

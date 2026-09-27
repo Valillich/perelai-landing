@@ -1,11 +1,11 @@
 ---
 document: privacy
-version: "2026-11-01.1"
-effectiveDate: "2026-11-01"
+version: "2026-10-01.2"
+effectiveDate: "2026-10-01"
 lastReviewedDate: "2026-09-27"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-zoho-eu-correction-20260927"
 ---
 
 # Perelai Privacy Notice
@@ -318,16 +318,9 @@ with you, as permitted by the Law of Ukraine "On Personal Data Protection". You 
 
 ## 12. Retention and deletion
 
-We keep personal data only as long as needed for its purpose. After that we delete it or irreversibly
-anonymise it. Routine cleanup is performed in cycles and may require the operator's intervention;
-the maximum cleanup windows below are not an instant expiry function. Deleted database data can
-remain in restricted backups until the rotation described below removes it.
-
-The workspace control in the app archives a workspace; it does not erase its data. To request full
-workspace or account deletion, write to {{SUPPORT_EMAIL}}. We verify the requester's authority and
-coordinate the scope, any data return and the deletion. Some individual records can be deleted through
-available controls; where related records prevent this, contact us for assistance. Archiving a client
-or workspace, cancelling a subscription or removing a login is not a full erasure request.
+We keep personal data only as long as needed for its purpose. After that we delete it or make it
+anonymous. Deleted data remains in backups until they are overwritten on the rotation described
+below.
 
 | Category | Retention |
 |---|---|
@@ -335,14 +328,13 @@ or workspace, cancelling a subscription or removing a login is not a full erasur
 | sign-in and security tokens | app sign-in tokens are valid for 1 day; Google sign-in state for 10 minutes; verification, reset and invitation tokens expire automatically and are removed by scheduled cleanup |
 | server, security and access logs | normally no longer than 90 days, unless needed to investigate a specific incident |
 | support emails and enquiries | up to 24 months after the last message, longer only while an issue or claim is open |
-| evidence of acceptance of our Terms and other documents | 1095 calendar days after active deletion of the relevant account or workspace, restricted to acceptance and claims evidence |
-| trial, subscription and access records | while the subscription relationship exists; necessary subscription and claims evidence for 1095 calendar days after that relationship ends, subject to the separate accounting duties below |
-| Paddle transaction, invoice and payout records | for the statutory period applicable to each tax or accounting document, counted from the legally required reporting or other starting point and extended where an audit, dispute or law requires; workspace deletion does not restart or shorten that period |
-| uncompleted booking requests and contacts with no completed visit | in the standard booking profile, eligible for cleanup after 90 calendar days from creation (for declined requests, from the latest status update); removed within the next 30 calendar days, no later than 120 calendar days from that starting point, unless still needed for a specific continuing purpose described below |
-| ordinary client contact data and visit history | eligible for cleanup 24 calendar months after the last completed visit; deleted or irreversibly anonymised within the following 30 calendar days, subject to the specific continuing purposes below |
-| workspace after a confirmed deletion instruction | operator-led deletion from active systems without undue delay and no later than 30 calendar days; residual backup copies removed within the following 30 calendar days; an earlier applicable legal deadline takes priority |
-| inactive workspace without a paid subscription or other valid access | may be closed after 6 consecutive months in restricted mode and at least 30 days' email notice to the owner; this is discretionary, not automatic deletion at 6 months. Ordinary retention still applies until closure, which starts the deletion schedule above |
-| minimal record of a workspace deletion | 1095 calendar days after completion, without the deleted workspace content |
+| evidence of acceptance of our Terms and other documents | 3 years (1095 days) after the account or workspace concerned is deleted |
+| trial, subscription and access records | while the subscription relationship exists and 3 years (1095 days) afterwards |
+| Paddle transaction, invoice and payout records | for the periods required by Ukrainian tax and accounting law, generally 1095 days from submission of the related tax report, and longer while an audit or dispute is pending |
+| workspace records and Customer Personal Data | as instructed by the business; in the standard booking profile, requests that do not lead to a completed service are kept for no more than 90 days after closure, and client history for no more than 24 months after the last completed visit |
+| workspace after a confirmed deletion instruction | deleted from active systems within 30 days; residual backup copies deleted within the following 30 days |
+| inactive workspace without a subscription | closed after 6 consecutive months in restricted mode, following at least 30 days' email notice to the owner, then deleted on the schedule above |
+| minimal record of a workspace deletion | 3 years (1095 days) after completion, without the deleted workspace content |
 | import files and previews | deleted when the import finishes or after 24 hours without activity; import issue reports expire after 7 days |
 | Workspace Data Export | each archive is available for 24 hours; action approvals expire after 10 minutes; export security records are kept for 12 months |
 | Google Calendar tokens and synchronisation state | until Calendar is disconnected or the workspace is deleted |
@@ -350,22 +342,8 @@ or workspace, cancelling a subscription or removing a login is not a full erasur
 | public booking, status and confirmation links | expire automatically and are removed by scheduled cleanup after expiry |
 | database backups | made daily; kept for up to 7 days in off-site storage and up to 10 days on the hosting server |
 
-The routine booking and client cleanup periods do not apply indiscriminately to every linked record.
-A converted request forms part of the resulting service history. Data still needed for an outstanding
-booking, order, prepaid entitlement or another documented lawful purpose is limited to what that
-purpose needs and reviewed during cleanup. Once the purpose ends, data already past its ordinary
-retention period is removed within 30 calendar days. Technical dependencies and failed cleanup are
-not, by themselves, reasons for longer retention.
-
-Specific records may be kept longer where a law requires it or while necessary for an identified
-dispute or investigation, with access restricted to that purpose and the need reviewed. Retention
-cycles do not delay a valid erasure request or an earlier deadline imposed by applicable law. A shorter
-period already agreed with a business or stated in its applicable booking privacy notice remains in
-effect until lawfully changed; this notice does not automatically extend it.
-
-Database backups do not include uploaded files and attachments. Those files may be unrecoverable if
-the file-storage server or disk is lost. Businesses should keep their originals. On database restore,
-the operator must reconcile deletion instructions before returning restored data to use.
+Specific records may be kept longer where a law requires it or while they are needed for an ongoing
+dispute or investigation, with access restricted to that purpose.
 
 ## 13. Your privacy rights
 
@@ -429,9 +407,8 @@ section 11.
 We use technical and organisational measures appropriate to the nature of the data, including
 encrypted connections (HTTPS), salted password hashing, role-based permissions within each workspace,
 separation of each workspace's data, short-lived single-use approvals for sensitive exports, daily
-database backups stored off-site in the European Union, and restricted administrative access by the
-operator over protected connections. Backup coverage excludes uploaded files and attachments.
-The operator handles security reports and the notification duties described below. Our
+database backups stored off-site in the European Union, restricted administrative access by the
+operator over protected connections, and an incident response process. Our
 [Data Processing Addendum](/legal/dpa) describes these measures in more detail.
 
 No internet service is completely secure. Please report suspected security issues to
@@ -439,11 +416,9 @@ No internet service is completely secure. Please report suspected security issue
 
 ## 15. Personal data breaches
 
-The operator assesses reports, takes containment and investigation steps and records the findings.
-If a breach affects Customer Personal Data, we notify the affected business without undue delay by
-email to the workspace owner, as described in the DPA, and provide further information as it becomes
-available. Ordinary support targets do not postpone this notice. Where we are controller, we notify
-authorities and affected individuals when the applicable law requires it.
+We maintain an incident process. If a breach affects Customer Personal Data, we notify the affected
+business without undue delay by email to the workspace owner, as described in the DPA. Where we are
+controller, we notify authorities and affected individuals when the applicable law requires it.
 
 ## 16. Sensitive data
 

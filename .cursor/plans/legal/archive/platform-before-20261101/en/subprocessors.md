@@ -1,11 +1,11 @@
 ---
 document: subprocessors
-version: "2026-11-01.1"
-effectiveDate: "2026-11-01"
+version: "2026-10-01.2"
+effectiveDate: "2026-10-01"
 lastReviewedDate: "2026-09-27"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-zoho-eu-correction-20260927"
 ---
 
 # Perelai Subprocessor List
@@ -55,4 +55,4 @@ the [Data Processing Addendum](/legal/dpa). No changes are currently announced.
 
 | Effective date | Version | Change |
 |---|---|---|
-| 2026-11-01 | 2026-11-01.1 | initial publication rescheduled to 1 November 2026; Zoho Mail EU (`zoho.eu`) identified as the support mailbox hosting region |
+| 2026-10-01 | 2026-10-01.2 | corrected the initial notice to identify Zoho Mail EU (`zoho.eu`) as the support mailbox hosting region |

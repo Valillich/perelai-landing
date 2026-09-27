@@ -1,11 +1,11 @@
 ---
 document: billing
-version: "2026-11-01.1"
-effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+version: "2026-10-01.1"
+effectiveDate: "2026-10-01"
+lastReviewedDate: "2026-09-26"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-v1-20260926"
 ---
 
 # Perelai Refund & Cancellation Policy
@@ -65,12 +65,10 @@ purchase SOLO or STUDIO for each workspace. There is no automatic charge at the 
 nothing to cancel merely because you started a trial. A later purchase does not restart or
 retroactively bill the trial.
 
-Without a paid subscription or other valid access, the workspace enters restricted mode at expiry.
-Existing records remain subject to the ordinary retention rules in the Privacy Notice and DPA.
+Without a paid subscription, the workspace enters restricted mode at expiry. Existing records are kept.
 You can still sign in, view existing data, buy a subscription, contact support, get a copy of your data
-and request closure; new business activity may be unavailable. A workspace that stays restricted without
-a paid subscription or other valid access for six consecutive months may be closed after at least
-30 days' email notice. This is discretionary, not automatic deletion at six months, as described in
+and request closure; new business activity may be unavailable. A workspace that stays restricted for six
+consecutive months may be closed after 30 days' email notice, as described in
 [Terms section 17](/legal/terms).
 
 The trial includes only features available for STUDIO in the app and does not override user
@@ -103,8 +101,7 @@ manage or cancel your subscription.
 
 We activate paid access after Paddle confirms the payment. If confirmation is delayed, the app shows
 that it is pending. Do not pay again simply because a page has not refreshed. Contact {{SUPPORT_EMAIL}}
-if access is missing after purchase; we aim to give an initial response within 3–5 business days and
-will arrange the
+if access is missing after purchase; we aim to respond within two business days and will arrange the
 appropriate remedy, including a refund where access cannot be provided.
 
 ## 6. Monthly renewal and plan changes
@@ -172,10 +169,8 @@ Provide the purchase email, date, workspace and transaction reference if availab
 is not by itself a reason to reject a request we can otherwise identify. Do not send card numbers,
 passwords, identity documents or client records by email.
 
-We aim to acknowledge refund requests within 3–5 business days (Monday to Friday, excluding public
-holidays in Ukraine), then tell you the outcome and next steps. This is a response target, not a
-guarantee of resolution within that period, and does not extend a mandatory response or refund
-deadline. Refunds of Paddle purchases are executed through Paddle, not by direct bank transfer from
+We aim to acknowledge refund requests within two business days and to tell you the outcome and next
+steps. Refunds of Paddle purchases are executed through Paddle, not by direct bank transfer from
 Perelai. Processing and bank posting times depend on your payment method.
 
 Report duplicate, incorrect or suspected unauthorised charges promptly. We coordinate with Paddle
@@ -196,8 +191,6 @@ mode as described in section 3.
 ## 12. Data, closure and support
 
 Cancellation, refunds, trial expiry and failed payments do not themselves delete workspace data.
-The workspace archive control does not erase data either; full deletion is handled by the operator
-on a verified request to {{SUPPORT_EMAIL}}.
 [Terms section 17](/legal/terms), the [Privacy Notice](/legal/privacy) and the
 [Data Processing Addendum](/legal/dpa) explain data copies, retention, closure and deletion. You can get
 a copy of your workspace data without charge, including in restricted mode. Individual privacy rights do

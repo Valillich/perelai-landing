@@ -1,12 +1,21 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
-**Platform documents v1 approved — 2026-09-26:** Terms, Privacy, DPA, Booking Terms, Cookies,
-Subprocessors and Refund & Cancellation Policy are final and `approved` (`2026-10-01.1`, effective
-2026-10-01, `owner-platform-legal-v1-20260926`) with populated `content/legal/versions.json`. The
+**Current platform packet — 2026-09-27:** all seven documents are `2026-11-01.1`,
+effective **2026-11-01**, under `owner-platform-legal-mvp-postponement-20260927`.
+The owner postponed launch and authorised the MVP wording changes in
+[release 30](30_platform_legal_mvp_postponement_20260927.md). Zoho EU (`zoho.eu`) is preserved.
+All documents are `approved` as texts, with populated
+`content/legal/versions.json`. The
 owner decisions and deployment prerequisites are recorded at the top of
 [register 01](01_legal_facts_env_contract.md). Source drafts 02–07 and 10 are historical; edit
 `content/legal/en/*.md` and run `pnpm legal:manifest --write` for any new version. Older statements
 below that the manifest must stay empty or that counsel must draft each section are superseded.
+
+[Review 29](29_platform_legal_review_and_zoho_eu_correction_20260927.md) is the historical review;
+release 30 records the wording fixes and remaining operational work. A passing document gate
+verifies the artifact, not performance of the DPA's commitments. Postponement does not defer duties
+for data already processed or change existing salon notices. Earlier launch/closure statements below
+are superseded only to the extent explicitly listed in release 30.
 
 **CA/en scoped code activation — 2026-09-26:** the owner explicitly requested
 “разблокируй Канаду оставив QC/AB/BC закрытыми” (`owner-ca-en-release-20260926`).
@@ -296,22 +305,26 @@ The app needs only origins and immutable current-version identifiers:
 
 ```env
 VITE_LANDING_PUBLIC_URL=https://perelai.com
-VITE_LEGAL_TERMS_VERSION=[TBD]
-VITE_LEGAL_DPA_VERSION=[TBD]
-VITE_LEGAL_PRIVACY_VERSION=[TBD]
-VITE_LEGAL_BOOKING_TERMS_VERSION=[TBD]
-VITE_LEGAL_BILLING_VERSION=[TBD]
+VITE_LEGAL_TERMS_VERSION=2026-11-01.1
+VITE_LEGAL_DPA_VERSION=2026-11-01.1
+VITE_LEGAL_PRIVACY_VERSION=2026-11-01.1
+VITE_LEGAL_BOOKING_TERMS_VERSION=2026-11-01.1
+VITE_LEGAL_BILLING_VERSION=2026-11-01.1
 ```
 
 The API needs authoritative versions independent of a potentially stale web bundle:
 
 ```env
-LEGAL_TERMS_VERSION=[TBD]
-LEGAL_DPA_VERSION=[TBD]
-LEGAL_PRIVACY_VERSION=[TBD]
-LEGAL_BOOKING_TERMS_VERSION=[TBD]
-LEGAL_BILLING_VERSION=[TBD]
+LEGAL_TERMS_VERSION=2026-11-01.1
+LEGAL_DPA_VERSION=2026-11-01.1
+LEGAL_PRIVACY_VERSION=2026-11-01.1
+LEGAL_BOOKING_TERMS_VERSION=2026-11-01.1
 ```
+
+The current API consumes these four document-version keys; it has no `LEGAL_BILLING_VERSION`
+configuration consumer. Do not introduce an unused ENV setting or a date override. Signup and
+booking acceptance-copy versions remain separately versioned. These are release values for the
+postponed launch, not permission to deploy early or rewrite stored acceptance evidence.
 
 The API must reject an unknown/stale acceptance version and must not trust a version merely because
 the browser sent it.

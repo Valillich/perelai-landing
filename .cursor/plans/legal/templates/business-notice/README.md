@@ -1,5 +1,41 @@
 # Business booking notices — EU English, PL, UA, US, AU and CA
 
+**Shared v2 handoff — Cloudflare R2 backup disclosure, 2026-09-27
+(`owner-booking-notice-cloudflare-v2-20260927`):** `business-booking-{UA-uk,US-en,AU-en,CA-en}-v2`,
+effective 2026-11-01, are **REGISTERED_FUTURE_NOT_DEFAULT** in the app. They disclose Cloudflare R2
+(EU jurisdiction) as the off-site database-backup recipient, daily backups kept up to 7 days off-site
+and 10 days on-server, and that uploaded files are not backed up. Packets: `*.standard.v2.*` here,
+byte-identical copies in `beauty-finance/docs/legal/business-notice-drafts/`.
+
+| Country | v2 digest | Default until an explicit switch |
+|---|---|---|
+| UA | `3b1a4ca30a0fe9834b52297a071e6e30b3454ab15b453fdca81db98c0d096905` | v1 `75bcc0f4…` |
+| US | `34f00fdb046096c36a18a9a12418d33103cac59ebf27ac27a6290dfdc861223e` | v1 `9a9e9802…` |
+| AU | `b63bf52fc96b71c0780b7297b5001753eeb8ca9ff1dcbffc8d7f5649341b2035` | v1 `1137bb28…` |
+| CA | `be3286fee8237268306591c03e36ca063a14942c2ff4a5fbd237c6beb432636a` | v1 `92e09aa9…` |
+
+Executed 2026-09-27: v2 templates added to `REVIEWED_TEMPLATES` in
+`apps/api/src/public-booking/business-notice-template.ts`; `CURRENT_TEMPLATES` unchanged (v1).
+`business-notice-v2.spec.ts` pins digests, source/JSON alignment, no lookup/render before
+2026-11-01, exact-reference lookup and 12 render variants per country from 2026-11-01, and the
+unchanged v1 default. Results: 122/122 business-notice tests, 280/280 in public-booking-legal,
+public-booking.service and companies.service; API app typecheck clean. Not done: deployment,
+switching `CURRENT_TEMPLATES` to v2, or publishing any salon's settings. To release: switch each
+country reference to v2 (not before 2026-11-01 and only with R2 actually configured), then owners
+re-confirm through the existing preview/publish flow. v1 packets and digests remain unchanged.
+
+Independent continuation verification: **402/402 API tests** in the seven affected booking/Company
+suites passed. The 16 v2 artifacts are identical between repositories; all 38 preceding v1 package
+files and the four runtime v1 literals are unchanged. Full release details and remaining deployment
+steps are in [handoff 31](../../31_booking_notice_v2_cloudflare_backups_20260927.md).
+
+| Market | Source | Prepared JSON | Release record |
+|---|---|---|---|
+| UA/uk | [v2 text](UA.uk.standard.v2.draft.md) | [v2 JSON](UA.uk.standard.v2.prepared.json) | [v2 record](UA.uk.standard.v2.release-record.md) |
+| US/en | [v2 text](US.en.standard.v2.draft.md) | [v2 JSON](US.en.standard.v2.prepared.json) | [v2 record](US.en.standard.v2.release-record.md) |
+| AU/en | [v2 text](AU.en.standard.v2.draft.md) | [v2 JSON](AU.en.standard.v2.prepared.json) | [v2 record](AU.en.standard.v2.release-record.md) |
+| CA/en | [v2 text](CA.en.standard.v2.draft.md) | [v2 JSON](CA.en.standard.v2.prepared.json) | [v2 record](CA.en.standard.v2.release-record.md) |
+
 **CA/en scoped code activation — 2026-09-26:** the owner explicitly requested
 “разблокируй Канаду оставив QC/AB/BC закрытыми” (`owner-ca-en-release-20260926`).
 `business-booking-CA-en-v1` is now the reviewed CA default; Canada is PUBLIC in code
