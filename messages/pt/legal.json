@@ -11,5 +11,7 @@
     "login": "Voltar ao login",
     "register": "Voltar ao cadastro",
     "forgot": "Voltar à redefinição de senha"
-  }
+  },
+  "englishNoticeTitle": "Aviso:",
+  "englishNoticeText": "Este documento está disponível em inglês. O texto em inglês abaixo é a versão vinculativa."
 }

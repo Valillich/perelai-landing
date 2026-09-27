@@ -11,5 +11,7 @@
     "login": "Wróć do logowania",
     "register": "Wróć do rejestracji",
     "forgot": "Wróć do resetowania hasła"
-  }
+  },
+  "englishNoticeTitle": "Uwaga:",
+  "englishNoticeText": "Ten dokument jest dostępny w języku angielskim. Poniższy tekst w języku angielskim jest wersją wiążącą prawnie."
 }

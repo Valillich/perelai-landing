@@ -11,5 +11,7 @@
     "login": "Zurück zur Anmeldung",
     "register": "Zurück zur Registrierung",
     "forgot": "Zurück zum Zurücksetzen des Passworts"
-  }
+  },
+  "englishNoticeTitle": "Hinweis:",
+  "englishNoticeText": "Dieses Dokument ist auf Englisch verfügbar. Der folgende englische Text ist die rechtsverbindliche Fassung."
 }

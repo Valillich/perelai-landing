@@ -11,5 +11,7 @@
     "login": "Retour à la connexion",
     "register": "Retour à l'inscription",
     "forgot": "Retour à la réinitialisation du mot de passe"
-  }
+  },
+  "englishNoticeTitle": "Avis :",
+  "englishNoticeText": "Ce document est disponible en anglais. Le texte en anglais ci-dessous est la version faisant foi."
 }

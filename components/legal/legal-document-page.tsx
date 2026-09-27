@@ -100,8 +100,7 @@ export function LegalDocumentPage({
           {locale !== "en" && (
             <div className="my-6 rounded-xl border border-border bg-muted/30 p-4 text-[14px] text-muted-foreground print:hidden">
               <p>
-                <strong>Notice:</strong> This document is available in English. The English text below is the
-                authoritative version.
+                <strong>{t("englishNoticeTitle")}</strong> {t("englishNoticeText")}
               </p>
             </div>
           )}

@@ -11,5 +11,7 @@
     "login": "Back to log in",
     "register": "Back to sign up",
     "forgot": "Back to password reset"
-  }
+  },
+  "englishNoticeTitle": "Notice:",
+  "englishNoticeText": "This document is available in English. The English text below is the authoritative version."
 }

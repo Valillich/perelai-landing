@@ -187,7 +187,9 @@
     "forMassageTherapists": "Pour les masseurs",
     "forPersonalTrainers": "Pour les coachs sportifs",
     "forMusicTeachers": "Pour les professeurs de musique",
-    "devices": "Comment ouvrir Perelai ?"
+    "devices": "Comment ouvrir Perelai ?",
+    "refund": "Politique de remboursement",
+    "cookies": "Politique relative aux cookies"
   },
   "devices": {
     "title": "Une seule adresse, un seul compte",

@@ -11,5 +11,7 @@
     "login": "Giriş sayfasına dön",
     "register": "Kayıt sayfasına dön",
     "forgot": "Şifre sıfırlamaya dön"
-  }
+  },
+  "englishNoticeTitle": "Bildirim:",
+  "englishNoticeText": "Bu belge İngilizce olarak mevcuttur. Aşağıdaki İngilizce metin bağlayıcı olan asıl sürümdür."
 }

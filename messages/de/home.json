@@ -187,7 +187,9 @@
     "forMassageTherapists": "Für Massagetherapeuten",
     "forPersonalTrainers": "Für Personal Trainer",
     "forMusicTeachers": "Für Musiklehrer",
-    "devices": "Wie öffnen Sie Perelai?"
+    "devices": "Wie öffnen Sie Perelai?",
+    "refund": "Rückerstattungsrichtlinie",
+    "cookies": "Cookie-Richtlinie"
   },
   "devices": {
     "title": "Eine Adresse, ein Login",

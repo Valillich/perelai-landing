@@ -11,5 +11,7 @@
     "login": "Torna all'accesso",
     "register": "Torna alla registrazione",
     "forgot": "Torna al recupero password"
-  }
+  },
+  "englishNoticeTitle": "Avviso:",
+  "englishNoticeText": "Questo documento è disponibile in inglese. Il testo in inglese sottostante è la versione vincolante."
 }
