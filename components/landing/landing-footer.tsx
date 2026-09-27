@@ -124,10 +124,10 @@ export function LandingFooter({
           <p className="text-[13px] text-subtle-text">© {new Date().getFullYear()} Perelai. {t("rights")}</p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
             <Link href="/legal/privacy" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
-              {t("privacy")}
+              Privacy Policy
             </Link>
             <Link href="/legal/terms" className="text-[13px] text-subtle-text transition-colors hover:text-foreground">
-              {t("terms")}
+              Terms of Service
             </Link>
             <Link href="/legal/billing" className="text-[13px] font-medium text-brand-600 transition-colors hover:text-brand-700">
               Refund Policy

@@ -85,12 +85,6 @@ export function LegalDocumentPage({
                   <span>{frontMatter.lastReviewedDate}</span>
                 </div>
               )}
-              <div>
-                <strong className="font-semibold text-foreground print:text-black">Status:</strong>{" "}
-                <span className="uppercase font-semibold text-brand-600 print:text-black">
-                  {frontMatter.status}
-                </span>
-              </div>
             </div>
 
             {/* Archive link */}
