@@ -8,7 +8,7 @@ import type { LegalIdentity } from "./types"
  * /legal/* routes fail closed until a new version is approved.
  */
 export const PRODUCTION_LEGAL_IDENTITY_ENV = {
-  NEXT_PUBLIC_LEGAL_PROVIDER_FULL_NAME: "ILLICHOV VALERII (ІЛЛІЧОВ ВАЛЕРІЙ ВАЛЕРІЙОВИЧ)",
+  NEXT_PUBLIC_LEGAL_PROVIDER_FULL_NAME: "Valerii Illichov (ІЛЛІЧОВ ВАЛЕРІЙ ВАЛЕРІЙОВИЧ)",
   NEXT_PUBLIC_LEGAL_PROVIDER_FORM: "Individual Entrepreneur (FOP)",
   NEXT_PUBLIC_LEGAL_TRADING_NAME: "Perelai",
   NEXT_PUBLIC_LEGAL_COUNTRY_OF_REGISTRATION: "Ukraine",
