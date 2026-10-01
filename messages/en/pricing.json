@@ -4,7 +4,7 @@
     "description": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
   },
   "hero": {
-    "eyebrow": "Planned monthly plans",
+    "eyebrow": "Monthly plans",
     "title": "Start with 21 days of STUDIO.",
     "body": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "When you need team access.",
       "capacity": "Up to {limit} active service professionals.",
-      "access": "Team access, including an administrator."
+      "access": "Team access. Admins count toward the 5 only if they provide services."
     },
     "shared": "Both plans include appointments, client history, payment and package records, and a financial overview.",
-    "currency": "Base prices are in USD. Paddle confirms the final currency and applicable taxes at checkout.",
-    "availability": "Planned launch: 1 November 2026. Subscription checkout is not available yet."
+    "currency": "Base prices are in USD. Final currency and applicable taxes are shown before payment.",
+    "availability": "Subscription checkout is not available yet."
   },
   "trial": {
     "title": "21-day free STUDIO trial. No card required.",
@@ -64,7 +64,7 @@
     "q4": "Can I choose SOLO after the trial?",
     "a4": "Yes. First keep one active service professional, revoke additional team access and cancel pending team invitations. People are not deleted automatically.",
     "q5": "How does renewal work?",
-    "a5": "Once purchased, your subscription renews monthly. Paddle shows the final currency, applicable taxes and terms before payment."
+    "a5": "Once purchased, your subscription renews monthly. Final currency, applicable taxes and terms are shown before payment."
   },
   "cta": {
     "title": "Start with 21 days of STUDIO",

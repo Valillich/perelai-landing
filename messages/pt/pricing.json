@@ -4,7 +4,7 @@
     "description": "Sem cartão. Escolha e compre uma assinatura quando o período de teste terminar. Não haverá cobrança automática sem assinatura."
   },
   "hero": {
-    "eyebrow": "Planos mensais previstos",
+    "eyebrow": "Planos mensais",
     "title": "Comece com 21 dias de STUDIO.",
     "body": "Sem cartão. Escolha e compre uma assinatura quando o período de teste terminar. Não haverá cobrança automática sem assinatura."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Quando sua equipe precisa de acesso.",
       "capacity": "Até {limit} profissionais ativos que prestam serviços.",
-      "access": "Acesso para a equipe, incluindo um administrador."
+      "access": "Acesso para a equipe. Um administrador que não presta serviços não ocupa uma vaga de profissional."
     },
     "shared": "Os dois planos incluem agendamentos, histórico de clientes, registros de pagamentos e pacotes e um resumo financeiro.",
-    "currency": "Os preços base estão em USD. A Paddle confirma a moeda final e os impostos aplicáveis no pagamento.",
-    "availability": "Lançamento previsto: 1º de novembro de 2026. A compra de assinaturas ainda não está disponível."
+    "currency": "Os preços base estão em USD. A moeda final e os impostos aplicáveis são mostrados antes do pagamento.",
+    "availability": "A compra de assinaturas ainda não está disponível."
   },
   "trial": {
     "title": "21 dias grátis de STUDIO. Sem cartão.",
@@ -64,7 +64,7 @@
     "q4": "Posso escolher SOLO depois do teste?",
     "a4": "Sim. Primeiro mantenha apenas um profissional ativo, remova o acesso adicional da equipe e cancele os convites pendentes. As pessoas não são apagadas automaticamente.",
     "q5": "Como funciona a renovação?",
-    "a5": "Após a compra, a assinatura é renovada todo mês. A Paddle mostra a moeda final, os impostos aplicáveis e os termos antes do pagamento."
+    "a5": "Após a compra, a assinatura é renovada todo mês. A moeda final, os impostos aplicáveis e os termos são mostrados antes do pagamento."
   },
   "cta": {
     "title": "Comece com 21 dias de STUDIO",

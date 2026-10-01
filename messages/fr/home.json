@@ -35,7 +35,7 @@
     },
     "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative.",
     "trialMicro": "21 jours de STUDIO sans carte bancaire. Souscrivez un abonnement à la fin de l’essai.",
-    "billingMicro": "L’essai est gratuit. Ensuite, achetez une formule par espace de travail ; aucun prélèvement automatique. Paddle confirme la devise et les taxes."
+    "billingMicro": "L’essai est gratuit. Ensuite, achetez une formule par espace de travail ; aucun prélèvement automatique. La devise et les taxes sont indiquées avant le paiement."
   },
   "operations": {
     "title": "Du rendez-vous à la prestation terminée.",
@@ -149,7 +149,7 @@
     "q2": "Y a-t-il un essai gratuit et faut-il une carte bancaire ?",
     "a2": "Essayez STUDIO pendant 21 jours sans carte. L’essai commence après la configuration de l’activité et est accordé une fois par payeur. Sa date de fin est affichée dans l’application.",
     "q3": "Que se passe-t-il à la fin de la période d’essai ?",
-    "a3": "Après l’essai, choisissez et achetez une formule mensuelle pour chaque espace de travail (Company) que vous souhaitez continuer à utiliser. Aucun prélèvement automatique. Paddle confirme la devise finale et les taxes applicables avant le paiement. Sans accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
+    "a3": "Après l’essai, choisissez et achetez une formule mensuelle pour chaque espace de travail (Company) que vous souhaitez continuer à utiliser. Aucun prélèvement automatique. La devise finale et les taxes applicables sont indiquées avant le paiement. Sans accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
     "q4": "Puis-je travailler avec une équipe ?",
     "a4": "Oui. STUDIO permet d'accueillir jusqu'à 5 professionnels actifs assurant des prestations et inclut l'accès en équipe. Un administrateur qui n'assure pas de prestations ne compte pas dans cette limite.",
     "q5": "Un forfait prépayé est-il un abonnement ?",

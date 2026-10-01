@@ -6,6 +6,7 @@ import { Reveal } from "@/components/landing/reveal"
 import { CtaCard } from "@/components/cta-card"
 import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import { Link } from "@/i18n/navigation"
+import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
 import {
   PageViewTracker,
   PricingPageViewTracker,
@@ -15,6 +16,7 @@ import type { PublishedLocale } from "@/i18n/locales"
 
 export function PricingPage({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("pricing")
+  const showPendingBillingNotice = !isPaidSubscriptionsLive()
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
@@ -79,7 +81,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
               <div className="mx-auto mt-8 max-w-3xl space-y-2 text-center text-[14px] leading-relaxed text-muted-foreground">
                 <p>{t("plans.shared")}</p>
                 <p>{t("plans.currency")}</p>
-                <p>{t("plans.availability")}</p>
+                {showPendingBillingNotice ? <p>{t("plans.availability")}</p> : null}
               </div>
             </Reveal>
           </div>

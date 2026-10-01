@@ -4,7 +4,7 @@
     "description": "Sans carte bancaire. Choisissez et achetez un abonnement à la fin de l’essai. Aucun prélèvement automatique sans souscription."
   },
   "hero": {
-    "eyebrow": "Formules mensuelles prévues",
+    "eyebrow": "Formules mensuelles",
     "title": "Commencez par 21 jours de STUDIO.",
     "body": "Sans carte bancaire. Choisissez et achetez un abonnement à la fin de l’essai. Aucun prélèvement automatique sans souscription."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Quand votre équipe a besoin d’un accès.",
       "capacity": "Jusqu’à {limit} professionnels actifs assurant des prestations.",
-      "access": "Accès pour l’équipe, y compris un administrateur."
+      "access": "Accès pour l’équipe. Un administrateur qui n’assure pas de prestations ne prend pas de place de professionnel."
     },
     "shared": "Les deux formules comprennent les rendez-vous, l’historique client, le suivi des paiements et forfaits et une vue financière.",
-    "currency": "Les prix de base sont en USD. Paddle confirme la devise finale et les taxes applicables au paiement.",
-    "availability": "Lancement prévu le 1er novembre 2026. La souscription payante n’est pas encore disponible."
+    "currency": "Les prix de base sont en USD. La devise finale et les taxes applicables sont indiquées avant le paiement.",
+    "availability": "La souscription payante n’est pas encore disponible."
   },
   "trial": {
     "title": "21 jours gratuits de STUDIO. Sans carte.",
@@ -64,7 +64,7 @@
     "q4": "Puis-je choisir SOLO après l’essai ?",
     "a4": "Oui. Conservez d’abord un seul professionnel actif, retirez les accès supplémentaires et annulez les invitations en attente. Les personnes ne sont pas supprimées automatiquement.",
     "q5": "Comment fonctionne le renouvellement ?",
-    "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. Paddle affiche la devise finale, les taxes applicables et les conditions avant le paiement."
+    "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. La devise finale, les taxes applicables et les conditions sont indiquées avant le paiement."
   },
   "cta": {
     "title": "Commencez par 21 jours de STUDIO",

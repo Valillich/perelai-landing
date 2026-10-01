@@ -4,7 +4,7 @@
     "description": "Sin tarjeta. Elige y compra una suscripción cuando termine la prueba. No habrá ningún cargo automático si no te suscribes."
   },
   "hero": {
-    "eyebrow": "Planes mensuales previstos",
+    "eyebrow": "Planes mensuales",
     "title": "Empieza con 21 días de STUDIO.",
     "body": "Sin tarjeta. Elige y compra una suscripción cuando termine la prueba. No habrá ningún cargo automático si no te suscribes."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Cuando necesitas acceso para el equipo.",
       "capacity": "Hasta {limit} profesionales activos que prestan servicios.",
-      "access": "Acceso para el equipo, incluido un administrador."
+      "access": "Acceso para el equipo. Un administrador que no presta servicios no ocupa una plaza de profesional."
     },
     "shared": "Ambos planes incluyen citas, historial de clientes, registros de pagos y paquetes, y un resumen financiero.",
-    "currency": "Los precios base están en USD. Paddle confirma la moneda final y los impuestos aplicables al pagar.",
-    "availability": "Lanzamiento previsto: 1 de noviembre de 2026. La compra de suscripciones aún no está disponible."
+    "currency": "Los precios base están en USD. La moneda final y los impuestos aplicables se muestran antes de pagar.",
+    "availability": "La compra de suscripciones aún no está disponible."
   },
   "trial": {
     "title": "21 días gratis de STUDIO. Sin tarjeta.",
@@ -64,7 +64,7 @@
     "q4": "¿Puedo elegir SOLO después de la prueba?",
     "a4": "Sí. Primero deja un solo profesional activo, retira el acceso adicional del equipo y cancela las invitaciones pendientes. Las personas no se eliminan automáticamente.",
     "q5": "¿Cómo funciona la renovación?",
-    "a5": "Tras la compra, la suscripción se renueva mensualmente. Paddle muestra la moneda final, los impuestos aplicables y las condiciones antes de pagar."
+    "a5": "Tras la compra, la suscripción se renueva mensualmente. La moneda final, los impuestos aplicables y las condiciones se muestran antes de pagar."
   },
   "cta": {
     "title": "Empieza con 21 días de STUDIO",

@@ -4,7 +4,7 @@
     "description": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
   },
   "hero": {
-    "eyebrow": "Planowane plany miesięczne",
+    "eyebrow": "Plany miesięczne",
     "title": "Zacznij od 21 dni STUDIO.",
     "body": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Gdy potrzebujesz dostępu dla zespołu.",
       "capacity": "Do {limit} aktywnych osób świadczących usługi.",
-      "access": "Dostęp dla zespołu, w tym administratora."
+      "access": "Dostęp dla zespołu. Administrator, który nie świadczy usług, nie zajmuje miejsca specjalisty."
     },
     "shared": "Oba plany obejmują rezerwacje, historię klientów, ewidencję płatności i pakietów oraz przegląd finansów.",
-    "currency": "Ceny bazowe podano w USD. Paddle potwierdza ostateczną walutę i należne podatki przy zakupie.",
-    "availability": "Planowane uruchomienie: 1 listopada 2026 r. Zakup subskrypcji nie jest jeszcze dostępny."
+    "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
+    "availability": "Zakup subskrypcji nie jest jeszcze dostępny."
   },
   "trial": {
     "title": "21 dni bezpłatnego STUDIO. Bez karty.",
@@ -64,7 +64,7 @@
     "q4": "Czy po okresie próbnym mogę wybrać SOLO?",
     "a4": "Tak. Najpierw pozostaw jedną aktywną osobę świadczącą usługi, cofnij dodatkowy dostęp zespołu i anuluj oczekujące zaproszenia. Osoby nie są usuwane automatycznie.",
     "q5": "Jak działa odnowienie?",
-    "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Paddle pokazuje ostateczną walutę, należne podatki i warunki przed płatnością."
+    "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Ostateczna waluta, należne podatki i warunki są pokazane przed płatnością."
   },
   "cta": {
     "title": "Zacznij od 21 dni STUDIO",

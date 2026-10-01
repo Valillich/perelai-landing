@@ -4,7 +4,7 @@
     "description": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
   },
   "hero": {
-    "eyebrow": "Planlanan aylık paketler",
+    "eyebrow": "Aylık paketler",
     "title": "STUDIO ile 21 gün başlayın.",
     "body": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Ekip erişimi gerektiğinde.",
       "capacity": "En fazla {limit} aktif hizmet uzmanı.",
-      "access": "Yönetici dahil ekip erişimi."
+      "access": "Ekip erişimi. Hizmet vermeyen yönetici, hizmet uzmanı kontenjanından yer kullanmaz."
     },
     "shared": "Her iki paket de randevuları, müşteri geçmişini, ödeme ve paket kayıtlarını ve finansal özeti içerir.",
-    "currency": "Temel fiyatlar USD cinsindendir. Son para birimini ve geçerli vergileri ödeme sırasında Paddle gösterir.",
-    "availability": "Planlanan lansman: 1 Kasım 2026. Abonelik satın alma henüz kullanılamıyor."
+    "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
+    "availability": "Abonelik satın alma henüz kullanılamıyor."
   },
   "trial": {
     "title": "21 gün ücretsiz STUDIO. Kart gerekmez.",
@@ -64,7 +64,7 @@
     "q4": "Denemeden sonra SOLO seçebilir miyim?",
     "a4": "Evet. Önce tek bir aktif hizmet uzmanı bırakın, ek ekip erişimini kaldırın ve bekleyen davetleri iptal edin. Kişiler otomatik silinmez.",
     "q5": "Yenileme nasıl işler?",
-    "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Paddle son para birimini, geçerli vergileri ve koşulları ödemeden önce gösterir."
+    "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Son para birimi, geçerli vergiler ve koşullar ödemeden önce gösterilir."
   },
   "cta": {
     "title": "STUDIO ile 21 gün başlayın",

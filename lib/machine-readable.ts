@@ -4,6 +4,7 @@ import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import devicesEn from "@/messages/en/devices.json"
 import homeEn from "@/messages/en/home.json"
 import pricingEn from "@/messages/en/pricing.json"
+import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
 import { toAbsoluteLandingUrl } from "@/lib/seo"
 
 function bulletList(items: string[]): string {
@@ -45,7 +46,7 @@ export function buildLlmsTxt(): string {
     "## Current capabilities",
     bulletList(capabilities),
     "",
-    "## Trial and planned pricing",
+    "## Trial and monthly plans",
     bulletList([
       pricingEn.trial.title,
       pricingEn.billing.body,
@@ -53,7 +54,7 @@ export function buildLlmsTxt(): string {
         (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))}`,
       ),
       pricingEn.plans.currency,
-      pricingEn.plans.availability,
+      ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
     ]),
     "",
     "## What Perelai is not",
@@ -96,7 +97,7 @@ export function buildPricingMarkdown(): string {
     "",
     `Source page: ${toAbsoluteLandingUrl("/pricing")}`,
     "",
-    "## Trial and planned monthly plans",
+    "## Trial and monthly plans",
     bulletList([
       pricingEn.hero.body,
       pricingEn.trial.body,
@@ -104,9 +105,10 @@ export function buildPricingMarkdown(): string {
         (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))} ${pricingEn.plans[plan.code].access}`,
       ),
       pricingEn.plans.currency,
-      pricingEn.plans.availability,
+      ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
       pricingEn.billing.body,
       pricingEn.billing.renewal,
+      "The trial does not create a paid subscription or an automatic charge.",
     ]),
     "",
     "## Current capabilities",
@@ -118,11 +120,5 @@ export function buildPricingMarkdown(): string {
     `- ${pricingEn.faq.q3} ${pricingEn.faq.a3}`,
     `- ${pricingEn.faq.q4} ${pricingEn.faq.a4}`,
     `- ${pricingEn.faq.q5} ${pricingEn.faq.a5}`,
-    "",
-    "## Notes",
-    bulletList([
-      "Base prices are shown in USD; Paddle shows the final currency and applicable taxes before payment.",
-      "The trial does not create a paid subscription or an automatic charge.",
-    ]),
   ].join("\n")
 }

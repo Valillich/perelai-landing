@@ -4,7 +4,7 @@
     "description": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
   },
   "hero": {
-    "eyebrow": "Geplante Monatstarife",
+    "eyebrow": "Monatstarife",
     "title": "Starten Sie mit 21 Tagen STUDIO.",
     "body": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
   },
@@ -19,11 +19,11 @@
     "studio": {
       "description": "Wenn Ihr Team Zugang benötigt.",
       "capacity": "Bis zu {limit} aktive Fachkräfte mit Dienstleistungen.",
-      "access": "Teamzugang, einschließlich Administrator."
+      "access": "Teamzugang. Ein Administrator, der keine Dienstleistungen erbringt, belegt keinen Fachkräfteplatz."
     },
     "shared": "Beide Tarife umfassen Termine, Kundenhistorie, Zahlungs- und Paketaufzeichnungen sowie eine Finanzübersicht.",
-    "currency": "Die Basispreise sind in USD angegeben. Paddle bestätigt die endgültige Währung und anfallende Steuern beim Bezahlen.",
-    "availability": "Geplanter Start: 1. November 2026. Der Kauf von Abonnements ist noch nicht verfügbar."
+    "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
+    "availability": "Der Kauf von Abonnements ist noch nicht verfügbar."
   },
   "trial": {
     "title": "21 Tage STUDIO kostenlos testen. Ohne Karte.",
@@ -64,7 +64,7 @@
     "q4": "Kann ich nach der Testphase SOLO wählen?",
     "a4": "Ja. Behalten Sie zuerst nur eine aktive Fachkraft, entziehen Sie zusätzlichen Teamzugang und stornieren Sie offene Einladungen. Personen werden nicht automatisch gelöscht.",
     "q5": "Wie funktioniert die Verlängerung?",
-    "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Paddle zeigt die endgültige Währung, anfallende Steuern und Bedingungen vor der Zahlung."
+    "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Endgültige Währung, anfallende Steuern und Bedingungen werden vor der Zahlung angezeigt."
   },
   "cta": {
     "title": "Starten Sie mit 21 Tagen STUDIO",

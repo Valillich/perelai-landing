@@ -1,5 +1,5 @@
 import fs from "fs"
-import { describe, expect, test } from "vitest"
+import { describe, expect, test, vi } from "vitest"
 import sitemap from "@/app/sitemap"
 import robots from "@/app/robots"
 import { LEGAL_DRAFTS } from "@/content/legal"
@@ -211,6 +211,20 @@ describe("machine-readable files & answer-engine contract", () => {
       expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month per workspace`)
     }
     expect(pricing).not.toContain("$49")
+  })
+
+  test("pending checkout notice follows the verified release flag on machine-readable pages", () => {
+    vi.stubEnv("NEXT_PUBLIC_PAID_SUBSCRIPTIONS_LIVE", "false")
+    try {
+      expect(buildPricingMarkdown()).toContain(pricingEn.plans.availability)
+      expect(buildLlmsTxt()).toContain(pricingEn.plans.availability)
+
+      vi.stubEnv("NEXT_PUBLIC_PAID_SUBSCRIPTIONS_LIVE", "true")
+      expect(buildPricingMarkdown()).not.toContain(pricingEn.plans.availability)
+      expect(buildLlmsTxt()).not.toContain(pricingEn.plans.availability)
+    } finally {
+      vi.unstubAllEnvs()
+    }
   })
 
   test("answer-engine contract: store-availability answer is self-contained and answers negative directly", () => {
