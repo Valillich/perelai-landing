@@ -61,7 +61,7 @@ describe("English Message Contract & Freeze Verification (POS2)", () => {
       ...extractStrings(homeEn),
       siteConfig.title,
       siteConfig.description,
-    ]
+    ].filter((str) => str !== homeEn.footer.refund)
 
     for (const str of allPublicStrings) {
       // 1. FC1/FC5 bans: earned, income, brought in

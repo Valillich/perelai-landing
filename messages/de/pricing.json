@@ -1,16 +1,33 @@
 {
   "meta": {
     "title": "Preise — Perelai",
-    "description": "Informationen zu Perelai-Funktionen und Zugang zum Arbeitsbereich."
+    "description": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
   },
   "hero": {
-    "title": "Was Sie heute erhalten",
-    "body": "Perelai bietet Buchungs-, Kunden- und Cashflow-Verwaltung. Hier ist, was im Arbeitsbereich verfügbar ist."
+    "eyebrow": "Geplante Monatstarife",
+    "title": "Starten Sie mit 21 Tagen STUDIO.",
+    "body": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
   },
-  "beta": {
-    "badge": "Beta",
-    "title": "Perelai befindet sich derzeit in der Beta",
-    "body": "Kernabläufe sind bereit, während ausgewählte Integrationen und Details noch verfeinert werden."
+  "plans": {
+    "monthly": "Monatlich",
+    "perWorkspace": "/Monat pro Arbeitsbereich",
+    "solo": {
+      "description": "Für die selbstständige Arbeit.",
+      "capacity": "{limit} aktive Fachkraft mit Dienstleistungen.",
+      "access": "Kein zusätzlicher Teamzugang."
+    },
+    "studio": {
+      "description": "Wenn Ihr Team Zugang benötigt.",
+      "capacity": "Bis zu {limit} aktive Fachkräfte mit Dienstleistungen.",
+      "access": "Teamzugang, einschließlich Administrator."
+    },
+    "shared": "Beide Tarife umfassen Termine, Kundenhistorie, Zahlungs- und Paketaufzeichnungen sowie eine Finanzübersicht.",
+    "currency": "Die Basispreise sind in USD angegeben. Paddle bestätigt die endgültige Währung und anfallende Steuern beim Bezahlen.",
+    "availability": "Geplanter Start: 1. November 2026. Der Kauf von Abonnements ist noch nicht verfügbar."
+  },
+  "trial": {
+    "title": "21 Tage STUDIO kostenlos testen. Ohne Karte.",
+    "body": "Ein gemeinsamer Testzeitraum pro berechtigtem Zahlenden beginnt nach der ersten abgeschlossenen Unternehmenseinrichtung. Berechtigte Arbeitsbereiche teilen das ursprüngliche Enddatum. Danach können Sie SOLO wählen."
   },
   "capabilities": {
     "title": "Aktuelle Funktionen",
@@ -28,31 +45,31 @@
     "mobile": "Mobile-First, komfortabel auf dem Desktop",
     "themes": "Helle und dunkle Designs"
   },
-  "noCharge": {
-    "title": "Buchung & Arbeitsbereich",
-    "commission": "Direkter Buchungslink",
-    "commissionDetail": "Ihr Buchungslink gehört Ihnen. Kunden buchen direkt über Ihren Link.",
-    "card": "Registrierung",
-    "cardDetail": "Bestätigen Sie Ihre E-Mail, um die Einrichtung Ihres Arbeitsbereichs abzuschließen."
+  "billing": {
+    "title": "Nach der Testphase",
+    "body": "Wählen und kaufen Sie für jeden Arbeitsbereich (Company), den Sie weiter nutzen möchten, ein eigenes Monatsabonnement. Das Ende der Testphase löst keine automatische Abbuchung aus.",
+    "renewal": "Nach dem Kauf verlängert sich das Abonnement gemäß den Vertragsbedingungen monatlich.",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung",
+    "refund": "Rückerstattungsrichtlinie"
   },
-  "future": {
-    "title": "Was passiert, wenn die Abrechnung kommt",
-    "body": "Die Preise werden bekannt gegeben, bevor ein Abrechnungssystem eingeführt wird."
-  },
-  "regionHint": "Ihr Markt: {country} ({currency}). Beispielzahlen auf der Seite verwenden diese.",
   "faq": {
     "title": "Fragen zu Preisen und Abrechnung",
-    "q1": "Wann beginnt die Abrechnung?",
-    "a1": "Es gibt heute kein Abrechnungssystem in der App. Preise und Bedingungen werden im Voraus bekannt gegeben, bevor eine Abrechnung erfolgt.",
-    "q2": "Was passiert, wenn die Abrechnungsbedingungen bekannt gegeben werden?",
-    "a2": "Preiskonditionen werden im Voraus mitgeteilt, sodass Sie Zeit haben, diese zu prüfen, bevor sich etwas ändert.",
-    "q3": "Wie funktioniert die Kundenbuchung?",
-    "a3": "Ihr Buchungslink gehört Ihnen. Kunden wählen eine Leistung und eine Zeit direkt auf Ihrer Seite."
+    "q1": "Wann beginnt die Testphase und kann ich eine weitere erhalten?",
+    "a1": "Eine Karte ist nicht erforderlich. Die 21 Tage beginnen nach der ersten berechtigten abgeschlossenen Unternehmenseinrichtung und stehen Zahlenden nur einmal zu. Ein neuer Arbeitsbereich startet die Testphase nicht erneut.",
+    "q2": "Was passiert nach der Testphase?",
+    "a2": "Wählen und kaufen Sie SOLO oder STUDIO für jeden Arbeitsbereich, den Sie weiter nutzen möchten. Es gibt keine automatische Abbuchung. Ohne Abonnement oder andere gültige Zugangsberechtigung ist die Nutzung eingeschränkt; Ihre Daten werden durch das Ende der Testphase nicht gelöscht.",
+    "q3": "Wer zählt zum Fachkräfte-Limit?",
+    "a3": "Alle, die aktiv Dienstleistungen erbringen, auch arbeitende Inhaber ohne eigenen Login. Ein Administrator ohne Dienstleistungen zählt nicht dazu, benötigt für den Zugang aber STUDIO.",
+    "q4": "Kann ich nach der Testphase SOLO wählen?",
+    "a4": "Ja. Behalten Sie zuerst nur eine aktive Fachkraft, entziehen Sie zusätzlichen Teamzugang und stornieren Sie offene Einladungen. Personen werden nicht automatisch gelöscht.",
+    "q5": "Wie funktioniert die Verlängerung?",
+    "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Paddle zeigt die endgültige Währung, anfallende Steuern und Bedingungen vor der Zahlung."
   },
   "cta": {
-    "title": "Ihre Kunden, Buchungen und Einnahmen — an einem Ort",
-    "body": "An einem Abend eingerichtet.",
-    "button": "Arbeitsbereich erstellen",
-    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
+    "title": "Starten Sie mit 21 Tagen STUDIO",
+    "body": "Testen Sie den Arbeitsbereich ohne Karte. Wählen Sie Ihren Tarif nach der Testphase.",
+    "button": "STUDIO 21 Tage testen",
+    "micro": "Bestätigen Sie Ihre E-Mail für die Einrichtung. Für die Testphase ist keine Karte erforderlich."
   }
 }

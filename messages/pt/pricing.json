@@ -1,16 +1,33 @@
 {
   "meta": {
     "title": "Preços — Perelai",
-    "description": "Informações sobre os recursos do Perelai e acesso ao espaço de trabalho."
+    "description": "Sem cartão. Escolha e compre uma assinatura quando o período de teste terminar. Não haverá cobrança automática sem assinatura."
   },
   "hero": {
-    "title": "O que você tem acesso hoje",
-    "body": "O Perelai oferece gestão de agendamentos, clientes e fluxo de caixa. Veja o que está incluído no seu espaço de trabalho."
+    "eyebrow": "Planos mensais previstos",
+    "title": "Comece com 21 dias de STUDIO.",
+    "body": "Sem cartão. Escolha e compre uma assinatura quando o período de teste terminar. Não haverá cobrança automática sem assinatura."
   },
-  "beta": {
-    "badge": "Beta",
-    "title": "O Perelai está atualmente em versão Beta",
-    "body": "Os fluxos principais estão prontos, mas alguns detalhes e integrações continuam sendo aprimorados."
+  "plans": {
+    "monthly": "Mensal",
+    "perWorkspace": "/mês por espaço de trabalho",
+    "solo": {
+      "description": "Para trabalhar por conta própria.",
+      "capacity": "{limit} profissional ativo que presta serviços.",
+      "access": "Sem acesso adicional para a equipe."
+    },
+    "studio": {
+      "description": "Quando sua equipe precisa de acesso.",
+      "capacity": "Até {limit} profissionais ativos que prestam serviços.",
+      "access": "Acesso para a equipe, incluindo um administrador."
+    },
+    "shared": "Os dois planos incluem agendamentos, histórico de clientes, registros de pagamentos e pacotes e um resumo financeiro.",
+    "currency": "Os preços base estão em USD. A Paddle confirma a moeda final e os impostos aplicáveis no pagamento.",
+    "availability": "Lançamento previsto: 1º de novembro de 2026. A compra de assinaturas ainda não está disponível."
+  },
+  "trial": {
+    "title": "21 dias grátis de STUDIO. Sem cartão.",
+    "body": "Um período de teste compartilhado por pagador elegível começa após a primeira configuração concluída do negócio. Os espaços de trabalho elegíveis compartilham a data final original. Depois você pode escolher SOLO."
   },
   "capabilities": {
     "title": "Recursos atuais",
@@ -28,31 +45,31 @@
     "mobile": "Desenvolvido para celular, confortável no computador",
     "themes": "Modos claro e escuro"
   },
-  "noCharge": {
-    "title": "Agendamentos e Espaço de Trabalho",
-    "commission": "Link de agendamento direto",
-    "commissionDetail": "Seu link de agendamento é seu. Os clientes agendam diretamente pelo seu próprio link.",
-    "card": "Cadastro",
-    "cardDetail": "Confirme seu e-mail para finalizar a configuração do seu espaço de trabalho."
+  "billing": {
+    "title": "Depois do teste",
+    "body": "Escolha e compre um plano mensal separadamente para cada espaço de trabalho (Company) que quiser continuar usando. O fim do teste não gera cobrança automática.",
+    "renewal": "Após a compra, a assinatura é renovada mensalmente conforme seus termos.",
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "refund": "Política de Reembolso"
   },
-  "future": {
-    "title": "O que acontece quando os planos forem lançados",
-    "body": "Os preços serão anunciados antes de qualquer cobrança ser ativada."
-  },
-  "regionHint": "Seu mercado: {country} ({currency}). Os valores de exemplo nesta página utilizam esta moeda.",
   "faq": {
     "title": "Dúvidas sobre preços e cobrança",
-    "q1": "Quando vocês vão começar a cobrar?",
-    "a1": "Atualmente não há sistema de cobrança ativo no aplicativo. Os preços e condições serão anunciados com antecedência antes de qualquer cobrança.",
-    "q2": "O que acontece quando os preços forem anunciados?",
-    "a2": "As condições comerciais serão divulgadas com tempo suficiente para você avaliar antes de qualquer mudança.",
-    "q3": "Como funcionam os agendamentos dos clientes?",
-    "a3": "Seu link de agendamento é seu. Os clientes escolhem um serviço e horário diretamente na sua página."
+    "q1": "Quando o teste começa? Posso receber outro?",
+    "a1": "Não é preciso cartão. Os 21 dias começam após a primeira configuração concluída elegível do negócio e são concedidos uma vez por pagador. Um novo espaço de trabalho não reinicia o teste.",
+    "q2": "O que acontece quando o teste termina?",
+    "a2": "Escolha e compre SOLO ou STUDIO para cada espaço de trabalho que quiser continuar usando. Não há cobrança automática. Sem assinatura ou outro acesso válido, o uso fica restrito; o fim do teste não apaga seus dados.",
+    "q3": "Quem conta no limite de profissionais?",
+    "a3": "Qualquer pessoa que preste serviços ativamente, inclusive o proprietário que trabalha, mesmo sem login próprio. Um administrador que não presta serviços não conta, mas seu acesso exige STUDIO.",
+    "q4": "Posso escolher SOLO depois do teste?",
+    "a4": "Sim. Primeiro mantenha apenas um profissional ativo, remova o acesso adicional da equipe e cancele os convites pendentes. As pessoas não são apagadas automaticamente.",
+    "q5": "Como funciona a renovação?",
+    "a5": "Após a compra, a assinatura é renovada todo mês. A Paddle mostra a moeda final, os impostos aplicáveis e os termos antes do pagamento."
   },
   "cta": {
-    "title": "Seus clientes, agendamentos e fluxo de caixa — em um só lugar",
-    "body": "Configure em uma tarde.",
-    "button": "Criar espaço de trabalho",
-    "micro": "Você receberá um e-mail de verificação para concluir a configuração."
+    "title": "Comece com 21 dias de STUDIO",
+    "body": "Teste o espaço de trabalho sem cartão. Escolha o plano depois do teste.",
+    "button": "Testar STUDIO por 21 dias",
+    "micro": "Confirme seu e-mail para concluir a configuração. Não é preciso cartão."
   }
 }

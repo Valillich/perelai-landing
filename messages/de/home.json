@@ -34,7 +34,8 @@
       "resumeAutoplay": "Automatischen Wechsel fortsetzen"
     },
     "deviceMicro": "Perelai läuft in Ihrem Browser. Die Installation ist optional.",
-    "trialMicro": "21 Tage STUDIO ohne Karte. Schließen Sie nach der Testphase ein Abonnement ab."
+    "trialMicro": "21 Tage STUDIO ohne Karte. Schließen Sie nach der Testphase ein Abonnement ab.",
+    "billingMicro": "Die Testphase ist kostenlos. Danach kaufen Sie für jeden Arbeitsbereich einen eigenen Tarif; keine automatische Abbuchung. Paddle bestätigt Währung und Steuern."
   },
   "operations": {
     "title": "Vom Termin bis zum abgeschlossenen Besuch.",
@@ -146,9 +147,9 @@
     "q1": "Wie buchen Kunden?",
     "a1": "Teilen Sie Ihren Buchungslink. Kunden wählen eine Leistung und einen Termin auf Ihrer Buchungsseite.",
     "q2": "Gibt es eine Testphase und brauche ich eine Karte?",
-    "a2": "Testen Sie STUDIO 21 Tage lang ohne Karte. Ihre Testphase beginnt nach der Einrichtung Ihres Unternehmens. Das Enddatum wird in der App angezeigt.",
+    "a2": "Testen Sie STUDIO 21 Tage ohne Karte. Die Testphase beginnt nach der Unternehmenseinrichtung und steht jedem Zahlenden einmal zu. Das Enddatum wird in der App angezeigt.",
     "q3": "Was passiert nach der Testphase?",
-    "a3": "Schließen Sie ein Abonnement ab, um weiterzuarbeiten. Ohne Abonnement oder andere gültige Zugriffsberechtigung wird die Nutzung eingeschränkt. Der bloße Ablauf der Testphase löscht Ihre Daten nicht.",
+    "a3": "Wählen und kaufen Sie nach der Testphase einen Monatstarif für jeden Arbeitsbereich (Company), den Sie weiter nutzen möchten. Es gibt keine automatische Abbuchung. Paddle bestätigt die endgültige Währung und anfallende Steuern vor der Zahlung. Ohne gültigen Zugang ist die Nutzung eingeschränkt; Ihre Daten werden durch das Ende der Testphase nicht gelöscht.",
     "q4": "Kann ich mit einem Team arbeiten?",
     "a4": "Ja. STUDIO unterstützt bis zu 5 aktive Fachkräfte, die Leistungen erbringen, sowie Teamzugriff. Ein Administrator, der selbst keine Leistungen erbringt, zählt nicht zu diesem Limit.",
     "q5": "Ist ein Leistungspaket ein Abonnement?",

@@ -6,6 +6,7 @@ import { LEGAL_DRAFTS } from "@/content/legal"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { buildPricingMarkdown, buildLlmsTxt } from "@/lib/machine-readable"
+import { PRICING_PLANS } from "@/content/pricing"
 import { SEO_DESCRIPTION_MAX, SEO_TITLE_MAX, toAbsoluteLandingUrl } from "@/lib/seo"
 import { getFaqPageJsonLd, getSoftwareApplicationJsonLd } from "@/lib/structured-data"
 
@@ -202,10 +203,14 @@ describe("machine-readable files & answer-engine contract", () => {
   test("pricing.md is derived from live page copy", () => {
     const pricing = buildPricingMarkdown()
 
-    expect(pricing).toContain(pricingEn.noCharge.commissionDetail)
-    expect(pricing).toContain(pricingEn.noCharge.cardDetail)
+    expect(pricing).toContain(pricingEn.trial.body)
+    expect(pricing).toContain(pricingEn.billing.body)
+    expect(pricing).toContain(pricingEn.plans.currency)
     expect(pricing).toContain(pricingEn.capabilities.finance)
-    expect(pricing).not.toMatch(/\$19|\$29|\$49/)
+    for (const plan of PRICING_PLANS) {
+      expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month per workspace`)
+    }
+    expect(pricing).not.toContain("$49")
   })
 
   test("answer-engine contract: store-availability answer is self-contained and answers negative directly", () => {
@@ -313,4 +318,3 @@ describe("finance-first machine-readable order and FM6 contract", () => {
     expect(backlog).toContain("Dormant Candidate A")
   })
 })
-

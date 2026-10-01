@@ -34,7 +34,8 @@
       "resumeAutoplay": "Otomatik geçişi sürdür"
     },
     "deviceMicro": "Perelai tarayıcınızda çalışır. Yüklemek isteğe bağlıdır.",
-    "trialMicro": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süresi sonunda abonelik satın alın."
+    "trialMicro": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süresi sonunda abonelik satın alın.",
+    "billingMicro": "Deneme ücretsizdir. Sonrasında her çalışma alanı için ayrı paket satın alın; otomatik ücret yoktur. Para birimini ve vergileri Paddle gösterir."
   },
   "operations": {
     "title": "Randevudan tamamlanan ziyarete.",
@@ -146,9 +147,9 @@
     "q1": "Müşteriler nasıl randevu alır?",
     "a1": "Randevu bağlantınızı paylaşın. Müşteriler sayfanızdan hizmet ve saat seçsin.",
     "q2": "Deneme süresi var mı ve kart gerekli mi?",
-    "a2": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süreniz işletme kurulumundan sonra başlar. Bitiş tarihi uygulama içinde gösterilir.",
+    "a2": "STUDIO’yu 21 gün kart olmadan deneyin. Deneme, işletme kurulumundan sonra ödeme sorumlusu başına bir kez başlar. Bitiş tarihi uygulamada gösterilir.",
     "q3": "Deneme süresi bittiğinde ne olur?",
-    "a3": "Çalışmaya devam etmek için abonelik satın alın. Abonelik veya geçerli başka bir erişim olmadan kullanım kısıtlanır. Deneme süresinin dolması verilerinizi silmez.",
+    "a3": "Denemeden sonra kullanmaya devam etmek istediğiniz her çalışma alanı (Company) için aylık paket seçip satın alın. Otomatik ücret yoktur. Son para birimini ve geçerli vergileri Paddle ödemeden önce gösterir. Geçerli erişim olmadan çalışma kısıtlanır; denemenin bitmesi verilerinizi silmez.",
     "q4": "Ekip ile çalışabilir miyim?",
     "a4": "Evet. STUDIO, hizmet sunan 5 aktif uzmana kadar destek ve ekip erişimi sunar. Hizmet sunmayan bir yönetici bu sınıra dahil edilmez.",
     "q5": "Ön ödemeli paket bir abonelik midir?",

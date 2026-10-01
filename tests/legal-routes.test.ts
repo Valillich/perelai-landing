@@ -178,9 +178,9 @@ describe("Legal Navigation and Footer", () => {
     expect(footer).toContain('href="/legal/privacy"')
     expect(footer).toContain('href="/legal/terms"')
     expect(footer).toContain('href="/legal/billing"')
-    expect(footer).toContain("Refund Policy")
+    expect(footer).toContain('{t("refund")}')
     expect(footer).toContain('href="/legal/cookies"')
-    expect(footer).toContain("Cookie Policy")
+    expect(footer).toContain('{t("cookies")}')
   })
 })
 

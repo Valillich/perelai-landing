@@ -1,6 +1,6 @@
 import catalog from "@/data/niche-catalog.generated.json"
 import { getEnabledNichePages } from "@/config/niche-pages"
-import { PRICING_CAPABILITY_KEYS } from "@/content/pricing"
+import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import devicesEn from "@/messages/en/devices.json"
 import homeEn from "@/messages/en/home.json"
 import pricingEn from "@/messages/en/pricing.json"
@@ -45,6 +45,17 @@ export function buildLlmsTxt(): string {
     "## Current capabilities",
     bulletList(capabilities),
     "",
+    "## Trial and planned pricing",
+    bulletList([
+      pricingEn.trial.title,
+      pricingEn.billing.body,
+      ...PRICING_PLANS.map(
+        (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))}`,
+      ),
+      pricingEn.plans.currency,
+      pricingEn.plans.availability,
+    ]),
+    "",
     "## What Perelai is not",
     bulletList([
       `${homeEn.not.item1Title} — ${homeEn.not.item1Body}`,
@@ -85,13 +96,17 @@ export function buildPricingMarkdown(): string {
     "",
     `Source page: ${toAbsoluteLandingUrl("/pricing")}`,
     "",
-    "## Current status",
+    "## Trial and planned monthly plans",
     bulletList([
-      `${pricingEn.beta.title}. ${pricingEn.beta.body}`,
-      "Billing system: not live.",
-      `${pricingEn.noCharge.commission}: ${pricingEn.noCharge.commissionDetail}`,
-      `${pricingEn.noCharge.card}: ${pricingEn.noCharge.cardDetail}`,
-      pricingEn.future.body,
+      pricingEn.hero.body,
+      pricingEn.trial.body,
+      ...PRICING_PLANS.map(
+        (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))} ${pricingEn.plans[plan.code].access}`,
+      ),
+      pricingEn.plans.currency,
+      pricingEn.plans.availability,
+      pricingEn.billing.body,
+      pricingEn.billing.renewal,
     ]),
     "",
     "## Current capabilities",
@@ -101,11 +116,13 @@ export function buildPricingMarkdown(): string {
     `- ${pricingEn.faq.q1} ${pricingEn.faq.a1}`,
     `- ${pricingEn.faq.q2} ${pricingEn.faq.a2}`,
     `- ${pricingEn.faq.q3} ${pricingEn.faq.a3}`,
+    `- ${pricingEn.faq.q4} ${pricingEn.faq.a4}`,
+    `- ${pricingEn.faq.q5} ${pricingEn.faq.a5}`,
     "",
     "## Notes",
     bulletList([
-      "Prices are not published because there is no chargeable billing flow yet.",
-      "Currency hints may show a visitor market code, but no local price is implied.",
+      "Base prices are shown in USD; Paddle shows the final currency and applicable taxes before payment.",
+      "The trial does not create a paid subscription or an automatic charge.",
     ]),
   ].join("\n")
 }

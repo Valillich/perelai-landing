@@ -68,6 +68,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
                 {t("hero.trialMicro")}
               </p>
               <p className="mt-1 text-[13px] text-subtle-text">
+                {t("hero.billingMicro")}
+              </p>
+              <p className="mt-1 text-[13px] text-subtle-text">
                 {t("hero.micro")}
               </p>
               <p className="mt-1 text-[13px] text-subtle-text">

@@ -1,16 +1,33 @@
 {
   "meta": {
     "title": "Cennik — Perelai",
-    "description": "Informacje o funkcjach Perelai i dostępie do przestrzeni pracy."
+    "description": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
   },
   "hero": {
-    "title": "Co otrzymujesz dzisiaj",
-    "body": "Perelai zapewnia zarządzanie rezerwacjami, klientami i przepływami pieniężnymi. Oto co jest dostępne w przestrzeni pracy."
+    "eyebrow": "Planowane plany miesięczne",
+    "title": "Zacznij od 21 dni STUDIO.",
+    "body": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
   },
-  "beta": {
-    "badge": "Beta",
-    "title": "Perelai jest obecnie w wersji beta",
-    "body": "Kluczowe procesy są gotowe, ale niektóre integracje i szczegóły są nadal dopracowywane."
+  "plans": {
+    "monthly": "Miesięcznie",
+    "perWorkspace": "/mies. za przestrzeń roboczą",
+    "solo": {
+      "description": "Do samodzielnej pracy.",
+      "capacity": "{limit} aktywna osoba świadcząca usługi.",
+      "access": "Bez dodatkowego dostępu dla zespołu."
+    },
+    "studio": {
+      "description": "Gdy potrzebujesz dostępu dla zespołu.",
+      "capacity": "Do {limit} aktywnych osób świadczących usługi.",
+      "access": "Dostęp dla zespołu, w tym administratora."
+    },
+    "shared": "Oba plany obejmują rezerwacje, historię klientów, ewidencję płatności i pakietów oraz przegląd finansów.",
+    "currency": "Ceny bazowe podano w USD. Paddle potwierdza ostateczną walutę i należne podatki przy zakupie.",
+    "availability": "Planowane uruchomienie: 1 listopada 2026 r. Zakup subskrypcji nie jest jeszcze dostępny."
+  },
+  "trial": {
+    "title": "21 dni bezpłatnego STUDIO. Bez karty.",
+    "body": "Jeden wspólny okres próbny na uprawnionego płatnika zaczyna się po pierwszej ukończonej konfiguracji firmy. Uprawnione przestrzenie robocze mają tę samą pierwotną datę zakończenia. Później możesz wybrać SOLO."
   },
   "capabilities": {
     "title": "Aktualne możliwości",
@@ -28,31 +45,31 @@
     "mobile": "Zaprojektowany na telefon, wygodny na komputerze",
     "themes": "Jasny i ciemny motyw"
   },
-  "noCharge": {
-    "title": "Rezerwacja i przestrzeń pracy",
-    "commission": "Bezpośredni link do rezerwacji",
-    "commissionDetail": "Twój link do rezerwacji należy do Ciebie. Klienci rezerwują bezpośrednio przez Twój link.",
-    "card": "Rejestracja",
-    "cardDetail": "Potwierdź e-mail, aby dokończyć konfigurację przestrzeni pracy."
+  "billing": {
+    "title": "Po okresie próbnym",
+    "body": "Wybierz i wykup miesięczny plan osobno dla każdej przestrzeni roboczej (Company), z której chcesz nadal korzystać. Koniec okresu próbnego nie powoduje automatycznego obciążenia.",
+    "renewal": "Po zakupie subskrypcja odnawia się co miesiąc zgodnie z jej warunkami.",
+    "terms": "Warunki korzystania",
+    "privacy": "Polityka prywatności",
+    "refund": "Zasady zwrotów"
   },
-  "future": {
-    "title": "Co się stanie, gdy pojawi się system płatności",
-    "body": "Ceny zostaną ogłoszone przed uruchomieniem systemu płatności."
-  },
-  "regionHint": "Twój rynek: {country} ({currency}). Przykładowe kwoty w serwisie używają tej waluty.",
   "faq": {
     "title": "Pytania o cennik i płatności",
-    "q1": "Kiedy zacznie się naliczanie opłat?",
-    "a1": "Obecnie w aplikacji nie ma systemu płatności. Ceny i warunki zostaną ogłoszone z wyprzedzeniem przed uruchomieniem płatności.",
-    "q2": "Co się stanie, gdy zostaną ogłoszone warunki płatności?",
-    "a2": "Warunki zostaną ogłoszone z wyprzedzeniem, aby dać czas na zapoznanie się z nimi, zanim cokolwiek się zmieni.",
-    "q3": "Jak działa rezerwacja klientów?",
-    "a3": "Twój link należy do Ciebie. Klienci wybierają usługę i termin bezpośrednio na Twojej stronie."
+    "q1": "Kiedy zaczyna się okres próbny i czy mogę otrzymać kolejny?",
+    "a1": "Karta nie jest potrzebna. 21 dni zaczyna się po pierwszej uprawnionej ukończonej konfiguracji firmy i przysługuje płatnikowi tylko raz. Nowa przestrzeń robocza nie uruchamia okresu ponownie.",
+    "q2": "Co dzieje się po zakończeniu okresu próbnego?",
+    "a2": "Wybierz i wykup SOLO lub STUDIO dla każdej przestrzeni roboczej, z której chcesz nadal korzystać. Nie ma automatycznego obciążenia. Bez subskrypcji lub innego ważnego dostępu praca jest ograniczona; koniec okresu próbnego sam w sobie nie usuwa danych.",
+    "q3": "Kto zajmuje miejsce osoby świadczącej usługi?",
+    "a3": "Każdy, kto aktywnie świadczy usługi, także pracujący właściciel bez osobnego loginu. Administrator nieświadczący usług nie zajmuje miejsca, ale jego dostęp wymaga STUDIO.",
+    "q4": "Czy po okresie próbnym mogę wybrać SOLO?",
+    "a4": "Tak. Najpierw pozostaw jedną aktywną osobę świadczącą usługi, cofnij dodatkowy dostęp zespołu i anuluj oczekujące zaproszenia. Osoby nie są usuwane automatycznie.",
+    "q5": "Jak działa odnowienie?",
+    "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Paddle pokazuje ostateczną walutę, należne podatki i warunki przed płatnością."
   },
   "cta": {
-    "title": "Twoi klienci, rezerwacje i przepływy pieniężne — w jednym miejscu",
-    "body": "Konfiguracja w jeden wieczór.",
-    "button": "Utwórz przestrzeń pracy",
-    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+    "title": "Zacznij od 21 dni STUDIO",
+    "body": "Wypróbuj przestrzeń roboczą bez karty. Plan wybierzesz po okresie próbnym.",
+    "button": "Wypróbuj STUDIO przez 21 dni",
+    "micro": "Potwierdź adres e-mail, aby dokończyć konfigurację. Karta nie jest potrzebna."
   }
 }

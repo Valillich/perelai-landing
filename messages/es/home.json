@@ -34,7 +34,8 @@
       "resumeAutoplay": "Reanudar rotación automática"
     },
     "deviceMicro": "Perelai funciona en tu navegador. La instalación es opcional.",
-    "trialMicro": "21 días de STUDIO sin tarjeta. Suscríbete al terminar el período de prueba."
+    "trialMicro": "21 días de STUDIO sin tarjeta. Suscríbete al terminar el período de prueba.",
+    "billingMicro": "La prueba es gratuita. Después, compra un plan por separado para cada espacio de trabajo; sin cargo automático. Paddle confirma la moneda y los impuestos."
   },
   "operations": {
     "title": "De la cita a la sesión completada.",
@@ -146,9 +147,9 @@
     "q1": "¿Cómo reservan los clientes?",
     "a1": "Comparte tu enlace de reserva. Los clientes eligen servicio y hora en tu página de reservas.",
     "q2": "¿Hay período de prueba y necesito tarjeta?",
-    "a2": "Prueba STUDIO durante 21 días sin tarjeta. Tu prueba empieza al configurar tu negocio. La aplicación muestra la fecha de finalización.",
+    "a2": "Prueba STUDIO durante 21 días sin tarjeta. La prueba empieza tras configurar el negocio y se ofrece una sola vez por pagador. La app muestra la fecha de fin.",
     "q3": "¿Qué pasa cuando termina el período de prueba?",
-    "a3": "Suscríbete para seguir trabajando. Sin suscripción u otra fuente válida de acceso, las funciones quedan limitadas. El fin del período de prueba por sí solo no borra tus datos.",
+    "a3": "Después de la prueba, elige y compra un plan mensual para cada espacio de trabajo (Company) que quieras seguir usando. No hay cargo automático. Paddle confirma la moneda final y los impuestos aplicables antes de pagar. Sin acceso válido, el trabajo queda restringido; el fin de la prueba no elimina tus datos.",
     "q4": "¿Puedo trabajar con un equipo?",
     "a4": "Sí. STUDIO incluye hasta 5 profesionales activos que prestan servicios y acceso para el equipo. Un administrador que no preste servicios no cuenta para ese límite.",
     "q5": "¿Un paquete prepagado es una suscripción?",

@@ -21,6 +21,7 @@ const MANIFEST_KEYS = [
   "hero.signup",
   "hero.how",
   "hero.trialMicro",
+  "hero.billingMicro",
   "hero.micro",
   "hero.deviceMicro",
   "hero.imageAlt",
@@ -119,7 +120,7 @@ describe("POS3 raw locale coverage (all 9 published locales)", () => {
 
   const enData = rawLocales.en
 
-  test.each(PUBLISHED_LOCALES)("%s: all 80 manifest scope keys exist and are non-empty", (locale) => {
+  test.each(PUBLISHED_LOCALES)("%s: all manifest scope keys exist and are non-empty", (locale) => {
     const data = rawLocales[locale]
     for (const key of MANIFEST_KEYS) {
       const val = getPath(data, key)
@@ -240,12 +241,15 @@ describe("POS3 raw locale coverage (all 9 published locales)", () => {
       accessBody: data.collaboration.accessBody,
       accessSummary: data.collaboration.accessSummary,
       planNote: data.collaboration.planNote,
+      caption: data.collaboration.caption,
     }
     const accessHtml = renderToStaticMarkup(createElement(MockWorkspaceAccessSummary, { locale, labels: accessLabels }))
     const accessDecoded = accessHtml.replace(/&#x27;/g, "'")
     expect(accessDecoded).toContain(accessLabels.accessTitle)
 
     const packageLabels = {
+      title: data.packages.title,
+      body: data.packages.body,
       summary: data.packages.summary,
       caption: data.packages.caption,
     }
@@ -254,4 +258,3 @@ describe("POS3 raw locale coverage (all 9 published locales)", () => {
     expect(packageDecoded).toContain(packageLabels.summary)
   })
 })
-

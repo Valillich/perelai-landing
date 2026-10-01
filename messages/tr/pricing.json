@@ -1,16 +1,33 @@
 {
   "meta": {
     "title": "Fiyatlandırma — Perelai",
-    "description": "Perelai özellikleri ve çalışma alanı erişimi hakkında bilgiler."
+    "description": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
   },
   "hero": {
-    "title": "Bugün elde ettikleriniz",
-    "body": "Perelai; randevu, müşteri ve nakit akışı yönetimi sunar. İşte çalışma alanınıza dahil olanlar."
+    "eyebrow": "Planlanan aylık paketler",
+    "title": "STUDIO ile 21 gün başlayın.",
+    "body": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
   },
-  "beta": {
-    "badge": "Beta",
-    "title": "Perelai şu anda Beta aşamasındadır",
-    "body": "Temel iş akışları hazır, ancak bazı ayrıntılar ve entegrasyonlar geliştirilmeye devam ediyor."
+  "plans": {
+    "monthly": "Aylık",
+    "perWorkspace": "/ay, çalışma alanı başına",
+    "solo": {
+      "description": "Tek başına çalışanlar için.",
+      "capacity": "{limit} aktif hizmet uzmanı.",
+      "access": "Ek ekip erişimi yok."
+    },
+    "studio": {
+      "description": "Ekip erişimi gerektiğinde.",
+      "capacity": "En fazla {limit} aktif hizmet uzmanı.",
+      "access": "Yönetici dahil ekip erişimi."
+    },
+    "shared": "Her iki paket de randevuları, müşteri geçmişini, ödeme ve paket kayıtlarını ve finansal özeti içerir.",
+    "currency": "Temel fiyatlar USD cinsindendir. Son para birimini ve geçerli vergileri ödeme sırasında Paddle gösterir.",
+    "availability": "Planlanan lansman: 1 Kasım 2026. Abonelik satın alma henüz kullanılamıyor."
+  },
+  "trial": {
+    "title": "21 gün ücretsiz STUDIO. Kart gerekmez.",
+    "body": "Uygun olan her ödeme sorumlusu, ilk tamamlanan işletme kurulumundan sonra tek bir ortak deneme süresi alır. Uygun çalışma alanları ilk bitiş tarihini paylaşır. Daha sonra SOLO seçebilirsiniz."
   },
   "capabilities": {
     "title": "Mevcut Özellikler",
@@ -28,31 +45,31 @@
     "mobile": "Mobil için tasarlandı, bilgisayarda rahat",
     "themes": "Açık ve karanlık modlar"
   },
-  "noCharge": {
-    "title": "Randevular ve Çalışma Alanı",
-    "commission": "Doğrudan randevu bağlantısı",
-    "commissionDetail": "Randevu bağlantınız size aittir. Müşteriler doğrudan kendi bağlantınız üzerinden randevu alır.",
-    "card": "Kayıt Ol",
-    "cardDetail": "Çalışma alanınızın kurulumunu tamamlamak için e-postanızı doğrulayın."
+  "billing": {
+    "title": "Deneme süresinden sonra",
+    "body": "Kullanmaya devam etmek istediğiniz her çalışma alanı (Company) için ayrı bir aylık abonelik seçip satın alın. Denemenin bitmesi otomatik ücret doğurmaz.",
+    "renewal": "Satın alındıktan sonra abonelik, koşullarına göre aylık yenilenir.",
+    "terms": "Hizmet Koşulları",
+    "privacy": "Gizlilik Politikası",
+    "refund": "İade Politikası"
   },
-  "future": {
-    "title": "Ücretlendirme başladığında ne olacak?",
-    "body": "Herhangi bir ödeme sistemi devreye girmeden önce fiyatlar duyurulacaktır."
-  },
-  "regionHint": "Pazarınız: {country} ({currency}). Bu sayfadaki örnek rakamlar bunu kullanır.",
   "faq": {
     "title": "Fiyatlandırma ve faturalandırma hakkında sorular",
-    "q1": "Ücret almaya ne zaman başlayacaksınız?",
-    "a1": "Şu an itibarıyla uygulamada aktif bir ödeme sistemi yoktur. Herhangi bir tahsilat yapılmadan önce fiyatlar ve koşullar önceden duyurulacaktır.",
-    "q2": "Fiyatlandırma koşulları duyurulduğunda ne olacak?",
-    "a2": "Fiyatlandırma koşulları, herhangi bir değişiklik yapılmadan önce incelemeniz için zamanında duyurulacaktır.",
-    "q3": "Müşteri randevuları nasıl çalışır?",
-    "a3": "Randevu bağlantınız size aittir. Müşteriler doğrudan sayfanızdan hizmet ve saat seçer."
+    "q1": "Deneme ne zaman başlar? Bir tane daha alabilir miyim?",
+    "a1": "Kart gerekmez. 21 gün, ilk uygun tamamlanmış işletme kurulumundan sonra başlar ve ödeme sorumlusu başına bir kez verilir. Yeni çalışma alanı denemeyi yeniden başlatmaz.",
+    "q2": "Deneme bitince ne olur?",
+    "a2": "Kullanmaya devam etmek istediğiniz her çalışma alanı için SOLO veya STUDIO seçip satın alın. Otomatik ücret yoktur. Abonelik veya başka geçerli erişim olmadan çalışma kısıtlanır; denemenin bitmesi verilerinizi silmez.",
+    "q3": "Hizmet uzmanı sınırına kimler dahildir?",
+    "a3": "Ayrı girişi olmasa bile çalışan işletme sahibi dahil, aktif olarak hizmet veren herkes. Hizmet vermeyen yönetici sayılmaz, ancak erişimi STUDIO gerektirir.",
+    "q4": "Denemeden sonra SOLO seçebilir miyim?",
+    "a4": "Evet. Önce tek bir aktif hizmet uzmanı bırakın, ek ekip erişimini kaldırın ve bekleyen davetleri iptal edin. Kişiler otomatik silinmez.",
+    "q5": "Yenileme nasıl işler?",
+    "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Paddle son para birimini, geçerli vergileri ve koşulları ödemeden önce gösterir."
   },
   "cta": {
-    "title": "Müşterileriniz, randevularınız ve nakit akışınız — tek bir yerde",
-    "body": "Bir öğleden sonra kurun.",
-    "button": "Çalışma alanı oluştur",
-    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+    "title": "STUDIO ile 21 gün başlayın",
+    "body": "Çalışma alanını kart olmadan deneyin. Paketinizi denemeden sonra seçin.",
+    "button": "STUDIO’yu 21 gün deneyin",
+    "micro": "Kurulumu tamamlamak için e-postanızı doğrulayın. Kart gerekmez."
   }
 }

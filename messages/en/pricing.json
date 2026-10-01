@@ -1,16 +1,33 @@
 {
   "meta": {
     "title": "Pricing — Perelai",
-    "description": "Information about Perelai features and workspace access."
+    "description": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
   },
   "hero": {
-    "title": "What you get today",
-    "body": "Perelai provides booking, client, and cash flow management. Here is what is available in the workspace."
+    "eyebrow": "Planned monthly plans",
+    "title": "Start with 21 days of STUDIO.",
+    "body": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
   },
-  "beta": {
-    "badge": "Beta",
-    "title": "Perelai is currently in beta",
-    "body": "Core workflows are ready, while selected integrations and details are still being refined."
+  "plans": {
+    "monthly": "Monthly",
+    "perWorkspace": "/month per workspace",
+    "solo": {
+      "description": "For working on your own.",
+      "capacity": "{limit} active service professional.",
+      "access": "No additional team access."
+    },
+    "studio": {
+      "description": "When you need team access.",
+      "capacity": "Up to {limit} active service professionals.",
+      "access": "Team access, including an administrator."
+    },
+    "shared": "Both plans include appointments, client history, payment and package records, and a financial overview.",
+    "currency": "Base prices are in USD. Paddle confirms the final currency and applicable taxes at checkout.",
+    "availability": "Planned launch: 1 November 2026. Subscription checkout is not available yet."
+  },
+  "trial": {
+    "title": "21-day free STUDIO trial. No card required.",
+    "body": "One shared trial per eligible payer starts after the first completed business setup. Eligible workspaces share its original end date. The trial gives you STUDIO access, even if you choose SOLO afterward."
   },
   "capabilities": {
     "title": "Current capabilities",
@@ -28,31 +45,31 @@
     "mobile": "Mobile-first, comfortable on desktop",
     "themes": "Light and dark themes"
   },
-  "noCharge": {
-    "title": "Booking & Workspace",
-    "commission": "Direct booking link",
-    "commissionDetail": "Your booking link is yours. Clients book directly on your link.",
-    "card": "Registration",
-    "cardDetail": "Confirm your email to finish setting up your workspace."
+  "billing": {
+    "title": "After the trial",
+    "body": "Choose and purchase a monthly plan separately for each workspace (Company) you want to keep using. Trial expiry does not trigger a charge.",
+    "renewal": "Once purchased, a subscription renews monthly under the subscription terms.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "refund": "Refund Policy"
   },
-  "future": {
-    "title": "What happens when billing arrives",
-    "body": "Pricing will be announced before any billing system ships."
-  },
-  "regionHint": "Your market: {country} ({currency}). Example figures elsewhere on the site use it.",
   "faq": {
     "title": "Questions about pricing and billing",
-    "q1": "When does billing start?",
-    "a1": "There is no billing system in the app today. Pricing and terms will be announced in advance before any billing ships.",
-    "q2": "What happens when billing terms are announced?",
-    "a2": "Pricing terms will be announced in advance so you will have time to review before anything changes.",
-    "q3": "How does client booking work?",
-    "a3": "Your booking link is yours. Clients select a service and time directly on your page."
+    "q1": "When does the trial start, and can I get another?",
+    "a1": "No card is required. The 21-day trial begins after your first eligible completed business setup and is available once per payer. A new workspace does not restart it.",
+    "q2": "What happens when the trial ends?",
+    "a2": "Choose and purchase SOLO or STUDIO for each workspace you want to keep using. There is no automatic charge. Without a subscription or another valid source of access, work is restricted; trial expiry itself does not delete your data.",
+    "q3": "Who counts toward the service-professional limit?",
+    "a3": "Anyone actively providing services, including a working owner, even without a login. An administrator who does not provide services does not count, but their access requires STUDIO.",
+    "q4": "Can I choose SOLO after the trial?",
+    "a4": "Yes. First keep one active service professional, revoke additional team access and cancel pending team invitations. People are not deleted automatically.",
+    "q5": "How does renewal work?",
+    "a5": "Once purchased, your subscription renews monthly. Paddle shows the final currency, applicable taxes and terms before payment."
   },
   "cta": {
-    "title": "Your clients, bookings and cash flow — in one place",
-    "body": "Set up in an evening.",
-    "button": "Create workspace",
-    "micro": "You'll get a verification email to finish setting up."
+    "title": "Start with 21 days of STUDIO",
+    "body": "Try the workspace without a card. Choose your plan only after the trial ends.",
+    "button": "Try STUDIO for 21 days",
+    "micro": "Confirm your email to finish setup. No payment method is required for the trial."
   }
 }

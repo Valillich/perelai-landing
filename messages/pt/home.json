@@ -34,7 +34,8 @@
       "resumeAutoplay": "Retomar rotação automática"
     },
     "deviceMicro": "O Perelai funciona no seu navegador. A instalação é opcional.",
-    "trialMicro": "21 dias de STUDIO sem cartão. Assine após o período de teste."
+    "trialMicro": "21 dias de STUDIO sem cartão. Assine após o período de teste.",
+    "billingMicro": "O teste é grátis. Depois, compre um plano separado para cada espaço de trabalho; sem cobrança automática. A Paddle confirma a moeda e os impostos."
   },
   "operations": {
     "title": "Do agendamento ao atendimento concluído.",
@@ -146,9 +147,9 @@
     "q1": "Como os clientes agendam?",
     "a1": "Compartilhe seu link de agendamento. Os clientes escolhem o serviço e o horário na sua página.",
     "q2": "Existe um período de teste e preciso de cartão?",
-    "a2": "Teste o STUDIO por 21 dias sem cartão. O período de teste começa após a configuração do negócio. O aplicativo mostra a data de término.",
+    "a2": "Teste o STUDIO por 21 dias sem cartão. O teste começa após a configuração do negócio e é concedido uma vez por pagador. A data final aparece no aplicativo.",
     "q3": "O que acontece ao término do período de teste?",
-    "a3": "Faça uma assinatura para continuar trabalhando. Sem assinatura ou outro acesso válido, o uso fica restrito. O término do teste por si só não apaga seus dados.",
+    "a3": "Depois do teste, escolha e compre um plano mensal para cada espaço de trabalho (Company) que quiser continuar usando. Não há cobrança automática. A Paddle confirma a moeda final e os impostos aplicáveis antes do pagamento. Sem acesso válido, o uso fica restrito; o fim do teste não apaga seus dados.",
     "q4": "Posso trabalhar com equipe?",
     "a4": "Sim. O STUDIO permite até 5 profissionais ativos que prestam serviços e acesso para a equipe. Um administrador que não presta serviços não conta para esse limite.",
     "q5": "Um pacote pré-pago é uma assinatura?",

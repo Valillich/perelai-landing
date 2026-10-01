@@ -34,7 +34,8 @@
       "resumeAutoplay": "Wznów automatyczne przewijanie"
     },
     "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna.",
-    "trialMicro": "21 dni STUDIO bez karty. Po okresie próbnym wykup subskrypcję."
+    "trialMicro": "21 dni STUDIO bez karty. Po okresie próbnym wykup subskrypcję.",
+    "billingMicro": "Okres próbny jest bezpłatny. Potem wykup plan osobno dla każdej przestrzeni roboczej; bez automatycznego obciążenia. Walutę i podatki potwierdzi Paddle."
   },
   "operations": {
     "title": "Od zapisu do zrealizowanej wizyty.",
@@ -146,9 +147,9 @@
     "q1": "Jak klienci rezerwują wizyty?",
     "a1": "Udostępnij swój link. Klienci wybierają usługę i termin na Twojej stronie rezerwacji.",
     "q2": "Czy jest okres próbny i czy potrzebna jest karta?",
-    "a2": "21 dni STUDIO bez karty. Okres próbny rozpoczyna się po konfiguracji firmy. Data zakończenia jest widoczna w aplikacji.",
+    "a2": "Wypróbuj STUDIO przez 21 dni bez karty. Okres próbny zaczyna się po konfiguracji firmy i przysługuje płatnikowi raz. Data zakończenia jest widoczna w aplikacji.",
     "q3": "Co się stanie po zakończeniu okresu próbnego?",
-    "a3": "Aby kontynuować pracę, wykup subskrypcję. Bez subskrypcji lub innego ważnego dostępu funkcje zostaną ograniczone. Samo zakończenie okresu próbnego nie usuwa Twoich danych.",
+    "a3": "Po okresie próbnym wybierz i wykup plan miesięczny dla każdej przestrzeni roboczej (Company), z której chcesz nadal korzystać. Nie ma automatycznego obciążenia. Paddle potwierdza ostateczną walutę i należne podatki przed płatnością. Bez ważnego dostępu praca jest ograniczona; koniec okresu próbnego sam w sobie nie usuwa danych.",
     "q4": "Czy mogę pracować z zespołem?",
     "a4": "Tak, w STUDIO: do 5 aktywnych osób świadczących usługi i dostęp dla zespołu. Administrator, który nie świadczy usług, nie zajmuje miejsca w tym limicie.",
     "q5": "Czy przedpłacony pakiet to subskrypcja?",
