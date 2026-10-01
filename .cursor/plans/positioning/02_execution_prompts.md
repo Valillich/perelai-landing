@@ -2,12 +2,19 @@
 
 **План, 19.09.2026.** Одна задача на запуск. Вначале прочитать [README](README.md) и нужные разделы [01](01_home_pricing_copy_and_previews.md). Создавать только один рабочий журнал `docs/launch-positioning-checklist.md`.
 
+**Следующая задача, 01.10.2026:** коммерческий остаток POS3 по PRE-P/PAR-P из
+[legal 32](../legal/32_provider_submission_parallel_work_and_launch_20261001.md), затем POS4.
+Corrective POS2 и Home-localization POS3 выполнены по журналу §§9–10; prompts POS0–POS2
+ниже — история scope, а не очередь повторной разработки. Передавать агенту только нужный остаток.
+
 ## Общие правила для каждого prompt
 
 ```text
 Работай в /Users/valery/Sites/perelai-landing. Продуктовый source:
 /Users/valery/Sites/beauty-finance. Выполни только указанную POS-задачу.
 Прочитай инструкции репозитория, README/01 этой папки, MVP handoff и определения app.
+Прочитай legal/32: подачи провайдерам идут до запуска, BILL/Task G/операции — параллельно.
+Сохрани Launch v1 без analytics/attribution; старые упоминания трекеров не разрешают их включать.
 Сначала проверь HEAD/status и конкретные затронутые файлы. Сохраняй чужие изменения.
 Используй apply_patch. Не commit/push/deploy и не меняй product code/flags.
 
@@ -181,16 +188,22 @@ Drawer preview подготовлен в основном scope, implementation 
 
 ## POS3 — Pricing, trial и согласованность опубликованных сообщений
 
+**Текущий ограниченный scope:** сначала PRE-P — устранить старые Pricing claims и подготовить
+прайс для Paddle; затем PAR-P — BILL7 catalog/offer и финальная согласованность поверхностей.
+При отсутствии catalog handoff достаточно review screenshot утверждённых фактов для подачи;
+не создавать временный runtime-каталог. Выполненные Home-адаптации только проверить.
+
 **Skills:** `copywriting`, `copy-editing`, `cro`. Смысл тарифа уже задан; новый pricing research не нужен.
 
 ```text
-Выполни POS3. Подготовка может идти рядом с POS1/POS2. Прочитай BILL7 handoff, текущие
-launch decisions и early setup v1; получи actual public display catalog, когда готов.
+Выполни оставшийся коммерческий POS3, не повторяя POS2/Home-localization. Прочитай BILL7 handoff,
+legal 32 и selected provider path: early setup UNSUPPORTED v1, покупка после trial expiry.
+Получи actual public display catalog, когда готов; ответа Paddle для подготовки не ждать.
 Не реализуй BILL вместо его владельца.
 
 1. components/pricing/pricing-page.tsx, content/pricing.ts, messages/*/pricing.json:
    две plan cards SOLO/STUDIO, единый 21-day STUDIO trial, compact contact-only STUDIO+,
-   concise comparison/FAQ из 01. Сохрани header/footer/стиль/трекеры. Удали устаревшую
+   concise comparison/FAQ из 01. Сохрани header/footer/стиль и текущий запрет analytics/attribution. Удали устаревшую
    публичную future billing/beta упаковку; согласуй product-stage display с app release.
 2. Цены/лимиты/availability из BILL7 generated artifact. Messages используют placeholders.
    Не заменяй source-of-truth самодельным catalog. Если handoff отсутствует — review
@@ -214,10 +227,10 @@ launch decisions и early setup v1; получи actual public display catalog, 
 7. Синхронизируй lib/site.ts, Home/Pricing metadata и OG/Twitter, JSON-LD descriptions,
    lib/machine-readable.ts (llms.txt/pricing.md). Используй тот же public offer source.
    Не добавляй новые schema types. Нишевые URL/OG меняй только при shared factual error.
-8. CtaButton сейчас отправляет fixed cta_text=create_workspace. При новом trial label
-   приведи fixed semantic enum/документацию в соответствие, если он описывает label;
-   не отправляй translated free text и не вводи новые события. У FAQ сохраняй устойчивый
-   question_id при замене вопросов, чтобы старые данные не сменили смысл молча.
+8. Сверь фактическое состояние CtaButton/analytics: Launch v1 отключает attribution storage/handoff
+   и PostHog. Не восстанавливай отправку событий ради старой инструкции про cta_text.
+   Если неактивные enum/документация меняются вместе с copy, сохрани устойчивый смысл;
+   translated free text и новые события не добавляй.
 
 Тесты: затронутые urls/app-url-interpolation/analytics/seo-surface/i18n-routing и
 locale-finance-contract; обновить старые запреты trial/цен адресно, не удалить guards

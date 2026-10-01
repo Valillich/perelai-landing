@@ -336,3 +336,17 @@ M1/M2.
 - **Pending Follow-ups (Separate Scopes):**
   - POS3 commercial scope: Pricing / BILL7 commercial artifact sync.
   - POS4: Native copy review, live verification journey on release revision, release gates (DR7, billing/conversion).
+
+## 11. Next-task order · 2026-10-01
+
+- The existing POS2 corrective and POS3 Home-localization evidence above remains the implementation
+  baseline; do not repeat those tasks from older README statuses.
+- Next: commercial POS3 / PRE-P in [legal 32](../.cursor/plans/legal/32_provider_submission_parallel_work_and_launch_20261001.md).
+  Live Pricing still uses beta/future-price copy while Home/Terms describe trial and $19/$29.
+  Finish the scoped Pricing/FAQ/machine-readable consistency and BILL7 handoff, or prepare a private
+  approved-facts screenshot for early Paddle review if the catalog is not ready. No invented runtime catalog.
+- Preserve the Launch v1 no-analytics/no-attribution baseline and completed Home/previews/translations.
+  Google/Paddle submissions proceed separately; they do not require redesign or all BILL phases to finish.
+- POS4 follows on the release revision, reusing current BILL/TEAM/Drawer evidence and the actual signup flow.
+  This entry records the next scope and read-only site observations, not completion of POS3 commercial
+  work, provider approval or app release. Execution results should be appended here when obtained.

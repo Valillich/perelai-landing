@@ -1,5 +1,14 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
+**Execution order — 2026-10-01:** start with
+[submission / parallel work / launch 32](32_provider_submission_parallel_work_and_launch_20261001.md).
+The seven legal routes are now verified publicly accessible at `2026-11-01.1`; the local manifest
+passes. Provider submission/approval and app operational readiness are not established by that check.
+Next: PRE-P (Pricing + G0) and independent PRE-G (G0b); BILL5A, Task G, remaining POS3,
+eligible BILL5B and existing operations proceed without waiting for provider review.
+Do not repeat completed A–F/POS/TEAM work from historical `planned` labels. Release 30 remains
+the operational checklist; release 31 governs future v2 notices and their explicit release.
+
 **Current platform packet — 2026-09-27:** all seven documents are `2026-11-01.1`,
 effective **2026-11-01**, under `owner-platform-legal-mvp-postponement-20260927`.
 The owner postponed launch and authorised the MVP wording changes in
@@ -47,7 +56,9 @@ additional country is opened by this update. Registry code and production deploy
 are disabled in current source. See documents 06 and 17 plus `docs/tracking-plan.md`; the baseline
 production audit predates deployment of this change.
 
-**Status:** planning and attorney-ready drafting only; no implementation is authorised by this document.  
+**Status:** current texts implemented/owner-approved and public routes verified on 2026-10-01;
+provider submissions and operational release remain separate. Historical drafting tasks below
+are not instructions to recreate completed work.
 **Canonical source language:** English.  
 **Review:** owner confirms facts and commercial policy; qualified advice resolves the legal questions
 applicable to the actual launch country/operations. Not every future country or feature is a gate.
@@ -75,7 +86,8 @@ replaces the proposed shortcut of removing deletion blockers. It covers ordinary
 manual retention CLI, restore evidence and UA activation after concrete checks. The unreleased UA
 effective date is now 2026-09-25; the digest was recomputed and the generic date guard retained.
 
-**Start here:** [14_launch_legal_minimum_20260918.md](14_launch_legal_minimum_20260918.md).
+**Start here:** [32 — current execution order](32_provider_submission_parallel_work_and_launch_20261001.md),
+then [14 — launch scope](14_launch_legal_minimum_20260918.md).
 Apply [owner-accepted decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) for the common
 GDPR-based foundation, regional additions and 30-day active / subsequent 30-day backup deletion
 limits. Policy is decided; production execution is not verified. Reuse one review record for

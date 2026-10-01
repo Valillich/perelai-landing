@@ -1,5 +1,12 @@
 # Perelai legal facts inventory and env contract
 
+**Public-page verification — 2026-10-01:** all seven live legal routes returned HTTP 200 over HTTPS,
+displaying `2026-11-01.1` / `2026-11-01`, with no `[TBD]`; the local manifest also verified.
+This establishes page availability, not provider approval, app deployment/configuration, live-content
+hash equality or performance of retention/backup duties. Pricing still contains old beta/future-price
+copy. Next actions and the scope of this observation are in
+[execution order 32](32_provider_submission_parallel_work_and_launch_20261001.md).
+
 **Current platform release — 2026-09-27:** all seven documents are **`2026-11-01.1`**,
 effective **`2026-11-01`**. Approval: `owner-platform-legal-mvp-postponement-20260927`.
 The owner asked to postpone by two weeks or one month; 1 November is the selected month-buffer

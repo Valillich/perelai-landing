@@ -1,8 +1,11 @@
 # Legal launch minimum — 2026-09-18
 
-**Current execution entry point.** This narrows the launch sequence in document 00 and supersedes
+**Launch-scope baseline.** The current next-task order is
+[document 32](32_provider_submission_parallel_work_and_launch_20261001.md): before submission,
+parallel preparation, provider responses and release. This document narrows the launch sequence in document 00 and supersedes
 the unresolved C-05/C-07/C-19 and voluntary-refund recommendations in dated reviews 12/13.
-Scope: plans and drafts only; no publication, provider submission or production activation.
+Original scope: plans and drafts. Later platform publication is recorded in document 32;
+provider submission/approval and production app activation remain separately evidenced actions.
 
 **Owner-accepted simplification, 2026-09-24:**
 [decision 21](21_gdpr_baseline_and_retention_mvp_20260924.md) is the current common privacy/retention

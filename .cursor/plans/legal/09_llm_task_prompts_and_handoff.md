@@ -1,6 +1,7 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
-Use document 14 to choose the current launch stage. These are bounded prompts, not a requirement
+Use [document 32](32_provider_submission_parallel_work_and_launch_20261001.md) to choose the next
+pre-submission, parallel or release task; document 14 defines the minimum scope. These are bounded prompts, not a requirement
 to finish every task serially. Prepare current legal pages/acceptance, BILL policy and provider
 packets in parallel; conditional features stay scoped to their own release. Give each LLM only the relevant task plus this legal directory and the
 repository `CONTEXT.md`/`AGENTS.md`. Do not ask one small model to implement landing, app, API and public
@@ -14,6 +15,9 @@ not a new country-by-country approval project.
 
 ```text
 This task implements an approved plan; it does not author or approve law.
+Read document 32 first. Current platform texts are already approved and public at 2026-11-01.1,
+effective 2026-11-01. Do not reopen completed A–F or infer provider approval from accessible pages.
+Use content/legal/en and the manifest, not historical source drafts 02–07/10, for current wording.
 Read every referenced file before editing. Inspect current code rather than assuming plan line numbers
 are current. Preserve unrelated user changes. Do not replace [TBD] or {{...}} with guesses. Do not
 change any draft status to approved. Do not publish placeholder or draft legal content in production.
@@ -137,13 +141,19 @@ loading is a test failure.
 **2026-11-01**; the public launch has been postponed. [Release 30](30_platform_legal_mvp_postponement_20260927.md)
 records applied review fixes, configuration and remaining operations. Artifact approval does not verify
 operational readiness; use the forthcoming date honestly in any provider packet. Use `/legal/billing`
-as the Refund Policy and identity/support in register 01. Remaining
-owner actions: deploy the landing with the exact `NEXT_PUBLIC_LEGAL_*` build variables, confirm
-`https://perelai.com/legal/terms|privacy|billing` render, prepare the Paddle domain list
-(`perelai.com`, `app.perelai.app` and any real checkout origin) and pricing screenshot, then submit.
+as the Refund Policy and identity/support in register 01.
+
+**Verified 2026-10-01:** all seven public legal routes return HTTP 200 with the expected version/date;
+the local manifest passes. Repeat a brief URL check when submitting, not the whole implementation.
+The next gap is Pricing's outdated beta/future-price copy. Follow PRE-P in document 32: finish the
+minimal commercial POS3 or provide an approved-facts pricing screenshot and truthful launch status.
+Home currently links to `perelai.app`; resolve the actual checkout origin before preparing the domain
+list. `app.perelai.app` in older examples is not verified configuration. Submission status is unverified.
 
 ```text
 Follow LGL-0A and documents 14/21 alongside BILL2B and later BILL work. Reuse the common packet;
+Execute PRE-P from document 32; BILL5/6/8 completion is not a prerequisite to preparing/submitting
+the domain-review packet. Public activation still follows the applicable runtime gates.
 unused countries and an unneeded privacy portal do not block preparation. Prepare truthful, approved Terms/Privacy/Refund
 pages, explicit Refund Policy navigation, verified identity/support and relevant domain list. Prepare
 an owner-approved pricing screenshot for private provider review where the pricing page is not ready.
@@ -161,6 +171,11 @@ recommended Limited Use sentence; Terms §10 states read-only import. Remaining 
 consent screen brand/domain verification with `https://perelai.com/legal/privacy`, scope
 justification text and the Calendar read-only demo video, then submission.
 
+**Next — 2026-10-01:** execute PRE-G in document 32 independently of PRE-P/Billing. Privacy is
+publicly accessible; Console/domain/scopes and the real Google-account demonstration remain to be
+verified. Use the existing CS5 handoff for the outstanding real-provider walkthrough, not a rebuild.
+Record prepared/submitted/provider-approved separately; no submission was performed by the plan update.
+
 ```text
 Follow LGL-0B and documents 14/21. Reuse the common packet, completed FOP identity and shared support
 contact. Prepare accurate brand/domain/home/Privacy/support facts, Google-data
@@ -170,7 +185,12 @@ do not wait for BILL completion. A pending optional integration stays unavailabl
 and working email login/internal calendar. Do not submit or accept provider terms under this task.
 ```
 
-## Task G — SaaS Billing/Paddle legal integration (landing + app, after BILL gates)
+## Task G — SaaS Billing/Paddle legal integration (prepare in parallel; activate after relevant BILL gates)
+
+**Next:** PAR-L in document 32. Start copy/links now alongside BILL5A and POS3; wire ready Billing
+seams without rebuilding them. Agree account-service email copy/classification before enabling its
+delivery; booking-notification approval does not automatically cover billing or marketing messages.
+Keep the current no-analytics/no-attribution launch baseline. Provider review does not block sandbox work.
 
 ```text
 Do not implement Billing architecture from this prompt. Prepare legal copy/links in parallel now;
