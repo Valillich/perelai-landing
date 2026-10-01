@@ -6,6 +6,7 @@ import { LEGAL_DRAFTS } from "@/content/legal"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 import { buildPricingMarkdown, buildLlmsTxt } from "@/lib/machine-readable"
+import { getPricingContactEmail } from "@/lib/pricing-contact"
 import { PRICING_PLANS } from "@/content/pricing"
 import { SEO_DESCRIPTION_MAX, SEO_TITLE_MAX, toAbsoluteLandingUrl } from "@/lib/seo"
 import { getFaqPageJsonLd, getSoftwareApplicationJsonLd } from "@/lib/structured-data"
@@ -210,6 +211,9 @@ describe("machine-readable files & answer-engine contract", () => {
     for (const plan of PRICING_PLANS) {
       expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month per workspace`)
     }
+    expect(pricing).toContain("STUDIO+: ")
+    expect(pricing).toContain(pricingEn.studioPlus.note)
+    expect(pricing).toContain(getPricingContactEmail())
     expect(pricing).not.toContain("$49")
   })
 

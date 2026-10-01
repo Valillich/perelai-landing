@@ -25,6 +25,10 @@
     "currency": "Les prix de base sont en USD. La devise finale et les taxes applicables sont indiquées avant le paiement.",
     "availability": "La souscription payante n’est pas encore disponible."
   },
+  "studioPlus": {
+    "description": "Besoin de plus que STUDIO ? Parlez-nous de vos besoins.",
+    "note": "Demande de contact uniquement : aucun prix ni plafond de professionnels n’est fixé ; ce forfait ne peut pas être acheté."
+  },
   "trial": {
     "title": "21 jours gratuits de STUDIO. Sans carte.",
     "body": "Un seul essai commun est accordé à chaque payeur éligible après la première configuration complète de l’activité. Les espaces de travail éligibles partagent sa date de fin initiale. Vous pourrez choisir SOLO ensuite."

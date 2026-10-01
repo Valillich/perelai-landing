@@ -25,6 +25,10 @@
     "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
     "availability": "Zakup subskrypcji nie jest jeszcze dostępny."
   },
+  "studioPlus": {
+    "description": "Potrzebujesz więcej niż STUDIO? Napisz nam, czego potrzebujesz.",
+    "note": "Tylko zapytania: cena i limit specjalistów nie są ustalone; tego planu nie można kupić."
+  },
   "trial": {
     "title": "21 dni bezpłatnego STUDIO. Bez karty.",
     "body": "Jeden wspólny okres próbny na uprawnionego płatnika zaczyna się po pierwszej ukończonej konfiguracji firmy. Uprawnione przestrzenie robocze mają tę samą pierwotną datę zakończenia. Później możesz wybrać SOLO."

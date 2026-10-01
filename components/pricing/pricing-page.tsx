@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { Check } from "lucide-react"
+import { ArrowUpRight, Check } from "lucide-react"
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Reveal } from "@/components/landing/reveal"
@@ -7,6 +7,7 @@ import { CtaCard } from "@/components/cta-card"
 import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import { Link } from "@/i18n/navigation"
 import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
+import { getPricingContactEmail } from "@/lib/pricing-contact"
 import {
   PageViewTracker,
   PricingPageViewTracker,
@@ -17,6 +18,7 @@ import type { PublishedLocale } from "@/i18n/locales"
 export function PricingPage({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("pricing")
   const showPendingBillingNotice = !isPaidSubscriptionsLive()
+  const supportEmail = getPricingContactEmail()
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
@@ -77,6 +79,22 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                 </Reveal>
               ))}
             </div>
+            <Reveal>
+              <aside className="mt-5 flex flex-col gap-5 rounded-[20px] border border-border bg-card/60 px-7 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-9">
+                <div>
+                  <h2 className="text-[18px] font-semibold tracking-tight">STUDIO+</h2>
+                  <p className="mt-1 text-[15px] leading-relaxed">{t("studioPlus.description")}</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{t("studioPlus.note")}</p>
+                </div>
+                <a
+                  href={`mailto:${supportEmail}?subject=STUDIO%2B`}
+                  className="inline-flex shrink-0 items-center gap-1.5 self-start font-medium text-brand-600 hover:underline sm:self-auto"
+                >
+                  {supportEmail}
+                  <ArrowUpRight className="h-4 w-4" aria-hidden />
+                </a>
+              </aside>
+            </Reveal>
             <Reveal>
               <div className="mx-auto mt-8 max-w-3xl space-y-2 text-center text-[14px] leading-relaxed text-muted-foreground">
                 <p>{t("plans.shared")}</p>

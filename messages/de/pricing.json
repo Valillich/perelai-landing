@@ -25,6 +25,10 @@
     "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
     "availability": "Der Kauf von Abonnements ist noch nicht verfügbar."
   },
+  "studioPlus": {
+    "description": "Benötigen Sie mehr als STUDIO? Schreiben Sie uns, was Sie brauchen.",
+    "note": "Nur auf Anfrage: Preis und Fachkräftelimit stehen nicht fest; dieser Tarif kann nicht gekauft werden."
+  },
   "trial": {
     "title": "21 Tage STUDIO kostenlos testen. Ohne Karte.",
     "body": "Ein gemeinsamer Testzeitraum pro berechtigtem Zahlenden beginnt nach der ersten abgeschlossenen Unternehmenseinrichtung. Berechtigte Arbeitsbereiche teilen das ursprüngliche Enddatum. Danach können Sie SOLO wählen."

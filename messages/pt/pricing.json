@@ -25,6 +25,10 @@
     "currency": "Os preços base estão em USD. A moeda final e os impostos aplicáveis são mostrados antes do pagamento.",
     "availability": "A compra de assinaturas ainda não está disponível."
   },
+  "studioPlus": {
+    "description": "Precisa de mais do que o STUDIO? Conte-nos o que precisa.",
+    "note": "Somente consultas: preço e limite de profissionais não estão definidos; este plano não pode ser contratado."
+  },
   "trial": {
     "title": "21 dias grátis de STUDIO. Sem cartão.",
     "body": "Um período de teste compartilhado por pagador elegível começa após a primeira configuração concluída do negócio. Os espaços de trabalho elegíveis compartilham a data final original. Depois você pode escolher SOLO."

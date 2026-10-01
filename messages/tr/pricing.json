@@ -25,6 +25,10 @@
     "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
     "availability": "Abonelik satın alma henüz kullanılamıyor."
   },
+  "studioPlus": {
+    "description": "STUDIO'dan fazlasına mı ihtiyacınız var? İhtiyacınızı bize anlatın.",
+    "note": "Yalnızca iletişim içindir: fiyat ve uzman sınırı belirlenmedi; bu paket satın alınamaz."
+  },
   "trial": {
     "title": "21 gün ücretsiz STUDIO. Kart gerekmez.",
     "body": "Uygun olan her ödeme sorumlusu, ilk tamamlanan işletme kurulumundan sonra tek bir ortak deneme süresi alır. Uygun çalışma alanları ilk bitiş tarihini paylaşır. Daha sonra SOLO seçebilirsiniz."

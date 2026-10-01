@@ -4,6 +4,7 @@ import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import devicesEn from "@/messages/en/devices.json"
 import homeEn from "@/messages/en/home.json"
 import pricingEn from "@/messages/en/pricing.json"
+import { getPricingContactEmail } from "@/lib/pricing-contact"
 import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
 import { toAbsoluteLandingUrl } from "@/lib/seo"
 
@@ -53,6 +54,7 @@ export function buildLlmsTxt(): string {
       ...PRICING_PLANS.map(
         (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))}`,
       ),
+      `STUDIO+: ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
     ]),
@@ -104,6 +106,7 @@ export function buildPricingMarkdown(): string {
       ...PRICING_PLANS.map(
         (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))} ${pricingEn.plans[plan.code].access}`,
       ),
+      `STUDIO+: ${pricingEn.studioPlus.description} ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
       pricingEn.billing.body,

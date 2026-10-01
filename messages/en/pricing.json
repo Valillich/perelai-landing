@@ -25,6 +25,10 @@
     "currency": "Base prices are in USD. Final currency and applicable taxes are shown before payment.",
     "availability": "Subscription checkout is not available yet."
   },
+  "studioPlus": {
+    "description": "Need more than STUDIO? Tell us what you need.",
+    "note": "Enquiries only. Price and performer limit are not set; this plan cannot be purchased."
+  },
   "trial": {
     "title": "21-day free STUDIO trial. No card required.",
     "body": "One shared trial per eligible payer starts after the first completed business setup. Eligible workspaces share its original end date. The trial gives you STUDIO access, even if you choose SOLO afterward."
