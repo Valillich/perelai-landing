@@ -111,6 +111,22 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                 </div>
               </div>
             </Reveal>
+            <Reveal>
+              <aside className="mt-8 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+                <div>
+                  <h2 className="text-[18px] font-semibold tracking-tight">{t("largerTeams.title")}</h2>
+                  <p className="mt-1 text-[15px] leading-relaxed">{t("largerTeams.body")}</p>
+                  <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{t("largerTeams.note")}</p>
+                </div>
+                <a
+                  href={`mailto:${supportEmail}`}
+                  className="inline-flex shrink-0 items-center gap-1.5 self-start font-medium text-brand-600 hover:underline sm:self-auto"
+                >
+                  {t("largerTeams.contact")}
+                  <ArrowUpRight className="h-4 w-4" aria-hidden />
+                </a>
+              </aside>
+            </Reveal>
           </div>
         </section>
 
@@ -129,29 +145,6 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
             </ul>
           </Reveal>
         </PricingSectionViewTracker>
-
-        <section className="px-4 pb-12 sm:px-6 sm:pb-16">
-          <Reveal className="mx-auto max-w-5xl">
-            <aside className="flex flex-col gap-5 rounded-[20px] border border-border bg-card/60 px-7 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-9">
-              <div>
-                <h2 className="text-[18px] font-semibold tracking-tight">STUDIO+</h2>
-                <p className="mt-2 text-[15px] font-medium leading-relaxed">{t("studioPlus.description")}</p>
-                <p className="text-[15px] leading-relaxed">{t("studioPlus.body")}</p>
-                <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{t("studioPlus.note")}</p>
-              </div>
-              <a
-                href={`mailto:${supportEmail}?subject=STUDIO%2B`}
-                className="shrink-0 self-start text-brand-600 hover:underline sm:self-auto"
-              >
-                <span className="inline-flex items-center gap-1.5 font-medium">
-                  {t("studioPlus.contact")}
-                  <ArrowUpRight className="h-4 w-4" aria-hidden />
-                </span>
-                <span className="mt-1 block text-[13px]">{supportEmail}</span>
-              </a>
-            </aside>
-          </Reveal>
-        </section>
 
         <section className="border-y border-border bg-card/50 px-4 py-12 sm:px-6">
           <Reveal className="mx-auto max-w-3xl text-center">

@@ -25,11 +25,11 @@
     "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
     "availability": "Zakup subskrypcji nie jest jeszcze dostępny."
   },
-  "studioPlus": {
-    "description": "Więcej niż pięciu specjalistów w zespole?",
-    "note": "STUDIO+ nie jest jeszcze dostępny do aktywacji. Cena i warunki nie zostały ogłoszone.",
-    "body": "Napisz, jakiego dostępu potrzebujesz.",
-    "contact": "Omów potrzeby"
+  "largerTeams": {
+    "title": "Więcej niż pięciu specjalistów w zespole?",
+    "body": "Opowiedz nam o swoim zespole i jego potrzebach.",
+    "note": "Plan dla zespołów z więcej niż pięcioma specjalistami świadczącymi usługi nie jest jeszcze dostępny.",
+    "contact": "Napisz do nas"
   },
   "trial": {
     "title": "Jak działa okres próbny",

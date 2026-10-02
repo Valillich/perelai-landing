@@ -25,11 +25,11 @@
     "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
     "availability": "Abonelik satın alma henüz kullanılamıyor."
   },
-  "studioPlus": {
-    "description": "Ekibinizde beşten fazla hizmet uzmanı mı var?",
-    "note": "STUDIO+ henüz etkinleştirilemiyor. Fiyat ve koşullar henüz açıklanmadı.",
-    "body": "Hangi erişime ihtiyacınız olduğunu bize anlatın.",
-    "contact": "İhtiyaçlarınızı görüşelim"
+  "largerTeams": {
+    "title": "Ekibinizde beşten fazla hizmet veren kişi mi var?",
+    "body": "Bize ekibinizden ve ihtiyaçlarınızdan bahsedin.",
+    "note": "Beşten fazla hizmet veren kişiden oluşan ekipler için paket henüz mevcut değil.",
+    "contact": "Bize yazın"
   },
   "trial": {
     "title": "Deneme süresi nasıl işler?",

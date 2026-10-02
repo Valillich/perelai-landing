@@ -25,11 +25,11 @@
     "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
     "availability": "Der Kauf von Abonnements ist noch nicht verfügbar."
   },
-  "studioPlus": {
-    "description": "Mehr als fünf Fachkräfte in Ihrem Team?",
-    "note": "STUDIO+ kann noch nicht aktiviert werden. Preise und Bedingungen wurden noch nicht bekannt gegeben.",
-    "body": "Schreiben Sie uns, welchen Zugang Sie benötigen.",
-    "contact": "Bedarf besprechen"
+  "largerTeams": {
+    "title": "Mehr als fünf Fachkräfte in Ihrem Team?",
+    "body": "Erzählen Sie uns von Ihrem Team und Ihren Anforderungen.",
+    "note": "Ein Tarif für Teams mit mehr als fünf Fachkräften, die Dienstleistungen erbringen, ist noch nicht verfügbar.",
+    "contact": "Schreiben Sie uns"
   },
   "trial": {
     "title": "So funktioniert die Testphase",

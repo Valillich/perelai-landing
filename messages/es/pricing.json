@@ -25,11 +25,11 @@
     "currency": "Los precios base están en USD. La moneda final y los impuestos aplicables se muestran antes de pagar.",
     "availability": "La compra de suscripciones aún no está disponible."
   },
-  "studioPlus": {
-    "description": "¿Más de cinco profesionales en tu equipo?",
-    "note": "STUDIO+ aún no está disponible para activar. El precio y las condiciones no se han anunciado.",
-    "body": "Cuéntanos qué acceso necesitas.",
-    "contact": "Hablar de tus necesidades"
+  "largerTeams": {
+    "title": "¿Más de cinco profesionales en tu equipo?",
+    "body": "Cuéntanos sobre tu equipo y lo que necesitas.",
+    "note": "El plan para equipos con más de cinco profesionales que prestan servicios aún no está disponible.",
+    "contact": "Escríbenos"
   },
   "trial": {
     "title": "Cómo funciona la prueba",

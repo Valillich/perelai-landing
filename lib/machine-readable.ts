@@ -58,10 +58,14 @@ export function buildLlmsTxt(): string {
         const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
         return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote}`
       }),
-      `STUDIO+: ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
     ]),
+    "",
+    `## ${pricingEn.largerTeams.title}`,
+    pricingEn.largerTeams.body,
+    pricingEn.largerTeams.note,
+    `${pricingEn.largerTeams.contact}: ${getPricingContactEmail()}`,
     "",
     "## What Perelai is not",
     bulletList([
@@ -113,12 +117,16 @@ export function buildPricingMarkdown(): string {
         const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
         return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote} ${pricingEn.plans[plan.code].access}`
       }),
-      `STUDIO+: ${pricingEn.studioPlus.description} ${pricingEn.studioPlus.body} ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
       pricingEn.billing.body,
       pricingEn.billing.renewal,
     ]),
+    "",
+    `## ${pricingEn.largerTeams.title}`,
+    pricingEn.largerTeams.body,
+    pricingEn.largerTeams.note,
+    `${pricingEn.largerTeams.contact}: ${getPricingContactEmail()}`,
     "",
     `## ${pricingEn.capabilities.title}`,
     bulletList(capabilities),

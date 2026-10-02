@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v13
+**Document version:** v14
 **Last updated:** 2026-10-03
 **Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
@@ -46,7 +46,7 @@ Sources: owner decisions [2026-09-06](/Users/valery/Sites/beauty-finance/.cursor
 | Counting | A working owner counts. A service professional may count without a login. An administrator without a service-professional profile uses no performer place, but their access still requires STUDIO. Not “unlimited users”. |
 | After expiry | Without another valid access source, work is restricted. Expiry itself does not delete data; no indefinite retention or export promise. |
 | Paid renewal | Monthly after explicit purchase, with exact terms owned by BILL/legal. Do not confuse this with the cardless trial. |
-| STUDIO+ | Contact only; no public price, limit, purchase CTA or guaranteed availability. |
+| Larger teams | Public Pricing shows a compact contact invitation after the trial CTA, with a caveat that a plan for more than five service professionals is unavailable. Do not display the internal STUDIO+ name, a price, custom terms or promised access. |
 | Price display | Approved USD anchors; final currency and applicable taxes confirmed at checkout. No local FX/VAT calculation; demo currency is separate. |
 
 Current code includes Billing. “No card because there is no billing” and “free beta until pricing is announced” are obsolete. [Commercial policy](../docs/commercial-policy.md) separates accepted business facts from publication gates; prices/trial do not require a second owner decision.
@@ -202,6 +202,8 @@ The [launch checklist](../docs/launch-positioning-checklist.md) records exact so
 ## Changelog
 
 *Newest first. One line per revision: what changed and why.*
+
+- v14 (2026-10-03) — **Owner-directed larger-team contact:** remove STUDIO+ from public Pricing and machine-readable copy; show a compact invitation to discuss team needs after the primary trial CTA, with an explicit unavailable-plan caveat. Capacity refers to people providing services, not total team membership.
 
 - v13 (2026-10-03) — **Owner-directed CTA update:** invite readers to try Perelai rather than the STUDIO plan; shorten main Home/Pricing buttons to “Попробовать бесплатно” and show the 21-day cardless terms nearby. STUDIO trial features remain explained below the hero; prices, limits and trial rules are unchanged.
 

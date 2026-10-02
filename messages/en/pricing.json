@@ -25,11 +25,11 @@
     "currency": "Base prices are in USD. Final currency and applicable taxes are shown before payment.",
     "availability": "Subscription checkout is not available yet."
   },
-  "studioPlus": {
-    "description": "More than five service professionals on your team?",
-    "note": "STUDIO+ is not available to activate yet. Pricing and terms have not been announced.",
-    "body": "Tell us what access you need.",
-    "contact": "Discuss your needs"
+  "largerTeams": {
+    "title": "More than five service professionals on your team?",
+    "body": "Tell us about your team and what you need.",
+    "note": "A plan for teams with more than five professionals who provide services is not available yet.",
+    "contact": "Email us"
   },
   "trial": {
     "title": "How the trial works",
