@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl"
-import { ArrowUpRight, Check, X } from "lucide-react"
+import { ArrowRight, ArrowUpRight, Check, X } from "lucide-react"
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Reveal } from "@/components/landing/reveal"
 import { CtaCard } from "@/components/cta-card"
+import { CtaButton } from "@/components/cta-button"
 import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import { Link } from "@/i18n/navigation"
 import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
@@ -26,7 +27,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
       <PricingPageViewTracker />
       <LandingHeader locale={locale} canonicalPath="/pricing" />
       <div className="flex-1">
-        <section className="px-4 pb-10 pt-20 sm:px-6 sm:pb-14 sm:pt-28">
+        <section className="px-4 pb-8 pt-14 sm:px-6 sm:pb-9 sm:pt-16">
           <Reveal className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-brand-600">
               {t("hero.eyebrow")}
@@ -40,7 +41,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
           </Reveal>
         </section>
 
-        <section className="px-4 pb-16 sm:px-6 sm:pb-20">
+        <section className="px-4 pb-10 sm:px-6 sm:pb-12">
           <div className="mx-auto max-w-5xl">
             <div className="grid gap-5 md:grid-cols-2">
               {PRICING_PLANS.map((plan, index) => (
@@ -89,40 +90,29 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
               ))}
             </div>
             <Reveal>
-              <aside className="mt-5 flex flex-col gap-5 rounded-[20px] border border-border bg-card/60 px-7 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-9">
-                <div>
-                  <h2 className="text-[18px] font-semibold tracking-tight">STUDIO+</h2>
-                  <p className="mt-1 text-[15px] leading-relaxed">{t("studioPlus.description")}</p>
-                  <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{t("studioPlus.note")}</p>
-                </div>
-                <a
-                  href={`mailto:${supportEmail}?subject=STUDIO%2B`}
-                  className="inline-flex shrink-0 items-center gap-1.5 self-start font-medium text-brand-600 hover:underline sm:self-auto"
-                >
-                  {supportEmail}
-                  <ArrowUpRight className="h-4 w-4" aria-hidden />
-                </a>
-              </aside>
-            </Reveal>
-            <Reveal>
-              <div className="mx-auto mt-8 max-w-3xl space-y-2 text-center text-[14px] leading-relaxed text-muted-foreground">
-                <p>{t("plans.shared")}</p>
+              <div className="mx-auto mt-6 max-w-3xl space-y-2 text-center text-[14px] leading-relaxed text-muted-foreground">
                 <p>{t("plans.currency")}</p>
                 {showPendingBillingNotice ? <p>{t("plans.availability")}</p> : null}
+              </div>
+              <div className="mt-6 flex flex-col items-center gap-3 text-center">
+                <CtaButton
+                  destination="signup"
+                  landingPath="/pricing"
+                  locale={locale}
+                  location="pricing_signup"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-4 text-[16px] font-semibold text-white transition-colors hover:bg-brand-700"
+                >
+                  {t("cta.button")}
+                  <ArrowRight className="h-5 w-5" aria-hidden />
+                </CtaButton>
+                <p className="text-[13px] text-muted-foreground">{t("cta.micro")}</p>
               </div>
             </Reveal>
           </div>
         </section>
 
-        <section className="border-y border-border bg-card/50 px-4 py-14 sm:px-6">
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-semibold tracking-tight">{t("trial.title")}</h2>
-            <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">{t("trial.body")}</p>
-          </Reveal>
-        </section>
-
-        <PricingSectionViewTracker sourcePage="/pricing" className="px-4 py-16 sm:px-6 sm:py-20">
-          <Reveal className="mx-auto max-w-3xl">
+        <PricingSectionViewTracker sourcePage="/pricing" className="px-4 pb-12 pt-4 sm:px-6 sm:pb-16">
+          <Reveal className="mx-auto max-w-5xl">
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
               {t("capabilities.title")}
             </h2>
@@ -137,7 +127,37 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
           </Reveal>
         </PricingSectionViewTracker>
 
-        <section className="px-4 pb-16 sm:px-6 sm:pb-20">
+        <section className="px-4 pb-12 sm:px-6 sm:pb-16">
+          <Reveal className="mx-auto max-w-5xl">
+            <aside className="flex flex-col gap-5 rounded-[20px] border border-border bg-card/60 px-7 py-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:px-9">
+              <div>
+                <h2 className="text-[18px] font-semibold tracking-tight">STUDIO+</h2>
+                <p className="mt-2 text-[15px] font-medium leading-relaxed">{t("studioPlus.description")}</p>
+                <p className="text-[15px] leading-relaxed">{t("studioPlus.body")}</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">{t("studioPlus.note")}</p>
+              </div>
+              <a
+                href={`mailto:${supportEmail}?subject=STUDIO%2B`}
+                className="shrink-0 self-start text-brand-600 hover:underline sm:self-auto"
+              >
+                <span className="inline-flex items-center gap-1.5 font-medium">
+                  {t("studioPlus.contact")}
+                  <ArrowUpRight className="h-4 w-4" aria-hidden />
+                </span>
+                <span className="mt-1 block text-[13px]">{supportEmail}</span>
+              </a>
+            </aside>
+          </Reveal>
+        </section>
+
+        <section className="border-y border-border bg-card/50 px-4 py-12 sm:px-6">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-semibold tracking-tight">{t("trial.title")}</h2>
+            <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">{t("trial.body")}</p>
+          </Reveal>
+        </section>
+
+        <section className="px-4 py-12 sm:px-6 sm:py-16">
           <Reveal className="mx-auto max-w-3xl rounded-2xl border border-border bg-card p-7 sm:p-9">
             <h2 className="text-xl font-semibold tracking-tight">{t("billing.title")}</h2>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
@@ -158,7 +178,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
           <Reveal className="mx-auto max-w-3xl">
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">{t("faq.title")}</h2>
             <dl className="mt-8 space-y-8">
-              {(["q1", "q2", "q3", "q4", "q5"] as const).map((key) => (
+              {(["q1", "q2", "q3", "q4", "q5", "q6"] as const).map((key) => (
                 <div key={key}>
                   <dt className="font-medium">{t(`faq.${key}`)}</dt>
                   <dd className="mt-2 text-[15px] leading-relaxed text-muted-foreground">

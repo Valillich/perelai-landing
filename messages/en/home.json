@@ -35,7 +35,7 @@
       "pauseAutoplay": "Pause automatic rotation",
       "resumeAutoplay": "Resume automatic rotation"
     },
-    "billingMicro": "The trial is free. Afterward, buy a plan for each workspace separately; no automatic charge. Final currency and taxes are shown before payment."
+    "billingMicro": "After your free trial, choose a subscription for each workspace. Currency and taxes are shown before payment."
   },
   "finance": {
     "title": "Revenue, costs and profit for your chosen period.",
@@ -178,7 +178,7 @@
     "q2": "Is there a trial, and do I need a card?",
     "a2": "Try STUDIO for 21 days without a card. Your trial starts after business setup, once per payer. The app shows your end date.",
     "q3": "What happens when the trial ends?",
-    "a3": "After the trial, choose and purchase a monthly plan for each workspace (Company) you want to keep using. There is no automatic charge. Final currency and applicable taxes are shown before payment. Without valid access, work is restricted; trial expiry itself does not delete your data.",
+    "a3": "After the trial, choose and purchase a monthly plan for each workspace you want to keep using. Your trial does not turn into a paid subscription automatically. Final currency and applicable taxes are shown before payment. Without valid access, work is restricted; trial expiry itself does not delete your data.",
     "q4": "Can I work with a team?",
     "a4": "Yes. STUDIO supports up to 5 active service professionals and team access. An administrator who does not provide services does not count toward that limit.",
     "q5": "Is a prepaid package a subscription?",

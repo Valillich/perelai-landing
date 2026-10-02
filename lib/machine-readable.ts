@@ -44,12 +44,14 @@ export function buildLlmsTxt(): string {
       "Initial GTM niche: independent colorists in APPOINTMENT mode.",
     ]),
     "",
-    "## Current capabilities",
+    `## ${pricingEn.capabilities.title}`,
     bulletList(capabilities),
     "",
     "## Trial and monthly plans",
     bulletList([
-      pricingEn.trial.title,
+      pricingEn.hero.body,
+      pricingEn.trial.body,
+      pricingEn.cta.micro,
       pricingEn.billing.body,
       ...PRICING_PLANS.map((plan) => {
         const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
@@ -105,20 +107,20 @@ export function buildPricingMarkdown(): string {
     bulletList([
       pricingEn.hero.body,
       pricingEn.trial.body,
+      pricingEn.cta.micro,
       ...PRICING_PLANS.map((plan) => {
         const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
         const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
         return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote} ${pricingEn.plans[plan.code].access}`
       }),
-      `STUDIO+: ${pricingEn.studioPlus.description} ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
+      `STUDIO+: ${pricingEn.studioPlus.description} ${pricingEn.studioPlus.body} ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
       pricingEn.billing.body,
       pricingEn.billing.renewal,
-      "The trial does not create a paid subscription or an automatic charge.",
     ]),
     "",
-    "## Current capabilities",
+    `## ${pricingEn.capabilities.title}`,
     bulletList(capabilities),
     "",
     "## FAQ",
@@ -127,5 +129,6 @@ export function buildPricingMarkdown(): string {
     `- ${pricingEn.faq.q3} ${pricingEn.faq.a3}`,
     `- ${pricingEn.faq.q4} ${pricingEn.faq.a4}`,
     `- ${pricingEn.faq.q5} ${pricingEn.faq.a5}`,
+    `- ${pricingEn.faq.q6} ${pricingEn.faq.a6}`,
   ].join("\n")
 }

@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Preise — Perelai",
-    "description": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
+    "description": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten."
   },
   "hero": {
     "eyebrow": "Monatstarife",
-    "title": "Testen Sie STUDIO 21 Tage kostenlos",
-    "body": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
+    "title": "Testen Sie STUDIO kostenlos",
+    "body": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten."
   },
   "plans": {
     "monthly": "Monatlich",
@@ -22,37 +22,38 @@
       "access": "Laden Sie Ihr Team und einen Administrator ein",
       "adminNote": "Administratoren zählen nur dann zum Limit, wenn sie selbst Dienstleistungen erbringen."
     },
-    "shared": "Beide Tarife umfassen Termine, Kundenhistorie, Zahlungs- und Paketaufzeichnungen sowie eine Finanzübersicht.",
     "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
     "availability": "Der Kauf von Abonnements ist noch nicht verfügbar."
   },
   "studioPlus": {
-    "description": "Benötigen Sie mehr als STUDIO? Schreiben Sie uns, was Sie brauchen.",
-    "note": "Nur auf Anfrage: Preis und Fachkräftelimit stehen nicht fest; dieser Tarif kann nicht gekauft werden."
+    "description": "Mehr als fünf Fachkräfte in Ihrem Team?",
+    "note": "STUDIO+ kann noch nicht aktiviert werden. Preise und Bedingungen wurden noch nicht bekannt gegeben.",
+    "body": "Schreiben Sie uns, welchen Zugang Sie benötigen.",
+    "contact": "Bedarf besprechen"
   },
   "trial": {
-    "title": "21 Tage STUDIO kostenlos testen. Ohne Karte.",
-    "body": "Ein gemeinsamer Testzeitraum pro berechtigtem Zahlenden beginnt nach der ersten abgeschlossenen Unternehmenseinrichtung. Berechtigte Arbeitsbereiche teilen das ursprüngliche Enddatum. Danach können Sie SOLO wählen."
+    "title": "So funktioniert die Testphase",
+    "body": "Die Testphase beginnt nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens und steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Sie erhalten 21 Tage Zugang zu STUDIO. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage."
   },
   "capabilities": {
-    "title": "Aktuelle Funktionen",
-    "inbox": "Operativer Posteingang — eine Liste für offene Entscheidungen, die bleibt, bis sie erledigt sind",
-    "calendar": "Ein Kalender, der die Art von Arbeit zeigt, die Sie tatsächlich erledigen",
+    "title": "In beiden Tarifen enthalten",
+    "inbox": "Anfragen und Aufträge, die Ihre Aufmerksamkeit benötigen",
+    "calendar": "Terminplanung und Arbeitszeiten",
     "booking": "Öffentlicher Buchungslink — Ihre Kunden wählen eine Leistung und eine Zeit direkt auf Ihrer Seite",
     "clients": "Kundenprofile mit Terminverlauf, Notizen und Zahlungsbelegen",
-    "payments": "Zahlungserfassung und -zuordnung zu Terminen und Bestellungen",
+    "payments": "Zahlungserfassung für Termine und Aufträge",
     "finance": "Einnahmen, Kosten und ausstehende Beträge ohne Tabellenkalkulation",
-    "orders": "Bestellungen mit vereinbarten Zahlungsplänen und Ratenverfolgung",
+    "orders": "Aufträge mit Zahlungsplänen und Fälligkeiten",
     "packages": "Pakete mit im Voraus bezahlten Guthaben, die bei Nutzung abgebucht werden",
     "onboarding": "Nischenspezifisches Onboarding mit 32 wählbaren Geschäftstypen und bearbeitbaren Leistungslisten",
     "contactImport": "Kontaktimport von Ihrem Telefon via vCard",
-    "languages": "Verfügbar auf Englisch, Ukrainisch, Polnisch und Deutsch",
+    "languages": "Oberfläche in 9 Sprachen",
     "mobile": "Mobile-First, komfortabel auf dem Desktop",
     "themes": "Helle und dunkle Designs"
   },
   "billing": {
     "title": "Nach der Testphase",
-    "body": "Wählen und kaufen Sie für jeden Arbeitsbereich (Company), den Sie weiter nutzen möchten, ein eigenes Monatsabonnement. Das Ende der Testphase löst keine automatische Abbuchung aus.",
+    "body": "Jeder Arbeitsbereich benötigt ein eigenes Monatsabonnement. Wählen Sie nach der Testphase SOLO oder STUDIO, wenn Sie ihn weiter nutzen möchten.",
     "renewal": "Nach dem Kauf verlängert sich das Abonnement gemäß den Vertragsbedingungen monatlich.",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzerklärung",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Fragen zu Preisen und Abrechnung",
     "q1": "Wann beginnt die Testphase und kann ich eine weitere erhalten?",
-    "a1": "Eine Karte ist nicht erforderlich. Die 21 Tage beginnen nach der ersten berechtigten abgeschlossenen Unternehmenseinrichtung und stehen Zahlenden nur einmal zu. Ein neuer Arbeitsbereich startet die Testphase nicht erneut.",
+    "a1": "Nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens. Die Testphase steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage.",
     "q2": "Was passiert nach der Testphase?",
-    "a2": "Wählen und kaufen Sie SOLO oder STUDIO für jeden Arbeitsbereich, den Sie weiter nutzen möchten. Es gibt keine automatische Abbuchung. Ohne Abonnement oder andere gültige Zugangsberechtigung ist die Nutzung eingeschränkt; Ihre Daten werden durch das Ende der Testphase nicht gelöscht.",
+    "a2": "Wählen Sie nach der Testphase SOLO oder STUDIO für jeden Arbeitsbereich, den Sie weiter nutzen möchten. Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement. Ohne Abonnement oder anderen gültigen Zugang ist die Nutzung eingeschränkt; das Ende der Testphase löscht Ihre Daten nicht.",
     "q3": "Wer zählt zum Fachkräfte-Limit?",
-    "a3": "Alle, die aktiv Dienstleistungen erbringen, auch arbeitende Inhaber ohne eigenen Login. Ein Administrator ohne Dienstleistungen zählt nicht dazu, benötigt für den Zugang aber STUDIO.",
+    "a3": "Alle, die Dienstleistungen erbringen, auch arbeitende Inhaber und Fachkräfte ohne eigenen App-Zugang. Administratoren ohne eigene Dienstleistungen zählen nicht zu diesem Limit.",
     "q4": "Kann ich nach der Testphase SOLO wählen?",
-    "a4": "Ja. Behalten Sie zuerst nur eine aktive Fachkraft, entziehen Sie zusätzlichen Teamzugang und stornieren Sie offene Einladungen. Personen werden nicht automatisch gelöscht.",
+    "a4": "Ja. Lassen Sie vor dem Wechsel eine aktive Fachkraft im Arbeitsbereich, entziehen Sie anderen Teammitgliedern den Zugang und stornieren Sie offene Einladungen. Personaldatensätze werden nicht automatisch gelöscht.",
     "q5": "Wie funktioniert die Verlängerung?",
-    "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Endgültige Währung, anfallende Steuern und Bedingungen werden vor der Zahlung angezeigt."
+    "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Endgültige Währung, anfallende Steuern und Bedingungen werden vor der Zahlung angezeigt.",
+    "q6": "Ich arbeite allein, aber ein Administrator hilft mir. Welchen Tarif soll ich wählen?",
+    "a6": "Wählen Sie STUDIO, wenn der Administrator einen eigenen Zugang zu Perelai benötigt. Er belegt keinen Fachkräfteplatz, wenn er keine Dienstleistungen erbringt. SOLO passt, wenn Sie den Arbeitsbereich selbst verwalten und eine Fachkraft ohne eigenen Zugang die Dienstleistungen erbringt."
   },
   "cta": {
-    "title": "Testen Sie STUDIO 21 Tage kostenlos",
-    "body": "Testen Sie den Arbeitsbereich ohne Karte. Wählen Sie Ihren Tarif nach der Testphase.",
-    "button": "STUDIO 21 Tage testen",
-    "micro": "Bestätigen Sie Ihre E-Mail für die Einrichtung. Für die Testphase ist keine Karte erforderlich."
+    "title": "Testen Sie STUDIO kostenlos",
+    "body": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten.",
+    "button": "21 Tage testen",
+    "micro": "Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement."
   }
 }

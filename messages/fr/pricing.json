@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Tarifs — Perelai",
-    "description": "Sans carte bancaire. Choisissez et achetez un abonnement à la fin de l’essai. Aucun prélèvement automatique sans souscription."
+    "description": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer."
   },
   "hero": {
     "eyebrow": "Formules mensuelles",
-    "title": "Essayez STUDIO gratuitement pendant 21 jours",
-    "body": "Sans carte bancaire. Choisissez et achetez un abonnement à la fin de l’essai. Aucun prélèvement automatique sans souscription."
+    "title": "Essayez STUDIO gratuitement",
+    "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer."
   },
   "plans": {
     "monthly": "Mensuel",
@@ -22,37 +22,38 @@
       "access": "Invitez votre équipe et un administrateur",
       "adminNote": "Un administrateur compte dans la limite de professionnels uniquement s’il assure aussi des prestations."
     },
-    "shared": "Les deux formules comprennent les rendez-vous, l’historique client, le suivi des paiements et forfaits et une vue financière.",
     "currency": "Les prix de base sont en USD. La devise finale et les taxes applicables sont indiquées avant le paiement.",
     "availability": "La souscription payante n’est pas encore disponible."
   },
   "studioPlus": {
-    "description": "Besoin de plus que STUDIO ? Parlez-nous de vos besoins.",
-    "note": "Demande de contact uniquement : aucun prix ni plafond de professionnels n’est fixé ; ce forfait ne peut pas être acheté."
+    "description": "Plus de cinq professionnels dans votre équipe ?",
+    "note": "STUDIO+ n’est pas encore disponible à l’activation. Les tarifs et conditions n’ont pas été annoncés.",
+    "body": "Dites-nous de quel accès vous avez besoin.",
+    "contact": "Discuter de vos besoins"
   },
   "trial": {
-    "title": "21 jours gratuits de STUDIO. Sans carte.",
-    "body": "Un seul essai commun est accordé à chaque payeur éligible après la première configuration complète de l’activité. Les espaces de travail éligibles partagent sa date de fin initiale. Vous pourrez choisir SOLO ensuite."
+    "title": "Comment fonctionne l’essai",
+    "body": "L’essai commence une fois la configuration de votre première entreprise terminée et est disponible une seule fois pour la personne qui paie l’abonnement. Vous bénéficiez de STUDIO pendant 21 jours. Ajouter un espace de travail ne lance pas 21 jours supplémentaires."
   },
   "capabilities": {
-    "title": "Fonctionnalités actuelles",
-    "inbox": "Boîte de réception opérationnelle — une liste pour vos décisions en attente, qui reste jusqu'à ce que vous les résolviez",
-    "calendar": "Un calendrier qui reflète le type de travail que vous faites réellement",
+    "title": "Inclus dans les deux forfaits",
+    "inbox": "Demandes et commandes qui nécessitent votre attention",
+    "calendar": "Planning des rendez-vous et horaires de travail",
     "booking": "Lien de réservation public — vos clients choisissent une prestation et un créneau directement sur votre page",
     "clients": "Fiches clients avec historique des visites, notes et suivis de paiement",
-    "payments": "Saisie et attribution des paiements aux visites et commandes",
+    "payments": "Suivi des paiements des rendez-vous et commandes",
     "finance": "Revenus, coûts et soldes restants sans avoir besoin de tableur",
-    "orders": "Commandes avec échéanciers de paiement et suivi des délais",
+    "orders": "Commandes avec échéanciers et dates de paiement",
     "packages": "Forfaits à solde prépayé qui se déduisent au fil de vos prestations",
     "onboarding": "Configuration adaptée à votre activité avec 32 modèles de métier et listes de prestations personnalisables",
     "contactImport": "Importation de contacts depuis votre téléphone via vCard",
-    "languages": "Disponible en anglais, ukrainien, polonais, allemand, espagnol et français",
+    "languages": "Interface en 9 langues",
     "mobile": "Conçu pour mobile, confortable sur ordinateur",
     "themes": "Modes clair et sombre"
   },
   "billing": {
     "title": "Après l’essai",
-    "body": "Choisissez et achetez une formule mensuelle séparément pour chaque espace de travail (Company) que vous souhaitez continuer à utiliser. La fin de l’essai ne déclenche aucun prélèvement automatique.",
+    "body": "Chaque espace de travail nécessite son propre abonnement mensuel. Après l’essai, choisissez SOLO ou STUDIO si vous souhaitez continuer à l’utiliser.",
     "renewal": "Une fois acheté, l’abonnement se renouvelle chaque mois selon ses conditions.",
     "terms": "Conditions d’utilisation",
     "privacy": "Politique de confidentialité",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Questions sur les tarifs et la facturation",
     "q1": "Quand l’essai commence-t-il ? Puis-je en obtenir un autre ?",
-    "a1": "Aucune carte n’est requise. Les 21 jours commencent après votre première configuration complète éligible et sont accordés une seule fois par payeur. Un nouvel espace de travail ne relance pas l’essai.",
+    "a1": "Une fois la configuration de votre première entreprise terminée. L’essai est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter un espace de travail ne lance pas 21 jours supplémentaires.",
     "q2": "Que se passe-t-il à la fin de l’essai ?",
-    "a2": "Choisissez et achetez SOLO ou STUDIO pour chaque espace de travail que vous souhaitez continuer à utiliser. Aucun prélèvement automatique. Sans abonnement ou autre droit d’accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
+    "a2": "Après l’essai, choisissez SOLO ou STUDIO pour chaque espace de travail que vous souhaitez continuer à utiliser. L’essai ne se transforme pas automatiquement en abonnement payant. Sans abonnement ni autre accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
     "q3": "Qui compte dans la limite de professionnels ?",
-    "a3": "Toute personne qui assure activement des prestations, y compris le propriétaire actif, même sans compte distinct. Un administrateur sans prestations ne compte pas, mais son accès nécessite STUDIO.",
+    "a3": "Toute personne qui assure des prestations, y compris le propriétaire actif et un professionnel sans accès personnel à l’application. Un administrateur sans prestations ne compte pas dans cette limite.",
     "q4": "Puis-je choisir SOLO après l’essai ?",
-    "a4": "Oui. Conservez d’abord un seul professionnel actif, retirez les accès supplémentaires et annulez les invitations en attente. Les personnes ne sont pas supprimées automatiquement.",
+    "a4": "Oui. Avant de changer, gardez un professionnel actif, retirez l’accès des autres membres de l’équipe et annulez les invitations en attente. Les dossiers du personnel ne sont pas supprimés automatiquement.",
     "q5": "Comment fonctionne le renouvellement ?",
-    "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. La devise finale, les taxes applicables et les conditions sont indiquées avant le paiement."
+    "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. La devise finale, les taxes applicables et les conditions sont indiquées avant le paiement.",
+    "q6": "Je travaille en solo, mais un administrateur m’aide. Quel forfait choisir ?",
+    "a6": "Choisissez STUDIO si l’administrateur a besoin de son propre accès à Perelai. Il ne prend pas de place de professionnel s’il n’assure pas de prestations. SOLO convient si vous gérez vous-même l’espace de travail et qu’un professionnel assure les prestations sans accès personnel."
   },
   "cta": {
-    "title": "Essayez STUDIO gratuitement pendant 21 jours",
-    "body": "Essayez votre espace de travail sans carte. Choisissez votre formule à la fin de l’essai.",
-    "button": "Essayer STUDIO pendant 21 jours",
-    "micro": "Confirmez votre adresse e-mail pour terminer la configuration. Aucune carte n’est requise."
+    "title": "Essayez STUDIO gratuitement",
+    "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer.",
+    "button": "Essayer pendant 21 jours",
+    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant."
   }
 }

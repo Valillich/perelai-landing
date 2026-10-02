@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Fiyatlandırma — Perelai",
-    "description": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
+    "description": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin."
   },
   "hero": {
     "eyebrow": "Aylık paketler",
-    "title": "STUDIO’yu 21 gün ücretsiz deneyin",
-    "body": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
+    "title": "STUDIO’yu ücretsiz deneyin",
+    "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin."
   },
   "plans": {
     "monthly": "Aylık",
@@ -22,37 +22,38 @@
       "access": "Ekibinizi ve yöneticinizi davet edin",
       "adminNote": "Yönetici, yalnızca kendisi de hizmet veriyorsa hizmet veren kişi sınırına dahil edilir."
     },
-    "shared": "Her iki paket de randevuları, müşteri geçmişini, ödeme ve paket kayıtlarını ve finansal özeti içerir.",
     "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
     "availability": "Abonelik satın alma henüz kullanılamıyor."
   },
   "studioPlus": {
-    "description": "STUDIO'dan fazlasına mı ihtiyacınız var? İhtiyacınızı bize anlatın.",
-    "note": "Yalnızca iletişim içindir: fiyat ve uzman sınırı belirlenmedi; bu paket satın alınamaz."
+    "description": "Ekibinizde beşten fazla hizmet uzmanı mı var?",
+    "note": "STUDIO+ henüz etkinleştirilemiyor. Fiyat ve koşullar henüz açıklanmadı.",
+    "body": "Hangi erişime ihtiyacınız olduğunu bize anlatın.",
+    "contact": "İhtiyaçlarınızı görüşelim"
   },
   "trial": {
-    "title": "21 gün ücretsiz STUDIO. Kart gerekmez.",
-    "body": "Uygun olan her ödeme sorumlusu, ilk tamamlanan işletme kurulumundan sonra tek bir ortak deneme süresi alır. Uygun çalışma alanları ilk bitiş tarihini paylaşır. Daha sonra SOLO seçebilirsiniz."
+    "title": "Deneme süresi nasıl işler?",
+    "body": "Deneme, ilk işletme kurulumunu tamamladıktan sonra başlar ve aboneliği ödeyen kişiye bir kez sunulur. STUDIO’ya 21 gün erişim sağlarsınız. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz."
   },
   "capabilities": {
-    "title": "Mevcut Özellikler",
-    "inbox": "Operasyonel Gelen Kutusu — bekleyen kararlarınız için siz çözene kadar duran bir liste",
-    "calendar": "Yaptığınız işin gerçek yapısını yansıtan bir takvim",
+    "title": "Her iki pakette de dahil",
+    "inbox": "İlginizi gerektiren talepler ve siparişler",
+    "calendar": "Randevu takvimi ve çalışma saatleri",
     "booking": "Kamuya açık randevu bağlantısı — müşterileriniz doğrudan sayfanızdan hizmet ve saat seçer",
     "clients": "Ziyaret geçmişi, notlar ve ödeme takibi içeren müşteri profilleri",
-    "payments": "Ziyaretlere ve siparişlere ödeme kaydetme ve eşleme",
+    "payments": "Randevu ve sipariş ödemelerinin kaydı",
     "finance": "Tablolara ihtiyaç duymadan gelirler, giderler ve kalan bakiyeler",
-    "orders": "Anlaşmalı ödeme planları ve vade takibi içeren siparişler",
+    "orders": "Ödeme planı ve vade tarihleri olan siparişler",
     "packages": "Kullanıldıkça düşen ön ödemeli bakiye paketleri",
     "onboarding": "32 iş şablonu ve özelleştirilebilir hizmet listeleriyle nişinize uyarlanmış kurulum",
     "contactImport": "vCard ile telefonunuzdan kişi içe aktarma",
-    "languages": "İngilizce, Ukraynaca, Lehçe, Almanca, İspanyolca, Fransızca, Rusça, İtalyanca, Portekizce ve Türkçe dillerinde mevcut",
+    "languages": "9 dilde arayüz",
     "mobile": "Mobil için tasarlandı, bilgisayarda rahat",
     "themes": "Açık ve karanlık modlar"
   },
   "billing": {
     "title": "Deneme süresinden sonra",
-    "body": "Kullanmaya devam etmek istediğiniz her çalışma alanı (Company) için ayrı bir aylık abonelik seçip satın alın. Denemenin bitmesi otomatik ücret doğurmaz.",
+    "body": "Her çalışma alanı için ayrı bir aylık abonelik gerekir. Denemeden sonra kullanmaya devam etmek isterseniz SOLO veya STUDIO’yu seçin.",
     "renewal": "Satın alındıktan sonra abonelik, koşullarına göre aylık yenilenir.",
     "terms": "Hizmet Koşulları",
     "privacy": "Gizlilik Politikası",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Fiyatlandırma ve faturalandırma hakkında sorular",
     "q1": "Deneme ne zaman başlar? Bir tane daha alabilir miyim?",
-    "a1": "Kart gerekmez. 21 gün, ilk uygun tamamlanmış işletme kurulumundan sonra başlar ve ödeme sorumlusu başına bir kez verilir. Yeni çalışma alanı denemeyi yeniden başlatmaz.",
+    "a1": "İlk işletme kurulumunu tamamladıktan sonra başlar. Deneme, aboneliği ödeyen kişiye bir kez sunulur. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz.",
     "q2": "Deneme bitince ne olur?",
-    "a2": "Kullanmaya devam etmek istediğiniz her çalışma alanı için SOLO veya STUDIO seçip satın alın. Otomatik ücret yoktur. Abonelik veya başka geçerli erişim olmadan çalışma kısıtlanır; denemenin bitmesi verilerinizi silmez.",
+    "a2": "Denemeden sonra kullanmaya devam etmek istediğiniz her çalışma alanı için SOLO veya STUDIO’yu seçin. Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez. Abonelik veya başka bir geçerli erişim olmadan kullanım kısıtlanır; denemenin bitmesi verilerinizi silmez.",
     "q3": "Hizmet uzmanı sınırına kimler dahildir?",
-    "a3": "Ayrı girişi olmasa bile çalışan işletme sahibi dahil, aktif olarak hizmet veren herkes. Hizmet vermeyen yönetici sayılmaz, ancak erişimi STUDIO gerektirir.",
+    "a3": "Kendi uygulama girişi olmayan uzmanlar ve hizmet veren işletme sahibi dahil, hizmet veren herkes. Hizmet vermeyen yönetici bu sınıra dahil edilmez.",
     "q4": "Denemeden sonra SOLO seçebilir miyim?",
-    "a4": "Evet. Önce tek bir aktif hizmet uzmanı bırakın, ek ekip erişimini kaldırın ve bekleyen davetleri iptal edin. Kişiler otomatik silinmez.",
+    "a4": "Evet. Geçişten önce bir aktif hizmet uzmanı bırakın, diğer ekip üyelerinin erişimini kaldırın ve bekleyen davetleri iptal edin. Personel kayıtları otomatik olarak silinmez.",
     "q5": "Yenileme nasıl işler?",
-    "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Son para birimi, geçerli vergiler ve koşullar ödemeden önce gösterilir."
+    "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Son para birimi, geçerli vergiler ve koşullar ödemeden önce gösterilir.",
+    "q6": "Tek başıma çalışıyorum ama bir yönetici bana yardımcı oluyor. Hangi paketi seçmeliyim?",
+    "a6": "Yöneticinin Perelai’ye kendi erişimi gerekiyorsa STUDIO’yu seçin. Hizmet vermiyorsa uzman kontenjanından yer kullanmaz. Çalışma alanını kendiniz yönetiyor ve bir uzman kendi girişi olmadan hizmet veriyorsa SOLO uygundur."
   },
   "cta": {
-    "title": "STUDIO’yu 21 gün ücretsiz deneyin",
-    "body": "Çalışma alanını kart olmadan deneyin. Paketinizi denemeden sonra seçin.",
-    "button": "STUDIO’yu 21 gün deneyin",
-    "micro": "Kurulumu tamamlamak için e-postanızı doğrulayın. Kart gerekmez."
+    "title": "STUDIO’yu ücretsiz deneyin",
+    "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin.",
+    "button": "21 gün deneyin",
+    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez."
   }
 }

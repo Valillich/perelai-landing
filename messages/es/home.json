@@ -35,7 +35,7 @@
     },
     "deviceMicro": "Perelai funciona en tu navegador. La instalación es opcional.",
     "trialMicro": "21 días de STUDIO sin tarjeta. Suscríbete al terminar el período de prueba.",
-    "billingMicro": "La prueba es gratuita. Después, compra un plan por separado para cada espacio de trabajo; sin cargo automático. La moneda y los impuestos se muestran antes de pagar."
+    "billingMicro": "Después de la prueba gratuita, elige una suscripción para cada espacio de trabajo. La moneda y los impuestos se muestran antes de pagar."
   },
   "operations": {
     "title": "De la cita a la sesión completada.",
@@ -149,7 +149,7 @@
     "q2": "¿Hay período de prueba y necesito tarjeta?",
     "a2": "Prueba STUDIO durante 21 días sin tarjeta. La prueba empieza tras configurar el negocio y se ofrece una sola vez por pagador. La app muestra la fecha de fin.",
     "q3": "¿Qué pasa cuando termina el período de prueba?",
-    "a3": "Después de la prueba, elige y compra un plan mensual para cada espacio de trabajo (Company) que quieras seguir usando. No hay cargo automático. La moneda final y los impuestos aplicables se muestran antes de pagar. Sin acceso válido, el trabajo queda restringido; el fin de la prueba no elimina tus datos.",
+    "a3": "Después de la prueba, elige y compra un plan mensual para cada espacio de trabajo que quieras seguir usando. La prueba no se convierte automáticamente en una suscripción de pago. La moneda final y los impuestos aplicables se muestran antes de pagar. Sin acceso válido, el trabajo queda restringido; el fin de la prueba no elimina tus datos.",
     "q4": "¿Puedo trabajar con un equipo?",
     "a4": "Sí. STUDIO incluye hasta 5 profesionales activos que prestan servicios y acceso para el equipo. Un administrador que no preste servicios no cuenta para ese límite.",
     "q5": "¿Un paquete prepagado es una suscripción?",

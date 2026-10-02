@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Cennik — Perelai",
-    "description": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
+    "description": "21 dni bez karty płatniczej. Potem wybierz SOLO lub STUDIO, jeśli chcesz kontynuować."
   },
   "hero": {
     "eyebrow": "Plany miesięczne",
-    "title": "Wypróbuj STUDIO bezpłatnie przez 21 dni",
-    "body": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
+    "title": "Wypróbuj STUDIO bezpłatnie",
+    "body": "21 dni bez karty płatniczej. Potem wybierz SOLO lub STUDIO, jeśli chcesz kontynuować."
   },
   "plans": {
     "monthly": "Miesięcznie",
@@ -22,37 +22,38 @@
       "access": "Zaproś zespół i administratora",
       "adminNote": "Administrator wlicza się do limitu tylko wtedy, gdy sam świadczy usługi."
     },
-    "shared": "Oba plany obejmują rezerwacje, historię klientów, ewidencję płatności i pakietów oraz przegląd finansów.",
     "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
     "availability": "Zakup subskrypcji nie jest jeszcze dostępny."
   },
   "studioPlus": {
-    "description": "Potrzebujesz więcej niż STUDIO? Napisz nam, czego potrzebujesz.",
-    "note": "Tylko zapytania: cena i limit specjalistów nie są ustalone; tego planu nie można kupić."
+    "description": "Więcej niż pięciu specjalistów w zespole?",
+    "note": "STUDIO+ nie jest jeszcze dostępny do aktywacji. Cena i warunki nie zostały ogłoszone.",
+    "body": "Napisz, jakiego dostępu potrzebujesz.",
+    "contact": "Omów potrzeby"
   },
   "trial": {
-    "title": "21 dni bezpłatnego STUDIO. Bez karty.",
-    "body": "Jeden wspólny okres próbny na uprawnionego płatnika zaczyna się po pierwszej ukończonej konfiguracji firmy. Uprawnione przestrzenie robocze mają tę samą pierwotną datę zakończenia. Później możesz wybrać SOLO."
+    "title": "Jak działa okres próbny",
+    "body": "Okres próbny zaczyna się po zakończeniu pierwszej konfiguracji firmy i jest dostępny raz dla osoby opłacającej subskrypcję. Otrzymujesz dostęp do STUDIO na 21 dni. Dodanie przestrzeni roboczej nie rozpoczyna kolejnych 21 dni."
   },
   "capabilities": {
-    "title": "Aktualne możliwości",
-    "inbox": "Operacyjna skrzynka — jedna lista spraw wymagających Twojej decyzji, czekająca aż je rozwiążesz",
-    "calendar": "Kalendarz pokazujący rodzaj pracy, którą wykonujesz",
+    "title": "W obu planach",
+    "inbox": "Zgłoszenia i zamówienia wymagające uwagi",
+    "calendar": "Harmonogram wizyt i godziny pracy",
     "booking": "Publiczny link do rezerwacji — klienci wybierają usługę i termin bezpośrednio na Twojej stronie",
     "clients": "Profile klientów z historią wizyt, notatkami i płatnościami",
-    "payments": "Rejestrowanie płatności i ich przypisanie do wizyt i zamówień",
+    "payments": "Ewidencja płatności za wizyty i zamówienia",
     "finance": "Przychody, koszty i otwarte pozycje — bez arkusza",
-    "orders": "Zamówienia z harmonogramem płatności i śledzeniem rat",
+    "orders": "Zamówienia z harmonogramem i terminami płatności",
     "packages": "Pakiety przedpłaconych punktów, które są odliczane przy użyciu",
     "onboarding": "Konfiguracja dopasowana do branży z 32 szablonami i edytowalną listą usług",
     "contactImport": "Import kontaktów z telefonu przez vCard",
-    "languages": "Dostępny w języku angielskim, ukraińskim i polskim",
+    "languages": "Interfejs w 9 językach",
     "mobile": "Zaprojektowany na telefon, wygodny na komputerze",
     "themes": "Jasny i ciemny motyw"
   },
   "billing": {
     "title": "Po okresie próbnym",
-    "body": "Wybierz i wykup miesięczny plan osobno dla każdej przestrzeni roboczej (Company), z której chcesz nadal korzystać. Koniec okresu próbnego nie powoduje automatycznego obciążenia.",
+    "body": "Każda przestrzeń robocza wymaga osobnej subskrypcji miesięcznej. Po okresie próbnym wybierz SOLO lub STUDIO, jeśli chcesz dalej z niej korzystać.",
     "renewal": "Po zakupie subskrypcja odnawia się co miesiąc zgodnie z jej warunkami.",
     "terms": "Warunki korzystania",
     "privacy": "Polityka prywatności",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Pytania o cennik i płatności",
     "q1": "Kiedy zaczyna się okres próbny i czy mogę otrzymać kolejny?",
-    "a1": "Karta nie jest potrzebna. 21 dni zaczyna się po pierwszej uprawnionej ukończonej konfiguracji firmy i przysługuje płatnikowi tylko raz. Nowa przestrzeń robocza nie uruchamia okresu ponownie.",
+    "a1": "Po zakończeniu pierwszej konfiguracji firmy. Okres próbny jest dostępny raz dla osoby opłacającej subskrypcję. Dodanie przestrzeni roboczej nie rozpoczyna kolejnych 21 dni.",
     "q2": "Co dzieje się po zakończeniu okresu próbnego?",
-    "a2": "Wybierz i wykup SOLO lub STUDIO dla każdej przestrzeni roboczej, z której chcesz nadal korzystać. Nie ma automatycznego obciążenia. Bez subskrypcji lub innego ważnego dostępu praca jest ograniczona; koniec okresu próbnego sam w sobie nie usuwa danych.",
+    "a2": "Po okresie próbnym wybierz SOLO lub STUDIO dla każdej przestrzeni roboczej, z której chcesz nadal korzystać. Okres próbny nie zmienia się automatycznie w płatną subskrypcję. Bez subskrypcji lub innego ważnego dostępu praca jest ograniczona; sam koniec okresu próbnego nie usuwa danych.",
     "q3": "Kto zajmuje miejsce osoby świadczącej usługi?",
-    "a3": "Każdy, kto aktywnie świadczy usługi, także pracujący właściciel bez osobnego loginu. Administrator nieświadczący usług nie zajmuje miejsca, ale jego dostęp wymaga STUDIO.",
+    "a3": "Każdy, kto świadczy usługi, także pracujący właściciel i specjalista bez własnego loginu do aplikacji. Administrator, który nie świadczy usług, nie wlicza się do tego limitu.",
     "q4": "Czy po okresie próbnym mogę wybrać SOLO?",
-    "a4": "Tak. Najpierw pozostaw jedną aktywną osobę świadczącą usługi, cofnij dodatkowy dostęp zespołu i anuluj oczekujące zaproszenia. Osoby nie są usuwane automatycznie.",
+    "a4": "Tak. Przed zmianą pozostaw jednego aktywnego specjalistę, wyłącz dostęp pozostałych członków zespołu i anuluj oczekujące zaproszenia. Dane pracowników nie są usuwane automatycznie.",
     "q5": "Jak działa odnowienie?",
-    "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Ostateczna waluta, należne podatki i warunki są pokazane przed płatnością."
+    "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Ostateczna waluta, należne podatki i warunki są pokazane przed płatnością.",
+    "q6": "Pracuję samodzielnie, ale pomaga mi administrator. Który plan wybrać?",
+    "a6": "Wybierz STUDIO, jeśli administrator potrzebuje własnego dostępu do Perelai. Nie zajmuje miejsca specjalisty, jeśli sam nie świadczy usług. SOLO wystarczy, jeśli samodzielnie zarządzasz przestrzenią roboczą, a usługi świadczy jeden specjalista bez własnego loginu."
   },
   "cta": {
-    "title": "Wypróbuj STUDIO bezpłatnie przez 21 dni",
-    "body": "Wypróbuj przestrzeń roboczą bez karty. Plan wybierzesz po okresie próbnym.",
-    "button": "Wypróbuj STUDIO przez 21 dni",
-    "micro": "Potwierdź adres e-mail, aby dokończyć konfigurację. Karta nie jest potrzebna."
+    "title": "Wypróbuj STUDIO bezpłatnie",
+    "body": "21 dni bez karty płatniczej. Potem wybierz SOLO lub STUDIO, jeśli chcesz kontynuować.",
+    "button": "Wypróbuj przez 21 dni",
+    "micro": "Okres próbny nie zmienia się automatycznie w płatną subskrypcję."
   }
 }

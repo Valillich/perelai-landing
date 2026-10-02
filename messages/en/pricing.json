@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Pricing — Perelai",
-    "description": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
+    "description": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue."
   },
   "hero": {
     "eyebrow": "Monthly plans",
-    "title": "Try STUDIO free for 21 days",
-    "body": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
+    "title": "Try STUDIO for free",
+    "body": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue."
   },
   "plans": {
     "monthly": "Monthly",
@@ -22,37 +22,38 @@
       "access": "Invite your team and an administrator",
       "adminNote": "Administrators don’t count toward the limit unless they also provide services."
     },
-    "shared": "Both plans include appointments, client history, payment and package records, and a financial overview.",
     "currency": "Base prices are in USD. Final currency and applicable taxes are shown before payment.",
     "availability": "Subscription checkout is not available yet."
   },
   "studioPlus": {
-    "description": "Need more than STUDIO? Tell us what you need.",
-    "note": "Enquiries only. Price and performer limit are not set; this plan cannot be purchased."
+    "description": "More than five service professionals on your team?",
+    "note": "STUDIO+ is not available to activate yet. Pricing and terms have not been announced.",
+    "body": "Tell us what access you need.",
+    "contact": "Discuss your needs"
   },
   "trial": {
-    "title": "21-day free STUDIO trial. No card required.",
-    "body": "One shared trial per eligible payer starts after the first completed business setup. Eligible workspaces share its original end date. The trial gives you STUDIO access, even if you choose SOLO afterward."
+    "title": "How the trial works",
+    "body": "The trial starts after you finish setting up your first business and is available once to the person paying for the subscription. You get STUDIO access for 21 days. Adding a workspace does not start another 21 days."
   },
   "capabilities": {
-    "title": "Current capabilities",
-    "inbox": "Operational Inbox — one list of what still needs your decision, kept until resolved",
-    "calendar": "Calendar that shows the kind of work you actually do",
+    "title": "Included in both plans",
+    "inbox": "Requests and orders that need your attention",
+    "calendar": "Appointment schedules and working hours",
     "booking": "Public booking link — your clients choose a service and time directly on your page",
     "clients": "Client profiles with visit history, notes and payment records",
-    "payments": "Payment recording and allocation against visits and orders",
+    "payments": "Payment records for appointments and orders",
     "finance": "Revenue, costs and outstanding balances without a spreadsheet",
-    "orders": "Orders with agreed payment schedules and instalment tracking",
+    "orders": "Orders with payment schedules and due dates",
     "packages": "Packages of prepaid credits that draw down as you use them",
     "onboarding": "Niche-aware onboarding with 32 selectable business types and editable service lists",
     "contactImport": "Contact import from your phone via vCard",
-    "languages": "Available in English, Ukrainian and Polish",
+    "languages": "Interface in 9 languages",
     "mobile": "Mobile-first, comfortable on desktop",
     "themes": "Light and dark themes"
   },
   "billing": {
     "title": "After the trial",
-    "body": "Choose and purchase a monthly plan separately for each workspace (Company) you want to keep using. Trial expiry does not trigger a charge.",
+    "body": "Each workspace needs its own monthly subscription. After the trial, choose SOLO or STUDIO if you want to keep using it.",
     "renewal": "Once purchased, a subscription renews monthly under the subscription terms.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Questions about pricing and billing",
     "q1": "When does the trial start, and can I get another?",
-    "a1": "No card is required. The 21-day trial begins after your first eligible completed business setup and is available once per payer. A new workspace does not restart it.",
+    "a1": "After you finish setting up your first business. The trial is available once to the person paying for the subscription. Adding a workspace does not start another 21 days.",
     "q2": "What happens when the trial ends?",
-    "a2": "Choose and purchase SOLO or STUDIO for each workspace you want to keep using. There is no automatic charge. Without a subscription or another valid source of access, work is restricted; trial expiry itself does not delete your data.",
+    "a2": "After the trial, choose SOLO or STUDIO for each workspace you want to keep using. The trial does not turn into a paid subscription automatically. Without a subscription or another valid source of access, work is restricted; trial expiry itself does not delete your data.",
     "q3": "Who counts toward the service-professional limit?",
-    "a3": "Anyone actively providing services, including a working owner, even without a login. An administrator who does not provide services does not count, but their access requires STUDIO.",
+    "a3": "Anyone who provides services, including a working owner and a professional without their own app login. An administrator who does not provide services does not count toward this limit.",
     "q4": "Can I choose SOLO after the trial?",
-    "a4": "Yes. First keep one active service professional, revoke additional team access and cancel pending team invitations. People are not deleted automatically.",
+    "a4": "Yes. Before switching, keep one active service professional, remove access for other team members and cancel pending invitations. Staff records are not deleted automatically.",
     "q5": "How does renewal work?",
-    "a5": "Once purchased, your subscription renews monthly. Final currency, applicable taxes and terms are shown before payment."
+    "a5": "Once purchased, your subscription renews monthly. Final currency, applicable taxes and terms are shown before payment.",
+    "q6": "I work on my own but have an administrator helping me. Which plan should I choose?",
+    "a6": "Choose STUDIO if your administrator needs their own access to Perelai. They do not use a professional place unless they provide services. SOLO fits if you manage the workspace yourself and one professional provides services without their own login."
   },
   "cta": {
-    "title": "Try STUDIO free for 21 days",
-    "body": "Try the workspace without a card. Choose your plan only after the trial ends.",
-    "button": "Try STUDIO for 21 days",
-    "micro": "Confirm your email to finish setup. No payment method is required for the trial."
+    "title": "Try STUDIO for free",
+    "body": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue.",
+    "button": "Try it for 21 days",
+    "micro": "Your trial does not turn into a paid subscription automatically."
   }
 }

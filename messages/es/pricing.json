@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Precios — Perelai",
-    "description": "Sin tarjeta. Elige y compra una suscripción cuando termine la prueba. No habrá ningún cargo automático si no te suscribes."
+    "description": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar."
   },
   "hero": {
     "eyebrow": "Planes mensuales",
-    "title": "Prueba STUDIO gratis durante 21 días",
-    "body": "Sin tarjeta. Elige y compra una suscripción cuando termine la prueba. No habrá ningún cargo automático si no te suscribes."
+    "title": "Prueba STUDIO gratis",
+    "body": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar."
   },
   "plans": {
     "monthly": "Mensual",
@@ -22,37 +22,38 @@
       "access": "Invita a tu equipo y a un administrador",
       "adminNote": "El administrador solo cuenta para el límite de profesionales si también presta servicios."
     },
-    "shared": "Ambos planes incluyen citas, historial de clientes, registros de pagos y paquetes, y un resumen financiero.",
     "currency": "Los precios base están en USD. La moneda final y los impuestos aplicables se muestran antes de pagar.",
     "availability": "La compra de suscripciones aún no está disponible."
   },
   "studioPlus": {
-    "description": "¿Necesitas más que STUDIO? Cuéntanos qué necesitas.",
-    "note": "Solo consultas: el precio y el límite de profesionales no están definidos; este plan no se puede contratar."
+    "description": "¿Más de cinco profesionales en tu equipo?",
+    "note": "STUDIO+ aún no está disponible para activar. El precio y las condiciones no se han anunciado.",
+    "body": "Cuéntanos qué acceso necesitas.",
+    "contact": "Hablar de tus necesidades"
   },
   "trial": {
-    "title": "21 días gratis de STUDIO. Sin tarjeta.",
-    "body": "Hay una sola prueba compartida por cada pagador que cumpla los requisitos. Comienza tras la primera configuración completa del negocio; los espacios de trabajo elegibles comparten la fecha de fin original. Después puedes elegir SOLO."
+    "title": "Cómo funciona la prueba",
+    "body": "La prueba empieza al terminar la configuración de tu primer negocio y está disponible una vez para la persona que paga la suscripción. Tendrás acceso a STUDIO durante 21 días. Añadir un espacio de trabajo no inicia otros 21 días."
   },
   "capabilities": {
-    "title": "Funciones actuales",
-    "inbox": "Bandeja Operativa — una lista para tus decisiones pendientes, que se mantiene hasta que las resuelvas",
-    "calendar": "Un calendario que refleja el tipo de trabajo que realmente haces",
+    "title": "Incluido en ambos planes",
+    "inbox": "Solicitudes y pedidos que requieren tu atención",
+    "calendar": "Agenda de citas y horarios de trabajo",
     "booking": "Enlace de reserva público — tus clientes eligen un servicio y una hora directamente en tu página",
     "clients": "Perfiles de clientes con historial de visitas, notas y registros de pago",
-    "payments": "Registro y asignación de pagos a visitas y pedidos",
+    "payments": "Registro de pagos de citas y pedidos",
     "finance": "Ingresos, costes y saldos pendientes sin necesidad de hojas de cálculo",
-    "orders": "Pedidos con planes de pago acordados y seguimiento de plazos",
+    "orders": "Pedidos con calendario de pagos y fechas de vencimiento",
     "packages": "Paquetes de saldo prepagado que se descuentan conforme los usas",
     "onboarding": "Configuración adaptada a tu nicho con 32 tipos de negocio y listas de servicios personalizables",
     "contactImport": "Importación de contactos desde tu teléfono vía vCard",
-    "languages": "Disponible en inglés, ucraniano, polaco, alemán y español",
+    "languages": "Interfaz en 9 idiomas",
     "mobile": "Diseñado para el móvil, cómodo en el ordenador",
     "themes": "Modos claro y oscuro"
   },
   "billing": {
     "title": "Después de la prueba",
-    "body": "Elige y compra un plan mensual por separado para cada espacio de trabajo (Company) que quieras seguir usando. El fin de la prueba no provoca ningún cargo automático.",
+    "body": "Cada espacio de trabajo necesita su propia suscripción mensual. Después de la prueba, elige SOLO o STUDIO si quieres seguir usándolo.",
     "renewal": "Una vez comprada, la suscripción se renueva cada mes según sus condiciones.",
     "terms": "Condiciones del servicio",
     "privacy": "Política de privacidad",
@@ -61,20 +62,22 @@
   "faq": {
     "title": "Preguntas sobre precios y facturación",
     "q1": "¿Cuándo empieza la prueba? ¿Puedo obtener otra?",
-    "a1": "No necesitas tarjeta. Los 21 días empiezan tras la primera configuración completa del negocio que cumpla los requisitos y se ofrecen una sola vez por pagador. Un nuevo espacio de trabajo no reinicia la prueba.",
+    "a1": "Al terminar la configuración de tu primer negocio. La prueba está disponible una vez para la persona que paga la suscripción. Añadir un espacio de trabajo no inicia otros 21 días.",
     "q2": "¿Qué pasa cuando termina la prueba?",
-    "a2": "Elige y compra SOLO o STUDIO para cada espacio de trabajo que quieras seguir usando. No hay cargo automático. Sin una suscripción u otra fuente válida de acceso, el trabajo queda restringido; el fin de la prueba no elimina tus datos.",
+    "a2": "Después de la prueba, elige SOLO o STUDIO para cada espacio de trabajo que quieras seguir usando. La prueba no se convierte automáticamente en una suscripción de pago. Sin una suscripción u otro acceso válido, el uso queda restringido; el fin de la prueba no elimina tus datos.",
     "q3": "¿Quién cuenta para el límite de profesionales?",
-    "a3": "Toda persona que preste servicios activamente, incluido el propietario que trabaja, aunque no tenga cuenta propia. Un administrador que no presta servicios no cuenta, pero su acceso requiere STUDIO.",
+    "a3": "Toda persona que presta servicios, incluido el propietario que trabaja y un profesional sin acceso propio a la aplicación. Un administrador que no presta servicios no cuenta para este límite.",
     "q4": "¿Puedo elegir SOLO después de la prueba?",
-    "a4": "Sí. Primero deja un solo profesional activo, retira el acceso adicional del equipo y cancela las invitaciones pendientes. Las personas no se eliminan automáticamente.",
+    "a4": "Sí. Antes de cambiar, deja un profesional activo, retira el acceso de los demás miembros del equipo y cancela las invitaciones pendientes. Los registros del personal no se eliminan automáticamente.",
     "q5": "¿Cómo funciona la renovación?",
-    "a5": "Tras la compra, la suscripción se renueva mensualmente. La moneda final, los impuestos aplicables y las condiciones se muestran antes de pagar."
+    "a5": "Tras la compra, la suscripción se renueva mensualmente. La moneda final, los impuestos aplicables y las condiciones se muestran antes de pagar.",
+    "q6": "Trabajo por mi cuenta, pero me ayuda un administrador. ¿Qué plan elijo?",
+    "a6": "Elige STUDIO si el administrador necesita su propio acceso a Perelai. No ocupa una plaza de profesional si no presta servicios. SOLO es suficiente si tú gestionas el espacio de trabajo y un profesional presta servicios sin acceso propio."
   },
   "cta": {
-    "title": "Prueba STUDIO gratis durante 21 días",
-    "body": "Prueba el espacio de trabajo sin tarjeta. Elige tu plan después de la prueba.",
-    "button": "Probar STUDIO durante 21 días",
-    "micro": "Confirma tu correo para terminar la configuración. No se necesita tarjeta."
+    "title": "Prueba STUDIO gratis",
+    "body": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar.",
+    "button": "Prueba durante 21 días",
+    "micro": "La prueba no se convierte automáticamente en una suscripción de pago."
   }
 }
