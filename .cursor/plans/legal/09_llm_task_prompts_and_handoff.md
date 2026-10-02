@@ -187,6 +187,26 @@ and working email login/internal calendar. Do not submit or accept provider term
 
 ## Task G — SaaS Billing/Paddle legal integration (prepare in parallel; activate after relevant BILL gates)
 
+**Backend/UI split — 2026-10-01:** the requirement in README §7.6 was present, but the inspected
+checkout API has only `offerCode`/`purpose` and no durable purchase assent. Follow
+[backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md)
+and its **G-BE1 / G-INT / G-BE2** prompts in
+[monetization 09](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/09_copy_paste_prompts_20260822.md).
+
+- **G-UI (already in progress):** Web review/recovery/links/locales. Keep new checkout disabled
+  while `canRecordAcceptance` has no real backend authority. Do not edit Prisma/server code in this task.
+- **G-BE1:** server-owned versioned review; required `legalAcceptance` in POST checkout;
+  atomic immutable evidence + attempt and safe retry/recovery. Backend owns core schemas/API/Prisma.
+- **G-INT:** consume the exact G-BE1 handoff; connect the prepared UI and check polling/reopen/
+  standalone `_ptxn`, not just the purchase button. Never replace the temporary false with constant true.
+- **G-BE2:** prove durable purchase/cancellation confirmation and applicable B-14 behavior using
+  Paddle and existing Notifications. Do not duplicate current BILL5A work or receipts/dunning.
+
+Portal/cancel/refund/support/data rights stay independent of purchase acceptance. G-BE1 can run
+alongside UI and BILL5A, with narrow coordination of shared schema/barrel files; no deployment,
+runtime flag or provider approval follows from finishing one part. Keep one concrete API handoff
+in the app's `inventory/purchase-legal-acceptance.v1.md` when implementation is ready.
+
 **Next:** PAR-L in document 32. Start copy/links now alongside BILL5A and POS3; wire ready Billing
 seams without rebuilding them. Agree account-service email copy/classification before enabling its
 delivery; booking-notification approval does not automatically cover billing or marketing messages.
@@ -197,8 +217,10 @@ Do not implement Billing architecture from this prompt. Prepare legal copy/links
 before activating a flow, verify its generated catalog and relevant BILL/runtime evidence. For
 public STUDIO trial/team access or purchase also verify TEAM-RELEASE; never use an internal charge,
 grants or off/observe mode to bypass it. Implement LGL-6 using
-00_README_execution_plan.md, 01_legal_facts_env_contract.md, Terms §13,
-10_billing_cancellation_refund_source_en.md and 08_ui_copy_and_surface_matrix.md §§10 and 12.
+00_README_execution_plan.md, 01_legal_facts_env_contract.md, current content/legal/en Terms/Billing
+and their manifest, and 08_ui_copy_and_surface_matrix.md §§10 and 12. Source 10 is historical;
+do not replace current approved terms with an older draft. Apply backend plan 12's split: implement
+only the assigned UI, G-BE1, G-INT or G-BE2 scope and preserve the other agent's active files.
 
 Render /legal/billing as Refund & Cancellation Policy, with refund aliases; add approved
 Terms/Privacy/Refund Policy/Paddle Buyer Terms links to Pricing,

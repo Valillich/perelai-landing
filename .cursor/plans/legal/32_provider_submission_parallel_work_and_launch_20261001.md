@@ -73,14 +73,16 @@ PRE-G не зависит от Pricing/Paddle или полного Billing. Н�
 | ID / исполнительская задача | Вход и ограниченный результат | Приёмка / что не блокирует |
 | --- | --- | --- |
 | PAR-B1 — BILL5A | Сверить готовые BILL1 facts, BILL2 worker seam, BILL3 policy и Notifications; реализовать только lifecycle/wakeups и надёжную передачу service notices текущему payer | Переходы trial/grace/cancel/restore по времени; dedupe, replay, потеря handoff, реальные PG/Redis tests. Не дублировать Paddle receipts/dunning; никаких marketing/lifecycle campaigns |
-| PAR-L — Task G | Готовые `content/legal/en` + текущие Billing UI/API: ссылки, copy, purchase acceptance/durable confirmation, restricted recovery, отмена/возврат через Paddle/support | Готовить copy сейчас; интегрировать по готовности соответствующего BILL seam. Согласовать BILL5A account-service тексты до включения отправок, не распространять разрешение booking-notifications на новые письма автоматически |
+| PAR-L — Task G UI + G-INT | Готовые `content/legal/en` + текущие Billing UI: ссылки, copy, review/recovery, отмена/возврат через Paddle/support; UI уже в работе | Новая покупка закрыта до G-BE1; затем G-INT связывает DTO/receipt со всеми checkout путями. Portal/cancel не блокировать. Согласовать BILL5A account-service copy до включения отправок |
+| PAR-L-BE — G-BE1 / G-BE2 | [Backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md): review + atomic immutable acceptance/attempt; затем confirmation/B-14 | G-BE1 идёт параллельно UI/BILL5A и выпускает exact core/API handoff; G-BE2 использует готовый Notifications seam, не второй mail pipeline. BILL5A сам по себе не реализует purchase acceptance |
 | PAR-B2 — BILL5B | После callable reconciliation hooks BILL2 и subscription changes BILL2E: сверка подписок, webhook/checkout recovery, границы действия и конфликты | Потеря/повтор/перестановка событий и outage не портят доступ; bounded recovery. Не включать production cadence этим code-task; большой metrics UI не нужен для этой приёмки |
 | PAR-P — остаток POS3/BILL7 | Подготовить provider-free catalog/offer handoff, коммерческие тексты всех используемых поверхностей и корректный signup intent | Сохранить исправленные Home/previews и переводы; не повторять POS0–POS2, не включать tracking. POS4 завершить на релизной ревизии |
 | PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
 | PAR-R — подготовка Task I/BILL8A | По текущей ревизии собрать имеющиеся BILL/TEAM/Drawer/export/migration/build результаты и выписать только открытые применимые проверки | Read-only audit можно готовить до ответов Google/Paddle; verdict отдельных live stages останется pending до их prerequisites |
 
 Задачи параллельны по зависимостям, а не по праву одновременно переписывать одни файлы.
-Task G владеет юридическим copy/evidence, BILL — поведением/доставкой/платежами,
+Task G UI владеет `apps/web` и copy; G-BE1 — core contracts/API/checkout/evidence и своей миграцией;
+G-BE2 использует завершённый BILL5A handoff для нужного confirmation. BILL владеет остальным поведением/доставкой/платежами,
 POS3 — представлением на landing. В handoff заранее перечислить общие файлы и владельца правки.
 Paddle Sandbox не требует domain approval; реальные тесты в sandbox не объявлять live proof.
 

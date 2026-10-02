@@ -433,8 +433,13 @@ needs a tested incident/support path; it is not an indefinite fulfilment disclai
 
 ### Purchase, cancellation and refund controls
 
-Before checkout, present the exact amounts/dates and approved linked Terms + Refund & Cancellation
-Policy with an affirmative purchase control under README §7.6. Privacy acknowledgement and marketing
+Before opening Paddle, present the selected Company/Offer, canonical USD base price, recurring
+terms and approved linked Terms + Refund & Cancellation Policy with affirmative assent under
+README §7.6. Paddle presents exact localized amounts/tax and charge dates before payment;
+do not label the earlier USD anchor as a final quote. Use the server review/receipt in
+[app plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md),
+not signup evidence or an unsaved checkbox. Until integration, new checkout stays disabled;
+portal/cancel/support remain available. Privacy acknowledgement and marketing
 permission remain separate. R-01 is excluded from launch. Use the decided policy:
 
 > Your subscription renews monthly. Cancel renewal at any time; ordinary cancellation leaves access

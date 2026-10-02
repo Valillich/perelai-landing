@@ -502,9 +502,19 @@ Marketing opt-in is separate, optional, unchecked and never required to submit a
 
 ### 7.6 Purchase-time agreement and confirmation
 
+**Implementation split, 2026-10-01:**
+[app plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md)
+defines G-BE1 review/evidence, G-INT UI integration and G-BE2 confirmation. Existing checkout
+attempts and signup acceptance do not already implement this section. Keep checkout unavailable
+in the prepared UI until the real backend contract is connected; portal/cancellation remain independent.
+
 Signup assent is not recurring-payment authorisation. Before each new paid subscription, present
 current Terms + Refund & Cancellation Policy, the selected Company/Offer, monthly billing period,
-due-now and recurring terms, charge dates and cancellation route. Capture affirmative
+due-now and recurring terms, charge dates and cancellation route. The flow has two stages:
+Perelai review captures Company/Offer, canonical USD base price and contractual assent; Paddle
+then presents final localized amounts/tax and payment dates before payment confirmation. Do not
+pretend the earlier USD base price is a final quote or build local FX/tax/address collection.
+Capture affirmative
 purchase assent tied to the authorised payer and immutable document/copy/catalog versions. Store
 only necessary provider transaction/confirmation references server-side under approved retention.
 Paddle-hosted acceptance may satisfy part of this only with evidence of the exact text and versions;
