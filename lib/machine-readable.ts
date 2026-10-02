@@ -51,9 +51,11 @@ export function buildLlmsTxt(): string {
     bulletList([
       pricingEn.trial.title,
       pricingEn.billing.body,
-      ...PRICING_PLANS.map(
-        (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))}`,
-      ),
+      ...PRICING_PLANS.map((plan) => {
+        const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
+        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
+        return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote}`
+      }),
       `STUDIO+: ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
@@ -103,9 +105,11 @@ export function buildPricingMarkdown(): string {
     bulletList([
       pricingEn.hero.body,
       pricingEn.trial.body,
-      ...PRICING_PLANS.map(
-        (plan) => `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))} ${pricingEn.plans[plan.code].access}`,
-      ),
+      ...PRICING_PLANS.map((plan) => {
+        const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
+        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
+        return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote} ${pricingEn.plans[plan.code].access}`
+      }),
       `STUDIO+: ${pricingEn.studioPlus.description} ${pricingEn.studioPlus.note} Contact: ${getPricingContactEmail()}`,
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),

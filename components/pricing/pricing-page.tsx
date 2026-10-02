@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { ArrowUpRight, Check } from "lucide-react"
+import { ArrowUpRight, Check, X } from "lucide-react"
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Reveal } from "@/components/landing/reveal"
@@ -68,10 +68,19 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                     <ul className="mt-8 space-y-4 border-t border-border pt-7">
                       {(["capacity", "access"] as const).map((key) => (
                         <li key={key} className="flex items-start gap-3 text-[15px] leading-snug">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" aria-hidden />
-                          <span>
-                            {t(`plans.${plan.code}.${key}`, { limit: plan.performerLimit })}
-                          </span>
+                          {plan.code === "solo" && key === "access" ? (
+                            <X className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
+                          ) : (
+                            <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" aria-hidden />
+                          )}
+                          <div>
+                            <span>{t(`plans.${plan.code}.${key}`, { limit: plan.performerLimit })}</span>
+                            {plan.code === "studio" && key === "capacity" ? (
+                              <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
+                                {t("plans.studio.adminNote")}
+                              </p>
+                            ) : null}
+                          </div>
                         </li>
                       ))}
                     </ul>

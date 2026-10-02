@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Aylık paketler",
-    "title": "STUDIO ile 21 gün başlayın.",
+    "title": "STUDIO’yu 21 gün ücretsiz deneyin",
     "body": "Kart gerekmez. Deneme süresi bitince abonelik seçip satın alın. Abone olmazsanız otomatik ücret alınmaz."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "Tek başına çalışanlar için.",
       "capacity": "{limit} aktif hizmet uzmanı.",
-      "access": "Ek ekip erişimi yok."
+      "access": "Ekip erişimi dahil değil"
     },
     "studio": {
-      "description": "Ekip erişimi gerektiğinde.",
+      "description": "Ekip olarak çalışanlar için",
       "capacity": "En fazla {limit} aktif hizmet uzmanı.",
-      "access": "Ekip erişimi. Hizmet vermeyen yönetici, hizmet uzmanı kontenjanından yer kullanmaz."
+      "access": "Ekibinizi ve yöneticinizi davet edin",
+      "adminNote": "Yönetici, yalnızca kendisi de hizmet veriyorsa hizmet veren kişi sınırına dahil edilir."
     },
     "shared": "Her iki paket de randevuları, müşteri geçmişini, ödeme ve paket kayıtlarını ve finansal özeti içerir.",
     "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
@@ -71,7 +72,7 @@
     "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Son para birimi, geçerli vergiler ve koşullar ödemeden önce gösterilir."
   },
   "cta": {
-    "title": "STUDIO ile 21 gün başlayın",
+    "title": "STUDIO’yu 21 gün ücretsiz deneyin",
     "body": "Çalışma alanını kart olmadan deneyin. Paketinizi denemeden sonra seçin.",
     "button": "STUDIO’yu 21 gün deneyin",
     "micro": "Kurulumu tamamlamak için e-postanızı doğrulayın. Kart gerekmez."

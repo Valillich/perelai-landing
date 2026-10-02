@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Planos mensais",
-    "title": "Comece com 21 dias de STUDIO.",
+    "title": "Experimente o STUDIO grátis por 21 dias",
     "body": "Sem cartão. Escolha e compre uma assinatura quando o período de teste terminar. Não haverá cobrança automática sem assinatura."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "Para trabalhar por conta própria.",
       "capacity": "{limit} profissional ativo que presta serviços.",
-      "access": "Sem acesso adicional para a equipe."
+      "access": "Acesso para a equipe não incluído"
     },
     "studio": {
-      "description": "Quando sua equipe precisa de acesso.",
+      "description": "Para trabalhar em equipe",
       "capacity": "Até {limit} profissionais ativos que prestam serviços.",
-      "access": "Acesso para a equipe. Um administrador que não presta serviços não ocupa uma vaga de profissional."
+      "access": "Convide sua equipe e um administrador",
+      "adminNote": "O administrador só entra no limite de profissionais se também prestar serviços."
     },
     "shared": "Os dois planos incluem agendamentos, histórico de clientes, registros de pagamentos e pacotes e um resumo financeiro.",
     "currency": "Os preços base estão em USD. A moeda final e os impostos aplicáveis são mostrados antes do pagamento.",
@@ -71,7 +72,7 @@
     "a5": "Após a compra, a assinatura é renovada todo mês. A moeda final, os impostos aplicáveis e os termos são mostrados antes do pagamento."
   },
   "cta": {
-    "title": "Comece com 21 dias de STUDIO",
+    "title": "Experimente o STUDIO grátis por 21 dias",
     "body": "Teste o espaço de trabalho sem cartão. Escolha o plano depois do teste.",
     "button": "Testar STUDIO por 21 dias",
     "micro": "Confirme seu e-mail para concluir a configuração. Não é preciso cartão."

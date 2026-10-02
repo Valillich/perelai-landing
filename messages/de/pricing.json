@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Monatstarife",
-    "title": "Starten Sie mit 21 Tagen STUDIO.",
+    "title": "Testen Sie STUDIO 21 Tage kostenlos",
     "body": "Keine Karte erforderlich. Wählen und kaufen Sie nach der Testphase ein Abonnement. Ohne Kauf erfolgt keine automatische Abbuchung."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "Für die selbstständige Arbeit.",
       "capacity": "{limit} aktive Fachkraft mit Dienstleistungen.",
-      "access": "Kein zusätzlicher Teamzugang."
+      "access": "Teamzugang nicht enthalten"
     },
     "studio": {
-      "description": "Wenn Ihr Team Zugang benötigt.",
+      "description": "Für die Arbeit im Team",
       "capacity": "Bis zu {limit} aktive Fachkräfte mit Dienstleistungen.",
-      "access": "Teamzugang. Ein Administrator, der keine Dienstleistungen erbringt, belegt keinen Fachkräfteplatz."
+      "access": "Laden Sie Ihr Team und einen Administrator ein",
+      "adminNote": "Administratoren zählen nur dann zum Limit, wenn sie selbst Dienstleistungen erbringen."
     },
     "shared": "Beide Tarife umfassen Termine, Kundenhistorie, Zahlungs- und Paketaufzeichnungen sowie eine Finanzübersicht.",
     "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
@@ -71,7 +72,7 @@
     "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Endgültige Währung, anfallende Steuern und Bedingungen werden vor der Zahlung angezeigt."
   },
   "cta": {
-    "title": "Starten Sie mit 21 Tagen STUDIO",
+    "title": "Testen Sie STUDIO 21 Tage kostenlos",
     "body": "Testen Sie den Arbeitsbereich ohne Karte. Wählen Sie Ihren Tarif nach der Testphase.",
     "button": "STUDIO 21 Tage testen",
     "micro": "Bestätigen Sie Ihre E-Mail für die Einrichtung. Für die Testphase ist keine Karte erforderlich."

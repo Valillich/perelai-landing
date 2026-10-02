@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Formules mensuelles",
-    "title": "Commencez par 21 jours de STUDIO.",
+    "title": "Essayez STUDIO gratuitement pendant 21 jours",
     "body": "Sans carte bancaire. Choisissez et achetez un abonnement à la fin de l’essai. Aucun prélèvement automatique sans souscription."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "Pour travailler en solo.",
       "capacity": "{limit} professionnel actif assurant des prestations.",
-      "access": "Sans accès supplémentaire pour une équipe."
+      "access": "Accès pour l’équipe non inclus"
     },
     "studio": {
-      "description": "Quand votre équipe a besoin d’un accès.",
+      "description": "Pour travailler en équipe",
       "capacity": "Jusqu’à {limit} professionnels actifs assurant des prestations.",
-      "access": "Accès pour l’équipe. Un administrateur qui n’assure pas de prestations ne prend pas de place de professionnel."
+      "access": "Invitez votre équipe et un administrateur",
+      "adminNote": "Un administrateur compte dans la limite de professionnels uniquement s’il assure aussi des prestations."
     },
     "shared": "Les deux formules comprennent les rendez-vous, l’historique client, le suivi des paiements et forfaits et une vue financière.",
     "currency": "Les prix de base sont en USD. La devise finale et les taxes applicables sont indiquées avant le paiement.",
@@ -71,7 +72,7 @@
     "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. La devise finale, les taxes applicables et les conditions sont indiquées avant le paiement."
   },
   "cta": {
-    "title": "Commencez par 21 jours de STUDIO",
+    "title": "Essayez STUDIO gratuitement pendant 21 jours",
     "body": "Essayez votre espace de travail sans carte. Choisissez votre formule à la fin de l’essai.",
     "button": "Essayer STUDIO pendant 21 jours",
     "micro": "Confirmez votre adresse e-mail pour terminer la configuration. Aucune carte n’est requise."

@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Plany miesięczne",
-    "title": "Zacznij od 21 dni STUDIO.",
+    "title": "Wypróbuj STUDIO bezpłatnie przez 21 dni",
     "body": "Bez karty. Po zakończeniu okresu próbnego wybierz i wykup subskrypcję. Bez zakupu nie nastąpi automatyczne obciążenie."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "Do samodzielnej pracy.",
       "capacity": "{limit} aktywna osoba świadcząca usługi.",
-      "access": "Bez dodatkowego dostępu dla zespołu."
+      "access": "Dostęp dla zespołu nie jest wliczony w plan"
     },
     "studio": {
-      "description": "Gdy potrzebujesz dostępu dla zespołu.",
+      "description": "Do pracy zespołowej",
       "capacity": "Do {limit} aktywnych osób świadczących usługi.",
-      "access": "Dostęp dla zespołu. Administrator, który nie świadczy usług, nie zajmuje miejsca specjalisty."
+      "access": "Zaproś zespół i administratora",
+      "adminNote": "Administrator wlicza się do limitu tylko wtedy, gdy sam świadczy usługi."
     },
     "shared": "Oba plany obejmują rezerwacje, historię klientów, ewidencję płatności i pakietów oraz przegląd finansów.",
     "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
@@ -71,7 +72,7 @@
     "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Ostateczna waluta, należne podatki i warunki są pokazane przed płatnością."
   },
   "cta": {
-    "title": "Zacznij od 21 dni STUDIO",
+    "title": "Wypróbuj STUDIO bezpłatnie przez 21 dni",
     "body": "Wypróbuj przestrzeń roboczą bez karty. Plan wybierzesz po okresie próbnym.",
     "button": "Wypróbuj STUDIO przez 21 dni",
     "micro": "Potwierdź adres e-mail, aby dokończyć konfigurację. Karta nie jest potrzebna."

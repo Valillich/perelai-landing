@@ -211,6 +211,8 @@ describe("machine-readable files & answer-engine contract", () => {
     for (const plan of PRICING_PLANS) {
       expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month per workspace`)
     }
+    expect(pricing).toContain(pricingEn.plans.studio.adminNote)
+    expect(buildLlmsTxt()).toContain(pricingEn.plans.studio.adminNote)
     expect(pricing).toContain("STUDIO+: ")
     expect(pricing).toContain(pricingEn.studioPlus.note)
     expect(pricing).toContain(getPricingContactEmail())

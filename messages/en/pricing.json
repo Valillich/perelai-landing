@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Monthly plans",
-    "title": "Start with 21 days of STUDIO.",
+    "title": "Try STUDIO free for 21 days",
     "body": "No card required. Choose and purchase a subscription when your trial ends. You will not be charged unless you subscribe."
   },
   "plans": {
@@ -14,12 +14,13 @@
     "solo": {
       "description": "For working on your own.",
       "capacity": "{limit} active service professional.",
-      "access": "No additional team access."
+      "access": "Team access not included"
     },
     "studio": {
-      "description": "When you need team access.",
+      "description": "For working with a team",
       "capacity": "Up to {limit} active service professionals.",
-      "access": "Team access. Admins count toward the 5 only if they provide services."
+      "access": "Invite your team and an administrator",
+      "adminNote": "Administrators don’t count toward the limit unless they also provide services."
     },
     "shared": "Both plans include appointments, client history, payment and package records, and a financial overview.",
     "currency": "Base prices are in USD. Final currency and applicable taxes are shown before payment.",
@@ -71,7 +72,7 @@
     "a5": "Once purchased, your subscription renews monthly. Final currency, applicable taxes and terms are shown before payment."
   },
   "cta": {
-    "title": "Start with 21 days of STUDIO",
+    "title": "Try STUDIO free for 21 days",
     "body": "Try the workspace without a card. Choose your plan only after the trial ends.",
     "button": "Try STUDIO for 21 days",
     "micro": "Confirm your email to finish setup. No payment method is required for the trial."
