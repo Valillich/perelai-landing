@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v12
-**Last updated:** 2026-09-21
+**Document version:** v13
+**Last updated:** 2026-10-03
 **Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
 ## Product Overview
@@ -21,9 +21,11 @@
 - `hero.title`: «Порядок в записях.»
 - `hero.accent`: «Ясность в оплатах.»
 - `hero.body`: «Планируйте визиты, ведите историю клиентов и отмечайте оплаты.»
-- `hero.signup`: «Попробовать 21 день»
+- `hero.signup`: «Попробовать бесплатно»
 - `hero.how`: «Посмотреть, как это работает»
-- `hero.trialMicro`: «21 день STUDIO без карты. После пробного периода оформите подписку.»
+- `hero.trialMicro`: «21 день без банковской карты.»
+
+**Owner update, 2026-10-03:** The two CTA/helper strings above supersede their 2026-09-19 versions. Main Home and Pricing buttons say “Попробовать бесплатно”; the header keeps “Попробовать”. Pricing hero and final CTA say “Попробуйте Perelai бесплатно”. Keep the 21-day duration and cardless terms next to the offer, and explain STUDIO trial features below the hero. Do not describe the trial as unlimited or full access. The other four approved Russian hero strings remain current.
 
 Implement these six strings verbatim, with title/accent forming one H1. Do not add packages, team, income or another slogan to the body. Keep those capabilities in their product sections. “Отмечайте оплаты” means recording a payment, not processing it, automatic reconciliation or one-click operation. The two benefits are not a guarantee of error-free work or increased revenue.
 
@@ -200,6 +202,8 @@ The [launch checklist](../docs/launch-positioning-checklist.md) records exact so
 ## Changelog
 
 *Newest first. One line per revision: what changed and why.*
+
+- v13 (2026-10-03) — **Owner-directed CTA update:** invite readers to try Perelai rather than the STUDIO plan; shorten main Home/Pricing buttons to “Попробовать бесплатно” and show the 21-day cardless terms nearby. STUDIO trial features remain explained below the hero; prices, limits and trial rules are unchanged.
 
 - v12 (2026-09-21) — **POS2 owner general framing update:** widened target audience from beauty-only to independent professionals and small teams working by appointment (e.g. massage therapists, tutors, beauty professionals); updated category line, one-liner, personas, and site/doc descriptions accordingly; preserved owner RU hero freeze verbatim, commercial pricing/trial policies, colorist preview dataset as an example, and separate publication/release gates.
 - v11 (2026-09-19) — **Owner-approved RU hero freeze:** replaced the descriptive feature-list draft with «Порядок в записях. Ясность в оплатах.», the exact action-led body, two CTAs and trial helper supplied by the owner; updated message strategy and translation status, retired launch alternatives and kept all commercial/claim/publication gates separate. Documentation only; v1–v10 history preserved.

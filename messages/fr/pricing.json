@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Formules mensuelles",
-    "title": "Essayez STUDIO gratuitement",
+    "title": "Essayez Perelai gratuitement",
     "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer."
   },
   "plans": {
@@ -33,7 +33,7 @@
   },
   "trial": {
     "title": "Comment fonctionne l’essai",
-    "body": "L’essai commence une fois la configuration de votre première entreprise terminée et est disponible une seule fois pour la personne qui paie l’abonnement. Vous bénéficiez de STUDIO pendant 21 jours. Ajouter un espace de travail ne lance pas 21 jours supplémentaires."
+    "body": "Pendant 21 jours, vous bénéficiez des fonctionnalités de la formule STUDIO. Vous pouvez travailler seul ou inviter votre équipe. L’essai commence une fois la configuration de votre première entreprise terminée et est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter un espace de travail ne lance pas 21 jours supplémentaires."
   },
   "capabilities": {
     "title": "Inclus dans les deux forfaits",
@@ -75,9 +75,10 @@
     "a6": "Choisissez STUDIO si l’administrateur a besoin de son propre accès à Perelai. Il ne prend pas de place de professionnel s’il n’assure pas de prestations. SOLO convient si vous gérez vous-même l’espace de travail et qu’un professionnel assure les prestations sans accès personnel."
   },
   "cta": {
-    "title": "Essayez STUDIO gratuitement",
+    "title": "Essayez Perelai gratuitement",
     "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer.",
-    "button": "Essayer pendant 21 jours",
-    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant."
+    "button": "Essayer gratuitement",
+    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant.",
+    "trialMicro": "21 jours sans carte bancaire."
   }
 }

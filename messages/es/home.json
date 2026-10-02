@@ -8,7 +8,7 @@
     "how": "Cómo funciona",
     "pricing": "Precios",
     "login": "Iniciar sesión",
-    "start": "Probar durante 21 días",
+    "start": "Probar gratis",
     "start_short": "Probar",
     "primaryLabel": "Menú principal",
     "menuLabel": "Abrir menú",
@@ -19,7 +19,7 @@
     "title": "Tu agenda, en orden.",
     "accent": "Tus pagos, claros.",
     "body": "Planifica citas, guarda el historial de tus clientes y registra los pagos.",
-    "signup": "Probar durante 21 días",
+    "signup": "Probar gratis",
     "how": "Ver cómo funciona",
     "micro": "Recibirás un correo de verificación para completar la configuración.",
     "imageAlt": "Ejemplo de Perelai: calendario de citas y balance financiero.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Reanudar rotación automática"
     },
     "deviceMicro": "Perelai funciona en tu navegador. La instalación es opcional.",
-    "trialMicro": "21 días de STUDIO sin tarjeta. Suscríbete al terminar el período de prueba.",
+    "trialMicro": "21 días sin tarjeta bancaria.",
     "billingMicro": "Después de la prueba gratuita, elige una suscripción para cada espacio de trabajo. La moneda y los impuestos se muestran antes de pagar."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Prueba Perelai en tu próxima semana de trabajo.",
     "body": "Empieza con tu propia agenda y tus clientes.",
-    "cta": "Probar durante 21 días",
-    "micro": "Recibirás un correo de verificación para completar la configuración."
+    "cta": "Probar gratis",
+    "micro": "21 días sin tarjeta bancaria."
   },
   "footer": {
     "description": "Citas, clientes y control de pagos para profesionales independientes y equipos pequeños.",

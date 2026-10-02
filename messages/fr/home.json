@@ -8,7 +8,7 @@
     "how": "Comment ça marche",
     "pricing": "Tarifs",
     "login": "Connexion",
-    "start": "Essayer pendant 21 jours",
+    "start": "Essayer gratuitement",
     "start_short": "Essayer",
     "primaryLabel": "Menu principal",
     "menuLabel": "Ouvrir le menu",
@@ -19,7 +19,7 @@
     "title": "Des rendez-vous bien organisés.",
     "accent": "Des paiements bien suivis.",
     "body": "Planifiez vos rendez-vous, conservez l’historique de vos clients et enregistrez les paiements.",
-    "signup": "Essayer pendant 21 jours",
+    "signup": "Essayer gratuitement",
     "how": "Voir comment ça fonctionne",
     "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration.",
     "imageAlt": "Exemple Perelai : calendrier des rendez-vous et aperçu financier.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Reprendre la rotation automatique"
     },
     "deviceMicro": "Perelai fonctionne dans votre navigateur. L'installation est facultative.",
-    "trialMicro": "21 jours de STUDIO sans carte bancaire. Souscrivez un abonnement à la fin de l’essai.",
+    "trialMicro": "21 jours sans carte bancaire.",
     "billingMicro": "Après l’essai gratuit, choisissez un abonnement pour chaque espace de travail. La devise et les taxes sont indiquées avant le paiement."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Essayez Perelai dès votre prochaine semaine de travail.",
     "body": "Commencez avec votre propre planning et vos clients.",
-    "cta": "Essayer pendant 21 jours",
-    "micro": "Vous recevrez un e-mail de confirmation pour finaliser la configuration."
+    "cta": "Essayer gratuitement",
+    "micro": "21 jours sans carte bancaire."
   },
   "footer": {
     "description": "Rendez-vous, clients et suivi des paiements pour professionnels indépendants et petites équipes.",

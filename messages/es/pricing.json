@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Planes mensuales",
-    "title": "Prueba STUDIO gratis",
+    "title": "Prueba Perelai gratis",
     "body": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar."
   },
   "plans": {
@@ -33,7 +33,7 @@
   },
   "trial": {
     "title": "Cómo funciona la prueba",
-    "body": "La prueba empieza al terminar la configuración de tu primer negocio y está disponible una vez para la persona que paga la suscripción. Tendrás acceso a STUDIO durante 21 días. Añadir un espacio de trabajo no inicia otros 21 días."
+    "body": "Durante 21 días tendrás acceso a las funciones del plan STUDIO. Puedes trabajar por tu cuenta o invitar a tu equipo. La prueba empieza al terminar la configuración de tu primer negocio y está disponible una vez para la persona que paga la suscripción. Añadir un espacio de trabajo no inicia otros 21 días."
   },
   "capabilities": {
     "title": "Incluido en ambos planes",
@@ -75,9 +75,10 @@
     "a6": "Elige STUDIO si el administrador necesita su propio acceso a Perelai. No ocupa una plaza de profesional si no presta servicios. SOLO es suficiente si tú gestionas el espacio de trabajo y un profesional presta servicios sin acceso propio."
   },
   "cta": {
-    "title": "Prueba STUDIO gratis",
+    "title": "Prueba Perelai gratis",
     "body": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar.",
-    "button": "Prueba durante 21 días",
-    "micro": "La prueba no se convierte automáticamente en una suscripción de pago."
+    "button": "Probar gratis",
+    "micro": "La prueba no se convierte automáticamente en una suscripción de pago.",
+    "trialMicro": "21 días sin tarjeta bancaria."
   }
 }

@@ -163,14 +163,14 @@ describe("POS3 raw locale coverage (all 9 published locales)", () => {
     }
   })
 
-  test("ru: hero strings match the frozen owner baseline verbatim", () => {
+  test("ru: hero strings match the owner baseline with the 2026-10-03 CTA update", () => {
     const ru = rawLocales.ru
     expect(getPath(ru, "hero.title")).toBe("Порядок в записях.")
     expect(getPath(ru, "hero.accent")).toBe("Ясность в оплатах.")
     expect(getPath(ru, "hero.body")).toBe("Планируйте визиты, ведите историю клиентов и отмечайте оплаты.")
-    expect(getPath(ru, "hero.signup")).toBe("Попробовать 21 день")
+    expect(getPath(ru, "hero.signup")).toBe("Попробовать бесплатно")
     expect(getPath(ru, "hero.how")).toBe("Посмотреть, как это работает")
-    expect(getPath(ru, "hero.trialMicro")).toBe("21 день STUDIO без карты. После пробного периода оформите подписку.")
+    expect(getPath(ru, "hero.trialMicro")).toBe("21 день без банковской карты.")
   })
 
   const NON_ENGLISH = PUBLISHED_LOCALES.filter((l) => l !== "en")

@@ -105,7 +105,10 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                   {t("cta.button")}
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </CtaButton>
-                <p className="text-[13px] text-muted-foreground">{t("cta.micro")}</p>
+                <div className="space-y-1 text-[13px] text-muted-foreground">
+                  <p>{t("cta.trialMicro")}</p>
+                  <p>{t("cta.micro")}</p>
+                </div>
               </div>
             </Reveal>
           </div>

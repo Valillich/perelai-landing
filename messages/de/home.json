@@ -8,7 +8,7 @@
     "how": "So funktioniert es",
     "pricing": "Preise",
     "login": "Anmelden",
-    "start": "21 Tage testen",
+    "start": "Kostenlos testen",
     "start_short": "Testen",
     "primaryLabel": "Hauptmenü",
     "menuLabel": "Menü öffnen",
@@ -19,7 +19,7 @@
     "title": "Ordnung im Terminplan.",
     "accent": "Klarheit über Ihre Zahlungen.",
     "body": "Planen Sie Termine, führen Sie Kundenhistorien und erfassen Sie Zahlungen.",
-    "signup": "21 Tage testen",
+    "signup": "Kostenlos testen",
     "how": "So funktioniert es",
     "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen.",
     "imageAlt": "Beispiel Perelai: Terminkalender und Finanzübersicht.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Automatischen Wechsel fortsetzen"
     },
     "deviceMicro": "Perelai läuft in Ihrem Browser. Die Installation ist optional.",
-    "trialMicro": "21 Tage STUDIO ohne Karte. Schließen Sie nach der Testphase ein Abonnement ab.",
+    "trialMicro": "21 Tage ohne Zahlungskarte.",
     "billingMicro": "Wählen Sie nach der kostenlosen Testphase ein Abonnement für jeden Arbeitsbereich. Währung und Steuern werden vor der Zahlung angezeigt."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Testen Sie Perelai in Ihrer nächsten Arbeitswoche.",
     "body": "Starten Sie mit Ihrem eigenen Terminplan und Ihren Kunden.",
-    "cta": "21 Tage testen",
-    "micro": "Sie erhalten eine Bestätigungs-E-Mail, um die Einrichtung abzuschließen."
+    "cta": "Kostenlos testen",
+    "micro": "21 Tage ohne Zahlungskarte."
   },
   "footer": {
     "description": "Termine, Kunden und Zahlungsübersicht für selbstständige Fachkräfte und kleine Teams.",

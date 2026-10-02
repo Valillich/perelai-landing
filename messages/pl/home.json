@@ -8,7 +8,7 @@
     "how": "Jak to działa",
     "pricing": "Cennik",
     "login": "Zaloguj się",
-    "start": "Wypróbuj przez 21 dni",
+    "start": "Wypróbuj bezpłatnie",
     "start_short": "Wypróbuj",
     "primaryLabel": "Nawigacja główna",
     "menuLabel": "Otwórz menu",
@@ -19,7 +19,7 @@
     "title": "Porządek w terminarzu.",
     "accent": "Jasny obraz płatności.",
     "body": "Planuj wizyty, prowadź historię klientów i rejestruj płatności.",
-    "signup": "Wypróbuj przez 21 dni",
+    "signup": "Wypróbuj bezpłatnie",
     "how": "Zobacz, jak to działa",
     "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację.",
     "imageAlt": "Przykład Perelai: terminarz wizyt i przegląd finansów.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Wznów automatyczne przewijanie"
     },
     "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna.",
-    "trialMicro": "21 dni STUDIO bez karty. Po okresie próbnym wykup subskrypcję.",
+    "trialMicro": "21 dni bez karty płatniczej.",
     "billingMicro": "Po bezpłatnym okresie próbnym wybierz subskrypcję dla każdej przestrzeni roboczej. Waluta i podatki są pokazane przed płatnością."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Wypróbuj Perelai w swoim kolejnym tygodniu pracy.",
     "body": "Zacznij od własnego terminarza i klientów.",
-    "cta": "Wypróbuj przez 21 dni",
-    "micro": "Otrzymasz e-mail weryfikacyjny, aby dokończyć konfigurację."
+    "cta": "Wypróbuj bezpłatnie",
+    "micro": "21 dni bez karty płatniczej."
   },
   "footer": {
     "description": "Wizyty, klienci i rejestracja płatności dla niezależnych specjalistów i małych zespołów.",

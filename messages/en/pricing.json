@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Pricing — Perelai",
-    "description": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue."
+    "description": "21 days, no card required. Then choose SOLO or STUDIO if you’d like to continue."
   },
   "hero": {
     "eyebrow": "Monthly plans",
-    "title": "Try STUDIO for free",
-    "body": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue."
+    "title": "Try Perelai for free",
+    "body": "21 days, no card required. Then choose SOLO or STUDIO if you’d like to continue."
   },
   "plans": {
     "monthly": "Monthly",
@@ -33,7 +33,7 @@
   },
   "trial": {
     "title": "How the trial works",
-    "body": "The trial starts after you finish setting up your first business and is available once to the person paying for the subscription. You get STUDIO access for 21 days. Adding a workspace does not start another 21 days."
+    "body": "For 21 days, you can use the features of the STUDIO plan. Work on your own or invite your team. The trial starts after you finish setting up your first business and is available once to the person paying for the subscription. Adding a workspace does not start another 21 days."
   },
   "capabilities": {
     "title": "Included in both plans",
@@ -75,9 +75,10 @@
     "a6": "Choose STUDIO if your administrator needs their own access to Perelai. They do not use a professional place unless they provide services. SOLO fits if you manage the workspace yourself and one professional provides services without their own login."
   },
   "cta": {
-    "title": "Try STUDIO for free",
-    "body": "21 days without a payment card. Then choose SOLO or STUDIO if you want to continue.",
-    "button": "Try it for 21 days",
-    "micro": "Your trial does not turn into a paid subscription automatically."
+    "title": "Try Perelai for free",
+    "body": "21 days, no card required. Then choose SOLO or STUDIO if you’d like to continue.",
+    "button": "Try for free",
+    "micro": "Your trial does not turn into a paid subscription automatically.",
+    "trialMicro": "21 days, no card required."
   }
 }

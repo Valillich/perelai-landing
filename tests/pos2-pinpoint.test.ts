@@ -49,7 +49,7 @@ describe("POS2 pinpoint checks", () => {
     })
 
     it("hero.signup is verbatim", () => {
-      expect(ru.hero.signup).toBe("Попробовать 21 день")
+      expect(ru.hero.signup).toBe("Попробовать бесплатно")
     })
 
     it("hero.how is verbatim", () => {
@@ -58,7 +58,7 @@ describe("POS2 pinpoint checks", () => {
 
     it("hero.trialMicro is verbatim", () => {
       expect(ru.hero.trialMicro).toBe(
-        "21 день STUDIO без карты. После пробного периода оформите подписку.",
+        "21 день без банковской карты.",
       )
     })
   })

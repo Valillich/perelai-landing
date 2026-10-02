@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Monatstarife",
-    "title": "Testen Sie STUDIO kostenlos",
+    "title": "Testen Sie Perelai kostenlos",
     "body": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten."
   },
   "plans": {
@@ -33,7 +33,7 @@
   },
   "trial": {
     "title": "So funktioniert die Testphase",
-    "body": "Die Testphase beginnt nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens und steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Sie erhalten 21 Tage Zugang zu STUDIO. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage."
+    "body": "Sie können 21 Tage lang die Funktionen des STUDIO-Tarifs nutzen. Arbeiten Sie allein oder laden Sie Ihr Team ein. Die Testphase beginnt nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens und steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage."
   },
   "capabilities": {
     "title": "In beiden Tarifen enthalten",
@@ -75,9 +75,10 @@
     "a6": "Wählen Sie STUDIO, wenn der Administrator einen eigenen Zugang zu Perelai benötigt. Er belegt keinen Fachkräfteplatz, wenn er keine Dienstleistungen erbringt. SOLO passt, wenn Sie den Arbeitsbereich selbst verwalten und eine Fachkraft ohne eigenen Zugang die Dienstleistungen erbringt."
   },
   "cta": {
-    "title": "Testen Sie STUDIO kostenlos",
+    "title": "Testen Sie Perelai kostenlos",
     "body": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten.",
-    "button": "21 Tage testen",
-    "micro": "Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement."
+    "button": "Kostenlos testen",
+    "micro": "Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement.",
+    "trialMicro": "21 Tage ohne Zahlungskarte."
   }
 }

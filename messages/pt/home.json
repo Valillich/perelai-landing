@@ -8,7 +8,7 @@
     "how": "Como funciona",
     "pricing": "Preços",
     "login": "Entrar",
-    "start": "Testar por 21 dias",
+    "start": "Experimentar grátis",
     "start_short": "Testar",
     "primaryLabel": "Navegação principal",
     "menuLabel": "Abrir menu",
@@ -19,7 +19,7 @@
     "title": "Sua agenda em ordem.",
     "accent": "Clareza nos pagamentos.",
     "body": "Agende atendimentos, mantenha o histórico dos clientes e registre pagamentos.",
-    "signup": "Testar por 21 dias",
+    "signup": "Experimentar grátis",
     "how": "Veja como funciona",
     "micro": "Você receberá um e-mail de verificação para concluir a configuração.",
     "imageAlt": "Exemplo do Perelai: calendário de agendamentos e visão financeira.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Retomar rotação automática"
     },
     "deviceMicro": "O Perelai funciona no seu navegador. A instalação é opcional.",
-    "trialMicro": "21 dias de STUDIO sem cartão. Assine após o período de teste.",
+    "trialMicro": "21 dias sem cartão bancário.",
     "billingMicro": "Depois do teste grátis, escolha uma assinatura para cada espaço de trabalho. A moeda e os impostos são mostrados antes do pagamento."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Experimente o Perelai na sua próxima semana de trabalho.",
     "body": "Comece com seus próprios agendamentos e clientes.",
-    "cta": "Testar por 21 dias",
-    "micro": "Você receberá um e-mail de verificação para concluir a configuração."
+    "cta": "Experimentar grátis",
+    "micro": "21 dias sem cartão bancário."
   },
   "footer": {
     "description": "Agendamentos, clientes e controle de pagamentos para profissionais independentes e pequenas equipes.",

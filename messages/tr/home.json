@@ -8,7 +8,7 @@
     "how": "Nasıl çalışır",
     "pricing": "Fiyatlandırma",
     "login": "Giriş yap",
-    "start": "21 gün deneyin",
+    "start": "Ücretsiz deneyin",
     "start_short": "Deneyin",
     "primaryLabel": "Ana menü",
     "menuLabel": "Menüyü aç",
@@ -19,7 +19,7 @@
     "title": "Randevularınızda düzen.",
     "accent": "Ödemelerinizde netlik.",
     "body": "Randevuları planlayın, müşteri geçmişini tutun ve ödemeleri kaydedin.",
-    "signup": "21 gün deneyin",
+    "signup": "Ücretsiz deneyin",
     "how": "Nasıl çalıştığını görün",
     "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız.",
     "imageAlt": "Örnek Perelai: randevu takvimi ve finansal genel bakış.",
@@ -34,7 +34,7 @@
       "resumeAutoplay": "Otomatik geçişi sürdür"
     },
     "deviceMicro": "Perelai tarayıcınızda çalışır. Yüklemek isteğe bağlıdır.",
-    "trialMicro": "STUDIO’yu 21 gün kart gerekmeden deneyin. Deneme süresi sonunda abonelik satın alın.",
+    "trialMicro": "Banka kartı olmadan 21 gün.",
     "billingMicro": "Ücretsiz denemeden sonra her çalışma alanı için abonelik seçin. Para birimi ve vergiler ödemeden önce gösterilir."
   },
   "operations": {
@@ -172,8 +172,8 @@
   "closing": {
     "title": "Perelai’yi bir sonraki çalışma haftanızda deneyin.",
     "body": "Kendi randevu takviminiz ve müşterilerinizle başlayın.",
-    "cta": "21 gün deneyin",
-    "micro": "Kurulumu tamamlamak için bir doğrulama e-postası alacaksınız."
+    "cta": "Ücretsiz deneyin",
+    "micro": "Banka kartı olmadan 21 gün."
   },
   "footer": {
     "description": "Bağımsız profesyoneller ve küçük ekipler için randevular, müşteriler ve ödeme takibi.",

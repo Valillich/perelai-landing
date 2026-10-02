@@ -5,7 +5,7 @@
   },
   "hero": {
     "eyebrow": "Aylık paketler",
-    "title": "STUDIO’yu ücretsiz deneyin",
+    "title": "Perelai’yi ücretsiz deneyin",
     "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin."
   },
   "plans": {
@@ -33,7 +33,7 @@
   },
   "trial": {
     "title": "Deneme süresi nasıl işler?",
-    "body": "Deneme, ilk işletme kurulumunu tamamladıktan sonra başlar ve aboneliği ödeyen kişiye bir kez sunulur. STUDIO’ya 21 gün erişim sağlarsınız. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz."
+    "body": "21 gün boyunca STUDIO paketinin özelliklerini kullanabilirsiniz. Tek başınıza çalışabilir veya ekibinizi davet edebilirsiniz. Deneme, ilk işletme kurulumunu tamamladıktan sonra başlar ve aboneliği ödeyen kişiye bir kez sunulur. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz."
   },
   "capabilities": {
     "title": "Her iki pakette de dahil",
@@ -75,9 +75,10 @@
     "a6": "Yöneticinin Perelai’ye kendi erişimi gerekiyorsa STUDIO’yu seçin. Hizmet vermiyorsa uzman kontenjanından yer kullanmaz. Çalışma alanını kendiniz yönetiyor ve bir uzman kendi girişi olmadan hizmet veriyorsa SOLO uygundur."
   },
   "cta": {
-    "title": "STUDIO’yu ücretsiz deneyin",
+    "title": "Perelai’yi ücretsiz deneyin",
     "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin.",
-    "button": "21 gün deneyin",
-    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez."
+    "button": "Ücretsiz deneyin",
+    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez.",
+    "trialMicro": "Banka kartı olmadan 21 gün."
   }
 }

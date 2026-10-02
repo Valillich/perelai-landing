@@ -4,17 +4,17 @@ import { siteConfig } from "@/lib/site"
 
 describe("English Message Contract & Freeze Verification (POS2)", () => {
   test("matches POS2 English source set (editorial candidates)", () => {
-    // POS2 Hero (EN draft, final POS3 review)
+    // POS2 Hero with the owner-directed CTA update on 2026-10-03
     expect(homeEn.hero.eyebrow).toBe("For independent professionals and small teams")
     expect(homeEn.hero.title).toBe("Order in your schedule.")
     expect(homeEn.hero.accent).toBe("Clarity in your payments.")
     expect(homeEn.hero.body).toBe(
       "Schedule appointments, build client history and record payments."
     )
-    expect(homeEn.hero.signup).toBe("Start 21-day trial")
+    expect(homeEn.hero.signup).toBe("Try for free")
     expect(homeEn.hero.how).toBe("See how it works")
     expect(homeEn.hero.trialMicro).toBe(
-      "21 days of STUDIO, no card required. Subscribe when your trial ends."
+      "21 days, no card required."
     )
     expect(homeEn.hero.deviceMicro).toBe("Perelai runs in your browser. Installing it is optional.")
     expect(homeEn.hero.imageAlt).toBe(

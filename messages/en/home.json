@@ -9,7 +9,7 @@
     "pricing": "Pricing",
     "devices": "Devices",
     "login": "Log in",
-    "start": "Start 21-day trial",
+    "start": "Try for free",
     "start_short": "Start trial",
     "primaryLabel": "Primary",
     "menuLabel": "Open menu"
@@ -19,9 +19,9 @@
     "title": "Order in your schedule.",
     "accent": "Clarity in your payments.",
     "body": "Schedule appointments, build client history and record payments.",
-    "signup": "Start 21-day trial",
+    "signup": "Try for free",
     "how": "See how it works",
-    "trialMicro": "21 days of STUDIO, no card required. Subscribe when your trial ends.",
+    "trialMicro": "21 days, no card required.",
     "micro": "You'll get a verification email to finish setting up.",
     "deviceMicro": "Perelai runs in your browser. Installing it is optional.",
     "imageAlt": "Example Perelai appointment calendar and finance overview.",
@@ -193,8 +193,8 @@
   "closing": {
     "title": "Try Perelai in your next working week.",
     "body": "Start with your own schedule and clients.",
-    "cta": "Start 21-day trial",
-    "micro": "You'll get a verification email to finish setting up."
+    "cta": "Try for free",
+    "micro": "21 days, no card required."
   },
   "packages": {
     "title": "Keep track of what's left in a package.",
