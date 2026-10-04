@@ -10,7 +10,7 @@
   },
   "plans": {
     "monthly": "Mensual",
-    "perWorkspace": "/mes por espacio de trabajo",
+    "perMonth": "/mes",
     "solo": {
       "description": "Para trabajar por tu cuenta.",
       "capacity": "{limit} profesional activo que presta servicios.",
@@ -19,11 +19,13 @@
     "studio": {
       "description": "Para trabajar en equipo",
       "capacity": "Hasta {limit} profesionales activos que prestan servicios.",
-      "access": "Invita a tu equipo y a un administrador",
-      "adminNote": "El administrador solo cuenta para el límite de profesionales si también presta servicios."
+      "access": "Inicio de sesión individual para cada persona",
+      "adminNote": "Siempre que no presten servicios.",
+      "admin": "Los administradores no ocupan plazas de profesionales"
     },
     "currency": "Los precios base están en USD. La moneda final y los impuestos aplicables se muestran antes de pagar.",
-    "availability": "La compra de suscripciones aún no está disponible."
+    "availability": "La compra de suscripciones aún no está disponible.",
+    "perBusiness": "Por un negocio en Perelai"
   },
   "largerTeams": {
     "title": "¿Más de cinco profesionales en tu equipo?",
@@ -33,7 +35,7 @@
   },
   "trial": {
     "title": "Cómo funciona la prueba",
-    "body": "Durante 21 días tendrás acceso a las funciones del plan STUDIO. Puedes trabajar por tu cuenta o invitar a tu equipo. La prueba empieza al terminar la configuración de tu primer negocio y está disponible una vez para la persona que paga la suscripción. Añadir un espacio de trabajo no inicia otros 21 días."
+    "body": "Durante 21 días tendrás acceso a las funciones del plan STUDIO. Puedes trabajar por tu cuenta o invitar a tu equipo. La prueba empieza al terminar la configuración de tu primer negocio y está disponible una vez para la persona que paga la suscripción. Añadir otro negocio en Perelai no inicia otros 21 días."
   },
   "capabilities": {
     "title": "Incluido en ambos planes",
@@ -53,7 +55,7 @@
   },
   "billing": {
     "title": "Después de la prueba",
-    "body": "Cada espacio de trabajo necesita su propia suscripción mensual. Después de la prueba, elige SOLO o STUDIO si quieres seguir usándolo.",
+    "body": "Cada negocio creado por separado en Perelai necesita su propia suscripción. Después de la prueba, elige SOLO o STUDIO si quieres seguir usándolo.",
     "renewal": "Una vez comprada, la suscripción se renueva cada mes según sus condiciones.",
     "terms": "Condiciones del servicio",
     "privacy": "Política de privacidad",
@@ -62,23 +64,24 @@
   "faq": {
     "title": "Preguntas sobre precios y facturación",
     "q1": "¿Cuándo empieza la prueba? ¿Puedo obtener otra?",
-    "a1": "Al terminar la configuración de tu primer negocio. La prueba está disponible una vez para la persona que paga la suscripción. Añadir un espacio de trabajo no inicia otros 21 días.",
+    "a1": "Al terminar la configuración de tu primer negocio. La prueba está disponible una vez para la persona que paga la suscripción. Añadir otro negocio en Perelai no inicia otros 21 días.",
     "q2": "¿Qué pasa cuando termina la prueba?",
-    "a2": "Después de la prueba, elige SOLO o STUDIO para cada espacio de trabajo que quieras seguir usando. La prueba no se convierte automáticamente en una suscripción de pago. Sin una suscripción u otro acceso válido, el uso queda restringido; el fin de la prueba no elimina tus datos.",
+    "a2": "Después de la prueba, elige SOLO o STUDIO para cada negocio en Perelai que quieras seguir gestionando. La prueba no se convierte automáticamente en una suscripción de pago. Sin una suscripción u otro acceso válido, el uso queda restringido; el fin de la prueba no elimina tus datos.",
     "q3": "¿Quién cuenta para el límite de profesionales?",
-    "a3": "Toda persona que presta servicios, incluido el propietario que trabaja y un profesional sin acceso propio a la aplicación. Un administrador que no presta servicios no cuenta para este límite.",
+    "a3": "Toda persona que presta servicios, incluido el propietario que trabaja y un profesional sin acceso propio a la aplicación. Los administradores que solo se encargan de la gestión no ocupan plazas de profesionales. Si también prestan servicios, cuentan para el mismo límite.",
     "q4": "¿Puedo elegir SOLO después de la prueba?",
     "a4": "Sí. Antes de cambiar, deja un profesional activo, retira el acceso de los demás miembros del equipo y cancela las invitaciones pendientes. Los registros del personal no se eliminan automáticamente.",
     "q5": "¿Cómo funciona la renovación?",
     "a5": "Tras la compra, la suscripción se renueva mensualmente. La moneda final, los impuestos aplicables y las condiciones se muestran antes de pagar.",
     "q6": "Trabajo por mi cuenta, pero me ayuda un administrador. ¿Qué plan elijo?",
-    "a6": "Elige STUDIO si el administrador necesita su propio acceso a Perelai. No ocupa una plaza de profesional si no presta servicios. SOLO es suficiente si tú gestionas el espacio de trabajo y un profesional presta servicios sin acceso propio."
+    "a6": "Elige STUDIO si el administrador necesita su propio acceso a Perelai. No ocupa una plaza de profesional si no presta servicios. SOLO es suficiente si tú gestionas el negocio en Perelai y un profesional presta servicios sin acceso propio.",
+    "q7": "¿Cómo pago por varios negocios?",
+    "a7": "Cada negocio creado por separado en Perelai necesita su propia suscripción."
   },
   "cta": {
     "title": "Prueba Perelai gratis",
     "body": "21 días sin tarjeta bancaria. Después, elige SOLO o STUDIO si quieres continuar.",
     "button": "Probar gratis",
-    "micro": "La prueba no se convierte automáticamente en una suscripción de pago.",
-    "trialMicro": "21 días sin tarjeta bancaria."
+    "micro": "La prueba no se convierte automáticamente en una suscripción de pago."
   }
 }

@@ -55,8 +55,8 @@ export function buildLlmsTxt(): string {
       pricingEn.billing.body,
       ...PRICING_PLANS.map((plan) => {
         const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
-        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
-        return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote}`
+        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.admin}. ${pricingEn.plans.studio.adminNote}` : ""
+        return `${plan.name}: $${plan.monthlyUsd}${pricingEn.plans.perMonth}; ${pricingEn.plans.perBusiness}. ${capacity} ${pricingEn.plans[plan.code].access}.${adminNote}`
       }),
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
@@ -114,8 +114,8 @@ export function buildPricingMarkdown(): string {
       pricingEn.cta.micro,
       ...PRICING_PLANS.map((plan) => {
         const capacity = pricingEn.plans[plan.code].capacity.replace("{limit}", String(plan.performerLimit))
-        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.adminNote}` : ""
-        return `${plan.name}: $${plan.monthlyUsd}/month per workspace; ${capacity}${adminNote} ${pricingEn.plans[plan.code].access}`
+        const adminNote = plan.code === "studio" ? ` ${pricingEn.plans.studio.admin}. ${pricingEn.plans.studio.adminNote}` : ""
+        return `${plan.name}: $${plan.monthlyUsd}${pricingEn.plans.perMonth}; ${pricingEn.plans.perBusiness}. ${capacity} ${pricingEn.plans[plan.code].access}.${adminNote}`
       }),
       pricingEn.plans.currency,
       ...(!isPaidSubscriptionsLive() ? [pricingEn.plans.availability] : []),
@@ -138,5 +138,6 @@ export function buildPricingMarkdown(): string {
     `- ${pricingEn.faq.q4} ${pricingEn.faq.a4}`,
     `- ${pricingEn.faq.q5} ${pricingEn.faq.a5}`,
     `- ${pricingEn.faq.q6} ${pricingEn.faq.a6}`,
+    `- ${pricingEn.faq.q7} ${pricingEn.faq.a7}`,
   ].join("\n")
 }

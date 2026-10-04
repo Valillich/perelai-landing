@@ -10,7 +10,7 @@
   },
   "plans": {
     "monthly": "Monatlich",
-    "perWorkspace": "/Monat pro Arbeitsbereich",
+    "perMonth": "/Monat",
     "solo": {
       "description": "Für die selbstständige Arbeit.",
       "capacity": "{limit} aktive Fachkraft mit Dienstleistungen.",
@@ -19,11 +19,13 @@
     "studio": {
       "description": "Für die Arbeit im Team",
       "capacity": "Bis zu {limit} aktive Fachkräfte mit Dienstleistungen.",
-      "access": "Laden Sie Ihr Team und einen Administrator ein",
-      "adminNote": "Administratoren zählen nur dann zum Limit, wenn sie selbst Dienstleistungen erbringen."
+      "access": "Eigener Login für jede Person",
+      "adminNote": "Sofern sie nicht selbst Dienstleistungen erbringen.",
+      "admin": "Administratoren belegen keine Plätze für Fachkräfte"
     },
     "currency": "Die Basispreise sind in USD angegeben. Endgültige Währung und anfallende Steuern werden vor der Zahlung angezeigt.",
-    "availability": "Der Kauf von Abonnements ist noch nicht verfügbar."
+    "availability": "Der Kauf von Abonnements ist noch nicht verfügbar.",
+    "perBusiness": "Für ein Unternehmen in Perelai"
   },
   "largerTeams": {
     "title": "Mehr als fünf Fachkräfte in Ihrem Team?",
@@ -33,7 +35,7 @@
   },
   "trial": {
     "title": "So funktioniert die Testphase",
-    "body": "Sie können 21 Tage lang die Funktionen des STUDIO-Tarifs nutzen. Arbeiten Sie allein oder laden Sie Ihr Team ein. Die Testphase beginnt nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens und steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage."
+    "body": "Sie können 21 Tage lang die Funktionen des STUDIO-Tarifs nutzen. Arbeiten Sie allein oder laden Sie Ihr Team ein. Die Testphase beginnt nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens und steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiteres Unternehmen in Perelai startet keine neuen 21 Tage."
   },
   "capabilities": {
     "title": "In beiden Tarifen enthalten",
@@ -53,7 +55,7 @@
   },
   "billing": {
     "title": "Nach der Testphase",
-    "body": "Jeder Arbeitsbereich benötigt ein eigenes Monatsabonnement. Wählen Sie nach der Testphase SOLO oder STUDIO, wenn Sie ihn weiter nutzen möchten.",
+    "body": "Für jedes separat in Perelai angelegte Unternehmen ist ein eigenes Abonnement erforderlich. Wählen Sie nach der Testphase SOLO oder STUDIO, wenn Sie Perelai weiter nutzen möchten.",
     "renewal": "Nach dem Kauf verlängert sich das Abonnement gemäß den Vertragsbedingungen monatlich.",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutzerklärung",
@@ -62,23 +64,24 @@
   "faq": {
     "title": "Fragen zu Preisen und Abrechnung",
     "q1": "Wann beginnt die Testphase und kann ich eine weitere erhalten?",
-    "a1": "Nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens. Die Testphase steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiterer Arbeitsbereich startet keine neuen 21 Tage.",
+    "a1": "Nach der abgeschlossenen Einrichtung Ihres ersten Unternehmens. Die Testphase steht der Person, die das Abonnement bezahlt, einmal zur Verfügung. Ein weiteres Unternehmen in Perelai startet keine neuen 21 Tage.",
     "q2": "Was passiert nach der Testphase?",
-    "a2": "Wählen Sie nach der Testphase SOLO oder STUDIO für jeden Arbeitsbereich, den Sie weiter nutzen möchten. Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement. Ohne Abonnement oder anderen gültigen Zugang ist die Nutzung eingeschränkt; das Ende der Testphase löscht Ihre Daten nicht.",
+    "a2": "Wählen Sie nach der Testphase SOLO oder STUDIO für jedes Unternehmen in Perelai, mit dem Sie weiter arbeiten möchten. Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement. Ohne Abonnement oder anderen gültigen Zugang ist die Nutzung eingeschränkt; das Ende der Testphase löscht Ihre Daten nicht.",
     "q3": "Wer zählt zum Fachkräfte-Limit?",
-    "a3": "Alle, die Dienstleistungen erbringen, auch arbeitende Inhaber und Fachkräfte ohne eigenen App-Zugang. Administratoren ohne eigene Dienstleistungen zählen nicht zu diesem Limit.",
+    "a3": "Alle, die Dienstleistungen erbringen, auch arbeitende Inhaber und Fachkräfte ohne eigenen App-Zugang. Administratoren, die sich ausschließlich um die Verwaltung kümmern, belegen keine Plätze für Fachkräfte. Wenn sie selbst Dienstleistungen erbringen, zählen sie zum selben Limit.",
     "q4": "Kann ich nach der Testphase SOLO wählen?",
-    "a4": "Ja. Lassen Sie vor dem Wechsel eine aktive Fachkraft im Arbeitsbereich, entziehen Sie anderen Teammitgliedern den Zugang und stornieren Sie offene Einladungen. Personaldatensätze werden nicht automatisch gelöscht.",
+    "a4": "Ja. Lassen Sie vor dem Wechsel nur eine aktive Fachkraft, entziehen Sie anderen Teammitgliedern den Zugang und stornieren Sie offene Einladungen. Personaldatensätze werden nicht automatisch gelöscht.",
     "q5": "Wie funktioniert die Verlängerung?",
     "a5": "Nach dem Kauf verlängert sich das Abonnement monatlich. Endgültige Währung, anfallende Steuern und Bedingungen werden vor der Zahlung angezeigt.",
     "q6": "Ich arbeite allein, aber ein Administrator hilft mir. Welchen Tarif soll ich wählen?",
-    "a6": "Wählen Sie STUDIO, wenn der Administrator einen eigenen Zugang zu Perelai benötigt. Er belegt keinen Fachkräfteplatz, wenn er keine Dienstleistungen erbringt. SOLO passt, wenn Sie den Arbeitsbereich selbst verwalten und eine Fachkraft ohne eigenen Zugang die Dienstleistungen erbringt."
+    "a6": "Wählen Sie STUDIO, wenn der Administrator einen eigenen Zugang zu Perelai benötigt. Er belegt keinen Fachkräfteplatz, wenn er keine Dienstleistungen erbringt. SOLO passt, wenn Sie das Unternehmen in Perelai selbst verwalten und eine Fachkraft ohne eigenen Zugang die Dienstleistungen erbringt.",
+    "q7": "Wie bezahle ich für mehrere Unternehmen?",
+    "a7": "Für jedes separat in Perelai angelegte Unternehmen ist ein eigenes Abonnement erforderlich."
   },
   "cta": {
     "title": "Testen Sie Perelai kostenlos",
     "body": "21 Tage ohne Zahlungskarte. Wählen Sie danach SOLO oder STUDIO, wenn Sie weitermachen möchten.",
     "button": "Kostenlos testen",
-    "micro": "Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement.",
-    "trialMicro": "21 Tage ohne Zahlungskarte."
+    "micro": "Die Testphase wird nicht automatisch zu einem kostenpflichtigen Abonnement."
   }
 }

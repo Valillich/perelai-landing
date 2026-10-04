@@ -10,7 +10,7 @@
   },
   "plans": {
     "monthly": "Aylık",
-    "perWorkspace": "/ay, çalışma alanı başına",
+    "perMonth": "/ay",
     "solo": {
       "description": "Tek başına çalışanlar için.",
       "capacity": "{limit} aktif hizmet uzmanı.",
@@ -19,11 +19,13 @@
     "studio": {
       "description": "Ekip olarak çalışanlar için",
       "capacity": "En fazla {limit} aktif hizmet uzmanı.",
-      "access": "Ekibinizi ve yöneticinizi davet edin",
-      "adminNote": "Yönetici, yalnızca kendisi de hizmet veriyorsa hizmet veren kişi sınırına dahil edilir."
+      "access": "Herkes için ayrı giriş",
+      "adminNote": "Kendileri de hizmet vermiyorsa.",
+      "admin": "Yöneticiler hizmet veren kişi sayısına dahil edilmez"
     },
     "currency": "Temel fiyatlar USD cinsindendir. Son para birimi ve geçerli vergiler ödemeden önce gösterilir.",
-    "availability": "Abonelik satın alma henüz kullanılamıyor."
+    "availability": "Abonelik satın alma henüz kullanılamıyor.",
+    "perBusiness": "Perelai’de bir işletme için"
   },
   "largerTeams": {
     "title": "Ekibinizde beşten fazla hizmet veren kişi mi var?",
@@ -33,7 +35,7 @@
   },
   "trial": {
     "title": "Deneme süresi nasıl işler?",
-    "body": "21 gün boyunca STUDIO paketinin özelliklerini kullanabilirsiniz. Tek başınıza çalışabilir veya ekibinizi davet edebilirsiniz. Deneme, ilk işletme kurulumunu tamamladıktan sonra başlar ve aboneliği ödeyen kişiye bir kez sunulur. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz."
+    "body": "21 gün boyunca STUDIO paketinin özelliklerini kullanabilirsiniz. Tek başınıza çalışabilir veya ekibinizi davet edebilirsiniz. Deneme, ilk işletme kurulumunu tamamladıktan sonra başlar ve aboneliği ödeyen kişiye bir kez sunulur. Perelai’de başka bir işletme eklemek yeni bir 21 günlük deneme başlatmaz."
   },
   "capabilities": {
     "title": "Her iki pakette de dahil",
@@ -53,7 +55,7 @@
   },
   "billing": {
     "title": "Deneme süresinden sonra",
-    "body": "Her çalışma alanı için ayrı bir aylık abonelik gerekir. Denemeden sonra kullanmaya devam etmek isterseniz SOLO veya STUDIO’yu seçin.",
+    "body": "Perelai’de ayrı olarak oluşturulan her işletme için ayrı bir abonelik gerekir. Denemeden sonra kullanmaya devam etmek isterseniz SOLO veya STUDIO’yu seçin.",
     "renewal": "Satın alındıktan sonra abonelik, koşullarına göre aylık yenilenir.",
     "terms": "Hizmet Koşulları",
     "privacy": "Gizlilik Politikası",
@@ -62,23 +64,24 @@
   "faq": {
     "title": "Fiyatlandırma ve faturalandırma hakkında sorular",
     "q1": "Deneme ne zaman başlar? Bir tane daha alabilir miyim?",
-    "a1": "İlk işletme kurulumunu tamamladıktan sonra başlar. Deneme, aboneliği ödeyen kişiye bir kez sunulur. Çalışma alanı eklemek yeni bir 21 günlük deneme başlatmaz.",
+    "a1": "İlk işletme kurulumunu tamamladıktan sonra başlar. Deneme, aboneliği ödeyen kişiye bir kez sunulur. Perelai’de başka bir işletme eklemek yeni bir 21 günlük deneme başlatmaz.",
     "q2": "Deneme bitince ne olur?",
-    "a2": "Denemeden sonra kullanmaya devam etmek istediğiniz her çalışma alanı için SOLO veya STUDIO’yu seçin. Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez. Abonelik veya başka bir geçerli erişim olmadan kullanım kısıtlanır; denemenin bitmesi verilerinizi silmez.",
+    "a2": "Denemeden sonra kullanmaya devam etmek istediğiniz Perelai’deki her işletme için SOLO veya STUDIO’yu seçin. Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez. Abonelik veya başka bir geçerli erişim olmadan kullanım kısıtlanır; denemenin bitmesi verilerinizi silmez.",
     "q3": "Hizmet uzmanı sınırına kimler dahildir?",
-    "a3": "Kendi uygulama girişi olmayan uzmanlar ve hizmet veren işletme sahibi dahil, hizmet veren herkes. Hizmet vermeyen yönetici bu sınıra dahil edilmez.",
+    "a3": "Kendi uygulama girişi olmayan uzmanlar ve hizmet veren işletme sahibi dahil, hizmet veren herkes. Yalnızca yönetimle ilgilenen yöneticiler hizmet veren kişi sayısına dahil edilmez. Kendileri de hizmet veriyorsa aynı sınıra dahil edilirler.",
     "q4": "Denemeden sonra SOLO seçebilir miyim?",
     "a4": "Evet. Geçişten önce bir aktif hizmet uzmanı bırakın, diğer ekip üyelerinin erişimini kaldırın ve bekleyen davetleri iptal edin. Personel kayıtları otomatik olarak silinmez.",
     "q5": "Yenileme nasıl işler?",
     "a5": "Satın alındıktan sonra abonelik aylık yenilenir. Son para birimi, geçerli vergiler ve koşullar ödemeden önce gösterilir.",
     "q6": "Tek başıma çalışıyorum ama bir yönetici bana yardımcı oluyor. Hangi paketi seçmeliyim?",
-    "a6": "Yöneticinin Perelai’ye kendi erişimi gerekiyorsa STUDIO’yu seçin. Hizmet vermiyorsa uzman kontenjanından yer kullanmaz. Çalışma alanını kendiniz yönetiyor ve bir uzman kendi girişi olmadan hizmet veriyorsa SOLO uygundur."
+    "a6": "Yöneticinin Perelai’ye kendi erişimi gerekiyorsa STUDIO’yu seçin. Hizmet vermiyorsa uzman kontenjanından yer kullanmaz. Perelai’deki işletmeyi kendiniz yönetiyor ve bir uzman kendi girişi olmadan hizmet veriyorsa SOLO uygundur.",
+    "q7": "Birden fazla işletme için nasıl ödeme yaparım?",
+    "a7": "Perelai’de ayrı olarak oluşturulan her işletme için ayrı bir abonelik gerekir."
   },
   "cta": {
     "title": "Perelai’yi ücretsiz deneyin",
     "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin.",
     "button": "Ücretsiz deneyin",
-    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez.",
-    "trialMicro": "Banka kartı olmadan 21 gün."
+    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez."
   }
 }

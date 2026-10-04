@@ -10,7 +10,7 @@
   },
   "plans": {
     "monthly": "Mensuel",
-    "perWorkspace": "/mois par espace de travail",
+    "perMonth": "/mois",
     "solo": {
       "description": "Pour travailler en solo.",
       "capacity": "{limit} professionnel actif assurant des prestations.",
@@ -19,11 +19,13 @@
     "studio": {
       "description": "Pour travailler en équipe",
       "capacity": "Jusqu’à {limit} professionnels actifs assurant des prestations.",
-      "access": "Invitez votre équipe et un administrateur",
-      "adminNote": "Un administrateur compte dans la limite de professionnels uniquement s’il assure aussi des prestations."
+      "access": "Une connexion individuelle pour chacun",
+      "adminNote": "S’ils n’assurent pas eux-mêmes de prestations.",
+      "admin": "Les administrateurs ne prennent pas de places de professionnels"
     },
     "currency": "Les prix de base sont en USD. La devise finale et les taxes applicables sont indiquées avant le paiement.",
-    "availability": "La souscription payante n’est pas encore disponible."
+    "availability": "La souscription payante n’est pas encore disponible.",
+    "perBusiness": "Pour une entreprise dans Perelai"
   },
   "largerTeams": {
     "title": "Plus de cinq professionnels dans votre équipe ?",
@@ -33,7 +35,7 @@
   },
   "trial": {
     "title": "Comment fonctionne l’essai",
-    "body": "Pendant 21 jours, vous bénéficiez des fonctionnalités de la formule STUDIO. Vous pouvez travailler seul ou inviter votre équipe. L’essai commence une fois la configuration de votre première entreprise terminée et est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter un espace de travail ne lance pas 21 jours supplémentaires."
+    "body": "Pendant 21 jours, vous bénéficiez des fonctionnalités de la formule STUDIO. Vous pouvez travailler seul ou inviter votre équipe. L’essai commence une fois la configuration de votre première entreprise terminée et est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter une autre entreprise dans Perelai ne lance pas 21 jours supplémentaires."
   },
   "capabilities": {
     "title": "Inclus dans les deux forfaits",
@@ -53,7 +55,7 @@
   },
   "billing": {
     "title": "Après l’essai",
-    "body": "Chaque espace de travail nécessite son propre abonnement mensuel. Après l’essai, choisissez SOLO ou STUDIO si vous souhaitez continuer à l’utiliser.",
+    "body": "Chaque entreprise créée séparément dans Perelai nécessite son propre abonnement. Après l’essai, choisissez SOLO ou STUDIO si vous souhaitez continuer à l’utiliser.",
     "renewal": "Une fois acheté, l’abonnement se renouvelle chaque mois selon ses conditions.",
     "terms": "Conditions d’utilisation",
     "privacy": "Politique de confidentialité",
@@ -62,23 +64,24 @@
   "faq": {
     "title": "Questions sur les tarifs et la facturation",
     "q1": "Quand l’essai commence-t-il ? Puis-je en obtenir un autre ?",
-    "a1": "Une fois la configuration de votre première entreprise terminée. L’essai est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter un espace de travail ne lance pas 21 jours supplémentaires.",
+    "a1": "Une fois la configuration de votre première entreprise terminée. L’essai est disponible une seule fois pour la personne qui paie l’abonnement. Ajouter une autre entreprise dans Perelai ne lance pas 21 jours supplémentaires.",
     "q2": "Que se passe-t-il à la fin de l’essai ?",
-    "a2": "Après l’essai, choisissez SOLO ou STUDIO pour chaque espace de travail que vous souhaitez continuer à utiliser. L’essai ne se transforme pas automatiquement en abonnement payant. Sans abonnement ni autre accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
+    "a2": "Après l’essai, choisissez SOLO ou STUDIO pour chaque entreprise dans Perelai que vous souhaitez continuer à gérer. L’essai ne se transforme pas automatiquement en abonnement payant. Sans abonnement ni autre accès valide, le travail est restreint ; la fin de l’essai ne supprime pas vos données.",
     "q3": "Qui compte dans la limite de professionnels ?",
-    "a3": "Toute personne qui assure des prestations, y compris le propriétaire actif et un professionnel sans accès personnel à l’application. Un administrateur sans prestations ne compte pas dans cette limite.",
+    "a3": "Toute personne qui assure des prestations, y compris le propriétaire actif et un professionnel sans accès personnel à l’application. Les administrateurs qui s’occupent uniquement de la gestion ne prennent pas de places de professionnels. S’ils assurent aussi des prestations, ils comptent dans la même limite.",
     "q4": "Puis-je choisir SOLO après l’essai ?",
     "a4": "Oui. Avant de changer, gardez un professionnel actif, retirez l’accès des autres membres de l’équipe et annulez les invitations en attente. Les dossiers du personnel ne sont pas supprimés automatiquement.",
     "q5": "Comment fonctionne le renouvellement ?",
     "a5": "Après l’achat, l’abonnement se renouvelle chaque mois. La devise finale, les taxes applicables et les conditions sont indiquées avant le paiement.",
     "q6": "Je travaille en solo, mais un administrateur m’aide. Quel forfait choisir ?",
-    "a6": "Choisissez STUDIO si l’administrateur a besoin de son propre accès à Perelai. Il ne prend pas de place de professionnel s’il n’assure pas de prestations. SOLO convient si vous gérez vous-même l’espace de travail et qu’un professionnel assure les prestations sans accès personnel."
+    "a6": "Choisissez STUDIO si l’administrateur a besoin de son propre accès à Perelai. Il ne prend pas de place de professionnel s’il n’assure pas de prestations. SOLO convient si vous gérez vous-même l’entreprise dans Perelai et qu’un professionnel assure les prestations sans accès personnel.",
+    "q7": "Comment payer pour plusieurs entreprises ?",
+    "a7": "Chaque entreprise créée séparément dans Perelai nécessite son propre abonnement."
   },
   "cta": {
     "title": "Essayez Perelai gratuitement",
     "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer.",
     "button": "Essayer gratuitement",
-    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant.",
-    "trialMicro": "21 jours sans carte bancaire."
+    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant."
   }
 }

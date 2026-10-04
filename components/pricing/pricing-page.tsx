@@ -63,11 +63,15 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                         ${plan.monthlyUsd}
                       </span>
                       <span className="text-[14px] text-muted-foreground">
-                        {t("plans.perWorkspace")}
+                        {t("plans.perMonth")}
                       </span>
                     </p>
+                    <p className="mt-2 text-[14px] text-muted-foreground">{t("plans.perBusiness")}</p>
                     <ul className="mt-8 space-y-4 border-t border-border pt-7">
-                      {(["capacity", "access"] as const).map((key) => (
+                      {(plan.code === "studio"
+                        ? ["capacity", "access", "admin"] as const
+                        : ["capacity", "access"] as const
+                      ).map((key) => (
                         <li key={key} className="flex items-start gap-3 text-[15px] leading-snug">
                           {plan.code === "solo" && key === "access" ? (
                             <X className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
@@ -76,7 +80,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                           )}
                           <div>
                             <span>{t(`plans.${plan.code}.${key}`, { limit: plan.performerLimit })}</span>
-                            {plan.code === "studio" && key === "capacity" ? (
+                            {plan.code === "studio" && key === "admin" ? (
                               <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
                                 {t("plans.studio.adminNote")}
                               </p>
@@ -105,10 +109,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                   {t("cta.button")}
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </CtaButton>
-                <div className="space-y-1 text-[13px] text-muted-foreground">
-                  <p>{t("cta.trialMicro")}</p>
-                  <p>{t("cta.micro")}</p>
-                </div>
+                <p className="text-[13px] text-muted-foreground">{t("cta.micro")}</p>
               </div>
             </Reveal>
             <Reveal>
@@ -174,7 +175,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
           <Reveal className="mx-auto max-w-3xl">
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">{t("faq.title")}</h2>
             <dl className="mt-8 space-y-8">
-              {(["q1", "q2", "q3", "q4", "q5", "q6"] as const).map((key) => (
+              {(["q1", "q2", "q3", "q4", "q5", "q6", "q7"] as const).map((key) => (
                 <div key={key}>
                   <dt className="font-medium">{t(`faq.${key}`)}</dt>
                   <dd className="mt-2 text-[15px] leading-relaxed text-muted-foreground">

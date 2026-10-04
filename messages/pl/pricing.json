@@ -10,7 +10,7 @@
   },
   "plans": {
     "monthly": "Miesięcznie",
-    "perWorkspace": "/mies. za przestrzeń roboczą",
+    "perMonth": "/mies.",
     "solo": {
       "description": "Do samodzielnej pracy.",
       "capacity": "{limit} aktywna osoba świadcząca usługi.",
@@ -19,11 +19,13 @@
     "studio": {
       "description": "Do pracy zespołowej",
       "capacity": "Do {limit} aktywnych osób świadczących usługi.",
-      "access": "Zaproś zespół i administratora",
-      "adminNote": "Administrator wlicza się do limitu tylko wtedy, gdy sam świadczy usługi."
+      "access": "Osobny login dla każdego",
+      "adminNote": "Jeśli sami nie świadczą usług.",
+      "admin": "Administratorzy nie zajmują miejsc specjalistów"
     },
     "currency": "Ceny bazowe podano w USD. Ostateczna waluta i należne podatki zostaną pokazane przed płatnością.",
-    "availability": "Zakup subskrypcji nie jest jeszcze dostępny."
+    "availability": "Zakup subskrypcji nie jest jeszcze dostępny.",
+    "perBusiness": "Za jedną firmę w Perelai"
   },
   "largerTeams": {
     "title": "Więcej niż pięciu specjalistów w zespole?",
@@ -33,7 +35,7 @@
   },
   "trial": {
     "title": "Jak działa okres próbny",
-    "body": "Przez 21 dni możesz korzystać z funkcji planu STUDIO. Pracuj samodzielnie lub zaproś swój zespół. Okres próbny zaczyna się po zakończeniu pierwszej konfiguracji firmy i jest dostępny raz dla osoby opłacającej subskrypcję. Dodanie przestrzeni roboczej nie rozpoczyna kolejnych 21 dni."
+    "body": "Przez 21 dni możesz korzystać z funkcji planu STUDIO. Pracuj samodzielnie lub zaproś swój zespół. Okres próbny zaczyna się po zakończeniu pierwszej konfiguracji firmy i jest dostępny raz dla osoby opłacającej subskrypcję. Dodanie kolejnej firmy w Perelai nie rozpoczyna kolejnych 21 dni."
   },
   "capabilities": {
     "title": "W obu planach",
@@ -53,7 +55,7 @@
   },
   "billing": {
     "title": "Po okresie próbnym",
-    "body": "Każda przestrzeń robocza wymaga osobnej subskrypcji miesięcznej. Po okresie próbnym wybierz SOLO lub STUDIO, jeśli chcesz dalej z niej korzystać.",
+    "body": "Każda firma utworzona osobno w Perelai wymaga własnej subskrypcji. Po okresie próbnym wybierz SOLO lub STUDIO, jeśli chcesz dalej z niej korzystać.",
     "renewal": "Po zakupie subskrypcja odnawia się co miesiąc zgodnie z jej warunkami.",
     "terms": "Warunki korzystania",
     "privacy": "Polityka prywatności",
@@ -62,23 +64,24 @@
   "faq": {
     "title": "Pytania o cennik i płatności",
     "q1": "Kiedy zaczyna się okres próbny i czy mogę otrzymać kolejny?",
-    "a1": "Po zakończeniu pierwszej konfiguracji firmy. Okres próbny jest dostępny raz dla osoby opłacającej subskrypcję. Dodanie przestrzeni roboczej nie rozpoczyna kolejnych 21 dni.",
+    "a1": "Po zakończeniu pierwszej konfiguracji firmy. Okres próbny jest dostępny raz dla osoby opłacającej subskrypcję. Dodanie kolejnej firmy w Perelai nie rozpoczyna kolejnych 21 dni.",
     "q2": "Co dzieje się po zakończeniu okresu próbnego?",
-    "a2": "Po okresie próbnym wybierz SOLO lub STUDIO dla każdej przestrzeni roboczej, z której chcesz nadal korzystać. Okres próbny nie zmienia się automatycznie w płatną subskrypcję. Bez subskrypcji lub innego ważnego dostępu praca jest ograniczona; sam koniec okresu próbnego nie usuwa danych.",
+    "a2": "Po okresie próbnym wybierz SOLO lub STUDIO dla każdej firmy w Perelai, którą chcesz nadal zarządzać. Okres próbny nie zmienia się automatycznie w płatną subskrypcję. Bez subskrypcji lub innego ważnego dostępu praca jest ograniczona; sam koniec okresu próbnego nie usuwa danych.",
     "q3": "Kto zajmuje miejsce osoby świadczącej usługi?",
-    "a3": "Każdy, kto świadczy usługi, także pracujący właściciel i specjalista bez własnego loginu do aplikacji. Administrator, który nie świadczy usług, nie wlicza się do tego limitu.",
+    "a3": "Każdy, kto świadczy usługi, także pracujący właściciel i specjalista bez własnego loginu do aplikacji. Administratorzy zajmujący się wyłącznie zarządzaniem nie zajmują miejsc specjalistów. Jeśli również świadczą usługi, wliczają się do tego samego limitu.",
     "q4": "Czy po okresie próbnym mogę wybrać SOLO?",
     "a4": "Tak. Przed zmianą pozostaw jednego aktywnego specjalistę, wyłącz dostęp pozostałych członków zespołu i anuluj oczekujące zaproszenia. Dane pracowników nie są usuwane automatycznie.",
     "q5": "Jak działa odnowienie?",
     "a5": "Po zakupie subskrypcja odnawia się co miesiąc. Ostateczna waluta, należne podatki i warunki są pokazane przed płatnością.",
     "q6": "Pracuję samodzielnie, ale pomaga mi administrator. Który plan wybrać?",
-    "a6": "Wybierz STUDIO, jeśli administrator potrzebuje własnego dostępu do Perelai. Nie zajmuje miejsca specjalisty, jeśli sam nie świadczy usług. SOLO wystarczy, jeśli samodzielnie zarządzasz przestrzenią roboczą, a usługi świadczy jeden specjalista bez własnego loginu."
+    "a6": "Wybierz STUDIO, jeśli administrator potrzebuje własnego dostępu do Perelai. Nie zajmuje miejsca specjalisty, jeśli sam nie świadczy usług. SOLO wystarczy, jeśli samodzielnie zarządzasz firmą w Perelai, a usługi świadczy jeden specjalista bez własnego loginu.",
+    "q7": "Jak opłacać kilka firm?",
+    "a7": "Każda firma utworzona osobno w Perelai wymaga własnej subskrypcji."
   },
   "cta": {
     "title": "Wypróbuj Perelai bezpłatnie",
     "body": "21 dni bez karty płatniczej. Potem wybierz SOLO lub STUDIO, jeśli chcesz kontynuować.",
     "button": "Wypróbuj bezpłatnie",
-    "micro": "Okres próbny nie zmienia się automatycznie w płatną subskrypcję.",
-    "trialMicro": "21 dni bez karty płatniczej."
+    "micro": "Okres próbny nie zmienia się automatycznie w płatną subskrypcję."
   }
 }

@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v14
-**Last updated:** 2026-10-03
+**Document version:** v15
+**Last updated:** 2026-10-04
 **Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
 ## Product Overview
@@ -48,6 +48,8 @@ Sources: owner decisions [2026-09-06](/Users/valery/Sites/beauty-finance/.cursor
 | Paid renewal | Monthly after explicit purchase, with exact terms owned by BILL/legal. Do not confuse this with the cardless trial. |
 | Larger teams | Public Pricing shows a compact contact invitation after the trial CTA, with a caveat that a plan for more than five service professionals is unavailable. Do not display the internal STUDIO+ name, a price, custom terms or promised access. |
 | Price display | Approved USD anchors; final currency and applicable taxes confirmed at checkout. No local FX/VAT calculation; demo currency is separate. |
+
+**Owner display update, 2026-10-04:** Price cards show the monthly amount and “За один бизнес в Perelai” on a separate line. One business means one separately created workspace; this does not change billing or make a subscription cover the whole account. STUDIO lists its capacity, a separate login for each person, and administrators not using professional places, with “Если сами не оказывают услуги” directly below that benefit. Keep the full counting rule in FAQ. The trial CTA after the cards retains only the no-automatic-conversion note; duration/card terms remain in the hero and final CTA description.
 
 Current code includes Billing. “No card because there is no billing” and “free beta until pricing is announced” are obsolete. [Commercial policy](../docs/commercial-policy.md) separates accepted business facts from publication gates; prices/trial do not require a second owner decision.
 
@@ -202,6 +204,8 @@ The [launch checklist](../docs/launch-positioning-checklist.md) records exact so
 ## Changelog
 
 *Newest first. One line per revision: what changed and why.*
+
+- v15 (2026-10-04) — **Owner-directed pricing clarity:** display price per business in Perelai; separate the administrator counting benefit and its condition in STUDIO, add the multiple-business subscription FAQ and remove the nearby trial-duration repeat. Billing and service-professional limits are unchanged.
 
 - v14 (2026-10-03) — **Owner-directed larger-team contact:** remove STUDIO+ from public Pricing and machine-readable copy; show a compact invitation to discuss team needs after the primary trial CTA, with an explicit unavailable-plan caveat. Capacity refers to people providing services, not total team membership.
 

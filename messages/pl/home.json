@@ -35,7 +35,7 @@
     },
     "deviceMicro": "Perelai działa w Twojej przeglądarce. Instalacja jest opcjonalna.",
     "trialMicro": "21 dni bez karty płatniczej.",
-    "billingMicro": "Po bezpłatnym okresie próbnym wybierz subskrypcję dla każdej przestrzeni roboczej. Waluta i podatki są pokazane przed płatnością."
+    "billingMicro": "Po bezpłatnym okresie próbnym wybierz subskrypcję dla każdej firmy w Perelai. Waluta i podatki są pokazane przed płatnością."
   },
   "operations": {
     "title": "Od zapisu do zrealizowanej wizyty.",
@@ -149,7 +149,7 @@
     "q2": "Czy jest okres próbny i czy potrzebna jest karta?",
     "a2": "Wypróbuj STUDIO przez 21 dni bez karty. Okres próbny zaczyna się po konfiguracji firmy i przysługuje płatnikowi raz. Data zakończenia jest widoczna w aplikacji.",
     "q3": "Co się stanie po zakończeniu okresu próbnego?",
-    "a3": "Po okresie próbnym wybierz i wykup plan miesięczny dla każdej przestrzeni roboczej, z której chcesz nadal korzystać. Okres próbny nie zmienia się automatycznie w płatną subskrypcję. Ostateczna waluta i należne podatki są pokazane przed płatnością. Bez ważnego dostępu praca jest ograniczona; koniec okresu próbnego sam w sobie nie usuwa danych.",
+    "a3": "Po okresie próbnym wybierz i wykup plan miesięczny dla każdej firmy w Perelai, którą chcesz nadal zarządzać. Okres próbny nie zmienia się automatycznie w płatną subskrypcję. Ostateczna waluta i należne podatki są pokazane przed płatnością. Bez ważnego dostępu praca jest ograniczona; koniec okresu próbnego sam w sobie nie usuwa danych.",
     "q4": "Czy mogę pracować z zespołem?",
     "a4": "Tak, w STUDIO: do 5 aktywnych osób świadczących usługi i dostęp dla zespołu. Administrator, który nie świadczy usług, nie zajmuje miejsca w tym limicie.",
     "q5": "Czy przedpłacony pakiet to subskrypcja?",

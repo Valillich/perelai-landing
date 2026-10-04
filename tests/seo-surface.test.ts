@@ -209,10 +209,14 @@ describe("machine-readable files & answer-engine contract", () => {
     expect(pricing).toContain(pricingEn.plans.currency)
     expect(pricing).toContain(pricingEn.capabilities.finance)
     for (const plan of PRICING_PLANS) {
-      expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month per workspace`)
+      expect(pricing).toContain(`${plan.name}: $${plan.monthlyUsd}/month; ${pricingEn.plans.perBusiness}`)
     }
+    expect(pricing).toContain(pricingEn.plans.studio.admin)
     expect(pricing).toContain(pricingEn.plans.studio.adminNote)
+    expect(buildLlmsTxt()).toContain(pricingEn.plans.studio.admin)
     expect(buildLlmsTxt()).toContain(pricingEn.plans.studio.adminNote)
+    expect(pricing).toContain(pricingEn.faq.q7)
+    expect(pricing).toContain(pricingEn.faq.a7)
     expect(pricing).not.toContain("STUDIO+")
     expect(buildLlmsTxt()).not.toContain("STUDIO+")
     expect(pricing).toContain(pricingEn.largerTeams.title)
