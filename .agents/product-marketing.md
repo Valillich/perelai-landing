@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v15
+**Document version:** v16
 **Last updated:** 2026-10-04
 **Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
@@ -50,6 +50,8 @@ Sources: owner decisions [2026-09-06](/Users/valery/Sites/beauty-finance/.cursor
 | Price display | Approved USD anchors; final currency and applicable taxes confirmed at checkout. No local FX/VAT calculation; demo currency is separate. |
 
 **Owner display update, 2026-10-04:** Price cards show the monthly amount and “За один бизнес в Perelai” on a separate line. One business means one separately created workspace; this does not change billing or make a subscription cover the whole account. STUDIO lists its capacity, a separate login for each person, and administrators not using professional places, with “Если сами не оказывают услуги” directly below that benefit. Keep the full counting rule in FAQ. The trial CTA after the cards retains only the no-automatic-conversion note; duration/card terms remain in the hero and final CTA description.
+
+**Shared Pricing features, 2026-10-04:** Focus “Included in both plans” on appointment schedules/time off, public booking, client history/notes, payment records, prepaid service packages, cash drawer sessions, orders/instalments, Inbox and financial overview/breakdowns. Remove language count, themes, mobile layout, setup-template count and contact import from this comparison. Source vocabulary is `.cursor/plans/positioning/04_home_copy_vocabulary_ru_en_20260921.md`; app revision `4b28c424e` confirms time off and Drawer as CORE_WORKSPACE for SOLO/STUDIO. This copy update does not verify a deployed Drawer flag or close browser/pilot release gates.
 
 Current code includes Billing. “No card because there is no billing” and “free beta until pricing is announced” are obsolete. [Commercial policy](../docs/commercial-policy.md) separates accepted business facts from publication gates; prices/trial do not require a second owner decision.
 
@@ -204,6 +206,8 @@ The [launch checklist](../docs/launch-positioning-checklist.md) records exact so
 ## Changelog
 
 *Newest first. One line per revision: what changed and why.*
+
+- v16 (2026-10-04) — **Owner-directed shared feature list:** replace secondary setup/interface details with ten working capabilities, including cash reconciliation, client notes, time off and financial breakdowns. Apply the vocabulary to all nine Pricing locales and their machine-readable consumers; retain separate product release gates.
 
 - v15 (2026-10-04) — **Owner-directed pricing clarity:** display price per business in Perelai; separate the administrator counting benefit and its condition in STUDIO, add the multiple-business subscription FAQ and remove the nearby trial-duration repeat. Billing and service-professional limits are unchanged.
 

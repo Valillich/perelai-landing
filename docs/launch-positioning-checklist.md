@@ -352,3 +352,30 @@ M1/M2.
 - POS4 follows on the release revision, reusing current BILL/TEAM/Drawer evidence and the actual signup flow.
   This entry records the next scope and read-only site observations, not completion of POS3 commercial
   work, provider approval or app release. Execution results should be appended here when obtained.
+
+## Pricing shared features — 2026-10-04
+
+Owner requested a more useful “Included in both plans” list based on
+`.cursor/plans/positioning/04_home_copy_vocabulary_ru_en_20260921.md`.
+`content/pricing.ts` now selects ten capabilities: calendar, booking, clients,
+payments, packages, cashDrawer, orders, inbox, finance and insights. Removed the
+language count, themes, mobile layout, setup-template count and contact import
+from this block; their product capabilities are not removed.
+
+Copy in all nine `messages/<locale>/pricing.json` files follows the RU/EN
+vocabulary: payment recording, prepaid service-package usage and remaining
+sessions, physical-cash reconciliation, recorded costs and calculated profit.
+`pricing.md` and `llms.txt` consume the same capability keys and copy.
+
+Read-only evidence at app revision `4b28c424e`: `billing/catalog.ts` includes
+CORE_WORKSPACE in SOLO/STUDIO; `billing/access-catalog.ts` classifies staff time
+off as CORE_WORKSPACE; Drawer DR6/DR7 handoff assigns Drawer to CORE_WORKSPACE.
+The current app API and Home preview implement opening/counting/closing cash.
+The Drawer evidence still leaves real-browser/pilot/flag rollout checks separate;
+this Pricing change does not assert that they passed or modify a deployed flag.
+This is editorial adaptation, not native-language review or a production release.
+
+Verification: `pnpm typecheck`, `pnpm lint` and the SEO-surface/raw-locale suites
+passed (78 tests). Raw capability keys, ordering and nonempty translations were
+checked across all nine locales. Browser checks covered Russian at 1280px and
+390px and French at 390px; the ten-item list remains readable without clipping.
