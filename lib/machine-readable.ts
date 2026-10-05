@@ -25,7 +25,7 @@ export function buildLlmsTxt(): string {
     homeEn.meta.description,
     "",
     "## What Perelai is",
-    "Perelai is financial tracking and analytics software for independent service businesses. It tracks revenue, costs, calculated profit, recorded payments and open-order balances for any period, with category and client breakdowns connected to the daily work behind them. Perelai is operational finance software, not accounting or bookkeeping software.",
+    `Perelai: ${homeEn.meta.description} ${homeEn.finance.body}`,
     "",
     "## Core capabilities",
     bulletList([

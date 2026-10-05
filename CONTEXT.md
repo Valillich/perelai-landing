@@ -372,22 +372,31 @@ Phase LP2 of the relaunch plan replaces that hand-written mirror with
 
 ### Pricing alignment
 
-Landing pricing must match the app's billing plan. Current hypothesis:
+Landing pricing uses `data/commercial-offers.generated.json`, generated from the app's
+`libs/core/src/billing/public-offers.ts`. `pnpm verify:commercial` validates approved
+facts, locale copy and sibling source freshness; it runs before the production build.
+Current approved monthly display facts (source revision `launch-20260906.1`):
 
 | Plan | Monthly | Yearly |
 |------|---------|--------|
-| Founding Solo | $19/mo | — |
-| Solo | $29/mo | — |
-| Team | $49/mo | — |
+| SOLO — 1 active service performer | USD 19/mo | — |
+| STUDIO — up to 5 active service performers | USD 29/mo | — |
 
-> **Note:** SaaS billing is not yet implemented in the app. Landing pricing
-> display must stay synchronized when it is.
+Larger teams use the contact block, without a priced third plan. Display does not
+prove checkout availability. Plan-specific signup requires
+`NEXT_PUBLIC_PAID_SUBSCRIPTIONS_LIVE=true`; STUDIO additionally requires
+`NEXT_PUBLIC_TEAM_RELEASED=true` backed by TEAM-RELEASE evidence. Both remain
+off by default. Generic signup works independently. Launch analytics stays disabled.
 
 ### Cross-domain handoff
 
 ```
 perelai.com (landing)
-  → perelai.app/register?niche=...&utm_source=...&utm_campaign=...&landing_path=...
+  → perelai.app/register?offer=SOLO_MONTHLY&niche=...&lng=...
 ```
 
-The app extracts these parameters during registration and seeds the workspace.
+The app allowlists the offer separately from niche and captures it only on the
+Company created by owner signup, through password registration or signed, expiring,
+cookie-bound Google state. Staff signup ignores it. Existing/later Companies never
+inherit it. This acquisition intent grants no access, trial or purchase eligibility.
+Marketing attribution parameters are not collected for Launch v1.

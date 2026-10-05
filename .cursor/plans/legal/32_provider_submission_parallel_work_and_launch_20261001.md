@@ -6,6 +6,14 @@ positioning и monetization; существующие планы сохраня�
 При конфликте старых очередей, статусов или C-07 использовать эту последовательность и
 выбранный v1-сценарий ниже. Новые юридические документы и новый набор release-gates не требуются.
 
+**Обновление PAR-P — 05.10.2026:** provider-free catalog, gated offer CTA и app signup intent
+реализованы в рабочих деревьях. Локальные результаты и границы проверки — в
+[handoff](/Users/valery/Sites/beauty-finance/inventory/par-p-commercial-handoff-20261005.md).
+Pricing уже показывает SOLO USD 19 / STUDIO USD 29; старое описание beta/future prices
+в таблице среза 01.10 ниже историческое. PAR-P implementation завершён; POS4/native review,
+проверка релизного пути и применимые TEAM/BILL/Drawer gates остаются в release scope.
+Публикационные флаги и tracking этой работой не включались; provider approval не утверждается.
+
 ## 1. Проверенное состояние и границы вывода
 
 | Область | Что подтверждено | Что ещё не подтверждено |
@@ -76,7 +84,7 @@ PRE-G не зависит от Pricing/Paddle или полного Billing. Н�
 | PAR-L — Task G UI + G-INT | Готовые `content/legal/en` + текущие Billing UI: ссылки, copy, review/recovery, отмена/возврат через Paddle/support; UI уже в работе | Новая покупка закрыта до G-BE1; затем G-INT связывает DTO/receipt со всеми checkout путями. Portal/cancel не блокировать. Согласовать BILL5A account-service copy до включения отправок |
 | PAR-L-BE — G-BE1 / G-BE2 | [Backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md): review + atomic immutable acceptance/attempt; затем confirmation/B-14 | G-BE1 идёт параллельно UI/BILL5A и выпускает exact core/API handoff; G-BE2 использует готовый Notifications seam, не второй mail pipeline. BILL5A сам по себе не реализует purchase acceptance |
 | PAR-B2 — BILL5B | После callable reconciliation hooks BILL2 и subscription changes BILL2E: сверка подписок, webhook/checkout recovery, границы действия и конфликты | Потеря/повтор/перестановка событий и outage не портят доступ; bounded recovery. Не включать production cadence этим code-task; большой metrics UI не нужен для этой приёмки |
-| PAR-P — остаток POS3/BILL7 | Подготовить provider-free catalog/offer handoff, коммерческие тексты всех используемых поверхностей и корректный signup intent | Сохранить исправленные Home/previews и переводы; не повторять POS0–POS2, не включать tracking. POS4 завершить на релизной ревизии |
+| PAR-P — остаток POS3/BILL7 | DONE / locally VERIFIED 05.10: provider-free catalog/offer handoff, согласованные Pricing/FAQ/metadata/machine-readable surfaces, password/Google signup intent | Home/previews и переводы сохранены; tracking выключен. Gates не включены. POS4 завершить на релизной ревизии; область доказательств в PAR-P handoff |
 | PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
 | PAR-R — подготовка Task I/BILL8A | По текущей ревизии собрать имеющиеся BILL/TEAM/Drawer/export/migration/build результаты и выписать только открытые применимые проверки | Read-only audit можно готовить до ответов Google/Paddle; verdict отдельных live stages останется pending до их prerequisites |
 

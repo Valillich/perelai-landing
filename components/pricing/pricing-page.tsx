@@ -7,7 +7,7 @@ import { CtaCard } from "@/components/cta-card"
 import { CtaButton } from "@/components/cta-button"
 import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import { Link } from "@/i18n/navigation"
-import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
+import { getOfferSignupRelease, isPaidSubscriptionsLive } from "@/lib/pricing-release"
 import { getPricingContactEmail } from "@/lib/pricing-contact"
 import {
   PageViewTracker,
@@ -20,6 +20,7 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("pricing")
   const showPendingBillingNotice = !isPaidSubscriptionsLive()
   const supportEmail = getPricingContactEmail()
+  const offerRelease = getOfferSignupRelease()
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
@@ -89,6 +90,14 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                         </li>
                       ))}
                     </ul>
+                    {offerRelease.codes.includes(plan.offerCode) ? (
+                      <CtaButton destination="signup" offer={plan.offerCode} locale={locale}
+                        location="pricing_signup"
+                        className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 font-semibold text-white hover:bg-brand-700"
+                        aria-label={`${t("cta.button")} — ${plan.name}`}>
+                        {t("cta.button")}<ArrowRight className="h-4 w-4" aria-hidden />
+                      </CtaButton>
+                    ) : null}
                   </article>
                 </Reveal>
               ))}

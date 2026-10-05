@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "launch-20260906.1",
+  "offers": [
+    {
+      "offerCode": "SOLO_MONTHLY",
+      "planCode": "SOLO",
+      "billingInterval": "MONTH",
+      "canonicalAmountMinor": 1900,
+      "baseCurrency": "USD",
+      "automaticCurrencyConversion": true,
+      "taxPresentationPolicy": "LOCATION_BASED",
+      "regionalPricingPolicy": "NONE",
+      "publicStatus": "VISIBLE",
+      "audience": "PUBLIC",
+      "approvedCopyKey": "pricing.plans.solo",
+      "performerLimit": 1
+    },
+    {
+      "offerCode": "STUDIO_MONTHLY",
+      "planCode": "STUDIO",
+      "billingInterval": "MONTH",
+      "canonicalAmountMinor": 2900,
+      "baseCurrency": "USD",
+      "automaticCurrencyConversion": true,
+      "taxPresentationPolicy": "LOCATION_BASED",
+      "regionalPricingPolicy": "NONE",
+      "publicStatus": "VISIBLE",
+      "audience": "PUBLIC",
+      "approvedCopyKey": "pricing.plans.studio",
+      "performerLimit": 5
+    }
+  ]
+}

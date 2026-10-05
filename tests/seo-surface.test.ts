@@ -309,8 +309,9 @@ describe("finance-first machine-readable order and FM6 contract", () => {
 
   test("llms.txt contains standalone, quotable factual answer to 'What is Perelai?'", () => {
     const llms = buildLlmsTxt()
-    expect(llms).toContain("Perelai is financial tracking and analytics software for independent service businesses.")
-    expect(llms).toContain("operational finance software, not accounting or bookkeeping software.")
+    expect(llms).toContain(`Perelai: ${homeEn.meta.description}`)
+    expect(llms).toContain(homeEn.finance.body)
+    expect(llms).not.toContain("Perelai is financial tracking and analytics software")
   })
 
   test("getFaqPageJsonLd formats visible FAQs into valid FAQPage schema", () => {

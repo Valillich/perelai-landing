@@ -1,6 +1,6 @@
 # Commercial Policy
 
-**Updated:** 2026-09-19, POS0. Documentation only; no checkout, trial or production flag enabled.
+**Updated:** 2026-10-05, PAR-P. Commercial handoff implemented; publication flags remain off by default.
 **Purpose:** record who accepted each commercial fact, its source and the separate evidence needed before public use.
 
 **Rule:** business approval permits preparation of copy, not an assertion of live availability. Publish only when the applicable display, runtime, TEAM and legal gates are satisfied. Do not ask the owner to reapprove the already accepted 21-day STUDIO / USD 19 / USD 29 / 1 / 5 decisions.
@@ -14,7 +14,7 @@
 - **MVP:** [launch definitions 2026-09-19](/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/01-launch-definitions.md), especially §2.
 - **BILL7:** [commercial/legal handoff plan](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/07_landing_handoff_commercial_legal_20260822.plan.md).
 
-Current source snapshot: app `6ba23125e08f05935f69d89c34a8d512fdefbf2f`, landing `4be46b0a2b5090877e51faf93c643aa26b1512f1`. App source was clean at POS0 inspection. Catalog has public display definitions but `purchaseAvailability: DISABLED` and `checkoutEnabled: false`. These are source defaults, not an inspection of deployed configuration. No production/provider check was run.
+Historical POS0 source snapshot: app `6ba23125e08f05935f69d89c34a8d512fdefbf2f`, landing `4be46b0a2b5090877e51faf93c643aa26b1512f1`. PAR-P was verified at app `4b28c424e` and landing `564fefb` plus scoped working-tree changes, with no commit or deployment. Catalog still has public display definitions with `purchaseAvailability: DISABLED` and `checkoutEnabled: false`; these source defaults do not establish deployed availability. Evidence: [PAR-P handoff](/Users/valery/Sites/beauty-finance/inventory/par-p-commercial-handoff-20261005.md).
 
 ## Active launch registry
 
@@ -41,7 +41,7 @@ New IDs deliberately avoid reusing CF-01…04 for a different commercial promise
 - Frozen RU: **Попробовать 21 день**, with **21 день STUDIO без карты. После пробного периода оформите подписку.** EN candidates remain **Start 21-day trial** and **21 days of STUDIO, no card required. Subscribe when your trial ends.** Show the next price near the principal CTA once the real flow is ready; do not rewrite the approved RU helper or interpret its approval as a release PASS.
 - Preserve the verification-email helper; a click does not bypass registration/setup or start the clock by itself.
 - Marketing translation templates use `{soloPrice}`, `{studioPrice}` and capacity values from BILL7's provider-free display artifact. USD19/29 here are approved reference values, not permission to duplicate literals in all locales.
-- The app alone owns checkout. Generic signup needs no `offer` or `niche`; plan intent awaits BILL7. No provider identifiers in landing URLs.
+- The app alone owns checkout. Generic signup needs no `offer` or `niche`. PAR-P preserves only allowlisted functional plan intent for released plan CTAs; STUDIO additionally requires TEAM-RELEASE. No provider identifiers in landing URLs. Intent is recorded only on the Company created by signup and grants no eligibility.
 - Standard STUDIO is not Founding Beta. Truthful app stage badges are a separate release decision; do not hide them in a mock to imply maturity.
 - Client payment records, packages and Cash Drawer are not payment for Perelai. Do not infer card acquiring from the SaaS checkout integration.
 

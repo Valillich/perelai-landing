@@ -21,6 +21,21 @@ afterEach(() => {
 })
 
 describe("buildAppSignupUrl", () => {
+  test("forwards only a released plan intent independently of niche", async () => {
+    const { buildAppSignupUrl } = await loadUrls()
+
+    const release = { codes: ["SOLO_MONTHLY"], studioReleased: false }
+    expect(buildAppSignupUrl({ offer: "SOLO_MONTHLY", offerRelease: release })).toBe(
+      "https://app.example.test/register?offer=SOLO_MONTHLY",
+    )
+    expect(buildAppSignupUrl({ offer: "SOLO_MONTHLY" })).toBe(
+      "https://app.example.test/register",
+    )
+    expect(buildAppSignupUrl({ offer: "FOUNDING_SOLO", offerRelease: release })).toBe(
+      "https://app.example.test/register",
+    )
+  })
+
   test("forwards only the validated product niche and language", async () => {
     const { buildAppSignupUrl } = await loadUrls()
 

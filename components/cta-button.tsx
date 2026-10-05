@@ -9,6 +9,7 @@ import {
   type CtaPosition,
 } from "@/lib/analytics"
 import { buildAppLoginUrl, buildAppSignupUrl } from "@/lib/urls"
+import {getOfferSignupRelease} from "@/lib/pricing-release"
 
 type CtaDestination = "signup" | "login"
 
@@ -17,6 +18,7 @@ export interface CtaButtonProps
   variant?: "primary" | "secondary"
   destination?: CtaDestination
   niche?: string
+  offer?: string
   landingPath?: string
   locale?: string
   /** A fixed page position, never visitor-provided text. */
@@ -29,6 +31,7 @@ export function CtaButton({
   variant: _variant,
   destination = "signup",
   niche,
+  offer,
   landingPath: _landingPath,
   locale,
   location,
@@ -42,6 +45,8 @@ export function CtaButton({
       ? buildAppSignupUrl({
           niche,
           locale,
+          offer,
+          offerRelease: getOfferSignupRelease(),
         })
       : buildAppLoginUrl()
 

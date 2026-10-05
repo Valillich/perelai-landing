@@ -375,6 +375,27 @@ The Drawer evidence still leaves real-browser/pilot/flag rollout checks separate
 this Pricing change does not assert that they passed or modify a deployed flag.
 This is editorial adaptation, not native-language review or a production release.
 
+## PAR-P commercial handoff — 2026-10-05
+
+Commercial POS3/BILL7 implementation is complete in the paired working trees:
+app `4b28c424e` and landing `564fefb` plus scoped changes. Pricing and machine-readable
+amounts/capacity consume the verified app-exported `commercial-offers.generated.json`;
+Home/previews and nine locale files remain intact. `llms.txt` now uses the current
+appointments/clients/payment-tracking definition from Home instead of its old
+finance-only description. Generic signup remains available; released plan-specific
+CTAs preserve a functional OfferIntent through password or signed Google signup.
+STUDIO's specific CTA additionally needs TEAM-RELEASE. No publication or tracking
+flag was enabled, and no commit/deployment was made.
+
+Full evidence, commands and release boundaries:
+[PAR-P handoff](/Users/valery/Sites/beauty-finance/inventory/par-p-commercial-handoff-20261005.md).
+Landing: 34 suites / 487 tests, types, lint, verify:niches, verify:commercial and
+production build PASS. App: core billing and auth suites, Web signup suites,
+API/Web types and real PostgreSQL auth intent composition PASS.
+The production build used the existing approved legal identity; local development
+identity otherwise fails the immutable legal hash check, as expected.
+POS4/native review and the actual release-revision browser journey remain separate.
+
 Verification: `pnpm typecheck`, `pnpm lint` and the SEO-surface/raw-locale suites
 passed (78 tests). Raw capability keys, ordering and nonempty translations were
 checked across all nine locales. Browser checks covered Russian at 1280px and

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "pnpm verify:niches",
+    "prebuild": "pnpm verify:niches && pnpm verify:commercial",
     "build": "next build --webpack",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -13,7 +13,9 @@
     "generate:niches": "node scripts/generate-niche-catalog.mjs",
     "check:uniqueness": "tsx scripts/check-uniqueness.mjs",
     "verify:niches": "tsx scripts/verify-niches.mjs && pnpm check:uniqueness",
-    "legal:manifest": "tsx scripts/legal-manifest.ts"
+    "legal:manifest": "tsx scripts/legal-manifest.ts",
+    "generate:commercial": "node --import tsx scripts/commercial-catalog.mjs --write",
+    "verify:commercial": "node --import tsx scripts/commercial-catalog.mjs"
   },
   "dependencies": {
     "framer-motion": "12.23.26",

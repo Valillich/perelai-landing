@@ -5,6 +5,10 @@ export interface SignupUrlParams {
   niche?: string
   /** A validated app locale, forwarded only as the app's language UX hint. */
   locale?: string
+  /** Untrusted acquisition choice, never purchase authority. */
+  offer?: string
+  /** Code-owned release output; never constructed from the current URL. */
+  offerRelease?: { codes: readonly string[]; studioReleased: boolean }
 }
 
 interface NicheCatalog {
@@ -43,6 +47,14 @@ function validLocale(value: unknown): string | undefined {
   return locale && supportedLocales.has(locale) ? locale : undefined
 }
 
+function validReleasedOffer(value: unknown, release: SignupUrlParams["offerRelease"]): string | undefined {
+  if (typeof value !== "string" || !release) return undefined
+  if (value !== "SOLO_MONTHLY" && value !== "STUDIO_MONTHLY") return undefined
+  if (!release.codes.includes(value)) return undefined
+  if (value === "STUDIO_MONTHLY" && !release.studioReleased) return undefined
+  return value
+}
+
 /**
  * Builds the narrow cross-origin handoff used by app registration. Runtime
  * input is deliberately fail-open: a malformed value yields generic signup.
@@ -52,9 +64,11 @@ export function buildAppSignupUrl(params: SignupUrlParams): string {
     const url = new URL(signupUrl)
     const niche = validNiche(params?.niche)
     const locale = validLocale(params?.locale)
+    const offer = validReleasedOffer(params?.offer, params?.offerRelease)
 
     if (niche) url.searchParams.set("niche", niche)
     if (locale) url.searchParams.set("lng", locale)
+    if (offer) url.searchParams.set("offer", offer)
 
     return url.toString()
   } catch {
