@@ -1,5 +1,10 @@
 # POS0 — позиционирование и компактный launch-copy
 
+**G-INT-R / PAR-P-R corrective checkpoint, 05.10:** R1/R2 исправлены в app working
+tree без commit/deploy; R3 ждёт final clean app revision владельца и штатный generated
+refresh. Landing 486/487, freshness/prebuild HOLD; commercial/types/lint/manifest PASS.
+Новая browser-приёмка и POS4 не выполнены. [Точные результаты и шаги после коммита](/Users/valery/Sites/beauty-finance/inventory/g-int-r-par-p-r-20261005.md).
+
 **19.09.2026 · редакция 3 · RU hero OWNER APPROVED · документы, не реализация сайта.**
 
 **Результат POS0:** новая рамка и компактный launch-copy подготовлены. **Владелец 19.09.2026 утвердил шесть RU-строк hero из §2** прямым ответом «принимаю твой итоговый вариант. обнови планы» с полным текстом. Это RU source freeze, не approval всех переводов, остальных блоков или runtime. Новый UK/EN H1/body адаптировать в POS2; остальные кандидаты ниже остаются на смысловой вычитке. Цены, 21-дневный STUDIO trial и лимиты уже приняты; повторное коммерческое решение не требуется. Публичная готовность продукта этим документом не подтверждается.
@@ -377,7 +382,14 @@ This is editorial adaptation, not native-language review or a production release
 
 ## PAR-P commercial handoff — 2026-10-05
 
-Commercial POS3/BILL7 implementation is complete in the paired working trees:
+**Independent review checkpoint, 05.10:** current commits are app `6bf98fe85` and landing
+`d927c64`. Implementation is complete; release verification is HOLD pending R1/R2 origin
+corrections and R3 generated niche refresh. Current landing run: 486/487 tests (stale app SHA),
+types/lint/commercial/legal manifest PASS. Full findings and the next bounded prompt:
+[legal review 33](../.cursor/plans/legal/33_g_par_p_independent_review_20261005.md).
+POS4 and remaining G-BE2 evidence follow these corrections; no deployed flags were inspected.
+
+The earlier implementation checkpoint below used paired working trees:
 app `4b28c424e` and landing `564fefb` plus scoped changes. Pricing and machine-readable
 amounts/capacity consume the verified app-exported `commercial-offers.generated.json`;
 Home/previews and nine locale files remain intact. `llms.txt` now uses the current
@@ -389,7 +401,7 @@ flag was enabled, and no commit/deployment was made.
 
 Full evidence, commands and release boundaries:
 [PAR-P handoff](/Users/valery/Sites/beauty-finance/inventory/par-p-commercial-handoff-20261005.md).
-Landing: 34 suites / 487 tests, types, lint, verify:niches, verify:commercial and
+Historical implementation evidence: landing 34 suites / 487 tests, types, lint, verify:niches, verify:commercial and
 production build PASS. App: core billing and auth suites, Web signup suites,
 API/Web types and real PostgreSQL auth intent composition PASS.
 The production build used the existing approved legal identity; local development

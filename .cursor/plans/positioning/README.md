@@ -1,12 +1,13 @@
 # Обновление landing к запуску Perelai
 
-**Статус 01.10.2026:** POS0/POS1 выполнены; corrective pass POS2 и локализация Home POS3 на
-9 языках записаны в [журнале §§9–10](../../../docs/launch-positioning-checklist.md).
-Не повторять их по старым статусам ниже. Следующая задача — **коммерческий POS3/Pricing**,
-затем POS4 на релизной ревизии; смысловая вычитка и runtime readiness остаются отдельными проверками.
+**Статус 05.10.2026:** POS0/POS1, corrective POS2, локализация Home и коммерческий
+POS3/BILL7 реализованы; см. [журнал](../../../docs/launch-positioning-checklist.md).
+Независимое [review 33](../legal/33_g_par_p_independent_review_20261005.md): app `6bf98fe85`,
+landing `d927c64`; catalog/manifest/types/lint PASS, landing 486/487 tests из-за stale niche SHA.
+Следующая задача — **R1/R2 в app + R3 generated refresh**, затем **POS4** на итоговой паре
+ревизий. POS3/Pricing не реализовывать повторно. Runtime/browser и смысловая вычитка остаются
+отдельными проверками; deployment/production flags этим статусом не подтверждены.
 Порядок до подачи, параллельно и после — [legal 32](../legal/32_provider_submission_parallel_work_and_launch_20261001.md).
-Live Pricing ещё говорит о будущих ценах, а Home/Terms уже описывают trial/$19/$29.
-Для ранней подачи Paddle допускается review screenshot утверждённых цен, если BILL7 handoff ещё не готов.
 
 **Исходный scope, 19.09.2026:** общий Home, Pricing и минимальное исправление общих фактов.
 Владелец утвердил шесть RU hero-строк; сохранять freeze и реализованные адаптации, а не начинать POS2 заново.

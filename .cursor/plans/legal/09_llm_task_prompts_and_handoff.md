@@ -1,5 +1,8 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
+Read [review 33](33_g_par_p_independent_review_20261005.md) first for the 05.10 status and bounded
+R1–R3 corrective prompt. G-UI/G-BE1/G-INT and PAR-P implementation exist; G-BE2/POS4/release
+evidence remains partial. Do not dispatch their original implementation prompts as new work.
 Use [document 32](32_provider_submission_parallel_work_and_launch_20261001.md) to choose the next
 pre-submission, parallel or release task; document 14 defines the minimum scope. These are bounded prompts, not a requirement
 to finish every task serially. Prepare current legal pages/acceptance, BILL policy and provider
@@ -187,13 +190,21 @@ and working email login/internal calendar. Do not submit or accept provider term
 
 ## Task G — SaaS Billing/Paddle legal integration (prepare in parallel; activate after relevant BILL gates)
 
-**Backend/UI split — 2026-10-01:** the requirement in README §7.6 was present, but the inspected
-checkout API has only `offerCode`/`purpose` and no durable purchase assent. Follow
+**Current status — 2026-10-05:** G-UI/G-BE1/G-INT are implemented; server review and durable
+assent now exist. Independent [review 33](33_g_par_p_independent_review_20261005.md) found wrong
+legal/checkout origins (R1/R2); correct these before release-origin acceptance. G-BE2 has archive,
+ledger/outbox and sandbox purchase/refund evidence, but actual delivery/direct-link/lost-login
+and remaining B-13/B-14 checks are still open. Production copy remains DRAFT, effective 01.11.
+Next: review 33 corrective prompt, then the remaining G-BE2 checks and POS4; no reimplementation.
+
+**Backend/UI split — 2026-10-01 (historical starting point):** the requirement in README §7.6
+was present, but the then-inspected checkout API had only `offerCode`/`purpose` and no durable
+purchase assent. The original scope below remains a contract, not a new task queue. Follow
 [backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md)
 and its **G-BE1 / G-INT / G-BE2** prompts in
 [monetization 09](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/09_copy_paste_prompts_20260822.md).
 
-- **G-UI (already in progress):** Web review/recovery/links/locales. Keep new checkout disabled
+- **G-UI (implemented; original scope):** Web review/recovery/links/locales. Keep new checkout disabled
   while `canRecordAcceptance` has no real backend authority. Do not edit Prisma/server code in this task.
 - **G-BE1:** server-owned versioned review; required `legalAcceptance` in POST checkout;
   atomic immutable evidence + attempt and safe retry/recovery. Backend owns core schemas/API/Prisma.
@@ -207,8 +218,8 @@ alongside UI and BILL5A, with narrow coordination of shared schema/barrel files;
 runtime flag or provider approval follows from finishing one part. Keep one concrete API handoff
 in the app's `inventory/purchase-legal-acceptance.v1.md` when implementation is ready.
 
-**Next:** PAR-L in document 32. Start copy/links now alongside BILL5A and POS3; wire ready Billing
-seams without rebuilding them. Agree account-service email copy/classification before enabling its
+**After corrective pass:** remaining PAR-L/G-BE2 in document 32; reuse implemented Billing
+seams. Agree account-service email copy/classification before enabling its
 delivery; booking-notification approval does not automatically cover billing or marketing messages.
 Keep the current no-analytics/no-attribution launch baseline. Provider review does not block sandbox work.
 

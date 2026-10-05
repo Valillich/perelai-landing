@@ -1,6 +1,13 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
-**Execution order — 2026-10-01:** start with
+**Review/status update — 2026-10-05:** [independent review 33](33_g_par_p_independent_review_20261005.md)
+supersedes the next-task labels below. G-UI/G-BE1/G-INT and commercial POS3/BILL7 are implemented
+in app `6bf98fe85` / landing `d927c64`; do not reimplement them. Next: correct legal/checkout
+origins (R1/R2), refresh generated niche provenance after the final app revision (R3), then
+POS4 and the remaining G-BE2 evidence. G0/G0b preparation can continue in parallel.
+Production launch remains HOLD; purchase copy is DRAFT and platform effective date stays 01.11.
+
+**Execution order — 2026-10-01 (historical checkpoint):** start with
 [submission / parallel work / launch 32](32_provider_submission_parallel_work_and_launch_20261001.md).
 The seven legal routes are now verified publicly accessible at `2026-11-01.1`; the local manifest
 passes. Provider submission/approval and app operational readiness are not established by that check.

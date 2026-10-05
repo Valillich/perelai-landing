@@ -1,15 +1,32 @@
 # Подача в Google/Paddle, параллельная работа и запуск MVP
 
-**Актуально на 01.10.2026.** Основание: проверка опубликованного сайта и запрос владельца
+**Corrective checkpoint G-INT-R / PAR-P-R, 05.10:** R1/R2 исправлены в app working tree
+поверх `6bf98fe85`, без commit/deploy. Legal URLs — perelai.com; API/Web checkout —
+точный perelai.app route с bound verification и lost-session login/support.
+R3 ждёт финальный owner app commit и штатную генерацию из чистой ревизии, без bypass.
+Landing rerun: 486/487; commercial/types/lint/manifest PASS, freshness/prebuild HOLD.
+Новая browser-приёмка, POS4 и existing G-BE2 remainder не закрыты.
+[Точный handoff и команды](/Users/valery/Sites/beauty-finance/inventory/g-int-r-par-p-r-20261005.md).
+Исторический обзор ниже сохранён; его R1/R2 описывают состояние до code corrections.
+
+**Актуализировано 05.10.2026.** Основание: проверка опубликованного сайта и запрос владельца
 обновить порядок следующих задач. Этот документ задаёт последовательность для legal,
 positioning и monetization; существующие планы сохраняют технические контракты.
 При конфликте старых очередей, статусов или C-07 использовать эту последовательность и
 выбранный v1-сценарий ниже. Новые юридические документы и новый набор release-gates не требуются.
 
+**Независимое review — 05.10.2026:** [отчёт 33](33_g_par_p_independent_review_20261005.md)
+фиксирует app `6bf98fe85` / landing `d927c64`. G-UI/G-BE1/G-INT и PAR-P реализованы.
+Следующий шаг: **R1/R2 — исправить legal/checkout origins; R3 — обновить generated niche
+provenance после окончательной app revision**, затем POS4 и остаток G-BE2.
+Текущий landing: 486/487 tests, prebuild HOLD из-за stale app SHA; commercial/manifest/types/lint PASS.
+Purchase-copy DRAFT, delivery/lost-login и применимый B-13/B-14 остаток не закрыты.
+Этот итог имеет приоритет над историческими next/status ниже; production launch HOLD.
+
 **Обновление PAR-P — 05.10.2026:** provider-free catalog, gated offer CTA и app signup intent
-реализованы в рабочих деревьях. Локальные результаты и границы проверки — в
+реализованы и закоммичены в указанных выше ревизиях. Исторические результаты и границы проверки — в
 [handoff](/Users/valery/Sites/beauty-finance/inventory/par-p-commercial-handoff-20261005.md).
-Pricing уже показывает SOLO USD 19 / STUDIO USD 29; старое описание beta/future prices
+Pricing в коде показывает SOLO USD 19 / STUDIO USD 29; старое описание beta/future prices
 в таблице среза 01.10 ниже историческое. PAR-P implementation завершён; POS4/native review,
 проверка релизного пути и применимые TEAM/BILL/Drawer gates остаются в release scope.
 Публикационные флаги и tracking этой работой не включались; provider approval не утверждается.
@@ -81,10 +98,10 @@ PRE-G не зависит от Pricing/Paddle или полного Billing. Н�
 | ID / исполнительская задача | Вход и ограниченный результат | Приёмка / что не блокирует |
 | --- | --- | --- |
 | PAR-B1 — BILL5A | Сверить готовые BILL1 facts, BILL2 worker seam, BILL3 policy и Notifications; реализовать только lifecycle/wakeups и надёжную передачу service notices текущему payer | Переходы trial/grace/cancel/restore по времени; dedupe, replay, потеря handoff, реальные PG/Redis tests. Не дублировать Paddle receipts/dunning; никаких marketing/lifecycle campaigns |
-| PAR-L — Task G UI + G-INT | Готовые `content/legal/en` + текущие Billing UI: ссылки, copy, review/recovery, отмена/возврат через Paddle/support; UI уже в работе | Новая покупка закрыта до G-BE1; затем G-INT связывает DTO/receipt со всеми checkout путями. Portal/cancel не блокировать. Согласовать BILL5A account-service copy до включения отправок |
-| PAR-L-BE — G-BE1 / G-BE2 | [Backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md): review + atomic immutable acceptance/attempt; затем confirmation/B-14 | G-BE1 идёт параллельно UI/BILL5A и выпускает exact core/API handoff; G-BE2 использует готовый Notifications seam, не второй mail pipeline. BILL5A сам по себе не реализует purchase acceptance |
+| PAR-L — Task G UI + G-INT | IMPLEMENTED: review/recovery/receipt подключены | RELEASE VERIFICATION HOLD: исправить R1/R2 из review 33; проверить actual origin и direct-link/lost-login. Portal/cancel независимы от purchase assent |
+| PAR-L-BE — G-BE1 / G-BE2 | [Backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md): G-BE1 IMPLEMENTED; G-BE2 PARTIALLY VERIFIED, archive/ledger/outbox и sandbox purchase/refund evidence есть | Не повторять backend seam. Остаток: actual confirmation delivery, B-13/B-14, retention/hold procedure, production copy/config approval. Dev-mail SENT не доказывает полученное письмо |
 | PAR-B2 — BILL5B | После callable reconciliation hooks BILL2 и subscription changes BILL2E: сверка подписок, webhook/checkout recovery, границы действия и конфликты | Потеря/повтор/перестановка событий и outage не портят доступ; bounded recovery. Не включать production cadence этим code-task; большой metrics UI не нужен для этой приёмки |
-| PAR-P — остаток POS3/BILL7 | DONE / locally VERIFIED 05.10: provider-free catalog/offer handoff, согласованные Pricing/FAQ/metadata/machine-readable surfaces, password/Google signup intent | Home/previews и переводы сохранены; tracking выключен. Gates не включены. POS4 завершить на релизной ревизии; область доказательств в PAR-P handoff |
+| PAR-P — остаток POS3/BILL7 | IMPLEMENTED; release verification HOLD (R3): catalog/offer handoff, Pricing/FAQ/machine-readable surfaces, password/Google intent | Commercial checker PASS; stale niche SHA ломает текущий prebuild/test. После final app revision обновить generated artifacts и пройти POS4. Tracking и release flags не включены |
 | PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
 | PAR-R — подготовка Task I/BILL8A | По текущей ревизии собрать имеющиеся BILL/TEAM/Drawer/export/migration/build результаты и выписать только открытые применимые проверки | Read-only audit можно готовить до ответов Google/Paddle; verdict отдельных live stages останется pending до их prerequisites |
 

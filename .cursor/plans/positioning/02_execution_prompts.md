@@ -188,6 +188,10 @@ Drawer preview подготовлен в основном scope, implementation 
 
 ## POS3 — Pricing, trial и согласованность опубликованных сообщений
 
+**Статус 05.10.2026: IMPLEMENTED** в app `6bf98fe85` / landing `d927c64`.
+Ниже сохранён исходный контракт; не запускать его заново. Следующий scope — R1–R3 из
+[review 33](../legal/33_g_par_p_independent_review_20261005.md), затем POS4.
+
 **Текущий ограниченный scope:** сначала PRE-P — устранить старые Pricing claims и подготовить
 прайс для Paddle; затем PAR-P — BILL7 catalog/offer и финальная согласованность поверхностей.
 При отсутствии catalog handoff достаточно review screenshot утверждённых фактов для подачи;
@@ -241,6 +245,11 @@ commercial release readiness отмечены отдельно.
 
 ## POS4 — Короткая приёмка достаточности к запуску
 
+**Вход 05.10.2026:** R1/R2 (legal/checkout origins) и R3 (generated niche provenance)
+ещё открыты. Их corrective prompt — в legal/33. Начать независимую visual/copy часть
+можно сейчас; полный browser checkout PASS и build PASS — после исправлений на итоговой
+паре ревизий. G-BE2 actual mail/lost-login/copy и BILL8 release readiness отмечать отдельно.
+
 **Skills:** `cro`, `copy-editing`. Не превращать в отдельную CRO/SEO/security программу.
 
 ```text
@@ -264,7 +273,9 @@ commercial release readiness отмечены отдельно.
    Не требовать полный декартов продукт 9 языков × 5 размеров × все roles.
 2. CTA виден, trial/дальнейшая цена понятны; нет ложного debit-on-day-22, free SOLO,
    unlimited users, fiscal till или payment-processing claim.
-3. Generic register handoff сохраняет locale/path/attribution; письмо и onboarding
+3. Generic register handoff сохраняет поддерживаемый locale/niche; разрешённый plan-specific
+   handoff — offer. Analytics/marketing attribution остаются выключенными; не восстанавливать
+   их по старым требованиям. Письмо и onboarding
    соответствуют helper. BILL/TEAM evidence подтверждает настоящий STUDIO trial и
    будущую оплату. Landing click не выдаётся за trial_started или subscription_created.
 4. Finance redemption не добавляет деньги/Revenue; feed не выглядит приходом.
