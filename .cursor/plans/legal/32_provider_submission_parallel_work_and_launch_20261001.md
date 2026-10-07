@@ -1,5 +1,20 @@
 # Подача в Google/Paddle, параллельная работа и запуск MVP
 
+**Актуализировано 07.10.2026 по подтверждению владельца и BILL8A.**
+**G-BE2, PAR-P, BILL5B и BILL6A — ЗАВЕРШЕНЫ.** R1/R2/R3 исходного review исправлены.
+**BILL8A — ЗАВЕРШЁН:** [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md). Производственные этапы A–H пока BLOCKED по
+конкретным evidence gaps; это не повторное открытие завершённых эпиков.
+
+Следующая очередь: заморозить forward migration/release revision → обновить landing
+artifacts/POS4 → собрать TEAM-RELEASE и применимые Drawer browser/pilot → target data/
+C-09 classification, operator/off-host/provider evidence → точечные внешние legal/mail
+проверки → разрешённый этап BILL8B. Эти подготовительные работы могут идти параллельно.
+Новая публичная бесплатная пилотная программа не вводится; C-09 — отдельная принятая
+миграционная политика существующих Company. Внешнее одобрение провайдера и live activation
+не следуют из локального sandbox PASS.
+
+Исторические checkpoints 01–05.10 ниже сохранены для трассировки; они не задают текущую очередь.
+
 **Corrective checkpoint G-INT-R / PAR-P-R, 05.10:** R1/R2 исправлены в app working tree
 поверх `6bf98fe85`, без commit/deploy. Legal URLs — perelai.com; API/Web checkout —
 точный perelai.app route с bound verification и lost-session login/support.
@@ -93,17 +108,18 @@ Pricing в коде показывает SOLO USD 19 / STUDIO USD 29; старо
 PRE-G не зависит от Pricing/Paddle или полного Billing. Неподтверждённый Calendar остаётся
 отдельно недоступным; email login и внутренний календарь могут выпускаться без него.
 
-## 3. Параллельно: начать сейчас, не ждать ответа провайдера
+## 3. Актуальная очередь: завершённые эпики и оставшиеся release-проверки
 
 | ID / исполнительская задача | Вход и ограниченный результат | Приёмка / что не блокирует |
 | --- | --- | --- |
 | PAR-B1 — BILL5A | Сверить готовые BILL1 facts, BILL2 worker seam, BILL3 policy и Notifications; реализовать только lifecycle/wakeups и надёжную передачу service notices текущему payer | Переходы trial/grace/cancel/restore по времени; dedupe, replay, потеря handoff, реальные PG/Redis tests. Не дублировать Paddle receipts/dunning; никаких marketing/lifecycle campaigns |
-| PAR-L — Task G UI + G-INT | IMPLEMENTED: review/recovery/receipt подключены | RELEASE VERIFICATION HOLD: исправить R1/R2 из review 33; проверить actual origin и direct-link/lost-login. Portal/cancel независимы от purchase assent |
-| PAR-L-BE — G-BE1 / G-BE2 | [Backend plan 12](/Users/valery/Sites/beauty-finance/.cursor/plans/monetization/12_purchase_legal_acceptance_backend_20261001.plan.md): G-BE1 IMPLEMENTED; G-BE2 PARTIALLY VERIFIED, archive/ledger/outbox и sandbox purchase/refund evidence есть | Не повторять backend seam. Остаток: actual confirmation delivery, B-13/B-14, retention/hold procedure, production copy/config approval. Dev-mail SENT не доказывает полученное письмо |
-| PAR-B2 — BILL5B | После callable reconciliation hooks BILL2 и subscription changes BILL2E: сверка подписок, webhook/checkout recovery, границы действия и конфликты | Потеря/повтор/перестановка событий и outage не портят доступ; bounded recovery. Не включать production cadence этим code-task; большой metrics UI не нужен для этой приёмки |
-| PAR-P — остаток POS3/BILL7 | IMPLEMENTED; release verification HOLD (R3): catalog/offer handoff, Pricing/FAQ/machine-readable surfaces, password/Google intent | Commercial checker PASS; stale niche SHA ломает текущий prebuild/test. После final app revision обновить generated artifacts и пройти POS4. Tracking и release flags не включены |
+| PAR-L — Task G UI + G-INT | **DONE**, включая R1/R2: ссылки perelai.com, checkout perelai.app, receipt/recovery | Только smoke текущей релизной сборки; portal/cancel независимы от нового purchase assent |
+| PAR-L-BE — G-BE1 / G-BE2 | **DONE**, принято владельцем 07.10: неизменяемый архив, ledger/outbox, локальная доставка, Paddle sandbox purchase/cancel/refund | Не повторять эпик. В BILL8 отдельно подтвердить внешнюю почту, applicable B-13/B-14 и production copy/date/config |
+| PAR-B2 — BILL5B | **DONE**, `ffacfc7a4`; финальный PG/Redis gate 40 suites / 328 tests, zero skipped | Production reconciliation/recovery cadence включается только своим BILL8B этапом |
+| PAR-P — POS3/BILL7 | **DONE**: цены, catalog/коммерческие тексты, password/Google registration intent. Исходный R3 исправлен `40bc9e0` | После новых app commits повторно закрепить generated sourceCommit на frozen release SHA и пройти POS4; не повторять PAR-P |
+| PAR-B3 — BILL6A | **DONE**, approved operator/CLI scope, `70c20652d`; JWT stdin/private file, maintenance attestation, OPS0–OPS4, runbook | Настоящие target/protection, bootstrap, fleet drain и off-host restore остаются эксплуатационными условиями BILL8; локальная simulation их не заменяет |
 | PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
-| PAR-R — подготовка Task I/BILL8A | По текущей ревизии собрать имеющиеся BILL/TEAM/Drawer/export/migration/build результаты и выписать только открытые применимые проверки | Read-only audit можно готовить до ответов Google/Paddle; verdict отдельных live stages останется pending до их prerequisites |
+| PAR-R — Task I/BILL8A | **BILL8A COMPLETE**, 07.10: [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md) | Поэтапный BILL8B A–H BLOCKED по конкретным условиям отчёта; read-only подготовка GO |
 
 Задачи параллельны по зависимостям, а не по праву одновременно переписывать одни файлы.
 Task G UI владеет `apps/web` и copy; G-BE1 — core contracts/API/checkout/evidence и своей миграцией;

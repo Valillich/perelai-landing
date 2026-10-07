@@ -1,5 +1,13 @@
 # MVP market access and completed Polish pilot
 
+**Later owner clarification — 2026-10-06:** the real business user has moved to a
+permitted country and intends to keep the existing workspace. Exact Company/User IDs and
+destination remain unverified. [Handoff 34](34_bill6a_admin_cleanup_and_company_relocation_20261006.md)
+and the linked BILL6A-OPS plan govern a support-reviewed relocation with preserved history;
+this supersedes treating that workspace as automatically requiring closure because of its
+former location. Preserve historical evidence and resolve any existing deletion instruction
+or hold separately. No market is opened and no database change is made by this amendment.
+
 **Owner update, 2026-09-25 (supersedes the active-pilot premise below):** The
 Polish pilot has ended; the owner reports **zero active EU users**. The former
 Polish account remains a distinct return/deletion/retention case. If the service

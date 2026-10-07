@@ -1,5 +1,21 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
+**Current status — 2026-10-07 (owner update + BILL8A):** G-BE2, PAR-P,
+BILL5B (`ffacfc7a4`) and BILL6A (`70c20652d`, accepted operator/CLI scope) are **DONE**.
+R1/R2/R3 original fixes are complete. BILL8A inventory is **COMPLETE**; production
+Stages A–H remain **BLOCKED** for the specific evidence in [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md).
+Do not rerun completed implementation prompts. Later app commits require a fresh landing
+artifact pin; this is release maintenance, not reopening PAR-P/R3. Local sandbox mail and
+OPS4 storage simulation do not establish external delivery or production/off-host readiness.
+Earlier dated checkpoints below remain historical evidence, not the current execution queue.
+
+**Admin data operations — 2026-10-06:** [handoff 34](34_bill6a_admin_cleanup_and_company_relocation_20261006.md)
+links the new BILL6A-OPS plan for selected test Company/User cleanup and support-reviewed
+Company relocation. The owner reports that the real business user moved to a permitted
+country; preserve that workspace pending exact ID/destination verification. Do not infer
+mandatory deletion or a database reset from the earlier Polish-pilot closure notes.
+Status: PLANNED; no database changes or new market/legal-template activation.
+
 **Review/status update — 2026-10-05:** [independent review 33](33_g_par_p_independent_review_20261005.md)
 supersedes the next-task labels below. G-UI/G-BE1/G-INT and commercial POS3/BILL7 are implemented
 in app `6bf98fe85` / landing `d927c64`; do not reimplement them. Next: correct legal/checkout

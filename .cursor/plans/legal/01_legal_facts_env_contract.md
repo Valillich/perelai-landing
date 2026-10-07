@@ -1,5 +1,14 @@
 # Perelai legal facts inventory and env contract
 
+**Existing-user update — 2026-10-06 (owner-reported, not a database verification):**
+the real business user has moved to a permitted country and wants to preserve the existing
+Company and history. Exact Company/User IDs, destination country and any required subdivision
+are still operator inputs. Historical Polish-pilot closure entries below do not instruct
+automatic deletion of this workspace. Use [handoff 34](34_bill6a_admin_cleanup_and_company_relocation_20261006.md)
+for the planned support-reviewed relocation; protect this Company/User from selective test-data
+cleanup. Historical evidence, outstanding requests/holds and retention duties remain separate.
+No new market, template release, live country correction or deletion is established here.
+
 **Public-page verification — 2026-10-01:** all seven live legal routes returned HTTP 200 over HTTPS,
 displaying `2026-11-01.1` / `2026-11-01`, with no `[TBD]`; the local manifest also verified.
 This establishes page availability, not provider approval, app deployment/configuration, live-content

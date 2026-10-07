@@ -1,5 +1,14 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
+**Current status — 2026-10-07 (owner update + BILL8A):** G-BE2, PAR-P,
+BILL5B (`ffacfc7a4`) and BILL6A (`70c20652d`, accepted operator/CLI scope) are **DONE**.
+R1/R2/R3 original fixes are complete. BILL8A inventory is **COMPLETE**; production
+Stages A–H remain **BLOCKED** for the specific evidence in [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md).
+Do not rerun completed implementation prompts. Later app commits require a fresh landing
+artifact pin; this is release maintenance, not reopening PAR-P/R3. Local sandbox mail and
+OPS4 storage simulation do not establish external delivery or production/off-host readiness.
+Earlier dated checkpoints below remain historical evidence, not the current execution queue.
+
 Read [review 33](33_g_par_p_independent_review_20261005.md) first for the 05.10 status and bounded
 R1–R3 corrective prompt. G-UI/G-BE1/G-INT and PAR-P implementation exist; G-BE2/POS4/release
 evidence remains partial. Do not dispatch their original implementation prompts as new work.
