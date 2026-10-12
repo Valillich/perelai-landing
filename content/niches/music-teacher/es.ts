@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Controla ingresos de clases, costes registrados y beneficio calculado para cualquier período, con historial del alumno y canjes de paquetes legibles.",
     ogImageAlt:
-      "Resumen financiero de Perelai para un profesor de música, con ingresos de clases, costes registrados y beneficio calculado para un período — datos de ejemplo.",
+      "Perelai para profesores de música",
   },
 
   hero: {

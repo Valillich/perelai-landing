@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Ders cirosu, kayıtlı maliyetler ve hesaplanan kârı herhangi bir dönem için takip edin — öğrenci geçmişi ve paket kullanımları okunabilir kalsın.",
     ogImageAlt:
-      "Bir müzik öğretmeni için Perelai finans özeti: ders cirosu, kayıtlı maliyetler ve dönem için hesaplanan kâr — örnek veriler.",
+      "Müzik öğretmenleri için Perelai",
   },
 
   hero: {

@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Suivez le revenu des cours, les coûts enregistrés et le profit calculé pour toute période — historique élève et utilisations de forfaits lisibles.",
     ogImageAlt:
-      "Aperçu financier Perelai pour un professeur de musique, avec revenu des cours, coûts enregistrés et profit calculé pour une période — données d'exemple.",
+      "Perelai pour les professeurs de musique",
   },
 
   hero: {

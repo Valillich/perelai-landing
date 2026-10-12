@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Erfassen Sie Umsatz aus Unterricht, erfasste Kosten und berechneten Gewinn für jeden Zeitraum — mit Schülerhistorie und Paketeinlösungen lesbar.",
     ogImageAlt:
-      "Perelai-Finanzübersicht für einen Musiklehrer mit Umsatz aus Unterricht, erfassten Kosten und berechnetem Gewinn für einen Zeitraum — Beispieldaten.",
+      "Perelai für Musiklehrer",
   },
 
   hero: {

@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Acompanhe faturamento de aulas, custos registrados e lucro calculado para qualquer período, com histórico do aluno e resgates de pacotes legíveis.",
     ogImageAlt:
-      "Visão financeira Perelai para um professor de música, com faturamento de aulas, custos registrados e lucro calculado para um período — dados de exemplo.",
+      "Perelai para professores de música",
   },
 
   hero: {

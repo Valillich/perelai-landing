@@ -1,6 +1,6 @@
 # Terminology MVP: local niche readiness — 2026-10-12
 
-App definitions and evidence: `/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/01-launch-definitions.md`, `04-niche-scope-and-copy.md`, `05-implementation-evidence.md`. App export source for this pass: `c052a975c` (generator records the full commit/hash). Landing baseline: `d3cf491507d8373ce5cbeefcc62e7940192ea17c`.
+App definitions and evidence: `/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/01-launch-definitions.md`, `04-niche-scope-and-copy.md`, `05-implementation-evidence.md`. Verified screenshot app revision: `c052a975c`; the export source is recorded with its full commit/hash in the generated catalog. Landing baseline: `d3cf491507d8373ce5cbeefcc62e7940192ea17c`.
 
 This pass implements bounded copy/catalog preparation. It does not attest production availability, accept native-language copy, or close BILL/TEAM/Drawer/legal release gates.
 
@@ -23,6 +23,8 @@ All changed editorial text is a candidate. **RU/UK native review pending**, then
 - Existing 60% distinctness gate retained; the seven scoped pages checked together in EN/RU/UK. The normal published-page check now includes RU and fails on missing declared modules instead of silently skipping them.
 - `verify:commercial` passes; existing offer/source policy is unchanged.
 - Music screenshot: real CalendarPage, `music_teacher`/`edu`, synthetic client and piano lesson, `CANDIDATE`/`UNPAID`, USD 45; API responses intercepted, no external service calls. RU/UK/EN captures have no browser errors. Images are in `public/images/niches/music-calendar-{locale}.png`; caption explicitly distinguishes the displayed amount from payment received. This is illustrative UI evidence, not a backend/payment acceptance test.
+- Final checks: typecheck PASS; all 34 suites / 503 tests PASS; production build compiled and typechecked, then stopped at existing `booking-terms` APPROVAL_HASH_MISMATCH. The exact mismatch is reproduced on baseline `d3cf49150` with the same environment. Legal approval/validation unchanged.
+- Code review: Standards pass; Spec metadata and screenshot-revision omissions corrected.
 - Runtime for checks: installed Node 24.18; system Node 20.18 fails to start current Vite 7.
 
 ## Next actions, individually

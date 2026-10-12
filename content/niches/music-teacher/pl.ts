@@ -7,7 +7,7 @@ export const content: NichePageContent = {
     description:
       "Przychód z lekcji pianina i gitary, zarejestrowane koszty studia i wyliczony zysk — z historią ucznia i spisaniem semestralnych karnetów.",
     ogImageAlt:
-      "Przegląd finansów Perelai dla nauczyciela muzyki: przychód z lekcji, zarejestrowane koszty i wyliczony zysk za okres — dane przykładowe.",
+      "Perelai dla nauczycieli muzyki",
   },
 
   hero: {
