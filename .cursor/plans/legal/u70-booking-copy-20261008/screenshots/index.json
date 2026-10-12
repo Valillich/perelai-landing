@@ -1,0 +1,1334 @@
+[
+  {
+    "file": "screenshots/de-accepted-desktop.jpg",
+    "sha256": "1cfd5a4a22693bbd0ee3ae011d4b0013e18260bc1f6e9ce60938dacd844b4a52",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "de-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/de-accepted-mobile.jpg",
+    "sha256": "f4d3bd2a08b4908dc90e080aba98425ca1a36228db4b5da273067c2d1a447708",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "de-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/de-initial-desktop.jpg",
+    "sha256": "fd0a266297be9f5fa55470b270eb4f88f011b9e925353bcd839e514dc254d88f",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "initial",
+      "size": "desktop",
+      "file": "de-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/de-initial-mobile.jpg",
+    "sha256": "7d65981b44878c83be4d5845e676fd57a007e4692fe1c11063b5e00f0d57a2ba",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "initial",
+      "size": "mobile",
+      "file": "de-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/de-notice-sheet-bottom-mobile.jpg",
+    "sha256": "6746f75455ecaa3a96f67b946473a61f787b359861c7ea9895a24e1a46c2d14a",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/de-notice-sheet-top-mobile.jpg",
+    "sha256": "87f511de7900b28a41468d4dee95e71885b0532fa000a6237b54275583ba41c9",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/de-updated-320-dark.jpg",
+    "sha256": "374bd5f0fabb4e4cd141a9e0094e1bd73d68b7640dc25536b9ecad8e01082538",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/de-updated-desktop.jpg",
+    "sha256": "562b308510d2fd5401b27c575963e58ce1f7ba4575b779d3c7b90e2b6a7ab5a0",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "updated",
+      "size": "desktop",
+      "file": "de-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/de-updated-mobile.jpg",
+    "sha256": "68339c1e238815d1212557b956b04d210283fb4c6eb26f8940acb4a2c80502b8",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "de",
+      "state": "updated",
+      "size": "mobile",
+      "file": "de-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/en-accepted-desktop.jpg",
+    "sha256": "f3e01479a5d7aa5fa083b6cc26086618b9a4eb5eb70d5b790ce47d97f08c9a66",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "en-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/en-accepted-mobile.jpg",
+    "sha256": "af664ba2a636fe0315615042491f2bc64454d761599f619e0416b1319048661f",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "en-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/en-custom-desktop.jpg",
+    "sha256": "dd6f2dd4bb5f58d7a3fa02f147b61ae7a5d9db588d548ba2c357e3e3dfaabe31",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/en-initial-desktop.jpg",
+    "sha256": "6e2dd56f4144a569b0f0ab616f727d3c0fe7f5ad3cd375fcec0bd574a55b7ef9",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "initial",
+      "size": "desktop",
+      "file": "en-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/en-initial-mobile.jpg",
+    "sha256": "1be8c377874a73b62e873a1d769a449c3a0c470681c23003e60e35fea9073c1e",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "initial",
+      "size": "mobile",
+      "file": "en-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/en-notice-sheet-bottom-mobile.jpg",
+    "sha256": "b494c570f501baedf4e847ebb340a4d2fff4832c6ca95daea4e0f257e47344e1",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/en-notice-sheet-top-mobile.jpg",
+    "sha256": "d9675a7688c3ef8a3a88746201cb2b395b3aea83ab69c0c4e842b18b31df1b1b",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/en-unavailable-mobile.jpg",
+    "sha256": "3fff37ac25c429cba112799c0e1ce2d1d5c59b668f4047a4b93766d1bfb46cea",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/en-updated-desktop.jpg",
+    "sha256": "593e0eed844906a0d10d956c29ebf6682f84c79b74167c4e1531a6d085b471a0",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "updated",
+      "size": "desktop",
+      "file": "en-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/en-updated-mobile.jpg",
+    "sha256": "35c8cc9db21bb0a163142a8ec22fb04b25c13d4a7bece485fef006b68a795d72",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "en",
+      "state": "updated",
+      "size": "mobile",
+      "file": "en-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/es-accepted-desktop.jpg",
+    "sha256": "33b3740c5011b701b739373d7551f2a19ac17e6b53986b44241894ea7c484460",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "es-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/es-accepted-mobile.jpg",
+    "sha256": "6fd93f0f3ad7910a45ce91d5704598e4999a2fe54f2ccf41cd76d2ab1aabc260",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "es-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/es-initial-desktop.jpg",
+    "sha256": "9fc9a4e0cadc763dd285fe77d83aebe7673c493be64f897026ca7d1b68a082ba",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "initial",
+      "size": "desktop",
+      "file": "es-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/es-initial-mobile.jpg",
+    "sha256": "59ec1dfb7124ec8d9974b699cc4fad603d6dcc9b834b757e59304db5ad0a066f",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "initial",
+      "size": "mobile",
+      "file": "es-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/es-updated-desktop.jpg",
+    "sha256": "f7c4bcb9c8bf06555d154ec3a43bfb89d196fc0da2947120f9877e1e20cd0aff",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "updated",
+      "size": "desktop",
+      "file": "es-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/es-updated-mobile.jpg",
+    "sha256": "bd29b9b035c673d87f7699790691e3aee5de87420092b83046e08c874e0714fb",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "es",
+      "state": "updated",
+      "size": "mobile",
+      "file": "es-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/fr-accepted-desktop.jpg",
+    "sha256": "b57f5b9c086f881ff3ff0ef740c81c339f9697356d0fedfe9697b3f748c1e7f9",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "fr-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/fr-accepted-mobile.jpg",
+    "sha256": "5787cdfc972a5bdd0b2b085eec835e244cb5598b23573dc7b1584e84b3e5ae22",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "fr-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/fr-initial-desktop.jpg",
+    "sha256": "3398209b489d8d1b7d5da178811d1f1fcfe82fc00c351713ef2a1e7661b79c33",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "initial",
+      "size": "desktop",
+      "file": "fr-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/fr-initial-mobile.jpg",
+    "sha256": "bc0da2af18de2a0a626e3285f25447b49488efd6193e5cab084754665af6f1a4",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "initial",
+      "size": "mobile",
+      "file": "fr-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/fr-updated-desktop.jpg",
+    "sha256": "7f85bffe6f915a3e93cd0cebc51abe9aed3d5279c95b3a087e1f7e56b889c547",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "updated",
+      "size": "desktop",
+      "file": "fr-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/fr-updated-mobile.jpg",
+    "sha256": "1899237dcf4f06198058786e211d1a0956e11f8535116e91f4fade81226f6fa3",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "fr",
+      "state": "updated",
+      "size": "mobile",
+      "file": "fr-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pl-accepted-desktop.jpg",
+    "sha256": "3310ab9ad6add090e84bef9cb09cf7985be71c860af1443a91b6ec92efa11bd4",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "pl-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pl-accepted-mobile.jpg",
+    "sha256": "7bf98880b7e482511afe80f4a96580292e1c91d5adc9a42a3136e96f0a26aa11",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "pl-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pl-initial-desktop.jpg",
+    "sha256": "1b06595f7a20bec3333b59094ec964df19676b300be4ce490370163002a52c5e",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "initial",
+      "size": "desktop",
+      "file": "pl-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pl-initial-mobile.jpg",
+    "sha256": "02658e5ab5cf75184ebdcef07e5b0b3829dd399598fc9c8360a3604a4a9805e7",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "initial",
+      "size": "mobile",
+      "file": "pl-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pl-updated-desktop.jpg",
+    "sha256": "088132889bf8fa4ddaecfb0b88ded1b55c467ad648e5ea74be2d9c8adc2385af",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "updated",
+      "size": "desktop",
+      "file": "pl-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pl-updated-mobile.jpg",
+    "sha256": "944e42363fd28b83d00bac50d017082c2fc27fc62eb97e4391f89763ca1b3100",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pl",
+      "state": "updated",
+      "size": "mobile",
+      "file": "pl-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pt-accepted-desktop.jpg",
+    "sha256": "1c6718f4c31a9e5dbccca5c72954071143e6b8fd6f74c85cfd40a6cfea81f726",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "pt-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pt-accepted-mobile.jpg",
+    "sha256": "a5f905551c97b624b0f796cbed4bb1eb30a9d61e3d5778f03492ada5d751c528",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "pt-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pt-initial-desktop.jpg",
+    "sha256": "21e36dd3438d8af1b69cf74aa2bf8392e1f8da610c1cdab28aaff470f70e6fd0",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "initial",
+      "size": "desktop",
+      "file": "pt-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pt-initial-mobile.jpg",
+    "sha256": "df55bb05494c01b766272e3134816ef6e5ae1d49819d5a03055f05cb6b0bdfb6",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "initial",
+      "size": "mobile",
+      "file": "pt-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/pt-updated-desktop.jpg",
+    "sha256": "fa597d0b79c11d8c846a13b382f22579179506e478e3aeef3ff2dbe37644205d",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "updated",
+      "size": "desktop",
+      "file": "pt-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/pt-updated-mobile.jpg",
+    "sha256": "57458d0ee323016156ee85c3d5e0ec2dfdbdc91e1e710a98076692ee4c770432",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "pt",
+      "state": "updated",
+      "size": "mobile",
+      "file": "pt-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/ru-accepted-desktop.jpg",
+    "sha256": "bdd21bdbe9cb1a9c10afa8cf448c700c6f303669a29d9485e3d41910bacff7bc",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "ru-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/ru-accepted-mobile.jpg",
+    "sha256": "86a255dd8a40a13b89fb861011919b53c11498208f5ce3a9e512467c129d1d31",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "ru-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "file": "screenshots/ru-custom-mobile.jpg",
+    "sha256": "d5cf11eb1f33317742044f4cc374a70009ff6e8493ad881b511064e584620a34",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-initial-390-text200.jpg",
+    "sha256": "022f687a4fc5f6ff35234ce595a2f477be0c60a0f70820a85d804d754e94ac64",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-initial-desktop.jpg",
+    "sha256": "3e5566eb0d126fcd85ae2908732414e820ecf877a7c96f55981fffed77aca4e4",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "initial",
+      "size": "desktop",
+      "file": "ru-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/ru-initial-mobile.jpg",
+    "sha256": "b24be4c98e556f7abba780b653e26259ee5c68c360547a1f5d8dc699f2e3c04a",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "initial",
+      "size": "mobile",
+      "file": "ru-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "file": "screenshots/ru-missing-assent-mobile.jpg",
+    "sha256": "675b7175adea46d78687f9b143a743b7666c13fda21e1ea919992208b3228e11",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-notice-sheet-bottom-mobile.jpg",
+    "sha256": "0beeea8cc11ecc16530b2697f6f11731f59f06a2d84329e415cd426c22171603",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-notice-sheet-top-mobile.jpg",
+    "sha256": "7395d81bbb04b389814902c5c997e72c89c6fabb092fa4cbb262365143167167",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-unavailable-desktop.jpg",
+    "sha256": "eae883a544e18d414559fd17899fc87aabf7eeefa82cf5235773bcaf92f53276",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-unavailable-mobile.jpg",
+    "sha256": "f9b2ab3cebf2e81ecf57d0da703d71bd7cb8d03c5317928e9a18cc7c1057fbee",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-updated-390-text200.jpg",
+    "sha256": "880b72acab3ce8ed03538165c971a62b6b82d69d966f9ae235047bd3f4804628",
+    "kind": "additional-view",
+    "capture": null
+  },
+  {
+    "file": "screenshots/ru-updated-desktop.jpg",
+    "sha256": "019501898879b9d6da8265ad8c719642a87900c366b5c4e209fb5c28d0e58ab7",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "updated",
+      "size": "desktop",
+      "file": "ru-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/ru-updated-mobile.jpg",
+    "sha256": "6724ba7b9b7ccd1226e7b60ae07b87e1f52ba8a9612f58798f9cd97ba921ffe4",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "ru",
+      "state": "updated",
+      "size": "mobile",
+      "file": "ru-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  },
+  {
+    "file": "screenshots/tr-accepted-desktop.jpg",
+    "sha256": "c9776027fdbf1367d067c01991c273935992bc6fd651fe0baa112b56f10ca709",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "tr-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/tr-accepted-mobile.jpg",
+    "sha256": "c68f33428a841e002909113eabca1cb4606ba2e1e605b7435806dfa1b38e3c37",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "tr-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/tr-initial-desktop.jpg",
+    "sha256": "e5acc876d94f1fd1dff47ae6fe2d6b5321576946edee2dd17a625438e4b537ff",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "initial",
+      "size": "desktop",
+      "file": "tr-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/tr-initial-mobile.jpg",
+    "sha256": "5f6a7483c385c0aee079431892e3bfe92ba8014cf5d279afd50acfb55e4cc181",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "initial",
+      "size": "mobile",
+      "file": "tr-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/tr-updated-desktop.jpg",
+    "sha256": "df274941f189c197aba8f4cf5f45af28ee28a81634342d386d55976a976bab96",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "updated",
+      "size": "desktop",
+      "file": "tr-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/tr-updated-mobile.jpg",
+    "sha256": "1239885d4c9ca1c9d77261ec62246bc2b4ff90e313575e5506f177debf9f4209",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "tr",
+      "state": "updated",
+      "size": "mobile",
+      "file": "tr-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/uk-accepted-desktop.jpg",
+    "sha256": "4c65f301bfed18846f7dfe881360946fb604f812e4bc919a6078c430893b0b1d",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "accepted",
+      "size": "desktop",
+      "file": "uk-accepted-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/uk-accepted-mobile.jpg",
+    "sha256": "89e19f153cd451a7bc03b9e020d5e2d5e6105bf6a09d9f999df893894041cebc",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "accepted",
+      "size": "mobile",
+      "file": "uk-accepted-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": null,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/uk-initial-desktop.jpg",
+    "sha256": "880c796bbd4b451c189b7c819abcb9ad96e008eb9610381232bf05201361efdf",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "initial",
+      "size": "desktop",
+      "file": "uk-initial-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/uk-initial-mobile.jpg",
+    "sha256": "9e8526035abd022ef607030a6bf5c3231cfec050fdfda03b3293d50086b4607d",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "initial",
+      "size": "mobile",
+      "file": "uk-initial-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  },
+  {
+    "file": "screenshots/uk-updated-desktop.jpg",
+    "sha256": "88b3c2a2b9792ddd4521406a1130bb50992f46fca33c7ca732146ed30e1db1a0",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "updated",
+      "size": "desktop",
+      "file": "uk-updated-desktop.jpg",
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  },
+  {
+    "file": "screenshots/uk-updated-mobile.jpg",
+    "sha256": "a9442d2a1b32da7660e07cd5a1bc1a24427d628adbd2e784688b6484400a7b0d",
+    "kind": "three-state-matrix",
+    "capture": {
+      "locale": "uk",
+      "state": "updated",
+      "size": "mobile",
+      "file": "uk-updated-mobile.jpg",
+      "viewport": [
+        390,
+        844
+      ],
+      "layout": {
+        "checked": false,
+        "legal": [
+          {
+            "clientWidth": 341,
+            "scrollWidth": 341,
+            "testId": "public-booking-legal-section",
+            "width": 343
+          },
+          {
+            "clientWidth": 390,
+            "scrollWidth": 390,
+            "testId": "public-booking-sticky-footer",
+            "width": 390
+          }
+        ],
+        "viewport": 390
+      }
+    }
+  }
+]

@@ -1,0 +1,974 @@
+[
+  {
+    "locale": "ru",
+    "state": "initial",
+    "size": "desktop",
+    "file": "ru-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "ru",
+    "state": "updated",
+    "size": "desktop",
+    "file": "ru-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "ru",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "ru-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "uk",
+    "state": "initial",
+    "size": "desktop",
+    "file": "uk-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "uk",
+    "state": "updated",
+    "size": "desktop",
+    "file": "uk-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "uk",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "uk-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "en",
+    "state": "initial",
+    "size": "desktop",
+    "file": "en-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "en",
+    "state": "updated",
+    "size": "desktop",
+    "file": "en-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "en",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "en-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pl",
+    "state": "initial",
+    "size": "desktop",
+    "file": "pl-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pl",
+    "state": "updated",
+    "size": "desktop",
+    "file": "pl-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pl",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "pl-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "es",
+    "state": "initial",
+    "size": "desktop",
+    "file": "es-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "es",
+    "state": "updated",
+    "size": "desktop",
+    "file": "es-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "es",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "es-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "fr",
+    "state": "initial",
+    "size": "desktop",
+    "file": "fr-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "fr",
+    "state": "updated",
+    "size": "desktop",
+    "file": "fr-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "fr",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "fr-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "de",
+    "state": "initial",
+    "size": "desktop",
+    "file": "de-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "de",
+    "state": "updated",
+    "size": "desktop",
+    "file": "de-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "de",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "de-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pt",
+    "state": "initial",
+    "size": "desktop",
+    "file": "pt-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pt",
+    "state": "updated",
+    "size": "desktop",
+    "file": "pt-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "pt",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "pt-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "tr",
+    "state": "initial",
+    "size": "desktop",
+    "file": "tr-initial-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "tr",
+    "state": "updated",
+    "size": "desktop",
+    "file": "tr-updated-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "tr",
+    "state": "accepted",
+    "size": "desktop",
+    "file": "tr-accepted-desktop.jpg",
+    "viewport": [
+      1280,
+      900
+    ]
+  },
+  {
+    "locale": "ru",
+    "state": "initial",
+    "size": "mobile",
+    "file": "ru-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "locale": "ru",
+    "state": "updated",
+    "size": "mobile",
+    "file": "ru-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "locale": "ru",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "ru-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "locale": "uk",
+    "state": "initial",
+    "size": "mobile",
+    "file": "uk-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "uk",
+    "state": "updated",
+    "size": "mobile",
+    "file": "uk-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "uk",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "uk-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "en",
+    "state": "initial",
+    "size": "mobile",
+    "file": "en-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "en",
+    "state": "updated",
+    "size": "mobile",
+    "file": "en-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "en",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "en-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pl",
+    "state": "initial",
+    "size": "mobile",
+    "file": "pl-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pl",
+    "state": "updated",
+    "size": "mobile",
+    "file": "pl-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pl",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "pl-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "es",
+    "state": "initial",
+    "size": "mobile",
+    "file": "es-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "es",
+    "state": "updated",
+    "size": "mobile",
+    "file": "es-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "es",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "es-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "fr",
+    "state": "initial",
+    "size": "mobile",
+    "file": "fr-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "fr",
+    "state": "updated",
+    "size": "mobile",
+    "file": "fr-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "fr",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "fr-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "de",
+    "state": "initial",
+    "size": "mobile",
+    "file": "de-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "de",
+    "state": "updated",
+    "size": "mobile",
+    "file": "de-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "de",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "de-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pt",
+    "state": "initial",
+    "size": "mobile",
+    "file": "pt-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pt",
+    "state": "updated",
+    "size": "mobile",
+    "file": "pt-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "pt",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "pt-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "tr",
+    "state": "initial",
+    "size": "mobile",
+    "file": "tr-initial-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "tr",
+    "state": "updated",
+    "size": "mobile",
+    "file": "tr-updated-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": false,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  {
+    "locale": "tr",
+    "state": "accepted",
+    "size": "mobile",
+    "file": "tr-accepted-mobile.jpg",
+    "viewport": [
+      390,
+      844
+    ],
+    "layout": {
+      "checked": null,
+      "legal": [
+        {
+          "clientWidth": 341,
+          "scrollWidth": 341,
+          "testId": "public-booking-legal-section",
+          "width": 343
+        },
+        {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "testId": "public-booking-sticky-footer",
+          "width": 390
+        }
+      ],
+      "viewport": 390
+    }
+  }
+]

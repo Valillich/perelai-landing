@@ -1,0 +1,115 @@
+{
+  "status": "PENDING_APPROVAL",
+  "packageId": "u70-booking-copy-20261008.r1",
+  "version": null,
+  "sha256": "a539d29a06c6d23c0d7e22f71c9e2375fa138a9506313ebe535ae55788b17439",
+  "approvalRef": null,
+  "createdOn": "2026-10-08",
+  "appRevision": "478710c4c5d3edcd97cb4547895f2accea4183a5",
+  "landingBaseRevision": "f6637c049f540bcd563af3ab6349e1e9602c7bc1",
+  "canonicalFile": "copy.canonical.json",
+  "canonicalization": "UTF-8; recursively sorted object keys; literal Unicode; compact JSON; no BOM, whitespace or trailing newline; no Unicode normalization",
+  "locales": [
+    "ru",
+    "uk",
+    "en",
+    "pl",
+    "es",
+    "fr",
+    "de",
+    "pt",
+    "tr"
+  ],
+  "keysPerLocale": 44,
+  "sourceLocaleSha256": {
+    "ru": "87e0197c8faba3807f49851f4d79ff1b61e9cfcb45c8b9770b74bf8c45c82e5d",
+    "uk": "7310c2850794166aa6e1de4e637f122f27b4a91d16c9b332574550bcd963da0a",
+    "en": "d7a804092c7b7886f892389e76bf9b048d760de9ddb1c293622bcb0dcb92d784",
+    "pl": "8b52d0cb3572db91e691a64f6803f20cb58dec3af3e3efea6d638264ff925445",
+    "es": "bbc0be30c199e59d0fee4dfb38784368f2326e6013d9eedfb40e30dcfa2bfb59",
+    "fr": "3c6514121e2f31075d92ff67bf24f9bd13109ae6502cbda68246fdb13f3e76f2",
+    "de": "73fa3012eba0e47655dd0e7e4d69d83f1e0e0f8adecf11139a3d3b0b265096bb",
+    "pt": "17ee75a1a7f44cac1b331fcbb4b725571680b13cb1bc0dc5dd1fb314a11cc3ab",
+    "tr": "5e303ac33573a9a03644d377db1a61279af4c883001527a0a556acb8eec18fb3"
+  },
+  "candidateOnlyKeys": [
+    "public_booking.legal_trader_address_label",
+    "public_booking.legal_contact_email_label",
+    "public_booking.legal_privacy_contact_label",
+    "public_booking.legal_refund_link",
+    "public_booking.legal_terms_changed"
+  ],
+  "copyReview": "Editorial language review and placeholder checks; not native-speaker or independent legal approval.",
+  "ownerDecision": "Keep current regional summary and cancellation-reminder wording verbatim.",
+  "approvalScope": [
+    "UI text in copy.canonical.json",
+    "initial, updated and verified prior-acceptance states",
+    "placements and behavior described in specification 08 and package 36",
+    "regional summary/reminder retained without shortening"
+  ],
+  "runtimeApprovalGranted": false,
+  "screenshotCount": 69,
+  "screenshotMatrix": {
+    "locales": 9,
+    "states": [
+      "initial",
+      "updated",
+      "accepted"
+    ],
+    "viewports": {
+      "mobile": [
+        390,
+        844
+      ],
+      "desktop": [
+        1280,
+        900
+      ]
+    },
+    "count": 54
+  },
+  "additionalViews": [
+    "missing assent",
+    "notice sheet top/bottom RU/EN/DE",
+    "custom/external terms and refund link",
+    "unavailable intake",
+    "DE 320px dark",
+    "RU 200% text initial/update"
+  ],
+  "captureConditions": {
+    "source": "Actual PublicBookingPage, PublicBookingLegalSection, SwipeToConfirm and app CSS, with isolated API fixture and real locale strings plus five candidate-only translations.",
+    "writes": "All mutation endpoints reject; no real API writes or client acceptance evidence.",
+    "business": "Synthetic Studio U70, example.com contacts, UA/uk ordinary non-medical v1 summary/full notice and ASAP reminder verbatim, only Business placeholders substituted.",
+    "date": "Prior acceptance timestamp 2026-10-08T09:00:00.000Z formatted in Europe/Kyiv; selected appointment date is local capture day 2026-10-08.",
+    "fakePersonalToken": "U70-SYNTHETIC-PREVIEW, used only inside this isolated mock adapter.",
+    "text200": "Capture harness doubles computed UI text sizes (13→26px), not browser zoom; app source/CSS remain unchanged."
+  },
+  "openUiChecks": [
+    {
+      "id": "U70-UI-200",
+      "status": "OPEN",
+      "finding": "At 200% text sizing the swipe action caption visually overlaps the date/time badge. Initial/update consent text remains readable, but action layout is not a full pass.",
+      "evidence": [
+        "screenshots/ru-initial-390-text200.jpg",
+        "screenshots/ru-updated-390-text200.jpg"
+      ]
+    },
+    {
+      "id": "U70-UI-CUSTOM-CTA",
+      "status": "OBSERVED_CURRENT_BEHAVIOR",
+      "finding": "Custom Business acceptance step uses a truncated footer CTA on narrow screens; full Business assent wording remains visible in the Privacy card.",
+      "evidence": [
+        "screenshots/ru-custom-mobile.jpg"
+      ]
+    }
+  ],
+  "notCompletedByThisPacket": [
+    "Human approval and immutable acceptance-copy version",
+    "Candidate additions applied to app locale files",
+    "Approved web manifest and drift test",
+    "ENV example/runtime version assignment",
+    "Real staging evidence test and production ENV rollout",
+    "200% text action-layout fix and final release accessibility check"
+  ],
+  "artifactManifest": "artifacts.json"
+}

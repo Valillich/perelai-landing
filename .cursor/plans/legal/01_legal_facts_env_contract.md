@@ -1,5 +1,30 @@
 # Perelai legal facts inventory and env contract
 
+**Owner scope decision — 2026-10-12:** simplify launch to one global hold list:
+`aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`, `personal_trainer`, `yoga_instructor`;
+preserve the existing functional `rent`/`personal` holds. Country-specific niche rules and a separate
+ordinary-use declaration are **POST-MVP / DEMAND-DRIVEN**. Implement the shared admission rule,
+small existing-Terms reminders and matching acquisition scope first. The current Terms §§4/11 and
+Privacy §16 support this limited product/data boundary; **no platform text change or new Terms
+version is planned for it**. Preserve `2026-11-01.1`, its hashes and effective date. This does not
+establish a blanket contractual ban on every wellness profession or change existing paid promises.
+CA remains open only for its existing ten provinces/territories; the QC/AB/BC correction concerns its
+separate declaration version. See [handoff 37](37_mvp_legal_polish_and_business_scope_20261012.md).
+
+**Source review — 2026-10-12 (not production verification):** handoff 37
+records current app `8735a2397`: UA/US/AU and ten CA subdivisions remain admitted in code;
+`rent`/`personal` are unavailable in Web selection but the inspected API setup resolver still accepts
+their catalog/synthetic IDs. `aesthetic_clinic`/`advanced_skincare` include clinical defaults;
+massage/spa/trainer templates include health-adjacent services, while business-notice profiles remain
+`ORDINARY_NON_MEDICAL`. The `regulated` hint is not an admission control. CA declaration v1 proves
+only `OUTSIDE_QUEBEC`, not absence of AB/BC operations. The global hold enforcement, CA declaration
+v2 and operator checklists are **PLANNED**, not deployed or newly approved public legal wording.
+No finding that the current small business is exempt from health-data laws is recorded here.
+Keep the approved 2026-11-01 date and distinguish prepared v2 notices from currently selected v1.
+Where an actual published v1 has incorrect Google/R2 facts, a timely immutable notice correction and
+Company republication are needed; a future v2 does not by itself fix that current notice. Rendered
+identity must be checked; `{{...}}` tokens in source are intentional validated interpolation.
+
 **Existing-user update — 2026-10-06 (owner-reported, not a database verification):**
 the real business user has moved to a permitted country and wants to preserve the existing
 Company and history. Exact Company/User IDs, destination country and any required subdivision

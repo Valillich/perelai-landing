@@ -1,5 +1,26 @@
 # Подача в Google/Paddle, параллельная работа и запуск MVP
 
+**Implementation checkpoint 12.10.2026:** LP-M1 реализован (app `a91628447`),
+закрытые landing routes/acquisition сняты; artifacts закреплены на clean app revision.
+Целевые tests PASS; production inventory/защищённый ID/transition ещё не выполнены,
+rollout BLOCKED. LP-M2 отдельно PLANNED, LP-M3 процедуры PREPARED, LP-M4 частично проверен.
+Подробности и оставшиеся gates — [план 37](37_mvp_legal_polish_and_business_scope_20261012.md).
+
+**Упрощённое решение 12.10.2026:** [review и минимальная полировка 37](37_mvp_legal_polish_and_business_scope_20261012.md)
+задаёт единый HOLD во всех рынках для `aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`,
+`personal_trainer`, `yoga_instructor`, плюс серверную защиту уже отключённых `rent`/`personal`.
+Матрица страна × ниша и новая декларация немедицинского использования отложены до post-MVP
+и реального запроса на закрытую нишу. **Terms остаются `2026-11-01.1` без изменений** для этого
+сужения предложения. CA остаётся в прежних десяти провинциях/территориях; уточнение существующей
+CA declaration до QC/AB/BC, короткие подсказки и PAR-O остаются в LP-M1–M4.
+Статус SCOPE SELECTED / IMPLEMENTATION PLANNED; завершённые G/PAR/BILL задачи не открываются заново.
+Исправление app admission и подготовка операторских инструкций могут идти параллельно;
+landing catalog/нишевые обещания синхронизируются после изменения app. Новые правки до подачи
+должны убрать противоречащие scope обещания; уже поданная заявка сама по себе не требует отмены.
+Дата 01.11.2026 сохранена. Если у действующих салонов опубликованы неверные Google/R2 сведения,
+нужна отдельная своевременная коррекция notice и перепубликация, без перезаписи старых доказательств;
+это не новая версия платформенных Terms. Оценки «GO» не закрывают BILL8B/операционные условия.
+
 **Актуализировано 07.10.2026 по подтверждению владельца и BILL8A.**
 **G-BE2, PAR-P, BILL5B и BILL6A — ЗАВЕРШЕНЫ.** R1/R2/R3 исходного review исправлены.
 **BILL8A — ЗАВЕРШЁН:** [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md). Производственные этапы A–H пока BLOCKED по
@@ -118,7 +139,7 @@ PRE-G не зависит от Pricing/Paddle или полного Billing. Н�
 | PAR-B2 — BILL5B | **DONE**, `ffacfc7a4`; финальный PG/Redis gate 40 suites / 328 tests, zero skipped | Production reconciliation/recovery cadence включается только своим BILL8B этапом |
 | PAR-P — POS3/BILL7 | **DONE**: цены, catalog/коммерческие тексты, password/Google registration intent. Исходный R3 исправлен `40bc9e0` | После новых app commits повторно закрепить generated sourceCommit на frozen release SHA и пройти POS4; не повторять PAR-P |
 | PAR-B3 — BILL6A | **DONE**, approved operator/CLI scope, `70c20652d`; JWT stdin/private file, maintenance attestation, OPS0–OPS4, runbook | Настоящие target/protection, bootstrap, fleet drain и off-host restore остаются эксплуатационными условиями BILL8; локальная simulation их не заменяет |
-| PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
+| PAR-O — существующие операции из release 30 | Support/incident/privacy checklist; проверка доставки писем; cleanup со всеми skips; R2 EU/rotation, local copies, logs, independent deletion journal, restore/replay; provider DPA и бухгалтерский график. [LP-M3/M4](37_mvp_legal_polish_and_business_scope_20261012.md) уточняют минимальные инструкции, журнал CA breaches и проверку обещаний | Ссылки на фактические результаты в существующих runbooks. Ручная процедура допустима; документ или unit test не заменяет restore/deletion walkthrough |
 | PAR-R — Task I/BILL8A | **BILL8A COMPLETE**, 07.10: [BILL8A report](/Users/valery/Sites/beauty-finance/inventory/bill8a-release-readiness-20261007.md) | Поэтапный BILL8B A–H BLOCKED по конкретным условиям отчёта; read-only подготовка GO |
 
 Задачи параллельны по зависимостям, а не по праву одновременно переписывать одни файлы.

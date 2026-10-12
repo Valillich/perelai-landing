@@ -1,0 +1,415 @@
+{
+  "status": "APPROVED",
+  "version": "booking-copy-2026-10-08.1",
+  "packageId": "u70-booking-copy-20261008.r1",
+  "files": [
+    {
+      "file": "approval-record.json",
+      "sha256": "a5bead4512c1d850412867c22db74a9a82763d4c95f10672de3de217b7abdfff"
+    },
+    {
+      "file": "archive/pending-r1/36_u70_booking_copy_approval_20261008.md",
+      "sha256": "67a088876ac9395c4eacc023d0870b6efb267df693a89646b6d93df9ea8e9a52"
+    },
+    {
+      "file": "archive/pending-r1/approval-record.json",
+      "sha256": "9b0a7b9baf6d9f2c0b25bd9bd3f0462e9468aa458876ab74551722c63528e749"
+    },
+    {
+      "file": "archive/pending-r1/artifacts.json",
+      "sha256": "2fcdd4f1ba0f52fe6553dc8fb3e716013f855e7a32234dd7e1937141128140ca"
+    },
+    {
+      "file": "archive/pending-r1/copy-review.md",
+      "sha256": "bd265e3d7a4ecffbb848ae9e6315a415038fb3a446a071e6186d0bfd51256465"
+    },
+    {
+      "file": "archive/pending-r1/review.html",
+      "sha256": "e54e2bba25563e1deb9b790da262410c25665b821b76f3b0212610bc0e2cddb5"
+    },
+    {
+      "file": "archive/pending-r1/verification.md",
+      "sha256": "85a91c7dd43822267279f7d8d36fc65fae34b446576dbbf48cd1f206dfcbbc40"
+    },
+    {
+      "file": "archive/pending-r1/verify.py",
+      "sha256": "3068cab74a518311d985403f0b3a540a51d34de096004d24dea282325012ab2f"
+    },
+    {
+      "file": "candidate-additions.json",
+      "sha256": "32e9c53c6a15453e51bd2c794716eafaa5e262f9b40b5455da946d66c3ff44c9"
+    },
+    {
+      "file": "completion-evidence/application-handoff.md",
+      "sha256": "548e23d206b074458bed958f49d951464470459de22d44562d5436b7c07b983f"
+    },
+    {
+      "file": "completion-evidence/isolated-postgres.mjs",
+      "sha256": "b9368d716ef916efddbc6115579b02a127c1414f1f128942d43e9fe1421fcb56"
+    },
+    {
+      "file": "completion-evidence/postgres-integration.log",
+      "sha256": "58bec8472ac157f63bc4b5a1d1654ffe195a174b091cec906349c79d61074859"
+    },
+    {
+      "file": "completion.md",
+      "sha256": "583187d598561e7b56f3d35f652568ccc42438ebb7d99aec53e4eb054ad83656"
+    },
+    {
+      "file": "copy-review.md",
+      "sha256": "aab65587a9eea7d71012a103bce6e3554a815cf5c832543616cb0c84fce4a4fb"
+    },
+    {
+      "file": "copy.canonical.json",
+      "sha256": "a539d29a06c6d23c0d7e22f71c9e2375fa138a9506313ebe535ae55788b17439"
+    },
+    {
+      "file": "copy.json",
+      "sha256": "c3137bde70950aa62aa2b02118c76869c211fd151ffe61ef9d59585f4679e93f"
+    },
+    {
+      "file": "preview/README.md",
+      "sha256": "914670565b11b0d212b82c762d7d9b484df5fab82b96998eaccc8e654fbe676c"
+    },
+    {
+      "file": "preview/fixture.json",
+      "sha256": "61444d89101d95b05bbe1321478c9fa15dbecc3565b8aa275bed2fbec45e2bd9"
+    },
+    {
+      "file": "preview/index.html",
+      "sha256": "a8fda0b2f361909c1b5cf1b8b6ba8012a695c1a76b7a8b4f07540a3a7b17e5f9"
+    },
+    {
+      "file": "preview/main.tsx",
+      "sha256": "575c216ca65163b2ebb2e9733819a8779810b50ebb037f6e83739382bf695a00"
+    },
+    {
+      "file": "preview/mock-api.ts",
+      "sha256": "ad46d2e24d38be9c333e285fafad659876f08b636be5fc3e5bc05763d4fe313a"
+    },
+    {
+      "file": "preview/preview.css",
+      "sha256": "5660abb0d57f75201977544a148364ed42a2d540a32b190f51831bbc31ad4ef0"
+    },
+    {
+      "file": "preview/vite.config.mts",
+      "sha256": "bd5a004e42e1367ef4c2f00c038706dcca16369bd1ea8516b19e6eb153493ad3"
+    },
+    {
+      "file": "review.html",
+      "sha256": "97b00b1f64f7b6f4b944237cff624f54d50a527e375acce7c9980eb9dd9784fb"
+    },
+    {
+      "file": "screenshots/capture-log.json",
+      "sha256": "80cde1812c83478625c2c7c4764c95aaa70e9142a34b3b1edaee67ca8c12d5c8"
+    },
+    {
+      "file": "screenshots/de-accepted-desktop.jpg",
+      "sha256": "1cfd5a4a22693bbd0ee3ae011d4b0013e18260bc1f6e9ce60938dacd844b4a52"
+    },
+    {
+      "file": "screenshots/de-accepted-mobile.jpg",
+      "sha256": "f4d3bd2a08b4908dc90e080aba98425ca1a36228db4b5da273067c2d1a447708"
+    },
+    {
+      "file": "screenshots/de-initial-desktop.jpg",
+      "sha256": "fd0a266297be9f5fa55470b270eb4f88f011b9e925353bcd839e514dc254d88f"
+    },
+    {
+      "file": "screenshots/de-initial-mobile.jpg",
+      "sha256": "7d65981b44878c83be4d5845e676fd57a007e4692fe1c11063b5e00f0d57a2ba"
+    },
+    {
+      "file": "screenshots/de-notice-sheet-bottom-mobile.jpg",
+      "sha256": "6746f75455ecaa3a96f67b946473a61f787b359861c7ea9895a24e1a46c2d14a"
+    },
+    {
+      "file": "screenshots/de-notice-sheet-top-mobile.jpg",
+      "sha256": "87f511de7900b28a41468d4dee95e71885b0532fa000a6237b54275583ba41c9"
+    },
+    {
+      "file": "screenshots/de-updated-320-dark.jpg",
+      "sha256": "374bd5f0fabb4e4cd141a9e0094e1bd73d68b7640dc25536b9ecad8e01082538"
+    },
+    {
+      "file": "screenshots/de-updated-desktop.jpg",
+      "sha256": "562b308510d2fd5401b27c575963e58ce1f7ba4575b779d3c7b90e2b6a7ab5a0"
+    },
+    {
+      "file": "screenshots/de-updated-mobile.jpg",
+      "sha256": "68339c1e238815d1212557b956b04d210283fb4c6eb26f8940acb4a2c80502b8"
+    },
+    {
+      "file": "screenshots/en-accepted-desktop.jpg",
+      "sha256": "f3e01479a5d7aa5fa083b6cc26086618b9a4eb5eb70d5b790ce47d97f08c9a66"
+    },
+    {
+      "file": "screenshots/en-accepted-mobile.jpg",
+      "sha256": "af664ba2a636fe0315615042491f2bc64454d761599f619e0416b1319048661f"
+    },
+    {
+      "file": "screenshots/en-custom-desktop.jpg",
+      "sha256": "dd6f2dd4bb5f58d7a3fa02f147b61ae7a5d9db588d548ba2c357e3e3dfaabe31"
+    },
+    {
+      "file": "screenshots/en-initial-desktop.jpg",
+      "sha256": "6e2dd56f4144a569b0f0ab616f727d3c0fe7f5ad3cd375fcec0bd574a55b7ef9"
+    },
+    {
+      "file": "screenshots/en-initial-mobile.jpg",
+      "sha256": "1be8c377874a73b62e873a1d769a449c3a0c470681c23003e60e35fea9073c1e"
+    },
+    {
+      "file": "screenshots/en-notice-sheet-bottom-mobile.jpg",
+      "sha256": "b494c570f501baedf4e847ebb340a4d2fff4832c6ca95daea4e0f257e47344e1"
+    },
+    {
+      "file": "screenshots/en-notice-sheet-top-mobile.jpg",
+      "sha256": "d9675a7688c3ef8a3a88746201cb2b395b3aea83ab69c0c4e842b18b31df1b1b"
+    },
+    {
+      "file": "screenshots/en-unavailable-mobile.jpg",
+      "sha256": "3fff37ac25c429cba112799c0e1ce2d1d5c59b668f4047a4b93766d1bfb46cea"
+    },
+    {
+      "file": "screenshots/en-updated-desktop.jpg",
+      "sha256": "593e0eed844906a0d10d956c29ebf6682f84c79b74167c4e1531a6d085b471a0"
+    },
+    {
+      "file": "screenshots/en-updated-mobile.jpg",
+      "sha256": "35c8cc9db21bb0a163142a8ec22fb04b25c13d4a7bece485fef006b68a795d72"
+    },
+    {
+      "file": "screenshots/es-accepted-desktop.jpg",
+      "sha256": "33b3740c5011b701b739373d7551f2a19ac17e6b53986b44241894ea7c484460"
+    },
+    {
+      "file": "screenshots/es-accepted-mobile.jpg",
+      "sha256": "6fd93f0f3ad7910a45ce91d5704598e4999a2fe54f2ccf41cd76d2ab1aabc260"
+    },
+    {
+      "file": "screenshots/es-initial-desktop.jpg",
+      "sha256": "9fc9a4e0cadc763dd285fe77d83aebe7673c493be64f897026ca7d1b68a082ba"
+    },
+    {
+      "file": "screenshots/es-initial-mobile.jpg",
+      "sha256": "59ec1dfb7124ec8d9974b699cc4fad603d6dcc9b834b757e59304db5ad0a066f"
+    },
+    {
+      "file": "screenshots/es-updated-desktop.jpg",
+      "sha256": "f7c4bcb9c8bf06555d154ec3a43bfb89d196fc0da2947120f9877e1e20cd0aff"
+    },
+    {
+      "file": "screenshots/es-updated-mobile.jpg",
+      "sha256": "bd29b9b035c673d87f7699790691e3aee5de87420092b83046e08c874e0714fb"
+    },
+    {
+      "file": "screenshots/fr-accepted-desktop.jpg",
+      "sha256": "b57f5b9c086f881ff3ff0ef740c81c339f9697356d0fedfe9697b3f748c1e7f9"
+    },
+    {
+      "file": "screenshots/fr-accepted-mobile.jpg",
+      "sha256": "5787cdfc972a5bdd0b2b085eec835e244cb5598b23573dc7b1584e84b3e5ae22"
+    },
+    {
+      "file": "screenshots/fr-initial-desktop.jpg",
+      "sha256": "3398209b489d8d1b7d5da178811d1f1fcfe82fc00c351713ef2a1e7661b79c33"
+    },
+    {
+      "file": "screenshots/fr-initial-mobile.jpg",
+      "sha256": "bc0da2af18de2a0a626e3285f25447b49488efd6193e5cab084754665af6f1a4"
+    },
+    {
+      "file": "screenshots/fr-updated-desktop.jpg",
+      "sha256": "7f85bffe6f915a3e93cd0cebc51abe9aed3d5279c95b3a087e1f7e56b889c547"
+    },
+    {
+      "file": "screenshots/fr-updated-mobile.jpg",
+      "sha256": "1899237dcf4f06198058786e211d1a0956e11f8535116e91f4fade81226f6fa3"
+    },
+    {
+      "file": "screenshots/index.json",
+      "sha256": "519b8ae06fc468fa5659d77a2426074967751761481e33d64e53184d07d457f4"
+    },
+    {
+      "file": "screenshots/pl-accepted-desktop.jpg",
+      "sha256": "3310ab9ad6add090e84bef9cb09cf7985be71c860af1443a91b6ec92efa11bd4"
+    },
+    {
+      "file": "screenshots/pl-accepted-mobile.jpg",
+      "sha256": "7bf98880b7e482511afe80f4a96580292e1c91d5adc9a42a3136e96f0a26aa11"
+    },
+    {
+      "file": "screenshots/pl-initial-desktop.jpg",
+      "sha256": "1b06595f7a20bec3333b59094ec964df19676b300be4ce490370163002a52c5e"
+    },
+    {
+      "file": "screenshots/pl-initial-mobile.jpg",
+      "sha256": "02658e5ab5cf75184ebdcef07e5b0b3829dd399598fc9c8360a3604a4a9805e7"
+    },
+    {
+      "file": "screenshots/pl-updated-desktop.jpg",
+      "sha256": "088132889bf8fa4ddaecfb0b88ded1b55c467ad648e5ea74be2d9c8adc2385af"
+    },
+    {
+      "file": "screenshots/pl-updated-mobile.jpg",
+      "sha256": "944e42363fd28b83d00bac50d017082c2fc27fc62eb97e4391f89763ca1b3100"
+    },
+    {
+      "file": "screenshots/pt-accepted-desktop.jpg",
+      "sha256": "1c6718f4c31a9e5dbccca5c72954071143e6b8fd6f74c85cfd40a6cfea81f726"
+    },
+    {
+      "file": "screenshots/pt-accepted-mobile.jpg",
+      "sha256": "a5f905551c97b624b0f796cbed4bb1eb30a9d61e3d5778f03492ada5d751c528"
+    },
+    {
+      "file": "screenshots/pt-initial-desktop.jpg",
+      "sha256": "21e36dd3438d8af1b69cf74aa2bf8392e1f8da610c1cdab28aaff470f70e6fd0"
+    },
+    {
+      "file": "screenshots/pt-initial-mobile.jpg",
+      "sha256": "df55bb05494c01b766272e3134816ef6e5ae1d49819d5a03055f05cb6b0bdfb6"
+    },
+    {
+      "file": "screenshots/pt-updated-desktop.jpg",
+      "sha256": "fa597d0b79c11d8c846a13b382f22579179506e478e3aeef3ff2dbe37644205d"
+    },
+    {
+      "file": "screenshots/pt-updated-mobile.jpg",
+      "sha256": "57458d0ee323016156ee85c3d5e0ec2dfdbdc91e1e710a98076692ee4c770432"
+    },
+    {
+      "file": "screenshots/ru-accepted-desktop.jpg",
+      "sha256": "bdd21bdbe9cb1a9c10afa8cf448c700c6f303669a29d9485e3d41910bacff7bc"
+    },
+    {
+      "file": "screenshots/ru-accepted-mobile.jpg",
+      "sha256": "86a255dd8a40a13b89fb861011919b53c11498208f5ce3a9e512467c129d1d31"
+    },
+    {
+      "file": "screenshots/ru-custom-mobile.jpg",
+      "sha256": "d5cf11eb1f33317742044f4cc374a70009ff6e8493ad881b511064e584620a34"
+    },
+    {
+      "file": "screenshots/ru-initial-390-text200.jpg",
+      "sha256": "022f687a4fc5f6ff35234ce595a2f477be0c60a0f70820a85d804d754e94ac64"
+    },
+    {
+      "file": "screenshots/ru-initial-desktop.jpg",
+      "sha256": "3e5566eb0d126fcd85ae2908732414e820ecf877a7c96f55981fffed77aca4e4"
+    },
+    {
+      "file": "screenshots/ru-initial-mobile.jpg",
+      "sha256": "b24be4c98e556f7abba780b653e26259ee5c68c360547a1f5d8dc699f2e3c04a"
+    },
+    {
+      "file": "screenshots/ru-missing-assent-mobile.jpg",
+      "sha256": "675b7175adea46d78687f9b143a743b7666c13fda21e1ea919992208b3228e11"
+    },
+    {
+      "file": "screenshots/ru-notice-sheet-bottom-mobile.jpg",
+      "sha256": "0beeea8cc11ecc16530b2697f6f11731f59f06a2d84329e415cd426c22171603"
+    },
+    {
+      "file": "screenshots/ru-notice-sheet-top-mobile.jpg",
+      "sha256": "7395d81bbb04b389814902c5c997e72c89c6fabb092fa4cbb262365143167167"
+    },
+    {
+      "file": "screenshots/ru-unavailable-desktop.jpg",
+      "sha256": "eae883a544e18d414559fd17899fc87aabf7eeefa82cf5235773bcaf92f53276"
+    },
+    {
+      "file": "screenshots/ru-unavailable-mobile.jpg",
+      "sha256": "f9b2ab3cebf2e81ecf57d0da703d71bd7cb8d03c5317928e9a18cc7c1057fbee"
+    },
+    {
+      "file": "screenshots/ru-updated-390-text200.jpg",
+      "sha256": "880b72acab3ce8ed03538165c971a62b6b82d69d966f9ae235047bd3f4804628"
+    },
+    {
+      "file": "screenshots/ru-updated-desktop.jpg",
+      "sha256": "019501898879b9d6da8265ad8c719642a87900c366b5c4e209fb5c28d0e58ab7"
+    },
+    {
+      "file": "screenshots/ru-updated-mobile.jpg",
+      "sha256": "6724ba7b9b7ccd1226e7b60ae07b87e1f52ba8a9612f58798f9cd97ba921ffe4"
+    },
+    {
+      "file": "screenshots/tr-accepted-desktop.jpg",
+      "sha256": "c9776027fdbf1367d067c01991c273935992bc6fd651fe0baa112b56f10ca709"
+    },
+    {
+      "file": "screenshots/tr-accepted-mobile.jpg",
+      "sha256": "c68f33428a841e002909113eabca1cb4606ba2e1e605b7435806dfa1b38e3c37"
+    },
+    {
+      "file": "screenshots/tr-initial-desktop.jpg",
+      "sha256": "e5acc876d94f1fd1dff47ae6fe2d6b5321576946edee2dd17a625438e4b537ff"
+    },
+    {
+      "file": "screenshots/tr-initial-mobile.jpg",
+      "sha256": "5f6a7483c385c0aee079431892e3bfe92ba8014cf5d279afd50acfb55e4cc181"
+    },
+    {
+      "file": "screenshots/tr-updated-desktop.jpg",
+      "sha256": "df274941f189c197aba8f4cf5f45af28ee28a81634342d386d55976a976bab96"
+    },
+    {
+      "file": "screenshots/tr-updated-mobile.jpg",
+      "sha256": "1239885d4c9ca1c9d77261ec62246bc2b4ff90e313575e5506f177debf9f4209"
+    },
+    {
+      "file": "screenshots/uk-accepted-desktop.jpg",
+      "sha256": "4c65f301bfed18846f7dfe881360946fb604f812e4bc919a6078c430893b0b1d"
+    },
+    {
+      "file": "screenshots/uk-accepted-mobile.jpg",
+      "sha256": "89e19f153cd451a7bc03b9e020d5e2d5e6105bf6a09d9f999df893894041cebc"
+    },
+    {
+      "file": "screenshots/uk-initial-desktop.jpg",
+      "sha256": "880c796bbd4b451c189b7c819abcb9ad96e008eb9610381232bf05201361efdf"
+    },
+    {
+      "file": "screenshots/uk-initial-mobile.jpg",
+      "sha256": "9e8526035abd022ef607030a6bf5c3231cfec050fdfda03b3293d50086b4607d"
+    },
+    {
+      "file": "screenshots/uk-updated-desktop.jpg",
+      "sha256": "88b3c2a2b9792ddd4521406a1130bb50992f46fca33c7ca732146ed30e1db1a0"
+    },
+    {
+      "file": "screenshots/uk-updated-mobile.jpg",
+      "sha256": "a9442d2a1b32da7660e07cd5a1bc1a24427d628adbd2e784688b6484400a7b0d"
+    },
+    {
+      "file": "screenshots/variant-checks.json",
+      "sha256": "39261e2affb68a7f30b72ef64d04df366e744cc16dec77daafb59e254666aeea"
+    },
+    {
+      "file": "spec08.approved.md",
+      "sha256": "ffd1d955f31ab8ce92c78f2cadc14a6ee9e3e15b9e43d14111a0075dd85def7a"
+    },
+    {
+      "file": "spec08.snapshot.md",
+      "sha256": "29e4db3917a6e25d8e493014aa4c0c4cacb1e4ec2f0f3e987ded8263d8dfbc0e"
+    },
+    {
+      "file": "unchanged-business-templates.json",
+      "sha256": "2d30a1d17d70951bb163d4d642ce97f6a8b1fa1c50e87a8c806bd852631c5da7"
+    },
+    {
+      "file": "verification.md",
+      "sha256": "e7332513bdc674a90c1d0e904ff6e75128ed304a49b2b2833d9fa18ad738d851"
+    },
+    {
+      "file": "verify.py",
+      "sha256": "eb7ce4f027df10f0beee22fdb563f9f0dcb355de003d3800d154eb054d0eadee"
+    },
+    {
+      "file": "../36_u70_booking_copy_approval_20261008.md",
+      "sha256": "d35015b217d6e70c371e3771767f679b1953408af2555fb50d5126d62e60c141"
+    }
+  ]
+}

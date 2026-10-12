@@ -36,7 +36,7 @@ The landing separately owns **LegalReturnToApp**, which accepts only the allowli
 | app `TermsPage.tsx` / `PrivacyPolicyPage.tsx` | redirect status + safe back link if env missing | replace to canonical landing; do not retain placeholder as production prose | none |
 | `OnboardingPage.tsx` / review | non-blocking Terms · Privacy · DPA in help/footer if desired | always new tab; optional `from=onboarding`; onboarding draft unchanged | none; owner accepted before account/workspace creation |
 | authenticated Settings/help | Terms · Privacy · DPA · Subprocessors | always new tab | material-change re-acceptance is a separate gate |
-| `PublicBookingPage.tsx` | Business terms/cancellation · Business privacy · Perelai Booking Terms · Perelai Privacy | new tab for Perelai; business links new tab with safe `noopener`; no auth Terms | Business policy agreement when required; privacy acknowledgement; marketing separate |
+| `PublicBookingPage.tsx` | Business terms/cancellation · Business privacy · Perelai Booking Terms · Perelai Privacy | new tab for Perelai; business links new tab with safe `noopener`; no auth Terms | Business agreement when required; Perelai agreement in action area; informational privacy; no MVP marketing |
 | booking confirmation/proposal/status | same End Client links | new tab; never forward token | no duplicate agreement unless materially new terms/action |
 | receipt/status/preferences/client hub | Booking Terms when relevant · Privacy | new tab; never forward token/path/referrer | none unless the user starts a new contractual action |
 | landing footer | Terms · Privacy · Cookies · **Refund Policy** (approved before Paddle review) · Subprocessors; DPA/Booking Terms in legal centre | current locale canonical | none |
@@ -120,56 +120,121 @@ Dynamic terms in square brackets are escaped text from validated public Business
 
 ### 5.1 Layered privacy notice
 
-> **Privacy**  
-> `[Business Name]` uses Perelai to manage this `[booking/request/order/reservation]`.
-> `[Business Name]` is responsible for how it uses your service information. Perelai processes it to
-> provide the booking service and uses limited technical data to operate and protect the platform.
-> **Business privacy notice** · **Perelai Privacy Notice**
+**U70 factual synchronization (2026-10-08), app `478710c4c`: revised UI wording and
+translations are APPROVED by the owner for `booking-copy-2026-10-08.1` under
+`owner-u70-booking-copy-r1-20261008`. Package: [36](36_u70_booking_copy_approval_20261008.md).
+The approved canonical UI-copy hash is `a539d29a06c6d23c0d7e22f71c9e2375fa138a9506313ebe535ae55788b17439`.
+The owner chose to retain current summary length; full platform documents/templates are unchanged.**
 
-An external privacy URL is optional. Implement document 19's generated Business notice: concise first
-layer plus accessible complete information, populated from confirmed identity/contact and reviewed
-purpose/retention/provider facts. Review the reusable template centrally for the launch market; do
-not require each owner to author a policy. A short paragraph alone or a privacy email alone is not
-the full notice. Do not invent facts or claim Perelai is sole controller.
+Use one Privacy card. For a generated Business notice, present the reviewed regional
+summary verbatim in its published language. Do not shorten its material facts or repeat
+generic Business-role prose above it. For an external notice, show a short Business
+responsibility line with a public privacy/contact email instead.
+
+Approved Perelai role line:
+
+> Booking runs on Perelai, which processes this information to provide the booking service
+> and uses limited technical data to operate and protect the platform.
+
+Always-visible links before sending:
+
+> **How my data is used** · **Perelai Privacy Notice**
+
+The first opens the unchanged complete generated notice in an accessible document sheet
+(title, revision/date, full text, Business address/contact, public permalink), or opens
+the verified external Business URL. The generated-notice trigger has a document icon and `aria-haspopup="dialog"`;
+external links have an external-link arrow. The sheet supports focus containment, Escape,
+return focus and one text scroller owned by ActionSheet. A language mismatch is explained
+inside the sheet using the visitor's language and the published language's localized name;
+the trigger has no language suffix. The standalone notice shell honours normalized `lang`
+and preserves it in its token-free booking return; summary/body keep their published language. An email alone is not a notice. Do not invent facts or claim Perelai is sole
+controller. Document 19 and reviewed templates remain unchanged. Perelai URLs use the
+visitor's normalized language with landing's existing English-original explanation;
+the Business notice retains its published language and permalink's UI `lang` only.
 
 ### 5.2 Conditional Business agreement and simple cancellation reminder
 
-For document 19's standard no-prepayment/no-cancellation-fee flow, display the owner-selected reminder
-without a required Business-policy checkbox. No custom Booking Terms or Cancellation Policy URL is
-required. Example for the reviewed standard template:
+For the standard no-prepayment/no-cancellation-fee path, show the owner-confirmed reminder
+verbatim under “Cancelling or rescheduling”, without a Business checkbox. No custom Terms
+or Cancellation Policy URL is required. Invent no deadline or penalty; keep rights intact.
 
-> Если планы изменились, сообщите об отмене или переносе как можно раньше: `[контакт]`.
-> Для этой записи предоплата и плата за отмену не предусмотрены.
-
-The owner must confirm those facts. An optional “желательно за 12/24 часа” preference creates no
-penalty. No timing selection means no invented deadline. Keep statutory/service rights intact.
-
-For custom material terms, when the approved formation model requires contractual acceptance:
+Custom Business agreement remains beside the applicable text/verified links:
 
 > [ ] I agree to the booking and cancellation terms of `[Business Name]`.
 
-Present the actual applicable terms next to the statement or as linked documents. Do not demand two
-separate documents when one contains the relevant information. Snapshot the shown versions/text;
-external URL evidence must not claim to capture the remote document contents.
+Do not require two documents when one contains the relevant terms. Preserve the exact
+shown revision/text evidence; an external URL is not a snapshot of remote contents.
 
-Perelai Booking Terms need their own linked contractual statement and affirmative evidence when
-the approved formation model requires it. Business-policy acceptance does not silently incorporate
-Perelai Terms. Do not add a fresh agreement merely to view existing status/privacy information.
+Once booking content is complete, the sticky action card presents one of three states:
 
-### 5.3 Privacy acknowledgement
+1. **Initial acceptance required:** one initially unchecked Perelai statement above price/action:
 
-> By submitting, you acknowledge the Perelai Privacy Notice and `[Business Name]` Privacy Notice.
+   > [ ] I agree to the **Perelai Booking Terms**.
 
-This is not a checkbox unless counsel identifies a distinct consent-reliant processing purpose. Do not
-bundle special-category or marketing consent here.
+2. **Updated acceptance required:** show the update message followed by the same unchecked statement:
+
+   > The booking terms have changed. Please accept the current terms.
+
+3. **Already accepted:** for a valid personal token resolving an existing Client in the same
+   Company, the API may return verified current original acceptance. Replace the checkbox with:
+
+   > You accepted **Perelai Booking Terms** `[original acceptance date]`.
+
+   Format the date with `Intl.DateTimeFormat` using the normalized UI language,
+   `day: numeric`, `month: long`, `year: numeric` and the Company's timezone. The `<time>`
+   datetime is the original API timestamp. There is no newly invented acceptance date or flag.
+   The person still separately confirms each new booking; custom Business agreement remains
+   freshly required when applicable.
+
+The terms link is outside the checkbox label and never toggles agreement. The initial/update
+row has an 18px checkbox, 13px text, a minimum 44px row and visible keyboard focus. The action
+remains interactive before assent; sending is guarded by `readyToConfirm` and page/API gates,
+not by pretending that an unaccepted checkbox is accepted. Its `aria-disabled` reflects
+submission in progress. The first tap, Enter/Space or completed drag without required assent
+routes to highlighted Privacy and focuses the empty checkbox without arming “Tap again”.
+Show one error “Accept the booking terms”, connected to the checkbox by `aria-describedby`
+and `aria-invalid`; do not repeat a permanent hint below the action. No whole-row error fill.
+
+After required assent, keyboard Enter/Space confirms; the first tap/click arms “Tap again to
+book” for 3 seconds and the second confirms; drag remains an acceleration. The date/time
+badge retains its 52 × 66px shape. Content edits preserve local assent; Company/Client changes
+reset it, and legalRevision conflict clears/refetches acceptance state. Footer height is
+measured after loading/language remounts, with safe-area padding and a safe reserve below
+content. Available intake has no duplicate page-bottom legal links; unavailable intake keeps
+spaced public fallback links.
+
+Acceptance reuse requires original affirmative `PERELAI_TERMS_ACCEPTANCE` or
+`BOOKING_AGREEMENT` evidence matching both configured platform document and collection-copy
+versions. Viewing visits alone, imports, owner-created Clients without matching evidence,
+marketing evidence and prior reuse references do not grant acceptance. The browser omits
+`perelaiBookingTermsAccepted` when reuse applies. The API rechecks the source in the booking
+creation transaction and writes `PERELAI_TERMS_REFERENCE` linked to original evidence,
+preserving `acceptedAt` and recording `referencedAt`. Custom Business evidence remains
+separate; no second platform affirmative acceptance is fabricated. Existing legalRevision
+validation order remains unchanged. Approval of this package authorizes the described UI
+copy/states; it does not revise platform documents, templates or configure production ENV.
+
+### 5.3 Informational privacy links
+
+The always-visible links in §5.1 replace “By submitting, you acknowledge…”, which asserted
+reading. Privacy is informational, not required consent. After content first becomes complete,
+reveal the comment once with `scrollIntoView({block: end})`, respecting reduced motion and
+measured sticky-footer height; this automatic path does not highlight Privacy. The comment
+belongs before Privacy and does not depend on agreement. An attempt without required assent
+uses the separate Privacy path (`block: start`, 16px top scroll margin), highlights the opaque
+card with primary tint/ring/shadow for 1.5 seconds and focuses the checkbox. Custom Business
+terms navigation targets and highlights its own required row.
+
+Fallback for consideration during U70 only, not displayed:
+
+> Details from this form are processed by `[Business Name]` and Perelai as described in the notices.
 
 ### 5.4 Marketing
 
-> [ ] Send me occasional offers and news from `[Business Name]`.
-
-It is optional, unchecked and purpose/sender specific. Store evidence separately from booking terms.
-Unchecking it must not suppress confirmation, change or reminder messages necessary for the requested
-interaction.
+MVP presents no marketing checkbox and web sends no marketingOptIn. Confirmation, change
+and reminder communications remain service notifications. Optional API field and separate
+evidence model stay unchanged. Return marketing only with supported campaigns, unsubscribe
+and a separately approved purpose/sender statement.
 
 ### 5.5 Status meanings
 
@@ -288,6 +353,12 @@ Platform template/approval is not ready:
 End client, only while intake is actually unavailable:
 
 > Онлайн-запись временно недоступна. Свяжитесь с `[бизнес / подтверждённый контакт]`.
+
+U65 replaces new-intake controls and sticky action with the fallback before selection when
+server `intakeAvailable` is false. Show verified public email/address only when supplied;
+no invented phone or internal setup reasons. Personal existing visits and public footer
+links remain. Submit still checks platform readiness, legalRevision, then Business readiness
+in the existing order.
 
 Do not claim agreement to an absent policy. Do not use a general warning flag to bypass the Business
 notice. The standard reviewed/generated path is a complete supported path, not a missing-policy exception.

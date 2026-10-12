@@ -1,0 +1,114 @@
+[
+  {
+    "source": "docs/legal/business-notice-drafts/AU.en.standard.v1.prepared.json",
+    "sourceSha256": "4dcce373fbbe64b4d37450aa6d8e61fbe3a750ad597481a7049e69463506a978",
+    "version": "business-booking-AU-en-v1",
+    "approvalRef": "owner-au-en-preparation-20260925",
+    "effectiveDate": "2026-09-25",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} uses your contact and appointment information to handle your request, maintain the related client record and contact you about your booking. We use Perelai, with hosting in Germany and other overseas service providers. Privacy questions, access or correction requests and complaints: {{PRIVACY_CONTACT_EMAIL}}. Read our Booking Privacy Notice for details about collection, use, overseas handling, retention and your choices.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/AU.en.standard.v2.prepared.json",
+    "sourceSha256": "ea7376d042b7422b565917f99fc105829423fe23c7197d9a98628e3005e0bda5",
+    "version": "business-booking-AU-en-v2",
+    "approvalRef": "owner-booking-notice-cloudflare-v2-20260927",
+    "effectiveDate": "2026-11-01",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} uses your contact and appointment information to handle your request, maintain the related client record and contact you about your booking. We use Perelai, with hosting in Germany and other overseas service providers. Privacy questions, access or correction requests and complaints: {{PRIVACY_CONTACT_EMAIL}}. Read our Booking Privacy Notice for details about collection, use, overseas handling, retention and your choices.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/CA.en.standard.v1.prepared.json",
+    "sourceSha256": "b81c223205512cb47ff383333229719372f1285b59d946865c7d36302ea151a6",
+    "version": "business-booking-CA-en-v1",
+    "approvalRef": "owner-ca-en-preparation-20260926",
+    "effectiveDate": "2026-09-26",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} collects your contact and appointment details to arrange your booking, maintain the related client record and contact you about it. By submitting the form, you ask us to use this information for these booking purposes. We use Perelai and overseas providers, including hosting in Germany and email delivery in the United States. This does not sign you up for marketing. Read our Booking Privacy Notice for the details and your choices, including withdrawing consent. Our Privacy Officer can answer questions at {{PRIVACY_CONTACT_EMAIL}}.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/CA.en.standard.v2.prepared.json",
+    "sourceSha256": "e2403683eda44f5bbc56b0a7a48c464cc30c2b5e5e66b2e36764711123a53fa4",
+    "version": "business-booking-CA-en-v2",
+    "approvalRef": "owner-booking-notice-cloudflare-v2-20260927",
+    "effectiveDate": "2026-11-01",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} collects your contact and appointment details to arrange your booking, maintain the related client record and contact you about it. By submitting the form, you ask us to use this information for these booking purposes. We use Perelai and overseas providers, including hosting in Germany and email delivery in the United States. This does not sign you up for marketing. Read our Booking Privacy Notice for the details and your choices, including withdrawing consent. Our Privacy Officer can answer questions at {{PRIVACY_CONTACT_EMAIL}}.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments. This does not limit any rights or remedies you have under applicable consumer law."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/UA.uk.standard.v1.prepared.json",
+    "sourceSha256": "a8ae7136d4e67f44961b62275595fb187fb1766839fa2c8f0eb41a8713cfca03",
+    "version": "business-booking-UA-uk-v1",
+    "approvalRef": "owner-ua-uk-preparation-20260925",
+    "effectiveDate": "2026-09-25",
+    "language": "uk",
+    "summary": "Володілець ваших персональних даних — {{BUSINESS_NAME}}. Ми використовуємо контактні дані та відомості про візит для опрацювання заявки, ведення пов'язаної картки клієнта й повідомлень щодо запису. Для цього користуємося Perelai. Питання щодо даних: {{PRIVACY_CONTACT_EMAIL}}. Докладніше про використання, строки зберігання та ваші права — у повідомленні нижче.",
+    "standardReminder": {
+      "ASAP": "Змінилися плани? Повідомте про скасування або перенесення якомога раніше: {{CONTACT_EMAIL}}. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається.",
+      "PREFER_12H": "Якщо потрібно скасувати або перенести візит, повідомте, будь ласка, бажано щонайменше за 12 годин: {{CONTACT_EMAIL}}. Це прохання для зручності планування, а не строк, за порушення якого нараховується плата. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається.",
+      "PREFER_24H": "Якщо потрібно скасувати або перенести візит, повідомте, будь ласка, бажано щонайменше за 24 години: {{CONTACT_EMAIL}}. Це прохання для зручності планування, а не строк, за порушення якого нараховується плата. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/UA.uk.standard.v2.prepared.json",
+    "sourceSha256": "2a0f6866d111ee995f707f1c232fa67bce7063a2b37bce6afd2ed7dd1fce7782",
+    "version": "business-booking-UA-uk-v2",
+    "approvalRef": "owner-booking-notice-cloudflare-v2-20260927",
+    "effectiveDate": "2026-11-01",
+    "language": "uk",
+    "summary": "Володілець ваших персональних даних — {{BUSINESS_NAME}}. Ми використовуємо контактні дані та відомості про візит для опрацювання заявки, ведення пов'язаної картки клієнта й повідомлень щодо запису. Для цього користуємося Perelai. Питання щодо даних: {{PRIVACY_CONTACT_EMAIL}}. Докладніше про використання, строки зберігання та ваші права — у повідомленні нижче.",
+    "standardReminder": {
+      "ASAP": "Змінилися плани? Повідомте про скасування або перенесення якомога раніше: {{CONTACT_EMAIL}}. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається.",
+      "PREFER_12H": "Якщо потрібно скасувати або перенести візит, повідомте, будь ласка, бажано щонайменше за 12 годин: {{CONTACT_EMAIL}}. Це прохання для зручності планування, а не строк, за порушення якого нараховується плата. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається.",
+      "PREFER_24H": "Якщо потрібно скасувати або перенести візит, повідомте, будь ласка, бажано щонайменше за 24 години: {{CONTACT_EMAIL}}. Це прохання для зручності планування, а не строк, за порушення якого нараховується плата. Для цього запису передоплата не потрібна. Ми не стягуємо плату за скасування або неявку. На цій сторінці оплата не приймається."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/US.en.standard.v1.prepared.json",
+    "sourceSha256": "2aa3813c4a4491a73373a94d209bb2a00e79a430fab2a71271b2e584854c5e49",
+    "version": "business-booking-US-en-v1",
+    "approvalRef": "owner-us-en-release-20260925",
+    "effectiveDate": "2026-09-25",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} uses your contact and appointment information to handle your request, maintain the related client record, and contact you about your booking. We use Perelai to help provide this service. Privacy questions: {{PRIVACY_CONTACT_EMAIL}}. See our Booking Privacy Notice for details about the information collected, its use and disclosure, retention, and available privacy choices.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments."
+    }
+  },
+  {
+    "source": "docs/legal/business-notice-drafts/US.en.standard.v2.prepared.json",
+    "sourceSha256": "7f6b159850e4a4fbaa987f4a029df08e847066ee4547e201ab15e59c47dea184",
+    "version": "business-booking-US-en-v2",
+    "approvalRef": "owner-booking-notice-cloudflare-v2-20260927",
+    "effectiveDate": "2026-11-01",
+    "language": "en",
+    "summary": "{{BUSINESS_NAME}} uses your contact and appointment information to handle your request, maintain the related client record, and contact you about your booking. We use Perelai to help provide this service. Privacy questions: {{PRIVACY_CONTACT_EMAIL}}. See our Booking Privacy Notice for details about the information collected, its use and disclosure, retention, and available privacy choices.",
+    "standardReminder": {
+      "ASAP": "Plans changed? Please let us know as soon as possible if you need to cancel or reschedule: {{CONTACT_EMAIL}}. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments.",
+      "PREFER_12H": "If you need to cancel or reschedule, please let us know at least 12 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments.",
+      "PREFER_24H": "If you need to cancel or reschedule, please let us know at least 24 hours ahead when possible: {{CONTACT_EMAIL}}. This helps us plan our schedule; there is no fee for giving less notice. No prepayment is required for this booking, and we do not charge cancellation or no-show fees. This page does not accept payments."
+    }
+  }
+]

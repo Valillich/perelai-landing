@@ -1,0 +1,83 @@
+{
+  "ru": {
+    "public_booking": {
+      "legal_trader_address_label": "Юридический адрес:",
+      "legal_contact_email_label": "Контакт бизнеса:",
+      "legal_privacy_contact_label": "Вопросы о данных:",
+      "legal_refund_link": "Условия возврата",
+      "legal_terms_changed": "Условия записи изменились. Проверьте актуальные условия и попробуйте ещё раз."
+    }
+  },
+  "uk": {
+    "public_booking": {
+      "legal_trader_address_label": "Юридична адреса:",
+      "legal_contact_email_label": "Контакт бізнесу:",
+      "legal_privacy_contact_label": "Питання щодо даних:",
+      "legal_refund_link": "Умови повернення",
+      "legal_terms_changed": "Умови запису змінилися. Перегляньте актуальні умови та спробуйте ще раз."
+    }
+  },
+  "en": {
+    "public_booking": {
+      "legal_trader_address_label": "Registered address:",
+      "legal_contact_email_label": "Business contact:",
+      "legal_privacy_contact_label": "Privacy contact:",
+      "legal_refund_link": "Refund policy",
+      "legal_terms_changed": "The booking terms have changed. Please review the current terms and try again."
+    }
+  },
+  "pl": {
+    "public_booking": {
+      "legal_trader_address_label": "Adres siedziby:",
+      "legal_contact_email_label": "Kontakt do firmy:",
+      "legal_privacy_contact_label": "Kontakt w sprawie danych:",
+      "legal_refund_link": "Zasady zwrotów",
+      "legal_terms_changed": "Warunki rezerwacji uległy zmianie. Zapoznaj się z aktualnymi warunkami i spróbuj ponownie."
+    }
+  },
+  "es": {
+    "public_booking": {
+      "legal_trader_address_label": "Domicilio registrado:",
+      "legal_contact_email_label": "Contacto del negocio:",
+      "legal_privacy_contact_label": "Consultas sobre datos personales:",
+      "legal_refund_link": "Política de reembolsos",
+      "legal_terms_changed": "Las condiciones de reserva han cambiado. Revisa las condiciones actuales e inténtalo de nuevo."
+    }
+  },
+  "fr": {
+    "public_booking": {
+      "legal_trader_address_label": "Adresse enregistrée :",
+      "legal_contact_email_label": "Contact de l’entreprise :",
+      "legal_privacy_contact_label": "Questions sur vos données :",
+      "legal_refund_link": "Politique de remboursement",
+      "legal_terms_changed": "Les conditions de réservation ont changé. Consultez les conditions actuelles et réessayez."
+    }
+  },
+  "de": {
+    "public_booking": {
+      "legal_trader_address_label": "Geschäftsanschrift:",
+      "legal_contact_email_label": "Kontakt zum Unternehmen:",
+      "legal_privacy_contact_label": "Datenschutzkontakt:",
+      "legal_refund_link": "Erstattungsrichtlinie",
+      "legal_terms_changed": "Die Buchungsbedingungen haben sich geändert. Lesen Sie die aktuellen Bedingungen und versuchen Sie es erneut."
+    }
+  },
+  "pt": {
+    "public_booking": {
+      "legal_trader_address_label": "Endereço registrado:",
+      "legal_contact_email_label": "Contato do negócio:",
+      "legal_privacy_contact_label": "Contato sobre dados pessoais:",
+      "legal_refund_link": "Política de reembolso",
+      "legal_terms_changed": "Os termos de agendamento mudaram. Confira os termos atuais e tente novamente."
+    }
+  },
+  "tr": {
+    "public_booking": {
+      "legal_trader_address_label": "Kayıtlı adres:",
+      "legal_contact_email_label": "İşletme iletişim bilgileri:",
+      "legal_privacy_contact_label": "Kişisel veriler için iletişim:",
+      "legal_refund_link": "İade politikası",
+      "legal_terms_changed": "Rezervasyon koşulları değişti. Güncel koşulları inceleyip yeniden deneyin."
+    }
+  }
+}

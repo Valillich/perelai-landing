@@ -1,5 +1,6 @@
 import catalog from "@/data/niche-catalog.generated.json"
 import { env } from "@/lib/env"
+import { NICHE_PAGES } from "@/config/niche-pages"
 
 export interface SignupUrlParams {
   niche?: string
@@ -13,15 +14,16 @@ export interface SignupUrlParams {
 
 interface NicheCatalog {
   supportedLocales?: string[]
-  templates?: Array<{ nicheSlugs?: string[] }>
+  templates?: Array<{ id: string; nicheSlugs?: string[]; selectionAvailable?: boolean }>
 }
 
 const signupUrl = new URL("/register", env.NEXT_PUBLIC_APP_URL).toString()
 const loginUrl = new URL("/login", env.NEXT_PUBLIC_APP_URL).toString()
 
 const catalogData = catalog as NicheCatalog
+const heldTemplateIds = new Set(NICHE_PAGES.filter(page => page.wave === "hold-legal").map(page => page.templateId))
 const validNicheSlugs = new Set(
-  (catalogData.templates ?? []).flatMap((template) => template.nicheSlugs ?? []),
+  (catalogData.templates ?? []).filter(template => template.selectionAvailable !== false && !heldTemplateIds.has(template.id)).flatMap((template) => template.nicheSlugs ?? []),
 )
 const supportedLocales = new Set(catalogData.supportedLocales ?? [])
 

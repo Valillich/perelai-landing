@@ -93,8 +93,8 @@ export const NICHE_PAGES: NichePage[] = [
     path: "/for-massage-therapists",
     niche: "massage-therapist",
     templateId: "massage",
-    wave: "1b",
-    enabled: true,
+    wave: "hold-legal",
+    enabled: false,
   },
   {
     path: "/for-barbers",
@@ -130,7 +130,7 @@ export const NICHE_PAGES: NichePage[] = [
     path: "/for-spas",
     niche: "day-spa",
     templateId: "spa",
-    wave: "2",
+    wave: "hold-legal",
     enabled: false,
   },
   {
@@ -144,8 +144,8 @@ export const NICHE_PAGES: NichePage[] = [
     path: "/for-personal-trainers",
     niche: "personal-trainer",
     templateId: "personal_trainer",
-    wave: "2",
-    enabled: true,
+    wave: "hold-legal",
+    enabled: false,
   },
   {
     path: "/for-music-teachers",
@@ -158,7 +158,7 @@ export const NICHE_PAGES: NichePage[] = [
     path: "/for-yoga-instructors",
     niche: "yoga-instructor",
     templateId: "yoga_instructor",
-    wave: "2",
+    wave: "hold-legal",
     enabled: false,
   },
   {

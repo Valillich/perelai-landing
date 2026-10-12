@@ -21,6 +21,10 @@ afterEach(() => {
 })
 
 describe("buildAppSignupUrl", () => {
+  test.each(["massage-therapist", "personal-trainer", "medical-aesthetics", "day-spa", "yoga-instructor", "esthetician"])("does not forward held acquisition %s", async (niche) => {
+    const { buildAppSignupUrl } = await loadUrls()
+    expect(new URL(buildAppSignupUrl({niche})).searchParams.has("niche")).toBe(false)
+  })
   test("forwards only a released plan intent independently of niche", async () => {
     const { buildAppSignupUrl } = await loadUrls()
 

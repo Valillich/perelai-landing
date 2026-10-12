@@ -1,5 +1,24 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
+**Simplified MVP decision — 2026-10-12:** [polish and template scope 37](37_mvp_legal_polish_and_business_scope_20261012.md)
+now uses one global hold list: `aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`,
+`personal_trainer`, `yoga_instructor`, plus the existing functional `rent`/`personal` group holds.
+LP-M1 enforces selection/setup and applicable publication/intake rules, aligns landing exposure and
+adds short data-minimisation hints. **No country × niche matrix, new ordinary-use declaration or
+Terms amendment for this scope reduction.** Those reviews wait for post-MVP customer demand.
+Keep existing market admission, including CA's ten provinces/territories; LP-M2 corrects its existing
+QC-only declaration. LP-M3/M4 finish existing PAR-O and verify current notices/identity/operations.
+Status: **SCOPE SELECTED / IMPLEMENTATION PLANNED**. All seven platform documents remain
+**2026-11-01.1**, effective **2026-11-01**. Correcting a current salon notice, if required, is a
+separate immutable notice release. No public text/hash, registry, ENV or customer data changed.
+U70 and completed G/PAR/BILL work remain separate; the review's “GO” is not release evidence.
+
+**Booking copy — 2026-10-08:** [U70 package 36](36_u70_booking_copy_approval_20261008.md)
+is **OWNER-APPROVED**, version `booking-copy-2026-10-08.1` under `owner-u70-booking-copy-r1-20261008`.
+Canonical hash/texts are unchanged from r1; all five missing UI-key translations are installed,
+and the web manifest pins all 44 keys in nine locales. Local `.env` and `.env.example` use the
+approved version; production ENV/deployment and the 200% action-layout fix remain separate.
+
 **Current status — 2026-10-07 (owner update + BILL8A):** G-BE2, PAR-P,
 BILL5B (`ffacfc7a4`) and BILL6A (`70c20652d`, accepted operator/CLI scope) are **DONE**.
 R1/R2/R3 original fixes are complete. BILL8A inventory is **COMPLETE**; production

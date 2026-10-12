@@ -194,6 +194,9 @@ function dumpCatalogViaTsx(appRepo) {
   const tmpDumpFile = path.join(appRepo, ".tmp-catalog-dump.json")
 
   const dumpScript = `
+import { evaluateBusinessTemplateAdmission } from ${JSON.stringify(
+    path.join(appRepo, "libs/core/src/templates/business-templates.ts"),
+  )};
 import { BUSINESS_TEMPLATES_CATALOG } from ${JSON.stringify(
     path.join(appRepo, "libs/core/src/templates/business-templates-catalog.ts"),
   )};
@@ -209,6 +212,8 @@ import { I18N_SUPPORTED_LANGUAGE_CODES } from ${JSON.stringify(
 
 const templates = BUSINESS_TEMPLATES_CATALOG.map((t) => ({
   id: t.id,
+  selectionAvailable: evaluateBusinessTemplateAdmission(t.id, 'selection').allowed,
+  selectionHoldReason: evaluateBusinessTemplateAdmission(t.id, 'selection').reason,
   groupId: t.groupId,
   terminologyProfile: t.terminologyProfile,
   marketingPriority: t.marketingPriority,

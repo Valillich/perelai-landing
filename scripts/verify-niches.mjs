@@ -155,6 +155,9 @@ function verifyRegistry(catalog, nichePages, flags) {
     }
 
     if (page.enabled) {
+      if (template.selectionAvailable === false) {
+        fail(`enabled page ${page.path}: template ${page.templateId} is unavailable for selection`)
+      }
       if (!template.bookingConfig?.enabled) {
         fail(
           `enabled page ${page.path}: template ${page.templateId} has bookingConfig.enabled=false without an approved activation path`,

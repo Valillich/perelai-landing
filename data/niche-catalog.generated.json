@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "12828759f618609e74c4e0f949bb4369d784c7da",
-  "generatedAt": "2026-10-07T14:30:03+07:00",
+  "sourceCommit": "a91628447ba560a450dff85a947f1f8877e9e0c9",
+  "generatedAt": "2026-10-12T12:46:35+07:00",
   "supportedLocales": [
     "en",
     "uk",
@@ -109,6 +109,8 @@
   "templates": [
     {
       "id": "independent_colorist",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 1,
@@ -178,6 +180,8 @@
     },
     {
       "id": "aesthetic_clinic",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "beauty",
       "terminologyProfile": "aesthetic",
       "marketingPriority": 2,
@@ -243,6 +247,8 @@
     },
     {
       "id": "salon",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 3,
@@ -303,6 +309,8 @@
     },
     {
       "id": "brow_lash_artist",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 4,
@@ -360,6 +368,8 @@
     },
     {
       "id": "nail_salon",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 5,
@@ -413,6 +423,8 @@
     },
     {
       "id": "massage",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 6,
@@ -457,6 +469,8 @@
     },
     {
       "id": "barber",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 9,
@@ -501,6 +515,8 @@
     },
     {
       "id": "advanced_skincare",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "beauty",
       "terminologyProfile": "aesthetic",
       "marketingPriority": 10,
@@ -558,6 +574,8 @@
     },
     {
       "id": "spa",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 20,
@@ -598,6 +616,8 @@
     },
     {
       "id": "makeup_artist",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "beauty",
       "terminologyProfile": "beauty",
       "marketingPriority": 21,
@@ -638,6 +658,8 @@
     },
     {
       "id": "tutor",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "edu",
       "marketingPriority": 7,
@@ -681,6 +703,8 @@
     },
     {
       "id": "coach",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "coaching",
       "marketingPriority": 8,
@@ -726,6 +750,8 @@
     },
     {
       "id": "personal_trainer",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "edu",
       "terminologyProfile": "fitness",
       "marketingPriority": 11,
@@ -770,6 +796,8 @@
     },
     {
       "id": "music_teacher",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "edu",
       "marketingPriority": 12,
@@ -810,6 +838,8 @@
     },
     {
       "id": "yoga_instructor",
+      "selectionAvailable": false,
+      "selectionHoldReason": "MVP_TEMPLATE_HOLD",
       "groupId": "edu",
       "terminologyProfile": "fitness",
       "marketingPriority": 13,
@@ -850,6 +880,8 @@
     },
     {
       "id": "language_school",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "edu",
       "marketingPriority": 14,
@@ -890,6 +922,8 @@
     },
     {
       "id": "career_coach",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "coaching",
       "marketingPriority": 15,
@@ -925,6 +959,8 @@
     },
     {
       "id": "course_creator",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "edu",
       "terminologyProfile": "edu",
       "marketingPriority": 16,
@@ -965,6 +1001,8 @@
     },
     {
       "id": "freelance_designer",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "freelance",
       "terminologyProfile": "freelance",
       "marketingPriority": 30,
@@ -1009,6 +1047,8 @@
     },
     {
       "id": "content_creator",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "freelance",
       "terminologyProfile": "freelance",
       "marketingPriority": 31,
@@ -1049,6 +1089,8 @@
     },
     {
       "id": "consulting",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 40,
@@ -1084,6 +1126,8 @@
     },
     {
       "id": "accounting",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 41,
@@ -1124,6 +1168,8 @@
     },
     {
       "id": "photographer",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 42,
@@ -1164,6 +1210,8 @@
     },
     {
       "id": "handyman",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 43,
@@ -1209,6 +1257,8 @@
     },
     {
       "id": "marketing_agency",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 44,
@@ -1249,6 +1299,8 @@
     },
     {
       "id": "it_services",
+      "selectionAvailable": true,
+      "selectionHoldReason": null,
       "groupId": "pro",
       "terminologyProfile": "pro",
       "marketingPriority": 45,
@@ -1294,6 +1346,8 @@
     },
     {
       "id": "coworking",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 60,
@@ -1334,6 +1388,8 @@
     },
     {
       "id": "car_rental",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 61,
@@ -1377,6 +1433,8 @@
     },
     {
       "id": "equipment_rental",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 62,
@@ -1416,6 +1474,8 @@
     },
     {
       "id": "event_venue",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 63,
@@ -1456,6 +1516,8 @@
     },
     {
       "id": "short_term_rental",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 64,
@@ -1493,6 +1555,8 @@
     },
     {
       "id": "storage_unit",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "rent",
       "terminologyProfile": "rental",
       "marketingPriority": 65,
@@ -1533,6 +1597,8 @@
     },
     {
       "id": "personal_budget",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "personal",
       "terminologyProfile": "personal",
       "marketingPriority": 90,
@@ -1569,6 +1635,8 @@
     },
     {
       "id": "family_budget",
+      "selectionAvailable": false,
+      "selectionHoldReason": "GROUP_UNAVAILABLE",
       "groupId": "personal",
       "terminologyProfile": "personal",
       "marketingPriority": 91,

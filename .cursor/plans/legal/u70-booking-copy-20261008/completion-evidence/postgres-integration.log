@@ -1,0 +1,9 @@
+PASS @beauty-finance/api apps/api/src/public-booking/u70-approved-copy.integration.spec.ts
+  U70 approved copy on local PostgreSQL
+    ✓ projects the version, writes original/reused evidence, and rejects stale legalRevision (448 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.92 s, estimated 4 s
+Ran all test suites within paths "apps/api/src/public-booking/u70-approved-copy.integration.spec.ts".

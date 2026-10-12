@@ -27,14 +27,22 @@ import { content as englishContent } from "@/content/niches/premium-colorist/en"
 import { content as lashEnglishContent } from "@/content/niches/lash-artist/en"
 
 describe("the published niche pages", () => {
+  test.each(["aesthetic_clinic", "advanced_skincare", "massage", "spa", "personal_trainer", "yoga_instructor"])("holds %s routes and aliases in every published locale", (templateId) => {
+    const page = NICHE_PAGES.find(candidate => candidate.templateId === templateId)!
+    expect(page.enabled).toBe(false)
+    for (const locale of PUBLISHED_LOCALES) {
+      for (const path of [page.path, ...(page.aliases ?? [])]) {
+        expect(getEnabledNichePageBySlug(path.slice(1), locale)).toBeUndefined()
+      }
+      expect(getNicheStaticParams().filter(param => param.locale === locale).map(param => param.nichePage)).not.toContain(page.path.slice(1))
+    }
+  })
   test("publishes the fully translated Wave 1a and Wave 1b routes for every published locale", () => {
     expect(getNicheStaticParams()).toEqual(
       [
         "for-independent-colorists",
         "for-lash-artists",
-        "for-massage-therapists",
         "for-salons",
-        "for-personal-trainers",
         "for-music-teachers",
       ].flatMap((nichePage) => PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage }))),
     )
@@ -44,8 +52,6 @@ describe("the published niche pages", () => {
     for (const path of [
       "/for-lash-artists",
       "/for-salons",
-      "/for-massage-therapists",
-      "/for-personal-trainers",
       "/for-music-teachers",
     ]) {
       expect(Object.keys(getLocalizedAlternates(path, "en")).sort()).toEqual(

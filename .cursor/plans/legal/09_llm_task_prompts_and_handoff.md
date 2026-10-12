@@ -1,5 +1,43 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
+**Implementation update 2026-10-12:** LP-M1 is implemented in app `a91628447` and landing
+publication/acquisition/generated-artifact changes. Targeted policy/API/PG/Web tests pass.
+Do not repeat LP-M1. Real protected-ID inventory/transition is still a rollout blocker;
+LP-M2 is a separate pending CA-v2 task. LP-M3 checklist files are prepared, not executed
+production drills; LP-M4 actual published notice/R2/deployed-path verification remains open.
+
+**Next bounded legal polish — simplified 2026-10-12:** use [handoff 37](37_mvp_legal_polish_and_business_scope_20261012.md)
+for LP-M1–M4. Global holds replace the earlier country matrix; no new Terms version or ordinary-use
+declaration is needed for this change. It supplements release preparation, not completed G tasks.
+
+```text
+Implement the scoped MVP legal/product alignment in legal/37_mvp_legal_polish_and_business_scope_20261012.md.
+Read the simplified global hold list and acceptance cases before editing. Hold aesthetic_clinic,
+advanced_skincare, massage, spa, personal_trainer and yoga_instructor in ALL markets; enforce the
+existing rent/personal group holds on the server. Use one pure libs/core template-admission function
+alongside existing country/capability guards. No country × profession matrix, new ordinary-use
+declaration/table/migration, healthcare classifier or marketing-consent feature. Inventory affected
+existing Companies read-only before rollout; do not dump client content or guess the real Company ID.
+Enforce new setup/template selection and applicable publication/intake boundaries; preserve historical
+resolution, export and support. Distinguish six-template intake holds from functional group selection
+holds. Add short no-health-data hints; keep existing Terms acceptance and pinned U70 text unchanged.
+Keep current country admission, including CA's ten admitted subdivisions. In a separate bounded change,
+broaden CA's existing declaration to exclude QC/AB/BC with a new version; preserve v1 OUTSIDE_QUEBEC
+evidence and a scoped reaffirmation transition. This is not a new platform Terms version.
+Align landing niches/services/routes/CTA and generated artifacts after the app policy is fixed;
+massage is currently enabled. Remove held offers from exposure, not historical customer categories.
+Do not edit the seven platform texts, hashes, manifests, archives, effective dates or ENV for these
+scope changes. Terms remain 2026-11-01.1. Defer niche reopening and extra declarations to real demand.
+Complete PAR-O's two short incident/privacy-request checklists and a minimal walkthrough. Use LP-M4
+for existing release evidence. Inspect actual v1 publications/Google wording/R2 facts: if incorrect
+notices are live, prepare a timely immutable correction and republication transition; do not overwrite
+accepted text, silently select future v2 or claim that November alone fixes today's disclosures.
+Verify rendered legal identity instead of replacing intentional interpolation tokens. Keep U49,
+Intelligence/campaigns and external LLM expansion outside this launch delta, per section 8.
+Implement/test the authorized preparation; identify any remaining real deployment/operational step
+separately. No live customer disablement/deletion, country relocation or provider submission is implied.
+```
+
 **Current status — 2026-10-07 (owner update + BILL8A):** G-BE2, PAR-P,
 BILL5B (`ffacfc7a4`) and BILL6A (`70c20652d`, accepted operator/CLI scope) are **DONE**.
 R1/R2/R3 original fixes are complete. BILL8A inventory is **COMPLETE**; production
