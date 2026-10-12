@@ -1,6 +1,6 @@
 # MVP legal polish and business-template scope
 
-**Date:** 2026-10-12. **Status:** LP-M1 and corrective R1–R3 IMPLEMENTED / targeted TESTED; NOT DEPLOYED. LP-M2 separate PLANNED; LP-M3 procedures PREPARED, operations unverified; LP-M4 PARTIAL.
+**Date:** 2026-10-12. **Status:** LP-M1 and corrective R1–R3 IMPLEMENTED / targeted TESTED; NOT DEPLOYED. LP-M2 IMPLEMENTED / targeted TESTED; visual acceptance and rollout inventory remain. LP-M3 procedures PREPARED, operations unverified; LP-M4 PARTIAL.
 **Next:** [independent review 38 and visual checklist](38_lp_m1_independent_review_20261012.md):
 R1/R2 are fixed in app `59a270485`; landing R3 and provenance are updated.
 Continue remaining visual acceptance/inventory/transition/notice checks, not reimplementation.
@@ -144,8 +144,17 @@ ordinary-use declaration or changed Terms hash. Record inventory/transition sepa
 
 ## 5. LP-M2 — clarify the existing CA declaration, without adding another checkbox
 
-**Status: PLANNED — retained because Canada remains in launch scope.** This is a correction to
-one existing control, not a new regional-rule engine or a platform Terms amendment. Replace the
+**Status: IMPLEMENTED / targeted TESTED — not deployed; visual acceptance and rollout inventory remain.**
+Evidence: [LP-M2 handoff](/Users/valery/Sites/beauty-finance/inventory/ca-operating-scope-v2-20261012.md).
+The implementation uses explicit `ca-operating-scope-v2` / `SUPPORTED_REGIONS_ONLY`,
+preserves v1, and provides one owner reaffirmation in existing booking settings.
+Terms remain unchanged.
+
+Implementation: app `e8ad7e70a`; generated landing provenance refreshed to that
+revision. Landing tests 500/500, verify:niches, commercial catalog and all seven
+legal manifest hashes PASS. No production environment or legal approval changed.
+
+This is a correction to one existing control, not a new regional-rule engine or a platform Terms amendment. Replace the
 narrow QC-only statement in the existing setup control with:
 
 > This workspace is used only for business operations in the supported Canadian provinces and
