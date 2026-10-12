@@ -16,15 +16,15 @@ export const content: NichePageContent = {
   "pains": [
     {
       "title": "The trial and the event are different appointments",
-      "body": "A rehearsal helps plan the final look, but it has its own date and service record. Keep both appointments with the same client."
+      "body": "A bride’s rehearsal may happen weeks before the ceremony. Notes about the chosen look belong with her contact, so the wedding-morning booking has that context. The rehearsal and the occasion still have separate dates and service records."
     },
     {
       "title": "Event preparation needs clear timing",
-      "body": "Set the duration and price for bridal or event makeup. The booking remains a specific service appointment, rather than an undefined event project."
+      "body": "Reserve the preparation slot before the celebration, using your own duration for Bridal Makeup or Event Makeup. Perelai schedules the cosmetic service; it does not coordinate the venue, photographer or wedding itinerary."
     },
     {
       "title": "The conversation should survive the booking",
-      "body": "Keep relevant notes with the client and record what was delivered. Completion and payment stay distinct, even when a package is used."
+      "body": "A conversation about a natural daytime look or evening finish should still be useful when the customer sits down. Keep relevant preferences in their notes, then record the delivered makeup and its settlement separately."
     }
   ],
   "dayInLife": {
@@ -33,7 +33,7 @@ export const content: NichePageContent = {
     "steps": [
       {
         "title": "Create the client and reserve a slot",
-        "body": "Choose Bridal Makeup or Event Makeup from the editable catalog and set the time."
+        "body": "Choose Bridal Makeup for a wedding or Event Makeup for another occasion. Reserve the preparation time with the person receiving the makeup, using your own menu price."
       },
       {
         "title": "Record the trial when provided",
@@ -63,17 +63,17 @@ export const content: NichePageContent = {
     {
       "theirWord": "The person preparing for the occasion",
       "perelaiWord": "Client",
-      "why": "Both the preparation and event appointments can be connected to one client."
+      "why": "The bride or guest remains the same person across rehearsal and celebration. Their contact and preferences provide continuity, while each dated booking records its own outcome."
     },
     {
       "theirWord": "A recorded payment",
       "perelaiWord": "Payment record",
-      "why": "Record money received without implying built-in card acquiring."
+      "why": "A recorded settlement describes money you received for the finished look. It is not a payment terminal or a transfer initiated by Perelai."
     }
   ],
   "setup": {
     "title": "Start with your makeup services",
-    "body": "The template provides two services, one add-on and one expense category.",
+    "body": "The starter menu separates bridal and event makeup, with a rehearsal addition and Cosmetics & Supplies for expenses. Adjust those entries around your artistry; Perelai does not store a portfolio or organise the celebration.",
     "steps": [
       {
         "title": "Choose the makeup artist template",
@@ -81,7 +81,7 @@ export const content: NichePageContent = {
       },
       {
         "title": "Make the service menu yours",
-        "body": "Set prices and durations for bridal and event makeup. Keep or edit Makeup Trial; an unspecified price does not mean free."
+        "body": "Tailor the bridal and evening options to the looks you offer. Price the rehearsal deliberately: Makeup Trial is an editable addition, not a complimentary sample or the software trial."
       },
       {
         "title": "Book the next occasion",

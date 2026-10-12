@@ -16,15 +16,15 @@ export const content: NichePageContent = {
   "pains": [
     {
       "title": "Removal needs a place in the booking",
-      "body": "A new coating may begin with removing the old one. Keep gel polish removal and the next service in the same appointment record."
+      "body": "A returning customer arrives wearing last appointment’s colour. Before the fresh coating, check whether the booking includes Gel Polish Removal. Removal and the new manicure each keep their own place and price in the record."
     },
     {
       "title": "Nail art changes what was delivered",
-      "body": "A plain finish and a detailed design involve different work. Add nail art to the appointment instead of leaving the extra charge only in a conversation."
+      "body": "A plain finish becomes a detailed design when the customer chooses decoration. Attach Nail Art to the manicure it supplements, with the charge you agreed, rather than leaving that choice only in your conversation."
     },
     {
       "title": "A regular client brings more than a time slot",
-      "body": "Open the appointment history and relevant notes before the next set. Record payment separately from completing the service."
+      "body": "Before preparing a new set, review earlier manicures and any notes about preferred shades or designs. After the polish is finished, mark the work complete and record how it was settled."
     }
   ],
   "dayInLife": {
@@ -33,7 +33,7 @@ export const content: NichePageContent = {
     "steps": [
       {
         "title": "Choose the services for the slot",
-        "body": "Start with Classic Manicure, Classic Pedicure, Gel Polish or Gel Polish Removal and adjust their durations."
+        "body": "Reserve enough time for the selected menu items: Classic Manicure, Classic Pedicure, Gel Polish or Gel Polish Removal. You set the duration of each; the template does not dictate the length of a session."
       },
       {
         "title": "Add the requested design",
@@ -68,12 +68,12 @@ export const content: NichePageContent = {
     {
       "theirWord": "A prepaid series of eligible services",
       "perelaiWord": "Packages",
-      "why": "The package is sold once; using it reduces the remaining balance without new revenue."
+      "why": "A prepaid series can cover eligible manicures or pedicures. Deducting its balance records coverage of that session, rather than charging the series again."
     }
   ],
   "setup": {
     "title": "Set up your own nail menu",
-    "body": "The template has four starter services, two add-ons and one expense category. Keep only what you provide.",
+    "body": "Four starter services distinguish manicure, pedicure, coating and removal. There are two optional additions and a Polish & Consumables expense category for supplies. Keep the ordinary cosmetic services you provide; this is not a clinical chart.",
     "steps": [
       {
         "title": "Open the nail artist template",
@@ -81,7 +81,7 @@ export const content: NichePageContent = {
       },
       {
         "title": "Set your timings and prices",
-        "body": "Edit the four starter services. Nail Art is available as an add-on; cosmetic care is not a medical service promise."
+        "body": "Adapt the manicure and pedicure menu to your own treatments within ordinary cosmetic care. Keep coating and removal distinguishable, then use Nail Art for decoration. This page makes no promise about podology or clinical treatment."
       },
       {
         "title": "Add yourself as the professional",
@@ -104,7 +104,7 @@ export const content: NichePageContent = {
     },
     {
       "q": "Where do I record a design?",
-      "a": "Nail Art is an editable add-on. Attach it to the same appointment when that work was provided."
+      "a": "A French finish or a single accent nail can sit under Nail Art. Name the addition as you offer it and enter its charge with the manicure. The booking then reflects the decoration as well as the base coating."
     },
     {
       "q": "Is this for podology or treatment records?",
@@ -112,7 +112,7 @@ export const content: NichePageContent = {
     },
     {
       "q": "Will the package count as another payment at the visit?",
-      "a": "No. Record the package sale once. Applying an eligible package uses its remaining balance without new cash or revenue."
+      "a": "No. Selling a prepaid series and using one eligible manicure are different events. The sale is recorded once; redemption deducts the balance. It does not make the coating session another receipt or add fresh revenue."
     }
   ],
   "labels": {

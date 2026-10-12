@@ -37,14 +37,18 @@ describe("the published niche pages", () => {
       expect(getNicheStaticParams().filter(param => param.locale === locale).map(param => param.nichePage)).not.toContain(page.path.slice(1))
     }
   })
-  test("publishes the fully translated Wave 1a and Wave 1b routes for every published locale", () => {
+  test("publishes the four existing pages in nine locales and three approved niches only in EN/RU/UK", () => {
+    const expected = [
+      ["for-independent-colorists", PUBLISHED_LOCALES],
+      ["for-lash-artists", PUBLISHED_LOCALES],
+      ["for-nail-artists", ["en", "ru", "uk"]],
+      ["for-barbers", ["en", "ru", "uk"]],
+      ["for-salons", PUBLISHED_LOCALES],
+      ["for-makeup-artists", ["en", "ru", "uk"]],
+      ["for-music-teachers", PUBLISHED_LOCALES],
+    ] as const
     expect(getNicheStaticParams()).toEqual(
-      [
-        "for-independent-colorists",
-        "for-lash-artists",
-        "for-salons",
-        "for-music-teachers",
-      ].flatMap((nichePage) => PUBLISHED_LOCALES.map((locale) => ({ locale, nichePage }))),
+      expected.flatMap(([nichePage, locales]) => locales.map(locale => ({ locale, nichePage }))),
     )
   })
 
@@ -159,18 +163,20 @@ describe("the published niche pages", () => {
   })
 })
 
-// Drafts have a complete handoff but stay off public routing until copy/evidence review.
-describe("the three MVP niche drafts", () => {
-  test.each(["barber", "nail_salon", "makeup_artist"])("stages %s only in RU/UK/EN", (templateId) => {
+// Copy was approved by the owner; publication remains limited to translated locales.
+describe("the three approved MVP niches", () => {
+  test.each(["barber", "nail_salon", "makeup_artist"])("publishes %s only in RU/UK/EN", (templateId) => {
     const page = NICHE_PAGES.find(candidate => candidate.templateId === templateId)!
-    expect(page.enabled).toBe(false)
+    expect(page.enabled).toBe(true)
     expect(getNichePageLocales(page)).toEqual(["en", "ru", "uk"])
     for (const locale of PUBLISHED_LOCALES) {
-      expect(getEnabledNichePageBySlug(page.path.slice(1), locale)).toBeUndefined()
       if (!["en", "ru", "uk"].includes(locale)) {
+        expect(getEnabledNichePageBySlug(page.path.slice(1), locale)).toBeUndefined()
         expect(() => getNicheContent(page, locale)).toThrow()
         continue
       }
+      expect(getEnabledNichePageBySlug(page.path.slice(1), locale)?.templateId).toBe(templateId)
+      expect(Object.keys(getLocalizedAlternates(page.path, locale, getNichePageLocales(page))).sort()).toEqual(["en", "ru", "uk", "x-default"].sort())
       const content = getNicheContent(page, locale)
       expect(content.research.verbatims).toEqual([])
       const keys = nicheLabelKeys(page)!

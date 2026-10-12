@@ -10,27 +10,30 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 | brow_lash_artist | existing enabled | all 9 retained | RU/UK/EN client history/payment introduction; existing beauty mock |
 | salon | existing enabled | all 9 retained | RU/UK/EN appointment/client/package introduction; existing beauty mock |
 | music_teacher | existing enabled | all 9 retained | False curriculum preset removed in all 9; RU/UK/EN terminology and real CalendarPage screenshot; no beauty finance replica in other locales |
-| barber | draft, disabled | en/ru/uk only | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
-| nail_salon | draft, disabled | en/ru/uk only | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
-| makeup_artist | draft, disabled | en/ru/uk only | Wedding/evening makeup, makeup trial distinct from SaaS trial; no permanent makeup/medical positioning |
+| barber | enabled locally | en/ru/uk only | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
+| nail_salon | enabled locally | en/ru/uk only | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
+| makeup_artist | enabled locally | en/ru/uk only | Wedding/evening makeup, makeup trial distinct from SaaS trial; no permanent makeup/medical positioning |
 
-All changed editorial text is a candidate. **RU/UK native review pending**, then EN review. Other existing locales received only the bounded music factual correction; no full stylistic certification. New draft `research.sources/verbatims` are empty: founder examples are not VOC or testimonials.
+**Owner approval received 2026-10-12:** prepared wording approved; RU/UK reviewed by the native-speaking owner, EN owner-approved without a native-certification claim. English professional examples were refined during activation to meet the unchanged uniqueness gate; approved meanings and feature boundaries remain. Other existing locales received only the bounded music factual correction; no full stylistic certification. New draft `research.sources/verbatims` are empty: founder examples are not VOC or testimonials.
 
 ## Verified locally
 
 - App service/catalog export generated from a clean committed app; no dirty-source override.
-- Signup slug and language handoff, content/label coverage and refusal of undeclared locales are tested. New pages remain outside routes, sitemap, hreflang and navigation while disabled.
-- Existing 60% distinctness gate retained; the seven scoped pages checked together in EN/RU/UK. The normal published-page check now includes RU and fails on missing declared modules instead of silently skipping them.
+- Signup slug and language handoff, content/label coverage and refusal of undeclared locales are tested. The three pages now have routes, sitemap, hreflang and navigation entries only in EN/RU/UK. Missing locales return 404.
+- Existing 60% distinctness gate retained; all seven enabled pages checked together. The earlier draft report incorrectly called this gate passed for EN; overlapping generic English scenarios have now been refined. The normal published-page check now includes RU and fails on missing declared modules instead of silently skipping them.
 - `verify:commercial` passes; existing offer/source policy is unchanged.
 - Music screenshot: real CalendarPage, `music_teacher`/`edu`, synthetic client and piano lesson, `CANDIDATE`/`UNPAID`, USD 45; API responses intercepted, no external service calls. RU/UK/EN captures have no browser errors. Images are in `public/images/niches/music-calendar-{locale}.png`; caption explicitly distinguishes the displayed amount from payment received. This is illustrative UI evidence, not a backend/payment acceptance test.
-- Final checks: typecheck PASS; all 34 suites / 503 tests PASS; production build compiled and typechecked, then stopped at existing `booking-terms` APPROVAL_HASH_MISMATCH. The exact mismatch is reproduced on baseline `d3cf49150` with the same environment. Legal approval/validation unchanged.
+- Final checks: typecheck PASS; all 34 suites / 506 tests PASS; production build compiled and typechecked, then stopped at legal APPROVAL_HASH_MISMATCH (billing/privacy observed in this run; booking-terms observed and reproduced on baseline previously). The exact mismatch is reproduced on baseline `d3cf49150` with the same environment. Legal approval/validation unchanged.
 - Code review: Standards pass; Spec metadata and screenshot-revision omissions corrected.
 - Runtime for checks: installed Node 24.18; system Node 20.18 fails to start current Vite 7.
 
-## Next actions, individually
+## Activation evidence after owner approval
 
-1. **Barber:** native copy review, own example review and real signup/onboarding to `barber`; check applicable commercial/legal release evidence, then enable this page only.
-2. **Nail:** same checks for `nail_salon`; keep positioning to ordinary manicure/pedicure/coatings, no treatment promise. A staff selector does not require marketing it as STUDIO-only.
-3. **Makeup:** same checks for `makeup_artist`; keep trial makeup separate from 21-day STUDIO trial and verify default catalog/example.
+- Three pages enabled locally for EN/RU/UK; four existing pages keep all nine languages: 45 page/locale combinations.
+- 24 desktop/mobile variants checked across the three new pages and music teacher. H1, CTA slug/language, metadata, overflow and page errors checked; missing German routes return 404.
+- Live HTTP regression: `node scripts/verify-mvp-niche-routes.mjs http://localhost:3000` against a running dev/start server. Checks all nine new URLs, all 18 untranslated combinations, /en canonical redirects, HTML and HTTP hreflang.
+- Automatically generated next-intl HTTP alternate links are disabled: they advertised all nine locales even for partial pages. Page metadata remains the source for actual language clusters.
+- App onboarding UI to the catalog checked for all seven templates × RU/UK/EN, using intercepted synthetic APIs and a SOLO summary without team capability. This is not server completion/trial acceptance. Proof: app `mvp/evidence/niche-onboarding-smoke.json`.
+- Turbopack dev showed an English self-redirect; webpack dev rendered canonical URLs correctly without changing proxy. No temporary debug instrumentation retained. Production route acceptance still needs an unblocked build.
 
-Do not enable photography/career coaching, wellness, REQUEST/ORDER/RENTAL or rent/personal from this pass. Do not resurrect historical waves. Home/Pricing owner-frozen strings and offer policy remain authoritative; the future marketing plan can use these definitions and seven-niche boundary without waiting for broad terminology cleanup or profile export v2.
+No deployment performed. BILL/TEAM/Drawer/server onboarding and legal release evidence remain with their existing plans. Owner terminology approval does not approve the platform legal packet. Do not enable photography/career coaching, wellness, REQUEST/ORDER/RENTAL or rent/personal from this pass.

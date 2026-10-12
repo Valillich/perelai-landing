@@ -355,3 +355,19 @@ describe("finance-first machine-readable order and FM6 contract", () => {
     expect(backlog).toContain("Dormant Candidate A")
   })
 })
+
+
+describe("approved MVP niche sitemap boundaries", () => {
+  test.each(["/for-barbers", "/for-nail-artists", "/for-makeup-artists"])("lists %s only in EN/RU/UK", path => {
+    const entries = sitemap()
+    for (const locale of PUBLISHED_LOCALES) {
+      const entry = entries.find(item => item.url === toAbsoluteLandingUrl(localizePath(locale, path)))
+      if (["en", "ru", "uk"].includes(locale)) {
+        expect(entry).toBeDefined()
+        expect(Object.keys(entry!.alternates!.languages!).sort()).toEqual(["en", "ru", "uk", "x-default"].sort())
+      } else {
+        expect(entry).toBeUndefined()
+      }
+    }
+  })
+})

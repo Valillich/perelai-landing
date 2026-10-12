@@ -11,7 +11,7 @@ export interface NichePage {
   /** Expected template id — verified against the catalog. */
   templateId: string
   wave: NicheWave
-  /** Only Wave 1a is enabled until later gates pass. */
+  /** Enabled locally after the applicable copy and niche checks; deployment has separate gates. */
   enabled: boolean
   aliases?: string[]
   /**
@@ -88,7 +88,7 @@ export const NICHE_PAGES: NichePage[] = [
     locales: ["en", "ru", "uk"],
     templateId: "nail_salon",
     wave: "1b",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-massage-therapists",
@@ -103,7 +103,7 @@ export const NICHE_PAGES: NichePage[] = [
     locales: ["en", "ru", "uk"],
     templateId: "barber",
     wave: "1b",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-salons",
@@ -141,7 +141,7 @@ export const NICHE_PAGES: NichePage[] = [
     locales: ["en", "ru", "uk"],
     templateId: "makeup_artist",
     wave: "2",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-personal-trainers",

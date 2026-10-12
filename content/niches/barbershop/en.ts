@@ -16,15 +16,15 @@ export const content: NichePageContent = {
   "pains": [
     {
       "title": "A beard trim changes the appointment",
-      "body": "A client may book a fade and ask for a beard trim at the chair. Keep the extra service with that appointment so the record reflects the work performed."
+      "body": "A fade can turn into a longer session when the customer asks for beard shaping too. Keep Beard Trim beside the haircut, with its own charge, so the record matches what happened in the chair."
     },
     {
       "title": "A return visit needs context",
-      "body": "Check the previous service before the next cut. Keep relevant client notes with the client instead of reconstructing them from a message thread."
+      "body": "A regular may want the same taper as last month. Before picking up the clippers, check the earlier cut and notes about length or styling preferences. Those details stay with the person who asked for them."
     },
     {
       "title": "The chair can be busy while payment is pending",
-      "body": "Finishing a hot towel shave and receiving payment are separate steps. Record both, including whether a prepaid package covered the appointment."
+      "body": "The razor is put away and the customer heads to the counter. Completing Hot Towel Shave records the work; logging the settlement records how it was covered. An eligible prepaid package can cover the shave without another receipt."
     }
   ],
   "dayInLife": {
@@ -33,7 +33,7 @@ export const content: NichePageContent = {
     "steps": [
       {
         "title": "Reserve time for a fade",
-        "body": "Choose the service, client, performer and time. The editable starter catalog includes Classic Fade and Hot Towel Shave."
+        "body": "Reserve a slot for Classic Fade or Hot Towel Shave, then assign the barber who will take the chair. Durations are yours to adjust around the cuts you offer."
       },
       {
         "title": "Attach the beard work",
@@ -45,7 +45,7 @@ export const content: NichePageContent = {
       },
       {
         "title": "Keep the next visit in context",
-        "body": "Open the client history when the person returns. Previous appointments and payment records remain connected."
+        "body": "When the regular returns for a fresh fade, the earlier haircut and settlement are still in their history. Check the notes before deciding what to repeat or change."
       }
     ]
   },
@@ -58,12 +58,12 @@ export const content: NichePageContent = {
     {
       "theirWord": "Beard Trim added at the chair",
       "perelaiWord": "Add-ons",
-      "why": "Extra work belongs to the same appointment rather than to an unrelated payment."
+      "why": "Trimming the beard after a haircut adds an item to that chair session. Its charge stays beside the fade, rather than becoming an unexplained receipt."
     },
     {
       "theirWord": "The person in your chair",
       "perelaiWord": "Client",
-      "why": "The client record keeps contact details and appointment history together."
+      "why": "Contact details identify the regular; earlier cuts and notes preserve context for their next haircut. Perelai does not decide the style or technique."
     },
     {
       "theirWord": "A barber working alone",
@@ -73,7 +73,7 @@ export const content: NichePageContent = {
   ],
   "setup": {
     "title": "Set up your chair, not an entire chain",
-    "body": "Start with two editable services, two add-ons and one expense category.",
+    "body": "Your starting menu contains two services and two optional extras, plus Blades & Disinfectant as an expense category. Rename the entries to fit your shop; supplies remain a cost, not a customer-facing treatment.",
     "steps": [
       {
         "title": "Choose the barber template",
@@ -81,7 +81,7 @@ export const content: NichePageContent = {
       },
       {
         "title": "Adjust your menu",
-        "body": "Set your own prices and durations. Keep or remove Beard Trim and Face Mask according to your services."
+        "body": "Shape the menu around your chair: a classic fade, towel shave and any beard work you actually offer. Beard Trim and Face Mask are optional additions; remove either if it does not belong on your price list."
       },
       {
         "title": "Add the working barber",
@@ -104,7 +104,7 @@ export const content: NichePageContent = {
     },
     {
       "q": "Can I change the prices and timing?",
-      "a": "Yes. Enter the prices and durations you actually use. The template does not set a required price list."
+      "a": "Yes. Set your own rates and timings for cuts, shaves and extras. Your notes can describe fade height, blend, neckline or sideburn shape; Perelai does not choose the technique or dictate a tariff."
     },
     {
       "q": "Does a completed cut mean the client paid?",
@@ -112,7 +112,7 @@ export const content: NichePageContent = {
     },
     {
       "q": "Does it calculate barber commission?",
-      "a": "No. Perelai records appointments, payments and operational figures. Payroll and commission calculations are outside this scope."
+      "a": "No. Logged cuts and shaves can help you review the shop’s activity, but splitting takings between barbers remains your responsibility. Salary, commission agreements and payroll are not calculated here."
     }
   ],
   "labels": {

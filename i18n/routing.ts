@@ -6,6 +6,8 @@ export const routing = defineRouting({
   defaultLocale: "en",
   localePrefix: "as-needed",
   localeDetection: false,
+  // Page metadata owns the locale cluster; some niches have only EN/RU/UK.
+  alternateLinks: false,
   localeCookie: {
     name: "NEXT_LOCALE",
     maxAge: 60 * 60 * 24 * 365,
