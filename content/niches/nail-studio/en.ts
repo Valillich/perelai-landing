@@ -73,7 +73,7 @@ export const content: NichePageContent = {
   ],
   "setup": {
     "title": "Set up your own nail menu",
-    "body": "Four starter services distinguish manicure, pedicure, coating and removal. There are two optional additions and a Polish & Consumables expense category for supplies. Keep the ordinary cosmetic services you provide; this is not a clinical chart.",
+    "body": "Four starter services distinguish manicure, pedicure, coating and removal. There are two optional additions and a Polish & Tools expense category for supplies. Keep the ordinary cosmetic services you provide; this is not a clinical chart.",
     "steps": [
       {
         "title": "Open the nail artist template",

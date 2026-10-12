@@ -23,7 +23,7 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 - Existing 60% distinctness gate retained; all seven enabled pages checked together. The earlier draft report incorrectly called this gate passed for EN; overlapping generic English scenarios have now been refined. The normal published-page check now includes RU and fails on missing declared modules instead of silently skipping them.
 - `verify:commercial` passes; existing offer/source policy is unchanged.
 - Music screenshot: real CalendarPage, `music_teacher`/`edu`, synthetic client and piano lesson, `CANDIDATE`/`UNPAID`, USD 45; API responses intercepted, no external service calls. RU/UK/EN captures have no browser errors. Images are in `public/images/niches/music-calendar-{locale}.png`; caption explicitly distinguishes the displayed amount from payment received. This is illustrative UI evidence, not a backend/payment acceptance test.
-- Final checks: typecheck PASS; all 34 suites / 506 tests PASS; production build compiled and typechecked, then stopped at legal APPROVAL_HASH_MISMATCH (billing/privacy observed in this run; booking-terms observed and reproduced on baseline previously). The exact mismatch is reproduced on baseline `d3cf49150` with the same environment. Legal approval/validation unchanged.
+- Final checks: typecheck PASS; all 34 suites / 510 tests PASS; production build compiled and typechecked, then stopped at legal APPROVAL_HASH_MISMATCH (billing/privacy observed in this run; booking-terms observed and reproduced on baseline previously). The exact mismatch is reproduced on baseline `d3cf49150` with the same environment. Legal approval/validation unchanged.
 - Code review: Standards pass; Spec metadata and screenshot-revision omissions corrected.
 - Runtime for checks: installed Node 24.18; system Node 20.18 fails to start current Vite 7.
 
@@ -37,3 +37,7 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 - Turbopack dev showed an English self-redirect; webpack dev rendered canonical URLs correctly without changing proxy. No temporary debug instrumentation retained. Production route acceptance still needs an unblocked build.
 
 No deployment performed. BILL/TEAM/Drawer/server onboarding and legal release evidence remain with their existing plans. Owner terminology approval does not approve the platform legal packet. Do not enable photography/career coaching, wellness, REQUEST/ORDER/RENTAL or rent/personal from this pass.
+
+## Final activation review
+
+Standards: no findings. Spec: corrected two activation issues — English nail/makeup setup names now match the exported starter expense categories (Polish & Tools / Makeup Consumables), and Open Graph alternate locales use the same page-specific EN/RU/UK set as hreflang. Four metadata regression cases cover partial and fully localized pages. Final typecheck, 34 suites / 510 tests, and verify:niches pass. Earlier app evidence records the pre-review 506-test snapshot; this section records the final landing checks. Production/legal release blockers remain unchanged.

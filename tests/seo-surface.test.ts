@@ -8,7 +8,7 @@ import { localizePath } from "@/i18n/paths"
 import { buildPricingMarkdown, buildLlmsTxt } from "@/lib/machine-readable"
 import { getPricingContactEmail } from "@/lib/pricing-contact"
 import { PRICING_PLANS } from "@/content/pricing"
-import { SEO_DESCRIPTION_MAX, SEO_TITLE_MAX, toAbsoluteLandingUrl } from "@/lib/seo"
+import { buildLocalizedPageMetadata, SEO_DESCRIPTION_MAX, SEO_TITLE_MAX, toAbsoluteLandingUrl } from "@/lib/seo"
 import { getFaqPageJsonLd, getSoftwareApplicationJsonLd } from "@/lib/structured-data"
 
 import homeDe from "@/messages/de/home.json"
@@ -369,5 +369,23 @@ describe("approved MVP niche sitemap boundaries", () => {
         expect(entry).toBeUndefined()
       }
     }
+  })
+})
+
+
+describe("partial page Open Graph locales", () => {
+  test.each(["en", "ru", "uk"] as const)("advertises only published alternatives for %s", (locale) => {
+    const metadata = buildLocalizedPageMetadata({
+      locale, pathname: "/for-barbers", title: "Barbers", description: "Appointment scheduling",
+      availableLocales: ["en", "ru", "uk"],
+    })
+    const expected = { en: ["ru_RU", "uk_UA"], ru: ["en_US", "uk_UA"], uk: ["en_US", "ru_RU"] }
+    expect(metadata.openGraph).toMatchObject({ alternateLocale: expected[locale] })
+  })
+  test("retains the full language cluster for fully localized pages", () => {
+    const metadata = buildLocalizedPageMetadata({
+      locale: "en", pathname: "/pricing", title: "Pricing", description: "Plans",
+    })
+    expect(metadata.openGraph).toMatchObject({ alternateLocale: ["uk_UA", "pl_PL", "ru_RU", "es_ES", "fr_FR", "de_DE", "pt_PT", "tr_TR"] })
   })
 })

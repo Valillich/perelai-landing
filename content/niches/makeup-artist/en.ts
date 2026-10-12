@@ -73,7 +73,7 @@ export const content: NichePageContent = {
   ],
   "setup": {
     "title": "Start with your makeup services",
-    "body": "The starter menu separates bridal and event makeup, with a rehearsal addition and Cosmetics & Supplies for expenses. Adjust those entries around your artistry; Perelai does not store a portfolio or organise the celebration.",
+    "body": "The starter menu separates bridal and event makeup, with a rehearsal addition and Makeup Consumables for expenses. Adjust those entries around your artistry; Perelai does not store a portfolio or organise the celebration.",
     "steps": [
       {
         "title": "Choose the makeup artist template",

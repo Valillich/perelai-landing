@@ -40,8 +40,11 @@ export function getOpenGraphLocale(locale: PublishedLocale): string {
   return OG_LOCALE_BY_LOCALE[locale]
 }
 
-export function getOpenGraphAlternateLocales(locale: PublishedLocale): string[] {
-  return PUBLISHED_LOCALES.filter((value) => value !== locale).map(
+export function getOpenGraphAlternateLocales(
+  locale: PublishedLocale,
+  availableLocales: readonly PublishedLocale[] = PUBLISHED_LOCALES,
+): string[] {
+  return availableLocales.filter((value) => value !== locale).map(
     (value) => OG_LOCALE_BY_LOCALE[value],
   )
 }
@@ -57,7 +60,7 @@ export function buildLocalizedPageMetadata({
   pathname: string
   title: string
   description: string
-  /** Narrows the hreflang cluster for a page not published in every locale. */
+  /** Narrows the hreflang and Open Graph language clusters for a page not published in every locale. */
   availableLocales?: readonly PublishedLocale[]
 }): Metadata {
   assertMetadataLength(title, SEO_TITLE_MAX, "title", locale, pathname)
@@ -80,7 +83,7 @@ export function buildLocalizedPageMetadata({
       description,
       siteName: "Perelai",
       locale: getOpenGraphLocale(locale),
-      alternateLocale: getOpenGraphAlternateLocales(locale),
+      alternateLocale: getOpenGraphAlternateLocales(locale, availableLocales),
     },
     twitter: {
       card: "summary_large_image",
