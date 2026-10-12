@@ -1,5 +1,10 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
+**Independent LP-M1 review — 2026-10-12:** app `a91628447` / landing `149aa88` are implemented,
+and [review 38](38_lp_m1_independent_review_20261012.md) records the original three corrections.
+Corrective app `59a270485` closes R1/R2; landing closes R3 and pins generated provenance to it.
+Next: remaining owner's visual checklist and inventory/transition/notice checks. NOT DEPLOYED.
+
 **Simplified MVP decision — 2026-10-12:** [polish and template scope 37](37_mvp_legal_polish_and_business_scope_20261012.md)
 now uses one global hold list: `aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`,
 `personal_trainer`, `yoga_instructor`, plus the existing functional `rent`/`personal` group holds.
@@ -8,7 +13,8 @@ adds short data-minimisation hints. **No country × niche matrix, new ordinary-u
 Terms amendment for this scope reduction.** Those reviews wait for post-MVP customer demand.
 Keep existing market admission, including CA's ten provinces/territories; LP-M2 corrects its existing
 QC-only declaration. LP-M3/M4 finish existing PAR-O and verify current notices/identity/operations.
-Status: **SCOPE SELECTED / IMPLEMENTATION PLANNED**. All seven platform documents remain
+Status: **LP-M1/R1–R3 IMPLEMENTED + targeted TESTED; LP-M2 PLANNED; LP-M3 PREPARED; LP-M4 PARTIAL**.
+All seven platform documents remain
 **2026-11-01.1**, effective **2026-11-01**. Correcting a current salon notice, if required, is a
 separate immutable notice release. No public text/hash, registry, ENV or customer data changed.
 U70 and completed G/PAR/BILL work remain separate; the review's “GO” is not release evidence.

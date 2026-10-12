@@ -1,5 +1,10 @@
 # Подача в Google/Paddle, параллельная работа и запуск MVP
 
+**Corrective checkpoint 12.10.2026:** замечания R1–R3 из [review 38](38_lp_m1_independent_review_20261012.md)
+исправлены/целевые tests PASS; app `59a270485`, landing artifacts закреплены на этом SHA.
+Не повторять реализацию. Визуальный operator checklist и real inventory/transition/notice
+проверки всё ещё нужны до rollout; production не менялся, LP-M2 отдельно PLANNED.
+
 **Implementation checkpoint 12.10.2026:** LP-M1 реализован (app `a91628447`),
 закрытые landing routes/acquisition сняты; artifacts закреплены на clean app revision.
 Целевые tests PASS; production inventory/защищённый ID/transition ещё не выполнены,

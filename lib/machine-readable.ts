@@ -17,7 +17,10 @@ export function buildLlmsTxt(): string {
     (page) => `${page.path} (niche=${page.niche})`,
   )
   const capabilities = PRICING_CAPABILITY_KEYS.map((key) => pricingEn.capabilities[key])
-  const groups = catalog.groups.map((group) => group.label).join(", ")
+  const selectableTemplates = catalog.templates.filter(template => template.selectionAvailable === true)
+  const selectableGroupIds = new Set(selectableTemplates.map(template => template.groupId))
+  const selectableGroups = catalog.groups.filter(group => selectableGroupIds.has(group.id))
+  const groups = selectableGroups.map((group) => group.label).join(", ")
 
   return [
     "# Perelai",
@@ -76,7 +79,7 @@ export function buildLlmsTxt(): string {
     "",
     "## Supported business types",
     bulletList([
-      `${catalog.templates.length} selectable business types across ${catalog.groups.length} groups (${groups}).`,
+      `${selectableTemplates.length} selectable business types across ${selectableGroups.length} groups (${groups}).`,
       `Published niche landing pages: ${publishedNiches.join(", ")}`,
     ]),
     "",

@@ -1,6 +1,9 @@
 # MVP legal polish and business-template scope
 
-**Date:** 2026-10-12. **Status:** LP-M1 IMPLEMENTED / targeted tests PASS; NOT DEPLOYED. LP-M2 separate PLANNED; LP-M3 procedures PREPARED, operations unverified; LP-M4 PARTIAL.
+**Date:** 2026-10-12. **Status:** LP-M1 and corrective R1–R3 IMPLEMENTED / targeted TESTED; NOT DEPLOYED. LP-M2 separate PLANNED; LP-M3 procedures PREPARED, operations unverified; LP-M4 PARTIAL.
+**Next:** [independent review 38 and visual checklist](38_lp_m1_independent_review_20261012.md):
+R1/R2 are fixed in app `59a270485`; landing R3 and provenance are updated.
+Continue remaining visual acceptance/inventory/transition/notice checks, not reimplementation.
 **Request:** keep launch preparation small: hold six clinical/wellness templates in every market,
 preserve the functional `rent`/`personal` holds, and defer country-specific niche rules until real
 post-MVP demand. This revision supersedes this document's earlier country × template matrix,
@@ -86,7 +89,8 @@ suitable system. Custom/coach labels are not permission to offer unsupported hea
 
 ## 4. LP-M1 — apply the product boundary at actual entry points
 
-**Status: IMPLEMENTED (app `a91628447`); rollout BLOCKED pending real inventory/transition.**
+**Status: IMPLEMENTED (app `a91628447`), R1–R3 corrections OPEN in review 38; rollout BLOCKED
+pending corrections and real inventory/transition.**
 See [app implementation evidence](/Users/valery/Sites/beauty-finance/inventory/mvp-template-scope-20261012.md)
 and [operator inventory/runbook](/Users/valery/Sites/beauty-finance/docs/runbooks/legal-template-scope-rollout.md).
 Landing holds both previously enabled massage and personal-trainer pages; generated artifacts
@@ -314,3 +318,22 @@ transition if needed; actual published v1/R2/Google facts and any immutable
 notice correction; LP-M2 CA scope v2 as a separate bounded change; actual support
 mailbox/incident/privacy-request walkthrough. LP-M3 files are preparation only.
 Platform Terms, seven hashes and effective dates remain unchanged.
+
+## 12. Corrective pass after review 38 — 2026-10-12
+
+App `59a270485`; landing artifacts now pin that clean revision. Direct create
+validates explicit template/profile identities before its transaction; provisional
+creation remains possible. Verified personal links use management-only response
+and retain read/cancel without new intake, rebooking or proposal acceptance.
+Invalid/foreign/expired/missing-client JWT and FROZEN lifecycle remain closed.
+llms.txt now describes 20 selectable catalog templates in four admitted groups.
+Historical catalog/acceptance data, Terms, pricing and runtime flags are unchanged.
+
+Evidence: [corrective report](/Users/valery/Sites/beauty-finance/inventory/lp-m1-corrective-20261012.md).
+API 854/854; Web booking/parser 63/63; real PG 55/55; production-bundle browser
+mobile/desktop cancel 2/2; landing whole suite 500/500 PASS. API/Web builds and
+API spec typecheck PASS. Landing build PASS with existing approved identity
+snapshot supplied only to the verification process, no ENV edit or hash bypass.
+Full app baseline failures are not reclassified as green by this corrective run.
+Remaining operator visual checklist, real protected-ID inventory/transition and
+current published notice/R2 facts still block rollout; LP-M2 remains separate.

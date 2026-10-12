@@ -1,5 +1,13 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
+**Independent review 2026-10-12:** [review 38](38_lp_m1_independent_review_20261012.md) supersedes
+“Do not repeat LP-M1” only for three bounded corrections: R1 direct Company-create admission,
+R2 verified personal-link read/cancel access with new intake held, R3 accurate llms.txt selection
+claims. Corrective pass now implemented/tested: app `59a270485`, landing R3 and
+generated provenance updated. Do not repeat these implementation tasks; next is
+the remaining local visual checklist and inventory/transition/notice checks.
+No Terms amendment or repetition of the whole implementation prompt below.
+
 **Implementation update 2026-10-12:** LP-M1 is implemented in app `a91628447` and landing
 publication/acquisition/generated-artifact changes. Targeted policy/API/PG/Web tests pass.
 Do not repeat LP-M1. Real protected-ID inventory/transition is still a rollout blocker;
@@ -9,6 +17,8 @@ production drills; LP-M4 actual published notice/R2/deployed-path verification r
 **Next bounded legal polish — simplified 2026-10-12:** use [handoff 37](37_mvp_legal_polish_and_business_scope_20261012.md)
 for LP-M1–M4. Global holds replace the earlier country matrix; no new Terms version or ordinary-use
 declaration is needed for this change. It supplements release preparation, not completed G tasks.
+The following is the historical implementation prompt; execute review 38's bounded corrections
+instead of repeating completed LP-M1 or restoring its pre-implementation observations.
 
 ```text
 Implement the scoped MVP legal/product alignment in legal/37_mvp_legal_polish_and_business_scope_20261012.md.

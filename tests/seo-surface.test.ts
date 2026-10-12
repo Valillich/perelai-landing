@@ -314,6 +314,14 @@ describe("finance-first machine-readable order and FM6 contract", () => {
     expect(llms).not.toContain("Perelai is financial tracking and analytics software")
   })
 
+  test("llms.txt describes admitted selection, not the historical catalog", () => {
+    const text = buildLlmsTxt()
+    expect(text).toContain("20 selectable business types across 4 groups")
+    expect(text).not.toContain("34 selectable")
+    expect(text).not.toContain("Rentals & Spaces")
+    expect(text).not.toContain("Personal Finance")
+  })
+
   test("getFaqPageJsonLd formats visible FAQs into valid FAQPage schema", () => {
     const faqs = [
       { question: homeEn.faq.q1, answer: homeEn.faq.a1 },
