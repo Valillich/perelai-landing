@@ -66,6 +66,7 @@ describe("the published niche pages", () => {
         expect(() => getNicheContent(page, locale)).not.toThrow()
 
         const keys = nicheLabelKeys(page)
+        expect(keys, `${page.niche}: missing router keys`).not.toBeNull()
         if (!keys) continue
         const messages = homeMessages[locale] as unknown as Record<
           string,
@@ -155,5 +156,32 @@ describe("the published niche pages", () => {
     expect(url.searchParams.get("niche")).toBe("lash-artist")
     expect(url.searchParams.get("landing_path")).toBeNull()
     expect(url.searchParams.get("lng")).toBe("pl")
+  })
+})
+
+// Drafts have a complete handoff but stay off public routing until copy/evidence review.
+describe("the three MVP niche drafts", () => {
+  test.each(["barber", "nail_salon", "makeup_artist"])("stages %s only in RU/UK/EN", (templateId) => {
+    const page = NICHE_PAGES.find(candidate => candidate.templateId === templateId)!
+    expect(page.enabled).toBe(false)
+    expect(getNichePageLocales(page)).toEqual(["en", "ru", "uk"])
+    for (const locale of PUBLISHED_LOCALES) {
+      expect(getEnabledNichePageBySlug(page.path.slice(1), locale)).toBeUndefined()
+      if (!["en", "ru", "uk"].includes(locale)) {
+        expect(() => getNicheContent(page, locale)).toThrow()
+        continue
+      }
+      const content = getNicheContent(page, locale)
+      expect(content.research.verbatims).toEqual([])
+      const keys = nicheLabelKeys(page)!
+      for (const key of [keys.label, keys.description]) {
+        const [, name] = key.split(".")
+        expect(homeMessages[locale].nicheRouter).toHaveProperty(name)
+      }
+      const url = new URL(buildAppSignupUrl({ niche: page.niche, locale }))
+      expect(url.searchParams.get("niche")).toBe(page.niche)
+      expect(url.searchParams.get("lng")).toBe(locale)
+      expect(catalog.templates.find(item => item.id === templateId)?.bookingConfig.mode).toBe("APPOINTMENT")
+    }
   })
 })

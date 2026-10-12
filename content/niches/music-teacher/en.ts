@@ -18,16 +18,16 @@ export const content: NichePageContent = {
   meta: {
     title: "Perelai for music teachers",
     description:
-      "Track lesson revenue, recorded costs and calculated profit for any period, with student history and package redemptions kept readable.",
+      "Schedule piano and guitar lessons for adults, keep client history and record payments or prepaid lesson package use.",
     ogImageAlt:
-      "Perelai finance overview for a music teacher, showing lesson revenue, recorded costs and calculated profit for a period — example data.",
+      "Perelai for music teachers",
   },
 
   hero: {
-    eyebrow: "Finance software for music educators",
-    h1: "Absolute clarity for your teaching studio's finances.",
+    eyebrow: "For music teachers",
+    h1: "Keep lessons, students and payment records connected.",
     subhead:
-      "Log your incoming piano and guitar tuition, record outgoing maintenance costs like string replacements or tuning, and manage semester packages without complex accounting sheets.",
+      "Schedule piano and guitar lessons for adults, keep client history and record payments or prepaid lesson package use.",
     mock: "lash-workspace",
   },
 
@@ -72,8 +72,8 @@ export const content: NichePageContent = {
   terminology: [
     {
       theirWord: "Piano Lesson, Guitar Lesson",
-      perelaiWord: "Services on a Visit",
-      why: "The music teacher template includes two starter lesson options for instrumental repertoire, ear training, and scale practice. Each scheduled lesson becomes a Visit carrying the student, lesson type and payment record together.",
+      perelaiWord: "Services and appointments",
+      why: "The template starts with editable Piano Lesson and Guitar Lesson services. A scheduled lesson links the client, service and payment records; it is not a curriculum or learning assessment.",
     },
     {
       theirWord: "Sheet Music",
@@ -88,7 +88,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Term Lesson Block",
       perelaiWord: "Prepaid Package",
-      why: "Prepaid lesson packages sit as credit balances, redeemed lesson by lesson without distorting period revenue.",
+      why: "A prepaid package has a remaining service balance. Applying it to a lesson creates neither another payment nor additional revenue. It is separate from your Perelai subscription.",
     },
   ],
 
@@ -105,8 +105,8 @@ export const content: NichePageContent = {
         body: "Schedule recurring lessons, complete visits and add Sheet Music when it forms part of the lesson record.",
       },
       {
-        title: "Evaluate studio profitability across any chosen period",
-        body: "Filter your records by week or academic term to compare lesson income against maintenance costs. The resulting profit margin is clearly displayed, keeping unpaid invoices isolated.",
+        title: "Review the teaching business over a supported period",
+        body: "Review period revenue, recorded expenses and calculated profit for a day, week, month, quarter or year. Lesson completion and recorded payment remain separate.",
       },
     ],
   },
@@ -114,11 +114,11 @@ export const content: NichePageContent = {
   faq: [
     {
       q: "How does Perelai handle semester tuition blocks?",
-      a: "Prepaid term packages act as student credits. The package sale is recorded once; when a student attends, a credit is deducted without adding new cash or revenue.",
+      a: "Record the package sale once. Apply the remaining balance to eligible lessons without recording another payment or additional revenue. A lesson package is not the Perelai subscription.",
     },
     {
       q: "Can I log my instrument tuning and maintenance?",
-      a: "Absolutely. Log expenses like piano tuning, restringing, score purchasing, or studio leasing. These deduct directly from incoming tuition to yield your net profit.",
+      a: "Yes. Record relevant teaching expenses for the period. They contribute to recorded costs and calculated profit; this is not bookkeeping or a net-profit calculation based only on received tuition.",
     },
     {
       q: "What if families are late on paying their invoices?",

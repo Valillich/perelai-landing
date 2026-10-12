@@ -351,3 +351,12 @@ POS0 uses explicit founder-led hypotheses and does not claim research-backed upl
 Record 10–15 verbatim phrases per niche in the page's front-matter. Headlines must use the ICP's words,
 not the product's. This is what the `customer-research` skill is for; run it per niche, not once
 globally.
+
+
+## Terminology MVP override — 2026-10-12
+
+The app MVP terminology package takes priority over historical wave order for this limited pass: preserve four enabled niches (colorists, lash artists, salons, music teachers); prepare barbers → nail artists → makeup artists in RU/UK/EN. Other locales on the existing four stay available. Photography and career coaching are next, not part of this implementation. Wellness and other booking modes remain closed.
+
+Do not describe founder-written draft scenarios as customer research. Existing research entries retain their evidence class; new drafts have no quotes. This limited preparation does not invent a completed VOC gate or revise legal/commercial release acceptance. New pages remain disabled until per-page review.
+
+Music uses `edu`: lesson is the scheduled service event, package balance is not a loan, a service professional is separate from team access. The current exported beauty finance replica is unsuitable for music. Use a verified, explicitly illustrative app screenshot for the bounded MVP; do not claim full `edu` mock parity. LP5b’s historical “not a screenshot” direction does not apply to this temporary MVP exception. RU/UK wording is adapted naturally before EN; no grammar engine or profile export v2 is required.

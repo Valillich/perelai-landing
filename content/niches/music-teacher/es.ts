@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Clase de Piano, Clase de Guitarra",
       perelaiWord: "Servicios en una Visita",
-      why: "La plantilla de profesor de música incluye dos tipos de clase iniciales para repertorio, entrenamiento auditivo y escalas. Cada clase programada se convierte en una Visita con el alumno, el tipo de clase y el registro de pago juntos.",
+      why: "La plantilla incluye dos servicios editables: clase de piano y clase de guitarra. La cita vincula al cliente, el servicio y los registros de pago; no es un plan de estudios ni una evaluación del aprendizaje.",
     },
     {
       theirWord: "Partituras y Libros",

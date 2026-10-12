@@ -45,10 +45,10 @@ export const content: NichePageContent = {
   },
 
   hero: {
-    eyebrow: "Finance software for hair salon owners",
-    h1: "See your salon's month without rebuilding it by hand.",
+    eyebrow: "For salon owners",
+    h1: "Keep the salon’s appointments and payment records together.",
     subhead:
-      "Track revenue, recorded costs and calculated profit for any period. Review the result by service category and client, while recorded payments and open order or instalment balances stay separate.",
+      "Plan salon appointments, keep each client’s history and record payments or prepaid package use.",
     // PLACEHOLDER — no salon MockKind exists yet. See the blocker note above.
     mock: "colorist-workspace",
   },

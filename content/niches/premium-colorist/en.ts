@@ -10,7 +10,7 @@ export const content: NichePageContent = {
   hero: {
     eyebrow: "For independent colorists",
     h1: "When one double-booking can throw your whole day.",
-    subhead: "Put flooded DMs, color visits and today’s money in one workspace built around the way you work.",
+    subhead: "Schedule color appointments, keep client notes and record payments in your workspace.",
     mock: "colorist-workspace",
   },
   pains: [

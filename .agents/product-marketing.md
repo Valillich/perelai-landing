@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v16
-**Last updated:** 2026-10-04
+**Document version:** v17
+**Last updated:** 2026-10-12
 **Scope:** POS2 corrective pass. The owner explicitly approved the six Russian hero strings on 2026-09-19: **RU SOURCE FROZEN**. General framing reflects the owner direction: independent professionals and small teams working by appointment, not beauty-only and not "any profession/CRM". New UK/EN headline/body adaptations follow this framing; other new copy remains candidate/review pending. This is not approval of every translation or evidence of a published release.
 
 ## Product Overview
@@ -57,11 +57,11 @@ Current code includes Billing. “No card because there is no billing” and “
 
 ## Target Audience
 
-**Primary:** Independent professionals who manage their own clients and appointments (e.g. massage therapists, tutors, beauty professionals).
+**Primary:** Independent professionals who manage their own clients and appointments (launch examples: colorists, lash artists, salon professionals and teachers of adult music lessons).
 **Secondary, in the same launch story:** Small teams with up to five active service professionals, including teams needing a non-performing administrator.
 **Decision-maker:** Owner/operator; the SaaS payer may be a different person and is not automatically a workspace administrator.
 
-This replaces the prior solo-colorist/US-only restriction for the general Home. RU/UK/EN are copy-review languages, not a decision about launch jurisdictions, ad targeting or willingness to pay. Colorist examples remain valid illustration datasets, not a product category restriction. Existing non-beauty niche URLs remain available, but developing their positioning is outside POS0–POS4.
+This replaces the prior solo-colorist/US-only restriction for the general Home. RU/UK/EN are copy-review languages, not a decision about launch jurisdictions, ad targeting or willingness to pay. Colorist examples remain valid illustration datasets, not a product category restriction. The enabled music-teacher page remains in launch scope alongside the three enabled beauty pages. The next bounded queue is barbers, nail artists and makeup artists (RU/UK/EN drafts, reviewed individually before enabling). Photography and career coaching follow later. Wellness remains on hold; language is not market eligibility. See the app’s `.cursor/plans/terminology/mvp/04-niche-scope-and-copy.md`.
 
 **Primary use case:** Carry a client's appointment through the working day, retain their history, and know whether payment was recorded or a package was used.
 

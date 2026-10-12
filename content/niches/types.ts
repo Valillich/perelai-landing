@@ -1,6 +1,6 @@
 import type { PublishedLocale } from "@/i18n/locales"
 
-export type MockKind = "colorist-workspace" | "lash-workspace"
+export type MockKind = "colorist-workspace" | "lash-workspace" | "appointment-workspace"
 
 /**
  * Evidence class for a research source. Optional so existing niche research files stay valid;

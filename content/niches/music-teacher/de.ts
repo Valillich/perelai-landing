@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Klavierunterricht, Gitarrenunterricht",
       perelaiWord: "Leistungen auf einem Termin",
-      why: "Die Musiklehrer-Vorlage enthält zwei Starter-Unterrichtsarten für Repertoire, Gehörbildung und Tonleitern. Jede geplante Stunde wird zu einem Termin mit Schüler, Unterrichtsart und Zahlungsaufzeichnung zusammen.",
+      why: "Die Vorlage enthält zwei bearbeitbare Leistungen: Klavierunterricht und Gitarrenunterricht. Ein Termin verknüpft Kunde, Leistung und Zahlungsaufzeichnungen; er ist kein Lehrplan und keine Lernbewertung.",
     },
     {
       theirWord: "Notenblätter",

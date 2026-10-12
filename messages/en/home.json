@@ -161,7 +161,13 @@
     "personalTrainerLabel": "For personal trainers",
     "personalTrainerDescription": "Session revenue, recorded costs and calculated profit for a solo practice, with package redemptions kept separate.",
     "musicTeacherLabel": "For music teachers",
-    "musicTeacherDescription": "Lesson revenue, recorded costs and calculated profit for a private studio, with package redemptions kept separate."
+    "musicTeacherDescription": "Lesson revenue, recorded costs and calculated profit for a private studio, with package redemptions kept separate.",
+    "barbersLabel": "Barbers",
+    "barbersDescription": "Haircuts, beard services and payment records.",
+    "nailArtistsLabel": "Nail artists",
+    "nailArtistsDescription": "Manicure, pedicure and gel polish appointments.",
+    "makeupArtistsLabel": "Makeup artists",
+    "makeupArtistsDescription": "Wedding, evening and trial makeup appointments."
   },
   "faq": {
     "title": "Questions",

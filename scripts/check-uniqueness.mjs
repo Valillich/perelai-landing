@@ -1,26 +1,9 @@
 import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { fileURLToPath } from "node:url"
-import { content as enColorist } from "../content/niches/premium-colorist/en.ts"
-import { content as plColorist } from "../content/niches/premium-colorist/pl.ts"
-import { content as ukColorist } from "../content/niches/premium-colorist/uk.ts"
-import { content as enHairSalon } from "../content/niches/hair-salon/en.ts"
-import { content as ukHairSalon } from "../content/niches/hair-salon/uk.ts"
-import { content as plHairSalon } from "../content/niches/hair-salon/pl.ts"
-import { content as enMassage } from "../content/niches/massage-therapist/en.ts"
-import { content as ukMassage } from "../content/niches/massage-therapist/uk.ts"
-import { content as plMassage } from "../content/niches/massage-therapist/pl.ts"
-import { content as enPersonalTrainer } from "../content/niches/personal-trainer/en.ts"
-import { content as ukPersonalTrainer } from "../content/niches/personal-trainer/uk.ts"
-import { content as plPersonalTrainer } from "../content/niches/personal-trainer/pl.ts"
-import { content as enMusicTeacher } from "../content/niches/music-teacher/en.ts"
-import { content as ukMusicTeacher } from "../content/niches/music-teacher/uk.ts"
-import { content as plMusicTeacher } from "../content/niches/music-teacher/pl.ts"
-import { content as enLashArtist } from "../content/niches/lash-artist/en.ts"
-import { content as plLashArtist } from "../content/niches/lash-artist/pl.ts"
-import { content as ukLashArtist } from "../content/niches/lash-artist/uk.ts"
 import { buildMockDataset } from "../lib/mock-data.ts"
-import { getEnabledNichePages } from "../config/niche-pages.ts"
+import { getNicheContent } from "../content/niches/index.ts"
+import { getNichePageLocales, getEnabledNichePages } from "../config/niche-pages.ts"
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)))
 const MAX_SHARED_TOKEN_RATIO = 0.4
@@ -71,17 +54,9 @@ export function sharedTokenRatio(nicheTokens, baselineTokens) {
   return { shared, unionSize, ratio: shared / unionSize }
 }
 
-export function checkUniquenessForPages(nichePageList, locales = ["en", "uk", "pl"]) {
+export function checkUniquenessForPages(nichePageList, locales = ["en", "uk", "pl", "ru"]) {
   let failed = false
 
-  const contentMap = {
-    "premium-colorist": { en: enColorist, uk: ukColorist, pl: plColorist },
-    "lash-artist": { en: enLashArtist, uk: ukLashArtist, pl: plLashArtist },
-    "hair-salon": { en: enHairSalon, uk: ukHairSalon, pl: plHairSalon },
-    "massage-therapist": { en: enMassage, uk: ukMassage, pl: plMassage },
-    "personal-trainer": { en: enPersonalTrainer, uk: ukPersonalTrainer, pl: plPersonalTrainer },
-    "music-teacher": { en: enMusicTeacher, uk: ukMusicTeacher, pl: plMusicTeacher },
-  }
 
   for (const locale of locales) {
     const homepage = JSON.parse(
@@ -92,8 +67,8 @@ export function checkUniquenessForPages(nichePageList, locales = ["en", "uk", "p
     const nicheTokensMap = new Map()
 
     for (const page of nichePageList) {
-      const content = page.content?.[locale] ?? contentMap[page.niche]?.[locale]
-      if (!content) continue
+      if (!getNichePageLocales(page).includes(locale)) continue
+      const content = page.content?.[locale] ?? getNicheContent(page, locale)
 
       const fullVisibleCopy = visibleNicheCopy(content, page.templateId, locale)
       const pageTokens = tokenize(fullVisibleCopy)

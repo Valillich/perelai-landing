@@ -10,7 +10,7 @@ export const content: NichePageContent = {
   hero: {
     eyebrow: "For independent lash artists",
     h1: "You can’t answer DMs all day.",
-    subhead: "Keep Lash Extensions, refills and what was actually received in one workspace, so a late client does not leave you rebuilding the day at night.",
+    subhead: "Schedule lash extensions and refills, keep client history and record payments between appointments.",
     mock: "lash-workspace",
   },
   pains: [

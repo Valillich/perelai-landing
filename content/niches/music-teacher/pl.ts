@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Lekcja Gry na Pianinie, Lekcja Gry na Gitarze",
       perelaiWord: "Usługi na Wizycie",
-      why: "Szablon pedagoga muzycznego startuje z dwoma typami lekcji — pod repertuar, słuch absolutny i ćwiczenia gamowe. Każdy termin instrumentalny staje się Wizytą z uczniem, rodzajem lekcji i zapisem opłaty.",
+      why: "Szablon zawiera dwie edytowalne usługi: lekcję gry na pianinie i lekcję gry na gitarze. Termin łączy klienta, usługę i zapisy płatności; nie jest programem nauczania ani oceną postępów.",
     },
     {
       theirWord: "Nuty i Podręczniki",

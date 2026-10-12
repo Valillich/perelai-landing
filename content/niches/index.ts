@@ -1,3 +1,12 @@
+import { content as mvpNiche0en } from "./barbershop/en"
+import { content as mvpNiche0ru } from "./barbershop/ru"
+import { content as mvpNiche0uk } from "./barbershop/uk"
+import { content as mvpNiche1en } from "./nail-studio/en"
+import { content as mvpNiche1ru } from "./nail-studio/ru"
+import { content as mvpNiche1uk } from "./nail-studio/uk"
+import { content as mvpNiche2en } from "./makeup-artist/en"
+import { content as mvpNiche2ru } from "./makeup-artist/ru"
+import { content as mvpNiche2uk } from "./makeup-artist/uk"
 import { content as en } from "./premium-colorist/en"
 import { content as pl } from "./premium-colorist/pl"
 import { content as uk } from "./premium-colorist/uk"
@@ -119,6 +128,12 @@ const musicTeacher = {
   tr: musicTeacherTr,
 } satisfies Record<PublishedLocale, NichePageContent>
 
+const stagedContent: Record<string, Partial<Record<PublishedLocale, NichePageContent>>> = {
+  "barbershop": { en: mvpNiche0en, ru: mvpNiche0ru, uk: mvpNiche0uk },
+  "nail-studio": { en: mvpNiche1en, ru: mvpNiche1ru, uk: mvpNiche1uk },
+  "makeup-artist": { en: mvpNiche2en, ru: mvpNiche2ru, uk: mvpNiche2uk },
+}
+
 export function getNicheContent(
   page: NichePage,
   locale: PublishedLocale,
@@ -145,6 +160,12 @@ export function getNicheContent(
 
   if (page.niche === "music-teacher") {
     return musicTeacher[locale]
+  }
+
+  if (page.niche in stagedContent) {
+    const content = stagedContent[page.niche][locale]
+    if (content) return content
+    throw new Error(`No ${locale} content for staged niche "${page.niche}"`)
   }
 
   throw new Error(`No content module for enabled niche "${page.niche}"`)

@@ -3,19 +3,14 @@ import {
   MockFinanceKpis,
   MockInboxTriage,
 } from "@/components/mock"
-import { NICHE_PAGES } from "@/config/niche-pages"
 import type { AppScreenDataset } from "@/lib/app-screen-mock"
 import type { MockDataset } from "@/lib/mock-data"
 
 type MockVariant = "calendar" | "finance"
 
-/**
- * Stable per-niche hero mock: even registry index → calendar + inbox,
- * odd → finance KPIs. Order in `NICHE_PAGES` is the source of truth.
- */
+/** Existing beauty compositions stay stable when registry entries are added. */
 function mockVariantForNiche(niche: string): MockVariant {
-  const index = NICHE_PAGES.findIndex((page) => page.niche === niche)
-  return index % 2 === 0 ? "calendar" : "finance"
+  return niche === "lash-artist" || niche === "hair-salon" ? "finance" : "calendar"
 }
 
 /**

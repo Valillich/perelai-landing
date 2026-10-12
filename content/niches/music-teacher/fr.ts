@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Cours de Piano, Cours de Guitare",
       perelaiWord: "Services sur une Visite",
-      why: "Le modèle professeur de musique comprend deux types de cours de départ pour le répertoire, l'oreille et les gammes. Chaque cours planifié devient une Visite portant l'élève, le type de cours et l'enregistrement de paiement ensemble.",
+      why: "Le modèle comprend deux services modifiables : cours de piano et cours de guitare. Le rendez-vous relie le client, le service et les paiements enregistrés ; ce n’est ni un programme pédagogique ni une évaluation des acquis.",
     },
     {
       theirWord: "Partitions & Livres",

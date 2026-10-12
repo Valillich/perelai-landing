@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Aula de piano, Aula de guitarra",
       perelaiWord: "Serviços em uma Visita",
-      why: "O modelo de professor de música inclui dois tipos de aula iniciais para repertório, treino auditivo e escalas. Cada aula agendada se torna uma Visita com o aluno, o tipo de aula e o registro de pagamento juntos.",
+      why: "O modelo inclui dois serviços editáveis: aula de piano e aula de guitarra. O agendamento liga o cliente, o serviço e os registos de pagamento; não é um currículo nem uma avaliação da aprendizagem.",
     },
     {
       theirWord: "Partituras",

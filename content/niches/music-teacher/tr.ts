@@ -60,7 +60,7 @@ export const content: NichePageContent = {
     {
       theirWord: "Piyano Dersi, Gitar Dersi",
       perelaiWord: "Bir Ziyaretteki Hizmetler",
-      why: "Müzik öğretmeni şablonu repertuar, kulak eğitimi ve gam çalışması için iki başlangıç ders türü içerir. Her planlanan ders öğrenci, ders türü ve ödeme kaydını birlikte taşıyan bir Ziyaret olur.",
+      why: "Şablonda düzenlenebilir iki hizmet vardır: piyano dersi ve gitar dersi. Randevu müşteriyi, hizmeti ve ödeme kayıtlarını bağlar; müfredat veya öğrenme değerlendirmesi değildir.",
     },
     {
       theirWord: "Notalar",
