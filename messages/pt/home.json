@@ -140,7 +140,13 @@
     "personalTrainerLabel": "Para personal trainers",
     "personalTrainerDescription": "Faturamento de sessões, custos registrados e lucro calculado — com resgates de pacote e histórico do cliente separados.",
     "musicTeacherLabel": "Para professores de música",
-    "musicTeacherDescription": "Faturamento de aulas, custos registrados e lucro calculado para um estúdio privado — com resgates de pacote separados."
+    "musicTeacherDescription": "Faturamento de aulas, custos registrados e lucro calculado para um estúdio privado — com resgates de pacote separados.",
+    "barbersLabel": "Para barbeiros",
+    "barbersDescription": "Agende cortes e serviços de barba, mantenha o histórico dos clientes e registre pagamentos em um só espaço.",
+    "nailArtistsLabel": "Para profissionais de unhas",
+    "nailArtistsDescription": "Agende manicure e pedicure cosméticas, adicione esmaltação ou decoração e mantenha os clientes e pagamentos juntos.",
+    "makeupArtistsLabel": "Para maquiadores",
+    "makeupArtistsDescription": "Agende maquiagem de noiva, de eventos e de teste, guarde as preferências do cliente e registre cada serviço e pagamento."
   },
   "faq": {
     "title": "Perguntas frequentes",

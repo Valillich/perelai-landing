@@ -1,3 +1,21 @@
+import { content as mvpNiche0de } from "./barbershop/de"
+import { content as mvpNiche0es } from "./barbershop/es"
+import { content as mvpNiche0fr } from "./barbershop/fr"
+import { content as mvpNiche0pl } from "./barbershop/pl"
+import { content as mvpNiche0pt } from "./barbershop/pt"
+import { content as mvpNiche0tr } from "./barbershop/tr"
+import { content as mvpNiche1de } from "./nail-studio/de"
+import { content as mvpNiche1es } from "./nail-studio/es"
+import { content as mvpNiche1fr } from "./nail-studio/fr"
+import { content as mvpNiche1pl } from "./nail-studio/pl"
+import { content as mvpNiche1pt } from "./nail-studio/pt"
+import { content as mvpNiche1tr } from "./nail-studio/tr"
+import { content as mvpNiche2de } from "./makeup-artist/de"
+import { content as mvpNiche2es } from "./makeup-artist/es"
+import { content as mvpNiche2fr } from "./makeup-artist/fr"
+import { content as mvpNiche2pl } from "./makeup-artist/pl"
+import { content as mvpNiche2pt } from "./makeup-artist/pt"
+import { content as mvpNiche2tr } from "./makeup-artist/tr"
 import { content as mvpNiche0en } from "./barbershop/en"
 import { content as mvpNiche0ru } from "./barbershop/ru"
 import { content as mvpNiche0uk } from "./barbershop/uk"
@@ -128,10 +146,10 @@ const musicTeacher = {
   tr: musicTeacherTr,
 } satisfies Record<PublishedLocale, NichePageContent>
 
-const stagedContent: Record<string, Partial<Record<PublishedLocale, NichePageContent>>> = {
-  "barbershop": { en: mvpNiche0en, ru: mvpNiche0ru, uk: mvpNiche0uk },
-  "nail-studio": { en: mvpNiche1en, ru: mvpNiche1ru, uk: mvpNiche1uk },
-  "makeup-artist": { en: mvpNiche2en, ru: mvpNiche2ru, uk: mvpNiche2uk },
+const launchContent: Record<string, Record<PublishedLocale, NichePageContent>> = {
+  "barbershop": { en: mvpNiche0en, uk: mvpNiche0uk, pl: mvpNiche0pl, ru: mvpNiche0ru, es: mvpNiche0es, fr: mvpNiche0fr, de: mvpNiche0de, pt: mvpNiche0pt, tr: mvpNiche0tr },
+  "nail-studio": { en: mvpNiche1en, uk: mvpNiche1uk, pl: mvpNiche1pl, ru: mvpNiche1ru, es: mvpNiche1es, fr: mvpNiche1fr, de: mvpNiche1de, pt: mvpNiche1pt, tr: mvpNiche1tr },
+  "makeup-artist": { en: mvpNiche2en, uk: mvpNiche2uk, pl: mvpNiche2pl, ru: mvpNiche2ru, es: mvpNiche2es, fr: mvpNiche2fr, de: mvpNiche2de, pt: mvpNiche2pt, tr: mvpNiche2tr },
 }
 
 export function getNicheContent(
@@ -162,10 +180,10 @@ export function getNicheContent(
     return musicTeacher[locale]
   }
 
-  if (page.niche in stagedContent) {
-    const content = stagedContent[page.niche][locale]
+  if (page.niche in launchContent) {
+    const content = launchContent[page.niche][locale]
     if (content) return content
-    throw new Error(`No ${locale} content for staged niche "${page.niche}"`)
+    throw new Error(`No ${locale} content for launch niche "${page.niche}"`)
   }
 
   throw new Error(`No content module for enabled niche "${page.niche}"`)

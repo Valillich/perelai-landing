@@ -11,6 +11,7 @@ import { PUBLISHED_LOCALES } from "@/i18n/locales"
 import { getLocalizedAlternates } from "@/i18n/paths"
 import { getNicheContent } from "@/content/niches"
 import { nicheLabelKeys } from "@/lib/niche-labels"
+import { buildLocalizedPageMetadata } from "@/lib/seo"
 import { buildAppSignupUrl } from "@/lib/urls"
 import de from "@/messages/de/home.json"
 import en from "@/messages/en/home.json"
@@ -37,14 +38,14 @@ describe("the published niche pages", () => {
       expect(getNicheStaticParams().filter(param => param.locale === locale).map(param => param.nichePage)).not.toContain(page.path.slice(1))
     }
   })
-  test("publishes the four existing pages in nine locales and three approved niches only in EN/RU/UK", () => {
+  test("publishes all seven enabled niches in all nine locales", () => {
     const expected = [
       ["for-independent-colorists", PUBLISHED_LOCALES],
       ["for-lash-artists", PUBLISHED_LOCALES],
-      ["for-nail-artists", ["en", "ru", "uk"]],
-      ["for-barbers", ["en", "ru", "uk"]],
+      ["for-nail-artists", PUBLISHED_LOCALES],
+      ["for-barbers", PUBLISHED_LOCALES],
       ["for-salons", PUBLISHED_LOCALES],
-      ["for-makeup-artists", ["en", "ru", "uk"]],
+      ["for-makeup-artists", PUBLISHED_LOCALES],
       ["for-music-teachers", PUBLISHED_LOCALES],
     ] as const
     expect(getNicheStaticParams()).toEqual(
@@ -163,22 +164,19 @@ describe("the published niche pages", () => {
   })
 })
 
-// Copy was approved by the owner; publication remains limited to translated locales.
+// Owner requested publication of all three niches in every available language.
 describe("the three approved MVP niches", () => {
-  test.each(["barber", "nail_salon", "makeup_artist"])("publishes %s only in RU/UK/EN", (templateId) => {
+  test.each(["barber", "nail_salon", "makeup_artist"])("publishes %s in all nine locales", (templateId) => {
     const page = NICHE_PAGES.find(candidate => candidate.templateId === templateId)!
     expect(page.enabled).toBe(true)
-    expect(getNichePageLocales(page)).toEqual(["en", "ru", "uk"])
+    expect(getNichePageLocales(page)).toEqual(PUBLISHED_LOCALES)
     for (const locale of PUBLISHED_LOCALES) {
-      if (!["en", "ru", "uk"].includes(locale)) {
-        expect(getEnabledNichePageBySlug(page.path.slice(1), locale)).toBeUndefined()
-        expect(() => getNicheContent(page, locale)).toThrow()
-        continue
-      }
       expect(getEnabledNichePageBySlug(page.path.slice(1), locale)?.templateId).toBe(templateId)
-      expect(Object.keys(getLocalizedAlternates(page.path, locale, getNichePageLocales(page))).sort()).toEqual(["en", "ru", "uk", "x-default"].sort())
+      expect(Object.keys(getLocalizedAlternates(page.path, locale, getNichePageLocales(page))).sort()).toEqual([...PUBLISHED_LOCALES, "x-default"].sort())
       const content = getNicheContent(page, locale)
       expect(content.research.verbatims).toEqual([])
+      const metadata = buildLocalizedPageMetadata({ locale, pathname: page.path, ...content.meta, availableLocales: getNichePageLocales(page) })
+      expect(metadata.openGraph?.alternateLocale).toHaveLength(PUBLISHED_LOCALES.length - 1)
       const keys = nicheLabelKeys(page)!
       for (const key of [keys.label, keys.description]) {
         const [, name] = key.split(".")

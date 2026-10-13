@@ -140,7 +140,13 @@
     "personalTrainerLabel": "Pour les coachs sportifs",
     "personalTrainerDescription": "Revenu des séances, coûts enregistrés et profit calculé — avec utilisations de forfait et historique client séparés.",
     "musicTeacherLabel": "Pour les professeurs de musique",
-    "musicTeacherDescription": "Revenu des cours, coûts enregistrés et profit calculé pour un studio privé — avec utilisations de forfait séparées."
+    "musicTeacherDescription": "Revenu des cours, coûts enregistrés et profit calculé pour un studio privé — avec utilisations de forfait séparées.",
+    "barbersLabel": "Pour les barbiers",
+    "barbersDescription": "Planifiez coupes et soins de barbe, conservez l’historique des clients et enregistrez les paiements dans un même espace.",
+    "nailArtistsLabel": "Pour les professionnels des ongles",
+    "nailArtistsDescription": "Planifiez manucures et pédicures esthétiques, ajoutez vernis ou nail art et gardez rendez-vous et paiements ensemble.",
+    "makeupArtistsLabel": "Pour les maquilleurs",
+    "makeupArtistsDescription": "Planifiez maquillages de mariée, de soirée et d’essai, conservez les préférences du client et enregistrez prestations et paiements."
   },
   "faq": {
     "title": "Questions fréquentes",

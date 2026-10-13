@@ -140,7 +140,13 @@
     "personalTrainerLabel": "Para entrenadores personales",
     "personalTrainerDescription": "Ingresos de sesiones, costes registrados y beneficio calculado, con canjes de paquete e historial de cliente aparte.",
     "musicTeacherLabel": "Para profesores de música",
-    "musicTeacherDescription": "Ingresos de clases, costes registrados y beneficio calculado para un estudio privado, con canjes de paquete aparte."
+    "musicTeacherDescription": "Ingresos de clases, costes registrados y beneficio calculado para un estudio privado, con canjes de paquete aparte.",
+    "barbersLabel": "Para barberos",
+    "barbersDescription": "Organiza cortes y servicios de barba, conserva el historial de cada cliente y registra los pagos en un mismo espacio.",
+    "nailArtistsLabel": "Para profesionales de uñas",
+    "nailArtistsDescription": "Planifica manicuras y pedicuras cosméticas, añade esmaltado o diseños y conserva las citas junto a los registros de pagos.",
+    "makeupArtistsLabel": "Para maquilladores",
+    "makeupArtistsDescription": "Programa maquillaje de novia, de eventos y de prueba. Conserva las preferencias del cliente y registra cada servicio y pago."
   },
   "faq": {
     "title": "Preguntas frecuentes",

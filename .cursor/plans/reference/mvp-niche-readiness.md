@@ -1,4 +1,4 @@
-# Terminology MVP: local niche readiness — 2026-10-12
+# Terminology MVP: local niche readiness — updated 2026-10-13
 
 App definitions and evidence: `/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/01-launch-definitions.md`, `04-niche-scope-and-copy.md`, `05-implementation-evidence.md`. Verified screenshot app revision: `c052a975c`; the export source is recorded with its full commit/hash in the generated catalog. Landing baseline: `d3cf491507d8373ce5cbeefcc62e7940192ea17c`.
 
@@ -10,13 +10,13 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 | brow_lash_artist | existing enabled | all 9 retained | RU/UK/EN client history/payment introduction; existing beauty mock |
 | salon | existing enabled | all 9 retained | RU/UK/EN appointment/client/package introduction; existing beauty mock |
 | music_teacher | existing enabled | all 9 retained | False curriculum preset removed in all 9; RU/UK/EN terminology and real CalendarPage screenshot; no beauty finance replica in other locales |
-| barber | enabled locally | en/ru/uk only | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
-| nail_salon | enabled locally | en/ru/uk only | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
-| makeup_artist | enabled locally | en/ru/uk only | Wedding/evening makeup, makeup trial distinct from SaaS trial; no permanent makeup/medical positioning |
+| barber | enabled locally | all 9 | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
+| nail_salon | enabled locally | all 9 | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
+| makeup_artist | enabled locally | all 9 | Wedding/evening makeup, makeup trial distinct from SaaS trial; no permanent makeup/medical positioning |
 
 **Owner approval received 2026-10-12:** prepared wording approved; RU/UK reviewed by the native-speaking owner, EN owner-approved without a native-certification claim. English professional examples were refined during activation to meet the unchanged uniqueness gate; approved meanings and feature boundaries remain. Other existing locales received only the bounded music factual correction; no full stylistic certification. New draft `research.sources/verbatims` are empty: founder examples are not VOC or testimonials.
 
-## Verified locally
+## Verification snapshot — 2026-10-12
 
 - App service/catalog export generated from a clean committed app; no dirty-source override.
 - Signup slug and language handoff, content/label coverage and refusal of undeclared locales are tested. The three pages now have routes, sitemap, hreflang and navigation entries only in EN/RU/UK. Missing locales return 404.
@@ -27,7 +27,7 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 - Code review: Standards pass; Spec metadata and screenshot-revision omissions corrected.
 - Runtime for checks: installed Node 24.18; system Node 20.18 fails to start current Vite 7.
 
-## Activation evidence after owner approval
+## Activation evidence after owner approval — 2026-10-12
 
 - Three pages enabled locally for EN/RU/UK; four existing pages keep all nine languages: 45 page/locale combinations.
 - 24 desktop/mobile variants checked across the three new pages and music teacher. H1, CTA slug/language, metadata, overflow and page errors checked; missing German routes return 404.
@@ -41,3 +41,15 @@ No deployment performed. BILL/TEAM/Drawer/server onboarding and legal release ev
 ## Final activation review
 
 Standards: no findings. Spec: corrected two activation issues — English nail/makeup setup names now match the exported starter expense categories (Polish & Tools / Makeup Consumables), and Open Graph alternate locales use the same page-specific EN/RU/UK set as hreflang. Four metadata regression cases cover partial and fully localized pages. Final typecheck, 34 suites / 510 tests, and verify:niches pass. Earlier app evidence records the pre-review 506-test snapshot; this section records the final landing checks. Production/legal release blockers remain unchanged.
+
+## All-language activation — 2026-10-13
+
+Owner requested all available translations and activation of barbers, nail artists and makeup artists. Added independent DE/ES/FR/PL/PT/TR modules for each page (18 modules); existing EN/RU/UK copy remains unchanged. All seven enabled niches now cover all nine published locales: **63 page/locale combinations**, including 27 URLs for these three pages. Removed their locale restriction; homepage/header labels, sitemap, hreflang, Open Graph and signup handoff use the full set. Disabled niches and booking-mode gates remain unchanged. These translations have not received a separate native-speaker certification.
+
+Terminology retains package-versus-software-subscription, makeup-rehearsal-versus-software-trial, completion-versus-payment and service-professional-versus-team-access distinctions. New glossary service/package labels match exported app navigation; translated setup prose describes supplies without inventing exact seeded category names. No medical/podology/permanent-makeup, acquiring, payroll, portfolio or event-management claims were added.
+
+The existing uniqueness CLI continues its EN/UK/PL/RU coverage. A new integration check additionally evaluates the three new niches in **all nine locales**, against each locale homepage and each other, using the unchanged 40% maximum overlap. A diagnostic full-nine sweep exposed pre-existing colorist/lash overlap in FR (44.2%) and PT (42.2%); those unchanged pages are outside this translation task. New professional examples were refined to pass the same threshold.
+
+Validation: TypeScript PASS, 34 suites / 511 tests PASS. Real HTTP checks: all 27 URLs return 200, all-nine hreflang and eight Open Graph alternatives, locale handoff, and three /en canonical redirects. Production deployment remains separate; previous legal approval hash blockers are not overridden by this localization request.
+
+Desktop/mobile checks: 36 variants (three pages × six new locales × two viewports), all PASS for H1, CTA niche/language, reciprocal metadata, horizontal overflow and page errors. Evidence: [mvp-niche-all-locales-layout.json](evidence/mvp-niche-all-locales-layout.json). The current screenshot previews use synthetic app datasets; these checks do not complete server onboarding or validate payments/trial issuance.

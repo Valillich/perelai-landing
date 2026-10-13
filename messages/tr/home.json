@@ -140,7 +140,13 @@
     "personalTrainerLabel": "Kişisel antrenörler için",
     "personalTrainerDescription": "Seans cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ve müşteri geçmişi ayrı okunaklı.",
     "musicTeacherLabel": "Müzik öğretmenleri için",
-    "musicTeacherDescription": "Özel stüdyo için ders cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ayrı okunaklı."
+    "musicTeacherDescription": "Özel stüdyo için ders cirosu, kaydedilen maliyetler ve hesaplanan kâr — paket kullanımları ayrı okunaklı.",
+    "barbersLabel": "Berberler için",
+    "barbersDescription": "Saç kesimi ve sakal hizmetlerini planlayın, müşteri geçmişini koruyun ve ödemeleri tek çalışma alanında kaydedin.",
+    "nailArtistsLabel": "Tırnak uzmanları için",
+    "nailArtistsDescription": "Kozmetik manikür ve pedikür randevularını planlayın, oje veya tasarım ekleyin ve müşteri ile ödeme kayıtlarını bir arada tutun.",
+    "makeupArtistsLabel": "Makyaj sanatçıları için",
+    "makeupArtistsDescription": "Gelin, özel gün ve prova makyajını planlayın, müşteri tercihlerini koruyun ve her hizmet ile ödemeyi kaydedin."
   },
   "faq": {
     "title": "Sıkça sorulan sorular",

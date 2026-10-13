@@ -2,9 +2,16 @@ import { spawnSync } from "node:child_process"
 import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { describe, expect, test } from "vitest"
+import { NICHE_PAGES } from "../config/niche-pages"
+import { PUBLISHED_LOCALES } from "../i18n/locales"
 import { checkUniquenessForPages, sharedTokenRatio, tokenize } from "../scripts/check-uniqueness.mjs"
 
 describe("niche copy uniqueness", () => {
+  test("checks all nine languages for the three newly translated niches", () => {
+    const pages = NICHE_PAGES.filter(page => ["barber", "nail_salon", "makeup_artist"].includes(page.templateId))
+    expect(checkUniquenessForPages(pages, [...PUBLISHED_LOCALES])).toBe(true)
+  })
+
   test("keeps every published niche page at least 60% distinct from its locale homepage", () => {
     const result = spawnSync("pnpm", ["check:uniqueness"], {
       cwd: process.cwd(),

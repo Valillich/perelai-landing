@@ -140,7 +140,13 @@
     "personalTrainerLabel": "Für Personal Trainer",
     "personalTrainerDescription": "Umsatz aus Einheiten, erfasste Kosten und berechneter Gewinn — mit Paketeinlösungen und Kundenhistorie getrennt lesbar.",
     "musicTeacherLabel": "Für Musiklehrer",
-    "musicTeacherDescription": "Umsatz aus Unterricht, erfasste Kosten und berechneter Gewinn für ein Privatstudio — mit Paketeinlösungen getrennt lesbar."
+    "musicTeacherDescription": "Umsatz aus Unterricht, erfasste Kosten und berechneter Gewinn für ein Privatstudio — mit Paketeinlösungen getrennt lesbar.",
+    "barbersLabel": "Für Barber",
+    "barbersDescription": "Planen Sie Haarschnitte und Bartpflege, behalten Sie die Kundenhistorie und erfassen Sie Zahlungen in einem Arbeitsbereich.",
+    "nailArtistsLabel": "Für Nageldesigner",
+    "nailArtistsDescription": "Planen Sie kosmetische Maniküre und Pediküre, ergänzen Sie Lack oder Nail Art und behalten Sie Kunden und Zahlungen im Blick.",
+    "makeupArtistsLabel": "Für Make-up Artists",
+    "makeupArtistsDescription": "Planen Sie Braut-, Event- und Probe-Make-up, behalten Sie Kundenwünsche und erfassen Sie jede Leistung und Zahlung."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",

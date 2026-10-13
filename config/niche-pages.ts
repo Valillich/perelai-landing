@@ -85,7 +85,6 @@ export const NICHE_PAGES: NichePage[] = [
   {
     path: "/for-nail-artists",
     niche: "nail-studio",
-    locales: ["en", "ru", "uk"],
     templateId: "nail_salon",
     wave: "1b",
     enabled: true,
@@ -100,7 +99,6 @@ export const NICHE_PAGES: NichePage[] = [
   {
     path: "/for-barbers",
     niche: "barbershop",
-    locales: ["en", "ru", "uk"],
     templateId: "barber",
     wave: "1b",
     enabled: true,
@@ -138,7 +136,6 @@ export const NICHE_PAGES: NichePage[] = [
   {
     path: "/for-makeup-artists",
     niche: "makeup-artist",
-    locales: ["en", "ru", "uk"],
     templateId: "makeup_artist",
     wave: "2",
     enabled: true,
