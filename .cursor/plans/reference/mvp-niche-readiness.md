@@ -53,3 +53,5 @@ The existing uniqueness CLI continues its EN/UK/PL/RU coverage. A new integratio
 Validation: TypeScript PASS, 34 suites / 511 tests PASS. Real HTTP checks: all 27 URLs return 200, all-nine hreflang and eight Open Graph alternatives, locale handoff, and three /en canonical redirects. Production deployment remains separate; previous legal approval hash blockers are not overridden by this localization request.
 
 Desktop/mobile checks: 36 variants (three pages × six new locales × two viewports), all PASS for H1, CTA niche/language, reciprocal metadata, horizontal overflow and page errors. Evidence: [mvp-niche-all-locales-layout.json](evidence/mvp-niche-all-locales-layout.json). The current screenshot previews use synthetic app datasets; these checks do not complete server onboarding or validate payments/trial issuance.
+
+Final all-language review: Standards — 0 actionable findings; Spec — 0 actionable findings. `verify:niches` and `verify:commercial` PASS after commit. Implementation commit: `22814f7`. Existing generated `next-env.d.ts` dev-route reference was already dirty at task start and is excluded from the commit.
