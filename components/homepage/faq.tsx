@@ -9,7 +9,7 @@ export function Faq() {
   const t = useTranslations("home")
 
   return (
-    <section className="py-20 sm:py-28 px-4 border-t border-border bg-background">
+    <section id="faq" className="scroll-mt-28 py-20 sm:py-28 px-4 border-t border-border bg-background">
       <Reveal className="max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-center mb-12 text-foreground">
           {t("faq.title")}

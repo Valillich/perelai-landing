@@ -196,7 +196,9 @@
     "forMusicTeachers": "Pour les professeurs de musique",
     "devices": "Comment ouvrir Perelai ?",
     "refund": "Politique de remboursement",
-    "cookies": "Politique relative aux cookies"
+    "cookies": "Politique relative aux cookies",
+    "help": "Aide",
+    "contact": "Nous contacter"
   },
   "devices": {
     "title": "Une seule adresse, un seul compte",

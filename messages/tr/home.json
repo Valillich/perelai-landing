@@ -196,7 +196,9 @@
     "forMusicTeachers": "Müzik öğretmenleri için",
     "devices": "Perelai nasıl açılır?",
     "refund": "Geri Ödeme Politikası",
-    "cookies": "Çerez Politikası"
+    "cookies": "Çerez Politikası",
+    "help": "Yardım",
+    "contact": "İletişim"
   },
   "devices": {
     "title": "Tek adres, tek giriş",
