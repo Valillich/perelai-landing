@@ -358,7 +358,7 @@ describe("finance-first machine-readable order and FM6 contract", () => {
 
 
 describe("fully translated MVP niche sitemap", () => {
-  test.each(["/for-barbers", "/for-nail-artists", "/for-makeup-artists"])("lists %s in every published locale", path => {
+  test.each(["/for-barbers", "/for-nail-artists", "/for-makeup-artists", "/for-photographers", "/for-career-coaches"])("lists %s in every published locale", path => {
     const entries = sitemap()
     for (const locale of PUBLISHED_LOCALES) {
       const entry = entries.find(item => item.url === toAbsoluteLandingUrl(localizePath(locale, path)))

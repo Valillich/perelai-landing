@@ -1,3 +1,21 @@
+import { content as photographyen } from "./photography/en"
+import { content as photographyuk } from "./photography/uk"
+import { content as photographypl } from "./photography/pl"
+import { content as photographyru } from "./photography/ru"
+import { content as photographyes } from "./photography/es"
+import { content as photographyfr } from "./photography/fr"
+import { content as photographyde } from "./photography/de"
+import { content as photographypt } from "./photography/pt"
+import { content as photographytr } from "./photography/tr"
+import { content as careerCoachen } from "./career-coach/en"
+import { content as careerCoachuk } from "./career-coach/uk"
+import { content as careerCoachpl } from "./career-coach/pl"
+import { content as careerCoachru } from "./career-coach/ru"
+import { content as careerCoaches } from "./career-coach/es"
+import { content as careerCoachfr } from "./career-coach/fr"
+import { content as careerCoachde } from "./career-coach/de"
+import { content as careerCoachpt } from "./career-coach/pt"
+import { content as careerCoachtr } from "./career-coach/tr"
 import { content as mvpNiche0de } from "./barbershop/de"
 import { content as mvpNiche0es } from "./barbershop/es"
 import { content as mvpNiche0fr } from "./barbershop/fr"
@@ -147,6 +165,8 @@ const musicTeacher = {
 } satisfies Record<PublishedLocale, NichePageContent>
 
 const launchContent: Record<string, Record<PublishedLocale, NichePageContent>> = {
+  "career-coach": { en: careerCoachen, uk: careerCoachuk, pl: careerCoachpl, ru: careerCoachru, es: careerCoaches, fr: careerCoachfr, de: careerCoachde, pt: careerCoachpt, tr: careerCoachtr },
+  "photography": { en: photographyen, uk: photographyuk, pl: photographypl, ru: photographyru, es: photographyes, fr: photographyfr, de: photographyde, pt: photographypt, tr: photographytr },
   "barbershop": { en: mvpNiche0en, uk: mvpNiche0uk, pl: mvpNiche0pl, ru: mvpNiche0ru, es: mvpNiche0es, fr: mvpNiche0fr, de: mvpNiche0de, pt: mvpNiche0pt, tr: mvpNiche0tr },
   "nail-studio": { en: mvpNiche1en, uk: mvpNiche1uk, pl: mvpNiche1pl, ru: mvpNiche1ru, es: mvpNiche1es, fr: mvpNiche1fr, de: mvpNiche1de, pt: mvpNiche1pt, tr: mvpNiche1tr },
   "makeup-artist": { en: mvpNiche2en, uk: mvpNiche2uk, pl: mvpNiche2pl, ru: mvpNiche2ru, es: mvpNiche2es, fr: mvpNiche2fr, de: mvpNiche2de, pt: mvpNiche2pt, tr: mvpNiche2tr },

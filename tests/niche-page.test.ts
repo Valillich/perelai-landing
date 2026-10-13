@@ -38,7 +38,7 @@ describe("the published niche pages", () => {
       expect(getNicheStaticParams().filter(param => param.locale === locale).map(param => param.nichePage)).not.toContain(page.path.slice(1))
     }
   })
-  test("publishes all seven enabled niches in all nine locales", () => {
+  test("publishes all nine enabled niches in all nine locales", () => {
     const expected = [
       ["for-independent-colorists", PUBLISHED_LOCALES],
       ["for-lash-artists", PUBLISHED_LOCALES],
@@ -47,6 +47,8 @@ describe("the published niche pages", () => {
       ["for-salons", PUBLISHED_LOCALES],
       ["for-makeup-artists", PUBLISHED_LOCALES],
       ["for-music-teachers", PUBLISHED_LOCALES],
+      ["for-career-coaches", PUBLISHED_LOCALES],
+      ["for-photographers", PUBLISHED_LOCALES],
     ] as const
     expect(getNicheStaticParams()).toEqual(
       expected.flatMap(([nichePage, locales]) => locales.map(locale => ({ locale, nichePage }))),
@@ -164,9 +166,9 @@ describe("the published niche pages", () => {
   })
 })
 
-// Owner requested publication of all three niches in every available language.
-describe("the three approved MVP niches", () => {
-  test.each(["barber", "nail_salon", "makeup_artist"])("publishes %s in all nine locales", (templateId) => {
+// Owner requested publication of these niches in every available language.
+describe("the enabled MVP niches", () => {
+  test.each(["barber", "nail_salon", "makeup_artist", "photographer", "career_coach"])("publishes %s in all nine locales", (templateId) => {
     const page = NICHE_PAGES.find(candidate => candidate.templateId === templateId)!
     expect(page.enabled).toBe(true)
     expect(getNichePageLocales(page)).toEqual(PUBLISHED_LOCALES)

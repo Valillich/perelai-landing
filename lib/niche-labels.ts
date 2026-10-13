@@ -10,6 +10,8 @@ import type { NichePage } from "@/config/niche-pages"
  * these strings.
  */
 const NICHE_LABEL_KEYS: Record<string, { label: string; description: string }> = {
+  "photography": { label: "nicheRouter.photographersLabel", description: "nicheRouter.photographersDescription" },
+  "career-coach": { label: "nicheRouter.careerCoachesLabel", description: "nicheRouter.careerCoachesDescription" },
   "barbershop": { label: "nicheRouter.barbersLabel", description: "nicheRouter.barbersDescription" },
   "nail-studio": { label: "nicheRouter.nailArtistsLabel", description: "nicheRouter.nailArtistsDescription" },
   "makeup-artist": { label: "nicheRouter.makeupArtistsLabel", description: "nicheRouter.makeupArtistsDescription" },

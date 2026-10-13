@@ -153,3 +153,23 @@ describe("music teacher HTML mock", () => {
     expect(buildTrustSentence(beauty)).toContain("3 visits")
   })
 })
+
+
+describe("photography and career HTML mocks", () => {
+  const examples = [
+    { templateId: "photographer", niche: "photography", profile: "pro", serviceKeys: ["templates.photographer.services.p1", "templates.photographer.services.p2"] },
+    { templateId: "career_coach", niche: "career-coach", profile: "coaching", serviceKeys: ["templates.career_coach.services.cc1", "templates.career_coach.services.cc2"] },
+  ] as const
+  it.each(APP_LOCALES.flatMap(locale => examples.map(example => ({ locale, ...example }))))("renders $templateId in $locale with matching profile and services", ({ locale, templateId, niche, profile, serviceKeys }) => {
+    const dataset = buildMockDataset(templateId, locale, "US", REFERENCE)
+    const screenDataset = buildAppScreenDataset(templateId, locale, "US", REFERENCE)
+    expect(dataset.services.map(service => service.nameKey)).toEqual(serviceKeys)
+    expect(dataset.labels["inbox.ready_to_confirm"]).toBe(uiStrings.profiles[profile].locales[locale]["inbox.ready_to_confirm"])
+    expect(dataset.trustTotal).toBe(dataset.visits.reduce((total, visit) => total + visit.amount, 0))
+    const html = renderToStaticMarkup(createElement(NicheMockSuite, { niche, dataset, screenDataset }))
+    for (const service of dataset.services) expect(html).toContain(service.name.replace(/&/g, "&amp;").replace(/'/g, "&#x27;"))
+    expect(html).not.toContain("<img")
+    expect(html).toContain(dataset.exampleCaption)
+    expect(dataset.visits.every(visit => dataset.services.some(service => service.name === visit.serviceName))).toBe(true)
+  })
+})

@@ -1,0 +1,1051 @@
+{
+  "checkedAt": "2026-10-13",
+  "appSourceCommit": "319a577c1204d3da7204cbc8d39706dd4cc30f4e",
+  "environment": "local webpack dev, synthetic data, external API/telemetry intercepted; no deployment or server onboarding acceptance",
+  "variants": [
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "en",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "en",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "uk",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "uk",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "pl",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "pl",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "ru",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "ru",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "es",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "es",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "fr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "fr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "de",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "de",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "pt",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "pt",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "tr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-photographers",
+      "niche": "photography",
+      "template": "photographer",
+      "locale": "tr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "p1",
+        "p2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "en",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "en",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "uk",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "uk",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "pl",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "pl",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "ru",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "ru",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "es",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "es",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "fr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "fr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "de",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "de",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "pt",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "pt",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "tr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "slug": "for-career-coaches",
+      "niche": "career-coach",
+      "template": "career_coach",
+      "locale": "tr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "services": [
+        "cc1",
+        "cc2"
+      ],
+      "footerNiches": 9,
+      "cta": "correct niche and language",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr",
+        "pl",
+        "pt",
+        "ru",
+        "tr",
+        "uk",
+        "x-default"
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}

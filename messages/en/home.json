@@ -167,7 +167,11 @@
     "nailArtistsLabel": "For nail artists",
     "nailArtistsDescription": "Manicure, pedicure and gel polish appointments.",
     "makeupArtistsLabel": "For makeup artists",
-    "makeupArtistsDescription": "Wedding, evening and trial makeup appointments."
+    "makeupArtistsDescription": "Wedding, evening and trial makeup appointments.",
+    "photographersLabel": "For photographers",
+    "photographersDescription": "Schedule portraits and event coverage, keep client agreements and record the payment for each shoot.",
+    "careerCoachesLabel": "For career coaches",
+    "careerCoachesDescription": "Schedule CV reviews and mock interviews, keep professional agreements and record payments for consultations."
   },
   "faq": {
     "title": "Questions",

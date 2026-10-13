@@ -1,0 +1,138 @@
+[
+  {
+    "file": "apps/web/public/locales/pt/common.json",
+    "key": "templates.photographer.addons.p_add_prints",
+    "old": "Imprimir pacote",
+    "new": "Pacote de impressões",
+    "commit": "a32483d83",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/tr/common.json",
+    "key": "templates.photographer.addons.p_add_prints",
+    "old": "Paketi Yazdır",
+    "new": "Baskı paketi",
+    "commit": "a32483d83",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/tr/common.json",
+    "key": "templates.career_coach.services.cc2",
+    "old": "Sahte Röportaj",
+    "new": "Deneme iş görüşmesi",
+    "commit": "a32483d83",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.photographer.services.p1",
+    "old": "Портретная Съемка",
+    "new": "Портретная съёмка",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.photographer.services.p2",
+    "old": "Съемка Мероприятия",
+    "new": "Съёмка мероприятия",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.photographer.addons.p_add_prints",
+    "old": "Пакет Печатных Фото",
+    "new": "Пакет печатных фото",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.photographer.expenses.pe1",
+    "old": "Реквизит и Материалы",
+    "new": "Реквизит и материалы",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.career_coach.services.cc1",
+    "old": "Анализ Резюме",
+    "new": "Анализ резюме",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.career_coach.services.cc2",
+    "old": "Пробное Собеседование",
+    "new": "Тренировочное собеседование",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/ru/common.json",
+    "key": "templates.career_coach.addons.cc_add_cover",
+    "old": "Сопроводительное Письмо",
+    "new": "Сопроводительное письмо",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.photographer.services.p1",
+    "old": "Портретна Зйомка",
+    "new": "Портретна зйомка",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.photographer.services.p2",
+    "old": "Зйомка Заходу",
+    "new": "Зйомка події",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.photographer.addons.p_add_prints",
+    "old": "Пакет Друкованих Фото",
+    "new": "Пакет друкованих фото",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.photographer.expenses.pe1",
+    "old": "Реквізит та Матеріали",
+    "new": "Реквізит і матеріали",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.career_coach.services.cc1",
+    "old": "Аналіз Резюме",
+    "new": "Аналіз резюме",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.career_coach.services.cc2",
+    "old": "Тренувальна Співбесіда",
+    "new": "Тренувальна співбесіда",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  },
+  {
+    "file": "apps/web/public/locales/uk/common.json",
+    "key": "templates.career_coach.addons.cc_add_cover",
+    "old": "Супровідний Лист",
+    "new": "Супровідний лист",
+    "commit": "319a577c1",
+    "reason": "Clarify professional starter service semantics and natural sentence case; preserve keys and user catalogs."
+  }
+]

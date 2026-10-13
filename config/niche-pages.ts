@@ -173,7 +173,7 @@ export const NICHE_PAGES: NichePage[] = [
     niche: "career-coach",
     templateId: "career_coach",
     wave: "2",
-    enabled: false,
+    enabled: true,
   },
   {
     path: "/for-consultants",
@@ -194,7 +194,7 @@ export const NICHE_PAGES: NichePage[] = [
     niche: "photography",
     templateId: "photographer",
     wave: "2",
-    enabled: false,
+    enabled: true,
   },
 
   // HOLD-LEGAL — present, disabled

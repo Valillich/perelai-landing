@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Pour les professionnels des ongles",
     "nailArtistsDescription": "Planifiez manucures et pédicures esthétiques, ajoutez vernis ou nail art et gardez rendez-vous et paiements ensemble.",
     "makeupArtistsLabel": "Pour les maquilleurs",
-    "makeupArtistsDescription": "Planifiez maquillages de mariée, de soirée et d’essai, conservez les préférences du client et enregistrez prestations et paiements."
+    "makeupArtistsDescription": "Planifiez maquillages de mariée, de soirée et d’essai, conservez les préférences du client et enregistrez prestations et paiements.",
+    "photographersLabel": "Pour les photographes",
+    "photographersDescription": "Planifiez portraits et reportages, conservez les accords avec vos clients et enregistrez le paiement de chaque séance.",
+    "careerCoachesLabel": "Pour les conseillers en carrière",
+    "careerCoachesDescription": "Planifiez relectures de CV et simulations d’entretien, conservez les accords professionnels et enregistrez les paiements des consultations."
   },
   "faq": {
     "title": "Questions fréquentes",

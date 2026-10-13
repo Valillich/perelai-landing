@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Para profesionales de uñas",
     "nailArtistsDescription": "Planifica manicuras y pedicuras cosméticas, añade esmaltado o diseños y conserva las citas junto a los registros de pagos.",
     "makeupArtistsLabel": "Para maquilladores",
-    "makeupArtistsDescription": "Programa maquillaje de novia, de eventos y de prueba. Conserva las preferencias del cliente y registra cada servicio y pago."
+    "makeupArtistsDescription": "Programa maquillaje de novia, de eventos y de prueba. Conserva las preferencias del cliente y registra cada servicio y pago.",
+    "photographersLabel": "Para fotógrafos",
+    "photographersDescription": "Programa retratos y cobertura de eventos, conserva los acuerdos con clientes y registra el pago de cada sesión.",
+    "careerCoachesLabel": "Para orientadores profesionales",
+    "careerCoachesDescription": "Programa revisiones de currículum y entrevistas de práctica, conserva acuerdos profesionales y registra pagos de consultas."
   },
   "faq": {
     "title": "Preguntas frecuentes",

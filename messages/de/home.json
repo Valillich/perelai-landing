@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Für Nageldesigner",
     "nailArtistsDescription": "Planen Sie kosmetische Maniküre und Pediküre, ergänzen Sie Lack oder Nail Art und behalten Sie Kunden und Zahlungen im Blick.",
     "makeupArtistsLabel": "Für Make-up Artists",
-    "makeupArtistsDescription": "Planen Sie Braut-, Event- und Probe-Make-up, behalten Sie Kundenwünsche und erfassen Sie jede Leistung und Zahlung."
+    "makeupArtistsDescription": "Planen Sie Braut-, Event- und Probe-Make-up, behalten Sie Kundenwünsche und erfassen Sie jede Leistung und Zahlung.",
+    "photographersLabel": "Für Fotografen",
+    "photographersDescription": "Planen Sie Porträts und Veranstaltungen, bewahren Sie Kundenabsprachen und erfassen Sie die Zahlung für jede Aufnahme.",
+    "careerCoachesLabel": "Für Karriereberater",
+    "careerCoachesDescription": "Planen Sie Lebenslaufbesprechungen und Bewerbungsgespräch-Proben, halten Sie Absprachen fest und erfassen Sie Beratungszahlungen."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",

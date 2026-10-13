@@ -138,14 +138,12 @@ function resolveName(locale: AppLocale, nameKey: string): string {
 
 /** Profile-owned labels are exported from the matching app namespace. */
 function resolveMockLabel(locale: AppLocale, key: string, profile: string): string {
-  if (profile === "edu") {
-    const scoped = uiStrings.profiles.edu
-    const allowlist: readonly string[] = scoped.allowlist
-    if (allowlist.includes(key)) {
-      const value = (scoped.locales[locale] as Record<string, string>)[key]
-      if (!value) throw new Error(`Missing edu mock string for locale=${locale} key=${key}`)
-      return value
-    }
+  const profiles: Record<string, { allowlist: readonly string[]; locales: Record<AppLocale, Record<string, string>> }> = uiStrings.profiles
+  const scoped = profiles[profile]
+  if (scoped?.allowlist.includes(key)) {
+    const value = scoped.locales[locale][key]
+    if (!value) throw new Error(`Missing ${profile} mock string for locale=${locale} key=${key}`)
+    return value
   }
   return resolveName(locale, key)
 }

@@ -9,6 +9,8 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 | independent_colorist | existing enabled | all 9 retained | RU/UK/EN appointment/client/payment introduction; existing beauty mock |
 | brow_lash_artist | existing enabled | all 9 retained | RU/UK/EN client history/payment introduction; existing beauty mock |
 | salon | existing enabled | all 9 retained | RU/UK/EN appointment/client/package introduction; existing beauty mock |
+| photographer | enabled locally | all 9 | Portrait/event services, print add-on, calendar/inbox with pro labels |
+| career_coach | enabled locally | all 9 | CV/interview consultations, cover-letter add-on, coaching labels; no therapy/ATS promises |
 | music_teacher | existing enabled | all 9 retained | False curriculum preset removed in all 9; localized HTML lesson calendar and inbox with edu labels in all 9; no beauty finance display |
 | barber | enabled locally | all 9 | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
 | nail_salon | enabled locally | all 9 | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
@@ -36,7 +38,7 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 - App onboarding UI to the catalog checked for all seven templates × RU/UK/EN, using intercepted synthetic APIs and a SOLO summary without team capability. This is not server completion/trial acceptance. Proof: app `mvp/evidence/niche-onboarding-smoke.json`.
 - Turbopack dev showed an English self-redirect; webpack dev rendered canonical URLs correctly without changing proxy. No temporary debug instrumentation retained. Production route acceptance still needs an unblocked build.
 
-No deployment performed. BILL/TEAM/Drawer/server onboarding and legal release evidence remain with their existing plans. Owner terminology approval does not approve the platform legal packet. Do not enable photography/career coaching, wellness, REQUEST/ORDER/RENTAL or rent/personal from this pass.
+No deployment performed. BILL/TEAM/Drawer/server onboarding and legal release evidence remain with their existing plans. Owner terminology approval does not approve the platform legal packet. At the 12 October snapshot, photography/career coaching were deferred; the owner’s 13 October instruction below supersedes that deferral. Wellness, REQUEST/ORDER/RENTAL and rent/personal remain excluded.
 
 ## Final activation review
 
@@ -65,3 +67,19 @@ Music pages now render the existing HTML calendar + inbox composition in all nin
 The screenshot-only component is removed. Historical PNGs and the original screenshot evidence remain as provenance, but are no longer rendered on the page. The new music composition does not display the colorist finance KPI/feed fixture. TypeScript, verify:niches, and all 34 suites / 522 tests PASS, including music HTML rendering in every locale and missing-profile-label rejection. Production deployment and separate release acceptance remain unchanged.
 
 Music HTML browser checks: 18 variants (nine locales × desktop/mobile) PASS for two HTML figures, localized piano/guitar services, no screenshot image, no beauty-service leakage, no horizontal overflow and no page errors. Evidence: [music-html-mock.json](evidence/music-html-mock.json). Final review: Standards — 0 actionable findings; Spec — 0 actionable findings. Implementation commit: `38e683e`.
+
+## Photography and career coaching — 2026-10-13
+
+Owner explicitly requested these two niches to broaden the mix beyond beauty and music. Both existing catalog templates are selectable APPOINTMENT templates. Routes: `/for-photographers` → `photography` → `photographer`; `/for-career-coaches` → `career-coach` → `career_coach`. Added 18 independent language modules and For/Для labels across all nine languages; activated both pages. **Nine enabled niches × nine locales = 81 combinations.** Homepage and Product use the shared registry. Header behavior is unchanged; no new primary menu was introduced.
+
+Photography covers portraits, event coverage and a print add-on. No photo storage, client galleries, retouching, file delivery, lab ordering or shipment integration. Career coaching covers CV review, interview rehearsal and cover-letter assistance. No ATS/job board, document storage/generation/scoring, employer communications, therapy or employment guarantees. Source research arrays are empty; examples are illustrative, not customer evidence. Translations have not received separate native-speaker certification.
+
+Both pages use HTML calendar/inbox with their own localized services. Bounded mock-label export includes pro and coaching in addition to edu; coaching follows the app’s existing edu namespace mapping. Only generic inbox booking labels are displayed; no lesson-count sentence is rendered on career pages. No colorist finance display is added. Missing profile labels fail verification in every locale.
+
+App starter scope extended in [06](/Users/valery/Sites/beauty-finance/.cursor/plans/terminology/mvp/06-photography-career-extension.md). Seventeen existing keys changed: 14 RU/UK names polished, PT/TR print wording and TR interview wording corrected. Keys, placeholders, service IDs, prices, units and stored user catalogs remain intact. Source export is generated from clean app commit `319a577c1`. Other already committed app currency work belongs to its separate task and is not claimed as part of this change.
+
+Checks: TypeScript PASS; 34 suites / 546 tests PASS; all-nine uniqueness check for the five recently added niches PASS at the unchanged threshold; verify:commercial PASS. HTTP regression now checks 45 URLs for all five recent niches, canonical redirects, hreflang and Open Graph. Browser: 36 variants for the two pages (nine locales × desktop/mobile), correct template services, nine Product links, CTA niche/language, no overflow or page errors. These checks do not complete server onboarding or validate real trial/payment issuance.
+
+No deployment performed. Legal/BILL/TEAM/Drawer release evidence and existing legal approval hash blockers remain separate. No wellness, REQUEST/ORDER/RENTAL or other deferred niche is enabled.
+
+Evidence: [36 UI variants](evidence/photography-career-layout.json), [17 starter changes](evidence/photography-career-starter-copy.json).

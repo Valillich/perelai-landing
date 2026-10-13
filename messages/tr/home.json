@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Tırnak uzmanları için",
     "nailArtistsDescription": "Kozmetik manikür ve pedikür randevularını planlayın, oje veya tasarım ekleyin ve müşteri ile ödeme kayıtlarını bir arada tutun.",
     "makeupArtistsLabel": "Makyaj sanatçıları için",
-    "makeupArtistsDescription": "Gelin, özel gün ve prova makyajını planlayın, müşteri tercihlerini koruyun ve her hizmet ile ödemeyi kaydedin."
+    "makeupArtistsDescription": "Gelin, özel gün ve prova makyajını planlayın, müşteri tercihlerini koruyun ve her hizmet ile ödemeyi kaydedin.",
+    "photographersLabel": "Fotoğrafçılar için",
+    "photographersDescription": "Portre ve etkinlik çekimlerini planlayın, müşteri anlaşmalarını koruyun ve her çekimin ödemesini kaydedin.",
+    "careerCoachesLabel": "Kariyer danışmanları için",
+    "careerCoachesDescription": "CV incelemelerini ve deneme iş görüşmelerini planlayın, profesyonel anlaşmaları saklayın ve danışmanlık ödemelerini kaydedin."
   },
   "faq": {
     "title": "Sıkça sorulan sorular",

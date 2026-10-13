@@ -4,7 +4,7 @@ import assert from 'node:assert/strict'
 const base = new URL(process.argv[2] ?? 'http://localhost:3000')
 const locales = ['en', 'uk', 'pl', 'ru', 'es', 'fr', 'de', 'pt', 'tr']
 const ogLocales = {en: 'en_US', uk: 'uk_UA', pl: 'pl_PL', ru: 'ru_RU', es: 'es_ES', fr: 'fr_FR', de: 'de_DE', pt: 'pt_PT', tr: 'tr_TR'}
-for (const slug of ['for-barbers', 'for-nail-artists', 'for-makeup-artists']) {
+for (const slug of ['for-barbers', 'for-nail-artists', 'for-makeup-artists', 'for-photographers', 'for-career-coaches']) {
   for (const locale of locales) {
     const path = `${locale === 'en' ? '' : `/${locale}`}/${slug}`
     const response = await fetch(new URL(path, base), {redirect: 'manual'})

@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Para profissionais de unhas",
     "nailArtistsDescription": "Agende manicure e pedicure cosméticas, adicione esmaltação ou decoração e mantenha os clientes e pagamentos juntos.",
     "makeupArtistsLabel": "Para maquiadores",
-    "makeupArtistsDescription": "Agende maquiagem de noiva, de eventos e de teste, guarde as preferências do cliente e registre cada serviço e pagamento."
+    "makeupArtistsDescription": "Agende maquiagem de noiva, de eventos e de teste, guarde as preferências do cliente e registre cada serviço e pagamento.",
+    "photographersLabel": "Para fotógrafos",
+    "photographersDescription": "Agende retratos e cobertura de eventos, guarde os acordos com clientes e registre o pagamento de cada sessão.",
+    "careerCoachesLabel": "Para orientadores de carreira",
+    "careerCoachesDescription": "Agende revisões de currículo e entrevistas simuladas, guarde acordos profissionais e registre pagamentos de consultas."
   },
   "faq": {
     "title": "Perguntas frequentes",

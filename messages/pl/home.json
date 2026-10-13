@@ -146,7 +146,11 @@
     "nailArtistsLabel": "Dla stylistek i stylistów paznokci",
     "nailArtistsDescription": "Planuj manicure i pedicure, dodawaj pokrycie lub zdobienia i zachowuj wizyty klientów wraz z płatnościami.",
     "makeupArtistsLabel": "Dla wizażystek i wizażystów",
-    "makeupArtistsDescription": "Planuj makijaż ślubny, okolicznościowy i próbny. Zachowuj informacje o kliencie oraz zapis każdej usługi i płatności."
+    "makeupArtistsDescription": "Planuj makijaż ślubny, okolicznościowy i próbny. Zachowuj informacje o kliencie oraz zapis każdej usługi i płatności.",
+    "photographersLabel": "Dla fotografów",
+    "photographersDescription": "Planuj sesje portretowe i reportaże, zachowuj ustalenia z klientami i rejestruj płatności za każdą sesję.",
+    "careerCoachesLabel": "Dla doradców kariery",
+    "careerCoachesDescription": "Planuj analizę CV i próbne rozmowy kwalifikacyjne, zachowuj ustalenia zawodowe i rejestruj płatności za konsultacje."
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",

@@ -7,8 +7,8 @@ import { PUBLISHED_LOCALES } from "../i18n/locales"
 import { checkUniquenessForPages, sharedTokenRatio, tokenize } from "../scripts/check-uniqueness.mjs"
 
 describe("niche copy uniqueness", () => {
-  test("checks all nine languages for the three newly translated niches", () => {
-    const pages = NICHE_PAGES.filter(page => ["barber", "nail_salon", "makeup_artist"].includes(page.templateId))
+  test("checks all nine languages for the five recently added niches", () => {
+    const pages = NICHE_PAGES.filter(page => ["barber", "nail_salon", "makeup_artist", "photographer", "career_coach"].includes(page.templateId))
     expect(checkUniquenessForPages(pages, [...PUBLISHED_LOCALES])).toBe(true)
   })
 
