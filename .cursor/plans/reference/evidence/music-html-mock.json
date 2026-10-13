@@ -1,0 +1,188 @@
+{
+  "checkedAt": "2026-10-13",
+  "implementationCommit": "38e683e",
+  "appSourceCommit": "ea26c0455fc92ebba1e19613a39b3758cf594485",
+  "environment": "local webpack dev; external requests intercepted; synthetic data; no server onboarding/payment/trial acceptance",
+  "variants": [
+    {
+      "locale": "en",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "uk",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "uk",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "pl",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "pl",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "ru",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "ru",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "es",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "es",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "fr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "fr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "de",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "de",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "pt",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "pt",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "tr",
+      "viewport": "desktop",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "locale": "tr",
+      "viewport": "mobile",
+      "status": 200,
+      "htmlFigures": 2,
+      "screenshotImages": 0,
+      "services": "music_teacher mt1/mt2",
+      "overflow": false,
+      "errors": []
+    }
+  ]
+}
