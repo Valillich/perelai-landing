@@ -1,7 +1,7 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
-**Next bounded app task — 2026-10-13:** [plan 39](39_mvp_workspace_currency_and_business_country_20261013.md)
-defines CUR-1/GEO-1 **IMPLEMENTED / TARGETED TESTED** and GEO-2 **PREPARED / SYNTHETIC WALKTHROUGH**, not deployed. [Evidence](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-business-country-20261013.md). The general country-hold gap remains a separate task. This supplements the current release work;
+**Latest bounded app slice — 2026-10-13:** [plan 39](39_mvp_workspace_currency_and_business_country_20261013.md)
+defines CUR-1/GEO-1 **IMPLEMENTED / CORRECTION TESTED** and GEO-2 **PREPARED / SYNTHETIC WALKTHROUGH**, not deployed. [Current evidence](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-public-booking-policy-20261013.md). Internal currencies/public booking and confirmed price-only changes are implemented; do not repeat this slice. The general country-hold gap remains separate. This supplements the current release work;
 it does not reopen completed BILL6A/OPS or change existing market admission.
 
 ```text
@@ -9,9 +9,11 @@ Implement legal/39_mvp_workspace_currency_and_business_country_20261013.md in be
 Read its observed seams and preserve unrelated changes. Deliver CUR-1 and GEO-1 as a small
 core/API/Web change: one shared 15-currency workspace catalog, ISO-code validation, no FX,
 no new market admission. Preserve Billing/Paddle currency and country/subdivision/legal gates.
-New UA workspaces use UAH because public and internal prices share one currency. Never rewrite
-legacy money or infer a currency migration during Company relocation; report affected cases.
-Keep existing currency-change locks and close any concrete saved-service-price relabeling gap.
+New UA defaults to UAH but may select an internal EUR. Public booking requires UA/UAH,
+US/USD, CA/CAD, AU/AUD, including old links and delayed intake. Preserve verified history/cancel.
+Only a current explicitly confirmed service-price-only catalog may retain numbers when relabeled;
+history/account/package locks remain. Keep booking off after change and revalidate price revision.
+Never rewrite legacy money or infer currency migration during relocation; inventory all four markets.
 Preserve null suggestions when the currency differs from the country price pack. New catalog
 validation must not break historical reads/exports or unrelated updates. Make business-country
 and CA province labels explicit in all existing locales; no new universal checkbox, geo/KYC API

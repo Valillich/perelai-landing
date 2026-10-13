@@ -1,8 +1,8 @@
 # Perelai legal pages — execution plan for implementation LLMs
 
 **MVP currency / business country — 2026-10-13:** [plan 39](39_mvp_workspace_currency_and_business_country_20261013.md)
-is **IMPLEMENTED / TARGETED TESTED** for CUR-1/GEO-1; GEO-2 is **PREPARED / SYNTHETIC WALKTHROUGH**, actual country hold remains a separate gap. [Evidence](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-business-country-20261013.md). NOT DEPLOYED. CUR-1 adds a shared 15-currency catalog without FX, with money-preservation checks
-and UAH for new UA workspaces; GEO-1 clarifies actual business country; GEO-2 prepares a short
+is **IMPLEMENTED / CORRECTION TESTED** for CUR-1/GEO-1; GEO-2 is **PREPARED / SYNTHETIC WALKTHROUGH**, actual country hold remains separate. [Current evidence](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-public-booking-policy-20261013.md). NOT DEPLOYED. CUR-1 adds 15 internal currencies without FX, national currency for public booking,
+confirmed price-only relabel and history protection; new UA defaults to UAH. GEO-1 clarifies actual business country; GEO-2 prepares a short
 support-led procedure for confirmed unsupported-region use. Reuse completed BILL6A relocation.
 No new market, universal checkbox, IP blocking, KYC, Terms version or production mutation.
 These bounded tasks supplement the release queue; they do not reopen LP-M1/G/BILL implementation.

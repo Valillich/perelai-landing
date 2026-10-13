@@ -1,9 +1,15 @@
 # MVP — валюта workspace и фактическая страна бизнеса
 
 **Дата:** 2026-10-13. **Статус:** CUR-1/GEO-1 IMPLEMENTED / TARGETED TESTED; GEO-2 PREPARED / SYNTHETIC WALKTHROUGH.
-NOT DEPLOYED. [Доказательства и ограничения](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-business-country-20261013.md).
-App commit: `e7dfd8b68`. Landing generated provenance обновлён на эту ревизию;
-landing 522/522, verify:niches, commercial catalog и legal manifest PASS.
+NOT DEPLOYED. [Текущий контракт и доказательства](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-public-booking-policy-20261013.md).
+Уточнение владельца: иностранная валюта допускается внутри workspace; публичная запись
+требует UA→UAH, US→USD, CA→CAD, AU→AUD. Подтверждённый прайс без истории можно переобозначить
+без пересчёта цифр; накопленные денежные/операционные данные не переобозначаются.
+Первоначальный pass — app `e7dfd8b68`; уточнение — app `b9d0147cc607ca9e5f1a435961ffc8c14ff7f0be`.
+Generated niche/UI artifacts закреплены на эту чистую ревизию. API 2981/2981,
+PG 68/68, целевой Web 96/96 и browser 6/6 PASS. Полные Web/core gates имеют отдельно
+перечисленные в отчёте несвязанные падения; это не production GO.
+Landing: 522/522 PASS; verify:niches/uniqueness, commercial catalog и семь legal hashes PASS.
 Production, данные пользователей и семь platform legal документов не изменены.
 
 ## 1. Решение и границы
@@ -13,6 +19,7 @@ Production, данные пользователей и семь platform legal �
   CA-QC/AB/BC и остальные закрытые страны не открываются.
 - **Валюта workspace** — одна единица для его цен, денежных записей и отчётов. Это не переключатель
   отображения, не FX, не мультивалютные счета и не разрешение работать в стране этой валюты.
+  Внутри workspace доступны все 15 валют; публичная запись доступна только в валюте страны бизнеса.
 - **Валюта подписки Perelai** остаётся отдельным контрактом Billing/Paddle. Выбор в onboarding
   не меняет цену подписки, checkout, налоговую страну плательщика или legal template.
 - Не добавлять новую версию Terms, общий eligibility checkbox, паспортную проверку, IP-геоблокировку,
@@ -28,10 +35,10 @@ Production, данные пользователей и семь platform legal �
 
 | Исходная точка | Что уже есть / что нужно сохранить |
 |---|---|
-| [onboardingMarkets.ts](/Users/valery/Sites/beauty-finance/apps/web/src/utils/onboardingMarkets.ts) | Страны фильтруются по PUBLIC; валюты пока извлекаются из всего SUPPORTED_MARKETS, включая CLOSED. |
+| [onboardingMarkets.ts](/Users/valery/Sites/beauty-finance/apps/web/src/utils/onboardingMarkets.ts) | Страны фильтруются по PUBLIC; валюты берутся из независимого shared-каталога 15 кодов. |
 | [onboarding defaults](/Users/valery/Sites/beauty-finance/apps/web/src/utils/onboardingMarketDefaults.ts), [business step](/Users/valery/Sites/beauty-finance/apps/web/src/components/onboarding/OnboardingBusinessStep.tsx) | Есть country/currencyTouched и подсказки по locale/timezone. Они не доказывают фактическую страну; выбор валюты не должен менять страну. |
 | [price-pack resolver](/Users/valery/Sites/beauty-finance/libs/core/src/templates/price-pack-resolver.ts) | При несовпадении валюты прайс-пакета предложенные цены становятся null; FX отсутствует. |
-| [setup DTO](/Users/valery/Sites/beauty-finance/apps/api/src/companies/dto/setup-company.dto.ts), [Company service](/Users/valery/Sites/beauty-finance/apps/api/src/companies/companies.service.ts) | Currency пока свободная строка; есть assertCompanyIsEmpty при смене. Проверка охватывает accounts/allocations/orders/packages/transactions/additional finance, но сама по себе не доказывает защиту всех сохранённых цен услуг. |
+| [setup DTO](/Users/valery/Sites/beauty-finance/apps/api/src/companies/dto/setup-company.dto.ts), [currency policy](/Users/valery/Sites/beauty-finance/apps/api/src/companies/workspace-currency-policy.ts) | Каталог валидируется сервером; history/account fences сохранены. Узкий price-only apply требует текущую ревизию и явное подтверждение под Company lock. |
 | [cashDrawerMoney.ts](/Users/valery/Sites/beauty-finance/apps/web/src/utils/cashDrawerMoney.ts), [schema](/Users/valery/Sites/beauty-finance/apps/api/prisma/schema.prisma), [public price](/Users/valery/Sites/beauty-finance/apps/web/src/utils/publicBookingPrice.ts) | Касса использует cents и Decimal(18,2); public formatter ограничивает дробь двумя знаками. Поэтому произвольный ISO-список пока не считается поддержанным. |
 | [market-access.ts](/Users/valery/Sites/beauty-finance/apps/api/src/companies/market-access.ts) | Есть серверный country/subdivision admission и запрет обычной смены страны. Валюта/язык не заменяют эти проверки. |
 | [Terms §2, §16–17](/Users/valery/Sites/perelai-landing/content/legal/en/terms.md:61) | Утверждённый пакет 2026-11-01.1 уже требует достоверную страну деятельности и допускает разумную проверку/ограничение; регулирует уведомления и возврат данных. Для реального кейса проверить принятую версию, будущие условия не применяются задним числом. |
@@ -45,28 +52,29 @@ Production, данные пользователей и семь platform legal �
    Проверить коды/точность по ISO 4217; у этого MVP-набора два дробных знака. Не добавлять валюты
    фондов, crypto, устаревшие коды или новые коды по одному лишь совпадению regex.
 2. Перестать получать список валют из `SUPPORTED_MARKETS`. Страна продолжает давать начальную
-   валюту; ручной выбор сохраняется при смене страны, кроме явно объяснённого UA-ограничения ниже.
+   валюту; ручной выбор сохраняется при смене страны, включая UA. Другая валюта закрывает публичную запись.
    При несовпадении с price pack не использовать цены другого рынка и не подменять null на 0.
 3. Проверять каталог на новых create/setup и при явной смене валюты через API, включая обход UI.
    Хранить/передавать ISO-код (`CAD`), символ использовать только для отображения. Общая валидация
    не должна ломать чтение/экспорт или unrelated PATCH старого workspace с legacy currency.
    Не делать массовый backfill, угадывание кода по `$` или переименование исторических сумм.
-4. Сохранить блокировку смены валюты после финансовой настройки. Проверить все пути изменения
-   и сохранённые денежные значения, включая прайс услуг/варианты цен: они не должны молча получить
-   другую валюту. Если текущая защита это допускает, закрыть именно этот пробел. В незавершённом
-   черновике onboarding при смене валюты убрать старые автоцены; ручные цены требуют явной перепроверки
-   до сохранения. Не добавлять инструмент миграции валюты или автоматический пересчёт.
+4. Сохранить блокировку после финансовой настройки/операционной истории. Единственное узкое
+   исключение: только прайс INCOME SERVICE без истории — явное подтверждение текущей ревизии,
+   цифры сохраняются (100 EUR → 100 UAH), FX нет. Счета/пакеты остаются прежними защитными
+   границами; собственные валюты финансовых сущностей не переписываются. Черновые цены сохраняются
+   только после подтверждения и становятся user-confirmed, без async overwrite. Отмена сохраняет
+   старый выбор. Смена валюты выключает запись и требует отдельной новой публикации; не включает её
+   автоматически. Изменившиеся прайс/история/роль отклоняют apply; повтор требует нового решения.
 5. Сохранить проверки соответствия валют счетов/операций Company. На затронутых путях импорта
    несовпадающие валюты должны давать понятный отказ/существующий resolution, а не суммироваться.
    Не добавлять валютный импорт и не переписывать весь finance layer.
-6. **Новые UA workspace: только UAH.** В MVP одна валюта используется и в публичном прайсе;
-   это консервативное продуктовое ограничение, а не утверждение о запрете любого внутреннего
-   валютного учёта в Украине. UI объясняет правило, API проверяет его. Для остальных открытых
-   рынков используется общий каталог; новый регион не открывается из-за наличия его валюты.
-   Существующий UA workspace с иной валютой не переписывать/блокировать массово: показать в
-   минимальном inventory только ID/country/currency/booking state и передать в ручной разбор
-   до rollout затрагивающего его ограничения. Релокация в UA не меняет старые денежные записи:
-   такой конфликт решается через поддержку до новой публикации прайса, без фиктивной конвертации.
+6. **Новые UA по умолчанию UAH; внутренний EUR разрешён.** Единое правило публичной записи:
+   UA→UAH, US→USD, CA→CAD, AU→AUD. Сервер проверяет публикацию, enable, availability/intake и
+   delayed effects, включая старые публичные/персональные ссылки. Проверенная персональная ссылка
+   сохраняет просмотр/отмену прежних допустимых визитов, но не новый intake. Billing, lifecycle и
+   geography fences не обходятся. Это продуктовое ограничение, не общий запрет иностранной валюты.
+   До rollout — разрешённый bounded inventory ID/country/currency/booking state во всех четырёх
+   рынках и индивидуальный transition review. Историю, страну и деньги автоматически не менять.
 7. В селекторе показывать код и понятное название, не только неоднозначный `$`; для 15 вариантов
    использовать существующий компонент без нового UI-фреймворка. Проверить публичный прайс,
    основные отчёты, экспорт и кассу на отсутствие подстановки USD/неясного dollar symbol.
@@ -79,7 +87,10 @@ UI-copy, локализовать обычным workflow (это подсказ
 | Поле | Валюта workspace | Workspace currency |
 | Подсказка | Все цены и отчёты ведутся в выбранной валюте. Автоматической конвертации нет. | All prices and reports use this currency. Automatic currency conversion is not available. |
 | Дополнительное пояснение | Выбор валюты не меняет страну бизнеса, доступность Perelai или валюту оплаты подписки. | This choice does not change your business country, Perelai availability or subscription billing currency. |
-| UA | Для бизнеса в Украине в MVP используется гривна (UAH), в том числе для публичного прайса. | For businesses in Ukraine, the MVP uses UAH, including public service prices. |
+| UA | Онлайн-запись в Украине — в UAH; другая валюта доступна внутри workspace. | Public booking in Ukraine uses UAH; another currency is available internally. |
+| Подтверждение | Использовать EUR? Цены и отчёты будут в EUR. Онлайн-запись будет недоступна; конвертации нет. | Use EUR? Prices and reports use EUR. Public booking is unavailable; no conversion. |
+| Прайс без истории | 100 EUR станет 100 UAH. Изменить валюту и проверить цены. | 100 EUR becomes 100 UAH. Change currency and review prices. |
+| Booking card | Изменить валюту при безопасном состоянии; иначе обратиться в поддержку. | Change currency when eligible; otherwise contact support. |
 
 ## 4. GEO-1 — понятная страна бизнеса без нового сбора согласий
 
@@ -148,7 +159,7 @@ country hold не блокирует подготовку CUR-1/GEO-1; обна�
 
 | Задача | Статус | Когда завершена |
 |---|---|---|
-| CUR-1 | IMPLEMENTED / TARGETED TESTED | Общий каталог + валидация + UI + защита денег; PG 45/45 и целевые suites PASS. |
+| CUR-1 | IMPLEMENTED / CORRECTION TESTED | Внутренние 15 валют / публичная валюта страны; fenced price-only apply, PG 68/68, full API 2981/2981 и целевые Web suites PASS. |
 | GEO-1 | IMPLEMENTED / VISUAL TESTED | Девять локалей; admission не изменён; EN/RU/UK mobile/desktop browser 6/6 PASS. |
 | GEO-2 | PREPARED / SYNTHETIC WALKTHROUGH | Runbook готов; фактический country hold — отдельный BLOCKED gap, не фиктивно выполненная операция. |
 | Rollout | NOT PERFORMED | Отдельный deploy review; при затронутых legacy данных — рассмотренная transition. |
@@ -162,12 +173,13 @@ CUR-1 и GEO-1 удобно сделать одним app change; GEO-2 гото
 
 - US + EUR/CHF допустимы для нового workspace; DE + USD остаётся запрещён; выбор валюты не меняет
   country, CA scope, notice/default или checkout. CA-ON проходит, CA-QC/AB/BC остаются закрыты.
-- Новые UA + UAH проходят; UA + EUR, неизвестный код и исключённая точность не проходят прямой API.
+- Новые UA + UAH и внутренний UA + EUR проходят; публичный EUR, неизвестный код и исключённая точность не проходят соответствующие серверные границы.
   Старый currency-код остаётся читаемым/экспортируемым; unrelated patch не вызывает конвертацию.
-- Currency mismatch убирает auto-price suggestions; смена валюты не превращает сохранённые суммы
-  в другую валюту. Проверить service-price-only Company и существующий finance guard; важные
+- Currency mismatch убирает auto-price suggestions; исторические суммы не переобозначаются.
+  Подтверждённый service-price-only сохраняет цифры, отключает запись; stale/race/rollback проверены.
+  Проверить существующий finance guard и сохранение verified cancellation; важные
   серверные инварианты подтвердить на изолированной БД, не на production.
-- Для CHF и CAD: сохранение → публичный прайс → одна операция/касса → отчёт/экспорт сохраняют
+- Для CHF и CAD: сохранение → форматирование цены → внутренняя операция/касса → отчёт/экспорт сохраняют
   значение и код; чужая валюта не попадает в итог. Это выборочная проверка, не обещание FX.
 - Визуально: мобильная форма и desktop, RU/UK/EN, длинное название валюты; остальные локали без
   сырых i18n keys. Изменение валюты не сбрасывает ручную страну и не создаёт скрытый default US.
@@ -188,8 +200,8 @@ manifest, effective dates, ENV, U70 acceptance copy или production. Productio
   достоверность страны, фактическую деятельность и разумную проверку. Эти UI-подсказки раскрывают
   существующее правило; не добавляют новый договор. Для реального кейса проверить принятую версию.
 - [Закон Украины «Про рекламу», ст. 8(8)](https://data.rada.gov.ua/ogd/zak/perv/text/d12889.htm):
-  рекламные цены услуг, оказываемых в Украине, указываются в гривне. UAH-only для новых UA —
-  выбранное простое MVP-ограничение из-за общего публичного/внутреннего прайса, а не полный налоговый анализ.
+  рекламные цены услуг, оказываемых в Украине, указываются в гривне. UA→UAH для публичной записи —
+  выбранное MVP-ограничение; внутренний выбор валюты отделён от публикации. Это не полный налоговый анализ.
 - [EDPB 3/2018, §2 и пример 8](https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_3_2018_territorial_scope_after_public_consultation_en_1.pdf):
   поездка пользователя и случайная доступность не равны направленному предложению в ЕС.
   Реальная деятельность, targeting/monitoring и роль processor требуют отдельной оценки;
