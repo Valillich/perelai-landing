@@ -1,5 +1,32 @@
 # Copy/paste task prompts for simpler implementation LLMs
 
+**Next bounded app task — 2026-10-13:** [plan 39](39_mvp_workspace_currency_and_business_country_20261013.md)
+defines CUR-1/GEO-1 **IMPLEMENTED / TARGETED TESTED** and GEO-2 **PREPARED / SYNTHETIC WALKTHROUGH**, not deployed. [Evidence](/Users/valery/Sites/beauty-finance/inventory/workspace-currency-business-country-20261013.md). The general country-hold gap remains a separate task. This supplements the current release work;
+it does not reopen completed BILL6A/OPS or change existing market admission.
+
+```text
+Implement legal/39_mvp_workspace_currency_and_business_country_20261013.md in beauty-finance.
+Read its observed seams and preserve unrelated changes. Deliver CUR-1 and GEO-1 as a small
+core/API/Web change: one shared 15-currency workspace catalog, ISO-code validation, no FX,
+no new market admission. Preserve Billing/Paddle currency and country/subdivision/legal gates.
+New UA workspaces use UAH because public and internal prices share one currency. Never rewrite
+legacy money or infer a currency migration during Company relocation; report affected cases.
+Keep existing currency-change locks and close any concrete saved-service-price relabeling gap.
+Preserve null suggestions when the currency differs from the country price pack. New catalog
+validation must not break historical reads/exports or unrelated updates. Make business-country
+and CA province labels explicit in all existing locales; no new universal checkbox, geo/KYC API
+or automatic IP/phone/card-based restriction. Reuse current versioned CA declaration.
+Prepare GEO-2 as one short operator runbook with a synthetic walkthrough, using completed
+BILL6A-OPS for actual relocation. Verify existing restriction commands before claiming they stop
+all new activity while preserving data return/cancellation. If no suitable Company hold exists,
+report the bounded gap; do not invent a new enforcement framework or claim archive/billing
+restricted mode solves it. Payment must never override a confirmed regional restriction.
+Keep seven platform legal texts, versions/hashes, ENV and pinned acceptance copy unchanged.
+Run focused tests/typecheck/lint appropriate to changes, report existing failures separately,
+and update plan 39's statuses/evidence. Do not deploy, contact users, mutate production,
+relocate an actual Company, cancel a subscription or delete data as part of this task.
+```
+
 **Independent review 2026-10-12:** [review 38](38_lp_m1_independent_review_20261012.md) supersedes
 “Do not repeat LP-M1” only for three bounded corrections: R1 direct Company-create admission,
 R2 verified personal-link read/cancel access with new intake held, R3 accurate llms.txt selection

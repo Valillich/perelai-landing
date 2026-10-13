@@ -1,5 +1,10 @@
 # Admin cleanup and Company relocation — BILL6A handoff
 
+**Related MVP procedure — 2026-10-13:** [plan 39 / GEO-2](39_mvp_workspace_currency_and_business_country_20261013.md)
+adds support-led handling of inaccurate/unsupported business geography. Reuse the completed
+relocation protocol below, preserve money and accepted evidence, and keep market restrictions
+independent from paid/perpetual grants. This is not a new cleanup or production-execution request.
+
 **Current status — 2026-10-07 (owner update + BILL8A):** G-BE2, PAR-P,
 BILL5B (`ffacfc7a4`) and BILL6A (`70c20652d`, accepted operator/CLI scope) are **DONE**.
 R1/R2/R3 original fixes are complete. BILL8A inventory is **COMPLETE**; production
