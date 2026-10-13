@@ -94,4 +94,18 @@ describe("verify:niches", () => {
     expect(result.status).not.toBe(0)
     expect(`${result.stdout}\n${result.stderr}`).toMatch(/staff_management\.role_staff_title/)
   }, 15000)
+  it("rejects missing edu labels rather than falling back to beauty", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "perelai-verify-edu-"))
+    dirs.push(dir)
+    const stringsPath = path.join(dir, "app-ui-strings.generated.json")
+    const strings = JSON.parse(readFileSync(path.join(ROOT, "data/app-ui-strings.generated.json"), "utf8"))
+    delete strings.profiles.edu.locales.uk["inbox.trust_visits_count"]
+    writeFileSync(stringsPath, `${JSON.stringify(strings, null, 2)}\n`)
+    const result = spawnSync("pnpm", ["verify:niches"], {
+      cwd: ROOT, encoding: "utf8", env: { ...process.env, VERIFY_STRINGS_PATH: stringsPath },
+    })
+    expect(result.status).not.toBe(0)
+    expect(`${result.stdout}\n${result.stderr}`).toMatch(/edu mock key.*inbox\.trust_visits_count.*uk/)
+  }, 15000)
+
 })

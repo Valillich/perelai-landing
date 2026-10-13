@@ -69,6 +69,7 @@ export interface MockDataset {
 }
 
 interface CatalogTemplate {
+  terminologyProfile: string
   id: string
   services: Array<{ id: string; nameKey: string }>
   addons: Array<{ id: string; nameKey: string }>
@@ -133,6 +134,20 @@ function resolveName(locale: AppLocale, nameKey: string): string {
     throw new Error(`Missing UI string for locale=${locale} key=${nameKey}`)
   }
   return value
+}
+
+/** Profile-owned labels are exported from the matching app namespace. */
+function resolveMockLabel(locale: AppLocale, key: string, profile: string): string {
+  if (profile === "edu") {
+    const scoped = uiStrings.profiles.edu
+    const allowlist: readonly string[] = scoped.allowlist
+    if (allowlist.includes(key)) {
+      const value = (scoped.locales[locale] as Record<string, string>)[key]
+      if (!value) throw new Error(`Missing edu mock string for locale=${locale} key=${key}`)
+      return value
+    }
+  }
+  return resolveName(locale, key)
 }
 
 function mapItems(
@@ -216,7 +231,7 @@ export function buildMockDataset(
   )
 
   const labels = Object.fromEntries(
-    MOCK_UI_KEYS.map((key) => [key, resolveName(locale, key)]),
+    MOCK_UI_KEYS.map((key) => [key, resolveMockLabel(locale, key, template.terminologyProfile)]),
   ) as Record<(typeof MOCK_UI_KEYS)[number], string>
 
   const monthFormatter = new Intl.DateTimeFormat(locale, {

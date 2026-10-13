@@ -357,9 +357,24 @@ function extractUiStrings(appRepo, templates) {
     byLocale[locale] = localeStrings
   }
 
+  // The music mock renders edu-owned product labels, never beauty fallbacks.
+  // Keep this export bounded to the profile labels consumed by the mock kit.
+  const profileKeys = allowlist.filter((key) =>
+    ["inbox.", "chart_labels.", "coworker."].some((prefix) => key.startsWith(prefix)),
+  )
+  const eduLocales = {}
+  for (const locale of LOCALES) {
+    eduLocales[locale] = Object.fromEntries(profileKeys.map((key) => {
+      const value = resolveUiString(appRepo, locale, "edu", key)
+      if (value == null) fail(`edu mock key missing for locale=${locale}: ${key}`)
+      return [key, value]
+    }))
+  }
+
   return {
     allowlist,
     locales: byLocale,
+    profiles: { edu: { allowlist: profileKeys, locales: eduLocales } },
   }
 }
 

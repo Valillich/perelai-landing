@@ -202,6 +202,20 @@ function verifyUiStringAllowlist(strings, referencedKeys) {
   }
 }
 
+/** All music mock labels must be present in every published edu locale. */
+function verifyEduMockStrings(strings) {
+  const profile = strings.profiles?.edu
+  const requiredKeys = (strings.allowlist ?? []).filter((key) =>
+    ["inbox.", "chart_labels.", "coworker."].some((prefix) => key.startsWith(prefix)),
+  )
+  for (const key of requiredKeys) {
+    if (!profile?.allowlist?.includes(key)) fail(`edu mock allowlist missing key "${key}"`)
+    for (const locale of PUBLISHED_LOCALES) {
+      if (!profile?.locales?.[locale]?.[key]) fail(`edu mock key "${key}" missing from locale=${locale}`)
+    }
+  }
+}
+
 /**
  * Condition 8 (DVC2R) — every product string the desktop rail renders must exist
  * in the generated allowlist for every published locale.
@@ -272,6 +286,7 @@ function main() {
 
   const referencedKeys = collectReferencedKeys(MOCK_SCAN_PATHS)
   verifyUiStringAllowlist(strings, referencedKeys)
+  verifyEduMockStrings(strings)
   const declaredKeyCount = DECLARED_KEY_SOURCES.reduce(
     (total, spec) => total + verifyDeclaredMockKeys(strings, spec),
     0,

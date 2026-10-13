@@ -1,6 +1,8 @@
 import { renderToStaticMarkup } from "react-dom/server"
 import { createElement } from "react"
 import { describe, expect, it } from "vitest"
+import { NicheMockSuite } from "@/components/niche/niche-mock-suite"
+import uiStrings from "@/data/app-ui-strings.generated.json"
 import { MockCalendarMonth } from "@/components/mock/MockCalendarMonth"
 import { MockConnectedRecordsFeed } from "@/components/mock/MockConnectedRecordsFeed"
 import { MockFinanceKpis } from "@/components/mock/MockFinanceKpis"
@@ -124,5 +126,30 @@ describe("buildAppScreenDataset finance fixture wiring", () => {
     expect(html).toContain("lucide-package-check")
     expect(html).not.toContain("$90")
     expect(html).not.toContain("+$90")
+  })
+})
+
+
+describe("music teacher HTML mock", () => {
+  it.each(APP_LOCALES)("uses edu labels and only music services for %s", locale => {
+    const dataset = buildMockDataset("music_teacher", locale, "US", REFERENCE)
+    const screenDataset = buildAppScreenDataset("music_teacher", locale, "US", REFERENCE)
+    expect(dataset.labels["inbox.trust_visits_count"]).toBe(uiStrings.profiles.edu.locales[locale]["inbox.trust_visits_count"])
+    expect(dataset.services.map(service => service.nameKey)).toEqual([
+      "templates.music_teacher.services.mt1", "templates.music_teacher.services.mt2",
+    ])
+    expect(dataset.visits.every(visit => dataset.services.some(service => service.name === visit.serviceName))).toBe(true)
+    expect(dataset.trustTotal).toBe(dataset.visits.reduce((total, visit) => total + visit.amount, 0))
+    const html = renderToStaticMarkup(createElement(NicheMockSuite, { niche: "music-teacher", dataset, screenDataset }))
+    for (const service of dataset.services) expect(html).toContain(service.name.replace(/&/g, "&amp;"))
+    expect(html).not.toContain("<img")
+    expect(html).not.toContain("music-calendar-")
+    expect(html).toContain(dataset.exampleCaption)
+  })
+  it("keeps lesson count distinct from beauty visit count", () => {
+    const music = buildMockDataset("music_teacher", "en", "US", REFERENCE)
+    const beauty = buildMockDataset("independent_colorist", "en", "US", REFERENCE)
+    expect(buildTrustSentence(music)).toContain("3 lessons")
+    expect(buildTrustSentence(beauty)).toContain("3 visits")
   })
 })

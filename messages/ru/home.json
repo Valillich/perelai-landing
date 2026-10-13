@@ -141,11 +141,11 @@
     "personalTrainerDescription": "Выручка с тренировок, зафиксированные расходы и рассчитанная прибыль — со списанием пакетов и историей клиента отдельно.",
     "musicTeacherLabel": "Для преподавателей музыки",
     "musicTeacherDescription": "Выручка с уроков, зафиксированные расходы и рассчитанная прибыль для частной студии — со списанием пакетов отдельно.",
-    "barbersLabel": "Барберы",
+    "barbersLabel": "Для барберов",
     "barbersDescription": "Стрижки, услуги для бороды и учёт оплат.",
-    "nailArtistsLabel": "Мастера маникюра",
+    "nailArtistsLabel": "Для мастеров маникюра",
     "nailArtistsDescription": "Запись на маникюр, педикюр и покрытие.",
-    "makeupArtistsLabel": "Визажисты",
+    "makeupArtistsLabel": "Для визажистов",
     "makeupArtistsDescription": "Запись на свадебный, вечерний и пробный макияж."
   },
   "faq": {

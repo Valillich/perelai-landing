@@ -14,7 +14,6 @@ import { DeviceSectionTracker } from "@/components/analytics/device-section-trac
 import { PageViewTracker } from "@/components/analytics/page-view-tracker"
 import { NicheFaq } from "./niche-faq"
 import { NicheMockSuite } from "./niche-mock-suite"
-import { MusicCalendarPreview } from "./music-calendar-preview"
 
 interface NichePageProps {
   locale: PublishedLocale
@@ -23,8 +22,6 @@ interface NichePageProps {
 }
 
 export function NichePage({ locale, page, content }: NichePageProps) {
-  const musicPreview = page.niche === "music-teacher" && ["en", "ru", "uk"].includes(locale)
-  const showMock = page.niche !== "music-teacher" || musicPreview
   const canonicalPath = page.path
   const market = localePrimaryMarket(locale)
   const dataset = buildMockDataset(page.templateId, locale, market, "2026-07-15T12:00:00.000Z")
@@ -65,7 +62,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
             </ol>
           </nav>
 
-          <div className={`grid items-center gap-12 ${showMock ? "lg:grid-cols-[0.9fr_1.1fr] lg:gap-4" : ""}`}>
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-4">
             <div>
               <p className="text-[13px] font-semibold text-brand-600">{content.hero.eyebrow}</p>
               <h1 className="mt-4 max-w-xl text-balance text-[42px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[48px]">
@@ -85,11 +82,11 @@ export function NichePage({ locale, page, content }: NichePageProps) {
                 {content.cta.label}
               </CtaButton>
             </div>
-            {musicPreview ? <MusicCalendarPreview locale={locale} /> : showMock && <NicheMockSuite
+            <NicheMockSuite
               niche={page.niche}
               dataset={dataset}
               screenDataset={screenDataset}
-            />}
+            />
           </div>
         </div>
       </section>

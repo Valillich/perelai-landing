@@ -9,7 +9,7 @@ This pass implements bounded copy/catalog preparation. It does not attest produc
 | independent_colorist | existing enabled | all 9 retained | RU/UK/EN appointment/client/payment introduction; existing beauty mock |
 | brow_lash_artist | existing enabled | all 9 retained | RU/UK/EN client history/payment introduction; existing beauty mock |
 | salon | existing enabled | all 9 retained | RU/UK/EN appointment/client/package introduction; existing beauty mock |
-| music_teacher | existing enabled | all 9 retained | False curriculum preset removed in all 9; RU/UK/EN terminology and real CalendarPage screenshot; no beauty finance replica in other locales |
+| music_teacher | existing enabled | all 9 retained | False curriculum preset removed in all 9; localized HTML lesson calendar and inbox with edu labels in all 9; no beauty finance display |
 | barber | enabled locally | all 9 | Own services, beard add-on, setup, FAQ, labels and signup slug; calendar/inbox variant |
 | nail_salon | enabled locally | all 9 | Ordinary nail services, gel-polish removal, no podology/treatment positioning; solo working owner supported |
 | makeup_artist | enabled locally | all 9 | Wedding/evening makeup, makeup trial distinct from SaaS trial; no permanent makeup/medical positioning |
@@ -55,3 +55,11 @@ Validation: TypeScript PASS, 34 suites / 511 tests PASS. Real HTTP checks: all 2
 Desktop/mobile checks: 36 variants (three pages × six new locales × two viewports), all PASS for H1, CTA niche/language, reciprocal metadata, horizontal overflow and page errors. Evidence: [mvp-niche-all-locales-layout.json](evidence/mvp-niche-all-locales-layout.json). The current screenshot previews use synthetic app datasets; these checks do not complete server onboarding or validate payments/trial issuance.
 
 Final all-language review: Standards — 0 actionable findings; Spec — 0 actionable findings. `verify:niches` and `verify:commercial` PASS after commit. Implementation commit: `22814f7`. Existing generated `next-env.d.ts` dev-route reference was already dirty at task start and is excluded from the commit.
+
+## Footer wording and music HTML mock — 2026-10-13
+
+Owner requested the same For/Для framing for the new Product links and an HTML music-teacher mock instead of the app screenshot. The EN/RU/UK shared navigation labels now use For/Для; other six languages already used their natural equivalents. Footer, header and homepage keep one label source.
+
+Music pages now render the existing HTML calendar + inbox composition in all nine languages, using localized piano/guitar services and synthetic client names from the music_teacher template. The bounded generated export now includes edu-owned inbox/chart/busy labels, sourced from clean app commit ea26c0455; the mock selects them through the template terminologyProfile. Verification rejects missing edu labels. This is not a full profile export or a change to the application.
+
+The screenshot-only component is removed. Historical PNGs and the original screenshot evidence remain as provenance, but are no longer rendered on the page. The new music composition does not display the colorist finance KPI/feed fixture. TypeScript, verify:niches, and all 34 suites / 522 tests PASS, including music HTML rendering in every locale and missing-profile-label rejection. Production deployment and separate release acceptance remain unchanged.
