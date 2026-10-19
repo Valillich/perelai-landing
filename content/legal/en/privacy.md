@@ -1,11 +1,11 @@
 ---
 document: privacy
-version: "2026-11-01.1"
+version: "2026-11-01.2"
 effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+lastReviewedDate: "2026-10-19"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-evidence-20261017"
 ---
 
 # Perelai Privacy Notice
@@ -21,7 +21,8 @@ Perelai handles personal data in two different ways:
    the data and should be your first contact for a privacy request about that data.
 
 We do not sell personal data, we do not use it for advertising, and our website does not use
-analytics or advertising trackers. Our main hosting is in Germany; some providers and our operator's
+analytics or advertising trackers. Our application and database are hosted in Germany, and uploaded
+files and database backups are stored in the European Union; some providers and our operator's
 remote access are in other countries, as explained in section 11.
 
 The detailed notice below controls if this summary is incomplete.
@@ -48,8 +49,8 @@ business's own privacy notice for its clients or staff.
 For processing where Perelai is controller, the controller is:
 
 **{{LEGAL_PROVIDER_FULL_NAME}}**, an {{LEGAL_PROVIDER_FORM}} registered in {{COUNTRY_OF_REGISTRATION}}
-(Unified State Register entry number {{REGISTRATION_NUMBER}}; tax identification number
-{{TAX_NUMBER}}), trading as **{{TRADING_NAME}}**, with an address at {{BUSINESS_ADDRESS}}.
+(tax identification number {{TAX_NUMBER}}), trading as **{{TRADING_NAME}}**, with an address at
+{{BUSINESS_ADDRESS}}.
 
 - Privacy enquiries and requests: {{PRIVACY_EMAIL}}
 - Support: {{SUPPORT_EMAIL}}
@@ -158,6 +159,10 @@ The business chooses many fields and may add free text. Our Terms prohibit using
 records and other sensitive data, but a user may still enter such information. Please do not include
 health, diagnosis, payment card, password, government identification or similarly sensitive
 information in notes or booking messages.
+
+Company logos and covers and service-performer avatars are publicly accessible at their web address
+as soon as they are uploaded, including when public booking is disabled. Disabling public booking
+does not make these images private. Other uploaded files are kept in private storage.
 
 ### Google sign-in and Google Calendar
 
@@ -281,8 +286,9 @@ See the [Cookie Policy](/legal/cookies) for details.
 We disclose personal data only as needed for the purposes above to:
 
 - our infrastructure and service providers, listed with their functions and locations on our
-  [Subprocessor List](/legal/subprocessors): Hetzner (hosting, database, files), Cloudflare (network
-  delivery, security, backup storage), Resend (email delivery) and Zoho (support mailbox);
+  [Subprocessor List](/legal/subprocessors): Hetzner (application hosting and database), Cloudflare
+  (network delivery, security, file storage and backup storage), Resend (email delivery) and Zoho
+  (support mailbox);
 - Google, when you choose Google sign-in or connect Google Calendar;
 - Paddle, as Merchant of Record for subscription purchases;
 - your browser vendor's push service, which relays encrypted notifications if you enable them;
@@ -296,9 +302,10 @@ We do not sell personal data or share it for cross-context behavioural advertisi
 
 ## 11. International transfers
 
-Perelai is operated from Ukraine. Our application, database, files and job queues are hosted by
-Hetzner in Falkenstein, Germany. Database backups are also stored with Cloudflare in the European
-Union. Other processing takes place outside the country where data is collected:
+Perelai is operated from Ukraine. Our application, database and job queues are hosted by Hetzner in
+Falkenstein, Germany. Uploaded files and off-site database backups are stored in Cloudflare R2
+buckets restricted to the European Union. Other processing takes place outside the country where data
+is collected:
 
 - Resend delivers email from the United States;
 - Zoho Mail hosts our support mailbox in its EU service (`zoho.eu`); this hosting region does not
@@ -363,9 +370,10 @@ cycles do not delay a valid erasure request or an earlier deadline imposed by ap
 period already agreed with a business or stated in its applicable booking privacy notice remains in
 effect until lawfully changed; this notice does not automatically extend it.
 
-Database backups do not include uploaded files and attachments. Those files may be unrecoverable if
-the file-storage server or disk is lost. Businesses should keep their originals. On database restore,
-the operator must reconcile deletion instructions before returning restored data to use.
+Uploaded files and attachments are stored in Cloudflare R2, separately from the application server,
+and are not included in database backups. We keep no additional backup copy of them, so a deleted
+file cannot be restored. Businesses should keep their originals. On database restore, the operator
+must reconcile deletion instructions before returning restored data to use.
 
 ## 13. Your privacy rights
 
@@ -430,7 +438,8 @@ We use technical and organisational measures appropriate to the nature of the da
 encrypted connections (HTTPS), salted password hashing, role-based permissions within each workspace,
 separation of each workspace's data, short-lived single-use approvals for sensitive exports, daily
 database backups stored off-site in the European Union, and restricted administrative access by the
-operator over protected connections. Backup coverage excludes uploaded files and attachments.
+operator over protected connections. Uploaded files are kept in private storage, except images a
+business chooses to show on its public pages; files are not included in database backups.
 The operator handles security reports and the notification duties described below. Our
 [Data Processing Addendum](/legal/dpa) describes these measures in more detail.
 

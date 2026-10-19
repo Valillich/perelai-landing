@@ -3,10 +3,15 @@
 **Recorded:** 2026-09-27. **State:** REGISTERED_FUTURE_NOT_DEFAULT.
 **Authority:** `owner-booking-notice-cloudflare-v2-20260927` (owner requested the Cloudflare backup correction).
 **Version:** `business-booking-CA-en-v2`. **Effective date:** 2026-11-01, aligned with the postponed platform release.
-**Content SHA-256:** `be3286fee8237268306591c03e36ca063a14942c2ff4a5fbd237c6beb432636a`.
+**Content SHA-256:** `2d030c1883624675a796d3a8158f2b1d6b43e18f7340e556bb0eaca401fa850d`.
 
 ## Changes
 
+- **In-place correction 2026-10-17** (`owner-platform-legal-evidence-20261017`, before the effective
+  date, never resolvable or published): removed `2001010010001028235`, which the 28.09.2026 EDR
+  extract shows is a registration-action number, not the entrepreneur's record; uploaded files are
+  now disclosed as stored in Cloudflare R2 (EU jurisdiction) without backup copies, not on Hetzner.
+  Previous digest `be3286fee8237268306591c03e36ca063a14942c2ff4a5fbd237c6beb432636a`.
 - Cloudflare, Inc. / R2 is a recipient of database backup copies containing booking/client personal data.
 - EU-jurisdiction bucket for off-site DB copies; this is distinct from the global Cloudflare network.
 - Daily DB backups; up to 7 days off-site and 10 days on-server; uploaded files/attachments excluded.

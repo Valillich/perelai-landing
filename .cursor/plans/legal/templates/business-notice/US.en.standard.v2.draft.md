@@ -46,13 +46,12 @@ People authorized to arrange or provide your service can access the information 
 Perelai is operated by ILLICHOV VALERII (registered in Ukraine as ІЛЛІЧОВ ВАЛЕРІЙ ВАЛЕРІЙОВИЧ), an individual entrepreneur (FOP) registered in Ukraine, trading as “Perelai”. For booking and related client administration, the operator processes personal information on our instructions.
 
 Ukrainian tax identification number (RNOKPP): 3278516853.
-Ukrainian Unified State Register (EDR) entry number: 2001010010001028235.
 Registered business address: Zamarstynivska 170E, apartment 68, Lviv, 79068, Ukraine.
 Perelai support, privacy and legal enquiries: support@perelai.app.
 
-Perelai uses Hetzner Online GmbH to host the application, database, job queues and files in Falkenstein, Germany. Transactional booking emails are delivered through Resend (Plus Five Five, Inc., United States), which receives the recipient address, relevant email content and delivery information. Cloudflare provides network delivery and security and processes connection and request information in its international network.
+Perelai uses Hetzner Online GmbH to host the application, database and job queues in Falkenstein, Germany. Transactional booking emails are delivered through Resend (Plus Five Five, Inc., United States), which receives the recipient address, relevant email content and delivery information. Cloudflare provides network delivery and security and processes connection and request information in its international network.
 
-Perelai also uses Cloudflare, Inc. (United States), through Cloudflare R2, to store off-site database backups in the European Union, using an EU-jurisdiction bucket. These copies contain personal information held in the database, including booking and client records, not just connection metadata. They are used for service recovery and protection against data loss. EU backup storage does not mean that every provider operation or access takes place only in the EU.
+Perelai also uses Cloudflare, Inc. (United States), through Cloudflare R2, to store files uploaded to the service and off-site database backups in the European Union, using EU-jurisdiction buckets. The backup copies contain personal information held in the database, including booking and client records, not just connection metadata. They are used for service recovery and protection against data loss. EU storage does not mean that every provider operation or access takes place only in the EU.
 
 If we connect Google Calendar, Perelai can read and import events from the selected calendar and keep those imported records up to date in our workspace according to our settings. Calendar access is read-only: Perelai does not create or change Google Calendar events or send your booking request to that calendar. An ordinary booking does not require you to sign in to Google. A page may load a business-selected image from its hosting provider; that provider receives the connection information needed to deliver the image. These service disclosures are for booking, communication, delivery and security, not for advertising audiences.
 
@@ -68,7 +67,7 @@ The booking application does not change its functional storage or necessary requ
 
 6. Where information is processed and how long it is kept
 
-The main hosting location is Germany. Off-site database backups are stored with Cloudflare R2 in the European Union. Email delivery through Resend involves processing in the United States. Cloudflare's network, optional Google Calendar synchronization and image delivery may involve other countries. Perelai's Ukrainian operator provides remote support and administration from different countries through protected connections. Information is therefore not stored or accessed only in the United States.
+The main hosting location is Germany. Uploaded files and off-site database backups are stored with Cloudflare R2 in the European Union. Email delivery through Resend involves processing in the United States. Cloudflare's network, optional Google Calendar synchronization and image delivery may involve other countries. Perelai's Ukrainian operator provides remote support and administration from different countries through protected connections. Information is therefore not stored or accessed only in the United States.
 
 Perelai uses contractual processing terms, access restrictions and confidentiality and security measures with its providers. International processing does not remove the protections of applicable law. You can ask us or support@perelai.app about recipients and processing locations.
 
@@ -76,7 +75,7 @@ Requests that do not lead to a completed service are kept for no more than 90 ca
 
 Ordinary client records and service history are kept for no more than 24 calendar months after the last completed visit. Editing a client record alone does not restart this period. If there is a future agreed appointment, we retain only the information needed to arrange and provide it. Information no longer needed is removed; an earlier valid privacy request is considered separately.
 
-Database backups are made daily. Off-site copies in Cloudflare R2 are kept for up to 7 days and copies on the Hetzner hosting server for up to 10 days. These backups cover the database, not uploaded files or attachments. Backup rotation is separate from, and does not restart, the retention periods for active records; workspace deletion and recovery follow the rules below.
+Database backups are made daily. Off-site copies in Cloudflare R2 are kept for up to 7 days and copies on the Hetzner hosting server for up to 10 days. These backups cover the database, not uploaded files or attachments, which are stored separately in Cloudflare R2 without additional backup copies. Backup rotation is separate from, and does not restart, the retention periods for active records; workspace deletion and recovery follow the rules below.
 
 After an authorized and confirmed instruction to delete our business workspace, Perelai deletes in-scope client personal information from active systems without undue delay and within 30 calendar days. Residual backup copies are kept out of ordinary use and deleted within the following 30 calendar days after active deletion, ordinarily no later than 60 calendar days after the confirmed instruction. Previously deleted information is excluded from ordinary use after a backup restore. Archiving a workspace is not the same as deleting it.
 

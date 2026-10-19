@@ -1,44 +1,44 @@
 {
   "terms": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
-    "sha256": "d82080215da76d077adff7bfb18e5a2de217c7e0fcf866c20cd7a3985edb6984",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "sha256": "b38cb2cbc8cc3e01faff0bd8fcbe228b36e8d5fb0b50f088651c1db57ac23392",
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "privacy": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
-    "sha256": "fa354bfc8be1c3b93c6333692f9f21fb3db3ef31844b75c8509f58ab44a96d0f",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "sha256": "3bb1e649c45672d82764da155ce52c0be4b1e4a4b4dde6158b3d4e2ce37beb86",
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "dpa": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
-    "sha256": "39b1ef9d59d97a1e3b54de13318ad62ad0d50bc07eeae9dedb4ddbd57c90dfce",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "sha256": "898fb2a53a0965a9b2850b83cef6939babe9c0236c2fa97e1c2453f76466b9fb",
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "bookingTerms": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
     "sha256": "48a94ca582401060c3d113ea505aa51730f086c67a5fbaa703b3a04a5e18df10",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "cookies": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
     "sha256": "026a87028500c527ebe2640cd047cc29011380ccb75385fa36c9b55d1b4ed38c",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "subprocessors": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
-    "sha256": "2206f9e02e3fe54d26d09e2785c48304f5ce9e87a6c9fa4227187a11cf557b6a",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "sha256": "6b9e1a5455af872dcae2f69320f0bcc4c0877b71fe736940e3f9afe83382b54e",
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "billing": {
-    "version": "2026-11-01.1",
+    "version": "2026-11-01.2",
     "effectiveDate": "2026-11-01",
     "sha256": "aaa5b666091ff6b76bd80f07e40dde478e65c92fc169d3248daddb5f506c3ab7",
-    "approvalRef": "owner-platform-legal-mvp-postponement-20260927"
+    "approvalRef": "owner-platform-legal-evidence-20261017"
   }
 }

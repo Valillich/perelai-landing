@@ -1,11 +1,11 @@
 ---
 document: dpa
-version: "2026-11-01.1"
+version: "2026-11-01.2"
 effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+lastReviewedDate: "2026-10-19"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-evidence-20261017"
 ---
 
 # Perelai Data Processing Addendum
@@ -126,7 +126,9 @@ possible and the same objection right applies.
 
 ## 7. International transfers
 
-Perelai is established in Ukraine and hosts Customer Personal Data in Germany. Perelai will not make a
+Perelai is established in Ukraine. It hosts the application and database in Germany and stores
+uploaded files and off-site database backups in Cloudflare R2 buckets restricted to the European
+Union. Perelai will not make a
 Restricted Transfer except in accordance with the Customer's instructions and a lawful transfer
 mechanism. Where the Customer's transfer of Customer Personal Data to Perelai is a Restricted Transfer
 under the GDPR or UK GDPR, the SCCs and, for the UK, the UK Addendum apply as completed in Schedule 3
@@ -219,8 +221,9 @@ follows:
   10 days on the hosting server. Residual copies are excluded from ordinary use and deleted within 30
   days after active deletion. If a backup is restored, deletion instructions are applied again before
   the data returns to use.
-  These backups cover the database only; uploaded files and attachments are not backed up and may
-  be unrecoverable if the file-storage server or disk is lost. The Customer should keep their originals.
+  These backups cover the database only. Uploaded files and attachments are kept in separate object
+  storage without an additional backup copy, so a deleted or lost file may be unrecoverable. The
+  Customer should keep their originals.
 - **Inactive workspaces:** a workspace that remains in restricted mode without a paid subscription
   or other valid access for six consecutive months may be closed after at least 30 days' email
   notice to the Company owner. Closure is discretionary, not automatic on the six-month anniversary;
@@ -410,10 +413,11 @@ As set out in section 12.
 | Data minimisation | Uploaded import files and previews are deleted after the import finishes or after 24 hours without activity; delivery logs and notifications are deleted on fixed schedules. |
 | Development and change management | Source code is version-controlled; changes are tested before deployment; dependencies and hosting components receive security updates. |
 | Logging | Security-relevant events such as sign-in, legal acceptance and exports are recorded; server logs are normally kept for no longer than 90 days. |
-| Backups and recovery | Daily database backups, kept for up to 7 days in access-controlled off-site storage in the European Union and up to 10 days on the hosting server. Uploaded files and attachments are excluded. Before returning restored data to use, the operator must reconcile deletion instructions and verify that erased data is not reintroduced. No guaranteed recovery time or uninterrupted availability is promised. |
+| Backups and recovery | Daily database backups, kept for up to 7 days in a private Cloudflare R2 bucket restricted to the European Union and up to 10 days on the hosting server. Uploaded files and attachments are stored separately in Cloudflare R2 (EU) and are not backed up. Before returning restored data to use, the operator must reconcile deletion instructions and verify that erased data is not reintroduced. No guaranteed recovery time or uninterrupted availability is promised. |
 | Deletion | Full workspace deletion is operator-led following a verified request, with completion checks. Ordinary record cleanup follows section 12 and includes review of skipped records; expiring tokens and other scheduled housekeeping have separate controls. Archiving alone does not erase data. |
 | Incident response | The operator must assess reports, contain and investigate incidents, record the findings and notify affected Customers under section 9. Notification may be completed in phases without undue further delay. |
 | Subprocessor management | Perelai must review a new Subprocessor and enter the written processing terms required by section 6 before entrusting Customer Personal Data to it. |
+| Storage access | Private files and database backups are kept in Cloudflare R2 buckets without public access. Company logos and covers and service-performer avatars are publicly accessible at their web address as soon as they are uploaded, including when public booking is disabled. Disabling public booking does not make these images private. |
 | Physical security | Provided by Hetzner's ISO/IEC 27001-certified data centres in Germany and by Cloudflare's infrastructure. |
 | Review | Measures are reviewed at least once a year and after significant changes to the Service. |
 
@@ -453,7 +457,8 @@ its Section 19.
 ## C. Supplementary measures
 
 Encryption of data in transit, access restricted to the operator, data minimisation, the handling of
-government demands in section 14, and the hosting of Customer Personal Data in Germany.
+government demands in section 14, hosting of the application and database in Germany, and storage of
+files and backups in the European Union.
 
 ## D. Execution
 

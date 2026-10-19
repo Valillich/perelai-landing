@@ -1,11 +1,11 @@
 ---
 document: terms
-version: "2026-11-01.1"
+version: "2026-11-01.2"
 effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+lastReviewedDate: "2026-10-17"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-evidence-20261017"
 ---
 
 # Perelai Terms of Service
@@ -34,9 +34,8 @@ The detailed clauses below control if this summary conflicts with them.
 These Terms of Service (the **Terms**) are an agreement between:
 
 - **Provider:** {{LEGAL_PROVIDER_FULL_NAME}}, an {{LEGAL_PROVIDER_FORM}} registered in
-  {{COUNTRY_OF_REGISTRATION}} (Unified State Register entry number {{REGISTRATION_NUMBER}}; tax
-  identification number {{TAX_NUMBER}}), with a business address at {{BUSINESS_ADDRESS}}, trading as
-  {{TRADING_NAME}} (**Perelai**, **we**, **us**, or **our**); and
+  {{COUNTRY_OF_REGISTRATION}} (tax identification number {{TAX_NUMBER}}), with a business address at
+  {{BUSINESS_ADDRESS}}, trading as {{TRADING_NAME}} (**Perelai**, **we**, **us**, or **our**); and
 - the business identified when an authorised representative accepts these Terms (**Customer**).
   A sole proprietor may be that Customer personally. **Authorised Users** are people permitted to
   use its workspace. References to **you** apply to the Customer and, for individual-use duties,
@@ -609,9 +608,9 @@ exceptions in section 20.1 and the precedence rules in the DPA continue to apply
 ### 20.4 Data loss
 
 Perelai's current backup scope is the database, as described in the DPA. Uploaded files and attachments
-are not included in those backups. If the file-storage server or its disk is lost, those files may
-not be recoverable. The Customer should retain originals of uploaded files and independent copies
-of data it cannot afford to lose.
+are kept in separate object storage and are not included in those backups; Perelai keeps no additional
+copy of them, so a file that is deleted or lost in that storage may not be recoverable. The Customer
+should retain originals of uploaded files and independent copies of data it cannot afford to lose.
 
 If Customer Data is lost or damaged because of our breach, we will use reasonable efforts to recover
 it from available sources, including the most recent usable database backup. This does not promise

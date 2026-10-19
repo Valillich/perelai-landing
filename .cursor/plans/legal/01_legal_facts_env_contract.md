@@ -1,5 +1,38 @@
 # Perelai legal facts inventory and env contract
 
+**Evidence update and release `2026-11-01.2` — 2026-10-17 (`owner-platform-legal-evidence-20261017`):**
+supersedes the "preserve `2026-11-01.1`" instruction below. All seven documents are now `2026-11-01.2`,
+still effective 2026-11-01; `.1` is archived in [archive/platform-2026-11-01.1](archive/platform-2026-11-01.1/README.md).
+
+| Item | Evidence and status |
+|---|---|
+| EDR identity | Extract of 28.09.2026 11:51 (owner PDF, not copied; contains private phone/e-mail): status registered; address unchanged (Zamarstynivska 170E, apt. 68, Lviv, 79068). The entrepreneur's record is **24.04.2017, No. 21010000000028235**. `2001010010001028235` is the **registration action of 26.02.2024** (contact and address change), not the record; `2001010010002028235` is the 28.09.2026 KVED change. Owner decision: publish no EDR number; name, RNOKPP and address remain. `.2` documents and corrected v2 notices omit it; the env snapshot keeps the correct record number for validation only. Immutable v1 notices still show the action number until superseded by v2 |
+| KVED / tax | KVEDs: 62.01 (main), 58.29, 58.21, 62.09, 62.03, 62.02, **63.11 added 28.09.2026**. Single-tax group 3 is owner-reported; the extract does not show tax group. Accountant confirmation of the KVED set and the retention schedule remains open |
+| PostHog | **DONE:** PostHog e-mail of 27 Sep 2026: organization "Perelai" and its "Default project" deleted |
+| Database backups | **CONFIGURED (screenshots 2026-10-15/17):** Coolify backup S3 storage = Cloudflare R2, local copy kept; retention local 3 backups / 10 days, S3 7 backups / 7 days, max storage 0 (unlimited). Bucket `perelai-db-backups`: public access disabled; first dump 5.34 MB on 15 Oct 2026. EU jurisdiction is owner-attested; the screenshots do not show the bucket location. Daily execution and a restore drill still need evidence |
+| File storage | **CORRECTED:** production uses `FILE_STORAGE_DRIVER=r2` (company-cleanup runbooks) with buckets `beauty-finance-public` (public images, e.g. COMPANY_AVATAR object of 06 Aug 2026 in screenshot) and `beauty-finance-private`; EU jurisdiction owner-attested. Files are not on Hetzner and are not backed up; some legacy LOCAL avatars are missing (OPS2 runbook). Confirm `beauty-finance-private` public access is disabled |
+| Owner-attested, no artefact supplied | Zoho DPA accepted; Docker log rotation ≤90 days; recurring cleanup (≤30 days) and inactive-workspace review scheduled; delivery to support@perelai.app verified |
+| Procedures in repo | `beauty-finance/docs/runbooks/`: privacy-incident-response, privacy-request-response, production_data_retention_runbook, company-cleanup-coolify-mvp. The incident and request checklists say "preparation only": record the accountable operator/backup and a tabletop privately |
+| Still open | TEAM-RELEASE before the STUDIO trial/plan goes live (otherwise new Terms version); restore drill; switch `CURRENT_TEMPLATES` to v2 on/after 2026-11-01 and republish affected salon notices; deploy landing `.2` together with app `LEGAL_*_VERSION=2026-11-01.2` |
+
+**Review corrections — 2026-10-19:** Privacy §4 and DPA Schedule 2 now state the actual
+upload behaviour: Company logos/covers and performer avatars are public by direct URL immediately
+after upload, even when public booking is disabled. Other files remain private. The unreleased
+`.2` packet retains its version/effective date; Privacy/DPA hashes and the purchase Privacy archive
+are synchronised. Historical `.1` documents, hashes and acceptance evidence are preserved.
+
+Historical acceptances remain historical evidence. This correction introduces no mass re-acceptance
+for existing workspaces. New actions still follow the API's current-version checks: after an ENV
+version change, `.1` evidence alone does not satisfy creation of a new workspace. Terms §22 does not
+by itself classify every Privacy/DPA change as immaterial.
+
+Before release, verify EU **jurisdiction** for each file/backup bucket (a location hint is insufficient),
+disabled public access to private files/backups, daily backup execution and a restore drill. These
+remain unverified here. Inventory currently published salon notices and arrange a timely correction
+for affected v1 publications under [plan 31](31_booking_notice_v2_cloudflare_backups_20260927.md);
+waiting for v2's future date alone does not correct inaccurate live disclosures. Coordinate landing,
+API and Web deployment. The production purchase legal package remains DRAFT.
+
 **Owner scope decision — 2026-10-12:** simplify launch to one global hold list:
 `aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`, `personal_trainer`, `yoga_instructor`;
 preserve the existing functional `rent`/`personal` holds. Country-specific niche rules and a separate
@@ -288,7 +321,7 @@ or public pages. This check is not a fresh live-register search or proof of curr
 | Owner-supplied Latin name | ILLICHOV VALERII; preserve this spelling and use the Ukrainian full name alongside it to identify the registered entrepreneur without inventing a Latin patronymic |
 | Legal form / service name | Individual Entrepreneur (FOP), registered in Ukraine, trading as Perelai; Perelai is the service name, not a separate legal entity |
 | Ukrainian tax identification number (RNOKPP) | 3278516853; not an EU VAT number or a company registration number |
-| Ukrainian Unified State Register (EDR) entry | 2001010010001028235; entry date shown in the extract: 2024-02-26. Do not describe this as the original business commencement date |
+| Ukrainian Unified State Register (EDR) entry | **CORRECTED 2026-10-17:** record 21010000000028235 of 24.04.2017 per the 28.09.2026 extract. `2001010010001028235` (26.02.2024) is a registration-action number and must not be presented as the record. Owner decision: do not publish an EDR number |
 | Registered address, Latin | Zamarstynivska 170E, apartment 68, Lviv, 79068, Ukraine |
 | Registered address, Ukrainian | Україна, 79068, Львівська обл., місто Львів, вул. Замарстинівська, будинок 170Е, квартира 68 |
 | Public support / privacy / legal / security route | support@perelai.app; one shared route, handled by the operator. Delivery and operational handling still need the ordinary release check |
@@ -298,12 +331,11 @@ apartment 68 and postcode 79068. Do not propagate the superseded apartment 98 / 
 Keep both identifiers as strings in code/configuration: the EDR number exceeds JavaScript's safe
 integer range. The env values above are facts to configure, not evidence that deployment env changed.
 
-Ready English identity wording:
+Ready English identity wording (EDR number removed 2026-10-17):
 
 > Perelai is operated by ILLICHOV VALERII (registered in Ukraine as ІЛЛІЧОВ ВАЛЕРІЙ ВАЛЕРІЙОВИЧ),
 > an individual entrepreneur (FOP) registered in Ukraine, trading as “Perelai”.
 > Ukrainian tax identification number (RNOKPP): 3278516853.
-> Ukrainian Unified State Register (EDR) entry number: 2001010010001028235.
 > Registered business address: Zamarstynivska 170E, apartment 68, Lviv, 79068, Ukraine.
 > Support, privacy and legal enquiries: support@perelai.app.
 

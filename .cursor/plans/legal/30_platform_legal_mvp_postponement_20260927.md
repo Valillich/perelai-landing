@@ -1,5 +1,19 @@
 # Platform legal release: postponement and MVP wording
 
+**Superseded by `2026-11-01.2` on 2026-10-17** (`owner-platform-legal-evidence-20261017`): EDR number
+removed (the published value was a registration-action number) and uploaded files disclosed as
+Cloudflare R2 (EU) instead of Hetzner. The effective date is unchanged; the original release record below is historical.
+
+**Review correction 2026-10-19:** Privacy and DPA clarify that logos/covers and performer avatars
+are public by direct URL immediately after upload, even with public booking disabled. Their `.2`
+hashes and the purchase Privacy archive are updated; the effective date remains 2026-11-01.
+Historical acceptance records are retained. No mass re-acceptance is introduced for existing
+workspaces; new actions still follow current API version checks, including new workspace creation.
+Terms §22 alone is not a blanket immaterial-change decision for Privacy/DPA.
+
+Evidence for the "remaining practical work" items is recorded at the top of
+[register 01](01_legal_facts_env_contract.md); the `.1` packet is archived.
+
 **Date:** 2026-09-27. **Owner instruction:** postpone the platform release by two weeks or one month,
 apply review recommendations, update all seven documents, code/ENV references and hashes.
 **Selected effective date:** 2026-11-01 (one month of preparation beyond the original 1 October).

@@ -1,11 +1,11 @@
 ---
 document: subprocessors
-version: "2026-11-01.1"
+version: "2026-11-01.2"
 effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+lastReviewedDate: "2026-10-17"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-evidence-20261017"
 ---
 
 # Perelai Subprocessor List
@@ -24,8 +24,8 @@ encrypted connections. The operator is Perelai itself, not a subprocessor.
 
 | Provider | Function | Personal data | Location | Safeguards |
 |---|---|---|---|---|
-| Hetzner Online GmbH, Germany | hosting of the application and API, PostgreSQL database, Redis job queues, file storage and on-server database backups | all Customer Data stored in the Service; technical data | Falkenstein, Germany (EU) | data processing agreement under Article 28 GDPR |
-| Cloudflare, Inc., United States | network delivery, DNS, TLS and security protection for Perelai websites, app, API and booking pages; object storage for off-site database backups | request and connection data and content passing through the network; database backup copies | global network; backup storage located in the EU | Cloudflare data processing addendum including the EU standard contractual clauses |
+| Hetzner Online GmbH, Germany | hosting of the application and API, PostgreSQL database, Redis job queues and on-server database backups | all Customer Data stored in the database; technical data | Falkenstein, Germany (EU) | data processing agreement under Article 28 GDPR |
+| Cloudflare, Inc., United States | network delivery, DNS, TLS and security protection for Perelai websites, app, API and booking pages; R2 object storage for uploaded files and off-site database backups | request and connection data and content passing through the network; uploaded files and attachments; database backup copies | global network; R2 file and backup buckets restricted to the EU | Cloudflare data processing addendum including the EU standard contractual clauses |
 | Plus Five Five, Inc. (Resend), United States | delivery of transactional and booking emails | recipient address, sender, message content and delivery events | United States | Resend data processing agreement including the EU standard contractual clauses |
 | Zoho Mail — EU service (`zoho.eu`) | support mailbox for {{SUPPORT_EMAIL}} | support correspondence and any Customer Data a customer chooses to send us | EU mailbox hosting; any provider support or onward processing is subject to the applicable Zoho terms | Zoho data processing agreement and applicable safeguards for any onward international transfers |
 
@@ -55,4 +55,4 @@ the [Data Processing Addendum](/legal/dpa). No changes are currently announced.
 
 | Effective date | Version | Change |
 |---|---|---|
-| 2026-11-01 | 2026-11-01.1 | initial publication rescheduled to 1 November 2026; Zoho Mail EU (`zoho.eu`) identified as the support mailbox hosting region |
+| 2026-11-01 | 2026-11-01.2 | initial publication on 1 November 2026; Zoho Mail EU (`zoho.eu`) as the support mailbox hosting region; uploaded files stored in Cloudflare R2 (EU) rather than on Hetzner |

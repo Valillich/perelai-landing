@@ -1,11 +1,11 @@
 ---
 document: cookies
-version: "2026-11-01.1"
+version: "2026-11-01.2"
 effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-09-27"
+lastReviewedDate: "2026-10-17"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+approvedBy: "owner-platform-legal-evidence-20261017"
 ---
 
 # Perelai Cookie and Similar Technologies Policy

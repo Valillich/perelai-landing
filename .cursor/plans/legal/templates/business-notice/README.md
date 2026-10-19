@@ -7,12 +7,18 @@ effective 2026-11-01, are **REGISTERED_FUTURE_NOT_DEFAULT** in the app. They dis
 and 10 days on-server, and that uploaded files are not backed up. Packets: `*.standard.v2.*` here,
 byte-identical copies in `beauty-finance/docs/legal/business-notice-drafts/`.
 
+**In-place correction 2026-10-17** (before the effective date; v2 could not be resolved or published):
+removed the EDR registration-action number `2001010010001028235`; uploaded files are disclosed as
+stored in Cloudflare R2 (EU jurisdiction) without backup copies instead of on Hetzner. Digests below
+are the corrected ones; the previous ones are recorded in each release record. v1 still contains both
+outdated facts and stays immutable — salons with a published v1 need the v2 switch and republication.
+
 | Country | v2 digest | Default until an explicit switch |
 |---|---|---|
-| UA | `3b1a4ca30a0fe9834b52297a071e6e30b3454ab15b453fdca81db98c0d096905` | v1 `75bcc0f4…` |
-| US | `34f00fdb046096c36a18a9a12418d33103cac59ebf27ac27a6290dfdc861223e` | v1 `9a9e9802…` |
-| AU | `b63bf52fc96b71c0780b7297b5001753eeb8ca9ff1dcbffc8d7f5649341b2035` | v1 `1137bb28…` |
-| CA | `be3286fee8237268306591c03e36ca063a14942c2ff4a5fbd237c6beb432636a` | v1 `92e09aa9…` |
+| UA | `b8ad68c3d89063a43cdcedbfcf5192736a27bd9992de27648e81db4111774c9a` | v1 `75bcc0f4…` |
+| US | `c985748f29bfb7e11d900e473c7086e59a1db3e140998045422bab37372d4ae3` | v1 `9a9e9802…` |
+| AU | `5e95b9d923a8e0172f8055a8269b8c28fd406d74a64d7acc1df00dd35ff9e176` | v1 `1137bb28…` |
+| CA | `2d030c1883624675a796d3a8158f2b1d6b43e18f7340e556bb0eaca401fa850d` | v1 `92e09aa9…` |
 
 Executed 2026-09-27: v2 templates added to `REVIEWED_TEMPLATES` in
 `apps/api/src/public-booking/business-notice-template.ts`; `CURRENT_TEMPLATES` unchanged (v1).

@@ -6,16 +6,20 @@ backups in a new version; continue the interrupted preparation and integration.
 **Effective date:** 2026-11-01, aligned with the postponed platform packet.
 **State:** REGISTERED_FUTURE_NOT_DEFAULT. No deployment or salon publication performed.
 
+**Corrected in place 2026-10-17** (`owner-platform-legal-evidence-20261017`, before the effective date):
+EDR registration-action number removed; uploaded files disclosed as Cloudflare R2 (EU) without backup
+copies. The digests below are the corrected ones; previous digests are in each release record.
+
 ## Delivered
 
 Four new immutable template versions are in the application's `REVIEWED_TEMPLATES`:
 
 | Profile | Version | Content SHA-256 |
 |---|---|---|
-| UA/uk | business-booking-UA-uk-v2 | `3b1a4ca30a0fe9834b52297a071e6e30b3454ab15b453fdca81db98c0d096905` |
-| US/en | business-booking-US-en-v2 | `34f00fdb046096c36a18a9a12418d33103cac59ebf27ac27a6290dfdc861223e` |
-| AU/en | business-booking-AU-en-v2 | `b63bf52fc96b71c0780b7297b5001753eeb8ca9ff1dcbffc8d7f5649341b2035` |
-| CA/en | business-booking-CA-en-v2 | `be3286fee8237268306591c03e36ca063a14942c2ff4a5fbd237c6beb432636a` |
+| UA/uk | business-booking-UA-uk-v2 | `b8ad68c3d89063a43cdcedbfcf5192736a27bd9992de27648e81db4111774c9a` |
+| US/en | business-booking-US-en-v2 | `c985748f29bfb7e11d900e473c7086e59a1db3e140998045422bab37372d4ae3` |
+| AU/en | business-booking-AU-en-v2 | `5e95b9d923a8e0172f8055a8269b8c28fd406d74a64d7acc1df00dd35ff9e176` |
+| CA/en | business-booking-CA-en-v2 | `2d030c1883624675a796d3a8158f2b1d6b43e18f7340e556bb0eaca401fa850d` |
 
 Each profile has a human source, prepared JSON, synthetic preview and release record in the
 [template package](templates/business-notice/README.md), mirrored byte-for-byte into
@@ -46,10 +50,20 @@ are unchanged. CA remains limited to MB, NB, NL, NS, NT, NU, ON, PE, SK, YT; QC/
   for material changes concerning already-held data.
 - If R2 already receives live personal data, a future-dated notice does not fix an existing
   disclosure gap. Handle the affected businesses' notices before relying on the new version.
+- **Review clarification 2026-10-19:** inventory actual published notices before release: record
+  Company, pinned version/language/hash, public URL and the incorrect Google/file-storage disclosures
+  still served. For each affected publication, record the correction date, owner confirmation and
+  republication outcome. If correction is needed before 2026-11-01, prepare an immutable correction
+  with an appropriate effective date through the existing approval/publication flow; do not bypass
+  the future-date guard or overwrite v1. A default switch alone does not update pinned publications.
 - Bucket configuration, provider agreements, actual rotation and deletion/restore operations remain
   operational checks; content tests do not establish them. The owner-supplied EU jurisdiction is
   a specific restriction, not a location hint. See the checked
   [Cloudflare R2 location documentation](https://developers.cloudflare.com/r2/reference/data-location/).
+- Before coordinated landing/API/Web release, retain evidence for EU jurisdiction on **each** used
+  file/backup bucket, disabled public access on private files/backups, daily backup runs and an actual
+  restore drill. These checks are not closed by this text correction. The production purchase legal
+  package remains DRAFT; document synchronisation does not authorise production checkout.
 
 ## Independent continuation verification
 

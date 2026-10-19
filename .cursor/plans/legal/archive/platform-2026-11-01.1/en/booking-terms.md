@@ -1,0 +1,261 @@
+---
+document: booking-terms
+version: "2026-11-01.1"
+effectiveDate: "2026-11-01"
+lastReviewedDate: "2026-09-27"
+status: approved
+sourceLocale: en
+approvedBy: "owner-platform-legal-mvp-postponement-20260927"
+---
+
+# Perelai Public Booking Terms
+
+## At a glance
+
+- Perelai provides the booking/request technology.
+- The business named on the public page provides the underlying service, product or rental.
+- A submitted request may need the business's confirmation.
+- The business, not Perelai, is responsible for price, availability, quality, fulfilment,
+  cancellations, refunds, licences and taxes.
+- Check the business's own terms and privacy notice before submitting.
+
+The detailed terms below control if this summary is incomplete.
+
+## 1. Who these terms are between
+
+These Public Booking Terms (**Booking Terms**) are between you and {{LEGAL_PROVIDER_FULL_NAME}}, an
+{{LEGAL_PROVIDER_FORM}} registered in {{COUNTRY_OF_REGISTRATION}}, trading as **{{TRADING_NAME}}**, of
+{{BUSINESS_ADDRESS}} (**Perelai**, **we**, **us**).
+They govern your use of a Perelai-powered public page to submit, view, confirm, change or manage an
+appointment, request, order, reservation or related record (the **Booking Service**).
+
+They do **not** make Perelai the provider or seller of the service, product or rental shown by the
+business named on the page (the **Business**). Your agreement for that underlying offering is with the
+Business. The Business may present separate booking, service, cancellation, refund and privacy terms,
+which also apply to your relationship with it.
+
+When the interface requests contractual agreement, it presents these Booking Terms before your
+submission and records your affirmative agreement. Merely viewing a status page is not recorded as
+contract acceptance. If you do not agree, contact the Business by another available method.
+
+## 2. Eligibility and authority
+
+You must provide accurate information and be legally able to make the relevant request. Public pages
+are not intended for children to use independently. If you submit information for another person,
+including a child, you confirm you are authorised and that providing it is lawful and reasonably
+necessary for the requested offering.
+
+Do not use the Booking Service for emergencies. Contact the appropriate emergency service or the
+Business directly where urgent assistance is required.
+
+## 3. Perelai's role and the Business's role
+
+Perelai supplies software and communications infrastructure. Unless a page expressly and lawfully
+states otherwise, Perelai does not:
+
+- employ or supervise the Business;
+- provide, inspect, recommend or guarantee its offering;
+- set the Business's price, availability or policies;
+- decide whether the Business accepts your request;
+- collect payment for the underlying offering; or
+- resolve professional/service quality, cancellation or refund disputes on the Business's behalf.
+
+The Business is responsible for:
+
+- its legal identity and contact information;
+- accurate descriptions, availability, price, taxes and duration;
+- qualifications, licences, insurance, safety and lawful delivery;
+- deciding whether to accept, reject, reschedule or cancel;
+- its booking, cancellation, no-show and refund policy;
+- legally required consumer information, invoices and fiscal receipts; and
+- how it uses your personal data and responds to your privacy requests.
+
+Perelai remains responsible for operating the Booking Service in accordance with these Booking Terms
+and applicable law. The role split does not excuse Perelai from its own legal obligations.
+
+## 4. Booking modes and confirmation
+
+The public page must clearly identify the relevant mode and status.
+
+Only people the Business makes available to provide the relevant service should be offered as
+performers. Administrative access alone does not make someone bookable. A personnel or subscription
+change is not itself a notice that an existing appointment was cancelled or reassigned; the Business
+must handle affected bookings and communicate changes under its applicable policies.
+
+In general:
+
+- an **Appointment** may be immediately booked or may await confirmation as shown;
+- a **Request** is not a confirmed appointment merely because it was sent;
+- an **Order** records a request for goods/services but does not itself prove acceptance, payment,
+  dispatch or delivery;
+- a **Reservation** may remain pending until the Business confirms availability; and
+- a proposal from the Business is not accepted until you complete the acceptance step shown.
+
+`Request sent`, `received`, `pending` or a similar status does not mean `confirmed`. Check the on-screen
+status and confirmation email. The Business may require email confirmation before acting on a
+submission.
+
+If a price is displayed as `on request`, blank or unavailable, the offering is not free. Ask the
+Business for the price before agreeing to receive it. A displayed estimate may change where the
+Business's disclosed terms and applicable law allow.
+
+## 5. Your information and communications
+
+Provide current contact information so the Business can confirm or update your request. Review the
+details before submitting and promptly contact the Business about errors.
+
+In the current release, messages sent to you through the Booking Service are limited to handling
+your booking, such as confirmations, proposed times, changes, reminders and cancellations. These
+messages must not be used to deliver promotional offers or advertising. Applicable communication
+rules still govern them; a booking-related label alone does not establish a legal exemption.
+
+Submitting a booking, providing contact details or accepting these Booking Terms does not give
+permission to send you advertising. Perelai does not provide a feature to collect or verify marketing
+consent in the current release. Under Perelai's Terms of Service, the Business must separately obtain
+and document your optional consent outside Perelai before using contact details collected through
+Perelai for marketing outside the platform. Such consent must cover the Business, purpose and
+communication channel concerned. The Business must provide and honour a withdrawal or unsubscribe
+route and comply with applicable law.
+
+You do not have to agree to marketing to book or receive the requested service. Refusing or
+withdrawing marketing consent does not itself cancel a booking or prevent lawful service messages.
+Contact the Business about your booking communication preferences. These Terms do not restrict any
+right under applicable law to stop particular messages. A new booking does not reinstate withdrawn
+marketing consent.
+
+## 6. Business terms, cancellation and refunds
+
+Before submitting, review the Business's displayed:
+
+- legal/business identity and contact details;
+- description and total price or method of calculating it;
+- confirmation process;
+- cancellation, rescheduling and no-show policy;
+- refund policy where payment is involved; and
+- other material service or consumer terms.
+
+Where the interface asks you to agree to Business terms, that agreement is between you and the
+Business. Perelai records the version/timestamp for the Booking Service but does not author, approve or
+guarantee the Business's policy.
+
+Contact the Business first to cancel, reschedule, obtain a refund or resolve an underlying-service
+dispute. Perelai support may help with a technical issue but cannot order the Business to provide a
+service or refund unless a separate payment/product architecture expressly gives Perelai that role.
+
+Whether you have a statutory right to cancel or withdraw depends on the law that applies to your
+contract with the Business and on the type of service; the Business is responsible for telling you
+about it. When a Business uses Perelai's standard booking setup, no prepayment is collected through the
+booking page and the page states that the Business does not charge cancellation or no-show fees.
+
+## 7. Payments and public receipts
+
+Perelai does not collect or hold your payment for the underlying Business offering and does not ask
+you to enter card details on a booking page. Pay only through the method the Business lawfully
+provides.
+
+A Perelai page may show an amount or payment status recorded by the Business. A Perelai **Public
+Receipt** or payment confirmation is an operational record, not a bank statement, fiscal receipt or tax
+invoice. Ask the Business for legally required payment/tax documentation.
+
+Prepaid Packages and instalment schedules displayed through Perelai are arrangements with the
+Business. Cancelling a Package stops future redemption; it does not by itself issue a refund or
+reverse past payments. A visit marked paid may have been settled with Package credits rather than
+a new money payment. Perelai does not provide credit or assess your creditworthiness.
+
+## 8. Privacy
+
+The Business generally acts as controller for the personal data it collects about you for its offering.
+Perelai generally processes that data for the Business to provide the Booking Service. Perelai also
+uses limited account-free technical/security data for its own operation and legal obligations.
+
+Read:
+
+- the Business privacy notice linked or displayed on the public page; and
+- the [Perelai Privacy Notice](/legal/privacy).
+
+For access, correction, deletion or another request about your service/client record, contact the
+Business first. If your question concerns Perelai's controller processing or you cannot reach the
+Business, contact {{PRIVACY_EMAIL}} and identify the Business without sending passwords, full card data
+or unnecessary sensitive information.
+
+Do not submit diagnoses, treatment records, insurance details, full card data, passwords, government
+ID images or other unsupported sensitive data in a booking note. If the Business requires regulated
+data, it must provide a separately approved collection method and notice.
+
+## 9. Acceptable use
+
+You must not:
+
+- make fraudulent, speculative, abusive or intentionally false submissions;
+- impersonate another person or submit their data without authority;
+- harass the Business, its staff, other users or Perelai;
+- probe, scrape, overload, automate or interfere with the Booking Service without permission;
+- introduce malware or attempt unauthorised access;
+- use a status, confirmation or preference token belonging to another person; or
+- use the Booking Service for unlawful or infringing activity.
+
+We or the Business may reject or restrict submissions reasonably suspected of abuse, security risk or
+unlawful use. This does not authorise discriminatory rejection by the Business.
+
+## 10. Availability and changes
+
+The Booking Service may be unavailable because of maintenance, security work, connectivity or
+third-party failures. A submission is not complete until the interface confirms receipt. If you are
+uncertain, contact the Business rather than submitting duplicates.
+
+We may change the technical Booking Service, but a change to Perelai software does not change an
+already formed underlying contract between you and the Business. The Business must tell you about its
+own changes as applicable.
+
+## 11. Disclaimers
+
+To the extent permitted by law, Perelai does not warrant the Business, the accuracy of Business-supplied
+content, or the availability, quality, safety, legality or suitability of the underlying offering.
+Perelai is not providing medical, legal, tax, financial or other professional advice through a booking
+page.
+
+Nothing in these Booking Terms excludes rights or remedies that cannot lawfully be excluded, including
+Perelai's responsibility for its own fraud, wilful misconduct or other non-excludable conduct.
+
+## 12. Liability
+
+Perelai provides the Booking Service to you free of charge. Perelai is responsible for its own Booking
+Service, not for the Business's underlying offering or its acts, and the Business is responsible for
+the service it provides to you.
+
+Nothing in these Booking Terms excludes or limits Perelai's liability for death or personal injury
+caused by negligence, for fraud, for intentional misconduct, or any other liability, or any consumer
+right or guarantee, that cannot be excluded or limited under the law that applies to you.
+
+Subject to that, and to the extent the applicable law allows, Perelai is not liable for indirect or
+unforeseeable loss arising from your use of the Booking Service, and Perelai's total liability to you
+arising from the Booking Service is limited to USD 100.
+
+## 13. Complaints and disputes
+
+For price, quality, fulfilment, cancellation, refund, injury or professional-service issues, contact
+the Business using the details on its page. For a technical Booking Service or Perelai privacy issue,
+contact {{SUPPORT_EMAIL}} or {{PRIVACY_EMAIL}}.
+
+These Booking Terms are governed by the law of Ukraine. If you are a consumer, this does not deprive you
+of the protection of mandatory provisions of the law of your country of residence, and you may bring
+proceedings in the courts of your country of residence where that law allows. Otherwise, the competent
+courts of Ukraine in the city of Lviv have jurisdiction. Your contract with the Business is governed by
+the law that applies to it, not by this section.
+
+## 14. Changes to these Booking Terms
+
+We show the version and effective date. Material changes apply prospectively and are notified through
+the public page or relevant communication as appropriate. The version presented for a submission may
+be recorded with it. Prior versions are available on request from {{SUPPORT_EMAIL}}.
+
+A change to these Booking Terms does not silently change the Business terms version you accepted.
+
+## 15. Contact
+
+- Perelai technical support: {{SUPPORT_EMAIL}}
+- Perelai privacy: {{PRIVACY_EMAIL}}
+- Perelai address: {{BUSINESS_ADDRESS}}
+
+For the underlying offering, use the Business contact information shown on its public page or
+confirmation.
