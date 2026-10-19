@@ -10,6 +10,15 @@ backups in a new version; continue the interrupted preparation and integration.
 EDR registration-action number removed; uploaded files disclosed as Cloudflare R2 (EU) without backup
 copies. The digests below are the corrected ones; previous digests are in each release record.
 
+**Release-scope confirmation 2026-10-19:** the owner confirms no active published notices,
+including for the sole real Company being relocated. Published-notice inventory is resolved;
+there is no affected-salon migration, republication or repeat notice-confirmation task. Keep the
+v2 default switch on/after 2026-11-01 and the normal first owner preview/confirmation/publication.
+The same day's screenshots confirm `Public Access: Disabled` for `beauty-finance-private` and
+`perelai-db-backups`, and `Location: Eastern Europe (EUR)` for the backup and public-file buckets.
+Evidence, source-file hashes and limits are in [register 01](01_legal_facts_env_contract.md#screenshot-evidence--2026-10-19).
+Explicit EU jurisdiction, daily backup execution and restore remain separate checks.
+
 ## Delivered
 
 Four new immutable template versions are in the application's `REVIEWED_TEMPLATES`:
@@ -41,29 +50,25 @@ are unchanged. CA remains limited to MB, NB, NL, NS, NT, NU, ON, PE, SK, YT; QC/
 ## Lifecycle and release
 
 - V1 source files, JSON wrappers, release records, previews, runtime text and digests are preserved.
-  `CURRENT_TEMPLATES` continues to point to v1. Existing published notices resolve their pinned v1.
+  `CURRENT_TEMPLATES` continues to point to v1. The resolver preserves exact pinned references;
+  the owner confirms there are no active publications to migrate for this release.
 - V2 is registered with its future date. The existing guard rejects lookup/render before
   2026-11-01; the calendar reaching that date does not automatically change a default.
 - For the postponed launch, switch each exact current reference to v2 when releasing it and use
-  the existing owner preview/confirm/publish process. Do not rewrite stored notices or acceptance
-  evidence and do not silently migrate custom terms. Follow applicable notice/permission requirements
-  for material changes concerning already-held data.
-- If R2 already receives live personal data, a future-dated notice does not fix an existing
-  disclosure gap. Handle the affected businesses' notices before relying on the new version.
-- **Review clarification 2026-10-19:** inventory actual published notices before release: record
-  Company, pinned version/language/hash, public URL and the incorrect Google/file-storage disclosures
-  still served. For each affected publication, record the correction date, owner confirmation and
-  republication outcome. If correction is needed before 2026-11-01, prepare an immutable correction
-  with an appropriate effective date through the existing approval/publication flow; do not bypass
-  the future-date guard or overwrite v1. A default switch alone does not update pinned publications.
+  the existing owner preview/confirm/publish process for first publication. No existing-salon
+  republication or repeat notice confirmation is required in the owner-confirmed current state.
+  Preserve historical templates and acceptance evidence; the default switch does not rewrite them.
+  No earlier correction version is needed for an absent publication. Any future change to an actual
+  published notice must still preserve its exact reference and use the existing publication flow.
 - Bucket configuration, provider agreements, actual rotation and deletion/restore operations remain
   operational checks; content tests do not establish them. The owner-supplied EU jurisdiction is
   a specific restriction, not a location hint. See the checked
   [Cloudflare R2 location documentation](https://developers.cloudflare.com/r2/reference/data-location/).
-- Before coordinated landing/API/Web release, retain evidence for EU jurisdiction on **each** used
-  file/backup bucket, disabled public access on private files/backups, daily backup runs and an actual
-  restore drill. These checks are not closed by this text correction. The production purchase legal
-  package remains DRAFT; document synchronisation does not authorise production checkout.
+- Private/backup bucket public access is confirmed disabled in the 2026-10-19 screenshots.
+  Before coordinated landing/API/Web release, retain evidence for explicit EU jurisdiction on each
+  used file/backup bucket, daily backup runs and an actual restore drill. Regional Location screenshots
+  do not close those checks. The production purchase legal package remains DRAFT; document
+  synchronisation does not authorise production checkout.
 
 ## Independent continuation verification
 

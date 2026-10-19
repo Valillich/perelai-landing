@@ -11,6 +11,13 @@ Historical acceptance records are retained. No mass re-acceptance is introduced 
 workspaces; new actions still follow current API version checks, including new workspace creation.
 Terms §22 alone is not a blanket immaterial-change decision for Privacy/DPA.
 
+**Owner/evidence update 2026-10-19:** no active salon notices are published, including for the
+single real Company being relocated. There is no affected-salon republication or repeat
+notice-confirmation task; retain the planned v2 default switch and ordinary first publication.
+Screenshots confirm private/backup buckets have `Public Access: Disabled` and the public/backup
+buckets show `Location: Eastern Europe (EUR)`. Explicit EU jurisdiction and backup execution/restore
+are still separate evidence items; see [register 01](01_legal_facts_env_contract.md#screenshot-evidence--2026-10-19).
+
 Evidence for the "remaining practical work" items is recorded at the top of
 [register 01](01_legal_facts_env_contract.md); the `.1` packet is archived.
 

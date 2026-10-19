@@ -1,5 +1,17 @@
 # Подача в Google/Paddle, параллельная работа и запуск MVP
 
+**Уточнение owner и доказательств 19.10.2026:** действующих опубликованных notices нет,
+включая единственную реальную Company, которая переносится в другую страну. Inventory публикаций
+закрыт по подтверждению владельца; републикация затронутых салонов и повторное подтверждение notice
+не входят в текущий release. Остаются переключение defaults на v2 с 01.11.2026 и обычное первое
+preview/подтверждение/publish. Перенос Company выполняется по handoff 34.
+Скриншоты подтверждают `Public Access: Disabled` у `beauty-finance-private` и `perelai-db-backups`,
+а также `Location: Eastern Europe (EUR)` у public/backup бакетов. EU jurisdiction, ежедневность
+резервирования и restore не подтверждаются этими экранами. Актуальные доказательства и ограничения —
+в [реестре 01](01_legal_facts_env_contract.md#screenshot-evidence--2026-10-19); шаги v2 — в
+[плане 31](31_booking_notice_v2_cloudflare_backups_20260927.md). Это уточнение текущей очереди;
+исторические условные замечания о републикации ниже не создают отсутствующую задачу.
+
 **Corrective checkpoint 12.10.2026:** замечания R1–R3 из [review 38](38_lp_m1_independent_review_20261012.md)
 исправлены/целевые tests PASS; app `59a270485`, landing artifacts закреплены на этом SHA.
 Не повторять реализацию. Визуальный operator checklist и real inventory/transition/notice

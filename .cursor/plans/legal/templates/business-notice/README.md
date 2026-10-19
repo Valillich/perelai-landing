@@ -11,7 +11,9 @@ byte-identical copies in `beauty-finance/docs/legal/business-notice-drafts/`.
 removed the EDR registration-action number `2001010010001028235`; uploaded files are disclosed as
 stored in Cloudflare R2 (EU jurisdiction) without backup copies instead of on Hetzner. Digests below
 are the corrected ones; the previous ones are recorded in each release record. v1 still contains both
-outdated facts and stays immutable — salons with a published v1 need the v2 switch and republication.
+outdated facts and stays immutable. **Owner confirmation 2026-10-19:** there are no active published
+notices, including for the sole real Company being relocated. Inventory is resolved; no affected-salon
+migration, republication or repeat notice confirmation is required for this release.
 
 | Country | v2 digest | Default until an explicit switch |
 |---|---|---|
@@ -27,8 +29,13 @@ Executed 2026-09-27: v2 templates added to `REVIEWED_TEMPLATES` in
 unchanged v1 default. Results: 122/122 business-notice tests, 280/280 in public-booking-legal,
 public-booking.service and companies.service; API app typecheck clean. Not done: deployment,
 switching `CURRENT_TEMPLATES` to v2, or publishing any salon's settings. To release: switch each
-country reference to v2 (not before 2026-11-01 and only with R2 actually configured), then owners
-re-confirm through the existing preview/publish flow. v1 packets and digests remain unchanged.
+country reference to v2 (not before 2026-11-01 and only with R2 actually configured), then use the
+normal owner preview/confirmation/publish flow for first publications. v1 packets and digests remain
+unchanged. No automatic switch on the effective date is implemented.
+
+The 2026-10-19 screenshots confirm private/backup `Public Access: Disabled` and the public/backup
+bucket `Location: Eastern Europe (EUR)`. Explicit EU jurisdiction, daily backup execution and restore
+remain separate checks; see [register 01](../../01_legal_facts_env_contract.md#screenshot-evidence--2026-10-19).
 
 Independent continuation verification: **402/402 API tests** in the seven affected booking/Company
 suites passed. The 16 v2 artifacts are identical between repositories; all 38 preceding v1 package

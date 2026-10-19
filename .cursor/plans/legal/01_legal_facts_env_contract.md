@@ -9,11 +9,31 @@ still effective 2026-11-01; `.1` is archived in [archive/platform-2026-11-01.1](
 | EDR identity | Extract of 28.09.2026 11:51 (owner PDF, not copied; contains private phone/e-mail): status registered; address unchanged (Zamarstynivska 170E, apt. 68, Lviv, 79068). The entrepreneur's record is **24.04.2017, No. 21010000000028235**. `2001010010001028235` is the **registration action of 26.02.2024** (contact and address change), not the record; `2001010010002028235` is the 28.09.2026 KVED change. Owner decision: publish no EDR number; name, RNOKPP and address remain. `.2` documents and corrected v2 notices omit it; the env snapshot keeps the correct record number for validation only. Immutable v1 notices still show the action number until superseded by v2 |
 | KVED / tax | KVEDs: 62.01 (main), 58.29, 58.21, 62.09, 62.03, 62.02, **63.11 added 28.09.2026**. Single-tax group 3 is owner-reported; the extract does not show tax group. Accountant confirmation of the KVED set and the retention schedule remains open |
 | PostHog | **DONE:** PostHog e-mail of 27 Sep 2026: organization "Perelai" and its "Default project" deleted |
-| Database backups | **CONFIGURED (screenshots 2026-10-15/17):** Coolify backup S3 storage = Cloudflare R2, local copy kept; retention local 3 backups / 10 days, S3 7 backups / 7 days, max storage 0 (unlimited). Bucket `perelai-db-backups`: public access disabled; first dump 5.34 MB on 15 Oct 2026. EU jurisdiction is owner-attested; the screenshots do not show the bucket location. Daily execution and a restore drill still need evidence |
-| File storage | **CORRECTED:** production uses `FILE_STORAGE_DRIVER=r2` (company-cleanup runbooks) with buckets `beauty-finance-public` (public images, e.g. COMPANY_AVATAR object of 06 Aug 2026 in screenshot) and `beauty-finance-private`; EU jurisdiction owner-attested. Files are not on Hetzner and are not backed up; some legacy LOCAL avatars are missing (OPS2 runbook). Confirm `beauty-finance-private` public access is disabled |
+| Database backups | **CONFIGURED (screenshots 2026-10-15/17):** Coolify backup S3 storage = Cloudflare R2, local copy kept; retention local 3 backups / 10 days, S3 7 backups / 7 days, max storage 0 (unlimited). First dump 5.34 MB on 15 Oct 2026. `Public Access: Disabled` confirmed (screenshots below). **2026-10-19 (owner-reported):** bucket recreated as `perelai-db-backups` with **Specify jurisdiction: European Union (EU)** — no files needed preserving; old dumps dropped, local server copies unchanged. **Owner-confirmed 2026-10-19:** Coolify Backup → Executions shows successful daily runs since ~15 Oct; consecutive dump names/dates in the bucket; a local restore drill was performed (no prod touch). Coolify S3 connection updated to the `…eu.r2.cloudflarestorage.com` endpoint (owner-confirmed 2026-10-19) |
+| File storage | **CORRECTED:** production uses `FILE_STORAGE_DRIVER=r2` (company-cleanup runbooks) with `beauty-finance-public` and `beauty-finance-private`. **2026-10-19 (owner-reported):** both buckets recreated with **Specify jurisdiction: EU** under the same names; `media.perelai.app` custom domain reattached to the public bucket; private bucket Public Access: Disabled. Objects were not preserved (no active companies' files). App `R2_ENDPOINT` updated to `…eu.r2…` (owner-confirmed 2026-10-19). Files are not on Hetzner and are not backed up; some legacy LOCAL avatars are missing (OPS2 runbook) |
 | Owner-attested, no artefact supplied | Zoho DPA accepted; Docker log rotation ≤90 days; recurring cleanup (≤30 days) and inactive-workspace review scheduled; delivery to support@perelai.app verified |
 | Procedures in repo | `beauty-finance/docs/runbooks/`: privacy-incident-response, privacy-request-response, production_data_retention_runbook, company-cleanup-coolify-mvp. The incident and request checklists say "preparation only": record the accountable operator/backup and a tabletop privately |
-| Still open | TEAM-RELEASE before the STUDIO trial/plan goes live (otherwise new Terms version); restore drill; switch `CURRENT_TEMPLATES` to v2 on/after 2026-11-01 and republish affected salon notices; deploy landing `.2` together with app `LEGAL_*_VERSION=2026-11-01.2` |
+| Deployment | **DONE 2026-10-19:** landing `.2` deployed; API/Web `LEGAL_*_VERSION=2026-11-01.2`; all seven `https://perelai.com/legal/*` verified live — HTTP 200, version `2026-11-01.2`, effective 2026-11-01, no `[TBD]`, no superseded EDR number |
+| Still open | TEAM-RELEASE before the STUDIO trial/plan goes live (otherwise new Terms version — `NEXT_PUBLIC_TEAM_RELEASED` stays off); switch `CURRENT_TEMPLATES` to v2 on/after 2026-11-01 (API code + deploy). No affected-salon republication task |
+| Published notices (owner-confirmed 2026-10-19) | Only test Companies and one active account whose Company is being relocated under handoff 34; the owner explicitly confirms that the sole real Company has no active published notice. Published-notice inventory is resolved by this confirmation: no affected publications, mass migration, republication or repeat notice confirmation. Retain the relocation/destination-market checks and the ordinary first preview/confirmation/publication when a notice is first published. No earlier v2 release is needed |
+
+### Screenshot evidence — 2026-10-19
+
+The four supplied PNGs were opened and inspected locally; the hashes below identify the source
+files. This is screenshot evidence of the displayed settings, not a live Cloudflare account/API audit.
+
+| Source | Displayed evidence | SHA-256 |
+|---|---|---|
+| [12.14.54](</Users/valery/Desktop/Perelai/Screenshot 2026-10-19 at 12.14.54.png>) | `beauty-finance-private`: `Public Access: Disabled` | `c3b78835a3bb6521dda71048ea9fa60cf702b09080457dfd1eacb3fd1eea4a65` |
+| [12.14.46](</Users/valery/Desktop/Perelai/Screenshot 2026-10-19 at 12.14.46.png>) | `perelai-db-backups`: `Public Access: Disabled` | `84919b76ed208fb07f63c04e2d7bfdfa822479841203588c2bdcdce3b3a25aa5` |
+| [12.14.09](</Users/valery/Desktop/Perelai/Screenshot 2026-10-19 at 12.14.09.png>) | `perelai-db-backups`: created Oct 15, 2026; `Location: Eastern Europe (EUR)` | `26ab351def6332f6a1613f1b09488aa26cacf8de3425f430d46b1136e471341d` |
+| [12.13.59](</Users/valery/Desktop/Perelai/Screenshot 2026-10-19 at 12.13.59.png>) | `beauty-finance-public`: created Aug 6, 2026; `Location: Eastern Europe (EUR)` | `730769394b37a7f6d368f46de95edd4acdb2282a9b35c1a7ac16164cb37d5703` |
+
+Public-access configuration for the private and backup buckets is confirmed by these screenshots;
+do not keep requesting the same missing-setting evidence. They do not show the private bucket's
+location, an explicit `eu` jurisdiction restriction, daily backup runs or a successful restore.
+Cloudflare distinguishes regional location hints from jurisdictional restrictions in its
+[R2 data-location documentation](https://developers.cloudflare.com/r2/reference/data-location/).
 
 **Review corrections — 2026-10-19:** Privacy §4 and DPA Schedule 2 now state the actual
 upload behaviour: Company logos/covers and performer avatars are public by direct URL immediately
@@ -27,11 +47,12 @@ version change, `.1` evidence alone does not satisfy creation of a new workspace
 by itself classify every Privacy/DPA change as immaterial.
 
 Before release, verify EU **jurisdiction** for each file/backup bucket (a location hint is insufficient),
-disabled public access to private files/backups, daily backup execution and a restore drill. These
-remain unverified here. Inventory currently published salon notices and arrange a timely correction
-for affected v1 publications under [plan 31](31_booking_notice_v2_cloudflare_backups_20260927.md);
-waiting for v2's future date alone does not correct inaccurate live disclosures. Coordinate landing,
-API and Web deployment. The production purchase legal package remains DRAFT.
+daily backup execution and a restore drill. The 2026-10-19 screenshots confirm disabled public access
+for private files/backups and the two displayed bucket locations, as recorded above. The owner has
+resolved the published-notice inventory: there are no existing publications to correct or republish.
+Release the v2 defaults under [plan 31](31_booking_notice_v2_cloudflare_backups_20260927.md) for first
+publications from 2026-11-01. Coordinate landing, API and Web deployment. The production purchase
+legal package remains DRAFT.
 
 **Owner scope decision — 2026-10-12:** simplify launch to one global hold list:
 `aesthetic_clinic`, `advanced_skincare`, `massage`, `spa`, `personal_trainer`, `yoga_instructor`;
