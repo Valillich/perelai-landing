@@ -37,6 +37,13 @@
     "trialMicro": "21 días sin tarjeta bancaria.",
     "billingMicro": "Después de la prueba gratuita, elige una suscripción para cada negocio en Perelai. La moneda y los impuestos se muestran antes de pagar."
   },
+  "googleAccess": {
+    "title": "Inicio de sesión con Google e importación opcional de Calendar",
+    "signIn": "Inicia sesión en tu cuenta de Perelai con Google usando los datos básicos de tu perfil y tu correo electrónico.",
+    "calendar": "Si quieres, conecta Google Calendar para importar eventos del calendario que elijas a tu agenda de Perelai. El acceso es de solo lectura: Perelai no modifica ni elimina tus eventos de Google.",
+    "availability": "La importación de Calendar está en pruebas y aún no está disponible para todos los usuarios. Puedes usar Perelai sin conectar Google Calendar.",
+    "privacyLink": "Cómo usamos los datos de Google — Aviso de privacidad"
+  },
   "operations": {
     "title": "De la cita a la sesión completada.",
     "body": "Apunta al cliente, atiende la visita y después registra el cobro o aplica un paquete. Lo que requiera una decisión se queda en tu Buzón."

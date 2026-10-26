@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl"
 import { Reveal } from "@/components/landing/reveal"
+import { GoogleDataAccess } from "./google-data-access"
 import { MockInboxTriage } from "@/components/mock/MockInboxTriage"
 import { APP_SCREEN_REFERENCE } from "@/lib/app-screen-mock"
 import { buildMockDataset } from "@/lib/mock-data"
@@ -21,7 +22,7 @@ export function Operations({ locale }: { locale: PublishedLocale }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <Reveal>
+            <Reveal fade={false}>
               <h2 className="mb-6 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 {t("operations.title")}
               </h2>
@@ -35,6 +36,7 @@ export function Operations({ locale }: { locale: PublishedLocale }) {
             </div>
           </Reveal>
         </div>
+        <GoogleDataAccess locale={locale} />
       </div>
     </section>
   )

@@ -21,13 +21,13 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Text */}
           <div className="lg:col-span-7">
-            <Reveal>
+            <Reveal fade={false}>
               <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.08em] text-muted-foreground sm:text-[14px]">
                 {t("hero.eyebrow")}
               </p>
             </Reveal>
 
-            <Reveal delay={0.04}>
+            <Reveal delay={0.04} fade={false}>
               <h1 className="text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[56px]">
                 {t("hero.title")}{" "}
                 <div className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">
@@ -36,13 +36,13 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
               </h1>
             </Reveal>
 
-            <Reveal delay={0.08}>
+            <Reveal delay={0.08} fade={false}>
               <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]">
                 {t("hero.body")}
               </p>
             </Reveal>
 
-            <Reveal delay={0.16}>
+            <Reveal delay={0.16} fade={false}>
               <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                 <CtaButton
                   destination="signup"
@@ -63,7 +63,7 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
               </div>
             </Reveal>
 
-            <Reveal delay={0.24}>
+            <Reveal delay={0.24} fade={false}>
               <p className="mt-4 text-[13px] text-subtle-text">
                 {t("hero.trialMicro")}
               </p>

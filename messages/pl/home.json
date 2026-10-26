@@ -37,6 +37,13 @@
     "trialMicro": "21 dni bez karty płatniczej.",
     "billingMicro": "Po bezpłatnym okresie próbnym wybierz subskrypcję dla każdej firmy w Perelai. Waluta i podatki są pokazane przed płatnością."
   },
+  "googleAccess": {
+    "title": "Logowanie przez Google i opcjonalny import z Kalendarza",
+    "signIn": "Loguj się na konto Perelai przez Google, korzystając z podstawowych danych profilu i adresu e-mail.",
+    "calendar": "Opcjonalnie połącz Kalendarz Google, aby importować wydarzenia z wybranego kalendarza do swojego harmonogramu w Perelai. Dostęp jest tylko do odczytu: Perelai nie zmienia ani nie usuwa Twoich wydarzeń w Google.",
+    "availability": "Import z Kalendarza jest obecnie testowany i nie jest jeszcze ogólnie dostępny. Z Perelai można korzystać bez łączenia Kalendarza Google.",
+    "privacyLink": "Jak wykorzystujemy dane Google — Informacja o prywatności"
+  },
   "operations": {
     "title": "Od zapisu do zrealizowanej wizyty.",
     "body": "Zapisz klienta, zrealizuj wizytę, a następnie zarejestruj płatność lub wykorzystaj pakiet. Sprawy wymagające decyzji czekają w Skrzynce."

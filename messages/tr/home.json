@@ -37,6 +37,13 @@
     "trialMicro": "Banka kartı olmadan 21 gün.",
     "billingMicro": "Ücretsiz denemeden sonra Perelai’deki her işletme için abonelik seçin. Para birimi ve vergiler ödemeden önce gösterilir."
   },
+  "googleAccess": {
+    "title": "Google ile giriş ve isteğe bağlı Takvim aktarımı",
+    "signIn": "Temel profil bilgileriniz ve e-posta adresinizle Google üzerinden Perelai hesabınıza giriş yapın.",
+    "calendar": "İsterseniz seçtiğiniz takvimdeki etkinlikleri Perelai programınıza aktarmak için Google Takvim’i bağlayın. Erişim salt okunurdur: Perelai, Google etkinliklerinizi değiştirmez veya silmez.",
+    "availability": "Takvim aktarımı şu anda test aşamasındadır ve henüz tüm kullanıcılara açık değildir. Perelai’yi Google Takvim’i bağlamadan kullanabilirsiniz.",
+    "privacyLink": "Google verilerini nasıl kullanıyoruz — Gizlilik Bildirimi"
+  },
   "operations": {
     "title": "Randevudan tamamlanan ziyarete.",
     "body": "Müşteriyi kaydedin, ziyareti gerçekleştirin, ardından ödemeyi işleyin veya paket kullanın. Karar bekleyen işlemler Gelen Kutunuzda kalır."

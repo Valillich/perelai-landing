@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-26",
+  "publishedBaseline": {
+    "url": "https://perelai.com/",
+    "anonymousStatus": 200,
+    "anonymousRedirects": 0,
+    "googlebotStatus": 200,
+    "googlebotRedirects": 0,
+    "ruFinalUrl": "https://perelai.com/ru",
+    "ruRedirects": 1,
+    "passwordFormPresent": false,
+    "sha256": "3aeeba4ddbc80a0d8c9f7f70f0933a42b3ea4dd028918f24299775c16b62a4c0"
+  },
+  "localUpdatedHtml": {
+    "url": "http://127.0.0.1:3002/ru",
+    "sha256": "7f562294b8a6850a656204577deab3c2940e73249ccd6748f77862444bac8e49",
+    "serverRenderedPurposeAndGoogleText": [
+      {
+        "text": "Планируйте визиты, ведите историю клиентов и отмечайте оплаты.",
+        "hiddenAncestor": false
+      },
+      {
+        "text": "Входите в аккаунт Perelai через Google с помощью основных данных профиля и адреса электронной почты.",
+        "hiddenAncestor": false
+      },
+      {
+        "text": "При желании подключите Google Календарь, чтобы импортировать события из выбранного календаря в расписание Perelai. Доступ — только для чтения: Perelai не изменяет и не удаляет ваши события в Google.",
+        "hiddenAncestor": false
+      }
+    ]
+  },
+  "screenshots": [
+    "ru-desktop.jpg",
+    "ru-mobile.jpg",
+    "de-mobile.jpg",
+    "public-home-before.jpg"
+  ],
+  "deployment": "NOT_DEPLOYED — owner requested ready commit only",
+  "googleReview": "NOT_SUBMITTED; no approval claimed"
+}

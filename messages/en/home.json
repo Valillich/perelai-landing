@@ -69,6 +69,13 @@
     "title": "See what each payment was for.",
     "body": "Payment records stay connected to the client visits or orders they relate to. Package use stays separate from new money received."
   },
+  "googleAccess": {
+    "title": "Google sign-in and optional Calendar import",
+    "signIn": "Sign in with Google using your basic profile and email address to access your Perelai account.",
+    "calendar": "Optionally connect Google Calendar to import events from your selected calendar into your Perelai schedule. Calendar access is read-only: Perelai never changes or deletes your Google events.",
+    "availability": "Calendar import is currently in testing and is not yet generally available. You can use Perelai without connecting Google Calendar.",
+    "privacyLink": "How we use Google data — Privacy Notice"
+  },
   "operations": {
     "title": "From appointment to completed visit.",
     "body": "Schedule the client, complete the visit, then record a payment or apply a package. Items needing a decision stay in your Inbox."
