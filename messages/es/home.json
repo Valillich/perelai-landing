@@ -259,6 +259,16 @@
       "finance": "Ingresos, gastos y beneficio",
       "breakdown": "Análisis de ingresos",
       "devices": "En cualquier dispositivo"
+    },
+    "shortTopics": {
+      "booking": "Reservas",
+      "google": "Google",
+      "payments": "Pagos",
+      "cash": "Caja",
+      "team": "Equipo",
+      "finance": "Finanzas",
+      "breakdown": "Análisis",
+      "devices": "Dispositivos"
     }
   }
 }

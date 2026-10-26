@@ -259,6 +259,16 @@
       "finance": "Receita, despesas e lucro",
       "breakdown": "Análise da receita",
       "devices": "Em qualquer dispositivo"
+    },
+    "shortTopics": {
+      "booking": "Agenda",
+      "google": "Google",
+      "payments": "Pagamentos",
+      "cash": "Caixa",
+      "team": "Equipe",
+      "finance": "Finanças",
+      "breakdown": "Análise",
+      "devices": "Dispositivos"
     }
   }
 }

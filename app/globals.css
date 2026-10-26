@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+/* Reserve a side column only when it fits beside the existing 72rem content. */
+@custom-variant feature-side (@media (min-width: 96rem) and (min-height: 36rem));
 
 :root {
   --background: #ffffff;
@@ -123,10 +125,6 @@ html {
   /* The header is sticky (12px margin + ~58px pill), so an anchor target would
      otherwise come to rest underneath it. */
   scroll-padding-top: 6rem;
-}
-
-.feature-navigator {
-  bottom: max(1rem, env(safe-area-inset-bottom));
 }
 
 /* Anchor navigation respects the reader's reduced-motion preference too. */

@@ -259,6 +259,16 @@
       "finance": "Revenue, expenses & profit",
       "breakdown": "Revenue breakdown",
       "devices": "On any device"
+    },
+    "shortTopics": {
+      "booking": "Booking",
+      "google": "Google",
+      "payments": "Payments",
+      "cash": "Cash",
+      "team": "Team",
+      "finance": "Finances",
+      "breakdown": "Breakdown",
+      "devices": "Devices"
     }
   }
 }

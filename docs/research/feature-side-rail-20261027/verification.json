@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-27",
+  "variant": "Global dropdown + sticky side rail + compact pill",
+  "committed": false,
+  "tests": { "files": 6, "passed": 145 },
+  "typescript": "passed",
+  "eslint": "passed",
+  "detectorFindings": [],
+  "sideRailMedia": { "minWidthRem": 96, "minHeightRem": 36 },
+  "desktop1536": {
+    "viewport": [1536, 900],
+    "gridColumns": [184.5, 1152, 184.5],
+    "contentBounds": [184.5, 1336.5],
+    "railBounds": [1352.5, 1505],
+    "railWidth": 152.5,
+    "railHeight": 352,
+    "railTop": 102,
+    "position": "sticky",
+    "darkThemeChecked": true
+  },
+  "desktop1920": { "viewport": [1920, 1080], "contentWidth": 1152, "checkedViaDom": true },
+  "laptop": { "viewport": [1440, 900], "position": "fixed", "pillWidth": 384, "pillHeight": 54 },
+  "shortViewport": { "viewport": [1536, 500], "position": "fixed", "pillHeight": 54, "gridDisplay": "block" },
+  "mobile390": { "viewport": [390, 844], "pillHeight": 54, "dotTargetWidth": 33.625 },
+  "mobile320": {
+    "viewport": [320, 740],
+    "locale": "de",
+    "pillHeight": 54,
+    "dotTargetWidth": 24.875,
+    "documentScrollWidth": 310,
+    "documentClientWidth": 305,
+    "navigationFits": true,
+    "wholePageNoOverflowCertified": false
+  },
+  "featureZoneEnd": {
+    "at": "#how",
+    "zoneBottom": 96.125,
+    "railTop": -247.875,
+    "railBottomIncludingExitTranslation": 104.125,
+    "dataVisible": false,
+    "inert": true
+  },
+  "globalNavigation": {
+    "testedContexts": ["Home", "Pricing", "Install", "niche page"],
+    "testedLocalesInSsr": 9,
+    "destinationsPerDisclosure": 8,
+    "pricingCashLink": "/ru#cash-reconciliation",
+    "installTeamLink": "/ru#team-access",
+    "nicheTeamLink": "/ru#team-access",
+    "escapeClosesDesktopDisclosure": true,
+    "mobileSelectionClosesMenu": true
+  },
+  "review": { "disposition": "ship", "scope": "navigation only", "materialFixes": [] },
+  "captures": {
+    "ru-desktop-1536.png": [1516, 891],
+    "ru-desktop-dark.png": [1516, 891],
+    "ru-laptop-pill.png": [1425, 891],
+    "ru-mobile.png": [375, 812],
+    "de-mobile-320.png": [305, 705],
+    "pricing-dropdown.png": [1265, 791]
+  },
+  "captureNote": "Unedited CUA snapshots; pixel dimensions differ from requested browser viewport dimensions."
+}

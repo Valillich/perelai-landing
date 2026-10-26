@@ -233,6 +233,16 @@
       "finance": "Выручка, расходы и прибыль",
       "breakdown": "Разбор выручки",
       "devices": "На любом устройстве"
+    },
+    "shortTopics": {
+      "booking": "Запись",
+      "google": "Google",
+      "payments": "Оплаты",
+      "cash": "Касса",
+      "team": "Команда",
+      "finance": "Финансы",
+      "breakdown": "Разбор",
+      "devices": "Устройства"
     }
   }
 }

@@ -259,6 +259,16 @@
       "finance": "Gelir, gider ve kâr",
       "breakdown": "Gelir analizi",
       "devices": "Her cihazda"
+    },
+    "shortTopics": {
+      "booking": "Randevular",
+      "google": "Google",
+      "payments": "Ödemeler",
+      "cash": "Kasa",
+      "team": "Ekip",
+      "finance": "Finans",
+      "breakdown": "Analiz",
+      "devices": "Cihazlar"
     }
   }
 }

@@ -23,17 +23,21 @@ export function Homepage({ locale }: { locale: PublishedLocale }) {
     <main className="flex min-h-screen flex-col bg-background text-foreground">
       <PageViewTracker landingPath="/" locale={locale} pageType="home" />
       <LandingHeader locale={locale} sectionAnchors />
-      <FeatureNavigator />
       <div className="flex-1">
         <Hero locale={locale} />
-        <Operations locale={locale} />
-        <ConnectedRecords locale={locale} />
-        <CashReconciliation />
-        <Collaboration locale={locale} />
-        <FinanceOverview locale={locale} />
-        <FinancialStates />
-        <Drivers locale={locale} />
-        <Devices locale={locale} />
+        <div data-feature-zone className="relative feature-side:grid feature-side:grid-cols-[minmax(0,1fr)_minmax(0,72rem)_minmax(0,1fr)]">
+          <FeatureNavigator />
+          <div data-feature-content className="min-w-0 feature-side:col-start-2 feature-side:row-start-1">
+            <Operations locale={locale} />
+            <ConnectedRecords locale={locale} />
+            <CashReconciliation />
+            <Collaboration locale={locale} />
+            <FinanceOverview locale={locale} />
+            <FinancialStates />
+            <Drivers locale={locale} />
+            <Devices locale={locale} />
+          </div>
+        </div>
         <Setup />
         <Not />
         <NicheRouter />

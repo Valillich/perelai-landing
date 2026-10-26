@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-27",
+  "variant": "A — Progress Rail",
+  "committed": false,
+  "detectorFindings": [],
+  "tests": { "files": 5, "passed": 136 },
+  "checks": { "typescript": "passed", "eslint": "passed" },
+  "desktop": {
+    "requestedViewport": [1440, 900],
+    "snapshotPixels": [1425, 891],
+    "position": "sticky",
+    "headerHeight": 71,
+    "railHeight": 48,
+    "railBottom": 119,
+    "cashAnchorTop": 152.125,
+    "ordinaryScrollSegmentSamples": [0.1963956584067172, 0.5502764693835757],
+    "darkThemeChecked": true
+  },
+  "mobile": {
+    "requestedViewport": [390, 844],
+    "snapshotPixels": [375, 812],
+    "railHeight": 40,
+    "nodeCount": 8,
+    "nodeTargetWidth": 42.875,
+    "rootHorizontalOverflow": false,
+    "googleAnchorTop": 151.75,
+    "featuresLinkClosesMenu": true
+  },
+  "narrowMobile": {
+    "locale": "de",
+    "requestedViewport": [320, 740],
+    "snapshotPixels": [305, 705],
+    "nodeTargetWidth": 34.125,
+    "documentScrollWidth": 305,
+    "documentClientWidth": 305,
+    "bodyScrollWidth": 305,
+    "rootHorizontalOverflow": false
+  },
+  "beforeFeatures": { "dataVisible": false, "ariaHidden": true, "inert": true },
+  "afterFeaturesAtFaq": { "dataVisible": false, "ariaHidden": true, "inert": true },
+  "keyboard": { "tabMovesToNextTopic": true, "enterUsesNativeAnchor": true },
+  "review": { "scope": "feature navigation only", "disposition": "ship", "materialFixes": [] },
+  "snapshotNote": "Unedited CUA screenshots; snapshot pixel dimensions differ from requested browser viewport dimensions."
+}

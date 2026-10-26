@@ -259,6 +259,16 @@
       "finance": "Przychody, koszty i zysk",
       "breakdown": "Analiza przychodów",
       "devices": "Na każdym urządzeniu"
+    },
+    "shortTopics": {
+      "booking": "Rezerwacje",
+      "google": "Google",
+      "payments": "Płatności",
+      "cash": "Kasa",
+      "team": "Zespół",
+      "finance": "Finanse",
+      "breakdown": "Analiza",
+      "devices": "Urządzenia"
     }
   }
 }

@@ -259,6 +259,16 @@
       "finance": "Umsatz, Ausgaben und Gewinn",
       "breakdown": "Umsatzanalyse",
       "devices": "Auf jedem Gerät"
+    },
+    "shortTopics": {
+      "booking": "Buchungen",
+      "google": "Google",
+      "payments": "Zahlungen",
+      "cash": "Kasse",
+      "team": "Team",
+      "finance": "Finanzen",
+      "breakdown": "Analyse",
+      "devices": "Geräte"
     }
   }
 }

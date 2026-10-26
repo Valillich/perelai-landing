@@ -1,6 +1,11 @@
 import { readFileSync } from "node:fs"
+import { createElement } from "react"
+import { renderToStaticMarkup } from "react-dom/server"
+import { NextIntlClientProvider } from "next-intl"
 import { describe, expect, it } from "vitest"
-import { FEATURE_TOPICS, currentFeatureIndex, featureHref } from "@/lib/feature-navigation"
+import { FEATURE_TOPICS, currentFeatureIndex, featureHref, featureSegmentProgress } from "@/lib/feature-navigation"
+import { FeatureNavigator } from "@/components/homepage/feature-navigator"
+import { messagesByLocale } from "@/i18n/messages"
 import { PUBLISHED_LOCALES } from "@/i18n/locales"
 import { localizePath } from "@/i18n/paths"
 
@@ -25,8 +30,11 @@ describe("feature navigation", () => {
 
   it.each(PUBLISHED_LOCALES)("has native labels for every topic and control in %s", locale => {
     const copy = JSON.parse(readFileSync(`messages/${locale}/home.json`, "utf8")).featureNav
-    for (const key of ["label", "contents", "previous", "next"]) expect(copy[key]).toBeTruthy()
-    for (const topic of FEATURE_TOPICS) expect(copy.topics[topic.key]).toBeTruthy()
+    expect(copy.label).toBeTruthy()
+    for (const topic of FEATURE_TOPICS) {
+      expect(copy.topics[topic.key]).toBeTruthy()
+      expect(copy.shortTopics[topic.key]).toBeTruthy()
+    }
   })
 
   it("maps every topic to a real, unique anchor in page order", () => {
@@ -35,5 +43,41 @@ describe("feature navigation", () => {
     FEATURE_TOPICS.forEach((topic, index) => {
       expect(readFileSync(`components/homepage/${files[index]}.tsx`, "utf8")).toContain(`id="${topic.id}"`)
     })
+  })
+
+  it.each(PUBLISHED_LOCALES)("labels all eight dot links with full feature names in %s", locale => {
+    const html = renderToStaticMarkup(createElement(NextIntlClientProvider, {
+      locale, messages: messagesByLocale[locale], timeZone: "UTC",
+      children: createElement(FeatureNavigator),
+    }))
+    for (const topic of FEATURE_TOPICS) {
+      const fullLabel = messagesByLocale[locale].home.featureNav.topics[topic.key]
+      const escapedLabel = renderToStaticMarkup(createElement("span", null, fullLabel)).slice(6, -7)
+      // Both responsive presentations retain the full accessible feature name.
+      expect(html.split(`href="#${topic.id}" aria-label="${escapedLabel}"`)).toHaveLength(3)
+    }
+    // Before hydration the passive rail cannot introduce invisible tab stops.
+    expect(html).toContain('aria-hidden="true" inert=""')
+  })
+
+  it("fills continuously between anchors, including Calendar nested inside Operations", () => {
+    const bookingTop = 1000
+    const calendarTop = 1600
+    const paymentsTop = 2000
+    expect(featureSegmentProgress(bookingTop, calendarTop, 900)).toBe(0)
+    expect(featureSegmentProgress(bookingTop, calendarTop, 1000)).toBe(0)
+    expect(featureSegmentProgress(bookingTop, calendarTop, 1150)).toBe(0.25)
+    expect(featureSegmentProgress(bookingTop, calendarTop, 1300)).toBe(0.5)
+    expect(featureSegmentProgress(bookingTop, calendarTop, 1600)).toBe(1)
+    expect(featureSegmentProgress(bookingTop, calendarTop, 1700)).toBe(1)
+    expect(featureSegmentProgress(calendarTop, paymentsTop, 1700)).toBe(0.25)
+    expect(featureSegmentProgress(calendarTop, paymentsTop, 1900)).toBe(0.75)
+  })
+
+  it("rewinds progress and safely handles collapsed sections", () => {
+    expect(featureSegmentProgress(-100, 300, 200)).toBe(0.75)
+    expect(featureSegmentProgress(100, 500, 200)).toBe(0.25)
+    expect(featureSegmentProgress(100, 100, 99)).toBe(0)
+    expect(featureSegmentProgress(100, 100, 100)).toBe(1)
   })
 })

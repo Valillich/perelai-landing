@@ -25,3 +25,9 @@ export function currentFeatureIndex(tops: number[], readingLine: number) {
   }
   return index
 }
+
+/** Use successive anchors: Google Calendar is nested inside #features. */
+export function featureSegmentProgress(top: number, nextTop: number, readingLine: number) {
+  if (nextTop <= top) return readingLine >= nextTop ? 1 : 0
+  return Math.min(1, Math.max(0, (readingLine - top) / (nextTop - top)))
+}

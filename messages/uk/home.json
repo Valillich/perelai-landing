@@ -259,6 +259,16 @@
       "finance": "Виторг, витрати та прибуток",
       "breakdown": "Аналіз виторгу",
       "devices": "На будь-якому пристрої"
+    },
+    "shortTopics": {
+      "booking": "Запис",
+      "google": "Google",
+      "payments": "Оплати",
+      "cash": "Каса",
+      "team": "Команда",
+      "finance": "Фінанси",
+      "breakdown": "Аналіз",
+      "devices": "Пристрої"
     }
   }
 }

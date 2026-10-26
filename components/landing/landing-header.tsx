@@ -46,7 +46,6 @@ export function LandingHeader({
 
   const isPricing = canonicalPath === "/pricing"
   const isInstall = canonicalPath === "/install"
-
   const featureItems = FEATURE_TOPICS.map(topic => ({
     href: featureHref(locale, canonicalPath, topic.id),
     label: tFeatures(topic.key),
@@ -62,7 +61,7 @@ export function LandingHeader({
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header data-landing-header className="sticky top-0 z-50 w-full">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mt-3 flex items-center justify-between gap-3 rounded-full border border-border bg-background/70 px-4 py-2.5 shadow-[0_6px_20px_rgba(16,24,40,0.06)] backdrop-blur-xl sm:px-5">
           {/* Logo — never compresses, or a long localized CTA overlaps the wordmark. */}
@@ -77,7 +76,7 @@ export function LandingHeader({
             <span className="text-[17px] font-semibold tracking-tight text-foreground">Perelai</span>
           </Link>
 
-          {/* Feature destinations are shared with the mobile disclosure. */}
+          {/* Global feature destinations are shared with the mobile disclosure. */}
           <nav aria-label={t("primaryLabel")} className="hidden items-center gap-6 lg:flex">
             <FeatureMenu label={t("features")} items={featureItems} />
             {navItems.map((item) => {
