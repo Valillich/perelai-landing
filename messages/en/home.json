@@ -73,7 +73,8 @@
     "title": "Google sign-in and optional Calendar import",
     "signIn": "Sign in with Google using your basic profile and email address to access your Perelai account.",
     "calendar": "Optionally connect Google Calendar to import events from your selected calendar into your Perelai schedule. Calendar access is read-only: Perelai never changes or deletes your Google events.",
-    "availability": "Calendar import is currently in testing and is not yet generally available. You can use Perelai without connecting Google Calendar.",
+    "availability": "Calendar import is currently in testing and is not yet generally available.",
+    "optional": "You can use Perelai without connecting Google Calendar.",
     "privacyLink": "How we use Google data — Privacy Notice"
   },
   "operations": {

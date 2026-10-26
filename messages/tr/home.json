@@ -41,7 +41,8 @@
     "title": "Google ile giriş ve isteğe bağlı Takvim aktarımı",
     "signIn": "Temel profil bilgileriniz ve e-posta adresinizle Google üzerinden Perelai hesabınıza giriş yapın.",
     "calendar": "İsterseniz seçtiğiniz takvimdeki etkinlikleri Perelai programınıza aktarmak için Google Takvim’i bağlayın. Erişim salt okunurdur: Perelai, Google etkinliklerinizi değiştirmez veya silmez.",
-    "availability": "Takvim aktarımı şu anda test aşamasındadır ve henüz tüm kullanıcılara açık değildir. Perelai’yi Google Takvim’i bağlamadan kullanabilirsiniz.",
+    "availability": "Takvim aktarımı şu anda test aşamasındadır ve henüz tüm kullanıcılara açık değildir.",
+    "optional": "Perelai’yi Google Takvim’i bağlamadan kullanabilirsiniz.",
     "privacyLink": "Google verilerini nasıl kullanıyoruz — Gizlilik Bildirimi"
   },
   "operations": {

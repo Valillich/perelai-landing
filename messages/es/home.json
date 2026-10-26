@@ -41,7 +41,8 @@
     "title": "Inicio de sesión con Google e importación opcional de Calendar",
     "signIn": "Inicia sesión en tu cuenta de Perelai con Google usando los datos básicos de tu perfil y tu correo electrónico.",
     "calendar": "Si quieres, conecta Google Calendar para importar eventos del calendario que elijas a tu agenda de Perelai. El acceso es de solo lectura: Perelai no modifica ni elimina tus eventos de Google.",
-    "availability": "La importación de Calendar está en pruebas y aún no está disponible para todos los usuarios. Puedes usar Perelai sin conectar Google Calendar.",
+    "availability": "La importación de Calendar está en pruebas y aún no está disponible para todos los usuarios.",
+    "optional": "Puedes usar Perelai sin conectar Google Calendar.",
     "privacyLink": "Cómo usamos los datos de Google — Aviso de privacidad"
   },
   "operations": {

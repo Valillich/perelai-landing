@@ -41,7 +41,8 @@
     "title": "Google-Anmeldung und optionaler Kalenderimport",
     "signIn": "Melden Sie sich mit Google bei Ihrem Perelai-Konto an. Dafür werden Ihre grundlegenden Profildaten und Ihre E-Mail-Adresse verwendet.",
     "calendar": "Optional können Sie Google Kalender verbinden, um Termine aus Ihrem ausgewählten Kalender in Ihren Perelai-Zeitplan zu importieren. Der Zugriff ist schreibgeschützt: Perelai ändert oder löscht keine Ihrer Google-Termine.",
-    "availability": "Der Kalenderimport wird derzeit getestet und ist noch nicht allgemein verfügbar. Sie können Perelai ohne Verbindung zu Google Kalender nutzen.",
+    "availability": "Der Kalenderimport wird derzeit getestet und ist noch nicht allgemein verfügbar.",
+    "optional": "Sie können Perelai ohne Verbindung zu Google Kalender nutzen.",
     "privacyLink": "So verwenden wir Google-Daten — Datenschutzhinweis"
   },
   "operations": {

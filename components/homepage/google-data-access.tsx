@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { isGoogleCalendarReleased } from "@/lib/google-calendar-release"
 import { localizePath } from "@/i18n/paths"
 import type { PublishedLocale } from "@/i18n/locales"
 
@@ -18,7 +19,10 @@ export function GoogleDataAccess({ locale }: { locale: PublishedLocale }) {
         </h3>
         <p className="leading-relaxed text-muted-foreground">{t("signIn")}</p>
         <p className="leading-relaxed text-muted-foreground">{t("calendar")}</p>
-        <p className="text-sm leading-relaxed text-muted-foreground">{t("availability")}</p>
+        {!isGoogleCalendarReleased() && (
+          <p className="text-sm leading-relaxed text-muted-foreground">{t("availability")}</p>
+        )}
+        <p className="text-sm leading-relaxed text-muted-foreground">{t("optional")}</p>
         <a
           href={localizePath(locale, "/legal/privacy")}
           className="inline-flex min-h-11 items-center gap-1.5 font-medium text-brand-600 underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600"

@@ -41,7 +41,8 @@
     "title": "Login com Google e importação opcional do Agenda",
     "signIn": "Entre na sua conta Perelai com o Google usando os dados básicos do seu perfil e seu endereço de e-mail.",
     "calendar": "Se quiser, conecte o Google Agenda para importar eventos do calendário escolhido para sua agenda no Perelai. O acesso é somente para leitura: o Perelai não altera nem exclui seus eventos do Google.",
-    "availability": "A importação do Agenda está em testes e ainda não está disponível para todos os usuários. Você pode usar o Perelai sem conectar o Google Agenda.",
+    "availability": "A importação do Agenda está em testes e ainda não está disponível para todos os usuários.",
+    "optional": "Você pode usar o Perelai sem conectar o Google Agenda.",
     "privacyLink": "Como usamos os dados do Google — Aviso de privacidade"
   },
   "operations": {

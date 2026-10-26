@@ -114,3 +114,16 @@ Privacy-policy finding has been resolved or that Google's approval was received.
 - [Google — App Homepage](https://support.google.com/cloud/answer/13807376?hl=en): publicly accessible
   purpose/features and transparent explanation of requested user data; a visible Privacy link.
 - [Google APIs Terms, §2(b)](https://developers.google.com/terms#b_compliance_with_law_third_party_rights_and_other_google_terms_of_service).
+
+## Calendar publication flag — owner follow-up, 2026-10-26
+
+`NEXT_PUBLIC_GOOGLE_CALENDAR_RELEASED=false` is documented in `.env.example` and set in
+local `.env`. Missing, false or invalid values keep the testing warning visible. Explicit
+`true` removes only the testing sentence after a landing rebuild; the independent sentence
+that Calendar connection is optional remains visible in all nine locales. This controls
+marketing text only and grants no app/OAuth access. Change it in deployment ENV and rebuild
+only when the integration is generally released (provider verification, CS5 and actual rollout).
+
+The existing `NEXT_PUBLIC_PRODUCT_STAGE_ENABLED` flag is independent: unset defaults to true,
+and it controls the Beta badge in app previews (`MockDesktopRail` / `ProductStageBadge`).
+Its behavior/current value was not changed. It is now documented in `.env.example`.
