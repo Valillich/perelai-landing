@@ -12,7 +12,7 @@ export function Collaboration({ locale }: CollaborationProps) {
   const t = useTranslations("home")
 
   return (
-    <section className="relative py-20 sm:py-28 bg-background border-t border-border">
+    <section id="team-access" className="relative py-20 sm:py-28 bg-background border-t border-border">
       <CollaborationSectionTracker locale={locale} />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

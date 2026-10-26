@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl"
 import { CtaButton } from "@/components/cta-button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { MobileNav, type MobileNavItem } from "@/components/landing/mobile-nav"
+import { FeatureMenu } from "@/components/landing/feature-menu"
+import { FEATURE_TOPICS, featureHref } from "@/lib/feature-navigation"
 import { Link } from "@/i18n/navigation"
 import { localizePath } from "@/i18n/paths"
 import type { PublishedLocale } from "@/i18n/locales"
@@ -34,6 +36,7 @@ export function LandingHeader({
   // Reuses the reviewed `/install` label from the devices namespace instead of
   // duplicating it under `home.nav`, so the two can never disagree.
   const tDevices = useTranslations("devices.nav")
+  const tFeatures = useTranslations("home.featureNav.topics")
 
   // Pages without those sections still need reachable nav, so their anchors
   // resolve against the homepage in the reader's own locale.
@@ -44,12 +47,15 @@ export function LandingHeader({
   const isPricing = canonicalPath === "/pricing"
   const isInstall = canonicalPath === "/install"
 
-  // One list for both breakpoints, so the two navs cannot drift apart.
-  // Five entries with the niche menu — inside the 4–7 primary-nav budget.
+  const featureItems = FEATURE_TOPICS.map(topic => ({
+    href: featureHref(locale, canonicalPath, topic.id),
+    label: tFeatures(topic.key),
+  }))
+
+  // Shared destinations for both breakpoints.
   // `/install` sits last: it answers a support question, so it ranks below
   // the pages a visitor uses to decide whether the product fits at all.
   const navItems: MobileNavItem[] = [
-    { href: sectionHref("features"), label: t("features") },
     { href: sectionHref("how"), label: t("how") },
     { href: localizePath(locale, "/pricing"), label: t("pricing"), current: isPricing },
     { href: localizePath(locale, "/install"), label: tDevices("label"), current: isInstall },
@@ -71,9 +77,9 @@ export function LandingHeader({
             <span className="text-[17px] font-semibold tracking-tight text-foreground">Perelai</span>
           </Link>
 
-          {/* Nav links. The niche menu leads: self-identification is the first
-              decision a visitor makes, and it is what the niche pages sell. */}
+          {/* Feature destinations are shared with the mobile disclosure. */}
           <nav aria-label={t("primaryLabel")} className="hidden items-center gap-6 lg:flex">
+            <FeatureMenu label={t("features")} items={featureItems} />
             {navItems.map((item) => {
               const isInstallLink = item.href.includes("/install")
               return (
@@ -135,6 +141,7 @@ export function LandingHeader({
               triggerLabel={t("menuLabel")}
               navLabel={t("primaryLabel")}
               items={navItems}
+              group={{ label: t("features"), items: featureItems }}
             >
               <ThemeToggle />
               <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />

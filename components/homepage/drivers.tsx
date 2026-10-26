@@ -10,7 +10,7 @@ export function Drivers({ locale }: { locale: PublishedLocale }) {
   const totals = getFinanceTotals()
 
   return (
-    <section className="bg-background py-20 sm:py-28">
+    <section id="finance-breakdown" className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">

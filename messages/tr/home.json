@@ -244,5 +244,21 @@
     "body": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin.",
     "caption": "Örnek veriler",
     "detail": "Bir gün, hafta, ay, çeyrek veya yıl için ciroyu, maliyetleri ve hesaplanan kârı inceleyin."
+  },
+  "featureNav": {
+    "label": "Özelliklerde gezinme",
+    "contents": "İçindekiler",
+    "previous": "Önceki özellik",
+    "next": "Sonraki özellik",
+    "topics": {
+      "booking": "Rezervasyonlar ve randevular",
+      "google": "Google Takvim",
+      "payments": "Ödemeler ve paketler",
+      "cash": "Kasa mutabakatı",
+      "team": "Ekip ve erişim",
+      "finance": "Gelir, gider ve kâr",
+      "breakdown": "Gelir analizi",
+      "devices": "Her cihazda"
+    }
   }
 }

@@ -244,5 +244,21 @@
     "cookies": "Cookie Policy",
     "help": "Help",
     "contact": "Contact us"
+  },
+  "featureNav": {
+    "label": "Feature navigation",
+    "contents": "Contents",
+    "previous": "Previous feature",
+    "next": "Next feature",
+    "topics": {
+      "booking": "Booking & visits",
+      "google": "Google Calendar",
+      "payments": "Payments & packages",
+      "cash": "Cash reconciliation",
+      "team": "Team & access",
+      "finance": "Revenue, expenses & profit",
+      "breakdown": "Revenue breakdown",
+      "devices": "On any device"
+    }
   }
 }

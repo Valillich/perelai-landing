@@ -244,5 +244,21 @@
     "body": "Wykonana praca i otrzymane pieniądze są śledzone oddzielnie — dzięki temu liczba jest prawdziwa. Zakończona wizyta to nie przychód, dopóki ktoś nie zapłaci. Perelai ich nie myli.",
     "caption": "Przykładowe dane",
     "detail": "Przychody, koszty i otwarte pozycje — bez arkusza."
+  },
+  "featureNav": {
+    "label": "Nawigacja po funkcjach",
+    "contents": "Spis treści",
+    "previous": "Poprzednia funkcja",
+    "next": "Następna funkcja",
+    "topics": {
+      "booking": "Rezerwacje i wizyty",
+      "google": "Kalendarz Google",
+      "payments": "Płatności i pakiety",
+      "cash": "Zmiana kasowa",
+      "team": "Zespół i dostęp",
+      "finance": "Przychody, koszty i zysk",
+      "breakdown": "Analiza przychodów",
+      "devices": "Na każdym urządzeniu"
+    }
   }
 }

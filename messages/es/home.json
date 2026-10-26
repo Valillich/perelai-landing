@@ -244,5 +244,21 @@
     "body": "Consulta ingresos, costes y beneficio calculado para un día, una semana, un mes, un trimestre o un año.",
     "caption": "Datos de ejemplo",
     "detail": "Consulta ingresos, costes y beneficio calculated para un día, una semana, un mes, un trimestre o un año."
+  },
+  "featureNav": {
+    "label": "Navegación por funciones",
+    "contents": "Contenido",
+    "previous": "Función anterior",
+    "next": "Siguiente función",
+    "topics": {
+      "booking": "Reservas y citas",
+      "google": "Google Calendar",
+      "payments": "Pagos y paquetes",
+      "cash": "Cierre de caja",
+      "team": "Equipo y acceso",
+      "finance": "Ingresos, gastos y beneficio",
+      "breakdown": "Análisis de ingresos",
+      "devices": "En cualquier dispositivo"
+    }
   }
 }

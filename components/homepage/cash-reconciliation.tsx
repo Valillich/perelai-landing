@@ -12,7 +12,7 @@ export function CashReconciliation() {
   const locale = useLocale() as AppLocale
 
   return (
-    <section className="border-t border-border bg-background py-20 sm:py-28">
+    <section id="cash-reconciliation" className="border-t border-border bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-6">

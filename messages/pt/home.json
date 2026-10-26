@@ -244,5 +244,21 @@
     "body": "Veja receita, custos e lucro calculated por dia, semana, mês, trimestre ou ano.",
     "caption": "Dados de exemplo",
     "detail": "Veja receita, custos e lucro calculado por dia, semana, mês, trimestre ou ano."
+  },
+  "featureNav": {
+    "label": "Navegação por recursos",
+    "contents": "Conteúdo",
+    "previous": "Recurso anterior",
+    "next": "Próximo recurso",
+    "topics": {
+      "booking": "Agendamentos e atendimentos",
+      "google": "Google Agenda",
+      "payments": "Pagamentos e pacotes",
+      "cash": "Fechamento de caixa",
+      "team": "Equipe e acesso",
+      "finance": "Receita, despesas e lucro",
+      "breakdown": "Análise da receita",
+      "devices": "Em qualquer dispositivo"
+    }
   }
 }

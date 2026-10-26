@@ -244,5 +244,21 @@
     "body": "Sehen Sie Umsatz, Kosten und berechneten Gewinn für einen Tag, eine Woche, einen Monat, ein Quartal oder ein Jahr.",
     "caption": "Beispieldaten",
     "detail": "Sehen Sie Umsatz, Kosten und berechneten Gewinn für einen Tag, eine Woche, einen Monat, ein Quartal oder ein Jahr."
+  },
+  "featureNav": {
+    "label": "Funktionsnavigation",
+    "contents": "Inhalt",
+    "previous": "Vorherige Funktion",
+    "next": "Nächste Funktion",
+    "topics": {
+      "booking": "Buchungen und Termine",
+      "google": "Google Kalender",
+      "payments": "Zahlungen und Pakete",
+      "cash": "Kassenabgleich",
+      "team": "Team und Zugriffsrechte",
+      "finance": "Umsatz, Ausgaben und Gewinn",
+      "breakdown": "Umsatzanalyse",
+      "devices": "Auf jedem Gerät"
+    }
   }
 }

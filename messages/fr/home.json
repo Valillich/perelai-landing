@@ -244,5 +244,21 @@
     "body": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année.",
     "caption": "Données d'exemple",
     "detail": "Consultez le revenu, les coûts et le profit calculé pour un jour, une semaine, un mois, un trimestre ou une année."
+  },
+  "featureNav": {
+    "label": "Navigation des fonctionnalités",
+    "contents": "Sommaire",
+    "previous": "Fonctionnalité précédente",
+    "next": "Fonctionnalité suivante",
+    "topics": {
+      "booking": "Réservations et rendez-vous",
+      "google": "Google Agenda",
+      "payments": "Paiements et forfaits",
+      "cash": "Clôture de caisse",
+      "team": "Équipe et accès",
+      "finance": "Revenus, dépenses et bénéfice",
+      "breakdown": "Analyse des revenus",
+      "devices": "Sur tous vos appareils"
+    }
   }
 }

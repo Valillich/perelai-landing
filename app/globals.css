@@ -125,6 +125,15 @@ html {
   scroll-padding-top: 6rem;
 }
 
+.feature-navigator {
+  bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+/* Anchor navigation respects the reader's reduced-motion preference too. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
 /* ── App screen mock ────────────────────────────────────────────────────────
    Ports the in-app v2 design system surfaces (calendar-glass-frame,
    card-elevated, card-flat, calendar-title) onto landing tokens so the hero

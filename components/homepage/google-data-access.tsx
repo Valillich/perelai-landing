@@ -10,6 +10,7 @@ export function GoogleDataAccess({ locale }: { locale: PublishedLocale }) {
 
   return (
     <aside
+      id="google-calendar"
       aria-labelledby="google-access-title"
       className="mt-12 rounded-2xl border border-border bg-muted/30 p-6 sm:mt-16 sm:p-8"
     >
