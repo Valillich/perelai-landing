@@ -93,8 +93,8 @@ export function FeatureNavigator() {
       <nav ref={railRef} aria-label={t("label")} aria-hidden={!visible} inert={!visible}
         data-feature-rail data-visible={visible}
         className={cn(
-          "pointer-events-auto fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 mx-auto max-w-sm rounded-full bg-background/90 p-1 shadow-[0_12px_32px_-16px_rgba(15,23,36,0.4)] backdrop-blur-xl transition-[opacity,transform] duration-200 motion-reduce:transition-none dark:shadow-[0_12px_32px_-12px_rgba(0,0,0,0.65)]",
-          "feature-compact:sticky feature-compact:inset-x-auto feature-compact:bottom-auto feature-compact:top-[calc(var(--feature-header-height,5rem)+1.5rem)] feature-compact:mx-0 feature-compact:max-w-40 feature-compact:rounded-none feature-compact:bg-transparent feature-compact:p-0 feature-compact:shadow-none feature-compact:backdrop-blur-none",
+          "pointer-events-auto fixed inset-x-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 mx-auto max-w-sm rounded-full border border-border bg-background/70 p-1 shadow-[0_6px_20px_rgba(16,24,40,0.06)] backdrop-blur-xl transition-[opacity,transform] duration-200 motion-reduce:transition-none",
+          "feature-compact:sticky feature-compact:inset-x-auto feature-compact:bottom-auto feature-compact:top-[calc(var(--feature-header-height,5rem)+1.5rem)] feature-compact:mx-0 feature-compact:max-w-40 feature-compact:rounded-none feature-compact:border-0 feature-compact:bg-transparent feature-compact:p-0 feature-compact:shadow-none feature-compact:backdrop-blur-none",
           visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0",
         )}>
         <ol className="hidden feature-compact:block">
@@ -158,7 +158,7 @@ export function FeatureNavigator() {
         </div>
 
         <div ref={topicsRef} id="feature-topic-list" hidden={!topicsOpen}
-          className="absolute inset-x-0 bottom-[calc(100%+0.75rem)] rounded-2xl bg-background p-2 shadow-[0_16px_40px_-16px_rgba(15,23,36,0.4)] feature-compact:hidden dark:shadow-[0_16px_40px_-12px_rgba(0,0,0,0.7)]">
+          className="absolute inset-x-0 bottom-[calc(100%+0.75rem)] rounded-2xl border border-border bg-background/90 p-2 shadow-[0_16px_40px_-16px_rgba(15,23,36,0.25)] backdrop-blur-xl feature-compact:hidden">
           <ol aria-label={t("contents")} className="max-h-[min(60vh,22rem)] overflow-y-auto overscroll-contain">
             {FEATURE_TOPICS.map((topic, index) => (
               <li key={topic.id}>

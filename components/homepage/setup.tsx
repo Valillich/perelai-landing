@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/landing/reveal";
 
+const STEPS = [1, 2, 3] as const;
+
 export function Setup() {
   const t = useTranslations("home");
 
@@ -13,57 +15,40 @@ export function Setup() {
               {t("setup.eyebrow")}
             </p>
           </Reveal>
-          
-          <Reveal delay={0.1}>
+
+          <Reveal delay={0.04}>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
               {t("setup.title")}
             </h2>
           </Reveal>
-          
-          <Reveal delay={0.2}>
+
+          <Reveal delay={0.08}>
             <p className="text-lg text-muted-foreground">
               {t("setup.body")}
             </p>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Reveal delay={0.3}>
-            <div className="space-y-4">
-              <span className="text-5xl font-bold text-brand-600/20">01</span>
-              <h3 className="text-xl font-semibold text-foreground">
-                {t("setup.step1Title")}
-              </h3>
-              <p className="text-muted-foreground">
-                {t("setup.step1Body")}
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.4}>
-            <div className="space-y-4">
-              <span className="text-5xl font-bold text-brand-600/20">02</span>
-              <h3 className="text-xl font-semibold text-foreground">
-                {t("setup.step2Title")}
-              </h3>
-              <p className="text-muted-foreground">
-                {t("setup.step2Body")}
-              </p>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.5}>
-            <div className="space-y-4">
-              <span className="text-5xl font-bold text-brand-600/20">03</span>
-              <h3 className="text-xl font-semibold text-foreground">
-                {t("setup.step3Title")}
-              </h3>
-              <p className="text-muted-foreground">
-                {t("setup.step3Body")}
-              </p>
-            </div>
-          </Reveal>
-        </div>
+        <ol className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {STEPS.map((step, index) => (
+            <li key={step} className="border-t border-border pt-8">
+              <Reveal delay={index * 0.04}>
+                <span
+                  aria-hidden="true"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-600/10 text-[15px] font-semibold text-brand-600"
+                >
+                  {step}
+                </span>
+                <h3 className="mt-5 text-xl font-semibold text-foreground">
+                  {t(`setup.step${step}Title`)}
+                </h3>
+                <p className="mt-3 text-muted-foreground">
+                  {t(`setup.step${step}Body`)}
+                </p>
+              </Reveal>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

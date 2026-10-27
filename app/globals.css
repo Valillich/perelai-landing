@@ -113,11 +113,19 @@
 @layer base {
   * {
     @apply border-border;
+    /* Kill the grey flash iOS paints under taps; real states come from classes. */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(var(--brand-600-rgb), 0.18);
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

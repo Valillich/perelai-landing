@@ -13,10 +13,11 @@ afterEach(() => vi.unstubAllEnvs())
 
 describe("public Google data explanation", () => {
   it("keeps core homepage purpose visible before reveal JavaScript runs", () => {
-    const hero = readFileSync("components/homepage/hero.tsx", "utf8")
+    const reveal = readFileSync("components/landing/reveal.tsx", "utf8")
     const operations = readFileSync("components/homepage/operations.tsx", "utf8")
-    expect(hero).not.toMatch(/<Reveal(?![^>]*fade=)[^>]*>/)
-    expect(operations).toContain('<Reveal fade={false}>')
+    // Entrance motion is transform-only: no caller can hide content pre-JS,
+    // so the purpose copy is visible even when hydration or observers fail.
+    expect(reveal).not.toMatch(/opacity:\s*0/)
     expect(operations).toContain('<GoogleDataAccess locale={locale} />')
   })
   it.each(PUBLISHED_LOCALES)("exposes both purposes, rollout limits and Privacy in initial HTML for %s", locale => {

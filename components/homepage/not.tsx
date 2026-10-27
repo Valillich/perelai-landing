@@ -22,8 +22,8 @@ export function Not() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Reveal delay={0.2}>
-            <div className="h-full p-8 rounded-2xl bg-card border border-border">
+          <Reveal delay={0.04}>
+            <div className="h-full rounded-3xl border border-border bg-card p-8">
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {t("not.item1Title")}
               </h3>
@@ -33,8 +33,8 @@ export function Not() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.3}>
-            <div className="h-full p-8 rounded-2xl bg-card border border-border">
+          <Reveal delay={0.08}>
+            <div className="h-full rounded-3xl border border-border bg-card p-8">
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {t("not.item2Title")}
               </h3>
@@ -44,8 +44,8 @@ export function Not() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.4}>
-            <div className="h-full p-8 rounded-2xl bg-card border border-border">
+          <Reveal delay={0.12}>
+            <div className="h-full rounded-3xl border border-border bg-card p-8">
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {t("not.item3Title")}
               </h3>

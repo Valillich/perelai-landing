@@ -132,7 +132,7 @@ export function LandingHeader({
               landingPath={canonicalPath}
               locale={locale}
               location="header_signup"
-              className="inline-flex items-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-4 py-2 text-[14px] font-semibold text-white shadow-[0_4px_14px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.03] active:scale-95"
+              className="inline-flex items-center rounded-full bg-brand-600 px-4 py-2 text-[14px] font-semibold text-white shadow-[0_4px_14px_rgba(106,76,255,0.24)] transition-colors hover:bg-brand-700"
             >
               {t("start_short")}
             </CtaButton>

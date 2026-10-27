@@ -75,7 +75,7 @@ export function DevicePage({ locale }: DevicePageProps) {
                 landingPath={LANDING_PATH}
                 locale={locale}
                 location="install_hero_signup"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-[15px] font-semibold text-primary-foreground mock-cta-brand-shadow transition-transform hover:scale-[1.02] active:scale-[0.98] sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-[15px] font-semibold text-primary-foreground mock-cta-brand-shadow transition-colors hover:bg-brand-700 sm:w-auto"
               >
                 {t("hero.signup")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -211,7 +211,7 @@ export function DevicePage({ locale }: DevicePageProps) {
               landingPath={LANDING_PATH}
               locale={locale}
               location="install_final_signup"
-                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-4 text-[16px] font-semibold text-primary-foreground mock-cta-brand-shadow transition-transform hover:scale-[1.03] active:scale-95 sm:w-auto"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-4 text-[16px] font-semibold text-primary-foreground mock-cta-brand-shadow transition-colors hover:bg-brand-700 sm:w-auto"
             >
               {t("cta.signup")}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />

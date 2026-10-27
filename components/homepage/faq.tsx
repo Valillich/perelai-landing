@@ -19,7 +19,7 @@ export function Faq() {
           {HOME_FAQ_ITEMS.map((item, index) => (
             <details
               key={item.id}
-              className="group border border-border rounded-lg bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden"
+              className="group rounded-2xl border border-border bg-card overflow-hidden [&_summary::-webkit-details-marker]:hidden"
               open={index === 0}
               onToggle={(event) => {
                 if (!event.currentTarget.open) return
@@ -29,7 +29,7 @@ export function Faq() {
                 })
               }}
             >
-              <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-foreground hover:bg-secondary/50 transition-colors">
+              <summary className="flex cursor-pointer items-center justify-between p-6 font-medium text-foreground transition-colors hover:bg-secondary/50 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-600 [-webkit-tap-highlight-color:transparent]">
                 {t(item.qKey)}
                 <span className="relative ml-4 h-4 w-4 shrink-0 transition-transform duration-200 group-open:rotate-45">
                   <span className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-muted-foreground"></span>

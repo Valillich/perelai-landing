@@ -12,7 +12,7 @@ export function GoogleDataAccess({ locale }: { locale: PublishedLocale }) {
     <aside
       id="google-calendar"
       aria-labelledby="google-access-title"
-      className="mt-12 rounded-2xl border border-border bg-muted/30 p-6 sm:mt-16 sm:p-8"
+      className="mt-12 rounded-3xl border border-border bg-card p-6 sm:mt-16 sm:p-8"
     >
       <div className="max-w-3xl space-y-3">
         <h3 id="google-access-title" className="text-xl font-semibold tracking-tight text-foreground">

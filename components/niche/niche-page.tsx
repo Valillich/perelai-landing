@@ -77,7 +77,7 @@ export function NichePage({ locale, page, content }: NichePageProps) {
                 landingPath={canonicalPath}
                 locale={locale}
                 location="niche_hero"
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.28)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.24)] transition-colors hover:bg-brand-700"
               >
                 {content.cta.label}
               </CtaButton>

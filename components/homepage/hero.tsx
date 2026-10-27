@@ -21,35 +21,35 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Text */}
           <div className="lg:col-span-7">
-            <Reveal fade={false}>
+            <Reveal>
               <p className="mb-4 text-[13px] font-medium uppercase tracking-[0.08em] text-muted-foreground sm:text-[14px]">
                 {t("hero.eyebrow")}
               </p>
             </Reveal>
 
-            <Reveal delay={0.04} fade={false}>
+            <Reveal delay={0.04}>
               <h1 className="text-balance text-[40px] font-bold leading-[1.05] tracking-tight text-foreground sm:text-[56px]">
                 {t("hero.title")}{" "}
-                <div className="bg-gradient-to-br from-brand-500 to-brand-700 bg-clip-text text-transparent">
+                <span className="block text-brand-600">
                   {t("hero.accent")}
-                </div>
+                </span>
               </h1>
             </Reveal>
 
-            <Reveal delay={0.08} fade={false}>
+            <Reveal delay={0.08}>
               <p className="mt-5 max-w-xl text-pretty text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]">
                 {t("hero.body")}
               </p>
             </Reveal>
 
-            <Reveal delay={0.16} fade={false}>
+            <Reveal delay={0.12}>
               <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                 <CtaButton
                   destination="signup"
                   landingPath="/"
                   locale={locale}
                   location="hero_signup"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.03] active:scale-95 sm:w-auto"
+                  className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(106,76,255,0.24)] transition-colors hover:bg-brand-700 sm:w-auto"
                 >
                   {t("hero.signup")}
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -63,7 +63,7 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
               </div>
             </Reveal>
 
-            <Reveal delay={0.24} fade={false}>
+            <Reveal delay={0.16}>
               <p className="mt-4 text-[13px] text-subtle-text">
                 {t("hero.trialMicro")}
               </p>
@@ -79,9 +79,9 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
             </Reveal>
           </div>
 
-          {/* Product preview — no opacity fade: glass mocks flash their shell on iOS. */}
+          {/* Product preview */}
           <div className="relative lg:col-span-5">
-            <Reveal delay={0.2} fade={false}>
+            <Reveal delay={0.12}>
               <div
                 aria-hidden
                 className="pointer-events-none absolute -inset-4 -z-10 rounded-[40px] opacity-60 blur-[80px]"

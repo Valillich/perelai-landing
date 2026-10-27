@@ -37,12 +37,8 @@ export function CtaCard({
 }: CtaCardProps) {
   return (
     <Reveal className={cn("mx-auto max-w-3xl", className)}>
-      <div className="relative overflow-hidden rounded-[24px] border border-brand-600/15 bg-brand-600/5 p-8 text-center sm:p-12">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-600/5 to-transparent"
-        />
-        <div className="relative mx-auto max-w-2xl space-y-8">
+      <div className="rounded-[24px] border border-brand-600/15 bg-brand-600/5 p-8 text-center sm:p-12">
+        <div className="mx-auto max-w-2xl space-y-8">
           <div className="space-y-4">
             <h2 className="text-balance text-[28px] font-bold leading-tight tracking-tight text-foreground sm:text-[38px]">
               {title}
@@ -57,7 +53,7 @@ export function CtaCard({
               landingPath={landingPath}
               locale={locale}
               location={location}
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-brand-500 to-brand-700 px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.32)] transition-transform hover:scale-[1.03] active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-4 text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(106,76,255,0.24)] transition-colors hover:bg-brand-700"
             >
               {buttonLabel}
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
