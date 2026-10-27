@@ -260,6 +260,16 @@ html {
   }
 }
 
+/* Touch devices (iOS above all) rasterize the masked conic rim over several
+   frames while scrolling: whole sections flash white for seconds. The ::after
+   glass body already carries a 1px light edge, so dropping the specular rim
+   there costs nothing visually and removes the stall. */
+@media (pointer: coarse) {
+  .mock-glass-frame::before {
+    content: none;
+  }
+}
+
 .mock-card-elevated {
   position: relative;
   z-index: 1;

@@ -84,10 +84,12 @@ export function Hero({ locale }: { locale: PublishedLocale }) {
             <Reveal delay={0.12}>
               <div
                 aria-hidden
-                className="pointer-events-none absolute -inset-4 -z-10 rounded-[40px] opacity-60 blur-[80px]"
+                className="pointer-events-none absolute -inset-6 -z-10 rounded-[40px] opacity-70"
                 style={{
+                  /* Soft brand glow without filter:blur — a large blur layer stalls
+                     iOS rasterization during scroll (white flash) for seconds. */
                   background:
-                    "linear-gradient(135deg, rgba(var(--brand-600-rgb),0.3), rgba(var(--brand-500-rgb),0.15))",
+                    "radial-gradient(ellipse 75% 65% at 50% 45%, rgba(var(--brand-600-rgb),0.22), rgba(var(--brand-500-rgb),0.1) 45%, transparent 72%)",
                 }}
               />
               <HeroShowcase
