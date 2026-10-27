@@ -2,7 +2,8 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-/* Reserve a side column only when it fits beside the existing 72rem content. */
+/* Use a compact side guide on roomy laptops and full labels when space permits. */
+@custom-variant feature-compact (@media (min-width: 90rem) and (min-height: 36rem));
 @custom-variant feature-side (@media (min-width: 96rem) and (min-height: 36rem));
 
 :root {

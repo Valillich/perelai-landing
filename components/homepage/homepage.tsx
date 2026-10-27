@@ -25,9 +25,9 @@ export function Homepage({ locale }: { locale: PublishedLocale }) {
       <LandingHeader locale={locale} sectionAnchors />
       <div className="flex-1">
         <Hero locale={locale} />
-        <div data-feature-zone className="relative feature-side:grid feature-side:grid-cols-[minmax(0,1fr)_minmax(0,72rem)_minmax(0,1fr)]">
+        <div data-feature-zone className="relative pb-[calc(6rem+env(safe-area-inset-bottom))] feature-compact:grid feature-compact:grid-cols-[minmax(0,1fr)_minmax(0,72rem)_minmax(0,1fr)] feature-compact:pb-0">
           <FeatureNavigator />
-          <div data-feature-content className="min-w-0 feature-side:col-start-2 feature-side:row-start-1">
+          <div data-feature-content className="min-w-0 feature-compact:col-start-2 feature-compact:row-start-1">
             <Operations locale={locale} />
             <ConnectedRecords locale={locale} />
             <CashReconciliation />

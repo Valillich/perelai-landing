@@ -31,6 +31,9 @@ describe("feature navigation", () => {
   it.each(PUBLISHED_LOCALES)("has native labels for every topic and control in %s", locale => {
     const copy = JSON.parse(readFileSync(`messages/${locale}/home.json`, "utf8")).featureNav
     expect(copy.label).toBeTruthy()
+    expect(copy.contents).toBeTruthy()
+    expect(copy.previous).toBeTruthy()
+    expect(copy.next).toBeTruthy()
     for (const topic of FEATURE_TOPICS) {
       expect(copy.topics[topic.key]).toBeTruthy()
       expect(copy.shortTopics[topic.key]).toBeTruthy()
@@ -45,7 +48,7 @@ describe("feature navigation", () => {
     })
   })
 
-  it.each(PUBLISHED_LOCALES)("labels all eight dot links with full feature names in %s", locale => {
+  it.each(PUBLISHED_LOCALES)("keeps full names on rail and disclosure links in %s", locale => {
     const html = renderToStaticMarkup(createElement(NextIntlClientProvider, {
       locale, messages: messagesByLocale[locale], timeZone: "UTC",
       children: createElement(FeatureNavigator),
@@ -53,9 +56,14 @@ describe("feature navigation", () => {
     for (const topic of FEATURE_TOPICS) {
       const fullLabel = messagesByLocale[locale].home.featureNav.topics[topic.key]
       const escapedLabel = renderToStaticMarkup(createElement("span", null, fullLabel)).slice(6, -7)
-      // Both responsive presentations retain the full accessible feature name.
+      // Direct navigation lives in the rail and disclosure, not eight tiny dot targets.
       expect(html.split(`href="#${topic.id}" aria-label="${escapedLabel}"`)).toHaveLength(3)
     }
+    expect(html).toContain('aria-controls="feature-topic-list"')
+    expect(html).toContain('aria-expanded="false"')
+    expect(html).toContain('id="feature-topic-list" hidden=""')
+    expect(html).toContain('aria-hidden="true" class="grid h-5 w-full grid-cols-8"')
+    expect(html).toContain('h-11 w-11')
     // Before hydration the passive rail cannot introduce invisible tab stops.
     expect(html).toContain('aria-hidden="true" inert=""')
   })
