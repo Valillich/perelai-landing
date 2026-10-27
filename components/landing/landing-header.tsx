@@ -143,7 +143,7 @@ export function LandingHeader({
               group={{ label: t("features"), items: featureItems }}
             >
               <ThemeToggle />
-              <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} />
+              <LanguageSwitcher locale={locale} canonicalPath={canonicalPath} variant="select" />
             </MobileNav>
           </div>
         </div>

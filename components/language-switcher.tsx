@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Globe2 } from "lucide-react"
+import { ChevronDown, Globe2 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { analytics } from "@/lib/analytics"
 import { PUBLISHED_LOCALES, type PublishedLocale } from "@/i18n/locales"
@@ -19,8 +19,8 @@ function unprefixedPath(pathname: string): string {
 }
 
 /**
- * `dropdown` is the header pill; `inline` is a flat row for places that are
- * already inside an open disclosure, where a nested one would be awkward.
+ * `dropdown` is the desktop pill; `select` uses the browser's picker inside
+ * scrollable mobile menus. `inline` is a flat row for open disclosures.
  */
 export function LanguageSwitcher({
   locale,
@@ -29,7 +29,7 @@ export function LanguageSwitcher({
 }: {
   locale: PublishedLocale
   canonicalPath: string
-  variant?: "dropdown" | "inline"
+  variant?: "dropdown" | "inline" | "select"
 }) {
   const t = useTranslations("common")
   const [current, setCurrent] = useState({ pathname: canonicalPath, search: "" })
@@ -55,6 +55,31 @@ export function LanguageSwitcher({
         properties: { from_locale: locale, to_locale: target },
       })
     }
+  }
+
+  if (variant === "select") {
+    return (
+      <div className="relative min-w-0 max-w-48">
+        <Globe2 aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+        <select
+          aria-label={t("languageLabel")}
+          defaultValue={locale}
+          onChange={(event) => {
+            const target = event.currentTarget.value as PublishedLocale
+            selectLocale(target)
+            window.location.assign(hrefFor(target))
+          }}
+          className="min-h-11 max-w-full appearance-none rounded-full border border-border bg-card/70 py-2 pl-8 pr-8 text-[13px] font-medium text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
+        >
+          {PUBLISHED_LOCALES.map((target) => (
+            <option key={target} value={target} lang={target}>
+              {t(`languages.${target}`)}
+            </option>
+          ))}
+        </select>
+        <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+      </div>
+    )
   }
 
   if (variant === "inline") {

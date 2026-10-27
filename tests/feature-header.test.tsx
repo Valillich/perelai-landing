@@ -20,6 +20,20 @@ vi.mock("@/i18n/navigation", () => ({
 }))
 
 describe("global feature disclosures", () => {
+  it.each(PUBLISHED_LOCALES)("provides an unclipped native mobile language picker in %s", locale => {
+    const html = renderToStaticMarkup(createElement(NextIntlClientProvider, {
+      locale, messages: messagesByLocale[locale], timeZone: "UTC",
+      children: createElement(LandingHeader, {locale, canonicalPath: "/pricing"}),
+    }))
+    // The native picker escapes the mobile menu's scrolling/clipping surface.
+    expect(html.match(/<select\b/g) ?? []).toHaveLength(1)
+    expect(html.match(/<option\b/g) ?? []).toHaveLength(PUBLISHED_LOCALES.length)
+    for (const target of PUBLISHED_LOCALES) expect(html).toContain(`<option value="${target}"`)
+    const selected = html.match(/<option[^>]* selected=""[^>]*>/g)
+    expect(selected).toHaveLength(1)
+    expect(selected?.[0]).toContain(`value="${locale}"`)
+  })
+
   it.each(PUBLISHED_LOCALES)("keeps every destination reachable from Home, Pricing, Install and niches in %s", locale => {
     for (const canonicalPath of ["/", "/pricing", "/install", "/for-barbers"]) {
       const html = renderToStaticMarkup(createElement(NextIntlClientProvider, {
