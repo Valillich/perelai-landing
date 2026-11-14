@@ -58,84 +58,82 @@ export function MockTrendChart({ dataset, gradientId, className }: MockTrendChar
   const yTicks = [domainBottom, domainBottom + span / 2, domainTop]
 
   return (
-    <div className={cn("mock-glass-shell px-1 py-3", className)}>
-      <div className="mock-glass-frame">
-        <div className="mock-card-elevated">
-          <svg
-            viewBox={`0 0 ${CHART.width} ${CHART.height}`}
-            className="w-full"
-            role="presentation"
-          >
-            <defs>
-              <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="var(--success)" stopOpacity="0.16" />
-                <stop offset="95%" stopColor="var(--success)" stopOpacity="0" />
-              </linearGradient>
-            </defs>
+    <div className={cn("mock-glass-frame", className)}>
+      <div className="mock-card-elevated">
+        <svg
+          viewBox={`0 0 ${CHART.width} ${CHART.height}`}
+          className="w-full"
+          role="presentation"
+        >
+          <defs>
+            <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="var(--success)" stopOpacity="0.16" />
+              <stop offset="95%" stopColor="var(--success)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
 
-            {/* Horizontal grid + Y ticks */}
-            {yTicks.map((tick) => {
-              const y = CHART.top + (1 - (tick - domainBottom) / span) * plotHeight
-              return (
-                <g key={tick}>
-                  <line
-                    x1={CHART.left}
-                    x2={CHART.width - CHART.right}
-                    y1={y}
-                    y2={y}
-                    stroke="var(--border)"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x={CHART.left - 6}
-                    y={y + 3.5}
-                    textAnchor="end"
-                    fontSize="10"
-                    fill="var(--muted-foreground)"
-                  >
-                    {formatDayTotal(Math.round(tick))}
-                  </text>
-                </g>
-              )
-            })}
+          {/* Horizontal grid + Y ticks */}
+          {yTicks.map((tick) => {
+            const y = CHART.top + (1 - (tick - domainBottom) / span) * plotHeight
+            return (
+              <g key={tick}>
+                <line
+                  x1={CHART.left}
+                  x2={CHART.width - CHART.right}
+                  y1={y}
+                  y2={y}
+                  stroke="var(--border)"
+                  strokeWidth="1"
+                />
+                <text
+                  x={CHART.left - 6}
+                  y={y + 3.5}
+                  textAnchor="end"
+                  fontSize="10"
+                  fill="var(--muted-foreground)"
+                >
+                  {formatDayTotal(Math.round(tick))}
+                </text>
+              </g>
+            )
+          })}
 
-            <path d={areaPath} fill={`url(#${gradientId})`} />
-            <path
-              d={linePath}
-              fill="none"
-              stroke="var(--success)"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <path d={areaPath} fill={`url(#${gradientId})`} />
+          <path
+            d={linePath}
+            fill="none"
+            stroke="var(--success)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {points.map((point, index) => (
+            <circle
+              key={trend[index].label}
+              cx={point.x}
+              cy={point.y}
+              r={index === points.length - 1 ? 4 : 3}
+              fill="var(--success)"
+              stroke="var(--card)"
+              strokeWidth={index === points.length - 1 ? 2 : 0}
             />
+          ))}
 
-            {points.map((point, index) => (
-              <circle
-                key={trend[index].label}
-                cx={point.x}
-                cy={point.y}
-                r={index === points.length - 1 ? 4 : 3}
-                fill="var(--success)"
-                stroke="var(--card)"
-                strokeWidth={index === points.length - 1 ? 2 : 0}
-              />
-            ))}
-
-            {/* X labels */}
-            {points.map((point, index) => (
-              <text
-                key={`x-${trend[index].label}`}
-                x={point.x}
-                y={CHART.height - 6}
-                textAnchor="middle"
-                fontSize="10"
-                fill="var(--muted-foreground)"
-              >
-                {trend[index].label}
-              </text>
-            ))}
-          </svg>
-        </div>
+          {/* X labels */}
+          {points.map((point, index) => (
+            <text
+              key={`x-${trend[index].label}`}
+              x={point.x}
+              y={CHART.height - 6}
+              textAnchor="middle"
+              fontSize="10"
+              fill="var(--muted-foreground)"
+            >
+              {trend[index].label}
+            </text>
+          ))}
+        </svg>
       </div>
     </div>
   )

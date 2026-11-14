@@ -68,9 +68,12 @@ export function LandingHeader({
           <Link href="/" className="flex shrink-0 items-center gap-2">
             <Image
               src="/brand/perelai-mark-64.png"
-              alt="Perelai"
+              alt=""
               width={32}
               height={32}
+              unoptimized
+              loading="eager"
+              fetchPriority="high"
               className="h-8 w-8 rounded-xl shadow-[0_4px_12px_rgba(106,76,255,0.32)]"
             />
             <span className="text-[17px] font-semibold tracking-tight text-foreground">Perelai</span>

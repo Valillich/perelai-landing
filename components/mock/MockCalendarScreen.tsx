@@ -31,7 +31,7 @@ export function MockCalendarScreen({
     <div className={cn("flex flex-col", className)} aria-hidden="true">
      
       {/* Month header + nav arrows */}
-      <div className="mb-1 flex items-center justify-between gap-2">
+      <div className="mb-2 flex items-center justify-between gap-2">
         <h3 className="mock-calendar-title">
           <span className="mock-calendar-month capitalize">{dataset.monthLabel}</span>
           <span className="mock-calendar-year">{dataset.yearLabel}</span>

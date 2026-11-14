@@ -81,7 +81,7 @@ export function HeroShowcase({ dataset, labels }: HeroShowcaseProps) {
         <p className="sr-only">
           {labels.ariaLabel}: {screens.map((screen) => screen.tab).join(", ")} — {labels.caption}
         </p>
-        <div className="grid">
+        <div className="grid grid-cols-1">
           {screens.map((screen, screenIndex) => {
             const isActive = screenIndex === index
 
