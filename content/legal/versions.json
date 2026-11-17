@@ -36,9 +36,9 @@
     "approvalRef": "owner-platform-legal-evidence-20261017"
   },
   "billing": {
-    "version": "2026-11-01.2",
-    "effectiveDate": "2026-11-01",
-    "sha256": "aaa5b666091ff6b76bd80f07e40dde478e65c92fc169d3248daddb5f506c3ab7",
-    "approvalRef": "owner-platform-legal-evidence-20261017"
+    "version": "2026-11-17.1",
+    "effectiveDate": "2026-11-17",
+    "sha256": "2e3bf53844c399fac2c26c93cbbc1bdce7b8772330f43e51076568fbe52ed3b3",
+    "approvalRef": "owner-paddle-purchase-20261117"
   }
 }

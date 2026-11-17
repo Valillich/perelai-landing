@@ -1,11 +1,11 @@
 ---
 document: billing
-version: "2026-11-01.2"
-effectiveDate: "2026-11-01"
-lastReviewedDate: "2026-10-17"
+version: "2026-11-17.1"
+effectiveDate: "2026-11-17"
+lastReviewedDate: "2026-11-17"
 status: approved
 sourceLocale: en
-approvedBy: "owner-platform-legal-evidence-20261017"
+approvedBy: "owner-paddle-purchase-20261117"
 ---
 
 # Perelai Refund & Cancellation Policy
@@ -88,11 +88,13 @@ The plans are monthly subscriptions for a single workspace:
 There are no annual plans, introductory discounts or lifetime price locks. STUDIO+ is contact-only:
 asking about it does not purchase a subscription, reserve a price or capacity, or grant access.
 
-Prices are set in US dollars. Paddle may present a supported local currency and determines the tax
-that applies to your location; tax may be included in or added to the price. The purchase review shows
-the selected workspace, plan, amount due now, recurring amount, currency, tax, billing date and
-cancellation terms. Review the final currency and total before paying. Your workspace's bookkeeping
-currency does not set your subscription price. Your bank may charge conversion or cross-border fees.
+The purchase review in Perelai shows the selected workspace, plan, USD base price, monthly billing
+interval and cancellation terms. Prices are set in US dollars. Paddle may present a supported local
+currency and determines the tax that applies to your location; tax may be included in or added to the
+price. Before you pay, the order summary in Paddle Checkout shows the billing currency, applicable
+tax, amount due now, recurring amount and next billing date. If the summary is collapsed, select
+**Show order summary**. Your workspace's bookkeeping currency does not set your subscription price.
+Your bank may charge conversion or cross-border fees.
 
 Choosing an offer on a landing page does not reserve eligibility or create a subscription. Before
 purchase you can review your details, read the Terms and this Policy, and explicitly agree to the
@@ -109,10 +111,10 @@ appropriate remedy, including a refund where access cannot be provided.
 
 ## 6. Monthly renewal and plan changes
 
-After your purchase, the subscription renews monthly on the same date until cancelled. The purchase
-review and confirmation show the renewal date and amount. If we change the price or other material
-subscription terms, we will notify you by email at least 30 days before the change applies to your
-next renewal, and you can cancel before it applies.
+After purchase, the subscription renews automatically each month until you cancel. Before you pay,
+the order summary in Paddle Checkout shows the recurring amount and the next billing date. If we
+change the price or other material subscription terms, we will notify you by email at least 30 days
+before the change applies to your next renewal, and you can cancel before it applies.
 
 Where plan changes are available in the app, they apply to the existing subscription for the selected
 workspace:

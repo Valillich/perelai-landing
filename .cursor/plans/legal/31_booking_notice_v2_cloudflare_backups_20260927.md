@@ -1,5 +1,10 @@
 # UA/US/AU/CA v2 — Cloudflare database-backup disclosure
 
+**2026-11-16 code preparation:** the app now selects the four reviewed v2
+references in `CURRENT_TEMPLATES`. The dated preparation/verification below
+describes the original v1 defaults. The code switch is not a deployment,
+an automatic republication, or evidence of live acceptance.
+
 **Recorded:** 2026-09-27. **Owner instruction:** correct the salon notices to disclose Cloudflare
 backups in a new version; continue the interrupted preparation and integration.
 **Authority:** `owner-booking-notice-cloudflare-v2-20260927`.
