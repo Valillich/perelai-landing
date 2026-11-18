@@ -76,9 +76,7 @@
     "a7": "Każda firma utworzona osobno w Perelai wymaga własnej subskrypcji."
   },
   "cta": {
-    "title": "Wypróbuj Perelai bezpłatnie",
-    "body": "21 dni bez karty płatniczej. Potem wybierz SOLO lub STUDIO, jeśli chcesz kontynuować.",
     "button": "Wypróbuj bezpłatnie",
-    "micro": "Okres próbny nie zmienia się automatycznie w płatną subskrypcję."
+    "micro": "21 dni bez karty. Bez automatycznych opłat."
   }
 }

@@ -76,9 +76,7 @@
     "a7": "Each business created separately in Perelai needs its own subscription."
   },
   "cta": {
-    "title": "Try Perelai for free",
-    "body": "21 days, no card required. Then choose SOLO or STUDIO if you’d like to continue.",
     "button": "Try for free",
-    "micro": "Your trial does not turn into a paid subscription automatically."
+    "micro": "21 days, no card required. No automatic charges."
   }
 }

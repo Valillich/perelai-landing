@@ -76,9 +76,7 @@
     "a7": "Chaque entreprise créée séparément dans Perelai nécessite son propre abonnement."
   },
   "cta": {
-    "title": "Essayez Perelai gratuitement",
-    "body": "21 jours sans carte bancaire. Choisissez ensuite SOLO ou STUDIO si vous souhaitez continuer.",
     "button": "Essayer gratuitement",
-    "micro": "L’essai ne se transforme pas automatiquement en abonnement payant."
+    "micro": "21 jours sans carte bancaire. Aucun prélèvement automatique."
   }
 }

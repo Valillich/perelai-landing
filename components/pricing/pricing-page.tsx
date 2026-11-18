@@ -3,11 +3,10 @@ import { ArrowRight, ArrowUpRight, Check, X } from "lucide-react"
 import { LandingHeader } from "@/components/landing/landing-header"
 import { LandingFooter } from "@/components/landing/landing-footer"
 import { Reveal } from "@/components/landing/reveal"
-import { CtaCard } from "@/components/cta-card"
 import { CtaButton } from "@/components/cta-button"
 import { PRICING_CAPABILITY_KEYS, PRICING_PLANS } from "@/content/pricing"
 import { Link } from "@/i18n/navigation"
-import { getOfferSignupRelease, isPaidSubscriptionsLive } from "@/lib/pricing-release"
+import { isPaidSubscriptionsLive } from "@/lib/pricing-release"
 import { getPricingContactEmail } from "@/lib/pricing-contact"
 import {
   PageViewTracker,
@@ -20,7 +19,6 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
   const t = useTranslations("pricing")
   const showPendingBillingNotice = !isPaidSubscriptionsLive()
   const supportEmail = getPricingContactEmail()
-  const offerRelease = getOfferSignupRelease()
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
@@ -90,14 +88,6 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
                         </li>
                       ))}
                     </ul>
-                    {offerRelease.codes.includes(plan.offerCode) ? (
-                      <CtaButton destination="signup" offer={plan.offerCode} locale={locale}
-                        location="pricing_signup"
-                        className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 font-semibold text-white hover:bg-brand-700"
-                        aria-label={`${t("cta.button")} — ${plan.name}`}>
-                        {t("cta.button")}<ArrowRight className="h-4 w-4" aria-hidden />
-                      </CtaButton>
-                    ) : null}
                   </article>
                 </Reveal>
               ))}
@@ -194,18 +184,6 @@ export function PricingPage({ locale }: { locale: PublishedLocale }) {
               ))}
             </dl>
           </Reveal>
-        </section>
-
-        <section className="px-4 py-20 sm:px-6 sm:py-28">
-          <CtaCard
-            locale={locale}
-            landingPath="/pricing"
-            location="pricing_signup"
-            title={t("cta.title")}
-            body={t("cta.body")}
-            buttonLabel={t("cta.button")}
-            microcopy={t("cta.micro")}
-          />
         </section>
       </div>
       <LandingFooter locale={locale} canonicalPath="/pricing" />

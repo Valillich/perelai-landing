@@ -32,7 +32,8 @@ describe("Pricing publication composition", () => {
     const html = renderPricing(locale)
     expect(html).toContain("$19")
     expect(html).toContain("$29")
-    expect(html).toContain("/register?")
+    expect(html.match(/href="[^"]*\/register\?[^" ]*"/g)).toHaveLength(2)
+    expect(html).toContain(messagesByLocale[locale].pricing.cta.micro)
     expect(html).not.toContain("offer=")
     expect(html).toContain("/legal/terms")
     expect(html).toContain("/legal/privacy")
@@ -41,12 +42,11 @@ describe("Pricing publication composition", () => {
     expect(html).not.toMatch(/(?:pri|pro|ctm)_[a-z0-9]+|paddle\.js|\{limit\}/)
   })
 
-  it.each([["false", false], ["true", true]])("TEAM release %s controls the STUDIO signup link", (team, released) => {
+  it.each(["false", "true"])("shows only generic signup when checkout is live and TEAM release is %s", team => {
     vi.stubEnv("NEXT_PUBLIC_PAID_SUBSCRIPTIONS_LIVE", "true")
     vi.stubEnv("NEXT_PUBLIC_TEAM_RELEASED", team)
     const html = renderPricing("en")
-    expect(html).toContain("offer=SOLO_MONTHLY")
-    expect(html.includes("offer=STUDIO_MONTHLY")).toBe(released)
-    expect(html).not.toContain("offer=STUDIO_PLUS")
+    expect(html.match(/href="[^"]*\/register\?[^" ]*"/g)).toHaveLength(2)
+    expect(html).not.toContain("offer=")
   })
 })

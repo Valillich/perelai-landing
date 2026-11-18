@@ -76,9 +76,7 @@
     "a7": "Perelai’de ayrı olarak oluşturulan her işletme için ayrı bir abonelik gerekir."
   },
   "cta": {
-    "title": "Perelai’yi ücretsiz deneyin",
-    "body": "Banka kartı olmadan 21 gün. Devam etmek isterseniz ardından SOLO veya STUDIO’yu seçin.",
     "button": "Ücretsiz deneyin",
-    "micro": "Deneme süresi otomatik olarak ücretli aboneliğe dönüşmez."
+    "micro": "21 gün, kart gerekmez. Otomatik ücretlendirme yok."
   }
 }
